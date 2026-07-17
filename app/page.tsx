@@ -152,7 +152,7 @@ export default function Home() {
         <details><summary>Are bonuses and overtime included?<span>+</span></summary><p>Include expected bonuses and overtime in annual gross salary for a broader annual estimate. Supplemental wages may be withheld differently on an actual paycheck.</p></details>
       </section>
 
-      <footer><a className="brand" href="#top"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a><p>Free paycheck estimates, built for clarity.</p><p className="disclaimer">Estimates are informational only. <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a></p></footer>
+      <footer><a className="brand" href="#top"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a><p>Free paycheck estimates, built for clarity.</p><p className="disclaimer">Estimates are informational only. <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a></p></footer>
     </main>
   );
 }
