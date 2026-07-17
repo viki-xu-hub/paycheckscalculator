@@ -40,12 +40,14 @@ export default function Home() {
   const [frequency, setFrequency] = useState<Frequency>("biweekly");
   const [status, setStatus] = useState<FilingStatus>("single");
   const [preTax, setPreTax] = useState(250);
+  const [retirementPercent, setRetirementPercent] = useState(5);
   const [additional, setAdditional] = useState(0);
 
   const result = useMemo(() => {
     const count = periods[frequency];
     const safeSalary = Math.max(0, salary || 0);
-    const annualPreTax = Math.min(safeSalary, Math.max(0, preTax || 0) * count);
+    const annual401k = safeSalary * Math.min(100, Math.max(0, retirementPercent || 0)) / 100;
+    const annualPreTax = Math.min(safeSalary, annual401k + Math.max(0, preTax || 0) * count);
     const taxableFederal = Math.max(0, safeSalary - annualPreTax - deductions[status]);
     const federal = progressiveTax(taxableFederal, status) + Math.max(0, additional || 0) * count;
     const ficaWages = Math.max(0, safeSalary - annualPreTax);
@@ -56,6 +58,7 @@ export default function Home() {
       count,
       gross: safeSalary / count,
       preTax: annualPreTax / count,
+      retirement: annual401k / count,
       federal: federal / count,
       socialSecurity: socialSecurity / count,
       medicare: medicare / count,
@@ -63,7 +66,7 @@ export default function Home() {
       annualNet,
       effective: safeSalary ? ((federal + socialSecurity + medicare) / safeSalary) * 100 : 0,
     };
-  }, [salary, frequency, status, preTax, additional]);
+  }, [salary, frequency, status, preTax, retirementPercent, additional]);
 
   const taxes = result.federal + result.socialSecurity + result.medicare;
   const netShare = result.gross ? (result.net / result.gross) * 100 : 0;
@@ -74,7 +77,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Lone Star Paycheck home"><span className="brand-mark">★</span><span>Lone Star <b>Paycheck</b></span></a>
-        <nav aria-label="Main navigation"><a href="#calculator">Calculator</a><a href="#how-it-works">How it works</a><a href="#faq">FAQ</a></nav>
+        <nav aria-label="Main navigation"><a href="#calculator">Calculator</a><a href="/texas-bonus-commission-paycheck-calculator">Bonus & commission</a><a href="/texas-hourly-paycheck-calculator">Hourly</a><a href="#faq">FAQ</a></nav>
         <span className="year-pill">Updated for 2026</span>
       </header>
 
@@ -96,7 +99,10 @@ export default function Home() {
             <label className="field"><span>Federal filing status</span><select value={status} onChange={(e) => setStatus(e.target.value as FilingStatus)}><option value="single">Single</option><option value="married">Married filing jointly</option><option value="head">Head of household</option></select></label>
 
             <div className="split-fields">
-              <label className="field"><span>Pre-tax deductions <i title="For example: 401(k), HSA, or eligible health premiums">?</i></span><div className="money-input"><span>$</span><input type="number" min="0" step="25" value={preTax} onChange={(e) => setPreTax(Number(e.target.value))} /></div><small>Per paycheck</small></label>
+              <label className="field"><span>401(k) contribution</span><div className="money-input suffix"><input type="number" min="0" max="100" step="1" value={retirementPercent} onChange={(e) => setRetirementPercent(Number(e.target.value))} /><span>%</span></div><small>Percent of gross pay</small></label>
+              <label className="field"><span>Health / other pre-tax <i title="For example: HSA or eligible health premiums">?</i></span><div className="money-input"><span>$</span><input type="number" min="0" step="25" value={preTax} onChange={(e) => setPreTax(Number(e.target.value))} /></div><small>Per paycheck</small></label>
+            </div>
+            <div className="split-fields single-right">
               <label className="field"><span>Extra federal withholding</span><div className="money-input"><span>$</span><input type="number" min="0" step="10" value={additional} onChange={(e) => setAdditional(Number(e.target.value))} /></div><small>Per paycheck</small></label>
             </div>
           </section>
@@ -111,7 +117,8 @@ export default function Home() {
               <div><span>Federal income tax</span><b>−{money.format(result.federal)}</b></div>
               <div><span>Social Security</span><b>−{money.format(result.socialSecurity)}</b></div>
               <div><span>Medicare</span><b>−{money.format(result.medicare)}</b></div>
-              <div><span>Pre-tax deductions</span><b>−{money.format(result.preTax)}</b></div>
+              <div><span>401(k) contribution</span><b>−{money.format(result.retirement)}</b></div>
+              <div><span>Total pre-tax deductions</span><b>−{money.format(result.preTax)}</b></div>
             </div>
             <div className="result-note"><span>ⓘ</span><p>Texas doesn’t collect individual state income tax. Your actual withholding may vary based on your W-4 and benefits.</p></div>
           </section>
@@ -131,9 +138,17 @@ export default function Home() {
         <article><span className="article-num">03</span><h3>Why your paycheck may differ</h3><p>Your Form W-4, bonuses, itemized deductions, tax credits, benefit eligibility, and year-to-date wages can all change actual employer withholding.</p></article>
       </section>
 
+      <section className="seo-section">
+        <p className="kicker">UNDERSTAND YOUR WITHHOLDING</p>
+        <h2>Estimate how much taxes will be taken out of your paycheck</h2>
+        <p>This free Texas state tax calculator estimates federal income tax, Social Security, Medicare, and your 401(k) or other pre-tax deductions. Texas state income tax on wages is <strong>$0</strong>, but federal payroll taxes still apply.</p>
+        <div className="tool-links"><a href="/texas-bonus-commission-paycheck-calculator"><b>Bonus & commission calculator</b><span>Estimate supplemental pay after taxes →</span></a><a href="/texas-hourly-paycheck-calculator"><b>Free hourly & daily calculator</b><span>Convert hourly work into take-home pay →</span></a></div>
+      </section>
+
       <section className="faq" id="faq"><p className="kicker">QUICK ANSWERS</p><h2>Texas paycheck FAQ</h2>
         <details open><summary>Does Texas have a state income tax?<span>+</span></summary><p>No. Texas does not impose an individual state income tax on wages, so the calculator shows $0 for state income tax.</p></details>
         <details><summary>Is this the same as my employer’s payroll calculation?<span>+</span></summary><p>No. This is a planning estimate based on annual tax brackets and common deductions. Payroll systems use your full W-4 and year-to-date payroll information.</p></details>
+        <details><summary>How is this different from the Gusto Texas paycheck calculator?<span>+</span></summary><p>This independent calculator is designed for quick, free estimates with no sign-up. Payroll services such as Gusto offer broader employer payroll, filing, and employee-management features. Lone Star Paycheck is not affiliated with or endorsed by Gusto.</p></details>
         <details><summary>Are bonuses and overtime included?<span>+</span></summary><p>Include expected bonuses and overtime in annual gross salary for a broader annual estimate. Supplemental wages may be withheld differently on an actual paycheck.</p></details>
       </section>
 
