@@ -75,6 +75,7 @@ export default function Home() {
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"WebApplication",name:"Texas Paycheck Calculator",alternateName:"Paycheck Atlas",url:"https://paycheckscalculator.org",applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},description:"Free 2026 Texas paycheck calculator for estimating take-home pay after federal tax, FICA and deductions."})}} />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Paycheck Atlas home"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a>
         <nav aria-label="Main navigation"><a href="#calculator">Calculator</a><a href="/texas-bonus-commission-paycheck-calculator">Bonus & commission</a><a href="/texas-hourly-paycheck-calculator">Hourly</a><a href="#faq">FAQ</a></nav>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata:Metadata={title:"Partners | Paycheck Atlas",description:"Explore partner websites and useful online tools from Paycheck Atlas."};
+export const metadata:Metadata={title:"Partners | Paycheck Atlas",description:"Explore independent partner websites and useful online tools listed by Paycheck Atlas.",alternates:{canonical:"/partners"}};
 const partners=[
   ["FishCare AI","https://www.fishcareai.com"],
   ["Disclaimer Snippets","https://www.disclaimersnippets.com"],
