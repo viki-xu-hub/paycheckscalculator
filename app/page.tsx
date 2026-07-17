@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Lone Star Paycheck home"><span className="brand-mark">★</span><span>Lone Star <b>Paycheck</b></span></a>
+        <a className="brand" href="#top" aria-label="Paycheck Atlas home"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a>
         <nav aria-label="Main navigation"><a href="#calculator">Calculator</a><a href="/texas-bonus-commission-paycheck-calculator">Bonus & commission</a><a href="/texas-hourly-paycheck-calculator">Hourly</a><a href="#faq">FAQ</a></nav>
         <span className="year-pill">Updated for 2026</span>
       </header>
@@ -148,11 +148,11 @@ export default function Home() {
       <section className="faq" id="faq"><p className="kicker">QUICK ANSWERS</p><h2>Texas paycheck FAQ</h2>
         <details open><summary>Does Texas have a state income tax?<span>+</span></summary><p>No. Texas does not impose an individual state income tax on wages, so the calculator shows $0 for state income tax.</p></details>
         <details><summary>Is this the same as my employer’s payroll calculation?<span>+</span></summary><p>No. This is a planning estimate based on annual tax brackets and common deductions. Payroll systems use your full W-4 and year-to-date payroll information.</p></details>
-        <details><summary>How is this different from the Gusto Texas paycheck calculator?<span>+</span></summary><p>This independent calculator is designed for quick, free estimates with no sign-up. Payroll services such as Gusto offer broader employer payroll, filing, and employee-management features. Lone Star Paycheck is not affiliated with or endorsed by Gusto.</p></details>
+        <details><summary>How is this different from the Gusto Texas paycheck calculator?<span>+</span></summary><p>This independent calculator is designed for quick, free estimates with no sign-up. Payroll services such as Gusto offer broader employer payroll, filing, and employee-management features. Paycheck Atlas is not affiliated with or endorsed by Gusto.</p></details>
         <details><summary>Are bonuses and overtime included?<span>+</span></summary><p>Include expected bonuses and overtime in annual gross salary for a broader annual estimate. Supplemental wages may be withheld differently on an actual paycheck.</p></details>
       </section>
 
-      <footer><a className="brand" href="#top"><span className="brand-mark">★</span><span>Lone Star <b>Paycheck</b></span></a><p>Free Texas paycheck estimates, built for clarity.</p><p className="disclaimer">For informational purposes only. Not tax, legal, or financial advice.</p></footer>
+      <footer><a className="brand" href="#top"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a><p>Free paycheck estimates, built for clarity.</p><p className="disclaimer">Estimates are for informational purposes only and are not tax, legal, accounting, payroll, or financial advice. <a href="/disclaimer">Read the full disclaimer.</a></p></footer>
     </main>
   );
 }

@@ -6,7 +6,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Texas Paycheck Calculator 2026 | Estimate Your Take-Home Pay",
+  title: "Paycheck Atlas | Texas Paycheck Calculator 2026",
   description: "Free Texas paycheck calculator. Estimate your 2026 take-home pay after federal income tax, Social Security, Medicare, and pre-tax deductions.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: {
