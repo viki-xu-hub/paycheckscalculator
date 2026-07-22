@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { locations } from "./lib/locations";
 
 type FilingStatus = "single" | "married" | "head";
 type Frequency = "weekly" | "biweekly" | "semimonthly" | "monthly" | "annual";
@@ -42,6 +43,9 @@ export default function Home() {
   const [preTax, setPreTax] = useState(250);
   const [retirementPercent, setRetirementPercent] = useState(5);
   const [additional, setAdditional] = useState(0);
+  const [stateQuery, setStateQuery] = useState("");
+  const stateMatches = locations.filter((location) => `${location.name} ${location.short}`.toLowerCase().includes(stateQuery.toLowerCase())).slice(0, 8);
+  const locationHref = (slug: string, short: string) => short === "TX" ? "/" : `/${slug}`;
 
   const result = useMemo(() => {
     const count = periods[frequency];
@@ -75,10 +79,10 @@ export default function Home() {
 
   return (
     <main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"WebApplication",name:"Texas Paycheck Calculator",alternateName:"Paycheck Atlas",url:"https://paycheckscalculator.org",applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},description:"Free 2026 Texas paycheck calculator for estimating take-home pay after federal tax, FICA and deductions."})}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"WebApplication",name:"Texas Paycheck Calculator",alternateName:"Paycheck Atlas",url:"https://www.paycheckscalculator.org",applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},description:"Free 2026 Texas paycheck calculator for estimating take-home pay after federal tax, FICA and deductions."})}} />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Paycheck Atlas home"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a>
-        <nav aria-label="Main navigation"><a href="#calculator">Calculator</a><a href="/texas-bonus-commission-paycheck-calculator">Bonus & commission</a><a href="/texas-hourly-paycheck-calculator">Hourly</a><a href="#faq">FAQ</a></nav>
+        <nav aria-label="Main navigation"><a href="#calculator">Calculator</a><a href="/state-paycheck-calculators">All locations</a><a href="/texas-bonus-commission-paycheck-calculator">Bonus</a><a href="/texas-hourly-paycheck-calculator">Hourly</a><a href="/about">About</a></nav>
         <span className="year-pill">Updated for 2026</span>
       </header>
 
@@ -86,6 +90,17 @@ export default function Home() {
         <div className="eyebrow"><span>★</span> No Texas state income tax</div>
         <h1>Texas Paycheck <em>Calculator</em></h1>
         <p className="hero-copy">See what you’ll actually take home. Enter your pay details for a clear estimate of your Texas paycheck.</p>
+
+        <div className="state-picker homepage-state-picker">
+          <div><span className="picker-label">SELECT A PAYCHECK CALCULATOR</span><b>Calculate pay in another state</b></div>
+          <div className="state-search">
+            <input value={stateQuery} onChange={(event) => setStateQuery(event.target.value)} placeholder="Search states — current: Texas" aria-label="Search paycheck calculators by state" />
+            {stateQuery && <div className="state-options">{stateMatches.map((location) => <a key={location.slug} href={locationHref(location.slug, location.short)}><span>{location.name}</span><small>{location.short}</small></a>)}{!stateMatches.length && <p>No matching state</p>}</div>}
+          </div>
+          <select aria-label="Select state paycheck calculator" value="texas-paycheck-calculator" onChange={(event) => { const location = locations.find((item) => item.slug === event.target.value); if (location) window.location.href = locationHref(location.slug, location.short); }}>
+            {locations.map((location) => <option key={location.slug} value={location.slug}>{location.name}</option>)}
+          </select>
+        </div>
 
         <div className="calculator" id="calculator">
           <section className="inputs" aria-labelledby="details-title">
@@ -153,7 +168,7 @@ export default function Home() {
         <details><summary>Are bonuses and overtime included?<span>+</span></summary><p>Include expected bonuses and overtime in annual gross salary for a broader annual estimate. Supplemental wages may be withheld differently on an actual paycheck.</p></details>
       </section>
 
-      <footer><a className="brand" href="#top"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a><p>Free paycheck estimates, built for clarity.</p><p className="disclaimer">Estimates are informational only. <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a></p></footer>
+      <footer><a className="brand" href="#top"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a><p>Free paycheck estimates, built for clarity.</p><p className="disclaimer">Estimates are informational only. <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a></p></footer>
     </main>
   );
 }
