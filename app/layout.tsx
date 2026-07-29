@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.paycheckscalculator.org"),
   title: "Paycheck Atlas | Free Paycheck Calculator 2026",
   description: "Free 2026 paycheck calculators for salary, hourly, biweekly, federal withholding, FICA, state taxes, and take-home pay.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: { icon: [{ url: "/favicon.svg?v=2", type: "image/svg+xml" }], shortcut: "/favicon.svg?v=2" },
   alternates: { canonical: "/" },
   applicationName: "Paycheck Atlas",
   creator: "Paycheck Atlas",

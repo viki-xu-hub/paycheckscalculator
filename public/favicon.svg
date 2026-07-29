@@ -1,8 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#0d2945"/>
-  <path d="M8 9.5h16v13H8z" fill="#fff"/>
-  <path d="M8 13h16" stroke="#b9dff3" stroke-width="2"/>
-  <path d="M11 18h4M11 21h7" stroke="#1769aa" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="22" cy="20" r="5" fill="#1769aa"/>
-  <path d="m19.8 20 1.4 1.4 2.8-3" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Paycheck Atlas calculator">
+  <defs>
+    <linearGradient id="navy" x1="8" y1="5" x2="56" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#244f82"/>
+      <stop offset="1" stop-color="#071f3b"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="31" y1="21" x2="51" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55a9f4"/>
+      <stop offset="1" stop-color="#2379d2"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#navy)" stroke="#06172b" stroke-width="2"/>
+  <path d="m17.2 10.3 2.2 6.5h6.9l-5.6 4 2.2 6.6-5.7-4.1-5.7 4.1 2.2-6.6-5.6-4h6.9z" fill="#fff" stroke="#071f3b" stroke-width=".8" stroke-linejoin="round"/>
+  <g transform="rotate(4 41 37)">
+    <rect x="28" y="18" width="29" height="39" rx="6" fill="#94b9da" stroke="#06172b" stroke-width="1.2"/>
+    <rect x="25.5" y="15.5" width="29" height="39" rx="6" fill="#fff" stroke="#06172b" stroke-width="1.2"/>
+    <rect x="29.5" y="20" width="21" height="8" rx="1.5" fill="url(#screen)" stroke="#1264b5" stroke-width=".8"/>
+    <g fill="#173b66" stroke="#06172b" stroke-width=".7">
+      <rect x="29" y="33" width="5.5" height="5.5" rx="1"/>
+      <rect x="37" y="33" width="5.5" height="5.5" rx="1"/>
+      <rect x="45" y="33" width="5.5" height="5.5" rx="1"/>
+      <rect x="29" y="41" width="5.5" height="5.5" rx="1"/>
+      <rect x="37" y="41" width="5.5" height="5.5" rx="1"/>
+      <rect x="45" y="41" width="5.5" height="9" rx="1.2"/>
+    </g>
+    <rect x="29" y="49" width="5.5" height="3.5" rx="1" fill="#4da6f0" stroke="#1264b5" stroke-width=".7"/>
+    <rect x="37" y="49" width="5.5" height="3.5" rx="1" fill="#173b66" stroke="#06172b" stroke-width=".7"/>
+  </g>
 </svg>
