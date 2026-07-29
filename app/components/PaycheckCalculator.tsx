@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 import {
   calculatePaycheck,
   money,
@@ -26,6 +26,9 @@ const initialPremiumRate=(state:SupportedState)=>state==="MA" ? .46 : state==="M
 
 export default function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean}) {
   const [state,setState]=useState<SupportedState>(defaultState);
+  const [stateQuery,setStateQuery]=useState(supportedStates.find(item=>item.code===defaultState)?.name??"");
+  const [stateSearchOpen,setStateSearchOpen]=useState(false);
+  const stateListId=useId();
   const [frequency,setFrequency]=useState<PayFrequency>(defaultFrequency);
   const [salary,setSalary]=useState(75000);
   const [hourlyRate,setHourlyRate]=useState(30);
@@ -75,6 +78,8 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
   }),[annualGross,frequency,status,state,retirement,preTax,additional,allowances,electedStateRate,localRate,iowaAnnualAllowance,spouseWorks,claimLouisianaDeduction,alabamaStatus,dependentAllowances,adoptedChildAllowances,additionalState,reducedState,coloradoAdjustment,statePayDate,employeePremiumRate,stateProgramDeduction,blindExemptions,ctCode,hourly,hours,overtime,weeks,oregonHours,wbfEmployeeCents,hasStateWithholdingForm,schoolDistrictRate,withholdAtHigherSingleRate]);
 
   const changeState=(next:SupportedState)=>{
+    setStateQuery(supportedStates.find(item=>item.code===next)?.name??next);
+    setStateSearchOpen(false);
     if(navigateOnStateChange){
       const slug=next==="NYC"?"nyc":supportedStates.find(item=>item.code===next)?.name.toLowerCase().replaceAll(" ","-");
       window.location.href=`/${slug}-paycheck-calculator`;
@@ -117,13 +122,17 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
   const taxShare=result.grossAnnual?taxes/result.grossAnnual*100:0;
   const deductionShare=Math.max(0,100-netShare-taxShare);
   const stateName=supportedStates.find(item=>item.code===state)?.name;
+  const filteredStates=supportedStates.filter(item=>{
+    const query=stateQuery.trim().toLowerCase();
+    return !query||item.name.toLowerCase().includes(query)||item.code.toLowerCase().includes(query);
+  });
   const allowanceLabel:Partial<Record<SupportedState,string>>={AL:"AL dependent exemptions",AR:"AR4EC exemptions",CA:"DE 4 allowances",GA:"Georgia dependents",HI:"HW-4 allowances",ID:"ID-W-4 allowances",IL:"IL-W-4 allowances",IN:"WH-4 personal exemptions",KS:"Kansas dependents",MA:"Massachusetts exemptions",MD:"Maryland exemptions",MI:"Michigan exemptions",MN:"Minnesota allowances",NC:"NC-4 allowances",NE:"W-4N allowances",NJ:"NJ exemptions",NY:"IT-2104 allowances",NYC:"IT-2104 allowances",OH:"Ohio IT 4 exemptions",OK:"OK-W-4 allowances",OR:"Oregon allowances",SC:"SC W-4 allowances",VA:"Virginia exemptions",WI:"WT-4 exemptions"};
   const localLabel=state==="MD"?"Maryland county rate (%)":state==="IN"?"Indiana county rate (%)":state==="OH"?"Ohio municipal planning rate (%)":state==="MI"?"Michigan city planning rate (%)":state==="KY"?"Kentucky local occupational rate (%)":state==="MO"?"KC / St. Louis earnings rate (%)":state==="PA"?"Pennsylvania local EIT rate (%)":"Alabama occupational rate (%)";
 
   return <div className="calculator national-calculator" id="calculator">
     <section className="inputs">
       <div className="section-heading"><span className="step">1</span><div><h2>Your pay details</h2><p>Adjust the fields; results update instantly.</p></div></div>
-      <label className="field"><span>State or location</span><select value={state} onChange={event=>changeState(event.target.value as SupportedState)}>{supportedStates.map(item=><option key={item.code} value={item.code}>{item.name}</option>)}</select><small>Choose from all 38 location engines.</small></label>
+      <label className="field"><span>State or location</span><div className="state-combobox" onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node)){setStateSearchOpen(false);setStateQuery(stateName??"");}}}><input type="search" role="combobox" aria-autocomplete="list" aria-controls={stateListId} aria-expanded={stateSearchOpen} aria-label="Search state or location" placeholder="Search by state name or abbreviation" value={stateQuery} onFocus={event=>{event.currentTarget.select();setStateSearchOpen(true);}} onChange={event=>{setStateQuery(event.target.value);setStateSearchOpen(true);}} onKeyDown={event=>{if(event.key==="Escape"){setStateQuery(stateName??"");setStateSearchOpen(false);event.currentTarget.blur();}else if(event.key==="Enter"&&stateSearchOpen&&filteredStates.length){event.preventDefault();changeState(filteredStates[0].code);}}}/>{stateSearchOpen&&<div className="state-search-results" id={stateListId} role="listbox">{filteredStates.length?filteredStates.map(item=><button type="button" role="option" aria-selected={item.code===state} className={item.code===state?"selected":""} key={item.code} onClick={()=>changeState(item.code)}><span>{item.name}</span><small>{item.code}</small></button>):<p>No matching state or location.</p>}</div>}</div><small>Type a state name or abbreviation, then select from all 38 location engines.</small></label>
       {hourly?<><div className="split-fields"><NumberField label="Hourly rate" value={hourlyRate} setValue={setHourlyRate}/><NumberField label="Regular hours / week" value={hours} setValue={setHours} currency={false}/></div><div className="split-fields"><NumberField label="Overtime hours / week" value={overtime} setValue={setOvertime} currency={false}/><NumberField label="Paid weeks / year" value={weeks} setValue={setWeeks} currency={false}/></div></>:<NumberField label="Annual gross salary" value={salary} setValue={setSalary}/>} 
       <div className="field"><span>Pay frequency</span><div className="frequency-grid">{(Object.keys(PAY_PERIODS) as PayFrequency[]).map(item=><button key={item} className={frequency===item?"active":""} onClick={()=>setFrequency(item)} type="button">{item==="biweekly"?"Bi-weekly":item==="semimonthly"?"Semi-monthly":item[0].toUpperCase()+item.slice(1)}<small>{PAY_PERIODS[item]}× / year</small></button>)}</div></div>
       <label className="field"><span>Federal filing status</span><select value={status} onChange={event=>changeStatus(event.target.value as FilingStatus)}><option value="single">Single or married filing separately</option><option value="married">Married filing jointly</option><option value="head">Head of household</option></select></label>

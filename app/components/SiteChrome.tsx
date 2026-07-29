@@ -3,5 +3,5 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  return <footer><a className="brand" href="/"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a><p>Independent, source-backed paycheck estimates.</p><p className="disclaimer"><a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a></p></footer>;
+  return <footer><a className="brand" href="/"><span className="brand-mark">★</span><span>Paycheck <b>Atlas</b></span></a><p>Independent, source-backed paycheck estimates.</p><p className="disclaimer"><a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a></p></footer>;
 }
