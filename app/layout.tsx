@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ConsentBanner from "./ConsentBanner";
@@ -15,6 +15,8 @@ export const metadata: Metadata = {
   applicationName: "Paycheck Atlas",
   creator: "Paycheck Atlas",
   category: "finance",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "Paycheck", statusBarStyle: "black-translucent" },
   openGraph: {
     title: "Paycheck Calculator 2026",
     description: "Estimate salary or hourly take-home pay with source-backed federal and state methods.",
@@ -23,6 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", images: ["/og.png"] },
 };
+
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#172b3a" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body className={`${geistSans.variable} ${geistMono.variable}`}>{children}<ConsentBanner/></body></html>;

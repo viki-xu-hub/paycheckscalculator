@@ -3,32 +3,32 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Texas Paycheck Calculator 2026 - Calculate Your Take-Home Pay After Taxes",
+  title: "Florida Paycheck Calculator 2026 - Calculate Your Take-Home Pay After Taxes",
   description:
-    "Use our Texas paycheck calculator to estimate your 2026 take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Texas has no state income tax on wages.",
-  alternates: { canonical: "/texas-paycheck-calculator" },
+    "Use our Florida paycheck calculator to estimate your 2026 take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Florida has no state income tax on wages.",
+  alternates: { canonical: "/florida-paycheck-calculator" },
   openGraph: {
-    title: "Texas Paycheck Calculator 2026 - Calculate Your Take-Home Pay After Taxes",
+    title: "Florida Paycheck Calculator 2026 - Calculate Your Take-Home Pay After Taxes",
     description:
-      "Estimate your Texas take-home pay with federal taxes, Social Security, Medicare, and payroll deductions. No Texas state income tax on wages.",
-    url: "https://www.paycheckscalculator.org/texas-paycheck-calculator",
+      "Estimate your Florida take-home pay with federal taxes, Social Security, Medicare, and payroll deductions. No Florida state income tax on wages.",
+    url: "https://www.paycheckscalculator.org/florida-paycheck-calculator",
     type: "website",
   },
 };
 
-export default function Texas() {
-  const canonical = "https://www.paycheckscalculator.org/texas-paycheck-calculator";
+export default function Florida() {
+  const canonical = "https://www.paycheckscalculator.org/florida-paycheck-calculator";
 
   const webAppSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Texas Paycheck Calculator",
+    name: "Florida Paycheck Calculator",
     url: canonical,
     applicationCategory: "FinanceApplication",
     operatingSystem: "Any",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     description:
-      "Free Texas paycheck calculator for 2026. Estimate take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Texas has no state income tax on wages.",
+      "Free Florida paycheck calculator for 2026. Estimate take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Florida has no state income tax on wages.",
   };
 
   const faqSchema = {
@@ -37,31 +37,31 @@ export default function Texas() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Does Texas have state income tax?",
+        name: "Does Florida have state income tax?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Texas does not have an individual state income tax on wages. Texas employees still pay federal income tax and FICA taxes.",
+          text: "No. Florida does not have an individual state income tax on wages. Florida employees still pay federal income tax and FICA taxes.",
         },
       },
       {
         "@type": "Question",
-        name: "How much is my paycheck after taxes in Texas?",
+        name: "How much is my paycheck after taxes in Florida?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Your Texas take-home pay depends on your salary, pay frequency, federal tax withholding, Social Security, Medicare, benefits, and deductions.",
+          text: "Your Florida take-home pay depends on your salary, pay frequency, federal tax withholding, Social Security, Medicare, benefits, and deductions.",
         },
       },
       {
         "@type": "Question",
-        name: "Does Texas paycheck calculator include federal taxes?",
+        name: "Does Florida paycheck calculator include federal taxes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Texas paycheck calculations include estimated federal income tax, Social Security, and Medicare deductions.",
+          text: "Yes. Florida paycheck calculations include estimated federal income tax, Social Security, and Medicare deductions.",
         },
       },
       {
         "@type": "Question",
-        name: "How accurate is the Texas paycheck calculator?",
+        name: "How accurate is the Florida paycheck calculator?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "The calculator provides an estimate based on the information entered. Actual payroll results may vary depending on employer systems, benefits, and tax circumstances.",
@@ -69,10 +69,10 @@ export default function Texas() {
       },
       {
         "@type": "Question",
-        name: "Is Texas a tax-friendly state for employees?",
+        name: "Is Florida a tax-friendly state for employees?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Texas can be tax-friendly for employees because there is no state income tax on wages. However, federal taxes and other deductions still apply.",
+          text: "Florida is considered tax-friendly for employees because there is no state income tax on wages. However, federal taxes and other deductions still apply.",
         },
       },
     ],
@@ -81,11 +81,11 @@ export default function Texas() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Texas Paycheck Calculator 2026",
+    name: "Florida Paycheck Calculator 2026",
     url: canonical,
-    about: "Payroll tax calculation and take-home pay estimation in Texas",
+    about: "Payroll tax calculation and take-home pay estimation in Florida",
     description:
-      "Calculate your Texas take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Texas has no state income tax on wages.",
+      "Calculate your Florida take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Florida has no state income tax on wages.",
   };
 
   return (
@@ -98,38 +98,38 @@ export default function Texas() {
 
       {/* Hero */}
       <section className="hero">
-        <div className="eyebrow">TEXAS · NO INDIVIDUAL STATE INCOME TAX</div>
-        <h1>Texas Paycheck Calculator 2026: Calculate Your Take-Home Pay After Taxes</h1>
+        <div className="eyebrow">FLORIDA · NO INDIVIDUAL STATE INCOME TAX</div>
+        <h1>Florida Paycheck Calculator 2026: Calculate Your Take-Home Pay After Taxes</h1>
         <div className="hero-intro">
           <p>
-            Our <strong>Texas paycheck calculator</strong> helps you estimate your take-home pay after federal taxes, Social Security, Medicare, and other payroll deductions.
+            Our <strong>Florida paycheck calculator</strong> helps you estimate your take-home pay after federal taxes, Social Security, Medicare, and other payroll deductions.
           </p>
           <p>
-            Because Texas does not have a state income tax on wages, employees generally keep more of their gross income compared with workers in states that collect state income tax.
+            Because Florida does not have a state income tax on wages, employees generally keep more of their gross income compared with workers in states that collect state income tax.
           </p>
           <p>
-            Enter your salary information to estimate your Texas paycheck based on your pay frequency, deductions, and payroll factors.
+            Enter your salary information to estimate your Florida paycheck based on your pay frequency, deductions, and payroll factors.
           </p>
         </div>
-        <PaycheckCalculator defaultState="TX" navigateOnStateChange />
+        <PaycheckCalculator defaultState="FL" navigateOnStateChange />
         <div className="trust-row">
           <span>✓ 2026 IRS method</span>
-          <span>✓ Texas zero state income tax</span>
+          <span>✓ Florida zero state income tax</span>
           <span>✓ No sign-up required</span>
         </div>
         <div className="calc-note">
           <p>
-            This <strong>Texas paycheck calculator</strong> estimates your net pay by considering federal income tax, Social Security tax, Medicare tax, pre-tax deductions, employee benefits, and other payroll adjustments. The calculator is designed to help Texas employees understand the difference between gross pay and actual take-home pay.
+            This <strong>Florida paycheck calculator</strong> estimates your net pay by considering federal income tax, Social Security tax, Medicare tax, pre-tax deductions, employee benefits, and other payroll adjustments. The calculator is designed to help Florida employees understand the difference between gross pay and actual take-home pay.
           </p>
         </div>
       </section>
 
-      {/* H2: What This Texas Paycheck Calculator Includes */}
+      {/* H2: What This Florida Paycheck Calculator Includes */}
       <section className="seo-section text-left">
         <p className="kicker">CALCULATOR FEATURES</p>
-        <h2>What This Texas Paycheck Calculator Includes</h2>
+        <h2>What This Florida Paycheck Calculator Includes</h2>
         <p className="seo-section-intro">
-          This Texas paycheck calculator estimates your net pay by considering the major payroll factors that affect your paycheck.
+          This Florida paycheck calculator estimates your net pay by considering the major payroll factors that affect your paycheck.
         </p>
         <ul className="checklist">
           <li>Federal income tax</li>
@@ -140,19 +140,19 @@ export default function Texas() {
           <li>Other payroll adjustments</li>
         </ul>
         <p className="calc-note" style={{ marginTop: 20 }}>
-          The calculator is designed to help Texas employees understand the difference between gross pay and actual take-home pay.
+          The calculator is designed to help Florida employees understand the difference between gross pay and actual take-home pay.
         </p>
       </section>
 
-      {/* H2: Does Texas Have State Income Tax? */}
+      {/* H2: Does Florida Have State Income Tax? */}
       <section className="seo-section text-left">
-        <p className="kicker">TEXAS TAX POLICY</p>
-        <h2>Does Texas Have State Income Tax?</h2>
+        <p className="kicker">FLORIDA TAX POLICY</p>
+        <h2>Does Florida Have State Income Tax?</h2>
         <p>
-          <strong>Texas does not impose an individual state income tax on wages.</strong>
+          <strong>Florida does not impose an individual state income tax on wages.</strong>
         </p>
         <p>
-          This means employees working in Texas do not have state income tax deducted from their paycheck. However, Texas employees may still have other payroll deductions, including:
+          This means employees working in Florida do not have state income tax deducted from their paycheck. However, Florida employees may still have other payroll deductions, including:
         </p>
         <ul className="checklist">
           <li>Federal income tax</li>
@@ -162,16 +162,16 @@ export default function Texas() {
           <li>Retirement contributions</li>
         </ul>
         <p style={{ marginTop: 16, color: "#667a8a", lineHeight: 1.7, fontSize: 14 }}>
-          Although Texas has no state income tax, your final paycheck amount depends on federal tax rules and your personal payroll situation.
+          Although Florida has no state income tax, your final paycheck amount depends on federal tax rules and your personal payroll situation.
         </p>
       </section>
 
-      {/* H2: How We Calculate Your Texas Paycheck */}
+      {/* H2: How We Calculate Your Florida Paycheck */}
       <section className="seo-section text-left">
         <p className="kicker">CALCULATION METHOD</p>
-        <h2>How We Calculate Your Texas Paycheck</h2>
+        <h2>How We Calculate Your Florida Paycheck</h2>
         <p className="seo-section-intro">
-          Our Texas paycheck calculator uses a payroll estimation method based on current federal tax rules and common payroll practices.
+          Our Florida paycheck calculator uses a payroll estimation method based on current federal tax rules and common payroll practices.
         </p>
         <div className="info-grid">
           <article>
@@ -207,10 +207,10 @@ export default function Texas() {
         </div>
       </section>
 
-      {/* H2: 2026 Texas Paycheck Calculator Method */}
+      {/* H2: 2026 Florida Paycheck Calculator Method */}
       <section className="seo-section text-left">
         <p className="kicker">2026 IRS METHOD</p>
-        <h2>2026 Texas Paycheck Calculator Method</h2>
+        <h2>2026 Florida Paycheck Calculator Method</h2>
         <p className="seo-section-intro">
           For 2026 estimates, this calculator uses the IRS automated percentage method approach for payroll withholding calculations.
         </p>
@@ -222,10 +222,10 @@ export default function Texas() {
         </p>
       </section>
 
-      {/* H2: Why Your Actual Texas Paycheck May Be Different */}
+      {/* H2: Why Your Actual Florida Paycheck May Be Different */}
       <section className="seo-section text-left">
         <p className="kicker">IMPORTANT CONSIDERATIONS</p>
-        <h2>Why Your Actual Texas Paycheck May Be Different</h2>
+        <h2>Why Your Actual Florida Paycheck May Be Different</h2>
         <p className="seo-section-intro">
           Your actual paycheck from an employer may differ from this estimate because payroll calculations depend on individual circumstances.
         </p>
@@ -246,7 +246,7 @@ export default function Texas() {
       {/* H2: Gross Pay vs Net Pay */}
       <section className="seo-section text-left">
         <p className="kicker">PAYCHECK BASICS</p>
-        <h2>Understanding Your Texas Gross Pay and Take-Home Pay</h2>
+        <h2>Understanding Your Florida Gross Pay and Take-Home Pay</h2>
         <p className="seo-section-intro">
           <strong>Gross pay</strong> is the total amount you earn before taxes and deductions.
         </p>
@@ -254,30 +254,30 @@ export default function Texas() {
           <strong>Net pay</strong>, also called <strong>take-home pay</strong>, is the amount remaining after required taxes and payroll deductions are removed.
         </p>
         <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14 }}>
-          For Texas employees, the difference between gross pay and net pay is mainly affected by federal taxes, FICA taxes, and personal deductions because Texas does not collect state income tax on wages.
+          For Florida employees, the difference between gross pay and net pay is mainly affected by federal taxes, FICA taxes, and personal deductions because Florida does not collect state income tax on wages.
         </p>
       </section>
 
-      {/* Texas Salary After Tax Examples */}
+      {/* Florida Salary After Tax Examples */}
       <section className="seo-section">
-        <p className="kicker">TEXAS SALARY EXAMPLES</p>
-        <h2>Texas Salary After Tax Examples</h2>
-        <p>See estimated take-home pay at common salary levels for Texas employees.</p>
+        <p className="kicker">FLORIDA SALARY EXAMPLES</p>
+        <h2>Florida Salary After Tax Examples</h2>
+        <p>See estimated take-home pay at common salary levels for Florida employees.</p>
         <div className="tool-links">
-          <a href="/texas-salary-after-tax?salary=50000">
-            <b>$50,000 Salary After Tax in Texas</b>
+          <a href="/florida-salary-after-tax?salary=50000">
+            <b>$50,000 Salary After Tax in Florida</b>
             <span>Estimate take-home pay at $50K →</span>
           </a>
-          <a href="/texas-salary-after-tax?salary=75000">
-            <b>$75,000 Salary After Tax in Texas</b>
+          <a href="/florida-salary-after-tax?salary=75000">
+            <b>$75,000 Salary After Tax in Florida</b>
             <span>Calculate net pay at $75K →</span>
           </a>
-          <a href="/texas-salary-after-tax?salary=100000">
-            <b>$100,000 Salary After Tax in Texas</b>
+          <a href="/florida-salary-after-tax?salary=100000">
+            <b>$100,000 Salary After Tax in Florida</b>
             <span>See deductions at six figures →</span>
           </a>
-          <a href="/texas-salary-after-tax">
-            <b>Texas Salary After Tax Calculator</b>
+          <a href="/florida-salary-after-tax">
+            <b>Florida Salary After Tax Calculator</b>
             <span>Full salary comparison tool →</span>
           </a>
         </div>
@@ -287,14 +287,14 @@ export default function Texas() {
       <section className="seo-section">
         <p className="kicker">STATE PAYCHECK CALCULATORS</p>
         <h2>Related State Calculators</h2>
-        <p>Compare your Texas paycheck with take-home pay in other states.</p>
+        <p>Compare your Florida paycheck with take-home pay in other states.</p>
         <div className="tool-links">
           <a href="/california-paycheck-calculator">
             <b>California Paycheck Calculator</b>
             <span>Method B, SDI, and state income tax →</span>
           </a>
-          <a href="/florida-paycheck-calculator">
-            <b>Florida Paycheck Calculator</b>
+          <a href="/texas-paycheck-calculator">
+            <b>Texas Paycheck Calculator</b>
             <span>Another no-state-income-tax state →</span>
           </a>
           <a href="/new-york-paycheck-calculator">
@@ -333,9 +333,9 @@ export default function Texas() {
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>
           </a>
-          <a href="/texas-hourly-paycheck-calculator">
-            <b>Texas Hourly Paycheck Calculator</b>
-            <span>Hourly workers with overtime →</span>
+          <a href="/florida-salary-after-tax">
+            <b>Florida Salary After Tax</b>
+            <span>Full Florida salary comparison →</span>
           </a>
         </div>
       </section>
@@ -345,31 +345,31 @@ export default function Texas() {
         <p className="kicker">COMMON QUESTIONS</p>
         <h2>Frequently Asked Questions</h2>
         <details>
-          <summary>Does Texas have state income tax?<span>+</span></summary>
+          <summary>Does Florida have state income tax?<span>+</span></summary>
           <p>
-            No. Texas does not have an individual state income tax on wages. Texas employees still pay federal income tax and FICA taxes.
+            No. Florida does not have an individual state income tax on wages. Florida employees still pay federal income tax and FICA taxes.
           </p>
         </details>
         <details>
-          <summary>How much is my paycheck after taxes in Texas?<span>+</span></summary>
+          <summary>How much is my paycheck after taxes in Florida?<span>+</span></summary>
           <p>
-            Your Texas take-home pay depends on your salary, pay frequency, federal tax withholding, Social Security, Medicare, benefits, and deductions.
+            Your Florida take-home pay depends on your salary, pay frequency, federal tax withholding, Social Security, Medicare, benefits, and deductions.
           </p>
         </details>
         <details>
-          <summary>Is Texas a tax-friendly state for employees?<span>+</span></summary>
+          <summary>Is Florida a tax-friendly state for employees?<span>+</span></summary>
           <p>
-            Texas can be tax-friendly for employees because there is no state income tax on wages. However, federal taxes and other deductions still apply.
+            Florida is considered tax-friendly for employees because there is no state income tax on wages. However, federal taxes and other deductions still apply.
           </p>
         </details>
         <details>
-          <summary>Does Texas paycheck calculator include federal taxes?<span>+</span></summary>
+          <summary>Does Florida paycheck calculator include federal taxes?<span>+</span></summary>
           <p>
-            Yes. Texas paycheck calculations include estimated federal income tax, Social Security, and Medicare deductions.
+            Yes. Florida paycheck calculations include estimated federal income tax, Social Security, and Medicare deductions.
           </p>
         </details>
         <details>
-          <summary>How accurate is the Texas paycheck calculator?<span>+</span></summary>
+          <summary>How accurate is the Florida paycheck calculator?<span>+</span></summary>
           <p>
             The calculator provides an estimate based on the information entered. Actual payroll results may vary depending on employer systems, benefits, and tax circumstances.
           </p>
@@ -381,13 +381,13 @@ export default function Texas() {
         <p className="kicker">CALCULATION SOURCES</p>
         <h2>Tax Information Sources</h2>
         <p>
-          Our Texas paycheck calculations are based on publicly available payroll and tax information from authoritative sources.
+          Our Florida paycheck calculations are based on publicly available payroll and tax information from authoritative sources.
         </p>
         <p>Reference sources include:</p>
         <ul className="checklist">
           <li>Internal Revenue Service (IRS)</li>
           <li>Social Security Administration (SSA)</li>
-          <li>Texas Comptroller of Public Accounts</li>
+          <li>Florida Department of Revenue</li>
         </ul>
         <div className="reviewer">
           <p><small>Reviewed by: Paycheck Calculator Editorial Team</small></p>
@@ -399,7 +399,7 @@ export default function Texas() {
       <section className="seo-section">
         <p className="kicker">IMPORTANT INFORMATION</p>
         <h2>Disclaimer</h2>
-        <p>This Texas paycheck calculator provides estimates for informational purposes only.</p>
+        <p>This Florida paycheck calculator provides estimates for informational purposes only.</p>
         <p>Actual paycheck amounts may vary based on employer payroll systems, benefits, deductions, tax changes, and individual financial situations.</p>
         <p>For specific tax advice, consult a qualified tax professional.</p>
       </section>

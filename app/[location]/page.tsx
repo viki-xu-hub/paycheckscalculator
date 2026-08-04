@@ -5,24 +5,310 @@ import {SiteFooter,SiteHeader} from "../components/SiteChrome";
 import type {SupportedState} from "../lib/payroll";
 
 export function generateStaticParams(){return locations.map(x=>({location:x.slug}))}
-export async function generateMetadata({params}:{params:Promise<{location:string}>}){const {location}=await params,p=locationBySlug[location];if(!p)return{};const canonical=`/${p.slug}`;return{title:`${p.name} Paycheck Calculator 2026 | Take-Home Pay`,description:`Estimate a 2026 ${p.name} paycheck with federal withholding, FICA, deductions, and a source-backed state withholding method.`,alternates:{canonical},robots:{index:true,follow:true},openGraph:{title:`${p.name} Paycheck Calculator 2026`,description:`Estimate ${p.name} take-home pay with transparent 2026 assumptions.`,url:canonical,type:"website"}}}
-export default async function LocationPage({params}:{params:Promise<{location:string}>}){const {location}=await params,p=locationBySlug[location];if(!p)notFound();const canonical=`https://www.paycheckscalculator.org/${p.slug}`;const schema={"@context":"https://schema.org","@type":"WebApplication",name:`${p.name} Paycheck Calculator`,url:canonical,applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},description:`Free ${p.name} paycheck calculator for 2026.`};return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><SiteHeader/><section className="hero"><div className="eyebrow">SOURCE-BACKED 2026 STATE METHOD</div><h1>{p.name} Paycheck <em>Calculator</em></h1><p className="hero-copy">Estimate federal withholding, FICA, {p.name} income tax or employee payroll programs, deductions, and take-home pay.</p><PaycheckCalculator defaultState={p.short as SupportedState} navigateOnStateChange/></section><SourceBackedGuide place={p}/><SiteFooter/></main>}
 
-function SourceBackedGuide({place:p}:{place:(typeof locations)[number]}){return <article className="long-seo"><p className="kicker">{p.short} 2026 WITHHOLDING METHOD</p><h2>How the {p.name} paycheck estimate works</h2><section><h3>What is calculated</h3><p>{stateNotes[p.short]} The calculator applies the published 2026 state method in addition to IRS federal withholding and FICA. State payroll premiums are displayed separately from state income tax where applicable.</p></section><section><h3>Inputs to verify</h3><p>Use taxable annual wages, pay frequency, federal filing status, the state-specific allowances or exemptions shown on your current certificate, retirement contributions, eligible pre-tax benefits, and additional federal withholding. Connecticut users should select the exact CT-W4 code or the no-form fallback. Arizona uses the elected A-4 percentage. Georgia, Utah, and Ohio require a 2026 paycheck or pay-period date because their methods change during the year. A recent pay stub provides the best starting values.</p></section><StateEditorial code={p.short}/><section><h3>Important exclusions</h3><p>Address-specific local income taxes are included only when you enter a planning rate. New York City is a resident calculator, not a calculator for nonresident commuters. Reciprocity, nonresident rules, multiple-job adjustments, credits, employer-paid premium choices, special exemptions, garnishments, and year-to-date wage history may still change an actual paycheck. Review the <a className="text-link" href="/methodology">methodology and official source list</a> before relying on the estimate.</p></section><div className="tool-links"><a href="/hourly-paycheck-calculator"><b>Hourly paycheck calculator</b><span>Include regular and overtime hours →</span></a><a href="/biweekly-paycheck-calculator"><b>Biweekly paycheck calculator</b><span>Estimate one of 26 yearly checks →</span></a><a href="/how-much-tax-is-taken-from-my-paycheck"><b>Paycheck tax guide</b><span>Understand every deduction →</span></a><a href="/methodology"><b>Calculation methodology</b><span>Review assumptions and official sources →</span></a></div></article>}
+export async function generateMetadata({params}:{params:Promise<{location:string}>}){
+  const {location}=await params,p=locationBySlug[location];
+  if(!p)return{};
+  const canonical=`/${p.slug}`;
+  const noTaxPhrase=p.noTax?"No state income tax on wages.":"Estimate state income tax withholding.";
+  return{
+    title:`${p.name} Paycheck Calculator 2026 — Calculate Your Take-Home Pay After Taxes`,
+    description:`Use our free ${p.name} paycheck calculator to estimate your 2026 take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. ${noTaxPhrase}`,
+    alternates:{canonical},
+    robots:{index:true,follow:true},
+    openGraph:{
+      title:`${p.name} Paycheck Calculator 2026`,
+      description:`Estimate ${p.name} take-home pay after taxes with transparent 2026 withholding assumptions.`,
+      url:canonical,
+      type:"website"
+    }
+  };
+}
+
+export default async function LocationPage({params}:{params:Promise<{location:string}>}){
+  const {location}=await params,p=locationBySlug[location];
+  if(!p)notFound();
+  const canonical=`https://www.paycheckscalculator.org/${p.slug}`;
+  const noTax=p.noTax===true;
+  const taxInfo=stateTaxInfo[p.short]||{type:"income tax",detail:`${p.name} imposes state income tax on wages.`,agency:`${p.name} Department of Revenue`};
+  const faqs=buildFaqs(p.name,p.short,noTax,taxInfo.agency);
+
+  const softwareSchema={"@context":"https://schema.org","@type":"SoftwareApplication",name:`${p.name} Paycheck Calculator`,url:canonical,applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},description:`Free ${p.name} paycheck calculator for 2026. Estimate your take-home pay after federal taxes, FICA, and ${noTax?"payroll deductions":`${p.name} state income tax`}.`};
+  const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(f=>({"@type":"Question",name:f.q,acceptedAnswer:{"@type":"Answer",text:f.a}}))};
+  const webPageSchema={"@context":"https://schema.org","@type":"WebPage",name:`${p.name} Paycheck Calculator 2026`,url:canonical,about:`Payroll tax calculation and take-home pay estimation for ${p.name} employees.`};
+
+  const RelatedStates=getRelatedStates(p.short);
+
+  return <main>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(softwareSchema)}}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(webPageSchema)}}/>
+    <SiteHeader/>
+
+    {/* Hero */}
+    <section className="hero">
+      <div className="eyebrow">2026 {p.short} PAYCHECK CALCULATOR</div>
+      <h1>{p.name} Paycheck Calculator <em>2026</em></h1>
+      <div className="hero-intro">
+        <p>Use our free {p.name} paycheck calculator to estimate your take-home pay after federal taxes, Social Security, Medicare, and {noTax?"other payroll deductions":`${p.name} state income tax`}.</p>
+        {noTax?<p>{p.name} does not impose a state income tax on wages. However, your paycheck is still affected by federal tax withholding, FICA taxes, and any employee benefit deductions you select.</p>:<p>{p.name} imposes {taxInfo.type} on wages. Your actual take-home pay depends on your income level, filing status, allowances, and payroll deductions. Our calculator applies published 2026 withholding methods to provide a transparent estimate.</p>}
+        <p>Enter your salary information below to estimate your {p.name} paycheck based on your pay frequency, deductions, and payroll factors.</p>
+      </div>
+      <PaycheckCalculator defaultState={p.short as SupportedState} navigateOnStateChange/>
+      <div className="trust-row"><span>2026 IRS Method</span><span>Source-Backed Calculations</span><span>Free to Use</span></div>
+    </section>
+
+    {/* What's Included */}
+    <article className="long-seo">
+      <p className="kicker">{p.short} PAYCHECK BREAKDOWN</p>
+      <h2>What This {p.name} Paycheck Calculator Includes</h2>
+      <section>
+        <p>This {p.name} paycheck calculator estimates your net pay by considering the major payroll factors that affect your paycheck. The calculation includes:</p>
+        <ul className="checklist">
+          <li>Federal income tax</li>
+          <li>Social Security tax (6.2%)</li>
+          <li>Medicare tax (1.45%)</li>
+          {noTax?<li>No {p.name} state income tax</li>:<li>{p.name} state income tax</li>}
+          <li>Pre-tax deductions</li>
+          <li>Retirement contributions</li>
+          <li>Employee benefits</li>
+          <li>Pay frequency adjustments</li>
+        </ul>
+        <p style={{marginTop:20,color:"#667a8a",lineHeight:1.7,fontSize:14}}>The calculator is designed to help {p.name} employees understand the difference between gross pay and actual take-home pay. Whether you are paid weekly, biweekly, semimonthly, or monthly, this tool annualizes your wages, applies the relevant tax and deduction rules, and divides the result into your selected paycheck frequency.</p>
+      </section>
+    </article>
+
+    {/* State Tax Section */}
+    <article className="long-seo">
+      <p className="kicker">{p.short} TAX INFORMATION</p>
+      <h2>{noTax?`Does ${p.name} Have State Income Tax?`:`How Does ${p.name} State Income Tax Work?`}</h2>
+      <section>
+        {noTax?<>
+          <p><strong>{p.name} does not impose an individual state income tax on wages.</strong> This means employees working in {p.name} do not have state income tax deducted from their paycheck.</p>
+          <p>However, {p.name} employees may still have other payroll deductions, including:</p>
+          <ul className="checklist">
+            <li>Federal income tax</li>
+            <li>Social Security tax</li>
+            <li>Medicare tax</li>
+            <li>Employer benefit deductions</li>
+            <li>Retirement contributions</li>
+          </ul>
+          <p style={{color:"#667a8a",lineHeight:1.7,fontSize:14,marginTop:16}}>Although {p.name} has no state income tax, your final paycheck amount depends on federal tax rules, your W-4 elections, and your personal payroll situation. States without income tax can be more tax-friendly for employees, but federal obligations still apply to all U.S. workers.</p>
+        </>:<>
+          <p><strong>{p.name} imposes {taxInfo.type} on wages.</strong> {taxInfo.detail} Your employer withholds {p.name} income tax from each paycheck based on your earnings, filing status, and the information you provide on your state withholding certificate.</p>
+          <p>In addition to state income tax, {p.name} employees also have these deductions from their paycheck:</p>
+          <ul className="checklist">
+            <li>Federal income tax</li>
+            <li>Social Security tax</li>
+            <li>Medicare tax</li>
+            <li>{p.name} state income tax</li>
+            <li>Employee benefit deductions</li>
+          </ul>
+          <p style={{color:"#667a8a",lineHeight:1.7,fontSize:14,marginTop:16}}>{p.name} state income tax withholding is separate from federal income tax. The amount withheld depends on your state withholding form elections, income level, and any applicable exemptions or deductions under {p.name} law. Unlike federal tax, {p.name} tax rules may have different brackets, standard deductions, and credit provisions.</p>
+        </>}
+      </section>
+    </article>
+
+    {/* Original SourceBackedGuide + StateEditorial */}
+    <SourceBackedGuide place={p}/>
+
+    {/* Gross Pay vs Net Pay */}
+    <article className="long-seo">
+      <p className="kicker">GROSS VS NET</p>
+      <h2>Understanding Your {p.name} Gross Pay and Take-Home Pay</h2>
+      <section>
+        <p><strong>Gross pay</strong> is the total amount you earn before any taxes or deductions are applied. For salaried employees, this is your annual salary divided by the number of pay periods. For hourly workers, it is your hourly rate multiplied by hours worked.</p>
+        <p><strong>Net pay</strong>, also called take-home pay, is the amount remaining after required taxes and payroll deductions are removed from your gross pay. This is the amount that typically appears on your paycheck and is deposited into your bank account.</p>
+        <p>For {p.name} employees, the difference between gross pay and net pay is mainly affected by:{noTax?" federal income tax, Social Security, Medicare, and any personal deductions such as retirement contributions or health insurance premiums.":` federal income tax, ${p.name} state income tax, Social Security, Medicare, and any personal deductions such as retirement contributions or health insurance premiums.`} Understanding this difference can help you budget more effectively and compare job offers on a take-home basis rather than just the salary number.</p>
+      </section>
+    </article>
+
+    {/* Why Results May Differ */}
+    <article className="long-seo">
+      <p className="kicker">IMPORTANT NOTE</p>
+      <h2>Why Your Actual {p.name} Paycheck May Be Different</h2>
+      <section>
+        <p>Your actual paycheck from an employer may differ from this estimate because payroll calculations depend on individual circumstances. Factors that may affect your final paycheck include:</p>
+        <ul className="checklist">
+          <li>Multiple jobs or income sources</li>
+          <li>W-4 credits or additional withholding</li>
+          <li>Bonuses and commissions</li>
+          <li>Overtime and tips</li>
+          <li>Benefit eligibility changes</li>
+          <li>Year-to-date Social Security wage caps</li>
+          <li>Employer payroll rounding</li>
+          <li>Retirement contribution limits</li>
+        </ul>
+        <p style={{color:"#667a8a",lineHeight:1.7,fontSize:14,marginTop:16}}>This calculator provides an estimate for planning purposes. For official payroll amounts, refer to your pay stub or consult your employer's payroll department. Tax situations vary, and this tool does not replace professional tax advice.</p>
+      </section>
+    </article>
+
+    {/* State FAQ */}
+    <div className="faq">
+      <p className="kicker" style={{textAlign:"center"}}>FREQUENTLY ASKED QUESTIONS</p>
+      <h2>{p.name} Paycheck Calculator FAQ</h2>
+      {faqs.map((f,i)=><details key={i}><summary>{f.q}<span>+</span></summary><p>{f.a}</p></details>)}
+    </div>
+
+    {/* Related States */}
+    <article className="long-seo">
+      <p className="kicker">EXPLORE OTHER STATES</p>
+      <h2>Paycheck Calculators by State</h2>
+      <section>
+        <p style={{color:"#667a8a",lineHeight:1.7,fontSize:14,marginBottom:20}}>Payroll taxes vary across the United States. Use our state-specific paycheck calculators to estimate your take-home pay based on your location.</p>
+        <div className="tool-links">
+          {RelatedStates.map(s=><a key={s.slug} href={`/${s.slug}`}><b>{s.name} Paycheck Calculator</b><span>Estimate your {s.name} take-home pay →</span></a>)}
+        </div>
+      </section>
+    </article>
+
+    {/* Methodology + Sources */}
+    <article className="long-seo">
+      <p className="kicker">CALCULATION SOURCES</p>
+      <h2>How We Calculate Your {p.name} Paycheck</h2>
+      <section>
+        <p>Our {p.name} paycheck calculator uses a standard payroll estimation method based on current federal tax rules and common payroll practices. The calculation process includes:</p>
+        <p><strong>1.</strong> Annualizing your wages based on your selected pay frequency.</p>
+        <p><strong>2.</strong> Applying eligible pre-tax deductions that may reduce taxable income.</p>
+        <p><strong>3.</strong> Estimating federal income tax using applicable IRS withholding methods.</p>
+        <p><strong>4.</strong> {noTax?`${p.name} does not impose state income tax on wages, so no state withholding is applied.`:`Calculating ${p.name} state income tax using published 2026 withholding methods.`}</p>
+        <p><strong>5.</strong> Calculating Social Security (6.2%) and Medicare (1.45%) taxes.</p>
+        <p><strong>6.</strong> Converting the annual estimate into your selected pay frequency.</p>
+      </section>
+      <section>
+        <h3>Tax Information Sources</h3>
+        <p>Our {p.name} paycheck calculations are based on publicly available payroll and tax information from authoritative sources including the Internal Revenue Service (IRS), Social Security Administration (SSA), and {taxInfo.agency}.</p>
+        <p style={{fontSize:13,color:"#8493a0",marginTop:14}}>For official tax guidance, consult these agencies directly or speak with a qualified tax professional.</p>
+      </section>
+      <div className="reviewer">
+        <p><span className="reviewer-label">Reviewed by:</span> Paycheck Calculator Editorial Team</p>
+        <p><small>Last Updated: August 2026</small></p>
+      </div>
+    </article>
+
+    {/* Disclaimer */}
+    <div className="seo-disclaimer" style={{maxWidth:920,margin:"0 auto 40px"}}>
+      <p><strong>Disclaimer:</strong> This {p.name} paycheck calculator provides estimates for informational purposes only. Actual paycheck amounts may vary based on employer payroll systems, benefits, deductions, tax changes, filing status, and individual financial circumstances. For specific tax advice, consult a qualified tax professional.</p>
+    </div>
+
+    <SiteFooter/>
+  </main>;
+}
+
+// ── State Tax Info ────────────────────────────────────────────
+const stateTaxInfo:Record<string,{type:string;detail:string;agency:string}>={
+  AL:{type:"graduated income tax (2%–5%)",detail:"Alabama uses graduated individual income-tax brackets. Some municipalities also impose occupational taxes that can affect your paycheck.",agency:"Alabama Department of Revenue"},
+  AZ:{type:"a flat income tax (2.5%)",detail:"Arizona uses a flat state income-tax rate. Employees elect a withholding percentage on Form A-4, which may differ from their final annual tax liability.",agency:"Arizona Department of Revenue"},
+  AR:{type:"graduated income tax (2%–4.4%)",detail:"Arkansas uses graduated individual income-tax brackets. The withholding amount depends on your income level and state withholding elections.",agency:"Arkansas Department of Finance and Administration"},
+  CO:{type:"a flat income tax (4.4%)",detail:"Colorado uses a flat individual income-tax rate. Paid family and medical leave (FAMLI) contributions may also appear separately on your paycheck.",agency:"Colorado Department of Revenue"},
+  CT:{type:"graduated income tax (3%–6.99%)",detail:"Connecticut uses graduated income-tax brackets. Employees must select a CT-W4 withholding code, and paid-leave contributions may appear as a separate payroll line.",agency:"Connecticut Department of Revenue Services"},
+  GA:{type:"a flat income tax (5.39%)",detail:"Georgia uses a flat individual income-tax structure. Payroll results can vary with allowances, deductions, and credits claimed on Form G-4.",agency:"Georgia Department of Revenue"},
+  HI:{type:"graduated income tax (1.4%–11%)",detail:"Hawaii uses graduated income-tax brackets with rates that increase with income. State-specific withholding tables apply.",agency:"Hawaii Department of Taxation"},
+  ID:{type:"a flat income tax (5.8%)",detail:"Idaho uses a flat individual income-tax rate. Withholding is affected by your Idaho Form ID W-4 elections and allowances.",agency:"Idaho State Tax Commission"},
+  IN:{type:"a flat state income tax (3.05%) plus county tax",detail:"Indiana uses a flat state income tax, and most counties impose an additional county income tax based on your residence or work location.",agency:"Indiana Department of Revenue"},
+  IA:{type:"a flat income tax (3.8%)",detail:"Iowa uses a flat income-tax rate. Taxable wages and withholding elections on Form IA W-4 affect the amount withheld from each paycheck.",agency:"Iowa Department of Revenue"},
+  KS:{type:"graduated income tax (3.1%–5.7%)",detail:"Kansas uses graduated income-tax brackets. State-specific withholding tables and Form K-4 elections determine the withholding amount.",agency:"Kansas Department of Revenue"},
+  KY:{type:"a flat income tax (4%)",detail:"Kentucky uses a flat state income tax. Some cities and counties also impose occupational or payroll taxes that may appear on your paycheck.",agency:"Kentucky Department of Revenue"},
+  LA:{type:"graduated income tax (1.85%–4.25%)",detail:"Louisiana uses graduated income-tax brackets. State-specific withholding rules and Form L-4 elections apply.",agency:"Louisiana Department of Revenue"},
+  MD:{type:"graduated state income tax plus county tax",detail:"Maryland combines graduated state income tax with county-level income tax. Your county of residence significantly affects your total withholding amount.",agency:"Comptroller of Maryland"},
+  MA:{type:"a flat income tax (5%) plus high-earner surtax",detail:"Massachusetts generally uses a flat wage-tax rate of 5%, with an additional 4% surtax applying to income above $1 million.",agency:"Massachusetts Department of Revenue"},
+  MI:{type:"a flat income tax (4.25%)",detail:"Michigan uses a flat state income tax. Certain cities, including Detroit, impose separate city income taxes that may affect your paycheck.",agency:"Michigan Department of Treasury"},
+  MN:{type:"graduated income tax (5.35%–9.85%)",detail:"Minnesota uses graduated withholding brackets. The 2026 Paid Leave program premium may also be separately withheld from your paycheck.",agency:"Minnesota Department of Revenue"},
+  MO:{type:"graduated income tax (2%–4.95%)",detail:"Missouri uses graduated income-tax brackets. Kansas City and St. Louis also impose earnings taxes that can affect workers in those cities.",agency:"Missouri Department of Revenue"},
+  NC:{type:"a flat income tax (4.09%)",detail:"North Carolina uses a flat income-tax rate of 4.09%, which includes a 0.1% withholding adjustment. Standard deductions and allowances reduce taxable wages.",agency:"North Carolina Department of Revenue"},
+  NE:{type:"graduated income tax (2.46%–5.84%)",detail:"Nebraska uses graduated income-tax brackets. State withholding tables and Form W-4N elections determine the amount withheld.",agency:"Nebraska Department of Revenue"},
+  NV:{type:"no state income tax",detail:"",agency:"Nevada Department of Taxation"},
+  NH:{type:"no tax on wages",detail:"",agency:"New Hampshire Department of Revenue Administration"},
+  NM:{type:"graduated income tax (1.7%–5.9%)",detail:"New Mexico uses graduated income-tax brackets. State withholding is based on your income level and Form W-4 elections.",agency:"New Mexico Taxation and Revenue Department"},
+  NY:{type:"graduated income tax (4%–10.9%)",detail:"New York uses graduated income-tax brackets. New York City and Yonkers residents may also face additional local income tax withholding.",agency:"New York State Department of Taxation and Finance"},
+  NYC:{type:"New York City resident income tax (3.078%–3.876%) plus NY state tax",detail:"New York City residents pay New York State income tax plus New York City resident income tax. Both are withheld from your paycheck.",agency:"New York State Department of Taxation and Finance"},
+  OH:{type:"graduated income tax plus local taxes",detail:"Ohio uses graduated income-tax brackets, and many municipalities and school districts impose separate local income taxes that affect your paycheck.",agency:"Ohio Department of Taxation"},
+  OK:{type:"graduated income tax (0.25%–4.75%)",detail:"Oklahoma uses graduated income-tax brackets. State-specific withholding tables and Form OK-W-4 elections apply.",agency:"Oklahoma Tax Commission"},
+  OR:{type:"graduated income tax (4.75%–9.9%)",detail:"Oregon uses graduated income-tax brackets with a top rate of 9.9%. Statewide transit tax and paid-leave contributions may appear separately.",agency:"Oregon Department of Revenue"},
+  PA:{type:"a flat income tax (3.07%)",detail:"Pennsylvania uses a flat state income tax of 3.07%. Municipalities and school districts may also impose local earned-income taxes.",agency:"Pennsylvania Department of Revenue"},
+  RI:{type:"graduated income tax (3.75%–5.99%)",detail:"Rhode Island uses graduated income-tax brackets. State withholding is based on Form RI W-4 elections and income level.",agency:"Rhode Island Division of Taxation"},
+  SC:{type:"graduated income tax (0%–6.2%)",detail:"South Carolina uses graduated income-tax brackets with the top rate of 6.2%. Allowances and standard deductions reduce taxable wages.",agency:"South Carolina Department of Revenue"},
+  TN:{type:"no state income tax on wages",detail:"",agency:"Tennessee Department of Revenue"},
+  UT:{type:"a flat income tax (4.55%)",detail:"Utah uses a flat income-tax rate. State withholding depends on your Form W-4 elections and applicable tax credits.",agency:"Utah State Tax Commission"},
+  VA:{type:"graduated income tax (2%–5.75%)",detail:"Virginia uses graduated income-tax brackets. State-specific withholding tables and Form VA-4 elections determine the amount withheld.",agency:"Virginia Department of Taxation"},
+  WA:{type:"no state income tax on wages",detail:"But Washington employers may withhold paid family and medical leave premiums and long-term care (WA Cares) contributions.",agency:"Washington State Department of Revenue"},
+  WI:{type:"graduated income tax (3.5%–7.65%)",detail:"Wisconsin uses graduated income-tax brackets. State-specific withholding tables and Form WT-4 elections apply.",agency:"Wisconsin Department of Revenue"},
+  WV:{type:"graduated income tax (2.36%–5.12%)",detail:"West Virginia uses graduated income-tax brackets. State withholding is based on Form WV/IT-104 elections.",agency:"West Virginia State Tax Department"},
+  MT:{type:"graduated income tax (1%–6.75%)",detail:"Montana uses graduated income-tax brackets. State withholding tables and Form MW-4 elections apply.",agency:"Montana Department of Revenue"},
+  ND:{type:"graduated income tax (1.95%–2.5%)",detail:"North Dakota uses graduated income-tax brackets with relatively low rates. State withholding is based on Form NDW-R elections.",agency:"North Dakota Office of State Tax Commissioner"},
+  DE:{type:"graduated income tax (2.2%–6.6%)",detail:"Delaware uses graduated income-tax brackets. State withholding tables and Form W-4 elections apply.",agency:"Delaware Division of Revenue"},
+  DC:{type:"graduated income tax (4%–10.75%)",detail:"District of Columbia uses graduated income-tax brackets. DC withholding is based on Form D-4 elections.",agency:"DC Office of Tax and Revenue"},
+  VT:{type:"graduated income tax (3.35%–8.75%)",detail:"Vermont uses graduated income-tax brackets. State withholding is based on Form W-4VT elections.",agency:"Vermont Department of Taxes"},
+  ME:{type:"graduated income tax (5.8%–7.15%)",detail:"Maine uses graduated income-tax brackets. State withholding is based on Form W-4ME elections.",agency:"Maine Revenue Services"},
+  MS:{type:"a flat income tax (4.4%)",detail:"Mississippi uses a flat income-tax rate. State withholding depends on your Form 89-350 elections.",agency:"Mississippi Department of Revenue"},
+  AK:{type:"no state income tax on wages",detail:"",agency:"Alaska Department of Revenue"},
+  SD:{type:"no state income tax on wages",detail:"",agency:"South Dakota Department of Revenue"},
+  WY:{type:"no state income tax on wages",detail:"",agency:"Wyoming Department of Revenue"},
+};
+
+// ── FAQ Generator ─────────────────────────────────────────────
+function buildFaqs(name:string,code:string,noTax:boolean,agency:string):{q:string;a:string}[]{
+  const faqs:{q:string;a:string}[]=[];
+  if(noTax){
+    faqs.push({q:`Does ${name} have state income tax?`,a:`No. ${name} does not impose an individual state income tax on wages. ${name} employees still pay federal income tax, Social Security tax, and Medicare tax through payroll withholding.`});
+  }else{
+    faqs.push({q:`Does ${name} have state income tax?`,a:`Yes. ${name} imposes state income tax on wages. The amount withheld from your paycheck depends on your income level, filing status, and the elections on your state withholding certificate. ${name} income tax is separate from federal income tax.`});
+  }
+  faqs.push({q:`How much is my paycheck after taxes in ${name}?`,a:`Your ${name} take-home pay depends on your salary, pay frequency, federal tax withholding, ${noTax?"":`${name} state income tax withholding, `}Social Security, Medicare, retirement contributions, health benefits, and other payroll deductions. Use the calculator above to enter your specific information for an estimate.`});
+  faqs.push({q:`Is ${name} a tax-friendly state for employees?`,a:noTax?`${name} can be tax-friendly for employees because there is no state income tax on wages. However, federal taxes and other payroll deductions still apply to all U.S. employees.`:`${name} employees pay state income tax in addition to federal taxes. Whether ${name} is tax-friendly depends on your income level and how ${name}'s tax brackets compare to other states. Use the calculator to compare your take-home pay across states.`});
+  faqs.push({q:`How accurate is the ${name} paycheck calculator?`,a:`The ${name} paycheck calculator provides an estimate based on the information you enter and published 2026 withholding methods. Actual paychecks may differ because of employer payroll systems, benefit elections, year-to-date wage caps, bonus treatment, and individual tax circumstances. For official amounts, refer to your pay stub.`});
+  faqs.push({q:`What deductions are taken from a ${name} paycheck?`,a:noTax?`A ${name} paycheck typically includes deductions for federal income tax, Social Security tax (6.2%), Medicare tax (1.45%), and any employee benefit deductions such as health insurance, retirement contributions, and flexible spending accounts. ${name} does not deduct state income tax from wages.`:`A ${name} paycheck typically includes deductions for federal income tax, ${name} state income tax, Social Security tax (6.2%), Medicare tax (1.45%), and any employee benefit deductions such as health insurance, retirement contributions, and flexible spending accounts.`});
+  return faqs;
+}
+
+// ── Related States ───────────────────────────────────────────
+function getRelatedStates(currentShort:string):{slug:string;name:string}[]{
+  const priority=["CA","TX","FL","NY","NJ","IL","PA","GA","OH","NC","VA","WA","MA","MI","AZ","CO","MN","WI","MO","IN","TN","MD","OR","SC","AL","CT","LA","KY","OK","IA","KS","AR","NV","UT","NM","NE","HI","ID","RI","NH","ME","MT","ND","VT","DE","MS","AK","SD","WV","WY","DC"];
+  const nameMap:Record<string,string>={CA:"California",TX:"Texas",FL:"Florida",NY:"New York",NJ:"New Jersey",IL:"Illinois",PA:"Pennsylvania",GA:"Georgia",OH:"Ohio",NC:"North Carolina",VA:"Virginia",WA:"Washington",MA:"Massachusetts",MI:"Michigan",AZ:"Arizona",CO:"Colorado",MN:"Minnesota",WI:"Wisconsin",MO:"Missouri",IN:"Indiana",TN:"Tennessee",MD:"Maryland",OR:"Oregon",SC:"South Carolina",AL:"Alabama",CT:"Connecticut",LA:"Louisiana",KY:"Kentucky",OK:"Oklahoma",IA:"Iowa",KS:"Kansas",AR:"Arkansas",NV:"Nevada",UT:"Utah",NM:"New Mexico",NE:"Nebraska",HI:"Hawaii",ID:"Idaho",RI:"Rhode Island",NH:"New Hampshire",ME:"Maine",MT:"Montana",ND:"North Dakota",VT:"Vermont",DE:"Delaware",MS:"Mississippi",AK:"Alaska",SD:"South Dakota",WV:"West Virginia",WY:"Wyoming",DC:"District of Columbia"};
+  const slugMap:Record<string,string>={CA:"california-paycheck-calculator",TX:"texas-paycheck-calculator",FL:"florida-paycheck-calculator",NY:"new-york-paycheck-calculator",NJ:"new-jersey-paycheck-calculator",IL:"illinois-paycheck-calculator",PA:"pennsylvania-paycheck-calculator",GA:"georgia-paycheck-calculator",OH:"ohio-paycheck-calculator",NC:"north-carolina-paycheck-calculator",VA:"virginia-paycheck-calculator",WA:"washington-paycheck-calculator",MA:"massachusetts-paycheck-calculator",MI:"michigan-paycheck-calculator",AZ:"arizona-paycheck-calculator",CO:"colorado-paycheck-calculator",MN:"minnesota-paycheck-calculator",WI:"wisconsin-paycheck-calculator",MO:"missouri-paycheck-calculator",IN:"indiana-paycheck-calculator",TN:"tennessee-paycheck-calculator",MD:"maryland-paycheck-calculator",OR:"oregon-paycheck-calculator",SC:"south-carolina-paycheck-calculator",AL:"alabama-paycheck-calculator",CT:"connecticut-paycheck-calculator",LA:"louisiana-paycheck-calculator",KY:"kentucky-paycheck-calculator",OK:"oklahoma-paycheck-calculator",IA:"iowa-paycheck-calculator",KS:"kansas-paycheck-calculator",AR:"arkansas-paycheck-calculator",NV:"nevada-paycheck-calculator",UT:"utah-paycheck-calculator",NM:"new-mexico-paycheck-calculator",NE:"nebraska-paycheck-calculator",HI:"hawaii-paycheck-calculator",ID:"idaho-paycheck-calculator",RI:"rhode-island-paycheck-calculator"};
+  return priority.filter(c=>c!==currentShort).slice(0,8).map(c=>({slug:slugMap[c]||`${nameMap[c]?.toLowerCase().replace(/\s/g,"-")}-paycheck-calculator`,name:nameMap[c]||c}));
+}
+
+// ── Reusable components ──────────────────────────────────────
+function SourceBackedGuide({place:p}:{place:(typeof locations)[number]}){
+  return <article className="long-seo">
+    <p className="kicker">{p.short} 2026 WITHHOLDING METHOD</p>
+    <h2>How the {p.name} paycheck estimate works</h2>
+    <section>
+      <h3>What is calculated</h3>
+      <p>{stateNotes[p.short]||`${p.name} imposes state income tax rules that affect paycheck withholding.`} The calculator applies the published 2026 state method in addition to IRS federal withholding and FICA. State payroll premiums are displayed separately from state income tax where applicable.</p>
+    </section>
+    <section>
+      <h3>Inputs to verify</h3>
+      <p>Use taxable annual wages, pay frequency, federal filing status, the state-specific allowances or exemptions shown on your current certificate, retirement contributions, eligible pre-tax benefits, and additional federal withholding. Connecticut users should select the exact CT-W4 code or the no-form fallback. Arizona uses the elected A-4 percentage. Georgia, Utah, and Ohio require a 2026 paycheck or pay-period date because their methods change during the year. A recent pay stub provides the best starting values.</p>
+    </section>
+    <StateEditorial code={p.short}/>
+    <section>
+      <h3>Important exclusions</h3>
+      <p>Address-specific local income taxes are included only when you enter a planning rate. New York City is a resident calculator, not a calculator for nonresident commuters. Reciprocity, nonresident rules, multiple-job adjustments, credits, employer-paid premium choices, special exemptions, garnishments, and year-to-date wage history may still change an actual paycheck. Review the <a className="text-link" href="/methodology">methodology and official source list</a> before relying on the estimate.</p>
+    </section>
+    <div className="tool-links">
+      <a href="/hourly-paycheck-calculator"><b>Hourly paycheck calculator</b><span>Include regular and overtime hours →</span></a>
+      <a href="/biweekly-paycheck-calculator"><b>Biweekly paycheck calculator</b><span>Estimate one of 26 yearly checks →</span></a>
+      <a href="/how-much-tax-is-taken-from-my-paycheck"><b>Paycheck tax guide</b><span>Understand every deduction →</span></a>
+      <a href="/methodology"><b>Calculation methodology</b><span>Review assumptions and official sources →</span></a>
+    </div>
+  </article>;
+}
 
 function StateEditorial({code}:{code:string}){
   if(code==="CA")return <>
-    <section><h3>California DE 4, federal W-4, and allowances</h3><p>A California paycheck uses two separate withholding elections. Form W-4 controls federal withholding, while Form DE 4 supplies California filing status, regular withholding allowances, estimated deductions, and any additional state amount. The “state allowances” field in this calculator models regular California allowances; it does not copy federal dependents or credits into the state calculation. When an employee does not submit a valid DE 4, payroll may apply default California withholding rules. Use the elections on the latest DE 4 rather than guessing from federal filing status.</p></section>
+    <section><h3>California DE 4, federal W-4, and allowances</h3><p>A California paycheck uses two separate withholding elections. Form W-4 controls federal withholding, while Form DE 4 supplies California filing status, regular withholding allowances, estimated deductions, and any additional state amount. The "state allowances" field in this calculator models regular California allowances; it does not copy federal dependents or credits into the state calculation. When an employee does not submit a valid DE 4, payroll may apply default California withholding rules. Use the elections on the latest DE 4 rather than guessing from federal filing status.</p></section>
     <section><h3>California income tax and SDI are different deductions</h3><p>The California paycheck calculator reports state income-tax withholding separately from State Disability Insurance. Income-tax withholding uses the 2026 EDD Method B annual calculation with graduated brackets, a low-income exemption test, a standard deduction, and an allowance credit. SDI is an employee payroll contribution calculated on covered wages. Keeping these lines separate makes the result easier to compare with a pay stub and prevents a user from mistaking SDI for California income tax.</p></section>
-    <section><h3>Salary, hourly, weekly, and biweekly California pay</h3><p>For salary income, enter annual gross wages and choose the employer’s actual pay schedule. Weekly payroll has 52 checks, biweekly payroll usually has 26, semimonthly payroll has 24, and monthly payroll has 12. An hourly California worker can use the <a className="text-link" href="/hourly-paycheck-calculator">hourly paycheck calculator</a> to include regular hours and time-and-a-half overtime. The tool annualizes those earnings before applying federal and California withholding, then divides the result back into the selected paycheck frequency.</p></section>
+    <section><h3>Salary, hourly, weekly, and biweekly California pay</h3><p>For salary income, enter annual gross wages and choose the employer's actual pay schedule. Weekly payroll has 52 checks, biweekly payroll usually has 26, semimonthly payroll has 24, and monthly payroll has 12. An hourly California worker can use the <a className="text-link" href="/hourly-paycheck-calculator">hourly paycheck calculator</a> to include regular hours and time-and-a-half overtime. The tool annualizes those earnings before applying federal and California withholding, then divides the result back into the selected paycheck frequency.</p></section>
     <section><h3>How 401(k) and pre-tax benefits affect a California paycheck</h3><p>A traditional 401(k) contribution generally reduces federal and California income-tax wages, but it normally does not remove the same dollars from Social Security and Medicare wages. Health, HSA, FSA, commuter, and cafeteria-plan deductions can have different payroll-tax treatment. The compact calculator treats the entered retirement percentage and other pre-tax amount as planning inputs, so compare the tax treatment against the boxes and deduction codes on a current pay stub.</p></section>
-    <section><h3>Los Angeles, San Francisco, San Diego, and Sacramento</h3><p>California cities generally do not impose a broad local wage income tax comparable with New York City’s resident income tax. A paycheck in Los Angeles, San Francisco, San Diego, or Sacramento can still differ because of local minimum-wage rules, employer benefits, commuter deductions, union dues, garnishments, and industry-specific payroll items. The city name therefore changes employment context but does not create a separate city income-tax line in this calculator.</p></section>
+    <section><h3>Los Angeles, San Francisco, San Diego, and Sacramento</h3><p>California cities generally do not impose a broad local wage income tax comparable with New York City's resident income tax. A paycheck in Los Angeles, San Francisco, San Diego, or Sacramento can still differ because of local minimum-wage rules, employer benefits, commuter deductions, union dues, garnishments, and industry-specific payroll items. The city name therefore changes employment context but does not create a separate city income-tax line in this calculator.</p></section>
     <section><h3>Worked California planning examples</h3><p>A $50,000, $75,000, or $100,000 salary will not have one universal take-home amount. Filing status, DE 4 allowances, 401(k) percentage, health deductions, frequency, and extra withholding all change the check. To compare salaries, keep every selection constant and change only annual gross pay. To compare benefit elections, keep salary constant and test retirement or pre-tax deductions one at a time. This produces a useful side-by-side planning result without presenting one sample as a guaranteed paycheck.</p></section>
     <section><h3>Why an actual California paycheck can differ</h3><p>Common causes include a DE 4 election that does not match the calculator, W-4 Step 2 or Step 3 entries, supplemental wage treatment for bonuses, taxable fringe benefits, irregular overtime, a deduction that remains subject to FICA, year-to-date wage caps, retroactive pay, and employer payroll rounding. Check taxable gross wages rather than total gross wages when reconciling the result, and compare California income tax and SDI as separate lines.</p></section>
   </>;
   if(code==="NJ")return <>
     <section><h3>NJ-W4 and federal W-4 serve different purposes</h3><p>New Jersey withholding does not simply reuse federal W-4 elections. An employee may need Form NJ-W4 to select a New Jersey rate table, exemptions, and additional withholding that better reflect household circumstances. This calculator uses filing status and state allowances to create a transparent graduated-rate estimate, but it does not reproduce every NJ-W4 rate-selection path. Use a current NJ-W4 and pay stub when reconciling payroll.</p></section>
-    <section><h3>New Jersey income tax and benefit contributions</h3><p>A New Jersey paycheck can contain state income-tax withholding plus separate employee contributions for programs such as temporary disability, family leave, unemployment, or workforce development. Those programs can have annual wage bases and rates that change. The current compact engine estimates New Jersey income tax and does not claim to reproduce every employer contribution line; review the official source list and the labeled deductions on the employee’s pay stub.</p></section>
+    <section><h3>New Jersey income tax and benefit contributions</h3><p>A New Jersey paycheck can contain state income-tax withholding plus separate employee contributions for programs such as temporary disability, family leave, unemployment, or workforce development. Those programs can have annual wage bases and rates that change. The current compact engine estimates New Jersey income tax and does not claim to reproduce every employer contribution line; review the official source list and the labeled deductions on the employee's pay stub.</p></section>
     <section><h3>Hourly, salary, and biweekly New Jersey pay</h3><p>Enter annual salary for a salaried position or use the <a className="text-link" href="/hourly-paycheck-calculator">hourly paycheck calculator</a> when regular and overtime hours matter. Choose biweekly only when the employer issues 26 checks per year; semimonthly means 24 checks. Selecting the wrong schedule changes gross pay per check and the way annual deductions are allocated, even when annual salary is unchanged.</p></section>
     <section><h3>Traditional 401(k) and other deductions</h3><p>Traditional retirement contributions may lower federal and New Jersey income-tax wages while remaining subject to Social Security and Medicare. Health and cafeteria-plan deductions may receive different treatment. Enter recurring amounts consistently and compare the estimated taxable wages with an actual pay stub. Roth 401(k) contributions are generally after-tax and should not be entered as a pre-tax percentage.</p></section>
     <section><h3>New Jersey versus New York and New York City</h3><p>Where work is performed and where the employee resides can both matter. A New Jersey resident working in New York may see New York withholding and later address resident-state credits on tax returns. New York City resident tax applies based on NYC residency, not merely commuting into the city. This New Jersey paycheck calculator does not model multistate credits, reciprocity, or NYC resident tax, so cross-border workers should compare both payroll forms and seek individual guidance when needed.</p></section>
