@@ -12,5 +12,6 @@ const partners=[
   ["Chronological Age Calculator","https://www.chronologicalagercalculator.com"],
   ["Recommendation Letters","https://www.recommendation-letters.com"],
   ["Cursive Text Generator","https://www.cursive-text-generator.net"],
+  ["Hood-Chain","https://www.hood-chain.com"],
 ];
 export default function Partners(){return <main><SiteHeader/><section className="partners-page"><p className="kicker">PARTNERS &amp; EXTERNAL RESOURCES</p><h1>Partners</h1><p>Explore these independent websites and online tools. Inclusion does not imply ownership, sponsorship, endorsement, or responsibility for third-party content and privacy practices.</p><div className="partners-grid">{partners.map(([name,url])=><a key={url} href={url} target="_blank" rel="nofollow noopener noreferrer"><span className="partner-icon">↗</span><b>{name}</b><small>{url.replace("https://","")}</small></a>)}</div></section><SiteFooter/></main>}
