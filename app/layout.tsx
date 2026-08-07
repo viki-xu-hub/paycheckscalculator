@@ -21,9 +21,10 @@ export const metadata: Metadata = {
     title: "Paycheck Calculator 2026",
     description: "Estimate salary or hourly take-home pay with source-backed federal and state methods.",
     type: "website",
+    siteName: "Paycheck Calculator",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }],
   },
-  twitter: { card: "summary_large_image", images: ["/og.png"] },
+  twitter: { card: "summary_large_image", site: "@paycheckscalc", images: ["/og.png"] },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#172b3a" };

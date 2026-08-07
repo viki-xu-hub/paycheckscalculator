@@ -10,8 +10,24 @@ a { color:inherit; text-decoration:none; }
 .brand { display:flex; align-items:center; gap:8px; font-family:Georgia,serif; font-size:15px; white-space:nowrap; }
 .brand b { color:var(--blue); }
 .brand-mark { width:20px; height:20px; border-radius:50%; display:grid; place-items:center; background:var(--navy); color:white; font-size:9px; }
-nav { display:flex; gap:17px; font-size:11px; color:#40566a; margin-right:auto; }
+nav { display:flex; gap:17px; font-size:11px; color:#40566a; margin-right:auto; align-items:center; }
 nav a:hover { color:var(--blue); }
+.nav-item { position:relative; }
+.nav-trigger { display:inline-flex; align-items:center; gap:3px; cursor:pointer; color:#40566a; font-size:11px; user-select:none; white-space:nowrap; }
+.nav-trigger:hover,.nav-item:hover .nav-trigger { color:var(--blue); }
+.nav-caret { font-size:7px; display:inline-block; transition:transform .15s ease; line-height:1; }
+.nav-item:hover .nav-caret { transform:rotate(180deg); }
+.nav-panel { position:absolute; top:calc(100% + 10px); left:0; background:white; border:1px solid #dde5ec; border-radius:10px; box-shadow:0 8px 28px rgba(13,41,69,.13); padding:8px; min-width:180px; opacity:0; pointer-events:none; transform:translateY(-4px); transition:opacity .12s ease,transform .12s ease; z-index:200; }
+.nav-item:hover .nav-panel { opacity:1; pointer-events:auto; transform:translateY(0); }
+.nav-panel-wide { min-width:360px; display:grid; grid-template-columns:1fr 1fr; gap:4px 12px; }
+.nav-group-label { font-size:9px; font-weight:800; color:var(--red); letter-spacing:.1em; text-transform:uppercase; padding:8px 10px 4px; }
+.nav-panel a { display:block; padding:7px 10px; border-radius:6px; font-size:12px; color:#40566a; white-space:nowrap; border:none; }
+.nav-panel a:hover { background:#eef5fa; color:var(--blue); }
+.nav-panel-divider { height:1px; background:#e8edf2; margin:6px 2px; }
+/* override state-page nav link borders inside dropdown */
+.state-page .site-header .nav-panel a { border-left:none; border-right:none; padding:7px 10px; }
+/* mobile: hide dropdowns, show triggers as plain text */
+@media(max-width:800px) { .nav-panel { display:none; } .nav-caret { display:none; } .nav-trigger { pointer-events:none; } }
 .year-pill { font-size:9px; font-weight:700; color:var(--blue); background:#e7f2f7; border-radius:99px; padding:5px 8px; }
 .hero { max-width:1180px; margin:auto; padding:17px 19px; text-align:center; }
 .eyebrow,.kicker { color:var(--red); font-weight:800; letter-spacing:.13em; font-size:9px; text-transform:uppercase; }

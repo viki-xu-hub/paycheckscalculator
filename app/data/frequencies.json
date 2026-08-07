@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Weekly",
+    "slug": "weekly-paycheck-calculator",
+    "shortLabel": "weekly",
+    "periods": 52,
+    "description": "Paid every week — 52 paychecks per year",
+    "longDescription": "Weekly pay is the most frequent pay schedule. You receive 52 paychecks per year, each representing approximately 1/52 of your annual salary.",
+    "examples": ["construction", "retail", "food service", "hourly workers"]
+  },
+  {
+    "name": "Biweekly",
+    "slug": "biweekly-paycheck-calculator",
+    "shortLabel": "biweekly",
+    "periods": 26,
+    "description": "Paid every two weeks — 26 paychecks per year",
+    "longDescription": "Biweekly pay is the most common pay schedule in the US. You receive 26 paychecks per year, each representing approximately 1/26 of your annual salary.",
+    "examples": ["office workers", "salaried employees", "most corporate jobs"]
+  },
+  {
+    "name": "Semimonthly",
+    "slug": "semimonthly-paycheck-calculator",
+    "shortLabel": "semimonthly",
+    "periods": 24,
+    "description": "Paid twice a month — 24 paychecks per year",
+    "longDescription": "Semimonthly pay means you are paid on two fixed dates each month (typically the 1st and 15th). You receive 24 paychecks per year.",
+    "examples": ["professional services", "government employees", "management roles"]
+  },
+  {
+    "name": "Monthly",
+    "slug": "monthly-paycheck-calculator",
+    "shortLabel": "monthly",
+    "periods": 12,
+    "description": "Paid once a month — 12 paychecks per year",
+    "longDescription": "Monthly pay means one paycheck per month — 12 per year. Each paycheck represents your full monthly earnings minus all taxes and deductions.",
+    "examples": ["senior executives", "independent contractors", "some government roles"]
+  }
+]

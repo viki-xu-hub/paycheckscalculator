@@ -3,11 +3,33 @@ import { locations,locationBySlug } from "../lib/locations";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import {SiteFooter,SiteHeader} from "../components/SiteChrome";
 import type {SupportedState} from "../lib/payroll";
+import FrequencyPageTemplate from "../components/FrequencyPageTemplate";
+import type { FrequencyData } from "../lib/seo/types";
+import frequenciesRaw from "../data/frequencies.json";
+import type { Metadata } from "next";
+import { frequencyMeta } from "../lib/seo/meta";
 
-export function generateStaticParams(){return locations.map(x=>({location:x.slug}))}
+const frequencies = frequenciesRaw as FrequencyData[];
+// biweekly already has its own static page — exclude it to avoid build conflict
+const DYNAMIC_FREQUENCIES = frequencies.filter(f => f.shortLabel !== "biweekly");
+const frequencyBySlug = Object.fromEntries(DYNAMIC_FREQUENCIES.map(f => [f.slug, f]));
 
-export async function generateMetadata({params}:{params:Promise<{location:string}>}){
-  const {location}=await params,p=locationBySlug[location];
+export function generateStaticParams(){
+  return [
+    ...locations.map(x=>({location:x.slug})),
+    ...DYNAMIC_FREQUENCIES.map(f=>({location:f.slug})),
+  ];
+}
+
+export async function generateMetadata({params}:{params:Promise<{location:string}>}):Promise<Metadata>{
+  const {location}=await params;
+  // Frequency page metadata
+  const freq=frequencyBySlug[location];
+  if(freq){
+    const meta=frequencyMeta(freq);
+    return{title:meta.title,description:meta.description,alternates:{canonical:`/${freq.slug}`},robots:{index:true,follow:true},openGraph:{title:meta.title,description:meta.description,url:meta.canonical,type:"website"}};
+  }
+  const p=locationBySlug[location];
   if(!p)return{};
   const canonical=`/${p.slug}`;
   const noTaxPhrase=p.noTax?"No state income tax on wages.":"Estimate state income tax withholding.";
@@ -26,7 +48,11 @@ export async function generateMetadata({params}:{params:Promise<{location:string
 }
 
 export default async function LocationPage({params}:{params:Promise<{location:string}>}){
-  const {location}=await params,p=locationBySlug[location];
+  const {location}=await params;
+  // Frequency pages (weekly, semimonthly, monthly)
+  const freq=frequencyBySlug[location];
+  if(freq) return <FrequencyPageTemplate freq={freq}/>;
+  const p=locationBySlug[location];
   if(!p)notFound();
   const canonical=`https://www.paycheckscalculator.org/${p.slug}`;
   const noTax=p.noTax===true;
