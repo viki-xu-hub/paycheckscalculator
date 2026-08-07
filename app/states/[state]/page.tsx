@@ -9,15 +9,17 @@ import { statePageLinks } from "../../lib/seo/internalLinks";
 import { stateBreadcrumb } from "../../lib/seo/breadcrumb";
 import type { StateData } from "../../lib/seo/types";
 import statesRaw from "../../data/states.json";
+import { locations } from "../../lib/locations";
 
 const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }];
 const LAST_MODIFIED = "2026-08-07";
 
 const states = statesRaw as StateData[];
 const stateBySlug = Object.fromEntries(states.map(s => [s.slug, s]));
+const supportedSlugs = new Set(locations.map(l => l.slug));
 
 export function generateStaticParams() {
-  return states.map(s => ({ state: s.slug }));
+  return states.filter(s => supportedSlugs.has(s.slug)).map(s => ({ state: s.slug }));
 }
 
 export async function generateMetadata(
