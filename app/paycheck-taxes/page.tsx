@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "Paycheck Taxes Explained - Federal, State, Social Security & Medicare Taxes",
   description:
     "Learn how paycheck taxes work, including federal income tax, state taxes, Social Security, Medicare, and other payroll deductions that affect your take-home pay.",
-  alternates: { canonical: "/paycheck-taxes" },
+  alternates: { canonical: "/paycheck-taxes" }, robots: { index: false, follow: true },
   openGraph: {
     title:
       "Paycheck Taxes Explained - Federal, State, Social Security & Medicare Taxes",

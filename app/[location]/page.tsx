@@ -14,6 +14,14 @@ const frequencies = frequenciesRaw as FrequencyData[];
 const DYNAMIC_FREQUENCIES = frequencies.filter(f => f.shortLabel !== "biweekly");
 const frequencyBySlug = Object.fromEntries(DYNAMIC_FREQUENCIES.map(f => [f.slug, f]));
 
+// State pages not yet indexed by Google — suppress until they gain authority
+const NOINDEX_STATE_SLUGS = new Set([
+  "iowa-paycheck-calculator","kansas-paycheck-calculator","kentucky-paycheck-calculator",
+  "michigan-paycheck-calculator","nevada-paycheck-calculator","ohio-paycheck-calculator",
+  "oklahoma-paycheck-calculator","tennessee-paycheck-calculator","utah-paycheck-calculator",
+  "virginia-paycheck-calculator","washington-paycheck-calculator",
+]);
+
 export function generateStaticParams(){
   return [
     ...locations.map(x=>({location:x.slug})),
@@ -37,7 +45,7 @@ export async function generateMetadata({params}:{params:Promise<{location:string
     title:`${p.name} Paycheck Calculator 2026 — Calculate Your Take-Home Pay After Taxes`,
     description:`Use our free ${p.name} paycheck calculator to estimate your 2026 take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. ${noTaxPhrase}`,
     alternates:{canonical},
-    robots:{index:true,follow:true},
+    robots:{index:NOINDEX_STATE_SLUGS.has(location)?false:true,follow:true},
     openGraph:{
       title:`${p.name} Paycheck Calculator 2026`,
       description:`Estimate ${p.name} take-home pay after taxes with transparent 2026 withholding assumptions.`,
