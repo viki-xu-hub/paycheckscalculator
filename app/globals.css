@@ -29,6 +29,8 @@ nav a:hover { color:var(--blue); }
 /* mobile: hide dropdowns, show triggers as plain text */
 @media(max-width:800px) { .nav-panel { display:none; } .nav-caret { display:none; } .nav-trigger { pointer-events:none; } }
 .year-pill { font-size:9px; font-weight:700; color:var(--blue); background:#e7f2f7; border-radius:99px; padding:5px 8px; }
+.crumbs { max-width:1180px; margin:auto; padding:12px 19px 0; display:flex; flex-wrap:wrap; gap:7px; font-size:11px; color:var(--muted); }
+.crumbs a { color:var(--blue); }.crumbs a:hover{text-decoration:underline}.crumbs span[aria-hidden]{color:#a9b8c4}
 .hero { max-width:1180px; margin:auto; padding:17px 19px; text-align:center; }
 .eyebrow,.kicker { color:var(--red); font-weight:800; letter-spacing:.13em; font-size:9px; text-transform:uppercase; }
 .hero h1 { margin:5px 0; font:700 clamp(30px,3.2vw,39px)/1 Georgia,serif; letter-spacing:-.04em; }

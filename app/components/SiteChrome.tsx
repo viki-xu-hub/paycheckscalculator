@@ -37,6 +37,11 @@ export function SiteHeader() {
               <a href="/florida-paycheck-calculator">Florida</a>
               <a href="/new-jersey-paycheck-calculator">New Jersey</a>
               <a href="/illinois-paycheck-calculator">Illinois</a>
+              <div className="nav-panel-divider" />
+              <div className="nav-group-label">Texas by Situation</div>
+              <a href="/texas-paycheck-calculator-with-bonus">Texas With Bonus</a>
+              <a href="/texas-paycheck-calculator-with-dependents">Texas With Dependents</a>
+              <a href="/texas-paycheck-calculator-with-child-support">Texas With Child Support</a>
             </div>
             <div>
               <div className="nav-group-label">Biweekly by State</div>

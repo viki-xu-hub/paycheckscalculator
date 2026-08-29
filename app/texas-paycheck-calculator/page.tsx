@@ -88,13 +88,32 @@ export default function Texas() {
       "Calculate your Texas take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Texas has no state income tax on wages.",
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.paycheckscalculator.org" },
+      { "@type": "ListItem", position: 2, name: "State Paycheck Calculators", item: "https://www.paycheckscalculator.org/state-paycheck-calculators" },
+      { "@type": "ListItem", position: 3, name: "Texas Paycheck Calculator", item: canonical },
+    ],
+  };
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <SiteHeader />
+
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/state-paycheck-calculators">State Paycheck Calculators</a>
+        <span aria-hidden="true">›</span>
+        <span>Texas Paycheck Calculator</span>
+      </nav>
 
       {/* Hero */}
       <section className="hero">
@@ -142,6 +161,34 @@ export default function Texas() {
         <p className="calc-note" style={{ marginTop: 20 }}>
           The calculator is designed to help Texas employees understand the difference between gross pay and actual take-home pay.
         </p>
+      </section>
+
+      {/* H2: Texas Paycheck Calculators for Specific Situations */}
+      <section className="seo-section text-left">
+        <p className="kicker">TEXAS SITUATION CALCULATORS</p>
+        <h2>Texas Paycheck Calculators for Specific Situations</h2>
+        <p className="seo-section-intro">
+          The calculator above covers regular salary and hourly pay. When a bonus, dependents, or a child support
+          order changes the math, these Texas calculators handle the details and show the effect on each paycheck.
+        </p>
+        <div className="tool-links">
+          <a href="/texas-paycheck-calculator-with-bonus">
+            <b>Texas Paycheck Calculator With Bonus</b>
+            <span>Flat 22% supplemental rate vs the aggregate method →</span>
+          </a>
+          <a href="/texas-paycheck-calculator-with-dependents">
+            <b>Texas Paycheck Calculator With Dependents</b>
+            <span>W-4 Step 3 credits for children and other dependents →</span>
+          </a>
+          <a href="/texas-paycheck-calculator-with-child-support">
+            <b>Texas Paycheck Calculator With Child Support</b>
+            <span>Guideline percentages, net resources, and the 50% limit →</span>
+          </a>
+          <a href="/hourly-paycheck-calculator">
+            <b>Hourly Paycheck Calculator</b>
+            <span>Hourly and daily pay with overtime →</span>
+          </a>
+        </div>
       </section>
 
       {/* H2: Does Texas Have State Income Tax? */}
@@ -241,6 +288,14 @@ export default function Texas() {
           <li>Employer payroll rounding</li>
           <li>Retirement contributions</li>
         </ul>
+        <p style={{ marginTop: 16, color: "#667a8a", lineHeight: 1.7, fontSize: 14 }}>
+          Three of these are common enough to have their own tools. If you are paid a bonus, see how{" "}
+          <a className="text-link" href="/texas-paycheck-calculator-with-bonus">supplemental wages are withheld in Texas</a>.
+          If you claim children on your W-4, check{" "}
+          <a className="text-link" href="/texas-paycheck-calculator-with-dependents">what dependents add to each paycheck</a>.
+          If an income withholding order applies, estimate{" "}
+          <a className="text-link" href="/texas-paycheck-calculator-with-child-support">take-home pay after Texas child support</a>.
+        </p>
       </section>
 
       {/* H2: Gross Pay vs Net Pay */}
@@ -332,10 +387,6 @@ export default function Texas() {
           <a href="/how-much-tax-is-taken-from-my-paycheck">
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>
-          </a>
-          <a href="/texas-hourly-paycheck-calculator">
-            <b>Texas Hourly Paycheck Calculator</b>
-            <span>Hourly workers with overtime →</span>
           </a>
         </div>
       </section>
