@@ -40,8 +40,8 @@ export default function SalaryHubPage() {
         <div className="location-grid" style={{ marginTop: 40 }}>
           {cards.map(s => (
             <a key={s.slug} href={`/salary/${s.slug}`}>
-              <b>{s.label} / year</b>
-              <span>~{fmt.format(s.txNet)} biweekly (TX) · ~{fmt.format(s.caNet)} (CA)</span>
+              <b>{s.label} a year is how much an hour?</b>
+              <span>${(s.amount / 2080).toFixed(2)}/hr · ~{fmt.format(s.txNet)} biweekly net (TX) →</span>
             </a>
           ))}
         </div>

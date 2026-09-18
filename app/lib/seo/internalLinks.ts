@@ -27,7 +27,7 @@ export function statePageLinks(current: StateData): InternalLink[] {
   // Salary links (3 common benchmarks)
   [50000, 75000, 100000].forEach(amt => {
     const s = salaries.find(x => x.amount === amt);
-    if (s) links.push({ href: `/salary/${s.slug}`, title: `${s.label} Salary After Tax`, description: `See take-home pay on a ${s.label} salary →` });
+    if (s) links.push({ href: `/salary/${s.slug}`, title: `${s.label} a Year Is How Much an Hour?`, description: `Hourly rate and take-home pay on ${s.label} a year →` });
   });
 
   // Hourly link (median rate)
@@ -42,24 +42,36 @@ export function statePageLinks(current: StateData): InternalLink[] {
 
 export function salaryPageLinks(current: SalaryData): InternalLink[] {
   const links: InternalLink[] = [];
+  const hourly = (current.amount / 2080).toFixed(2);
 
   // Neighboring salaries (±1 step)
   const idx = salaries.findIndex(s => s.slug === current.slug);
-  if (idx > 0) links.push({ href: `/salary/${salaries[idx - 1].slug}`, title: `${salaries[idx - 1].label} Salary After Tax`, description: `Compare take-home on a lower salary →` });
-  if (idx < salaries.length - 1) links.push({ href: `/salary/${salaries[idx + 1].slug}`, title: `${salaries[idx + 1].label} Salary After Tax`, description: `Compare take-home on a higher salary →` });
+  if (idx > 0) {
+    const lo = salaries[idx - 1];
+    links.push({ href: `/salary/${lo.slug}`, title: `${lo.label} a Year Is How Much an Hour?`, description: `One step down: ${lo.label} → hourly and after-tax pay →` });
+  }
+  if (idx < salaries.length - 1) {
+    const hi = salaries[idx + 1];
+    links.push({ href: `/salary/${hi.slug}`, title: `${hi.label} a Year Is How Much an Hour?`, description: `One step up: ${hi.label} → hourly and after-tax pay →` });
+  }
 
   // Hourly equivalent
   const h = hourlyRates.find(x => x.rate === current.hourlyEquivalent) ?? hourlyRates.reduce((prev, curr) => Math.abs(curr.rate - current.hourlyEquivalent) < Math.abs(prev.rate - current.hourlyEquivalent) ? curr : prev);
-  links.push({ href: `/hourly/${h.slug}`, title: `$${h.rate} an Hour Is How Much a Year?`, description: `${current.label}/year ≈ ${h.label} — see the hourly view →` });
+  links.push({ href: `/hourly/${h.slug}`, title: `$${h.rate} an Hour Is How Much a Year?`, description: `${current.label} a year ≈ $${hourly} an hour — see the hourly view →` });
 
-  // Top state pages
-  ["TX", "CA", "FL", "NY"].forEach(abbr => {
+  // Hub + interactive calculator
+  links.push({ href: "/salary", title: "All Salaries: $25,000 to $300,000 a Year", description: "Browse every salary-to-hourly page →" });
+  links.push({ href: "/hourly-paycheck-calculator", title: "Hourly Paycheck Calculator", description: "Enter any rate, hours and overtime →" });
+
+  // Top state pages (canonical root URLs)
+  ["TX", "CA", "FL", "NY", "WA"].forEach(abbr => {
     const s = states.find(x => x.abbr === abbr);
-    if (s) links.push({ href: `/states/${s.slug}`, title: `${s.name} Paycheck Calculator`, description: `${current.label} take-home in ${s.name} →` });
+    if (s) links.push({ href: `/${s.slug}`, title: `${s.name} Paycheck Calculator`, description: `${current.label} a year in ${s.name} after state tax →` });
   });
 
   // Frequency pages
-  links.push({ href: "/biweekly-paycheck-calculator", title: "Biweekly Paycheck Calculator", description: "Estimate your biweekly take-home →" });
+  links.push({ href: "/biweekly-paycheck-calculator", title: "Biweekly Paycheck Calculator", description: `Your biweekly paycheck on ${current.label} a year →` });
+  links.push({ href: "/monthly-paycheck-calculator", title: "Monthly Paycheck Calculator", description: `Your monthly paycheck on ${current.label} a year →` });
 
   return links;
 }
@@ -82,7 +94,7 @@ export function hourlyPageLinks(current: HourlyData): InternalLink[] {
   // Nearest salary equivalent
   const targetAnnual = current.annualAt40h;
   const nearestSalary = salaries.reduce((prev, curr) => Math.abs(curr.amount - targetAnnual) < Math.abs(prev.amount - targetAnnual) ? curr : prev);
-  links.push({ href: `/salary/${nearestSalary.slug}`, title: `${nearestSalary.label} Salary After Tax`, description: `${dollar(current)} an hour ≈ ${nearestSalary.label} a year — see the salary view →` });
+  links.push({ href: `/salary/${nearestSalary.slug}`, title: `${nearestSalary.label} a Year Is How Much an Hour?`, description: `${dollar(current)} an hour ≈ ${nearestSalary.label} a year — see the salary view →` });
 
   // Hub + interactive hourly calculator
   links.push({ href: "/hourly", title: "All Hourly Rates: $10 to $150 an Hour", description: "Browse every hourly wage to yearly salary page →" });

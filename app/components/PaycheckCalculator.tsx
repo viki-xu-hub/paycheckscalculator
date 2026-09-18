@@ -24,13 +24,13 @@ const initialLocalRate=(state:SupportedState)=>state==="MD"?3.2:0;
 const initialStateDate=(state:SupportedState)=>state==="GA"?"2026-05-11":state==="UT"?"2026-06-01":"2026-08-01";
 const initialPremiumRate=(state:SupportedState)=>state==="MA" ? .46 : state==="MN" ? .44 : state==="OR" ? .6 : 0;
 
-export default function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false,defaultHourlyRate=30,defaultOvertime=5,headingSuffix=""}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean;defaultHourlyRate?:number;defaultOvertime?:number;headingSuffix?:string}) {
+export default function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false,defaultHourlyRate=30,defaultOvertime=5,defaultSalary=75000,headingSuffix=""}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean;defaultHourlyRate?:number;defaultOvertime?:number;defaultSalary?:number;headingSuffix?:string}) {
   const [state,setState]=useState<SupportedState>(defaultState);
   const [stateQuery,setStateQuery]=useState(supportedStates.find(item=>item.code===defaultState)?.name??"");
   const [stateSearchOpen,setStateSearchOpen]=useState(false);
   const stateListId=useId();
   const [frequency,setFrequency]=useState<PayFrequency>(defaultFrequency);
-  const [salary,setSalary]=useState(75000);
+  const [salary,setSalary]=useState(defaultSalary);
   const [hourlyRate,setHourlyRate]=useState(defaultHourlyRate);
   const [hours,setHours]=useState(40);
   const [overtime,setOvertime]=useState(defaultOvertime);

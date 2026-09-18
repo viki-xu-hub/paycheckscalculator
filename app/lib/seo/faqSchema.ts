@@ -38,27 +38,34 @@ export function salaryFaqs(salary: SalaryData): FaqItem[] {
   const { amount, label } = salary;
   const monthly = Math.round(amount / 12);
   const biweekly = Math.round(amount / 26);
+  const hourly40 = (amount / 2080).toFixed(2);
+  const hourly35 = (amount / 1820).toFixed(2);
+  const k = `$${Math.round(amount / 1000)}k`;
   const fmt = (n: number) => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(n);
   return [
     {
-      q: `How much is ${label} a year after taxes?`,
-      a: `A ${label} salary take-home pay depends on your state, filing status, and deductions. Federally, you pay income tax, Social Security (6.2%), and Medicare (1.45%). Use the calculator to get a state-specific estimate.`,
+      q: `${label} a year is how much an hour?`,
+      a: `${label} a year is $${hourly40} an hour if you work 40 hours a week for 52 weeks (2,080 hours). At 35 hours a week it is $${hourly35} an hour. These are gross figures before federal income tax, Social Security, Medicare and state tax.`,
     },
     {
-      q: `What is the monthly take-home pay for ${label}?`,
-      a: `${label} per year equals approximately ${fmt(monthly)} per month in gross pay. Your net monthly take-home will be lower after taxes. Use the calculator above and set pay frequency to monthly.`,
+      q: `${k} a year is how much an hour after taxes?`,
+      a: `After taxes, ${k} a year is roughly $${(amount / 2080 * 0.75).toFixed(2)}–$${(amount / 2080 * 0.85).toFixed(2)} an hour, because a single filer with a standard W-4 keeps about 75%–85% of gross depending on the state. Federal income tax, 6.2% Social Security and 1.45% Medicare come out of every check; the state table on this page shows the exact after-tax figure for all 38 supported states.`,
     },
     {
-      q: `What is the biweekly paycheck for ${label}?`,
-      a: `At ${label}/year with 26 biweekly pay periods, your gross pay per check is approximately ${fmt(biweekly)}. Net pay after taxes will be lower — enter your state and deductions for an exact estimate.`,
+      q: `${k} a year is how much biweekly?`,
+      a: `${label} a year with 26 biweekly pay periods is ${fmt(biweekly)} per paycheck before taxes. Net pay after taxes will be lower — enter your state and deductions in the calculator for an exact estimate.`,
     },
     {
-      q: `Is ${label} a good salary?`,
-      a: `Whether ${label} is a good salary depends on your location, household size, and cost of living. Use the state calculator to compare take-home pay across different states.`,
+      q: `${label} a year is how much a month?`,
+      a: `${label} a year equals ${fmt(monthly)} a month in gross pay (${label} ÷ 12). Set the calculator's pay frequency to monthly to see your net monthly take-home.`,
     },
     {
       q: `What federal tax bracket is ${label} in for ${YEAR}?`,
-      a: `For ${YEAR}, a ${label} single-filer salary falls in the ${salaryBracketLabel(amount)} federal income tax bracket. However, the U.S. uses a marginal rate system, so only income above each bracket threshold is taxed at that rate.`,
+      a: `For ${YEAR}, a ${label} single-filer salary falls in the ${salaryBracketLabel(amount)} federal income tax bracket. The U.S. uses a marginal rate system, so only income above each bracket threshold is taxed at that rate.`,
+    },
+    {
+      q: `Is ${label} a good salary?`,
+      a: `Whether ${label} a year is a good salary depends on your location, household size and cost of living. Compare the after-tax figures for different states on this page.`,
     },
   ];
 }

@@ -63,6 +63,13 @@ export default async function SalaryCalculatorPage(
   const biweekly = Math.round(s.amount / 26);
   const weekly = Math.round(s.amount / 52);
   const semimonthly = Math.round(s.amount / 24);
+  const hourly40 = (s.amount / 2080).toFixed(2);
+  const hourly35 = (s.amount / 1820).toFixed(2);
+  const kLabel = `$${Math.round(s.amount / 1000)}k`;
+  const idx = salaries.findIndex(x => x.slug === s.slug);
+  const lower = idx > 0 ? salaries[idx - 1] : null;
+  const higher = idx < salaries.length - 1 ? salaries[idx + 1] : null;
+  const chartSrc = `/images/salary/${s.amount}-a-year-is-how-much-an-hour.svg`;
 
   const stateComparison = locations
     .map(loc => {
@@ -79,6 +86,9 @@ export default async function SalaryCalculatorPage(
       };
     })
     .sort((a, b) => b.netAnnual - a.netAnnual);
+  const bestState = stateComparison[0];
+  const worstState = stateComparison[stateComparison.length - 1];
+  const texas = stateComparison.find(x => x.abbr === "TX") ?? bestState;
 
   const softwareSchema = {
     "@context": "https://schema.org",
@@ -108,7 +118,8 @@ export default async function SalaryCalculatorPage(
     url: meta.canonical,
     dateModified: LAST_MODIFIED,
     datePublished: "2026-08-07",
-    about: `Take-home pay calculation for a ${s.label} annual salary in 2026.`,
+    about: `${s.label} a year is how much an hour: hourly rate, pay-period breakdown and after-tax pay for a ${s.label} salary in 2026.`,
+    primaryImageOfPage: { "@type": "ImageObject", url: `${meta.canonical.replace(/\/salary\/.*$/, "")}${chartSrc}`, width: 960, height: 420 },
   };
 
   return (
@@ -121,21 +132,22 @@ export default async function SalaryCalculatorPage(
 
       {/* Hero */}
       <section className="hero">
-        <div className="eyebrow">SALARY AFTER TAX 2026</div>
+        <div className="eyebrow">SALARY TO HOURLY 2026</div>
         <h1>{meta.h1}</h1>
         <div className="hero-intro">
           <p>
-            How much is {s.label} a year after taxes? Use our free 2026 calculator to
-            estimate your take-home pay from a {s.label} salary after federal income tax,
-            Social Security, Medicare, and state taxes.
+            {s.label} a year is how much an hour? <strong>${hourly40} an hour</strong> at 40 hours a
+            week for 52 weeks (2,080 hours), or ${hourly35} an hour on a 35-hour week. Per pay period
+            that is {fmt.format(monthly)} a month, {fmt.format(biweekly)} biweekly or {fmt.format(weekly)} a week
+            before taxes.
           </p>
           <p>
-            At {s.label}/year, your gross biweekly paycheck is{" "}
-            <strong>{fmt.format(biweekly)}</strong> before taxes. Your net take-home will
-            vary by state, filing status, and deductions.
+            After taxes, {kLabel} a year is closer to {fmt.format(Math.round(texas.netAnnual))} in a
+            no-income-tax state like Texas and {fmt.format(Math.round(worstState.netAnnual))} in {worstState.name}.
+            Enter your state, filing status and deductions below to see your own net paycheck.
           </p>
         </div>
-        <PaycheckCalculator defaultState="TX" navigateOnStateChange />
+        <PaycheckCalculator defaultState="TX" navigateOnStateChange defaultSalary={s.amount} headingSuffix={` on ${s.label} a year`} />
         <div className="trust-row">
           <span>2026 IRS Method</span>
           <span>All 50 States</span>
@@ -146,23 +158,43 @@ export default async function SalaryCalculatorPage(
       {/* Pay Schedule Breakdown */}
       <article className="long-seo">
         <p className="kicker">PAY BREAKDOWN</p>
-        <h2>{s.label} a Year — Gross Pay by Pay Schedule</h2>
+        <h2>{s.label} a Year Is How Much an Hour, a Month, and Biweekly?</h2>
         <section>
+          <figure style={{ margin: "0 0 20px" }}>
+            <img
+              src={chartSrc}
+              alt={`${s.label} a year is how much an hour — $${hourly40} an hour, ${fmt.format(monthly)} a month, ${fmt.format(biweekly)} biweekly and ${fmt.format(weekly)} a week before taxes (40 hours a week, 2026)`}
+              width={960}
+              height={420}
+              loading="lazy"
+              decoding="async"
+              style={{ width: "100%", height: "auto", borderRadius: 12, border: "1px solid #e0e7ef" }}
+            />
+            <figcaption style={{ color: "#8595a5", fontSize: 12, marginTop: 8 }}>
+              {s.label} a year converted to hourly, weekly, biweekly and monthly gross pay.
+            </figcaption>
+          </figure>
           <p>
-            Here is how a {s.label} annual salary breaks down into gross pay by pay
-            frequency before taxes or deductions:
+            The math behind &ldquo;{s.label}{" "}a year is how much an hour&rdquo;: a full-time year is 40 hours
+            × 52 weeks = 2,080 hours, so {s.label} ÷ 2,080 = <strong>${hourly40} an hour</strong>. If you
+            only count the roughly 2,000 hours most people actually work after holidays and vacation, {kLabel} a
+            year is about ${(s.amount / 2000).toFixed(2)} an hour. Here is the same salary split across common
+            pay schedules before any taxes or deductions:
           </p>
           <ul className="checklist">
-            <li><strong>Annual:</strong> {fmt.format(s.amount)}</li>
-            <li><strong>Monthly (12×/yr):</strong> {fmt.format(monthly)}</li>
-            <li><strong>Semimonthly (24×/yr):</strong> {fmt.format(semimonthly)}</li>
-            <li><strong>Biweekly (26×/yr):</strong> {fmt.format(biweekly)}</li>
+            <li><strong>Hourly (40 hrs/wk, 2,080 hrs):</strong> ${hourly40}</li>
+            <li><strong>Hourly (35 hrs/wk, 1,820 hrs):</strong> ${hourly35}</li>
             <li><strong>Weekly (52×/yr):</strong> {fmt.format(weekly)}</li>
-            <li><strong>Hourly equivalent (40 hrs/wk):</strong> ~${s.hourlyEquivalent}/hr</li>
+            <li><strong>Biweekly (26×/yr):</strong> {fmt.format(biweekly)}</li>
+            <li><strong>Semimonthly (24×/yr):</strong> {fmt.format(semimonthly)}</li>
+            <li><strong>Monthly (12×/yr):</strong> {fmt.format(monthly)}</li>
           </ul>
           <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14, marginTop: 16 }}>
-            These are gross amounts. Your net take-home after taxes depends on your state,
-            filing status, pre-tax deductions, and retirement contributions.
+            These are gross amounts. Your take-home depends on your state, filing status and
+            deductions — the calculator above gives a state-specific net estimate, and the table
+            below shows {s.label} a year after tax in every supported state.
+            {lower && (<> Earning a little less? See <a href={`/salary/${lower.slug}`}>{lower.label} a year is how much an hour</a>.</>)}
+            {higher && (<> Expecting a raise? See <a href={`/salary/${higher.slug}`}>{higher.label} a year is how much an hour</a>.</>)}
           </p>
         </section>
       </article>
@@ -170,29 +202,38 @@ export default async function SalaryCalculatorPage(
       {/* Tax Explanation */}
       <article className="long-seo">
         <p className="kicker">FEDERAL TAX WITHHOLDING</p>
-        <h2>Federal Taxes on a {s.label} Salary</h2>
+        <h2>What Taxes Come Out of a {s.label} Salary?</h2>
         <section>
           <p>
-            A {s.label} salary is subject to the following federal payroll taxes in 2026:
+            Knowing what {s.label} a year works out to per hour is only half the picture — a {s.label} salary
+            is subject to the following payroll taxes in 2026:
           </p>
           <ul className="checklist">
             <li><strong>Federal income tax:</strong> Marginal rate based on your W-4 elections and 2026 tax brackets</li>
-            <li><strong>Social Security:</strong> 6.2% on wages up to the annual wage base ($176,100 in 2026)</li>
+            <li><strong>Social Security:</strong> 6.2% on wages up to the annual wage base ($184,500 in 2026)</li>
             <li><strong>Medicare:</strong> 1.45% on all wages (plus 0.9% Additional Medicare Tax above $200,000 single / $250,000 MFJ)</li>
             <li><strong>State income tax:</strong> Varies by state — use the calculator above to enter your state</li>
           </ul>
+          <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14, marginTop: 16 }}>
+            Federal withholding follows the percentage method in{" "}
+            <a href="https://www.irs.gov/publications/p15t" rel="noopener">IRS Publication 15-T</a>, and the
+            Social Security wage base is published each year by the{" "}
+            <a href="https://www.ssa.gov/oact/cola/cbb.html" rel="noopener">Social Security Administration</a>.
+            Our <a href="/methodology">methodology page</a> lists every table we use.
+          </p>
         </section>
       </article>
 
       {/* 38-State Comparison — real calculated numbers */}
       <article className="long-seo">
         <p className="kicker">TAKE-HOME PAY BY STATE</p>
-        <h2>{s.label} Salary After Tax — All 38 States Compared (2026)</h2>
+        <h2>How Much Is {s.label} a Year After Taxes in Each State? (2026)</h2>
         <section>
           <p>
-            Here is what a {s.label} salary takes home after taxes in every supported state
-            for 2026. Calculated for a single filer, standard W-4, biweekly pay frequency,
-            no pre-tax deductions. Sorted highest to lowest take-home pay.
+            Here is what {s.label} a year takes home after taxes in every supported state for 2026 —
+            from {fmt.format(Math.round(bestState.netAnnual))} in {bestState.name} down to{" "}
+            {fmt.format(Math.round(worstState.netAnnual))} in {worstState.name}. Calculated for a single
+            filer, standard W-4, biweekly pay frequency, no pre-tax deductions. Sorted highest to lowest.
           </p>
           <div style={{ overflowX: "auto", marginTop: 20 }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
@@ -232,7 +273,7 @@ export default async function SalaryCalculatorPage(
       {/* FAQ */}
       <div className="faq">
         <p className="kicker" style={{ textAlign: "center" }}>FREQUENTLY ASKED QUESTIONS</p>
-        <h2>{s.label} Salary After Tax — FAQ</h2>
+        <h2>{s.label} a Year — Frequently Asked Questions</h2>
         {faqs.map((f, i) => (
           <details key={i}>
             <summary>{f.q}<span>+</span></summary>
@@ -244,7 +285,7 @@ export default async function SalaryCalculatorPage(
       {/* Internal Links */}
       <article className="long-seo">
         <p className="kicker">RELATED CALCULATORS</p>
-        <h2>More Paycheck Calculators</h2>
+        <h2>How Much an Hour Is {lower ? lower.label : "$25,000"} or {higher ? higher.label : "$300,000"} a Year — and Other Paycheck Calculators</h2>
         <section>
           <div className="tool-links">
             {relatedLinks.map(link => (
@@ -260,7 +301,7 @@ export default async function SalaryCalculatorPage(
       {/* Disclaimer */}
       <div className="seo-disclaimer" style={{ maxWidth: 920, margin: "0 auto 40px" }}>
         <p>
-          <strong>Disclaimer:</strong> This salary after-tax calculator provides estimates
+          <strong>Disclaimer:</strong> This {s.label} a year paycheck calculator provides estimates
           for informational purposes only. Actual take-home amounts may vary based on
           employer payroll systems, benefit elections, and individual tax circumstances.
           For specific tax advice, consult a qualified tax professional.

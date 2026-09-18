@@ -34,8 +34,8 @@ export function hourlyBreadcrumb(rateLabel: string, rateSlug: string) {
 export function salaryBreadcrumb(salaryLabel: string, salarySlug: string) {
   return buildBreadcrumbSchema([
     { name: "Home", href: "/" },
-    { name: "Salary After Tax", href: "/salary" },
-    { name: `${salaryLabel} After Tax`, href: `/salary/${salarySlug}` },
+    { name: "Salary to Hourly", href: "/salary" },
+    { name: `${salaryLabel} a Year Is How Much an Hour`, href: `/salary/${salarySlug}` },
   ]);
 }
 

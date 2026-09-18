@@ -158,16 +158,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Salary Examples */}
+      {/* Salary → hourly */}
       <section className="seo-section">
-        <p className="kicker">SALARY EXAMPLES</p>
-        <h2>Salary Examples</h2>
-        <p>Many employees search for paycheck estimates based on specific salary levels.</p>
+        <p className="kicker">SALARY TO HOURLY</p>
+        <h2>$X a Year Is How Much an Hour?</h2>
+        <p>Paid a salary? Pick your income to see what it works out to per hour, per paycheck and per month — before and after taxes in all 38 supported states.</p>
         <div className="tool-links">
-          <a href="/50000-salary-after-tax"><b>$50,000 Salary After Tax</b><span>See a sample paycheck at this income →</span></a>
-          <a href="/60000-salary-after-tax"><b>$60,000 Salary After Tax</b><span>Estimate take-home pay at $60,000 →</span></a>
-          <a href="/75000-salary-after-tax"><b>$75,000 Salary After Tax</b><span>Calculate net pay at this salary →</span></a>
-          <a href="/100000-salary-after-tax"><b>$100,000 Salary After Tax</b><span>See deductions at six figures →</span></a>
+          <a href="/salary/40000-after-tax-calculator"><b>$40,000 a Year Is How Much an Hour?</b><span>$19.23 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/45000-after-tax-calculator"><b>$45,000 a Year Is How Much an Hour?</b><span>$21.63 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/50000-after-tax-calculator"><b>$50,000 a Year Is How Much an Hour?</b><span>$24.04 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/55000-after-tax-calculator"><b>$55,000 a Year Is How Much an Hour?</b><span>$26.44 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/60000-after-tax-calculator"><b>$60,000 a Year Is How Much an Hour?</b><span>$28.85 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/70000-after-tax-calculator"><b>$70,000 a Year Is How Much an Hour?</b><span>$33.65 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/75000-after-tax-calculator"><b>$75,000 a Year Is How Much an Hour?</b><span>$36.06 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/80000-after-tax-calculator"><b>$80,000 a Year Is How Much an Hour?</b><span>$38.46 an hour at 40 hrs/week →</span></a>
+          <a href="/salary/100000-after-tax-calculator"><b>$100,000 a Year Is How Much an Hour?</b><span>$48.08 an hour at 40 hrs/week →</span></a>
+          <a href="/salary"><b>All Salaries ($25k–$300k)</b><span>Browse every salary-to-hourly page →</span></a>
         </div>
       </section>
 

@@ -16,11 +16,12 @@ export function stateMeta(state: StateData): PageMeta {
 }
 
 export function salaryMeta(salary: SalaryData): PageMeta {
-  const fmt = new Intl.NumberFormat("en-US");
+  const hourly = (salary.amount / 2080).toFixed(2);
+  const k = `$${Math.round(salary.amount / 1000)}k`;
   return {
-    title: `${salary.label} Salary After Tax — ${YEAR} Take-Home Pay Calculator`,
-    description: `How much is ${salary.label} a year after taxes in ${YEAR}? Calculate your exact take-home pay from a ${salary.label} salary after federal income tax, Social Security, and Medicare.`,
-    h1: `${salary.label} Salary After Tax Calculator ${YEAR}`,
+    title: `${salary.label} a Year Is How Much an Hour — ${YEAR} After-Tax Pay`,
+    description: `${salary.label} a year is how much an hour? $${hourly} an hour at 40 hours a week (${k} salary). See ${YEAR} take-home pay after federal, FICA and state tax in 38 states.`,
+    h1: `${salary.label} a Year Is How Much an Hour — ${YEAR} Paycheck Calculator`,
     canonical: `${SITE}/salary/${salary.slug}`,
   };
 }
