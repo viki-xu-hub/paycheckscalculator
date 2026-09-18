@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="t d">
+<title id="t">$27 an hour is how much a year — gross pay by pay period</title>
+<desc id="d">At 40 hours a week, $27 an hour equals $56,160 a year, $4,680 a month, $2,160 biweekly, $1,080 a week and $216 a day before taxes.</desc>
+<rect width="960" height="420" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#122a3d">$27 an hour is how much a year?</text>
+<text x="32" y="70" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#5f7485">Gross pay before taxes · 40 hours a week · 52 weeks · 2026</text>
+<text x="236" y="123.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#122a3d">Yearly (2,080 hrs)</text>
+<rect x="250" y="96" width="600.0" height="44" rx="8" fill="#1769aa"/>
+<text x="862.0" y="124.0" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#122a3d">$56,160</text>
+<text x="236" y="185.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#122a3d">Monthly</text>
+<rect x="250" y="158" width="50.0" height="44" rx="8" fill="#8fb8de"/>
+<text x="312.0" y="186.0" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#122a3d">$4,680</text>
+<text x="236" y="247.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#122a3d">Biweekly (80 hrs)</text>
+<rect x="250" y="220" width="23.1" height="44" rx="8" fill="#8fb8de"/>
+<text x="285.1" y="248.0" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#122a3d">$2,160</text>
+<text x="236" y="309.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#122a3d">Weekly (40 hrs)</text>
+<rect x="250" y="282" width="11.5" height="44" rx="8" fill="#8fb8de"/>
+<text x="273.5" y="310.0" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#122a3d">$1,080</text>
+<text x="236" y="371.0" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#122a3d">Daily (8 hrs)</text>
+<rect x="250" y="344" width="8.0" height="44" rx="8" fill="#8fb8de"/>
+<text x="270.0" y="372.0" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="700" fill="#122a3d">$216</text>
+<text x="32" y="402" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#8595a5">paycheckscalculator.org · take-home pay after federal, FICA and state tax is shown in the table on the page</text>
+</svg>

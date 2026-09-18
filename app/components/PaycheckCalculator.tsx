@@ -24,16 +24,16 @@ const initialLocalRate=(state:SupportedState)=>state==="MD"?3.2:0;
 const initialStateDate=(state:SupportedState)=>state==="GA"?"2026-05-11":state==="UT"?"2026-06-01":"2026-08-01";
 const initialPremiumRate=(state:SupportedState)=>state==="MA" ? .46 : state==="MN" ? .44 : state==="OR" ? .6 : 0;
 
-export default function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean}) {
+export default function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false,defaultHourlyRate=30,defaultOvertime=5,headingSuffix=""}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean;defaultHourlyRate?:number;defaultOvertime?:number;headingSuffix?:string}) {
   const [state,setState]=useState<SupportedState>(defaultState);
   const [stateQuery,setStateQuery]=useState(supportedStates.find(item=>item.code===defaultState)?.name??"");
   const [stateSearchOpen,setStateSearchOpen]=useState(false);
   const stateListId=useId();
   const [frequency,setFrequency]=useState<PayFrequency>(defaultFrequency);
   const [salary,setSalary]=useState(75000);
-  const [hourlyRate,setHourlyRate]=useState(30);
+  const [hourlyRate,setHourlyRate]=useState(defaultHourlyRate);
   const [hours,setHours]=useState(40);
-  const [overtime,setOvertime]=useState(5);
+  const [overtime,setOvertime]=useState(defaultOvertime);
   const [weeks,setWeeks]=useState(52);
   const [status,setStatus]=useState<FilingStatus>("single");
   const [retirement,setRetirement]=useState(5);
@@ -131,7 +131,7 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
 
   return <div className="calculator national-calculator" id="calculator">
     <section className="inputs">
-      <div className="section-heading"><span className="step">1</span><div><h2>Your pay details</h2><p>Adjust the fields; results update instantly.</p></div></div>
+      <div className="section-heading"><span className="step">1</span><div><h2>Your pay details{headingSuffix}</h2><p>Adjust the fields; results update instantly.</p></div></div>
       <label className="field"><span>State or location</span><div className="state-combobox" onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node)){setStateSearchOpen(false);setStateQuery(stateName??"");}}}><input type="search" role="combobox" aria-autocomplete="list" aria-controls={stateListId} aria-expanded={stateSearchOpen} aria-label="Search state or location" placeholder="Search by state name or abbreviation" value={stateQuery} onFocus={event=>{event.currentTarget.select();setStateSearchOpen(true);}} onChange={event=>{setStateQuery(event.target.value);setStateSearchOpen(true);}} onKeyDown={event=>{if(event.key==="Escape"){setStateQuery(stateName??"");setStateSearchOpen(false);event.currentTarget.blur();}else if(event.key==="Enter"&&stateSearchOpen&&filteredStates.length){event.preventDefault();changeState(filteredStates[0].code);}}}/>{stateSearchOpen&&<div className="state-search-results" id={stateListId} role="listbox">{filteredStates.length?filteredStates.map(item=><button type="button" role="option" aria-selected={item.code===state} className={item.code===state?"selected":""} key={item.code} onClick={()=>changeState(item.code)}><span>{item.name}</span><small>{item.code}</small></button>):<p>No matching state or location.</p>}</div>}</div><small>Type a state name or abbreviation, then select from all 38 location engines.</small></label>
       {hourly?<><div className="split-fields"><NumberField label="Hourly rate" value={hourlyRate} setValue={setHourlyRate}/><NumberField label="Regular hours / week" value={hours} setValue={setHours} currency={false}/></div><div className="split-fields"><NumberField label="Overtime hours / week" value={overtime} setValue={setOvertime} currency={false}/><NumberField label="Paid weeks / year" value={weeks} setValue={setWeeks} currency={false}/></div></>:<NumberField label="Annual gross salary" value={salary} setValue={setSalary}/>} 
       <div className="field"><span>Pay frequency</span><div className="frequency-grid">{(Object.keys(PAY_PERIODS) as PayFrequency[]).map(item=><button key={item} className={frequency===item?"active":""} onClick={()=>setFrequency(item)} type="button">{item==="biweekly"?"Bi-weekly pay":item==="semimonthly"?"Semi-monthly":item[0].toUpperCase()+item.slice(1)}<small>{PAY_PERIODS[item]}× / year</small></button>)}</div></div>
@@ -161,7 +161,7 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
     </section>
 
     <section className="results" aria-live="polite">
-      <div className="section-heading light"><span className="step">2</span><div><h2>Estimated take-home pay</h2><p>2026 source-backed withholding methods.</p></div></div>
+      <div className="section-heading light"><span className="step">2</span><div><h2>Estimated take-home pay{headingSuffix}</h2><p>2026 source-backed withholding methods.</p></div></div>
       <div className="net-amount"><span>NET PAY · {frequency.toUpperCase()}</span><strong>{money.format(per(result.netAnnual))}</strong><small>{wholeMoney.format(result.netAnnual)} per year</small></div>
       <div className="bar"><span style={{width:`${netShare}%`}}/><span style={{width:`${taxShare}%`}}/><span style={{width:`${deductionShare}%`}}/></div><div className="legend"><span><i className="net-dot"/>Take-home {netShare.toFixed(0)}%</span><span><i className="tax-dot"/>Taxes {taxShare.toFixed(0)}%</span><span><i className="deduction-dot"/>Deductions {deductionShare.toFixed(0)}%</span></div>
       <div className="breakdown"><div><span>Gross pay</span><b>{money.format(per(result.grossAnnual))}</b></div><div><span>Federal income tax</span><b>−{money.format(per(result.federal))}</b></div><div><span>Social Security</span><b>−{money.format(per(result.socialSecurity))}</b></div><div><span>Medicare</span><b>−{money.format(per(result.medicare))}</b></div><div><span>{stateName} income tax</span><b>−{money.format(per(result.stateIncomeTax))}</b></div>{result.statePayrollPremiums>0&&<div><span>State payroll programs</span><b>−{money.format(per(result.statePayrollPremiums))}</b></div>}<div><span>Pre-tax deductions</span><b>−{money.format(per(result.preTaxAnnual))}</b></div></div>

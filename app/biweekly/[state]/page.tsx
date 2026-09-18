@@ -30,7 +30,7 @@ export async function generateMetadata(
     title: `${loc.name} Biweekly Paycheck Calculator 2026 — Take-Home Pay After Taxes`,
     description: `Calculate your ${loc.name} biweekly paycheck for 2026. See exact take-home pay at 9 salary levels after federal income tax, FICA, and ${taxPhrase}.`,
     alternates: { canonical },
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
     openGraph: {
       title: `${loc.name} Biweekly Paycheck Calculator 2026`,
       description: `${loc.name} biweekly net pay at 9 salary levels — 2026 federal and state withholding.`,

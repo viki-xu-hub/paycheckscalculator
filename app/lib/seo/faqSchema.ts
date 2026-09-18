@@ -64,28 +64,34 @@ export function salaryFaqs(salary: SalaryData): FaqItem[] {
 }
 
 export function hourlyFaqs(hourly: HourlyData): FaqItem[] {
-  const { rate, label, annualAt40h } = hourly;
-  const fmtAnnual = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(annualAt40h);
+  const { rate, annualAt40h, annualAt35h } = hourly;
+  const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+  const dollar = `$${rate}`;
+  const fmtAnnual = money.format(annualAt40h);
   return [
     {
-      q: `How much is ${label} an hour a year?`,
-      a: `At ${label}/hr working 40 hours per week, 52 weeks per year, your annual gross pay is ${fmtAnnual}. Your net annual take-home will be lower after taxes.`,
+      q: `${dollar} an hour is how much a year?`,
+      a: `${dollar} an hour is ${fmtAnnual} a year before taxes if you work 40 hours a week for 52 weeks (2,080 hours). At 35 hours a week it is ${money.format(annualAt35h)} a year. Your take-home pay will be lower after federal income tax, Social Security, Medicare and any state tax.`,
     },
     {
-      q: `What is the biweekly paycheck for ${label} an hour?`,
-      a: `At ${label}/hr for 80 hours per biweekly period, your gross biweekly pay is ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(rate * 80)}. After taxes, net pay will depend on your state and deductions.`,
+      q: `How much is ${dollar} an hour after taxes?`,
+      a: `On ${fmtAnnual} gross, a single filer with a standard W-4 keeps roughly 78%–85% depending on the state, because federal income tax, 6.2% Social Security and 1.45% Medicare come out of every check. The state table on this page shows the exact after-tax figure for all 38 supported states.`,
     },
     {
-      q: `How much tax is taken out of a ${label}/hr paycheck?`,
-      a: `Federal income tax, Social Security (6.2%), and Medicare (1.45%) are withheld from all U.S. paychecks. State income tax depends on where you work. Use the calculator above to estimate total withholding.`,
+      q: `What is the biweekly paycheck for ${dollar} an hour?`,
+      a: `At ${dollar} an hour for 80 hours per biweekly period, your gross biweekly pay is ${money.format(rate * 80)}. After taxes, net pay depends on your state and deductions — use the calculator above for your exact number.`,
     },
     {
-      q: `Is ${label} an hour a good wage?`,
-      a: `${label}/hr earns approximately ${fmtAnnual} per year at full-time hours. Whether this is a good wage depends on your location and cost of living. Use the state calculators to see take-home pay in different states.`,
+      q: `${dollar} an hour is how much a month?`,
+      a: `At 40 hours a week, ${dollar} an hour works out to about ${money.format(annualAt40h / 12)} a month in gross pay (${fmtAnnual} ÷ 12). Enter your details in the calculator for a monthly net pay estimate.`,
     },
     {
-      q: `What is the monthly take-home pay for ${label} an hour?`,
-      a: `At ${label}/hr working 40 hours/week, your gross monthly pay is approximately ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format((annualAt40h / 12))}. Enter your details in the calculator for a net pay estimate.`,
+      q: `How much tax is taken out of a ${dollar} an hour paycheck?`,
+      a: `Federal income tax (based on your W-4 and the 2026 IRS withholding tables), Social Security (6.2%) and Medicare (1.45%) are withheld from every U.S. paycheck. State income tax depends on where you work; nine states withhold none.`,
+    },
+    {
+      q: `Is ${dollar} an hour a good wage?`,
+      a: `${dollar} an hour is approximately ${fmtAnnual} a year at full-time hours. Whether that is a good wage depends on your location and cost of living — compare the take-home figures for different states on this page.`,
     },
   ];
 }

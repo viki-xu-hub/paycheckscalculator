@@ -29,8 +29,8 @@ export default function HourlyHubPage() {
         <div className="location-grid" style={{ marginTop: 40 }}>
           {hourlyRates.map(h => (
             <a key={h.slug} href={`/hourly/${h.slug}`}>
-              <b>{h.label} / hour</b>
-              <span>{fmt.format(h.annualAt40h)} / year gross (40 hrs/wk)</span>
+              <b>${h.rate} an hour is how much a year?</b>
+              <span>{fmt.format(h.annualAt40h)} a year gross (40 hrs/wk) →</span>
             </a>
           ))}
         </div>

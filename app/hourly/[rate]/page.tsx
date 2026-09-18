@@ -34,7 +34,7 @@ export async function generateMetadata(
     title: meta.title,
     description: meta.description,
     alternates: { canonical: meta.canonical },
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
     openGraph: {
       title: meta.title,
       description: meta.description,
@@ -62,6 +62,11 @@ export default async function HourlyCalculatorPage(
   const weeklyGross = h.rate * 40;
   const biweeklyGross = h.rate * 80;
   const monthlyGross = Math.round(h.annualAt40h / 12);
+  const dollar = `$${h.rate}`;
+  const idx = hourlyRates.findIndex(x => x.slug === h.slug);
+  const lower = idx > 0 ? hourlyRates[idx - 1] : null;
+  const higher = idx < hourlyRates.length - 1 ? hourlyRates[idx + 1] : null;
+  const chartSrc = `/images/hourly/${h.rate}-an-hour-is-how-much-a-year.svg`;
 
   const stateComparison = locations
     .map(loc => {
@@ -80,6 +85,9 @@ export default async function HourlyCalculatorPage(
       };
     })
     .sort((a, b) => b.netAnnual - a.netAnnual);
+  const bestState = stateComparison[0];
+  const worstState = stateComparison[stateComparison.length - 1];
+  const texas = stateComparison.find(s => s.abbr === "TX") ?? bestState;
 
   const softwareSchema = {
     "@context": "https://schema.org",
@@ -109,7 +117,8 @@ export default async function HourlyCalculatorPage(
     url: meta.canonical,
     dateModified: LAST_MODIFIED,
     datePublished: "2026-08-07",
-    about: `Hourly paycheck calculation for ${h.label}/hr earners in 2026.`,
+    about: `${dollar} an hour is how much a year: gross and after-tax pay for ${h.label} earners in 2026.`,
+    primaryImageOfPage: { "@type": "ImageObject", url: `${meta.canonical.replace(/\/hourly\/.*$/, "")}${chartSrc}`, width: 960, height: 420 },
   };
 
   return (
@@ -126,16 +135,17 @@ export default async function HourlyCalculatorPage(
         <h1>{meta.h1}</h1>
         <div className="hero-intro">
           <p>
-            Use our free calculator to estimate your take-home pay earning {h.label} an
-            hour. At 40 hours per week, {h.label}/hr equals{" "}
-            <strong>{fmt.format(h.annualAt40h)} per year</strong> in gross pay before taxes.
+            {dollar} an hour is how much a year? <strong>{fmt.format(h.annualAt40h)} before taxes</strong> at
+            40 hours a week for 52 weeks. That is about {fmt.format(monthlyGross)} a month,{" "}
+            {fmt.format(biweeklyGross)} every two weeks, or {fmt.format(weeklyGross)} a week in gross pay.
           </p>
           <p>
-            Enter your state, filing status, and deductions below to see your net paycheck
-            after federal income tax, Social Security, Medicare, and state taxes.
+            After taxes, {dollar} an hour is closer to {fmt.format(Math.round(texas.netAnnual))} a year in a
+            no-income-tax state like Texas and {fmt.format(Math.round(worstState.netAnnual))} in {worstState.name}.
+            Enter your state, filing status and deductions below to see your own net paycheck.
           </p>
         </div>
-        <PaycheckCalculator defaultState="TX" navigateOnStateChange />
+        <PaycheckCalculator defaultState="TX" navigateOnStateChange hourly defaultHourlyRate={h.rate} defaultOvertime={0} headingSuffix={` at ${dollar} an hour`} />
         <div className="trust-row">
           <span>2026 IRS Method</span>
           <span>All 50 States</span>
@@ -146,11 +156,27 @@ export default async function HourlyCalculatorPage(
       {/* Annual Breakdown */}
       <article className="long-seo">
         <p className="kicker">INCOME BREAKDOWN</p>
-        <h2>{h.label} an Hour — Annual, Monthly, and Biweekly Gross Pay</h2>
+        <h2>{dollar} an Hour Is How Much a Year, a Month, and Biweekly?</h2>
         <section>
+          <figure style={{ margin: "0 0 20px" }}>
+            <img
+              src={chartSrc}
+              alt={`${dollar} an hour is how much a year — ${fmt.format(h.annualAt40h)} a year, ${fmt.format(monthlyGross)} a month, ${fmt.format(biweeklyGross)} biweekly and ${fmt.format(weeklyGross)} a week before taxes (40 hours a week, 2026)`}
+              width={960}
+              height={420}
+              loading="lazy"
+              decoding="async"
+              style={{ width: "100%", height: "auto", borderRadius: 12, border: "1px solid #e0e7ef" }}
+            />
+            <figcaption style={{ color: "#8595a5", fontSize: 12, marginTop: 8 }}>
+              {dollar} an hour converted to yearly, monthly, biweekly, weekly and daily gross pay.
+            </figcaption>
+          </figure>
           <p>
-            Working full-time at {h.label}/hr, here is how your gross pay breaks down
-            across common pay schedules before any taxes or deductions:
+            The math behind &ldquo;{dollar}{" "}an hour is how much a year&rdquo; is simple: 40 hours a week
+            × 52 weeks = 2,080 working hours, and 2,080 × {dollar} = <strong>{fmt.format(h.annualAt40h)}</strong>.
+            If your schedule is 35 hours a week, {dollar} an hour is {fmt.format(h.annualAt35h)} a year instead.
+            Here is how that gross pay splits across common pay schedules before any taxes or deductions:
           </p>
           <ul className="checklist">
             <li><strong>Annual (40 hrs/week):</strong> {fmt.format(h.annualAt40h)}</li>
@@ -161,9 +187,11 @@ export default async function HourlyCalculatorPage(
             <li><strong>Daily (8 hrs):</strong> {fmt.format(h.rate * 8)}</li>
           </ul>
           <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14, marginTop: 16 }}>
-            These are gross amounts before taxes. Your actual take-home depends on your
-            state, filing status, and deductions. Use the calculator above to get a
-            state-specific net pay estimate.
+            These are gross amounts. Your actual take-home depends on your state, filing status
+            and deductions — the calculator above gives a state-specific net estimate, and the
+            table below shows {dollar} an hour after tax in every supported state.
+            {lower && (<> Earning a little less? See <a href={`/hourly/${lower.slug}`}>${lower.rate} an hour is how much a year</a>.</>)}
+            {higher && (<> Expecting a raise? See <a href={`/hourly/${higher.slug}`}>${higher.rate} an hour is how much a year</a>.</>)}
           </p>
         </section>
       </article>
@@ -171,11 +199,11 @@ export default async function HourlyCalculatorPage(
       {/* Tax Withholding + State Comparison */}
       <article className="long-seo">
         <p className="kicker">TAX WITHHOLDING</p>
-        <h2>Taxes on a {h.label}/hr Paycheck</h2>
+        <h2>What Taxes Come Out of a {dollar} an Hour Paycheck?</h2>
         <section>
           <p>
-            All U.S. employees earning {h.label}/hr have these federal taxes withheld
-            from each paycheck:
+            Knowing what {dollar} an hour adds up to per year is only half the picture — every U.S.
+            employee earning {h.label} has these taxes withheld from each paycheck:
           </p>
           <ul className="checklist">
             <li><strong>Federal income tax:</strong> Based on your W-4 elections and 2026 IRS withholding tables</li>
@@ -183,17 +211,26 @@ export default async function HourlyCalculatorPage(
             <li><strong>Medicare:</strong> 1.45% on all wages (0.9% additional tax above thresholds)</li>
             <li><strong>State income tax:</strong> Varies by state — 9 states have no wage income tax</li>
           </ul>
+          <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14, marginTop: 16 }}>
+            Federal withholding follows the percentage method in{" "}
+            <a href="https://www.irs.gov/publications/p15t" rel="noopener">IRS Publication 15-T</a>, and the
+            Social Security wage base is published each year by the{" "}
+            <a href="https://www.ssa.gov/oact/cola/cbb.html" rel="noopener">Social Security Administration</a>.
+            Our <a href="/methodology">methodology page</a> lists every table we use.
+          </p>
         </section>
       </article>
 
       {/* 38-State Comparison — real calculated numbers */}
       <article className="long-seo">
         <p className="kicker">TAKE-HOME PAY BY STATE</p>
-        <h2>{h.label} an Hour After Tax — All 38 States Compared (2026)</h2>
+        <h2>How Much Is {dollar} an Hour After Taxes in Each State? (2026)</h2>
         <section>
           <p>
-            Working full-time at {h.label}/hr ({fmt.format(h.annualAt40h)}/yr gross), here is your
-            actual take-home pay in every supported state for 2026. Single filer, standard W-4,
+            Working full-time at {h.label} ({fmt.format(h.annualAt40h)} a year gross), here is what{" "}
+            {dollar} an hour is worth after tax in every supported state for 2026 — from{" "}
+            {fmt.format(Math.round(bestState.netAnnual))} in {bestState.name} down to{" "}
+            {fmt.format(Math.round(worstState.netAnnual))} in {worstState.name}. Single filer, standard W-4,
             biweekly pay, 40 hrs/week. Sorted highest to lowest take-home pay.
           </p>
           <div style={{ overflowX: "auto", marginTop: 20 }}>
@@ -234,7 +271,7 @@ export default async function HourlyCalculatorPage(
       {/* FAQ */}
       <div className="faq">
         <p className="kicker" style={{ textAlign: "center" }}>FREQUENTLY ASKED QUESTIONS</p>
-        <h2>{h.label} an Hour — Paycheck FAQ</h2>
+        <h2>{dollar} an Hour — Frequently Asked Questions</h2>
         {faqs.map((f, i) => (
           <details key={i}>
             <summary>{f.q}<span>+</span></summary>
@@ -246,7 +283,7 @@ export default async function HourlyCalculatorPage(
       {/* Internal Links */}
       <article className="long-seo">
         <p className="kicker">RELATED CALCULATORS</p>
-        <h2>More Paycheck Calculators</h2>
+        <h2>How Much a Year Is {lower ? `$${lower.rate}` : "$10"} or {higher ? `$${higher.rate}` : "$150"} an Hour — and Other Paycheck Calculators</h2>
         <section>
           <div className="tool-links">
             {relatedLinks.map(link => (
@@ -262,7 +299,7 @@ export default async function HourlyCalculatorPage(
       {/* Disclaimer */}
       <div className="seo-disclaimer" style={{ maxWidth: 920, margin: "0 auto 40px" }}>
         <p>
-          <strong>Disclaimer:</strong> This hourly paycheck calculator provides estimates
+          <strong>Disclaimer:</strong> This {dollar} an hour paycheck calculator provides estimates
           for informational purposes only. Actual paycheck amounts may vary based on
           employer payroll systems, overtime rules, and individual tax circumstances.
         </p>

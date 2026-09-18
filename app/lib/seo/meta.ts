@@ -27,10 +27,12 @@ export function salaryMeta(salary: SalaryData): PageMeta {
 
 export function hourlyMeta(hourly: HourlyData): PageMeta {
   const annualFmt = new Intl.NumberFormat("en-US").format(hourly.annualAt40h);
+  const monthlyFmt = new Intl.NumberFormat("en-US").format(Math.round(hourly.annualAt40h / 12));
+  const dollar = `$${hourly.rate}`;
   return {
-    title: `${hourly.label} an Hour Paycheck Calculator ${YEAR} — Annual & Take-Home Pay`,
-    description: `Earning ${hourly.label} an hour? Use our ${YEAR} calculator to find your take-home pay. At 40 hours/week, ${hourly.label}/hr equals $${annualFmt}/year before taxes.`,
-    h1: `${hourly.label} an Hour — Paycheck Calculator ${YEAR}`,
+    title: `${dollar} an Hour Is How Much a Year — ${YEAR} After-Tax Pay`,
+    description: `${dollar} an hour is how much a year? $${annualFmt} at 40 hours a week, about $${monthlyFmt} a month. See ${YEAR} take-home pay after federal, FICA and state tax in 38 states.`,
+    h1: `${dollar} an Hour Is How Much a Year — ${YEAR} Paycheck Calculator`,
     canonical: `${SITE}/hourly/${hourly.slug}`,
   };
 }

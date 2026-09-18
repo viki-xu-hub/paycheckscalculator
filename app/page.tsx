@@ -171,6 +171,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hourly wage → yearly salary */}
+      <section className="seo-section">
+        <p className="kicker">HOURLY TO YEARLY</p>
+        <h2>$X an Hour Is How Much a Year?</h2>
+        <p>Paid by the hour? Pick your rate to see what it adds up to per year, per month and per paycheck — before and after taxes in all 38 supported states.</p>
+        <div className="tool-links">
+          <a href="/hourly/15-paycheck-calculator"><b>$15 an Hour Is How Much a Year?</b><span>$31,200 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/17-paycheck-calculator"><b>$17 an Hour Is How Much a Year?</b><span>$35,360 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/20-paycheck-calculator"><b>$20 an Hour Is How Much a Year?</b><span>$41,600 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/22-paycheck-calculator"><b>$22 an Hour Is How Much a Year?</b><span>$45,760 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/25-paycheck-calculator"><b>$25 an Hour Is How Much a Year?</b><span>$52,000 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/30-paycheck-calculator"><b>$30 an Hour Is How Much a Year?</b><span>$62,400 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/35-paycheck-calculator"><b>$35 an Hour Is How Much a Year?</b><span>$72,800 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/40-paycheck-calculator"><b>$40 an Hour Is How Much a Year?</b><span>$83,200 a year at 40 hrs/week →</span></a>
+          <a href="/hourly/50-paycheck-calculator"><b>$50 an Hour Is How Much a Year?</b><span>$104,000 a year at 40 hrs/week →</span></a>
+          <a href="/hourly"><b>All Hourly Rates ($10–$150)</b><span>Browse every hourly-to-yearly page →</span></a>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="faq">
         <p className="kicker">COMMON QUESTIONS</p>

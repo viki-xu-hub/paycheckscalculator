@@ -26,8 +26,8 @@ export function stateBreadcrumb(stateName: string, stateSlug: string) {
 export function hourlyBreadcrumb(rateLabel: string, rateSlug: string) {
   return buildBreadcrumbSchema([
     { name: "Home", href: "/" },
-    { name: "Hourly Paycheck Calculator", href: "/hourly-paycheck-calculator" },
-    { name: `${rateLabel}/hr Paycheck Calculator`, href: `/hourly/${rateSlug}` },
+    { name: "Hourly Rates", href: "/hourly" },
+    { name: `${rateLabel} an Hour Is How Much a Year`, href: `/hourly/${rateSlug}` },
   ]);
 }
 
