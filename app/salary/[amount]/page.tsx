@@ -10,7 +10,7 @@ import type { SalaryData } from "../../lib/seo/types";
 import salaryRaw from "../../data/salary.json";
 import { calculatePaycheck } from "../../lib/payroll";
 import { locations } from "../../lib/locations";
-import { occupationsNearSalary, occupationsSummary, salaryPositionText, raiseExample, salaryBucketFaqs, formatEmployment, OES } from "../../lib/seo/uniqueContent";
+import { occupationsNearSalary, occupationsSummary, basisLabel, wageFor, salaryPositionText, raiseExample, salaryBucketFaqs, formatEmployment, OES } from "../../lib/seo/uniqueContent";
 
 const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }];
 const LAST_MODIFIED = "2026-08-07";
@@ -74,6 +74,7 @@ export default async function SalaryCalculatorPage(
   const higher = idx < salaries.length - 1 ? salaries[idx + 1] : null;
   const jobs = occupationsNearSalary(s.amount, [lower?.amount, higher?.amount].filter((x): x is number => typeof x === "number"));
   const jobsSummary = occupationsSummary(jobs, "year");
+  const jobBasis = jobs.basis;
   const chartSrc = `/images/salary/${s.amount}-a-year-is-how-much-an-hour.svg`;
 
   const stateComparison = locations
@@ -210,24 +211,30 @@ export default async function SalaryCalculatorPage(
         <h2>What Jobs Pay About {s.label} a Year?</h2>
         <section>
           <p>
-            These occupations have the national median salaries closest to {s.label} a year, according to the
-            BLS Occupational Employment and Wage Statistics survey ({OES.release}). The median is the
-            midpoint — half of workers in the job earn more, half earn less.
+            These occupations have a national {basisLabel(jobBasis)} salary closest to {s.label} a year,
+            according to the BLS Occupational Employment and Wage Statistics survey ({OES.release}).
+            {jobBasis === "median"
+              ? "The median is the midpoint — half of workers in the job earn more, half earn less."
+              : jobBasis === "p25"
+              ? `Few large occupations have a median this low, so the table shows jobs where the bottom quarter of workers — typically new hires — earn about ${s.label} a year; the median column shows what the job pays once established.`
+              : `Few large occupations have a median this high, so the table shows jobs where the top quarter of workers earn about ${s.label} a year; the median column shows the typical pay.`}
           </p>
           <div style={{ overflowX: "auto", marginTop: 16 }}>
             <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
               <thead>
                 <tr style={{ borderBottom: "2px solid #e0e7ef" }}>
                   <th style={{ textAlign: "left", padding: "8px 10px", fontWeight: 600 }}>Occupation</th>
+                  {jobBasis !== "median" && <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>{jobBasis === "p25" ? "Entry-level" : "Experienced"} annual</th>}
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Median annual</th>
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Median hourly</th>
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>U.S. jobs</th>
                 </tr>
               </thead>
               <tbody>
-                {jobs.map((j, i) => (
+                {jobs.jobs.map((j, i) => (
                   <tr key={j.code} style={{ borderBottom: "1px solid #e0e7ef", background: i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)" }}>
                     <td style={{ padding: "8px 10px" }}>{j.title}</td>
+                    {jobBasis !== "median" && <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>{fmt.format(wageFor(j, jobBasis, "annual"))}</td>}
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(j.medianAnnual)}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>${j.medianHourly.toFixed(2)}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{formatEmployment(j.employment)}</td>

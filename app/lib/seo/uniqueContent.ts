@@ -10,10 +10,18 @@ import { calculatePaycheck } from "../payroll";
  * real withholding engine.
  */
 
-export type Occupation = { code: string; title: string; employment: number; medianHourly: number; medianAnnual: number };
+export type Occupation = {
+  code: string; title: string; employment: number;
+  medianHourly: number; medianAnnual: number;
+  p25Hourly: number; p75Hourly: number; p25Annual: number; p75Annual: number;
+};
 
-const occupations: Occupation[] = (occupationsRaw.rows as [string, string, number, number, number][])
-  .map(([code, title, employment, medianHourly, medianAnnual]) => ({ code, title, employment, medianHourly, medianAnnual }));
+const occupations: Occupation[] = (occupationsRaw.rows as [string, string, number, number, number, number, number, number, number][])
+  .map(([code, title, employment, medianHourly, medianAnnual, p25Hourly, p75Hourly, p25Annual, p75Annual]) =>
+    ({ code, title, employment, medianHourly, medianAnnual, p25Hourly, p75Hourly, p25Annual, p75Annual }));
+
+export type WageBasis = "median" | "p25" | "p75";
+export type JobMatch = { jobs: Occupation[]; basis: WageBasis };
 
 export const OES = {
   release: occupationsRaw.release,            // "May 2025"
@@ -33,43 +41,68 @@ const money2 = new Intl.NumberFormat("en-US", { style: "currency", currency: "US
 const int = new Intl.NumberFormat("en-US");
 
 /**
- * Occupations whose national median wage sits closest to the page's wage.
+ * Occupations whose wage sits closest to the page's wage.
+ *
  * `halfGap` is half the distance to the neighbouring page on the same axis, so
- * adjacent pages get (mostly) disjoint lists; the band only widens when the
- * nearest cell holds fewer than `min` occupations.
+ * adjacent pages get (mostly) disjoint lists. We look at the median first; if
+ * too few occupations have a median that close (the bottom and top of the
+ * scale), we match on the 25th percentile ("entry-level pay in these jobs") or
+ * the 75th percentile ("experienced pay in these jobs") instead, and tell the
+ * reader which one we used.
  */
-function nearest(key: "medianHourly" | "medianAnnual", value: number, halfGap: number, count: number, min = 5): Occupation[] {
-  let band = Math.max(halfGap, key === "medianHourly" ? 0.25 : 250);
-  for (let i = 0; i < 6; i++) {
-    const hits = occupations.filter(o => Math.abs(o[key] - value) <= band);
-    if (hits.length >= min || (i === 5 && hits.length)) {
-      return hits.sort((a, b) => Math.abs(a[key] - value) - Math.abs(b[key] - value) || b.employment - a.employment).slice(0, count);
+function within(key: keyof Occupation, value: number, band: number) {
+  return occupations.filter(o => Math.abs((o[key] as number) - value) <= band)
+    .sort((a, b) => Math.abs((a[key] as number) - value) - Math.abs((b[key] as number) - value) || b.employment - a.employment);
+}
+
+function match(axis: "hourly" | "annual", value: number, halfGap: number, count: number, min = 5): JobMatch {
+  const floor = axis === "hourly" ? 0.25 : 250;
+  const keys: [WageBasis, keyof Occupation][] = axis === "hourly"
+    ? [["median", "medianHourly"], ["p25", "p25Hourly"], ["p75", "p75Hourly"]]
+    : [["median", "medianAnnual"], ["p25", "p25Annual"], ["p75", "p75Annual"]];
+  // Try each basis with a modest widening; prefer the median whenever it can fill the list.
+  for (const [basis, key] of keys) {
+    let band = Math.max(halfGap, floor);
+    for (let i = 0; i < 3; i++) {
+      const hits = within(key, value, band);
+      if (hits.length >= min) return { jobs: hits.slice(0, count), basis };
+      band *= 1.5;
     }
-    band *= 1.5;
   }
-  // Nothing within range (e.g. $10/hr sits below every tracked occupation): fall back to the nearest ones.
-  return [...occupations].sort((a, b) => Math.abs(a[key] - value) - Math.abs(b[key] - value) || b.employment - a.employment).slice(0, count);
+  // Still thin: take whatever is nearest on the median, however far.
+  return { jobs: within("medianHourly" === keys[0][1] ? "medianHourly" : "medianAnnual", value, Number.POSITIVE_INFINITY).slice(0, count), basis: "median" };
 }
 
-export function occupationsNearHourly(rate: number, neighbours: number[] = [], count = 8): Occupation[] {
+export function occupationsNearHourly(rate: number, neighbours: number[] = [], count = 8): JobMatch {
   const gaps = neighbours.map(n => Math.abs(n - rate) / 2).filter(g => g > 0);
-  return nearest("medianHourly", rate, gaps.length ? Math.min(...gaps) : 1, count);
+  return match("hourly", rate, gaps.length ? Math.min(...gaps) : 1, count);
 }
 
-export function occupationsNearSalary(amount: number, neighbours: number[] = [], count = 8): Occupation[] {
+export function occupationsNearSalary(amount: number, neighbours: number[] = [], count = 8): JobMatch {
   const gaps = neighbours.map(n => Math.abs(n - amount) / 2).filter(g => g > 0);
-  return nearest("medianAnnual", amount, gaps.length ? Math.min(...gaps) : 1500, count);
+  return match("annual", amount, gaps.length ? Math.min(...gaps) : 1500, count);
+}
+
+export function basisLabel(basis: WageBasis): string {
+  return basis === "median" ? "median" : basis === "p25" ? "25th-percentile (entry-level)" : "75th-percentile (experienced)";
+}
+
+export function wageFor(o: Occupation, basis: WageBasis, axis: "hourly" | "annual"): number {
+  if (axis === "hourly") return basis === "median" ? o.medianHourly : basis === "p25" ? o.p25Hourly : o.p75Hourly;
+  return basis === "median" ? o.medianAnnual : basis === "p25" ? o.p25Annual : o.p75Annual;
 }
 
 /** One sentence built from the page's own occupation list, so it differs wherever the list does. */
-export function occupationsSummary(jobs: Occupation[], unit: "hour" | "year"): string {
+export function occupationsSummary(m: JobMatch, unit: "hour" | "year"): string {
+  const { jobs, basis } = m;
   if (!jobs.length) return "";
+  const axis = unit === "hour" ? "hourly" : "annual";
   const biggest = [...jobs].sort((a, b) => b.employment - a.employment)[0];
-  const lo = Math.min(...jobs.map(j => unit === "hour" ? j.medianHourly : j.medianAnnual));
-  const hi = Math.max(...jobs.map(j => unit === "hour" ? j.medianHourly : j.medianAnnual));
+  const vals = jobs.map(j => wageFor(j, basis, axis));
   const f = (n: number) => unit === "hour" ? money2.format(n) : money0.format(n);
   const total = jobs.reduce((a, j) => a + j.employment, 0);
-  return `The largest of these is ${biggest.title} — about ${formatEmployment(biggest.employment)} jobs nationwide with a median of ${f(unit === "hour" ? biggest.medianHourly : biggest.medianAnnual)} an ${unit} — and together the ${jobs.length} occupations listed employ roughly ${formatEmployment(total)} people at medians between ${f(lo)} and ${f(hi)}.`;
+  const what = basis === "median" ? "median" : basis === "p25" ? "entry-level (25th-percentile)" : "experienced (75th-percentile)";
+  return `The largest of these is ${biggest.title} — about ${formatEmployment(biggest.employment)} jobs nationwide with a ${what} wage of ${f(wageFor(biggest, basis, axis))} a${unit === "hour" ? "n hour" : " year"} — and together the ${jobs.length} occupations listed employ roughly ${formatEmployment(total)} people, with ${what} pay between ${f(Math.min(...vals))} and ${f(Math.max(...vals))}.`;
 }
 
 const TOTAL_EMPLOYMENT = occupations.reduce((a, o) => a + o.employment, 0);
