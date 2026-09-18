@@ -10,6 +10,7 @@ import type { HourlyData } from "../../lib/seo/types";
 import hourlyRaw from "../../data/hourly-rates.json";
 import { calculatePaycheck } from "../../lib/payroll";
 import { locations } from "../../lib/locations";
+import { occupationsNearHourly, occupationsSummary, hourlyPositionText, overtimeExample, hourlyBucketFaqs, formatEmployment, OES } from "../../lib/seo/uniqueContent";
 
 const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }];
 const LAST_MODIFIED = "2026-08-07";
@@ -55,7 +56,9 @@ export default async function HourlyCalculatorPage(
   if (!h) notFound();
 
   const meta = hourlyMeta(h);
-  const faqs = hourlyFaqs(h);
+  const faqs = [...hourlyFaqs(h), ...hourlyBucketFaqs(h.rate)];
+  const position = hourlyPositionText(h.rate);
+  const ot = overtimeExample(h.rate);
   const relatedLinks = hourlyPageLinks(h);
   const breadcrumbSchema = hourlyBreadcrumb(h.label, h.slug);
 
@@ -66,6 +69,8 @@ export default async function HourlyCalculatorPage(
   const idx = hourlyRates.findIndex(x => x.slug === h.slug);
   const lower = idx > 0 ? hourlyRates[idx - 1] : null;
   const higher = idx < hourlyRates.length - 1 ? hourlyRates[idx + 1] : null;
+  const jobs = occupationsNearHourly(h.rate, [lower?.rate, higher?.rate].filter((x): x is number => typeof x === "number"));
+  const jobsSummary = occupationsSummary(jobs, "hour");
   const chartSrc = `/images/hourly/${h.rate}-an-hour-is-how-much-a-year.svg`;
 
   const stateComparison = locations
@@ -190,33 +195,76 @@ export default async function HourlyCalculatorPage(
             These are gross amounts. Your actual take-home depends on your state, filing status
             and deductions — the calculator above gives a state-specific net estimate, and the
             table below shows {dollar} an hour after tax in every supported state.
-            {lower && (<> Earning a little less? See <a href={`/hourly/${lower.slug}`}>${lower.rate} an hour is how much a year</a>.</>)}
-            {higher && (<> Expecting a raise? See <a href={`/hourly/${higher.slug}`}>${higher.rate} an hour is how much a year</a>.</>)}
+            {lower && (<> Earning a little less? <a href={`/hourly/${lower.slug}`}>${lower.rate} an hour is how much a year</a> — {fmt.format((h.rate - lower.rate) * 2080)} less than {dollar}.</>)}
+            {higher && (<> Expecting a raise? <a href={`/hourly/${higher.slug}`}>${higher.rate} an hour is how much a year</a> — {fmt.format((higher.rate - h.rate) * 2080)} more, or {fmt.format((higher.rate - h.rate) * 80)} per biweekly check.</>)}
           </p>
         </section>
       </article>
 
-      {/* Tax Withholding + State Comparison */}
+      {/* Jobs near this wage + where it sits */}
       <article className="long-seo">
-        <p className="kicker">TAX WITHHOLDING</p>
-        <h2>What Taxes Come Out of a {dollar} an Hour Paycheck?</h2>
+        <p className="kicker">JOBS AT THIS WAGE</p>
+        <h2>What Jobs Pay About {dollar} an Hour?</h2>
         <section>
           <p>
-            Knowing what {dollar} an hour adds up to per year is only half the picture — every U.S.
-            employee earning {h.label} has these taxes withheld from each paycheck:
+            These occupations have the national median wages closest to {dollar} an hour,
+            according to the BLS Occupational Employment and Wage Statistics survey ({OES.release}).
+            The median is the midpoint — half of workers in the job earn more, half earn less.
           </p>
-          <ul className="checklist">
-            <li><strong>Federal income tax:</strong> Based on your W-4 elections and 2026 IRS withholding tables</li>
-            <li><strong>Social Security:</strong> 6.2% on wages up to the annual wage base</li>
-            <li><strong>Medicare:</strong> 1.45% on all wages (0.9% additional tax above thresholds)</li>
-            <li><strong>State income tax:</strong> Varies by state — 9 states have no wage income tax</li>
-          </ul>
-          <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14, marginTop: 16 }}>
-            Federal withholding follows the percentage method in{" "}
-            <a href="https://www.irs.gov/publications/p15t" rel="noopener">IRS Publication 15-T</a>, and the
-            Social Security wage base is published each year by the{" "}
-            <a href="https://www.ssa.gov/oact/cola/cbb.html" rel="noopener">Social Security Administration</a>.
-            Our <a href="/methodology">methodology page</a> lists every table we use.
+          <div style={{ overflowX: "auto", marginTop: 16 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
+              <thead>
+                <tr style={{ borderBottom: "2px solid #e0e7ef" }}>
+                  <th style={{ textAlign: "left", padding: "8px 10px", fontWeight: 600 }}>Occupation</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Median hourly</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Median annual</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>U.S. jobs</th>
+                </tr>
+              </thead>
+              <tbody>
+                {jobs.map((j, i) => (
+                  <tr key={j.code} style={{ borderBottom: "1px solid #e0e7ef", background: i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)" }}>
+                    <td style={{ padding: "8px 10px" }}>{j.title}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>${j.medianHourly.toFixed(2)}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(j.medianAnnual)}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{formatEmployment(j.employment)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ color: "#8595a5", fontSize: 12, marginTop: 10 }}>
+            Source: <a href={OES.sourceUrl} rel="noopener">BLS OEWS national estimates, {OES.release}</a>. Annual figures assume 2,080 hours.
+          </p>
+          <p>{jobsSummary}</p>
+        </section>
+        <section>
+          <h3>{position.heading}</h3>
+          <p>{position.body}</p>
+        </section>
+      </article>
+
+      {/* Overtime worked example */}
+      <article className="long-seo">
+        <p className="kicker">OVERTIME</p>
+        <h2>Overtime at {dollar} an Hour: What 5 Extra Hours a Week Is Worth</h2>
+        <section>
+          <p>
+            Non-exempt hourly employees earn time-and-a-half after 40 hours in a week under the FLSA, so
+            overtime at {dollar} an hour pays <strong>{ot.otRate}</strong> an hour (double time, where
+            it applies, is {ot.doubleRate}). Working {ot.otHours} overtime hours every week adds{" "}
+            <strong>{ot.extraGross}</strong> to your annual gross — {ot.extraBiweekly} per biweekly check.
+          </p>
+          <p>
+            Overtime is taxed like any other wage, not at a special rate, but because it stacks on top of
+            your base pay some of it is withheld at your highest federal bracket. Run through the 2026
+            withholding tables for a single filer in a no-income-tax state, those {ot.otHours} hours a week
+            net about <strong>{ot.extraNet}</strong> a year ({ot.extraNetBiweekly} per check), so you keep
+            roughly {ot.keepRate}% of the overtime you earn. Federal withholding follows{" "}
+            <a href="https://www.irs.gov/publications/p15t" rel="noopener">IRS Publication 15-T</a>; Social
+            Security (6.2%, up to the{" "}
+            <a href="https://www.ssa.gov/oact/cola/cbb.html" rel="noopener">$184,500 wage base</a>) and
+            Medicare (1.45%) apply to every dollar. Our <a href="/methodology">methodology page</a> lists the tables.
           </p>
         </section>
       </article>
@@ -299,9 +347,8 @@ export default async function HourlyCalculatorPage(
       {/* Disclaimer */}
       <div className="seo-disclaimer" style={{ maxWidth: 920, margin: "0 auto 40px" }}>
         <p>
-          <strong>Disclaimer:</strong> This {dollar} an hour paycheck calculator provides estimates
-          for informational purposes only. Actual paycheck amounts may vary based on
-          employer payroll systems, overtime rules, and individual tax circumstances.
+          <strong>Disclaimer:</strong> Estimates only — your employer&rsquo;s payroll system, W-4 elections
+          and local taxes will change the exact figures.
         </p>
       </div>
 

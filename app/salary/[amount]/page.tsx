@@ -10,6 +10,7 @@ import type { SalaryData } from "../../lib/seo/types";
 import salaryRaw from "../../data/salary.json";
 import { calculatePaycheck } from "../../lib/payroll";
 import { locations } from "../../lib/locations";
+import { occupationsNearSalary, occupationsSummary, salaryPositionText, raiseExample, salaryBucketFaqs, formatEmployment, OES } from "../../lib/seo/uniqueContent";
 
 const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }];
 const LAST_MODIFIED = "2026-08-07";
@@ -55,7 +56,9 @@ export default async function SalaryCalculatorPage(
   if (!s) notFound();
 
   const meta = salaryMeta(s);
-  const faqs = salaryFaqs(s);
+  const faqs = [...salaryFaqs(s), ...salaryBucketFaqs(s.amount)];
+  const position = salaryPositionText(s.amount);
+  const raise = raiseExample(s.amount);
   const relatedLinks = salaryPageLinks(s);
   const breadcrumbSchema = salaryBreadcrumb(s.label, s.slug);
 
@@ -69,6 +72,8 @@ export default async function SalaryCalculatorPage(
   const idx = salaries.findIndex(x => x.slug === s.slug);
   const lower = idx > 0 ? salaries[idx - 1] : null;
   const higher = idx < salaries.length - 1 ? salaries[idx + 1] : null;
+  const jobs = occupationsNearSalary(s.amount, [lower?.amount, higher?.amount].filter((x): x is number => typeof x === "number"));
+  const jobsSummary = occupationsSummary(jobs, "year");
   const chartSrc = `/images/salary/${s.amount}-a-year-is-how-much-an-hour.svg`;
 
   const stateComparison = locations
@@ -193,33 +198,75 @@ export default async function SalaryCalculatorPage(
             These are gross amounts. Your take-home depends on your state, filing status and
             deductions — the calculator above gives a state-specific net estimate, and the table
             below shows {s.label} a year after tax in every supported state.
-            {lower && (<> Earning a little less? See <a href={`/salary/${lower.slug}`}>{lower.label} a year is how much an hour</a>.</>)}
-            {higher && (<> Expecting a raise? See <a href={`/salary/${higher.slug}`}>{higher.label} a year is how much an hour</a>.</>)}
+            {lower && (<> Earning a little less? <a href={`/salary/${lower.slug}`}>{lower.label} a year is how much an hour</a> — ${((s.amount - lower.amount) / 2080).toFixed(2)} an hour less than {s.label}.</>)}
+            {higher && (<> Expecting a raise? <a href={`/salary/${higher.slug}`}>{higher.label} a year is how much an hour</a> — ${((higher.amount - s.amount) / 2080).toFixed(2)} an hour more, or {fmt.format(Math.round((higher.amount - s.amount) / 26))} per biweekly check.</>)}
           </p>
         </section>
       </article>
 
-      {/* Tax Explanation */}
+      {/* Jobs near this salary + where it sits */}
       <article className="long-seo">
-        <p className="kicker">FEDERAL TAX WITHHOLDING</p>
-        <h2>What Taxes Come Out of a {s.label} Salary?</h2>
+        <p className="kicker">JOBS AT THIS SALARY</p>
+        <h2>What Jobs Pay About {s.label} a Year?</h2>
         <section>
           <p>
-            Knowing what {s.label} a year works out to per hour is only half the picture — a {s.label} salary
-            is subject to the following payroll taxes in 2026:
+            These occupations have the national median salaries closest to {s.label} a year, according to the
+            BLS Occupational Employment and Wage Statistics survey ({OES.release}). The median is the
+            midpoint — half of workers in the job earn more, half earn less.
           </p>
-          <ul className="checklist">
-            <li><strong>Federal income tax:</strong> Marginal rate based on your W-4 elections and 2026 tax brackets</li>
-            <li><strong>Social Security:</strong> 6.2% on wages up to the annual wage base ($184,500 in 2026)</li>
-            <li><strong>Medicare:</strong> 1.45% on all wages (plus 0.9% Additional Medicare Tax above $200,000 single / $250,000 MFJ)</li>
-            <li><strong>State income tax:</strong> Varies by state — use the calculator above to enter your state</li>
-          </ul>
-          <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14, marginTop: 16 }}>
-            Federal withholding follows the percentage method in{" "}
-            <a href="https://www.irs.gov/publications/p15t" rel="noopener">IRS Publication 15-T</a>, and the
-            Social Security wage base is published each year by the{" "}
-            <a href="https://www.ssa.gov/oact/cola/cbb.html" rel="noopener">Social Security Administration</a>.
-            Our <a href="/methodology">methodology page</a> lists every table we use.
+          <div style={{ overflowX: "auto", marginTop: 16 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
+              <thead>
+                <tr style={{ borderBottom: "2px solid #e0e7ef" }}>
+                  <th style={{ textAlign: "left", padding: "8px 10px", fontWeight: 600 }}>Occupation</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Median annual</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Median hourly</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>U.S. jobs</th>
+                </tr>
+              </thead>
+              <tbody>
+                {jobs.map((j, i) => (
+                  <tr key={j.code} style={{ borderBottom: "1px solid #e0e7ef", background: i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)" }}>
+                    <td style={{ padding: "8px 10px" }}>{j.title}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(j.medianAnnual)}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>${j.medianHourly.toFixed(2)}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{formatEmployment(j.employment)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style={{ color: "#8595a5", fontSize: 12, marginTop: 10 }}>
+            Source: <a href={OES.sourceUrl} rel="noopener">BLS OEWS national estimates, {OES.release}</a>. Annual figures assume 2,080 hours.
+          </p>
+          <p>{jobsSummary}</p>
+        </section>
+        <section>
+          <h3>{position.heading}</h3>
+          <p>{position.body}</p>
+        </section>
+      </article>
+
+      {/* Raise worked example */}
+      <article className="long-seo">
+        <p className="kicker">MARGINAL TAX</p>
+        <h2>A Raise on {s.label} a Year: How Much of It You Actually Keep</h2>
+        <section>
+          <p>
+            On {s.label} a year a single filer with a standard W-4 pays about <strong>{raise.federalOnBase}</strong> in
+            federal income tax and <strong>{raise.ficaOnBase}</strong> in Social Security and Medicare before any
+            state tax. Because the U.S. system is marginal, a raise is taxed at your <em>top</em> rate, not your
+            average rate — so the next dollar is worth less than the average dollar you already earn.
+          </p>
+          <p>
+            Run through the 2026 withholding tables in a no-income-tax state, a $1,000 raise on {s.label} adds
+            about <strong>{raise.keep1k}</strong> to annual take-home ({raise.keep1kPct}%), and a $5,000 raise adds
+            roughly <strong>{raise.keep5k}</strong> — {raise.keep5kBiweekly} per biweekly paycheck. Add your state&rsquo;s
+            income tax on top of that. Federal withholding follows{" "}
+            <a href="https://www.irs.gov/publications/p15t" rel="noopener">IRS Publication 15-T</a>; Social Security
+            (6.2%) applies up to the{" "}
+            <a href="https://www.ssa.gov/oact/cola/cbb.html" rel="noopener">$184,500 wage base</a> and Medicare
+            (1.45%) to every dollar. Our <a href="/methodology">methodology page</a> lists the tables.
           </p>
         </section>
       </article>
@@ -301,10 +348,8 @@ export default async function SalaryCalculatorPage(
       {/* Disclaimer */}
       <div className="seo-disclaimer" style={{ maxWidth: 920, margin: "0 auto 40px" }}>
         <p>
-          <strong>Disclaimer:</strong> This {s.label} a year paycheck calculator provides estimates
-          for informational purposes only. Actual take-home amounts may vary based on
-          employer payroll systems, benefit elections, and individual tax circumstances.
-          For specific tax advice, consult a qualified tax professional.
+          <strong>Disclaimer:</strong> Estimates only — your employer&rsquo;s payroll system, W-4 elections
+          and local taxes will change the exact figures.
         </p>
       </div>
 
