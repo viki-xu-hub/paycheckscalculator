@@ -78,6 +78,12 @@ export function SiteFooter() {
         <span>Paycheck <b>Atlas</b></span>
       </a>
       <p>Independent, source-backed paycheck estimates.</p>
+      <div className="partner-zone">
+        <span className="partner-zone-label">Partner Zone</span>
+        <a className="partner-badge" target="_blank" href="https://beamtools.com/tool/paycheckscalculator" rel="noopener noreferrer">
+          <img src="https://beamtools.com/assets/images/badge.png" alt="Beam Tools" height="54" loading="lazy" />
+        </a>
+      </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
       </p>
