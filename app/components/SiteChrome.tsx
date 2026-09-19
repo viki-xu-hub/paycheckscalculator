@@ -83,6 +83,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://beamtools.com/tool/paycheckscalculator" rel="noopener noreferrer">
           <img src="https://beamtools.com/assets/images/badge.png" alt="Beam Tools" height="54" loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://devhub.best/projects/paycheck-atlas?utm_source=badge" rel="noopener noreferrer">
+          <img src="https://r2.direasy-multi-tenant.focusapps.app/uploads/616d0b1a-3979-4b8c-94d1-b4f1fedd3ead/1783239702078/53yqmim54zv/featured-on-light.svg" alt="Featured on DevHub" style={{height:"44px",width:"auto"}} loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
