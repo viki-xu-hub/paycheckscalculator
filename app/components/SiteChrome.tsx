@@ -89,6 +89,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://fastlaunch.io" rel="noopener noreferrer">
           <img src="https://fastlaunch.io/images/badges/featured-light.svg" alt="Featured on FastLaunch" width="221" height="60" loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://firsto.co/projects/paychecks-calculator" title="Discover Paychecks Calculator on Firsto" rel="noopener noreferrer">
+          <img src="https://firsto.co/images/badges/find-us-on-firsto.svg" alt="Discover Paychecks Calculator on Firsto" style={{width:"111px",height:"42px"}} loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
