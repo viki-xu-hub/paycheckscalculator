@@ -95,6 +95,9 @@ export function SiteFooter() {
         <a className="partner-badge" href="https://indielineup.com/product/paycheck-calculator?ref=badge" rel="dofollow">
           <img src="https://indielineup.com/badge/paycheck-calculator.svg" alt="Featured on IndieLineup" width="160" height="44" loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://huzzler.so/products/LmCHuJ3iJ0/paychecks-calculator?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing" rel="noopener noreferrer">
+          <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Huzzler Embed Badge" width="159" height="55" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
