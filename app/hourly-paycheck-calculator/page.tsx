@@ -232,6 +232,10 @@ export default function HourlyPaycheck() {
             <p>These deductions can affect the amount deposited into your bank account.</p>
           </div>
         </div>
+        <figure className="bracket-figure">
+          <img src="/images/hourly-paycheck-calculator-overtime.svg" alt="Hourly paycheck calculator overtime example: 40 regular hours at $25 plus 5 overtime hours at $37.50 per week gives $2,375 biweekly gross and $1,992.16 take-home" width="880" height="340" loading="lazy" decoding="async" />
+          <figcaption>Overtime is added at 1.5× the hourly rate before withholding. Example: $25/hour, 40 + 5 hours a week, biweekly, Texas, single filer.</figcaption>
+        </figure>
       </section>
 
       {/* Gross vs Net */}
@@ -255,6 +259,10 @@ export default function HourlyPaycheck() {
             </p>
           </div>
         </div>
+        <figure className="bracket-figure">
+          <img src="/images/hourly-paycheck-calculator-breakdown.svg" alt="Hourly paycheck calculator breakdown of a $2,000 biweekly paycheck: 84.5% take-home, 7.8% federal income tax, 6.2% Social Security, 1.45% Medicare" width="880" height="296" loading="lazy" decoding="async" />
+          <figcaption>Where each dollar of a $2,000 biweekly hourly paycheck goes after 2026 withholding (Texas, single filer, no pre-tax deductions).</figcaption>
+        </figure>
       </section>
 
       {/* How to Calculate */}
@@ -382,6 +390,10 @@ export default function HourlyPaycheck() {
             <p>Paid once per month.</p>
           </div>
         </div>
+        <figure className="bracket-figure">
+          <img src="/images/hourly-paycheck-calculator-pay-frequency.svg" alt="Hourly paycheck calculator take-home per check by pay frequency at $25 an hour: $845.42 weekly, $1,690.85 biweekly, $1,831.75 semimonthly, $3,663.50 monthly" width="880" height="360" loading="lazy" decoding="async" />
+          <figcaption>Pay frequency changes the size of each check, not the annual total: $52,000 gross at $25/hour nets $43,962 a year on every schedule.</figcaption>
+        </figure>
       </section>
 
       {/* Factors */}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="340" viewBox="0 0 880 340" role="img" aria-labelledby="t d">
+  <title id="t">How the hourly paycheck calculator adds overtime pay at time-and-a-half</title>
+  <desc id="d">Forty regular hours at $25 plus five overtime hours at $37.50 per week gives $2,375 biweekly gross and about $1,992 take-home in Texas for a single filer.</desc>
+  <style>
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 15px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .box{fill:#fff;stroke:#e4e7ec;stroke-width:1.5}
+    .grid{stroke:#e4e7ec;stroke-width:1}
+  </style>
+  <rect width="880" height="340" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="40" text-anchor="middle" class="h">Overtime in the hourly paycheck calculator: 40 regular hours + 5 overtime hours at $25/hour, biweekly</text>
+  <rect x="40" y="72" width="360" height="118" rx="10" class="box"/>
+  <text x="220" y="100" text-anchor="middle" class="s">Regular hours (paid at 1×)</text>
+  <text x="220" y="132" text-anchor="middle" class="n">40 hrs × 2 weeks × $25.00</text>
+  <text x="220" y="168" text-anchor="middle" class="h">= $2,000.00</text>
+  <rect x="480" y="72" width="360" height="118" rx="10" class="box"/>
+  <text x="660" y="100" text-anchor="middle" class="s">Overtime hours (paid at 1.5× = $37.50)</text>
+  <text x="660" y="132" text-anchor="middle" class="n">5 hrs × 2 weeks × $37.50</text>
+  <text x="660" y="168" text-anchor="middle" class="h">= $375.00</text>
+  <text x="440" y="140" text-anchor="middle" class="h" style="font-size:26px">+</text>
+  <line x1="60" y1="222" x2="820" y2="222" class="grid"/>
+  <text x="60" y="250" class="s">Gross pay this paycheck</text>
+  <text x="820" y="250" text-anchor="end" class="n">$2,375.00</text>
+  <text x="60" y="278" class="s">Take-home after federal tax, Social Security and Medicare (Texas, single filer)</text>
+  <text x="820" y="278" text-anchor="end" class="n" style="fill:#4a63e7">$1,992.16</text>
+  <text x="60" y="304" class="m">Without the 5 overtime hours the same paycheck nets $1,690.85 — the extra $375 gross adds about $301 net,</text>
+  <text x="60" y="322" class="m">because the overtime dollars are withheld at the marginal rate.</text>
+</svg>

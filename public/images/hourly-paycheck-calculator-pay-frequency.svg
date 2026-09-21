@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" role="img" aria-labelledby="t d">
+  <title id="t">Hourly paycheck calculator take-home per check by pay frequency</title>
+  <desc id="d">At $25 an hour and 40 hours a week, take-home is $845.42 weekly, $1,690.85 biweekly, $1,831.75 semimonthly or $3,663.50 monthly.</desc>
+  <style>
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 15px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .box{fill:#fff;stroke:#e4e7ec;stroke-width:1.5}
+    .grid{stroke:#e4e7ec;stroke-width:1}
+  </style>
+  <rect width="880" height="360" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="40" text-anchor="middle" class="h">Same $52,000 a year, different paycheck size: hourly paycheck calculator by pay frequency</text>
+  <text x="440" y="66" text-anchor="middle" class="s">Take-home per check at $25/hour, 40 hours a week, Texas, single filer — annual net is $43,962 in every row</text>
+  <text x="60" y="118" class="s">Weekly · 52 checks</text>
+  <rect x="250" y="96" width="120.0" height="32" rx="4" fill="#4a63e7"/>
+  <text x="380.0" y="118" class="n">$845.42</text>
+  <text x="60" y="170" class="s">Biweekly · 26 checks</text>
+  <rect x="250" y="148" width="240.0" height="32" rx="4" fill="#4a63e7"/>
+  <text x="500.0" y="170" class="n">$1,690.85</text>
+  <text x="60" y="222" class="s">Semimonthly · 24 checks</text>
+  <rect x="250" y="200" width="260.0" height="32" rx="4" fill="#4a63e7"/>
+  <text x="520.0" y="222" class="n">$1,831.75</text>
+  <text x="60" y="274" class="s">Monthly · 12 checks</text>
+  <rect x="250" y="252" width="520.0" height="32" rx="4" fill="#4a63e7"/>
+  <text x="780.0" y="274" class="n">$3,663.50</text>
+  <text x="60" y="322" class="m">Withholding is annualized first and then divided by the number of paychecks,</text>
+  <text x="60" y="342" class="m">so the frequency changes the size of each check, not the total tax for the year.</text>
+</svg>
