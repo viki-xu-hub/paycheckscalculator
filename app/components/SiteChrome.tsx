@@ -115,9 +115,14 @@ export function SiteFooter() {
               '<a href="https://fazier.com/launches/www.paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width=120 alt="Fazier badge" /></a>',
           }}
         />
-        <a href="https://www.foundrlist.com/product/paycheckcalculator?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener" className="partner-badge">
-          <img src="https://www.foundrlist.com/api/badge/paycheckcalculator" alt="Featured on FoundrList" width="150" height="48" loading="lazy" />
-        </a>
+        {/* Raw HTML for the same reason as Fazier: FoundrList's verifier matches the snippet literally, including the unescaped "&". */}
+        <span
+          className="partner-badge"
+          dangerouslySetInnerHTML={{
+            __html:
+              '<a href="https://www.foundrlist.com/product/paycheckcalculator?utm_source=badge&utm_medium=embed" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator" alt="Featured on FoundrList" width="150" height="48" /></a>',
+          }}
+        />
       </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
