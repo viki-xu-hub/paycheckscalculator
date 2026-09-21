@@ -101,6 +101,12 @@ export function SiteFooter() {
         <a href="https://dailypings.com/p/paycheck-calculator-calculate-your-take" target="_blank" rel="noopener" title="Featured on DailyPings" className="partner-badge">
           <img src="https://dailypings.com/badge.svg" alt="Featured on DailyPings" width="179" height="32" />
         </a>
+        <a href="https://buildvoyage.com/products/paychecks-calculator?ref=badge" target="_blank" rel="noopener" className="partner-badge partner-badge-buildvoyage">
+          <img src="https://buildvoyage.com/images/featured_badge.png" alt="Featured on BuildVoyage" width="250" height="167" loading="lazy" />
+        </a>
+        <a href="https://dododirectory.com" target="_blank" rel="dofollow" className="partner-badge">
+          <img src="https://dododirectory.com/badge-light.png" alt="Featured on DodoDirectory" width="200" height="54" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
