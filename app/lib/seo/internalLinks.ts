@@ -97,7 +97,7 @@ export function hourlyPageLinks(current: HourlyData): InternalLink[] {
   links.push({ href: `/salary/${nearestSalary.slug}`, title: `${nearestSalary.label} a Year Is How Much an Hour?`, description: `${dollar(current)} an hour ≈ ${nearestSalary.label} a year — see the salary view →` });
 
   // Hub + interactive hourly calculator
-  links.push({ href: "/hourly", title: "All Hourly Rates: $10 to $150 an Hour", description: "Browse every hourly wage to yearly salary page →" });
+  links.push({ href: "/hourly-paycheck-calculator", title: "All Hourly Rates: $10 to $150 an Hour", description: "Browse every hourly wage to yearly salary page →" });
   links.push({ href: "/hourly-paycheck-calculator", title: "Hourly Paycheck Calculator", description: "Enter any rate, hours and overtime →" });
 
   // Top state pages (canonical root URLs)

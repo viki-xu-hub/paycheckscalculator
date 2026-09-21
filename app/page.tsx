@@ -194,7 +194,7 @@ export default function Home() {
           <a href="/hourly/35-paycheck-calculator"><b>$35 an Hour Is How Much a Year?</b><span>$72,800 a year at 40 hrs/week →</span></a>
           <a href="/hourly/40-paycheck-calculator"><b>$40 an Hour Is How Much a Year?</b><span>$83,200 a year at 40 hrs/week →</span></a>
           <a href="/hourly/50-paycheck-calculator"><b>$50 an Hour Is How Much a Year?</b><span>$104,000 a year at 40 hrs/week →</span></a>
-          <a href="/hourly"><b>All Hourly Rates ($10–$150)</b><span>Browse every hourly-to-yearly page →</span></a>
+          <a href="/hourly-paycheck-calculator"><b>All Hourly Rates ($10–$150)</b><span>Browse every hourly-to-yearly page →</span></a>
         </div>
       </section>
 

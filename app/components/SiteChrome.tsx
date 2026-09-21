@@ -14,7 +14,7 @@ export function SiteHeader() {
           <div className="nav-panel">
             <div className="nav-group-label">By Amount</div>
             <a href="/salary">Salary After Tax</a>
-            <a href="/hourly">Hourly Pay</a>
+            <a href="/hourly-paycheck-calculator">Hourly Pay</a>
             <div className="nav-panel-divider" />
             <div className="nav-group-label">By Frequency</div>
             <a href="/biweekly-paycheck-calculator">Biweekly Pay</a>

@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
         // 308 is treated the same as 301 for consolidation.
         permanent: true,
       },
+      // /hourly hub merged into the main hourly calculator, which now lists every rate page.
+      {
+        source: "/hourly",
+        destination: "/hourly-paycheck-calculator",
+        permanent: true,
+      },
       // Thin Texas hourly page consolidated into the main hourly calculator.
       {
         source: "/texas-hourly-paycheck-calculator",

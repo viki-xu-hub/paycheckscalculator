@@ -214,3 +214,5 @@ footer { background:#09233b; color:white; min-height:145px; padding:36px max(24p
 .long-seo details:first-of-type { border-top:0; }
 .long-seo summary { cursor:pointer; font-weight:600; color:var(--ink); }
 .long-seo details p { margin:8px 0 0; }
+.seo-section .rate-grid { margin-top:22px; }
+.seo-section .rate-grid b { font-size:15px; }

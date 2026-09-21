@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import type { HourlyData } from "../lib/seo/types";
+import hourlyRaw from "../data/hourly-rates.json";
+
+const hourlyRates = hourlyRaw as HourlyData[];
+const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 export const metadata: Metadata = {
-  title: "Hourly Paycheck Calculator - Calculate Your Take-Home Pay After Taxes",
+  title: "Hourly Paycheck Calculator 2026 – Take-Home Pay by Rate",
   description:
-    "Use our hourly paycheck calculator to estimate your take-home pay after taxes. Calculate hourly wages, overtime, payroll deductions, Social Security, Medicare, and net pay.",
+    "Free hourly paycheck calculator for 2026. Enter your hourly rate, hours and overtime to see take-home pay after federal tax, FICA and state withholding.",
   alternates: { canonical: "/hourly-paycheck-calculator" },
   openGraph: {
-    title: "Hourly Paycheck Calculator - Calculate Your Take-Home Pay After Taxes",
+    title: "Hourly Paycheck Calculator 2026",
     description:
       "Estimate your hourly take-home pay after federal taxes, Social Security, Medicare, overtime, and payroll deductions. Free online hourly paycheck calculator.",
     url: "https://www.paycheckscalculator.org/hourly-paycheck-calculator",
@@ -78,6 +83,22 @@ export default function HourlyPaycheck() {
     ],
   };
 
+  const listSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Hourly paycheck calculator pages by hourly rate",
+    itemListElement: hourlyRates.map((h, i) => ({ "@type": "ListItem", position: i + 1, name: `$${h.rate} an hour is how much a year?`, url: `https://www.paycheckscalculator.org/hourly/${h.slug}` })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Paycheck Calculator", item: "https://www.paycheckscalculator.org" },
+      { "@type": "ListItem", position: 2, name: "Hourly Paycheck Calculator", item: canonical },
+    ],
+  };
+
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -100,34 +121,42 @@ export default function HourlyPaycheck() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <SiteHeader />
 
       {/* Hero + Calculator */}
       <section className="hero">
-        <div className="eyebrow">HOURLY + OVERTIME TAKE-HOME PAY</div>
-        <h1>Hourly Paycheck Calculator: Calculate Your Take-Home Pay From Hourly Wages</h1>
-        <p className="hero-copy">
-          Our hourly paycheck calculator helps hourly workers estimate their take-home pay after
-          taxes and payroll deductions.
-        </p>
-        <p className="hero-copy">
-          Enter your hourly wage, working hours, pay frequency, and deductions to estimate how much
-          you will actually receive in your paycheck.
-        </p>
-        <p className="hero-copy">
-          Whether you are paid weekly, biweekly, or monthly, this calculator helps you understand the
-          difference between your gross hourly income and your final net pay.
-        </p>
-        <p className="hero-copy">
-          The calculation considers important payroll factors, including federal income tax, Social
-          Security, Medicare, overtime pay, and other common deductions.
-        </p>
+        <h1>Hourly Paycheck Calculator <em>2026</em></h1>
+        <div className="hero-intro">
+          <p>Use this free hourly paycheck calculator to turn your hourly wage, hours and overtime into take-home pay after 2026 federal tax, Social Security, Medicare and state withholding.</p>
+        </div>
         <PaycheckCalculator hourly />
+        <div className="hero-more">
+          <p>Enter your hourly wage, working hours, pay frequency, and deductions to see how much you will actually receive in your paycheck — weekly, biweekly, semimonthly or monthly — with every one of the 52 state and city withholding engines available.</p>
+        </div>
         <div className="trust-row">
           <span>Free &bull; No sign-up required</span>
           <span>Updated for 2026 tax rules</span>
           <span>Federal &amp; state tax estimates</span>
+        </div>
+      </section>
+
+      {/* Hub: every hourly-rate page */}
+      <section className="seo-section">
+        <p className="kicker">HOURLY PAY 2026</p>
+        <h2>Hourly Paycheck Calculator by Hourly Rate</h2>
+        <p className="section-intro">
+          Prefer a ready-made answer? Every rate below opens its own hourly paycheck calculator page with annual gross pay at 40 hours a week, biweekly and weekly net pay, effective hourly take-home, and a side-by-side comparison across all 52 supported locations.
+        </p>
+        <div className="location-grid rate-grid">
+          {hourlyRates.map(h => (
+            <a key={h.slug} href={`/hourly/${h.slug}`}>
+              <b>${h.rate} an hour is how much a year?</b>
+              <span>{fmt.format(h.annualAt40h)} a year gross (40 hrs/wk) →</span>
+            </a>
+          ))}
         </div>
       </section>
 
@@ -139,6 +168,10 @@ export default function HourlyPaycheck() {
           An hourly paycheck calculator converts your hourly wage into an estimated paycheck amount
           by calculating your gross earnings and subtracting applicable taxes and deductions.
         </p>
+        <figure className="bracket-figure">
+          <img src="/images/hourly-paycheck-calculator-flow.svg" alt="Hourly paycheck calculator flow: $25 an hour × 80 biweekly hours = $2,000 gross, minus federal tax, Social Security, Medicare and state tax, leaves about $1,691 take-home" width="880" height="300" loading="lazy" decoding="async" />
+          <figcaption>How the hourly paycheck calculator moves from gross wages to take-home pay. Example: $25/hour, 40 hours, biweekly, single filer, Texas.</figcaption>
+        </figure>
         <p className="section-intro">The calculation usually follows these steps:</p>
 
         <div className="steps-grid">
@@ -203,7 +236,7 @@ export default function HourlyPaycheck() {
 
       {/* Gross vs Net */}
       <section className="seo-section">
-        <h2>Hourly Pay vs Take-Home Pay</h2>
+        <h2>Gross Hourly Pay vs Take-Home Pay</h2>
         <p className="section-intro">
           Many hourly workers are surprised that their paycheck amount is lower than their hourly
           wage calculation. This happens because gross pay is calculated before taxes and deductions.
@@ -324,7 +357,7 @@ export default function HourlyPaycheck() {
 
       {/* Pay Frequency */}
       <section className="seo-section">
-        <h2>Weekly, Biweekly, and Monthly Hourly Paychecks</h2>
+        <h2>Hourly Paycheck Calculator for Weekly, Biweekly, and Monthly Pay</h2>
         <p className="section-intro">
           Your paycheck frequency affects how often you receive income, but your total annual
           earnings remain based on your hourly wage and hours worked.
@@ -353,7 +386,7 @@ export default function HourlyPaycheck() {
 
       {/* Factors */}
       <section className="seo-section">
-        <h2>Factors That Affect Hourly Take-Home Pay</h2>
+        <h2>What Changes Your Hourly Paycheck</h2>
         <p className="section-intro">Your final paycheck depends on several factors:</p>
 
         <ul className="factors-list">
@@ -390,7 +423,7 @@ export default function HourlyPaycheck() {
 
       {/* FAQ */}
       <section className="seo-section faq-section">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Hourly Paycheck Calculator FAQ</h2>
 
         <details open>
           <summary>How do I calculate my paycheck from hourly pay?</summary>
@@ -435,7 +468,7 @@ export default function HourlyPaycheck() {
 
       {/* EEAT */}
       <section className="seo-section sources-section">
-        <h2>Tax and Payroll Information Sources</h2>
+        <h3>Tax and Payroll Information Sources</h3>
         <p className="section-intro">
           Our hourly paycheck calculations are based on publicly available payroll and tax
           information.
@@ -460,7 +493,7 @@ export default function HourlyPaycheck() {
 
       {/* Disclaimer */}
       <section className="seo-section disclaimer-section">
-        <h2>Disclaimer</h2>
+        <h3>Disclaimer</h3>
         <p>
           This hourly paycheck calculator provides estimates for informational purposes only. Actual
           paycheck amounts may vary depending on employer payroll systems, tax withholding, benefits,
