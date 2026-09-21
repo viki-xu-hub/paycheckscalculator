@@ -107,9 +107,14 @@ export function SiteFooter() {
         <a href="https://dododirectory.com" target="_blank" rel="dofollow" className="partner-badge">
           <img src="https://dododirectory.com/badge-light.png" alt="Featured on DodoDirectory" width="200" height="54" loading="lazy" />
         </a>
-        <a href="https://fazier.com/launches/www.paycheckscalculator.org" target="_blank" rel="noopener" className="partner-badge">
-          <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width="120" alt="Fazier badge" loading="lazy" />
-        </a>
+        {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which Fazier's badge check looks for verbatim. */}
+        <span
+          className="partner-badge"
+          dangerouslySetInnerHTML={{
+            __html:
+              '<a href="https://fazier.com/launches/www.paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width=120 alt="Fazier badge" /></a>',
+          }}
+        />
       </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
