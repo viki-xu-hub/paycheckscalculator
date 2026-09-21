@@ -136,6 +136,9 @@ export function SiteFooter() {
               '<a href="https://www.nxgntools.com/tools/paycheck-calculator?utm_source=paycheck-calculator" target="_blank" rel="noopener" style="display: inline-block; width: auto;"><img src="https://www.nxgntools.com/api/embed/paycheck-calculator?type=LAUNCHING_SOON_ON" alt="Launching soon on NxGn Tools" style="height: 48px; width: auto;" /></a>',
           }}
         />
+        <a className="partner-badge" target="_blank" href="https://uno.directory" rel="noopener noreferrer">
+          <img src="https://uno.directory/uno-directory.svg" alt="Listed on Uno Directory" width="120" height="30" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
