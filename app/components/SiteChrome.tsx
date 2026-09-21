@@ -98,8 +98,8 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://huzzler.so/products/LmCHuJ3iJ0/paychecks-calculator?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing" rel="noopener noreferrer">
           <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Huzzler Embed Badge" width="159" height="55" loading="lazy" />
         </a>
-        <a className="partner-badge" target="_blank" href="https://dailypings.com/p/paycheck-calculator-calculate-your-take" title="Featured on DailyPings" rel="noopener noreferrer">
-          <img src="https://dailypings.com/badge.svg" alt="Featured on DailyPings" width="179" height="32" loading="lazy" />
+        <a href="https://dailypings.com/p/paycheck-calculator-calculate-your-take" target="_blank" rel="noopener" title="Featured on DailyPings" className="partner-badge">
+          <img src="https://dailypings.com/badge.svg" alt="Featured on DailyPings" width="179" height="32" />
         </a>
       </div>
       <p className="disclaimer">
