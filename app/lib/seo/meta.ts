@@ -20,7 +20,7 @@ export function salaryMeta(salary: SalaryData): PageMeta {
   const k = `$${Math.round(salary.amount / 1000)}k`;
   return {
     title: `${salary.label} a Year Is How Much an Hour — ${YEAR} After-Tax Pay`,
-    description: `${salary.label} a year is how much an hour? $${hourly} an hour at 40 hours a week (${k} salary). See ${YEAR} take-home pay after federal, FICA and state tax in 38 states.`,
+    description: `${salary.label} a year is how much an hour? $${hourly} an hour at 40 hours a week (${k} salary). See ${YEAR} take-home pay after federal, FICA and state tax in 52 states.`,
     h1: `${salary.label} a Year Is How Much an Hour — ${YEAR} Paycheck Calculator`,
     canonical: `${SITE}/salary/${salary.slug}`,
   };
@@ -32,7 +32,7 @@ export function hourlyMeta(hourly: HourlyData): PageMeta {
   const dollar = `$${hourly.rate}`;
   return {
     title: `${dollar} an Hour Is How Much a Year — ${YEAR} After-Tax Pay`,
-    description: `${dollar} an hour is how much a year? $${annualFmt} at 40 hours a week, about $${monthlyFmt} a month. See ${YEAR} take-home pay after federal, FICA and state tax in 38 states.`,
+    description: `${dollar} an hour is how much a year? $${annualFmt} at 40 hours a week, about $${monthlyFmt} a month. See ${YEAR} take-home pay after federal, FICA and state tax in 52 states.`,
     h1: `${dollar} an Hour Is How Much a Year — ${YEAR} Paycheck Calculator`,
     canonical: `${SITE}/hourly/${hourly.slug}`,
   };

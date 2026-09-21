@@ -145,13 +145,15 @@ export default async function HourlyCalculatorPage(
             40 hours a week for 52 weeks. That is about {fmt.format(monthlyGross)} a month,{" "}
             {fmt.format(biweeklyGross)} every two weeks, or {fmt.format(weeklyGross)} a week in gross pay.
           </p>
+      </div>
+        <PaycheckCalculator defaultState="TX" navigateOnStateChange hourly defaultHourlyRate={h.rate} defaultOvertime={0} headingSuffix={` at ${dollar} an hour`} />
+        <div className="hero-more">
           <p>
             After taxes, {dollar} an hour is closer to {fmt.format(Math.round(texas.netAnnual))} a year in a
             no-income-tax state like Texas and {fmt.format(Math.round(worstState.netAnnual))} in {worstState.name}.
-            Enter your state, filing status and deductions below to see your own net paycheck.
+            Enter your state, filing status and deductions above to see your own net paycheck.
           </p>
         </div>
-        <PaycheckCalculator defaultState="TX" navigateOnStateChange hourly defaultHourlyRate={h.rate} defaultOvertime={0} headingSuffix={` at ${dollar} an hour`} />
         <div className="trust-row">
           <span>2026 IRS Method</span>
           <span>All 50 States</span>
@@ -276,7 +278,7 @@ export default async function HourlyCalculatorPage(
         </section>
       </article>
 
-      {/* 38-State Comparison — real calculated numbers */}
+      {/* 52-State Comparison — real calculated numbers */}
       <article className="long-seo">
         <p className="kicker">TAKE-HOME PAY BY STATE</p>
         <h2>How Much Is {dollar} an Hour After Taxes in Each State? (2026)</h2>

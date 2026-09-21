@@ -5,7 +5,7 @@ import hourlyRaw from "../data/hourly-rates.json";
 
 export const metadata: Metadata = {
   title: "Hourly Paycheck Calculator 2026 — All Hourly Rates",
-  description: "Find your hourly rate and see annual gross pay, biweekly paycheck, and after-tax take-home across 38 states in 2026.",
+  description: "Find your hourly rate and see annual gross pay, biweekly paycheck, and after-tax take-home across 52 states in 2026.",
   alternates: { canonical: "https://www.paycheckscalculator.org/hourly" },
   robots: { index: true, follow: true },
 };
@@ -21,7 +21,7 @@ export default function HourlyHubPage() {
         <p className="kicker">HOURLY PAY 2026</p>
         <h1>Hourly Paycheck Calculator</h1>
         <p style={{ color: "#647789", maxWidth: 620, margin: "12px auto 0", lineHeight: 1.6, fontSize: 15 }}>
-          Select your hourly rate below for a full after-tax breakdown across all 38 states.
+          Select your hourly rate below for a full after-tax breakdown across all 52 states.
           Each page shows annual gross, biweekly net pay, and effective tax rate — calculated
           with 2026 IRS and state withholding tables.
         </p>
@@ -37,10 +37,10 @@ export default function HourlyHubPage() {
 
         <div style={{ marginTop: 60, padding: "32px 28px", background: "white", border: "1px solid #d9e2e7", borderRadius: 12, maxWidth: 700, marginLeft: "auto", marginRight: "auto", textAlign: "left" }}>
           <p className="kicker">HOW IT WORKS</p>
-          <h2 style={{ font: "700 24px/1.2 Georgia,serif", margin: "8px 0 12px" }}>What each hourly rate page shows</h2>
+          <h2 style={{ font: "700 24px/1.2 var(--font-geist-sans),Arial,sans-serif", margin: "8px 0 12px" }}>What each hourly rate page shows</h2>
           <p style={{ color: "#5f7485", fontSize: 14, lineHeight: 1.75 }}>
             Every hourly rate page calculates your full-time annual gross (40 hrs/week), then
-            runs a complete payroll calculation for all 38 supported states. You get biweekly
+            runs a complete payroll calculation for all 52 supported states. You get biweekly
             net pay, weekly net pay, effective hourly take-home after all taxes, and state-by-state
             comparison — all based on 2026 IRS and state withholding tables.
           </p>

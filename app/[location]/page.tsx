@@ -15,12 +15,14 @@ const DYNAMIC_FREQUENCIES = frequencies.filter(f => f.shortLabel !== "biweekly")
 const frequencyBySlug = Object.fromEntries(DYNAMIC_FREQUENCIES.map(f => [f.slug, f]));
 
 // State pages not yet indexed by Google — suppress until they gain authority
-const NOINDEX_STATE_SLUGS = new Set([
-  "iowa-paycheck-calculator","kansas-paycheck-calculator","kentucky-paycheck-calculator",
-  "michigan-paycheck-calculator","nevada-paycheck-calculator","ohio-paycheck-calculator",
-  "oklahoma-paycheck-calculator","tennessee-paycheck-calculator","utah-paycheck-calculator",
-  "virginia-paycheck-calculator","washington-paycheck-calculator",
-]);
+const NOINDEX_STATE_SLUGS = new Set<string>([]);
+
+
+// Pages such as WV/NH target the abbreviation searchers actually use; `name` becomes the on-page label, `fullName` keeps the state name.
+function pageLocation(slug:string){
+  const loc=locationBySlug[slug];
+  return loc?{...loc,name:loc.seoName??loc.name,fullName:loc.name}:undefined;
+}
 
 export function generateStaticParams(){
   return [
@@ -37,13 +39,13 @@ export async function generateMetadata({params}:{params:Promise<{location:string
     const meta=frequencyMeta(freq);
     return{title:meta.title,description:meta.description,alternates:{canonical:`/${freq.slug}`},robots:{index:true,follow:true},openGraph:{title:meta.title,description:meta.description,url:meta.canonical,type:"website"}};
   }
-  const p=locationBySlug[location];
+  const p=pageLocation(location);
   if(!p)return{};
   const canonical=`/${p.slug}`;
   const noTaxPhrase=p.noTax?"No state income tax on wages.":"Estimate state income tax withholding.";
   return{
-    title:`${p.name} Paycheck Calculator 2026 — Calculate Your Take-Home Pay After Taxes`,
-    description:`Use our free ${p.name} paycheck calculator to estimate your 2026 take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. ${noTaxPhrase}`,
+    title:p.fullName!==p.name?`${p.name} Paycheck Calculator 2026 – ${p.fullName} Take-Home Pay`:`${p.name} Paycheck Calculator 2026 – Net Pay After Tax`,
+    description:`Free ${p.name} paycheck calculator: estimate 2026 take-home pay after federal tax, FICA, and payroll deductions. ${noTaxPhrase}`,
     alternates:{canonical},
     robots:{index:NOINDEX_STATE_SLUGS.has(location)?false:true,follow:true},
     openGraph:{
@@ -60,7 +62,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
   // Frequency pages (weekly, semimonthly, monthly)
   const freq=frequencyBySlug[location];
   if(freq) return <FrequencyPageTemplate freq={freq}/>;
-  const p=locationBySlug[location];
+  const p=pageLocation(location);
   if(!p)notFound();
   const canonical=`https://www.paycheckscalculator.org/${p.slug}`;
   const noTax=p.noTax===true;
@@ -85,10 +87,12 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <h1>{p.name} Paycheck Calculator <em>2026</em></h1>
       <div className="hero-intro">
         <p>Use our free {p.name} paycheck calculator to estimate your take-home pay after federal taxes, Social Security, Medicare, and {noTax?"other payroll deductions":`${p.name} state income tax`}.</p>
-        {noTax?<p>{p.name} does not impose a state income tax on wages. However, your paycheck is still affected by federal tax withholding, FICA taxes, and any employee benefit deductions you select.</p>:<p>{p.name} imposes {taxInfo.type} on wages. Your actual take-home pay depends on your income level, filing status, allowances, and payroll deductions. Our calculator applies published 2026 withholding methods to provide a transparent estimate.</p>}
-        <p>Enter your salary information below to estimate your {p.name} paycheck based on your pay frequency, deductions, and payroll factors.</p>
       </div>
       <PaycheckCalculator defaultState={p.short as SupportedState} navigateOnStateChange/>
+      <div className="hero-more">
+        {noTax?<p>{p.name} does not impose a state income tax on wages. However, your paycheck is still affected by federal tax withholding, FICA taxes, and any employee benefit deductions you select.</p>:<p>{p.name} imposes {taxInfo.type} on wages. Your actual take-home pay depends on your income level, filing status, allowances, and payroll deductions. Our calculator applies published 2026 withholding methods to provide a transparent estimate.</p>}
+        <p>Enter your salary information above to estimate your {p.name} paycheck based on your pay frequency, deductions, and payroll factors.</p>
+      </div>
       <div className="trust-row"><span>2026 IRS Method</span><span>Source-Backed Calculations</span><span>Free to Use</span></div>
     </section>
 
@@ -210,7 +214,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
         <p><strong>6.</strong> Converting the annual estimate into your selected pay frequency.</p>
       </section>
       <section>
-        <h3>Tax Information Sources</h3>
+        <h3>{p.name} Tax Information Sources</h3>
         <p>Our {p.name} paycheck calculations are based on publicly available payroll and tax information from authoritative sources including the Internal Revenue Service (IRS), Social Security Administration (SSA), and {taxInfo.agency}.</p>
         <p style={{fontSize:13,color:"#8493a0",marginTop:14}}>For official tax guidance, consult these agencies directly or speak with a qualified tax professional.</p>
       </section>
@@ -253,11 +257,11 @@ const stateTaxInfo:Record<string,{type:string;detail:string;agency:string}>={
   NE:{type:"graduated income tax (2.46%–5.84%)",detail:"Nebraska uses graduated income-tax brackets. State withholding tables and Form W-4N elections determine the amount withheld.",agency:"Nebraska Department of Revenue"},
   NV:{type:"no state income tax",detail:"",agency:"Nevada Department of Taxation"},
   NH:{type:"no tax on wages",detail:"",agency:"New Hampshire Department of Revenue Administration"},
-  NM:{type:"graduated income tax (1.7%–5.9%)",detail:"New Mexico uses graduated income-tax brackets. State withholding is based on your income level and Form W-4 elections.",agency:"New Mexico Taxation and Revenue Department"},
+  NM:{type:"graduated income tax (1.5%–5.9%)",detail:"New Mexico uses graduated income-tax brackets from 1.5% to 5.9%. Withholding follows the FYI-104 percentage tables for the filing status on your federal Form W-4.",agency:"New Mexico Taxation and Revenue Department"},
   NY:{type:"graduated income tax (4%–10.9%)",detail:"New York uses graduated income-tax brackets. New York City and Yonkers residents may also face additional local income tax withholding.",agency:"New York State Department of Taxation and Finance"},
   NYC:{type:"New York City resident income tax (3.078%–3.876%) plus NY state tax",detail:"New York City residents pay New York State income tax plus New York City resident income tax. Both are withheld from your paycheck.",agency:"New York State Department of Taxation and Finance"},
   OH:{type:"graduated income tax plus local taxes",detail:"Ohio uses graduated income-tax brackets, and many municipalities and school districts impose separate local income taxes that affect your paycheck.",agency:"Ohio Department of Taxation"},
-  OK:{type:"graduated income tax (0.25%–4.75%)",detail:"Oklahoma uses graduated income-tax brackets. State-specific withholding tables and Form OK-W-4 elections apply.",agency:"Oklahoma Tax Commission"},
+  OK:{type:"graduated income tax (0.25%–4.5%)",detail:"Oklahoma uses graduated income-tax brackets. State-specific withholding tables and Form OK-W-4 elections apply.",agency:"Oklahoma Tax Commission"},
   OR:{type:"graduated income tax (4.75%–9.9%)",detail:"Oregon uses graduated income-tax brackets with a top rate of 9.9%. Statewide transit tax and paid-leave contributions may appear separately.",agency:"Oregon Department of Revenue"},
   PA:{type:"a flat income tax (3.07%)",detail:"Pennsylvania uses a flat state income tax of 3.07%. Municipalities and school districts may also impose local earned-income taxes.",agency:"Pennsylvania Department of Revenue"},
   RI:{type:"graduated income tax (3.75%–5.99%)",detail:"Rhode Island uses graduated income-tax brackets. State withholding is based on Form RI W-4 elections and income level.",agency:"Rhode Island Division of Taxation"},
@@ -267,14 +271,14 @@ const stateTaxInfo:Record<string,{type:string;detail:string;agency:string}>={
   VA:{type:"graduated income tax (2%–5.75%)",detail:"Virginia uses graduated income-tax brackets. State-specific withholding tables and Form VA-4 elections determine the amount withheld.",agency:"Virginia Department of Taxation"},
   WA:{type:"no state income tax on wages",detail:"But Washington employers may withhold paid family and medical leave premiums and long-term care (WA Cares) contributions.",agency:"Washington State Department of Revenue"},
   WI:{type:"graduated income tax (3.5%–7.65%)",detail:"Wisconsin uses graduated income-tax brackets. State-specific withholding tables and Form WT-4 elections apply.",agency:"Wisconsin Department of Revenue"},
-  WV:{type:"graduated income tax (2.36%–5.12%)",detail:"West Virginia uses graduated income-tax brackets. State withholding is based on Form WV/IT-104 elections.",agency:"West Virginia State Tax Department"},
-  MT:{type:"graduated income tax (1%–6.75%)",detail:"Montana uses graduated income-tax brackets. State withholding tables and Form MW-4 elections apply.",agency:"Montana Department of Revenue"},
-  ND:{type:"graduated income tax (1.95%–2.5%)",detail:"North Dakota uses graduated income-tax brackets with relatively low rates. State withholding is based on Form NDW-R elections.",agency:"North Dakota Office of State Tax Commissioner"},
+  WV:{type:"graduated income tax (2.11%–4.58%)",detail:"West Virginia uses five graduated brackets, cut again for 2026 by Senate Bill 392 to 2.11%–4.58%. Withholding is based on Form WV/IT-104 exemptions.",agency:"West Virginia Tax Division"},
+  MT:{type:"graduated income tax (4.7%–5.65%)",detail:"Montana uses two brackets for 2026 — 4.7% and a top rate lowered to 5.65% by House Bill 337 — and the 2026 withholding formula keys off the filing status marked on Form MW-4.",agency:"Montana Department of Revenue"},
+  ND:{type:"graduated income tax (0%–2.5%)",detail:"North Dakota has a wide zero bracket, then 1.95% and 2.5% rates. Withholding uses the filing status on your federal Form W-4.",agency:"North Dakota Office of State Tax Commissioner"},
   DE:{type:"graduated income tax (2.2%–6.6%)",detail:"Delaware uses graduated income-tax brackets. State withholding tables and Form W-4 elections apply.",agency:"Delaware Division of Revenue"},
-  DC:{type:"graduated income tax (4%–10.75%)",detail:"District of Columbia uses graduated income-tax brackets. DC withholding is based on Form D-4 elections.",agency:"DC Office of Tax and Revenue"},
+  DC:{type:"graduated income tax (4%–10.75%)",detail:"The District of Columbia uses seven graduated income-tax brackets from 4% to 10.75%. DC withholding is based on Form D-4 allowances.",agency:"DC Office of Tax and Revenue"},
   VT:{type:"graduated income tax (3.35%–8.75%)",detail:"Vermont uses graduated income-tax brackets. State withholding is based on Form W-4VT elections.",agency:"Vermont Department of Taxes"},
   ME:{type:"graduated income tax (5.8%–7.15%)",detail:"Maine uses graduated income-tax brackets. State withholding is based on Form W-4ME elections.",agency:"Maine Revenue Services"},
-  MS:{type:"a flat income tax (4.4%)",detail:"Mississippi uses a flat income-tax rate. State withholding depends on your Form 89-350 elections.",agency:"Mississippi Department of Revenue"},
+  MS:{type:"a flat income tax (4.0% on taxable income over $10,000)",detail:"Mississippi taxes wages at a flat 4.0% for 2026 after a $10,000 zero bracket, the standard deduction, and the exemption amount claimed on Form 89-350.",agency:"Mississippi Department of Revenue"},
   AK:{type:"no state income tax on wages",detail:"",agency:"Alaska Department of Revenue"},
   SD:{type:"no state income tax on wages",detail:"",agency:"South Dakota Department of Revenue"},
   WY:{type:"no state income tax on wages",detail:"",agency:"Wyoming Department of Revenue"},
@@ -309,16 +313,16 @@ function SourceBackedGuide({place:p}:{place:(typeof locations)[number]}){
     <p className="kicker">{p.short} 2026 WITHHOLDING METHOD</p>
     <h2>How the {p.name} paycheck estimate works</h2>
     <section>
-      <h3>What is calculated</h3>
+      <h3>What the {p.name} paycheck calculator estimates</h3>
       <p>{stateNotes[p.short]||`${p.name} imposes state income tax rules that affect paycheck withholding.`} The calculator applies the published 2026 state method in addition to IRS federal withholding and FICA. State payroll premiums are displayed separately from state income tax where applicable.</p>
     </section>
     <section>
-      <h3>Inputs to verify</h3>
+      <h3>Paycheck inputs to verify</h3>
       <p>Use taxable annual wages, pay frequency, federal filing status, the state-specific allowances or exemptions shown on your current certificate, retirement contributions, eligible pre-tax benefits, and additional federal withholding. Connecticut users should select the exact CT-W4 code or the no-form fallback. Arizona uses the elected A-4 percentage. Georgia, Utah, and Ohio require a 2026 paycheck or pay-period date because their methods change during the year. A recent pay stub provides the best starting values.</p>
     </section>
     <StateEditorial code={p.short}/>
     <section>
-      <h3>Important exclusions</h3>
+      <h3>What the paycheck estimate excludes</h3>
       <p>Address-specific local income taxes are included only when you enter a planning rate. New York City is a resident calculator, not a calculator for nonresident commuters. Reciprocity, nonresident rules, multiple-job adjustments, credits, employer-paid premium choices, special exemptions, garnishments, and year-to-date wage history may still change an actual paycheck. Review the <a className="text-link" href="/methodology">methodology and official source list</a> before relying on the estimate.</p>
     </section>
     <div className="tool-links">
@@ -352,6 +356,11 @@ function StateEditorial({code}:{code:string}){
     <section><h3>South Carolina 2026 withholding formula</h3><p>The engine follows SCDOR Form WH-1603F. When one or more SC W-4 allowances are claimed, taxable annual wages are reduced by $5,000 per allowance and a standard deduction equal to 10% of gross wages, capped at $7,500. Zero allowances receive neither reduction. Taxable income then uses the official 0%, 3%, and 6% subtraction-method brackets.</p></section>
     <section><h3>SC W-4 inputs and limitations</h3><p>Use the number of South Carolina allowances actually claimed, not federal dependents. The estimate does not include extra South Carolina withholding because the compact form currently provides one extra federal field. Nonresident work arrangements, special exemptions, bonuses, multiple jobs, and changes made after a payroll cutoff can produce a different check.</p></section>
   </>;
+  if(code==="OK")return <>
+    <section><h3>Oklahoma 2026 withholding brackets and OK-W-4 allowances</h3><p>The engine follows the Oklahoma Tax Commission 2026 percentage method (Packet OW-2). Annual wages are reduced by $1,000 for each OK-W-4 allowance, then taxed at 0% up to $10,100, 2.5% to $11,250, 3.5% to $13,550, and 4.5% above that for single employees; married thresholds are exactly double ($20,200, $22,500, and $27,100). Oklahoma HB 2764 lowered the top rate from 4.75% to 4.5% starting with tax year 2026, and the withholding tables reflect that change.</p>
+      <figure className="bracket-figure"><picture><img src="/images/states/oklahoma-2026-withholding-brackets.svg" alt="Oklahoma paycheck calculator 2026 state withholding brackets: single and married percentage-method rates from 0% to 4.5%" width="880" height="400" loading="lazy" decoding="async"/></picture><figcaption>Oklahoma 2026 annual withholding brackets as applied by this paycheck calculator. Source: Oklahoma Tax Commission Packet OW-2.</figcaption></figure></section>
+    <section><h3>Oklahoma paycheck withholding for married employees</h3><p>A married employee who checks the OK-W-4 box to withhold at the higher Single rate is taxed on the single table, which reaches 4.5% at $13,550 instead of $27,100. Use that toggle when both spouses work and want extra state withholding. Any additional Oklahoma dollar amount entered per paycheck is added after the table calculation, and the final per-paycheck figure is rounded to the whole dollar the way the OTC tables are published.</p></section>
+  </>;
   if(code==="NC")return <>
     <section><h3>North Carolina 2026 annualized method</h3><p>The engine follows NCDOR Form NC-30. It subtracts the published $12,750 standard deduction for single or married employees, or $19,125 for head of household, plus $2,500 for each state allowance. The remaining annualized wages are multiplied by the 2026 withholding rate of 4.09%, which consists of the 3.99% individual income-tax rate plus the published 0.1% withholding adjustment.</p></section>
     <section><h3>NC-4 elections and payroll rounding</h3><p>Use allowances from a current Form NC-4 or NC-4 EZ. NCDOR instructs employers to round final per-paycheck withholding under its percentage and annualized methods, so an employer result may differ by small rounding amounts from the annual planning total shown here. Supplemental wages, nonresident rules, pension payments, and extra withholding require separate treatment.</p></section>
@@ -360,5 +369,6 @@ function StateEditorial({code}:{code:string}){
 }
 
 const stateNotes:Record<string,string>={
+ AK:"Alaska has no individual income tax, so a paycheck is reduced only by federal income tax, FICA, and any benefit deductions.",DE:"Delaware withholding annualizes wages, subtracts a standard deduction, applies graduated rates up to 6.6%, then subtracts a $110 credit for each exemption claimed on Form W-4.",DC:"District of Columbia withholding applies a single graduated rate table (4%–10.75%) after subtracting $4,300 for each allowance claimed on Form D-4.",ME:"Maine withholding subtracts $5,300 per W-4ME allowance and a standard deduction that phases out at higher incomes before applying 5.8%, 6.75%, and 7.15% rates.",MS:"Mississippi withholding is a flat 4.0% for 2026 on annualized wages above $10,000 after the standard deduction and the Form 89-350 exemption amount.",MT:"Montana's 2026 withholding formula applies 4.7% and 5.65% brackets directly to gross wages, using the filing status on Form MW-4 instead of allowances.",NH:"New Hampshire has no tax on wages and repealed its interest-and-dividends tax, so only federal taxes and benefit deductions reduce a paycheck.",NM:"New Mexico withholding follows the FYI-104 percentage tables for wages paid in 2026, with rates from 1.5% to 5.9% by federal W-4 filing status.",ND:"North Dakota withholding uses a large zero bracket followed by 1.95% and 2.5% rates for employees with a 2020-or-later Form W-4.",RI:"Rhode Island withholding subtracts $1,000 per RI W-4 exemption (phased out above $290,800 of annual wages) before 3.75%, 4.75%, and 5.99% rates.",SD:"South Dakota has no individual income tax, so only federal income tax, FICA, and benefit deductions come out of a paycheck.",VT:"Vermont withholding subtracts $5,400 per W-4VT allowance and applies 3.35%, 6.6%, 7.6%, and 8.75% rates from the GB-1210 annual table.",WV:"West Virginia withholding subtracts $2,000 per IT-104 exemption and applies the 2026 two-earner percentage table (2.11%–4.58%) unless the one-earner option is elected.",WY:"Wyoming has no individual income tax, so a paycheck is reduced only by federal income tax, FICA, and any benefit deductions.",
  AL:"Alabama uses graduated individual income-tax rules, and some municipalities impose occupational taxes that can affect a paycheck.",AZ:"Arizona uses a state income-tax system with employee withholding elections; the relevant payroll percentage can differ from final annual liability.",AR:"Arkansas uses graduated individual income-tax rules, so one flat planning rate cannot reproduce every bracket and credit.",CA:"California uses graduated income-tax rules and may also withhold employee State Disability Insurance contributions.",CO:"Colorado uses a flat individual income-tax structure, while paid family and medical leave contributions may appear separately on payroll.",CT:"Connecticut uses graduated income-tax rules, and employee paid-leave contributions can appear separately from income-tax withholding.",FL:"Florida does not impose a broad individual state income tax on wages, although federal taxes and benefit deductions still apply.",GA:"Georgia uses a flat individual income-tax structure; payroll results can still vary with allowances, deductions, and credits.",HI:"Hawaii uses graduated individual income-tax brackets and state-specific withholding tables.",ID:"Idaho uses a flat individual income-tax structure, with withholding affected by current state forms and employee elections.",IL:"Illinois uses a flat individual income-tax structure; exemptions and credits can make withholding differ from a simple percentage.",IN:"Indiana uses a flat state income tax and many counties impose an additional county income tax based on residence or work location.",IA:"Iowa uses a flat individual income-tax structure, but taxable wages and withholding elections still affect payroll results.",KS:"Kansas uses graduated individual income-tax rules and state-specific withholding tables.",KY:"Kentucky uses a flat state income tax, while some cities and counties impose occupational or payroll taxes.",LA:"Louisiana uses a flat individual income-tax structure and state-specific withholding rules.",MD:"Maryland combines graduated state income tax with county income tax, making county residence important to paycheck withholding.",MA:"Massachusetts generally uses a flat wage-tax structure, with an additional tax applying to income above a high-income threshold.",MI:"Michigan uses a flat state income tax, and certain cities impose separate city income taxes.",MN:"Minnesota uses graduated withholding brackets and may separately withhold an employee share of the 2026 Paid Leave premium.",MO:"Missouri uses graduated income-tax rules, and Kansas City or St. Louis earnings taxes can affect some workers.",NC:"North Carolina uses a flat individual income-tax structure whose statutory rate has changed through scheduled reductions.",NE:"Nebraska uses graduated individual income-tax rules and state withholding tables.",NV:"Nevada does not impose a broad individual state income tax on wages; other payroll deductions can still apply.",NJ:"New Jersey uses graduated income-tax brackets and may withhold separate employee contributions for state benefit programs.",NY:"New York uses graduated state income-tax rules; New York City and Yonkers may add local withholding.",NYC:"New York City residents may face New York State tax, New York City resident tax, and separate payroll benefit contributions.",OH:"Ohio uses state income-tax rules and many municipalities or school districts impose separate local income taxes.",OK:"Oklahoma uses graduated individual income-tax rules and state-specific withholding tables.",OR:"Oregon uses graduated income-tax rules and may show statewide transit or paid-leave contributions separately.",PA:"Pennsylvania uses a flat state income tax, while municipalities and school districts may impose local earned-income taxes.",SC:"South Carolina uses graduated individual income-tax rules, deductions, and state withholding tables.",TN:"Tennessee does not impose a broad individual income tax on wage income, but federal payroll taxes remain.",TX:"Texas does not impose a broad individual state income tax on wages; federal taxes and employee benefits still reduce take-home pay.",UT:"Utah uses a flat individual income-tax structure, with withholding affected by current state forms and credits.",VA:"Virginia uses graduated individual income-tax brackets and state-specific withholding allowances.",WA:"Washington does not impose a broad individual state income tax on wages, but paid-leave and long-term-care payroll contributions may apply.",WI:"Wisconsin uses graduated individual income-tax brackets and state-specific withholding tables."
 };

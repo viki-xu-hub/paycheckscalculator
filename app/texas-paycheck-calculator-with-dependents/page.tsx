@@ -166,12 +166,14 @@ export default function TexasPaycheckCalculatorWithDependents() {
             Enter your salary and the dependents you claim on your W-4 to see the federal withholding reduction
             and the resulting take-home pay per paycheck.
           </p>
+      </div>
+        <TexasDependentsCalculator />
+        <div className="hero-more">
           <p>
             Texas has no state income tax on wages, so dependents change one line on your stub: federal income
             tax withheld.
           </p>
         </div>
-        <TexasDependentsCalculator />
         <div className="trust-row">
           <span>✓ 2026 W-4 Step 3 amounts</span>
           <span>✓ Per-paycheck impact</span>

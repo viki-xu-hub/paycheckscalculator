@@ -160,13 +160,15 @@ export default function TexasPaycheckCalculatorWithChildSupport() {
             Enter your pay and the number of children on the order to estimate monthly net resources, guideline
             child support, the amount withheld from each paycheck, and what is left to take home.
           </p>
+      </div>
+        <TexasChildSupportCalculator />
+        <div className="hero-more">
           <p>
             The estimate applies the Texas guideline percentages, the{" "}
             {fmt.format(TX_NET_RESOURCES_CAP_MONTHLY)} monthly cap on net resources, and the 50% limit on
             disposable earnings.
           </p>
         </div>
-        <TexasChildSupportCalculator />
         <div className="trust-row">
           <span>✓ 2025 guideline cap</span>
           <span>✓ 50% withholding limit</span>

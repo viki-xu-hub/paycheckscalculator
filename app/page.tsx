@@ -67,13 +67,15 @@ export default function Home() {
         <h1>Paycheck Calculator: Calculate Your Take-Home Pay After Taxes</h1>
         <div className="hero-intro">
           <p>Use our free paycheck calculator to estimate your take-home pay after taxes and payroll deductions.</p>
+      </div>
+        <PaycheckCalculator />
+        <div className="hero-more">
           <p>Whether you are paid weekly, biweekly, semi-monthly, or monthly, our calculator helps you understand how much money you will actually receive in your paycheck.</p>
           <p>Estimate your net pay by accounting for common deductions including federal income tax, state taxes, Social Security, Medicare, and other payroll deductions.</p>
         </div>
-        <PaycheckCalculator />
         <div className="trust-row">
           <span>✓ IRS 2026 percentage method</span>
-          <span>✓ 38 location engines</span>
+          <span>✓ 52 location engines</span>
           <span>✓ No sign-up required</span>
         </div>
         <div className="calc-note">
@@ -154,7 +156,7 @@ export default function Home() {
           <a href="/illinois-paycheck-calculator"><b>Illinois Paycheck Calculator</b><span>Flat tax with exemptions →</span></a>
           <a href="/pennsylvania-paycheck-calculator"><b>Pennsylvania Paycheck Calculator</b><span>Flat rate with local tax options →</span></a>
           <a href="/georgia-paycheck-calculator"><b>Georgia Paycheck Calculator</b><span>Flat rate with allowances →</span></a>
-          <a href="/state-paycheck-calculators"><b>All State Calculators</b><span>Browse all 38 location engines →</span></a>
+          <a href="/state-paycheck-calculators"><b>All State Calculators</b><span>Browse all 52 location engines →</span></a>
         </div>
       </section>
 
@@ -162,7 +164,7 @@ export default function Home() {
       <section className="seo-section">
         <p className="kicker">SALARY TO HOURLY</p>
         <h2>$X a Year Is How Much an Hour?</h2>
-        <p>Paid a salary? Pick your income to see what it works out to per hour, per paycheck and per month — before and after taxes in all 38 supported states.</p>
+        <p>Paid a salary? Pick your income to see what it works out to per hour, per paycheck and per month — before and after taxes in all 52 supported states.</p>
         <div className="tool-links">
           <a href="/salary/40000-after-tax-calculator"><b>$40,000 a Year Is How Much an Hour?</b><span>$19.23 an hour at 40 hrs/week →</span></a>
           <a href="/salary/45000-after-tax-calculator"><b>$45,000 a Year Is How Much an Hour?</b><span>$21.63 an hour at 40 hrs/week →</span></a>
@@ -181,7 +183,7 @@ export default function Home() {
       <section className="seo-section">
         <p className="kicker">HOURLY TO YEARLY</p>
         <h2>$X an Hour Is How Much a Year?</h2>
-        <p>Paid by the hour? Pick your rate to see what it adds up to per year, per month and per paycheck — before and after taxes in all 38 supported states.</p>
+        <p>Paid by the hour? Pick your rate to see what it adds up to per year, per month and per paycheck — before and after taxes in all 52 supported states.</p>
         <div className="tool-links">
           <a href="/hourly/15-paycheck-calculator"><b>$15 an Hour Is How Much a Year?</b><span>$31,200 a year at 40 hrs/week →</span></a>
           <a href="/hourly/17-paycheck-calculator"><b>$17 an Hour Is How Much a Year?</b><span>$35,360 a year at 40 hrs/week →</span></a>

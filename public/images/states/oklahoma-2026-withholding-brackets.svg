@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="400" viewBox="0 0 880 400" role="img" aria-labelledby="t d">
+  <title id="t">Oklahoma 2026 state withholding brackets (annual percentage method)</title>
+  <desc id="d">Single: 0% to $10,100; 2.5% to $11,250; 3.5% to $13,550; 4.5% above. Married: 0% to $20,200; 2.5% to $22,500; 3.5% to $27,100; 4.5% above. Taxable wages are reduced by $1,000 per OK-W-4 allowance.</desc>
+  <style>
+    .h{font:700 22px Georgia,serif;fill:#0f2a44}.k{font:600 11px Helvetica,Arial,sans-serif;fill:#b5322c;letter-spacing:.12em}
+    .s{font:700 15px Helvetica,Arial,sans-serif;fill:#0f2a44}.l{font:13px Helvetica,Arial,sans-serif;fill:#5f7485}
+    .r{font:700 14px Helvetica,Arial,sans-serif;fill:#fff}.n{font:12px Helvetica,Arial,sans-serif;fill:#7a8a98}
+  </style>
+  <rect width="880" height="400" rx="14" fill="#ffffff" stroke="#dfe6ec"/>
+  <text x="40" y="44" class="k">OK 2026 WITHHOLDING · PERCENTAGE METHOD</text>
+  <text x="40" y="76" class="h">Oklahoma paycheck calculator: 2026 state withholding brackets</text>
+  <text x="40" y="100" class="l">Annual taxable wages after $1,000 per OK-W-4 allowance. Source: Oklahoma Tax Commission Packet OW-2 (2026).</text>
+
+  <text x="40" y="146" class="s">Single</text>
+  <rect x="40" y="156" width="190" height="34" fill="#c9d4de"/>
+  <rect x="230" y="156" width="150" height="34" fill="#7a97b3"/>
+  <rect x="380" y="156" width="170" height="34" fill="#3d6a91"/>
+  <rect x="550" y="156" width="290" height="34" fill="#12385c"/>
+  <text x="135" y="178" text-anchor="middle" class="r" fill="#0f2a44" style="fill:#0f2a44">0%</text>
+  <text x="305" y="178" text-anchor="middle" class="r">2.5%</text>
+  <text x="465" y="178" text-anchor="middle" class="r">3.5%</text>
+  <text x="695" y="178" text-anchor="middle" class="r">4.5%</text>
+  <text x="40" y="210" class="n">$0</text>
+  <text x="230" y="210" text-anchor="middle" class="n">$10,100</text>
+  <text x="380" y="210" text-anchor="middle" class="n">$11,250</text>
+  <text x="550" y="210" text-anchor="middle" class="n">$13,550</text>
+  <text x="840" y="210" text-anchor="end" class="n">and above</text>
+
+  <text x="40" y="256" class="s">Married</text>
+  <rect x="40" y="266" width="190" height="34" fill="#c9d4de"/>
+  <rect x="230" y="266" width="150" height="34" fill="#7a97b3"/>
+  <rect x="380" y="266" width="170" height="34" fill="#3d6a91"/>
+  <rect x="550" y="266" width="290" height="34" fill="#12385c"/>
+  <text x="135" y="288" text-anchor="middle" class="r" style="fill:#0f2a44">0%</text>
+  <text x="305" y="288" text-anchor="middle" class="r">2.5%</text>
+  <text x="465" y="288" text-anchor="middle" class="r">3.5%</text>
+  <text x="695" y="288" text-anchor="middle" class="r">4.5%</text>
+  <text x="40" y="320" class="n">$0</text>
+  <text x="230" y="320" text-anchor="middle" class="n">$20,200</text>
+  <text x="380" y="320" text-anchor="middle" class="n">$22,500</text>
+  <text x="550" y="320" text-anchor="middle" class="n">$27,100</text>
+  <text x="840" y="320" text-anchor="end" class="n">and above</text>
+
+  <text x="40" y="366" class="l">Widths not to scale. Base tax at the 3.5% / 4.5% thresholds: Single $28.75 / $109.25 · Married $57.50 / $218.50. Per-paycheck withholding is rounded to the whole dollar.</text>
+</svg>

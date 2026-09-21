@@ -104,6 +104,9 @@ export default function NewJersey() {
           <p>
             Our <strong>New Jersey paycheck calculator</strong> helps you estimate your take-home pay after federal taxes, New Jersey state income tax, Social Security, Medicare, and other payroll deductions including TDI and FLI contributions.
           </p>
+      </div>
+        <PaycheckCalculator defaultState="NJ" navigateOnStateChange />
+        <div className="hero-more">
           <p>
             New Jersey has a progressive state income tax system and requires employee contributions to state benefit programs such as Temporary Disability Insurance (TDI) and Family Leave Insurance (FLI), which affect your final take-home pay.
           </p>
@@ -111,7 +114,6 @@ export default function NewJersey() {
             Enter your salary information to estimate your New Jersey paycheck based on your pay frequency, NJ-W4 elections, deductions, and payroll factors.
           </p>
         </div>
-        <PaycheckCalculator defaultState="NJ" navigateOnStateChange />
         <div className="trust-row">
           <span>✓ 2026 IRS method</span>
           <span>✓ New Jersey graduated withholding</span>

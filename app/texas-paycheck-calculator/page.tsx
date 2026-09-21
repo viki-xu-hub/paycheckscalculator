@@ -123,6 +123,9 @@ export default function Texas() {
           <p>
             Our <strong>Texas paycheck calculator</strong> helps you estimate your take-home pay after federal taxes, Social Security, Medicare, and other payroll deductions.
           </p>
+      </div>
+        <PaycheckCalculator defaultState="TX" navigateOnStateChange />
+        <div className="hero-more">
           <p>
             Because Texas does not have a state income tax on wages, employees generally keep more of their gross income compared with workers in states that collect state income tax.
           </p>
@@ -130,7 +133,6 @@ export default function Texas() {
             Enter your salary information to estimate your Texas paycheck based on your pay frequency, deductions, and payroll factors.
           </p>
         </div>
-        <PaycheckCalculator defaultState="TX" navigateOnStateChange />
         <div className="trust-row">
           <span>✓ 2026 IRS method</span>
           <span>✓ Texas zero state income tax</span>

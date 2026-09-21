@@ -413,7 +413,7 @@
     "abbr": "OK",
     "hasStateTax": true,
     "taxRate": 4.75,
-    "taxType": "graduated income tax (0.25%–4.75%)",
+    "taxType": "graduated income tax (0.25%–4.5%)",
     "taxNotes": "Oklahoma uses graduated income-tax brackets. State-specific withholding tables and Form OK-W-4 elections apply.",
     "taxAgency": "Oklahoma Tax Commission",
     "region": "south"

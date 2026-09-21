@@ -147,13 +147,15 @@ export default async function SalaryCalculatorPage(
             that is {fmt.format(monthly)} a month, {fmt.format(biweekly)} biweekly or {fmt.format(weekly)} a week
             before taxes.
           </p>
+      </div>
+        <PaycheckCalculator defaultState="TX" navigateOnStateChange defaultSalary={s.amount} headingSuffix={` on ${s.label} a year`} />
+        <div className="hero-more">
           <p>
             After taxes, {kLabel} a year is closer to {fmt.format(Math.round(texas.netAnnual))} in a
             no-income-tax state like Texas and {fmt.format(Math.round(worstState.netAnnual))} in {worstState.name}.
-            Enter your state, filing status and deductions below to see your own net paycheck.
+            Enter your state, filing status and deductions above to see your own net paycheck.
           </p>
         </div>
-        <PaycheckCalculator defaultState="TX" navigateOnStateChange defaultSalary={s.amount} headingSuffix={` on ${s.label} a year`} />
         <div className="trust-row">
           <span>2026 IRS Method</span>
           <span>All 50 States</span>
@@ -278,7 +280,7 @@ export default async function SalaryCalculatorPage(
         </section>
       </article>
 
-      {/* 38-State Comparison — real calculated numbers */}
+      {/* 52-State Comparison — real calculated numbers */}
       <article className="long-seo">
         <p className="kicker">TAKE-HOME PAY BY STATE</p>
         <h2>How Much Is {s.label} a Year After Taxes in Each State? (2026)</h2>

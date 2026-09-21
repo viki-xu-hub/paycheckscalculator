@@ -104,6 +104,9 @@ export default function Illinois() {
           <p>
             Our <strong>Illinois paycheck calculator</strong> helps you estimate your take-home pay after federal taxes, Illinois's 4.95% flat state income tax, Social Security, Medicare, and other payroll deductions.
           </p>
+      </div>
+        <PaycheckCalculator defaultState="IL" navigateOnStateChange />
+        <div className="hero-more">
           <p>
             Illinois uses a flat income tax rate rather than a progressive system, which means all taxable wages are taxed at the same 4.95% rate after personal exemptions are applied. This makes Illinois withholding relatively straightforward compared with states that have progressive brackets.
           </p>
@@ -111,7 +114,6 @@ export default function Illinois() {
             Enter your salary information to estimate your Illinois paycheck based on your pay frequency, IL-W-4 allowances, deductions, and payroll factors.
           </p>
         </div>
-        <PaycheckCalculator defaultState="IL" navigateOnStateChange />
         <div className="trust-row">
           <span>✓ 2026 IRS method</span>
           <span>✓ Illinois 4.95% flat withholding</span>

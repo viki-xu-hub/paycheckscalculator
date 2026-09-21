@@ -30,7 +30,7 @@ export function SiteHeader() {
           <div className="nav-panel nav-panel-wide">
             <div>
               <div className="nav-group-label">State Calculators</div>
-              <a href="/state-paycheck-calculators">All 38 States →</a>
+              <a href="/state-paycheck-calculators">All 50 States + DC →</a>
               <a href="/texas-paycheck-calculator">Texas</a>
               <a href="/california-paycheck-calculator">California</a>
               <a href="/new-york-paycheck-calculator">New York</a>
@@ -81,7 +81,7 @@ export function SiteFooter() {
       <div className="partner-zone">
         <span className="partner-zone-label">Partner Zone</span>
         <a className="partner-badge" target="_blank" href="https://beamtools.com/tool/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://beamtools.com/assets/images/badge.png" alt="Beam Tools" height="54" loading="lazy" />
+          <img src="https://beamtools.com/assets/images/badge.png" alt="Beam Tools" width="185" height="54" loading="lazy" />
         </a>
         <a className="partner-badge" target="_blank" href="https://devhub.best/projects/paycheck-atlas?utm_source=badge" rel="noopener noreferrer">
           <img src="https://r2.direasy-multi-tenant.focusapps.app/uploads/616d0b1a-3979-4b8c-94d1-b4f1fedd3ead/1783239702078/53yqmim54zv/featured-on-light.svg" alt="Featured on DevHub" width="150" height="44" loading="lazy" />
@@ -99,7 +99,7 @@ export function SiteFooter() {
           <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Huzzler Embed Badge" width="159" height="55" loading="lazy" />
         </a>
         <a href="https://dailypings.com/p/paycheck-calculator-calculate-your-take" target="_blank" rel="noopener" title="Featured on DailyPings" className="partner-badge">
-          <img src="https://dailypings.com/badge.svg" alt="Featured on DailyPings" width="179" height="32" />
+          <img src="https://dailypings.com/badge.svg" alt="Featured on DailyPings" width="179" height="32" loading="lazy" />
         </a>
         <a href="https://buildvoyage.com/products/paychecks-calculator?ref=badge" target="_blank" rel="noopener" className="partner-badge partner-badge-buildvoyage">
           <img src="https://buildvoyage.com/images/featured_badge.png" alt="Featured on BuildVoyage" width="250" height="167" loading="lazy" />
@@ -125,7 +125,7 @@ export function SiteFooter() {
         />
         <span className="partner-badge">
           <a href="https://neeed.directory" target="_blank" rel="noopener">
-            <img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on neeed.directory" width="139" />
+            <img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on neeed.directory" width="139" height="44" loading="lazy" />
           </a>
         </span>
         {/* Raw HTML keeps NxGn's snippet verbatim (inline styles included); the CSS below overrides the inline 48px height. */}

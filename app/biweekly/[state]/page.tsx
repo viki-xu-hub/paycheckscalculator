@@ -134,6 +134,9 @@ export default async function BiweeklyStateCalculatorPage(
             estimate your 2026 take-home pay after federal income tax, Social Security,
             Medicare, and {noTax ? "payroll deductions" : `${loc.name} state income tax`}.
           </p>
+      </div>
+        <PaycheckCalculator defaultState={loc.short as SupportedState} defaultFrequency="biweekly" navigateOnStateChange />
+        <div className="hero-more">
           <p>
             A biweekly pay schedule means 26 paychecks per year.{" "}
             {noTax
@@ -141,7 +144,6 @@ export default async function BiweeklyStateCalculatorPage(
               : `${loc.name} withholds state income tax from each biweekly paycheck in addition to federal taxes.`}
           </p>
         </div>
-        <PaycheckCalculator defaultState={loc.short as SupportedState} defaultFrequency="biweekly" navigateOnStateChange />
         <div className="trust-row">
           <span>2026 IRS Method</span>
           <span>26 Pay Periods</span>

@@ -139,12 +139,14 @@ export default function TexasPaycheckCalculatorWithBonus() {
             Enter your salary and bonus to see the bonus take-home amount after federal withholding, Social
             Security, and Medicare. Texas withholds no state income tax on wages, so nothing else comes out.
           </p>
+      </div>
+        <TexasBonusCalculator />
+        <div className="hero-more">
           <p>
             Switch between the two methods employers use — a separate bonus check withheld at a flat{" "}
             {(SUPPLEMENTAL_FLAT_RATE * 100).toFixed(0)}%, or a bonus added to a regular paycheck.
           </p>
         </div>
-        <TexasBonusCalculator />
         <div className="trust-row">
           <span>✓ 2026 IRS supplemental rules</span>
           <span>✓ Both withholding methods</span>

@@ -104,6 +104,9 @@ export default function California() {
           <p>
             Our <strong>California paycheck calculator</strong> helps you estimate your take-home pay after federal taxes, California state income tax, State Disability Insurance (SDI), Social Security, Medicare, and other payroll deductions.
           </p>
+      </div>
+        <PaycheckCalculator defaultState="CA" navigateOnStateChange />
+        <div className="hero-more">
           <p>
             California has a progressive state income tax system and requires SDI contributions from most employees, which can significantly affect your net pay compared with states that have no income tax or lower payroll deductions.
           </p>
@@ -111,7 +114,6 @@ export default function California() {
             Enter your salary information to estimate your California paycheck based on your pay frequency, DE 4 allowances, deductions, and payroll factors.
           </p>
         </div>
-        <PaycheckCalculator defaultState="CA" navigateOnStateChange />
         <div className="trust-row">
           <span>✓ 2026 IRS method</span>
           <span>✓ California EDD withholding method</span>

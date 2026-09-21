@@ -108,6 +108,9 @@ export default async function StateCalculatorPage(
             after federal taxes, Social Security, Medicare, and{" "}
             {s.hasStateTax ? `${s.name} state income tax` : "other payroll deductions"}.
           </p>
+      </div>
+        <PaycheckCalculator defaultState={s.abbr as SupportedState} navigateOnStateChange />
+        <div className="hero-more">
           {s.hasStateTax ? (
             <p>
               {s.name} imposes {s.taxType} on wages. Your actual take-home pay depends on
@@ -123,7 +126,6 @@ export default async function StateCalculatorPage(
           )}
           <p>Enter your salary information below to estimate your {s.name} paycheck.</p>
         </div>
-        <PaycheckCalculator defaultState={s.abbr as SupportedState} navigateOnStateChange />
         <div className="trust-row">
           <span>2026 IRS Method</span>
           <span>Source-Backed Calculations</span>

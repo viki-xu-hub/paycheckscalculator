@@ -1,4 +1,4 @@
-export type LocationInfo = { slug:string; name:string; short:string; rate:number; noTax?:boolean; city?:boolean; aliases:string[] };
+export type LocationInfo = { slug:string; name:string; short:string; rate:number; noTax?:boolean; city?:boolean; aliases:string[]; seoName?:string };
 
 export const locations: LocationInfo[] = [
   {slug:"alabama-paycheck-calculator",name:"Alabama",short:"AL",rate:5,aliases:["alabama paycheck calculator"]},
@@ -39,5 +39,19 @@ export const locations: LocationInfo[] = [
   {slug:"virginia-paycheck-calculator",name:"Virginia",short:"VA",rate:5.75,aliases:["virginia paycheck calculator","va paycheck calculator"]},
   {slug:"washington-paycheck-calculator",name:"Washington",short:"WA",rate:0,noTax:true,aliases:["washington paycheck calculator","washington state paycheck calculator","paycheck calculator washington"]},
   {slug:"wisconsin-paycheck-calculator",name:"Wisconsin",short:"WI",rate:5.3,aliases:["wisconsin paycheck calculator"]},
+  {slug:"alaska-paycheck-calculator",name:"Alaska",short:"AK",rate:0,noTax:true,aliases:["alaska paycheck calculator"]},
+  {slug:"delaware-paycheck-calculator",name:"Delaware",short:"DE",rate:5.55,aliases:["delaware paycheck calculator"]},
+  {slug:"washington-dc-paycheck-calculator",name:"Washington DC",seoName:"DC",short:"DC",rate:6.5,aliases:["dc paycheck calculator", "washington dc paycheck calculator"]},
+  {slug:"maine-paycheck-calculator",name:"Maine",short:"ME",rate:6.75,aliases:["maine paycheck calculator", "paycheck calculator maine"]},
+  {slug:"mississippi-paycheck-calculator",name:"Mississippi",short:"MS",rate:4,aliases:["mississippi paycheck calculator", "ms paycheck calculator", "paycheck calculator mississippi"]},
+  {slug:"montana-paycheck-calculator",name:"Montana",short:"MT",rate:4.7,aliases:["montana paycheck calculator"]},
+  {slug:"nh-paycheck-calculator",name:"New Hampshire",seoName:"NH",short:"NH",rate:0,noTax:true,aliases:["nh paycheck calculator", "new hampshire paycheck calculator", "paycheck calculator nh"]},
+  {slug:"new-mexico-paycheck-calculator",name:"New Mexico",short:"NM",rate:4.7,aliases:["new mexico paycheck calculator", "nm paycheck calculator", "paycheck calculator new mexico"]},
+  {slug:"north-dakota-paycheck-calculator",name:"North Dakota",short:"ND",rate:1.95,aliases:["north dakota paycheck calculator"]},
+  {slug:"rhode-island-paycheck-calculator",name:"Rhode Island",short:"RI",rate:3.75,aliases:["rhode island paycheck calculator", "ri paycheck calculator", "paycheck calculator rhode island"]},
+  {slug:"south-dakota-paycheck-calculator",name:"South Dakota",short:"SD",rate:0,noTax:true,aliases:["south dakota paycheck calculator"]},
+  {slug:"vermont-paycheck-calculator",name:"Vermont",short:"VT",rate:3.35,aliases:["vermont paycheck calculator"]},
+  {slug:"wv-paycheck-calculator",name:"West Virginia",seoName:"WV",short:"WV",rate:4.22,aliases:["wv paycheck calculator", "paycheck calculator wv", "west virginia paycheck calculator"]},
+  {slug:"wyoming-paycheck-calculator",name:"Wyoming",short:"WY",rate:0,noTax:true,aliases:["wyoming paycheck calculator"]},
 ];
 export const locationBySlug = Object.fromEntries(locations.map(x=>[x.slug,x]));

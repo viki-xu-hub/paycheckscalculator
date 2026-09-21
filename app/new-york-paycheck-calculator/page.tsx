@@ -104,6 +104,9 @@ export default function NewYork() {
           <p>
             Our <strong>New York paycheck calculator</strong> helps you estimate your take-home pay after federal taxes, New York state income tax, Social Security, Medicare, and other payroll deductions. An NYC resident option is available for employees living in New York City.
           </p>
+      </div>
+        <PaycheckCalculator defaultState="NY" navigateOnStateChange />
+        <div className="hero-more">
           <p>
             New York has a progressive state income tax system, and New York City residents pay an additional city income tax on top of state taxes, which can significantly reduce take-home pay compared with states that have lower or no income tax.
           </p>
@@ -111,7 +114,6 @@ export default function NewYork() {
             Enter your salary information to estimate your New York paycheck based on your pay frequency, NYC residency status, deductions, and payroll factors.
           </p>
         </div>
-        <PaycheckCalculator defaultState="NY" navigateOnStateChange />
         <div className="trust-row">
           <span>✓ 2026 IRS method</span>
           <span>✓ New York state withholding method</span>
