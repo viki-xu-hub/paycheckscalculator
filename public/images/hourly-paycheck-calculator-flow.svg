@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" role="img" aria-labelledby="t d">
+  <title id="t">How an hourly paycheck calculator turns an hourly wage into take-home pay</title>
+  <desc id="d">Hourly rate times hours worked gives gross pay; federal income tax, Social Security, Medicare and state tax are subtracted to reach net pay per paycheck.</desc>
+  <style>
+    .box{fill:#fff;stroke:#e4e7ec;stroke-width:1.5}
+    .accent{fill:#4a63e7}
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 22px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .w{font:700 15px Arial,Helvetica,sans-serif;fill:#fff}
+    .arrow{stroke:#9aa3b2;stroke-width:2;fill:none;marker-end:url(#m)}
+  </style>
+  <defs><marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa3b2"/></marker></defs>
+  <rect width="880" height="300" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="40" text-anchor="middle" class="h">Hourly paycheck calculator: from hourly wage to take-home pay (example: $25/hour, 40 hours, biweekly)</text>
+
+  <rect x="30" y="80" width="190" height="130" rx="10" class="box"/>
+  <text x="125" y="112" text-anchor="middle" class="s">Step 1 · Gross pay</text>
+  <text x="125" y="146" text-anchor="middle" class="n">$25 × 80 hrs</text>
+  <text x="125" y="178" text-anchor="middle" class="h">= $2,000</text>
+
+  <path d="M222 145 H268" class="arrow"/>
+
+  <rect x="272" y="80" width="336" height="130" rx="10" class="box"/>
+  <text x="440" y="112" text-anchor="middle" class="s">Step 2 · Withholding taken from the paycheck</text>
+  <text x="300" y="146" class="s">Federal income tax (2026 W-4 tables)</text>
+  <text x="300" y="168" class="s">Social Security 6.2% + Medicare 1.45%</text>
+  <text x="300" y="190" class="s">State income tax (52 location engines)</text>
+
+  <path d="M610 145 H656" class="arrow"/>
+
+  <rect x="660" y="80" width="190" height="130" rx="10" class="accent"/>
+  <text x="755" y="112" text-anchor="middle" class="w" opacity=".85">Step 3 · Take-home pay</text>
+  <text x="755" y="150" text-anchor="middle" class="w" style="font-size:26px">≈ $1,691</text>
+  <text x="755" y="180" text-anchor="middle" class="w" opacity=".85">net per biweekly check</text>
+
+  <text x="440" y="250" text-anchor="middle" class="s">Overtime hours are paid at 1.5× the hourly rate before taxes are applied. 401(k) and pre-tax benefits lower taxable wages.</text>
+  <text x="440" y="274" text-anchor="middle" class="s">Illustrative Texas example with a single filer and no pre-tax deductions; your state changes the result.</text>
+</svg>

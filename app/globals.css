@@ -205,3 +205,12 @@ footer { background:#09233b; color:white; min-height:145px; padding:36px max(24p
 @media (max-width:760px){ .hero h1{font-size:24px} .hero-intro{font-size:14px} }
 .section-heading p:not(.panel-title) { display:none; }
 .section-heading { align-items:center; }
+/* hub-page data table + inline FAQ inside .long-seo */
+.table-wrap { overflow-x:auto; margin:14px 0; }
+.table-wrap table { width:100%; border-collapse:collapse; font-size:14px; }
+.table-wrap th,.table-wrap td { padding:10px 12px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+.table-wrap th { font-size:12px; color:var(--muted); font-weight:600; }
+.long-seo details { border-top:1px solid var(--line); padding:12px 0; }
+.long-seo details:first-of-type { border-top:0; }
+.long-seo summary { cursor:pointer; font-weight:600; color:var(--ink); }
+.long-seo details p { margin:8px 0 0; }
