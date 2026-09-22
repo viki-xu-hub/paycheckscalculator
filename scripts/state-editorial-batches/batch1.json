@@ -1,0 +1,280 @@
+[
+ {
+  "code": "AL",
+  "intro": "Alabama payroll can include more than state withholding because occupational taxes may apply in some municipalities. This Alabama paycheck calculator separates the state line from an entered occupational rate so you can see what is reducing each check.",
+  "taxSummary": "Alabama uses graduated income-tax brackets from 2% to 5%, with withholding administered by the Alabama Department of Revenue. The calculator applies its Alabama 2026 single formula and adds any occupational rate you enter. Because the state tax is graduated, the amount withheld does not simply equal one percentage of every dollar of wages. Municipal occupational taxes can create another payroll deduction, so location can matter even when two Alabama employees earn the same salary.",
+  "sections": [
+   {
+    "h3": "Why an Alabama occupational tax can change your result",
+    "p": "Your Alabama state withholding is not necessarily the last state-related line to consider. Some Alabama municipalities impose occupational taxes, so an employee working in one location can see a different paycheck from someone earning the same salary elsewhere. The calculator handles this by keeping the Alabama formula and your entered occupational rate separate. The four examples here deliberately assume no local tax was entered, which makes them useful baselines. If an occupational tax applies to your job, enter it rather than treating the example net pay as your expected deposit. Because these local rules are separate from the statewide graduated income tax, they can explain differences between the calculator's default result and an actual payroll record."
+   },
+   {
+    "h3": "Following an Alabama biweekly paycheck from salary to deposit",
+    "p": "Consider the $65,000 single example. Biweekly gross pay is $2,500.00. The engine subtracts $216.15 of federal income tax, $155.00 of Social Security, $36.25 of Medicare, and $104.96 of Alabama state income tax. That leaves $1,987.63 per paycheck, or $51,678.50/year. The effective state rate shown by the engine is 4.20%. At $45,000 single, Alabama withholding falls to $71.12 per paycheck and the resulting net is $1,403.40. Those examples illustrate why you should not estimate Alabama withholding by applying the top bracket rate directly to gross wages: the calculator uses the state withholding formula instead."
+   },
+   {
+    "h3": "What the federal W-4 does not control in Alabama",
+    "p": "Federal withholding and Alabama withholding are separate calculations. Changes to your federal W-4 can alter the federal income-tax line without automatically producing the same change in Alabama state withholding. The engine examples use federal W-4 Step 2 unchecked and no allowances, which gives you a consistent comparison point. Alabama's own calculation is handled through the calculator's state formula, while an occupational rate can be entered separately. When you are recreating a paycheck, keep those inputs distinct instead of trying to make one federal setting account for every deduction. That separation also makes troubleshooting easier: if only the Alabama line differs from what you expect, focus on the state and occupational inputs rather than changing unrelated federal settings."
+   },
+   {
+    "h3": "How income changes Alabama withholding under graduated brackets",
+    "p": "Alabama's 2%–5% graduated structure means the state line can rise differently from gross wages. In the single examples, annual salary moves from $45,000 to $65,000 while Alabama withholding changes from $71.12 to $104.96 per biweekly paycheck. The effective state rates shown are 4.11% and 4.20%. For married filing jointly, the $90,000 example produces $142.23 of Alabama withholding and $2,806.81 net pay, while the $130,000 example produces $209.92 of Alabama withholding and $3,975.27 net pay. The important point is that filing status and the withholding formula matter; Alabama's bracket range is not a single payroll percentage that can be multiplied by salary."
+   },
+   {
+    "h3": "Why your Alabama pay stub may not match the baseline examples",
+    "p": "The engine examples intentionally remove several variables: they use biweekly payroll, no 401(k), no pre-tax benefits, federal W-4 Step 2 unchecked, and no local tax entered. Your employer's payroll can therefore differ even when your salary matches one of the examples. An occupational tax is an especially relevant Alabama difference because the calculator's method explicitly supports an entered occupational rate. Pre-tax deductions can also change the wage base used by payroll calculations. Use the examples as controlled reference cases rather than universal paycheck amounts. If your state line is unexpectedly different, compare your payroll setup with the assumptions first, then check whether an occupational deduction or other employer-plan deduction is present."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is Alabama withholding not simply 5% of my paycheck?",
+    "a": "Alabama uses graduated income-tax brackets from 2% to 5%, and the calculator applies the Alabama withholding formula rather than multiplying gross pay by the highest rate. For example, the $65,000 single case produces $104.96 of Alabama state income tax on a $2,500.00 biweekly paycheck."
+   },
+   {
+    "q": "Can an Alabama city tax appear on my paycheck?",
+    "a": "Some Alabama municipalities impose occupational taxes that can affect payroll. The calculator's Alabama method allows an occupational rate to be entered separately from state withholding. The supplied engine examples contain no local tax, so add the applicable occupational input when you need to model one."
+   },
+   {
+    "q": "Why does changing federal withholding not necessarily fix my Alabama withholding?",
+    "a": "Federal income-tax withholding and Alabama state withholding are separate calculations. The examples use federal W-4 Step 2 unchecked, while the state line comes from the Alabama formula. If the discrepancy is specifically on your Alabama line, review the state and occupational inputs rather than assuming the federal W-4 controls it."
+   },
+   {
+    "q": "What does the Alabama calculator assume for its example paychecks?",
+    "a": "The examples use biweekly payroll with 26 pay periods, no 401(k), no pre-tax benefits, federal W-4 Step 2 unchecked, and no local tax entered. That controlled setup makes the four salary examples useful for comparison, but an actual paycheck can include additional deductions."
+   }
+  ],
+  "needsVerification": [
+   "Some Alabama municipalities impose occupational taxes that can affect employee payroll withholding."
+  ]
+ },
+ {
+  "code": "AZ",
+  "intro": "Arizona withholding gives employees an unusual degree of control because Form A-4 uses an elected withholding percentage. This Arizona paycheck calculator models that election separately from the state's 2.5% flat income-tax structure.",
+  "taxSummary": "Arizona has a 2.5% flat income tax administered by the Arizona Department of Revenue, but paycheck withholding is driven by the percentage an employee elects on Form A-4. The calculator's method uses an A-4 elected rate of 2.0% and can include an entered additional amount. That distinction matters: the percentage withheld from a paycheck does not have to equal the state's final income-tax rate. Changing the A-4 election can therefore change current withholding without changing the underlying state tax structure.",
+  "sections": [
+   {
+    "h3": "Why Arizona's Form A-4 percentage matters more than the headline rate",
+    "p": "Arizona's state income tax is flat at 2.5%, but the engine examples do not simply deduct 2.5% from every paycheck. The calculator uses the method labeled \"AZ Form A-4 elected rate (2.0%) + entered additional amount.\" That is why the $65,000 single example shows $50.00 of Arizona state income tax on $2,500.00 of biweekly gross pay. The engine reports an effective state rate of 2.00% for each supplied example. When recreating your own paycheck, distinguish between Arizona's income-tax rate and the withholding percentage selected for payroll. They describe related but different things: one describes the state tax structure, while the other determines how much the employer sends from each check under the selected setup."
+   },
+   {
+    "h3": "Reading the deductions on an Arizona $45,000 example",
+    "p": "At $45,000 with single filing status, the engine calculates $1,730.77 of gross pay every two weeks. Federal income tax removes $123.85, followed by $107.31 for Social Security and $25.10 for Medicare. Arizona withholding is $34.62 under the A-4 election used by the engine. The resulting deposit is $1,439.90 per paycheck, equivalent to $37,437.50/year in this scenario. Compare that with the $65,000 example, where Arizona withholding becomes $50.00 and net pay is $2,042.60. The examples make the A-4 mechanism visible: the Arizona line follows the elected withholding setup rather than being presented as a graduated bracket calculation."
+   },
+   {
+    "h3": "Arizona's A-4 and your federal W-4 control different lines",
+    "p": "Do not treat Form A-4 as an Arizona version of the federal W-4 that automatically mirrors every federal choice. Your federal settings determine federal withholding, while the Arizona election controls the state withholding calculation. The supplied examples keep federal W-4 Step 2 unchecked so that variable remains consistent. If you change an Arizona A-4 election, the state line can move even if the federal line does not. Likewise, changing a federal setting does not mean the Arizona percentage should change. Keeping the two forms conceptually separate is particularly useful when you are checking a payroll discrepancy: identify which tax line looks wrong first, then review the form and inputs responsible for that line."
+   },
+   {
+    "h3": "How Arizona withholding scales in the married examples",
+    "p": "The married filing jointly examples show the same elected-rate behavior at higher earnings. At $90,000, gross biweekly pay is $3,461.54 and Arizona state income tax is $69.23. After $247.69 of federal income tax, $214.62 of Social Security, and $50.19 of Medicare, the engine returns $2,879.81 of net pay. At $130,000, gross pay reaches $5,000.00 and the Arizona line is $100.00, producing $4,085.19 net pay. Both cases show a 2.00% effective state rate in the engine. That consistency comes from the calculator's selected A-4 withholding percentage, not from a claim that Arizona's underlying income-tax rate is 2.00%."
+   },
+   {
+    "h3": "When an Arizona paycheck estimate can diverge from payroll",
+    "p": "The supplied Arizona examples are intentionally clean comparisons: biweekly pay, 26 pay periods, no 401(k), no pre-tax benefits, federal W-4 Step 2 unchecked, and no local tax entered. Your paycheck can depart from those assumptions. Most importantly for Arizona, your Form A-4 election may not match the 2.0% election used by the engine examples, and you may request an additional withholding amount. Employer benefits can also change the payroll calculation. When comparing the calculator with an actual check, first confirm the A-4 election being modeled. A salary match alone is not enough to guarantee the same Arizona withholding result."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Arizona withholding rate differ from the 2.5% state tax rate?",
+    "a": "Arizona employees elect a withholding percentage on Form A-4, so paycheck withholding can differ from the state's 2.5% flat income-tax rate. The calculator examples use a 2.0% A-4 election, which is why the $65,000 example shows exactly $50.00 of Arizona withholding on $2,500.00 gross pay."
+   },
+   {
+    "q": "What Arizona form changes the amount withheld from my paycheck?",
+    "a": "Form A-4 controls the Arizona withholding election used by payroll. The calculator models an elected percentage and can also include an additional amount. Your federal W-4 remains a separate input for federal income-tax withholding."
+   },
+   {
+    "q": "Can I have additional Arizona tax withheld from each paycheck?",
+    "a": "The calculator's Arizona method explicitly includes an entered additional amount alongside the A-4 elected rate. If you use an additional withholding election, include that amount when modeling your paycheck rather than relying only on the percentage election."
+   },
+   {
+    "q": "Why does the Arizona example show a 2.00% effective state rate?",
+    "a": "The four engine examples use a 2.0% Form A-4 elected withholding rate. That produces a 2.00% effective state rate in those examples. It should not be confused with Arizona's 2.5% flat state income-tax rate, because paycheck withholding and final tax structure are not identical concepts."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "AR",
+  "intro": "Arkansas payroll uses graduated taxation plus a withholding calculation with mechanics that are easy to miss when estimating by hand. This Arkansas paycheck calculator incorporates the 2026 formula, its $50 midpoint treatment, and AR4EC credits.",
+  "taxSummary": "Arkansas uses graduated income-tax brackets from 2% to 4.4%, administered by the Arkansas Department of Finance and Administration. The calculator applies the \"Arkansas 2026 formula with $50 midpoint and AR4EC credits.\" That means a simple salary-times-rate calculation does not reproduce the state withholding line. Income level and state withholding elections influence the result, while the midpoint and credit mechanics are part of the payroll formula itself. The supplied examples isolate those mechanics by excluding local taxes and pre-tax benefits.",
+  "sections": [
+   {
+    "h3": "What Arkansas's $50 midpoint means for the calculator method",
+    "p": "Arkansas has an unusual calculation detail built directly into the engine: the 2026 method uses a $50 midpoint along with AR4EC credits. You therefore should not expect a hand calculation based only on the 2%–4.4% bracket range to land on the same withholding amount. The midpoint is part of the method the calculator applies before presenting the Arkansas line. This becomes especially relevant when comparing a calculated result with payroll software, because two methods that appear to use the same headline tax brackets can still differ if one omits a state-specific mechanical step. The calculator identifies its method explicitly so you can distinguish a formula difference from an error in gross pay or filing status."
+   },
+   {
+    "h3": "How Arkansas withholding changes between two single salaries",
+    "p": "The $45,000 single example begins with $1,730.77 in biweekly gross pay. The engine deducts $123.85 of federal income tax, $107.31 of Social Security, $25.10 of Medicare, and $46.42 of Arkansas state income tax, leaving $1,428.10. At $65,000, gross biweekly pay becomes $2,500.00 and Arkansas withholding rises to $74.88, while net pay becomes $2,017.71. The effective state rate moves from 2.68% to 3.00%. That change reflects the graduated nature of Arkansas income tax and the state's withholding formula. It also shows why scaling the first paycheck proportionally will not necessarily reproduce the second one."
+   },
+   {
+    "h3": "Where AR4EC fits into Arkansas paycheck withholding",
+    "p": "AR4EC credits are part of the withholding method identified in the calculator. They belong to the Arkansas side of the payroll calculation rather than the federal W-4 calculation. The engine examples keep federal W-4 Step 2 unchecked and use no allowances, providing a common federal setup while Arkansas is calculated under its own method. If you are comparing an actual pay stub with an estimate, avoid adjusting federal settings merely because the Arkansas line differs. First make sure the state withholding elections represented in your calculation match payroll. State-specific credits can affect the Arkansas result even when gross wages and federal settings are otherwise identical."
+   },
+   {
+    "h3": "Arkansas married filing jointly examples show the graduated effect",
+    "p": "At $90,000 married filing jointly, the engine calculates $3,461.54 of biweekly gross pay and $110.46 of Arkansas state income tax. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19, producing $2,838.58 of net pay. At $130,000, gross pay is $5,000.00 and Arkansas withholding increases to $178.42, with $4,006.77 remaining after the listed deductions. The engine's effective state rate moves from 3.19% to 3.57%. Those figures illustrate the effect of a graduated system: the state line does not remain at one fixed percentage as earnings increase."
+   },
+   {
+    "h3": "Why pre-tax benefits can alter an Arkansas estimate",
+    "p": "The four Arkansas examples assume no 401(k) contribution and no pre-tax benefits. If your employer deducts eligible benefits before calculating part of your taxable payroll, your state withholding result can differ from these baseline cases even when the stated salary is identical. That is separate from the AR4EC credit and midpoint mechanics already built into the calculator's state method. When testing an actual paycheck, reproduce the deductions and state elections rather than comparing salary alone. This is particularly useful when the gross salary looks correct but the Arkansas withholding line does not: the difference may come from the wage base or state setup rather than the published bracket range."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does Arkansas paycheck withholding use a $50 midpoint?",
+    "a": "The calculator's 2026 Arkansas method specifically includes a $50 midpoint as part of its withholding formula. It is a calculation mechanic rather than an extra tax charged to you. Leaving that step out can cause a hand calculation to differ from the engine result."
+   },
+   {
+    "q": "What are AR4EC credits doing in the Arkansas calculator?",
+    "a": "AR4EC credits are included in the state withholding method used by the calculator. They affect the Arkansas calculation separately from federal W-4 withholding, so you should review the state setup when the Arkansas line differs from payroll."
+   },
+   {
+    "q": "What does a $45,000 salary look like in the Arkansas example?",
+    "a": "For the supplied single, biweekly scenario, $45,000 produces $1,730.77 of gross pay per check. Arkansas state income tax is $46.42 and the final net is $1,428.10 after the federal income tax, Social Security, Medicare, and Arkansas withholding shown by the engine."
+   },
+   {
+    "q": "Why does Arkansas's effective state rate rise in the examples?",
+    "a": "Arkansas uses graduated income-tax brackets rather than one flat rate. In the supplied examples, the effective state rate changes as income and filing status change. The calculator also applies its state-specific midpoint and AR4EC mechanics instead of estimating withholding from the headline bracket range alone."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "CO",
+  "intro": "Colorado has a flat income tax, but the state line is not the only Colorado-specific deduction that can appear on payroll. This Colorado paycheck calculator also accounts for the 2026 FAMLI employee premium.",
+  "taxSummary": "Colorado uses a 4.4% flat income tax administered by the Colorado Department of Revenue. For paycheck calculations, the engine uses \"CO DR 1098 + 2026 FAMLI employee premium,\" so state income-tax withholding and the FAMLI payroll premium appear as distinct deductions. The premium is not presented as additional Colorado income tax. Because both can reduce the same paycheck, separating them is useful when reconciling an estimate with payroll. The supplied examples include both Colorado state withholding and state payroll premiums.",
+  "sections": [
+   {
+    "h3": "Why Colorado FAMLI appears separately from state income tax",
+    "p": "Colorado's FAMLI deduction is a state payroll premium, not another income-tax bracket. The calculator therefore displays it separately from Colorado state income tax. In the $65,000 single example, the state income-tax line is $100.69 while state payroll premiums are $11.00. Treating those as one tax would make it harder to understand a real pay stub and could cause you to misdiagnose a difference. The engine's method explicitly combines CO DR 1098 with the 2026 FAMLI employee premium while preserving separate deduction lines. When you compare results with payroll, check both Colorado-specific amounts rather than looking only for one combined state deduction."
+   },
+   {
+    "h3": "A Colorado $90,000 paycheck shows both state deductions in action",
+    "p": "For $90,000 married filing jointly, the engine starts with $3,461.54 of biweekly gross pay. It calculates $247.69 of federal income tax, $214.62 of Social Security, and $50.19 of Medicare. Colorado state income tax contributes another $133.69, while state payroll premiums add $15.23. The resulting net is $2,800.12 per paycheck, or $72,803.00/year. Compare that with the $130,000 married example: Colorado income tax rises to $201.38 and state payroll premiums to $22.00, leaving $3,961.81 from $5,000.00 of gross pay. Keeping those two Colorado lines distinct makes the progression easier to understand."
+   },
+   {
+    "h3": "How pre-tax deductions can affect the Colorado state line",
+    "p": "The engine's four Colorado examples assume no 401(k) contribution and no pre-tax benefits. Your own payroll may include deductions that change wages used in tax calculations, so matching the example salary does not guarantee an identical Colorado withholding amount. This matters when evaluating the 4.4% flat tax: a flat statutory rate does not mean every pay stub must display exactly 4.4% of gross wages as its state withholding line. Payroll methods and the wage base still matter. Enter your benefits consistently when modeling a real check, and remember that the FAMLI premium is shown separately rather than folded into the Colorado income-tax amount."
+   },
+   {
+    "h3": "Colorado hourly and salary workers use the same state framework",
+    "p": "Colorado's withholding framework applies to wages regardless of whether you think of your compensation as an annual salary or an hourly rate. What changes is the amount of wages reaching each payroll calculation. If your hours vary, use the hourly paycheck calculator to model the gross earnings for the period before examining Colorado withholding and FAMLI. The supplied examples use fixed annual salaries converted to biweekly payroll across 26 pay periods, so they are cleaner than a variable-hours paycheck. For hourly workers, overtime or changing schedules can make each check different even when the underlying Colorado withholding method remains the same."
+   },
+   {
+    "h3": "What to inspect when a Colorado pay stub differs from the calculator",
+    "p": "Start by separating the discrepancy into categories. If federal income tax differs, review federal inputs. If Colorado income tax differs, focus on the state calculation and taxable wages. If the unexplained amount is on a state payroll-program line, compare it with the FAMLI component instead of treating it as income tax. The examples use biweekly payroll, federal W-4 Step 2 unchecked, no 401(k), no pre-tax benefits, and no local tax entered. Those controlled assumptions make comparison easier, but they will not reproduce every employer setup. A difference can therefore come from payroll inputs even when the calculator's Colorado method is being applied correctly."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Colorado pay stub show FAMLI?",
+    "a": "Colorado FAMLI can appear as a separate employee payroll premium. The calculator keeps that amount apart from Colorado state income tax. In the $65,000 single example, state income tax is $100.69 while state payroll premiums are $11.00, showing the two deductions independently."
+   },
+   {
+    "q": "Is the Colorado FAMLI deduction included in the state tax line?",
+    "a": "Not in these calculator results. The engine method includes both CO DR 1098 and the 2026 FAMLI employee premium, but the output identifies the premium separately from Colorado state income tax. That makes it easier to compare each line with payroll."
+   },
+   {
+    "q": "Why isn't Colorado withholding exactly 4.4% of my gross paycheck?",
+    "a": "Colorado has a 4.4% flat income-tax rate, but payroll withholding is calculated under the state's withholding method rather than displayed as a simple gross-pay multiplication in every scenario. Pre-tax payroll inputs can also affect the wages used in the calculation."
+   },
+   {
+    "q": "Does the Colorado example include a 401(k) contribution?",
+    "a": "No. All four supplied Colorado examples assume no 401(k) and no pre-tax benefits. They also use biweekly payroll, 26 pay periods, federal W-4 Step 2 unchecked, and no local tax entered, so adding employer-plan deductions can change your result."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "CT",
+  "intro": "Connecticut withholding can be unusually sensitive to the state setup because CT-W4 coding affects the payroll calculation. This Connecticut paycheck calculator uses a no-CT-W4 fallback and also separates Paid Leave from state income tax.",
+  "taxSummary": "Connecticut uses graduated income-tax brackets from 3% to 6.99%, administered by the Connecticut Department of Revenue Services. Employees normally select a CT-W4 withholding code, but the calculator's stated method is \"Connecticut no-CT-W4 fallback (6.99%) + Paid Leave.\" That fallback is crucial when interpreting these examples: they are not presented as a personalized CT-W4 result. The engine also includes a separate state payroll premium for Paid Leave, so the Connecticut income-tax line and payroll-program line should be read independently.",
+  "sections": [
+   {
+    "h3": "What Connecticut's no-CT-W4 fallback means for these results",
+    "p": "The calculator explicitly labels its method as a no-CT-W4 fallback using 6.99% plus Paid Leave. That assumption should be the first thing you check before comparing the examples with an actual Connecticut paycheck. Employees can have CT-W4 withholding codes, while these examples model the fallback rather than a specific employee code. As a result, a real state withholding line may differ even when salary and federal filing status appear to match. Do not solve that difference by changing unrelated federal settings. Instead, determine whether your payroll uses a CT-W4 election that is not represented by the fallback. The method label tells you exactly which Connecticut state setup the engine is modeling."
+   },
+   {
+    "h3": "Connecticut Paid Leave is not the same line as income-tax withholding",
+    "p": "The engine lists Connecticut Paid Leave as a state payroll premium instead of merging it with state income tax. At $45,000 single, Connecticut state income tax is $120.98 and state payroll premiums are $8.65. At $65,000, those lines become $174.75 and $12.50. Keeping them separate matters when reading a pay stub because one amount comes from the income-tax withholding calculation and the other represents a state payroll program. If your total Connecticut-related deductions seem higher than the state tax line you expected, check whether you are comparing both components. The calculator's effective state rate reflects the modeled state deductions in the engine output."
+   },
+   {
+    "h3": "Breaking down Connecticut's $90,000 married example",
+    "p": "A $90,000 married filing jointly salary produces $3,461.54 of biweekly gross pay in the engine. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. The Connecticut state income-tax line is $241.96 under the no-CT-W4 fallback, with another $17.31 in state payroll premiums. The final net is $2,689.77 per paycheck, or $69,934.00/year. At $130,000 married filing jointly, Connecticut withholding increases to $349.50 and state payroll premiums to $25.00, producing $3,810.69 net pay. These examples are most useful when read together with the fallback assumption rather than as universal Connecticut payroll amounts."
+   },
+   {
+    "h3": "Why the federal W-4 cannot substitute for Connecticut's CT-W4",
+    "p": "The federal W-4 and Connecticut's state withholding setup govern different calculations. The examples hold federal W-4 Step 2 unchecked, but the Connecticut line is calculated using the engine's no-CT-W4 fallback. Changing the federal form can change federal income tax without resolving a mismatch caused by the Connecticut state setup. When reproducing an actual paycheck, first identify whether the difference appears in federal withholding, Connecticut withholding, or the Paid Leave premium. That tells you which input deserves attention. This separation is especially important in Connecticut because the presence or absence of a CT-W4 election can materially change how closely a generic fallback resembles your employer's payroll calculation."
+   },
+   {
+    "h3": "Connecticut paycheck estimates depend on more than annual salary",
+    "p": "Each supplied example uses 26 biweekly pay periods, no 401(k), no pre-tax benefits, no local tax, and the same federal Step 2 assumption. Those choices deliberately remove variables so the Connecticut calculation can be compared across incomes. An actual employee may have a different CT-W4 code or employer-plan deductions, either of which can make the state line diverge from the examples. Pay frequency can also change the amount processed in an individual payroll period. Use the example closest to your income as a reference point, but reproduce your payroll inputs when you need a closer estimate rather than assuming annual salary alone determines Connecticut withholding."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is Connecticut withholding so high in these examples?",
+    "a": "The calculator uses a specific \"no-CT-W4 fallback (6.99%) + Paid Leave\" method. That means the examples are based on the fallback rather than a personalized CT-W4 code. For $45,000 single, the modeled Connecticut income-tax line is $120.98 plus $8.65 of state payroll premiums."
+   },
+   {
+    "q": "What happens if I have a CT-W4 but the calculator uses the fallback?",
+    "a": "Your actual withholding may differ because the engine examples specifically assume the no-CT-W4 fallback. A CT-W4 withholding code can change the state calculation. Compare your state election with the calculator assumption before treating a difference as a payroll error."
+   },
+   {
+    "q": "Why are there two Connecticut-related deductions in the result?",
+    "a": "The calculator separates Connecticut state income tax from the Paid Leave payroll premium. They are different payroll components, so combining them into one state-tax figure would hide why money is being withheld and make comparison with a pay stub more difficult."
+   },
+   {
+    "q": "Does the $1,905.35 Connecticut net-pay example include Paid Leave?",
+    "a": "Yes. The $65,000 single example starts with $2,500.00 gross pay and includes $174.75 of Connecticut state income tax plus $12.50 of state payroll premiums. After the listed federal income tax, Social Security, Medicare, and Connecticut deductions, the engine returns $1,905.35 net pay."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "GA",
+  "intro": "Georgia's 2026 payroll calculation has a timing detail that matters: the withholding rate used by the engine is effective May 11, 2026. This Georgia paycheck calculator applies that method while keeping federal and state withholding inputs distinct.",
+  "taxSummary": "Georgia uses a 5.39% flat income-tax structure administered by the Georgia Department of Revenue. Payroll withholding can also respond to allowances, deductions, and credits claimed through Form G-4. For 2026, the calculator identifies its method as the \"Georgia withholding rate effective May 11, 2026.\" That effective date matters when comparing calculations from different parts of the year. The supplied engine examples use the same post-change method, biweekly payroll, no pre-tax benefits, and federal W-4 Step 2 unchecked.",
+  "sections": [
+   {
+    "h3": "Why May 11 matters for a Georgia 2026 paycheck",
+    "p": "The calculator does not treat 2026 as one uniform year for Georgia. Its method label reads \"Georgia withholding rate effective May 11, 2026.\" If you are checking a paycheck from around a method change, the payroll date and the method being applied can therefore matter. A calculation produced with the post-May 11 method should not automatically be expected to reproduce a paycheck calculated under an earlier setup. This is a state-specific reason for a mismatch even when salary and filing status are unchanged. For the examples on this page, interpret every Georgia withholding figure as an output of the method identified as effective May 11, 2026."
+   },
+   {
+    "h3": "How Georgia's Form G-4 differs from your federal W-4",
+    "p": "Georgia's state withholding setup and your federal W-4 serve different payroll calculations. Form G-4 can reflect state allowances, deductions, and credits, while the federal W-4 controls federal income-tax withholding. The supplied examples keep federal W-4 Step 2 unchecked so the federal assumption is consistent across salaries. If you change a G-4 election, the Georgia line may change without a corresponding movement in federal withholding. That distinction is useful when checking an employer's calculation: identify whether the disagreement is on the federal or Georgia line before changing inputs. Using the correct form for the correct tax avoids compensating for a state discrepancy by deliberately making the federal calculation inaccurate."
+   },
+   {
+    "h3": "Tracing a Georgia $65,000 salary through one biweekly check",
+    "p": "At $65,000 single, the engine converts the salary to $2,500.00 of biweekly gross pay. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Georgia state income tax under the calculator's 2026 method is $95.96. After those deductions, net pay is $1,996.63 per paycheck, or $51,912.50/year. Compare that with $45,000 single: gross pay is $1,730.77, Georgia withholding is $57.58, and net pay is $1,416.94. The effective state rates shown by the engine are 3.84% and 3.33%, illustrating why the paycheck line does not simply appear as 5.39% of gross wages."
+   },
+   {
+    "h3": "Why Georgia's flat tax does not produce one identical payroll percentage",
+    "p": "A flat state income-tax structure does not mean every employee's withholding line must equal the headline rate multiplied directly by gross pay. Georgia payroll results can reflect the withholding method and G-4 elections, including allowances, deductions, and credits. The married filing jointly examples demonstrate the difference. At $90,000, Georgia state income tax is $143.94 and the engine reports a 4.16% effective state rate. At $130,000, the state line is $220.71 and the effective state rate is 4.41%. The underlying state structure remains flat at 5.39%, but the paycheck calculation is a withholding process rather than a simple statement of final annual tax liability."
+   },
+   {
+    "h3": "What can make your Georgia result differ from the engine examples",
+    "p": "The examples deliberately assume biweekly pay across 26 periods, no 401(k), no pre-tax benefits, no local tax entered, and federal W-4 Step 2 unchecked. Your G-4 setup can also differ from the assumptions represented by the engine. In addition, the calculator uses the Georgia withholding rate effective May 11, 2026, so comparing it with a paycheck calculated under another 2026 method can create a difference. Work through those variables before concluding that gross salary is wrong. A useful comparison keeps the pay frequency, state elections, benefits, and applicable withholding method aligned with the actual payroll period you are trying to reproduce."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What changed for Georgia withholding on May 11, 2026?",
+    "a": "The calculator applies the Georgia withholding rate effective May 11, 2026, which is the method the Georgia Department of Revenue published for paychecks dated on or after that day. A paycheck issued earlier in 2026 was withheld under the previous method, so compare checks from the two periods separately instead of expecting identical Georgia lines."
+   },
+   {
+    "q": "Why is my Georgia withholding not exactly 5.39% of gross pay?",
+    "a": "Georgia has a 5.39% flat income-tax structure, but paycheck withholding is calculated through the state's payroll method and can reflect Form G-4 allowances, deductions, and credits. In the $65,000 example, the engine calculates $95.96 of Georgia withholding from $2,500.00 of biweekly gross pay."
+   },
+   {
+    "q": "Does Georgia Form G-4 replace the federal W-4?",
+    "a": "No. Form G-4 is used for Georgia state withholding, while the federal W-4 governs federal income-tax withholding. The calculator keeps those calculations separate, which is why changing a state election should not be treated as the same action as changing your federal setup."
+   },
+   {
+    "q": "What net pay does the Georgia calculator show at $130,000 married filing jointly?",
+    "a": "The supplied biweekly example starts with $5,000.00 gross pay. It includes $432.31 of federal income tax, $310.00 of Social Security, $72.50 of Medicare, and $220.71 of Georgia state income tax, leaving $3,964.48 per paycheck."
+   }
+  ],
+  "needsVerification": []
+ }
+]

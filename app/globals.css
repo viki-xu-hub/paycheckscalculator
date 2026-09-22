@@ -216,3 +216,6 @@ footer { background:#09233b; color:white; min-height:145px; padding:36px max(24p
 .long-seo details p { margin:8px 0 0; }
 .seo-section .rate-grid { margin-top:22px; }
 .seo-section .rate-grid b { font-size:15px; }
+/* "Assumptions" toggle in the calculator result note; the note itself only mounts after the click */
+.note-toggle { background:none; border:0; padding:0; margin-left:4px; color:inherit; font:inherit; text-decoration:underline; cursor:pointer; }
+.result-note.assumptions { margin-top:8px; }

@@ -1,0 +1,283 @@
+[
+ {
+  "code": "HI",
+  "intro": "Hawaii’s wide graduated tax range makes state withholding move noticeably as earnings rise. This Hawaii paycheck calculator uses the 2026 Booklet A method and can reflect employer-plan deductions when estimating the state line.",
+  "taxSummary": "Hawaii uses graduated income-tax brackets from 1.4% to 11%, with withholding administered by the Hawaii Department of Taxation. State withholding follows Hawaii-specific tables rather than one flat percentage of every paycheck. The calculator uses the method labeled \"Hawaii Booklet A 2026 + entered employer-plan deductions.\" Because the brackets rise with income, both earnings and the payroll deductions included in the calculation can affect how much Hawaii income tax is withheld during a pay period.",
+  "sections": [
+   {
+    "h3": "How Hawaii’s graduated brackets show up as earnings rise",
+    "p": "Hawaii’s 1.4%–11% range does not mean one of those rates is simply multiplied by your entire paycheck. Withholding follows the state’s graduated structure and Booklet A method. You can see the progression in the single examples: at $45,000, Hawaii income-tax withholding is $77.30 per biweekly check and the effective state rate is 4.47%. At $65,000, the state deduction rises to $134.63 and the effective state rate becomes 5.39%. The change is larger than you would get by assuming every Hawaii worker has one common withholding percentage. That makes taxable wages especially relevant when you are estimating a Hawaii paycheck at different income levels."
+   },
+   {
+    "h3": "Following a $130,000 Hawaii paycheck deduction by deduction",
+    "p": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. Federal income tax takes $432.31, Social Security takes $310.00, and Medicare takes $72.50. Hawaii state income tax adds another $281.98, bringing the resulting paycheck to $3,903.21 and the annual net to $101,483.52. The effective state rate in this example is 5.64%. Compare that with $90,000 married filing jointly, where Hawaii withholding is $166.65 and net pay is $2,782.39 from $3,461.54 of gross biweekly pay. The difference demonstrates how Hawaii’s graduated calculation changes as taxable earnings move upward."
+   },
+   {
+    "h3": "Why employer-plan deductions matter in Hawaii’s calculation",
+    "p": "The Hawaii method used here explicitly accommodates entered employer-plan deductions. That matters because a deduction that changes the wages subject to Hawaii withholding can also change the state income-tax line. The four reference cases contain no 401(k) contribution and no pre-tax benefits, so they provide clean salary comparisons. When you add qualifying payroll benefits to your own calculation, do not assume the Hawaii deduction must remain identical to the corresponding salary example. Hawaii’s graduated brackets make changes to taxable wages potentially more visible than a simple flat-rate model would suggest. Enter employer-plan deductions according to how they are treated by payroll rather than subtracting them from the final paycheck after calculating state withholding."
+   },
+   {
+    "h3": "Hawaii withholding differs between single and married examples",
+    "p": "Filing status interacts with Hawaii’s graduated withholding calculation. The $65,000 single example produces $134.63 of Hawaii withholding on $2,500.00 of biweekly gross pay, with an effective state rate of 5.39%. At $90,000 married filing jointly, gross pay is substantially higher at $3,461.54, yet Hawaii withholding is $166.65 and the effective state rate is 4.81%. The comparison shows why salary alone does not tell you which percentage to apply to a Hawaii paycheck. The withholding tables account for the payroll setup used in the calculation. When estimating a change in earnings or household filing status, recalculate the state line instead of scaling an earlier Hawaii deduction proportionally."
+   },
+   {
+    "h3": "Using Hawaii’s method for hourly and variable-pay work",
+    "p": "Hourly employees can use the same Hawaii withholding framework after determining the wages for the pay period. If your schedule changes from one check to another, start with the earnings for that period using the hourly paycheck calculator, then let the Hawaii Booklet A calculation determine the state withholding. This is different from the four salary examples, which use biweekly payroll across 26 pay periods. Variable hours can therefore create changing state deductions even though Hawaii’s tax rules have not changed. The graduated structure also means a larger paycheck does not have to preserve the same effective Hawaii withholding percentage as a smaller one, particularly when taxable earnings move through different parts of the withholding calculation."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does Hawaii withhold more as my income increases?",
+    "a": "Hawaii uses graduated income-tax brackets from 1.4% to 11%. As taxable earnings increase, more of the calculation can fall into higher portions of the graduated structure. In the single examples, Hawaii withholding rises from $77.30 at $45,000 to $134.63 at $65,000."
+   },
+   {
+    "q": "What Hawaii withholding method does the calculator use?",
+    "a": "The calculator uses \"Hawaii Booklet A 2026 + entered employer-plan deductions.\" This applies Hawaii’s state-specific withholding method rather than treating the paycheck as though one flat tax percentage applies to all wages."
+   },
+   {
+    "q": "Can pre-tax benefits change Hawaii income-tax withholding?",
+    "a": "Employer-plan deductions can matter when they change the wages used for Hawaii withholding. The calculator method specifically supports entered employer-plan deductions, so qualifying payroll deductions should be represented in the calculation rather than being treated only as reductions after tax."
+   },
+   {
+    "q": "What is Hawaii withholding on the $90,000 married example?",
+    "a": "At $90,000 married filing jointly, the example has $3,461.54 of biweekly gross pay and $166.65 of Hawaii state income tax. After $247.69 of federal income tax, $214.62 of Social Security, and $50.19 of Medicare, the paycheck is $2,782.39."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "ID",
+  "intro": "Idaho combines a flat state tax with a withholding method that rounds the paycheck calculation to whole dollars. This Idaho paycheck calculator follows the 2026 percentage method, so small rounding differences are part of the state-specific calculation.",
+  "taxSummary": "Idaho has a 5.8% flat income tax administered by the Idaho State Tax Commission. Employees use Idaho Form ID W-4 for state withholding elections and allowances. The calculator applies the \"Idaho 2026 percentage method (whole-dollar paycheck rounding).\" That rounding convention helps explain why the state deductions in the examples appear as whole-dollar amounts. A flat income-tax structure also does not mean the paycheck deduction will simply equal 5.8% of gross wages, because the withholding method and ID W-4 elections affect the calculation.",
+  "sections": [
+   {
+    "h3": "Why Idaho withholding appears in whole dollars",
+    "p": "Idaho’s 2026 percentage method uses whole-dollar paycheck rounding, an unusual detail worth preserving when you compare calculations. That is visible throughout the examples: Idaho withholding is $61.00, $102.00, $122.00, and $204.00 rather than amounts extending into cents. The rounding belongs to the withholding calculation; it does not mean every other payroll deduction is rounded the same way. Federal income tax, Social Security, and Medicare still appear with cents in these examples. If your own hand calculation lands slightly above or below the Idaho result, check whether you applied the state’s whole-dollar paycheck rounding convention before assuming the underlying tax calculation is different."
+   },
+   {
+    "h3": "How Idaho Form ID W-4 shapes state withholding",
+    "p": "Idaho Form ID W-4 provides the state elections and allowances used for Idaho withholding. Those choices belong to the Idaho calculation rather than simply copying whatever appears on your federal W-4. The state has a 5.8% flat income tax, but the withholding examples show effective state rates below that headline figure because payroll withholding follows the state percentage method and applicable elections. At $45,000 single with no allowances, for example, Idaho withholding is $61.00 per biweekly paycheck and the effective state rate is 3.52%. Your ID W-4 setup therefore matters when estimating the amount that will actually appear as Idaho income-tax withholding during the year."
+   },
+   {
+    "h3": "Idaho’s $65,000 example from gross pay to deposit",
+    "p": "A $65,000 single salary produces $2,500.00 of gross pay on the biweekly schedule used here. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Idaho withholding is $102.00 after application of the state percentage method and its whole-dollar rounding. The resulting paycheck is $1,990.60, with $51,755.50/year remaining under this setup. At $45,000 single, Idaho withholding is $61.00 and the paycheck is $1,413.52 from $1,730.77 of gross pay. The comparison shows the state deduction rising with earnings even though Idaho’s underlying income-tax structure is described as flat."
+   },
+   {
+    "h3": "Why Idaho’s 5.8% rate is not your paycheck withholding percentage",
+    "p": "A flat 5.8% income tax can sound as though Idaho payroll should always remove exactly that share of gross wages, but the paycheck examples show why that shortcut fails. The $130,000 married filing jointly case has $5,000.00 of biweekly gross pay and $204.00 of Idaho state income tax, producing an effective state rate of 4.08%. At $90,000 married filing jointly, Idaho withholding is $122.00 and the effective state rate is 3.52%. The calculator is applying Idaho’s withholding percentage method rather than using gross wages as the only input. ID W-4 elections and the state’s calculation mechanics determine the payroll amount that is withheld."
+   },
+   {
+    "h3": "Idaho paycheck frequency changes the amount processed each time",
+    "p": "The reference salaries are calculated biweekly across 26 pay periods, which determines the gross wages presented to Idaho’s withholding method on each check. If you are paid on a different schedule, the amount processed during each payroll period will differ even when annual compensation is unchanged. Hourly workers can first calculate period earnings with the hourly paycheck calculator and then apply the Idaho withholding inputs. Whole-dollar rounding also occurs at the paycheck calculation level, so changing the payroll pattern can affect the individual amounts you see during the year. Avoid dividing one of the biweekly Idaho deductions into another frequency and assuming that produces the state’s payroll calculation."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is Idaho state withholding rounded to whole dollars?",
+    "a": "The calculator follows the Idaho 2026 percentage method with whole-dollar paycheck rounding. That is why the example state deductions appear as amounts such as $61.00 and $102.00 even though federal payroll deductions in the same examples include cents."
+   },
+   {
+    "q": "Why isn't Idaho withholding exactly 5.8% of my gross wages?",
+    "a": "The 5.8% figure describes Idaho’s flat income-tax structure, while paycheck withholding follows the state percentage method and your ID W-4 elections. For example, the $130,000 married case produces $204.00 of Idaho withholding from $5,000.00 of biweekly gross pay."
+   },
+   {
+    "q": "Which form controls my Idaho state withholding elections?",
+    "a": "Idaho uses Form ID W-4 for state withholding elections and allowances. Those inputs affect the state calculation, so the Idaho withholding amount can differ between employees even when their gross wages are similar."
+   },
+   {
+    "q": "What does the $45,000 Idaho paycheck example produce?",
+    "a": "At $45,000 single with no allowances, biweekly gross pay is $1,730.77. Idaho state income tax is $61.00, and after the listed federal income tax, Social Security, Medicare, and Idaho withholding, the example produces $1,413.52 per paycheck."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "IN",
+  "intro": "Where you live or work can add another layer to Indiana payroll because county income tax sits alongside the flat state tax. This Indiana paycheck calculator lets you include a county planning rate rather than treating statewide withholding as the entire local picture.",
+  "taxSummary": "Indiana combines a 3.05% flat state income tax with county income taxes. The Indiana Department of Revenue administers the state system, while county tax can add another amount based on residence or work location. The calculator uses \"Indiana 2026 exemptions + entered county planning rate.\" Its four reference paychecks have no local tax entered, so their Indiana line reflects the state calculation without an added county amount. Entering the relevant county planning rate changes the estimate beyond those baseline figures.",
+  "sections": [
+   {
+    "h3": "How Indiana county tax changes the paycheck calculation",
+    "p": "Indiana payroll has a location-sensitive component that a statewide tax rate alone cannot capture. Most counties impose an additional county income tax, and residence or work location can affect which local amount applies. The calculator therefore provides an entered county planning rate alongside its Indiana state calculation. The reference examples leave that local input empty, making them useful for seeing the statewide result before county tax is added. If a county tax applies to you, entering it will reduce the estimated paycheck beyond the amounts shown in those examples. This is why two Indiana employees with the same salary and similar state elections can still see different total income-tax deductions when their county circumstances differ."
+   },
+   {
+    "h3": "Indiana’s flat state rate stays consistent across the examples",
+    "p": "The four examples show a 2.95% effective state rate under the calculator’s 2026 withholding setup. At $45,000 single, Indiana withholding is $51.06 from $1,730.77 of biweekly gross pay. At $65,000 single, it becomes $73.75 from $2,500.00. The married filing jointly cases continue the pattern: $102.12 of state withholding at $90,000 and $147.50 at $130,000. These amounts are the state component with no local tax entered. Once a county planning rate is included, the overall Indiana-related payroll deduction can differ even though the statewide income-tax structure itself remains flat at 3.05%."
+   },
+   {
+    "h3": "Walking through Indiana’s $90,000 married paycheck",
+    "p": "At $90,000 married filing jointly, the biweekly paycheck begins at $3,461.54. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. Indiana state income tax contributes $102.12 under the calculator’s 2026 exemption method. With no county tax entered, the resulting paycheck is $2,846.92 and the annual net is $74,020.00. At $130,000 married filing jointly, Indiana withholding rises to $147.50 and net pay becomes $4,037.69 from $5,000.00 gross pay. If county income tax applies, both of these baseline paycheck amounts would need the local component included for a location-specific estimate."
+   },
+   {
+    "h3": "Living and working in different Indiana counties can matter",
+    "p": "An Indiana employee who crosses a county line for work has an extra detail to resolve before estimating local withholding. County income taxes can depend on residence or work location, so simply entering the county where the employer’s office sits may not capture your situation. The calculator’s county field is best treated as a planning input after identifying the local rate applicable to your payroll circumstances. This issue is specific to Indiana’s combination of a statewide flat tax and county-level taxation. It also means that changing jobs without changing salary can alter the local portion of a paycheck if the move changes which county rules apply."
+   },
+   {
+    "h3": "How Indiana exemptions fit beside the county planning rate",
+    "p": "The calculator labels its state method \"Indiana 2026 exemptions + entered county planning rate,\" which highlights two different pieces of the estimate. Indiana exemptions affect the state withholding calculation, while the county planning rate represents the local layer. Keeping those components distinct helps you see why the state line in the reference cases does not include every possible Indiana income-tax deduction. For example, the $65,000 single case produces $73.75 of Indiana state income tax and $2,018.85 net pay with no local tax entered. Adding an applicable county amount changes the paycheck without changing the statewide 3.05% tax structure."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does Indiana have a county tax on my paycheck?",
+    "a": "Indiana combines its flat state income tax with county income taxes. Most counties impose an additional county rate, and residence or work location can affect the applicable local amount. The calculator lets you enter a county planning rate separately from the statewide calculation."
+   },
+   {
+    "q": "Does the Indiana calculator include county tax automatically?",
+    "a": "The four reference examples contain no local tax. The calculator method supports an entered county planning rate, so you need to include the applicable local input when you want an estimate that reflects county income tax."
+   },
+   {
+    "q": "Why is the Indiana state line $73.75 at a $65,000 salary?",
+    "a": "In the $65,000 single example, biweekly gross pay is $2,500.00 and Indiana state income tax is $73.75 under the 2026 exemption method. With the other listed federal deductions and no local tax entered, the resulting paycheck is $2,018.85."
+   },
+   {
+    "q": "Can working in a different Indiana county change my paycheck?",
+    "a": "County income tax can depend on residence or work location, so county circumstances can affect the local portion of Indiana payroll withholding. That local layer is separate from the statewide flat income-tax calculation and should be represented through the county planning input."
+   }
+  ],
+  "needsVerification": [
+   "Most Indiana counties impose an additional county income tax, with residence or work location relevant to determining the applicable county tax."
+  ]
+ },
+ {
+  "code": "IA",
+  "intro": "Iowa’s state tax is flat, but taxable wages and the annual allowance entered from IA W-4 still shape paycheck withholding. This Iowa paycheck calculator uses the 2026 formula rather than applying 3.8% directly to each gross check.",
+  "taxSummary": "Iowa uses a 3.8% flat income tax administered by the Iowa Department of Revenue. Employees use Form IA W-4 for state withholding elections, including an annual allowance that feeds into the paycheck calculation. The calculator applies the \"Iowa 2026 formula with entered IA W-4 annual allowance.\" Because that formula works from taxable wages and state elections, the amount withheld can represent a lower effective percentage than 3.8% of gross earnings. The examples show that effective percentage changing as income rises.",
+  "sections": [
+   {
+    "h3": "How Iowa’s IA W-4 annual allowance affects the state line",
+    "p": "Iowa’s withholding method includes an entered annual allowance from Form IA W-4. That input affects the state calculation before the paycheck result is produced, so it should not be treated as an after-tax adjustment. The state’s 3.8% flat income tax describes the tax structure, while the withholding formula determines what comes out of each check. This distinction is visible in the examples, where effective state rates range from 2.70% to 3.42% rather than appearing as 3.8% of gross pay every time. If your IA W-4 election changes, recalculate the Iowa withholding amount instead of assuming the previous state deduction should remain proportional to salary."
+   },
+   {
+    "h3": "Why Iowa’s effective withholding percentage rises with these salaries",
+    "p": "The single examples show how the Iowa formula behaves as earnings increase. At $45,000, Iowa state income tax is $46.77 per biweekly paycheck and the effective state rate is 2.70%. At $65,000, the state line rises to $76.00 and the effective state rate becomes 3.04%. The same pattern continues in the married examples: $112.54 at $90,000 with a 3.25% effective state rate, then $171.00 at $130,000 with a 3.42% effective state rate. Iowa’s underlying rate remains flat at 3.8%; the changing effective percentages come from how the withholding formula applies to taxable wages under the payroll setup."
+   },
+   {
+    "h3": "A closer look at Iowa’s $130,000 married example",
+    "p": "For $130,000 married filing jointly, the calculator starts with $5,000.00 of biweekly gross pay. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Iowa state income tax is $171.00. Those deductions leave $4,014.19 per paycheck, equivalent to $104,369.00/year under this setup. Compare that with the $90,000 married example, where gross pay is $3,461.54 and Iowa withholding is $112.54, leaving $2,836.50. The comparison shows why multiplying a previous Iowa withholding amount by the percentage increase in salary is not a reliable substitute for running the state’s 2026 formula again."
+   },
+   {
+    "h3": "What pre-tax payroll choices can do to Iowa taxable wages",
+    "p": "Iowa withholding is calculated from taxable wages, so payroll deductions that change those wages can also change the Iowa state line. The salary examples contain no 401(k) contribution and no pre-tax benefits, which lets you see the state formula without those additional payroll inputs. If your compensation includes qualifying pre-tax deductions, represent them before judging the Iowa withholding amount against one of these examples. This matters even with a flat 3.8% state income tax because withholding is not simply calculated from the salary printed in an employment offer. The taxable amount presented to the Iowa formula and the IA W-4 annual allowance both participate in the result."
+   },
+   {
+    "h3": "Iowa hourly pay still runs through the same withholding formula",
+    "p": "If you earn an hourly wage, first determine the earnings included in the payroll period using the hourly paycheck calculator. Iowa’s state formula then works from the taxable wages and IA W-4 information for that check. The examples here use annual salaries paid biweekly over 26 periods, so each one begins with a predictable gross amount. An hourly schedule can produce more variation because the wages presented to the Iowa calculation can change from check to check. That does not turn Iowa’s flat tax into a graduated tax; it simply means the payroll withholding calculation is being applied to different taxable wage amounts during the year."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What does the IA W-4 annual allowance do to my Iowa paycheck?",
+    "a": "The annual allowance entered from Form IA W-4 is part of Iowa’s withholding calculation. It helps determine the state amount taken from each paycheck, so changing that state election can change Iowa withholding even when your gross salary remains the same."
+   },
+   {
+    "q": "Why is Iowa withholding below 3.8% in the calculator examples?",
+    "a": "The 3.8% figure describes Iowa’s flat income-tax rate, while paycheck withholding follows the 2026 formula using taxable wages and the IA W-4 annual allowance. At $45,000 single, for example, Iowa withholding is $46.77 and the effective state rate is 2.70%."
+   },
+   {
+    "q": "What is the Iowa state deduction at $65,000 single?",
+    "a": "At $65,000 single, biweekly gross pay is $2,500.00 and Iowa state income tax is $76.00. After $216.15 of federal income tax, $155.00 of Social Security, and $36.25 of Medicare, the example produces $2,016.60 in net pay."
+   },
+   {
+    "q": "Can an IA W-4 change Iowa withholding without changing my salary?",
+    "a": "Yes. Iowa’s calculator method includes the annual allowance entered from IA W-4. Because that state election participates directly in the withholding formula, a different allowance can change the Iowa line even when the underlying wage amount stays unchanged."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "KS",
+  "intro": "Kansas uses graduated withholding, so the state deduction does not stay at one percentage as pay changes. This Kansas paycheck calculator follows the KW-100 annual percentage method and reflects the state elections that determine paycheck withholding.",
+  "taxSummary": "Kansas has graduated income-tax brackets from 3.1% to 5.7%, administered by the Kansas Department of Revenue. Employees use Form K-4 for state withholding elections, while the calculator applies the \"Kansas KW-100 annual percentage method.\" The calculation converts payroll information through the Kansas withholding method rather than applying the top bracket to the entire check. Because the system is graduated, changes in earnings and filing circumstances can move the effective state withholding percentage as well as the dollar amount taken from each paycheck.",
+  "sections": [
+   {
+    "h3": "What Kansas Form K-4 controls on your paycheck",
+    "p": "Form K-4 provides Kansas-specific withholding elections used by payroll. Those elections feed into the state calculation governed by Kansas withholding rules, while federal withholding follows its own process. For Kansas planning, the important point is that the K-4 information belongs inside the state calculation rather than being treated as a generic payroll preference. The calculator then applies the KW-100 annual percentage method. Because Kansas uses graduated brackets from 3.1% to 5.7%, the result can change as taxable earnings and the state setup change. Updating a K-4 election therefore calls for a fresh Kansas calculation rather than simply adding or subtracting a fixed percentage from a previous paycheck."
+   },
+   {
+    "h3": "Kansas’s graduated structure is visible in the single examples",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Kansas state income tax is $65.82, producing an effective state rate of 3.80%. At $65,000 single, gross pay rises to $2,500.00 and Kansas withholding becomes $108.74, with the effective state rate increasing to 4.35%. That movement is consistent with a graduated withholding structure rather than one fixed payroll percentage. It also shows why applying the first example’s effective rate to a higher salary would miss part of the Kansas calculation. When income changes, run the KW-100 method again so the state withholding reflects the earnings presented to the calculation."
+   },
+   {
+    "h3": "From $3,461.54 gross to net pay in the Kansas married example",
+    "p": "The $90,000 married filing jointly example begins with $3,461.54 of biweekly gross pay. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. Kansas state income tax is $129.43 under the KW-100 annual percentage method. After those deductions, the paycheck is $2,819.61, with $73,309.85/year remaining in this scenario. At $130,000 married filing jointly, Kansas withholding rises to $215.28 and net pay becomes $3,969.92 from $5,000.00 gross pay. The effective state rate also changes from 3.74% to 4.31%, reflecting the graduated calculation."
+   },
+   {
+    "h3": "Kansas withholding can react differently to filing status and income",
+    "p": "A useful comparison is $65,000 single against $90,000 married filing jointly. The higher-income married example has $129.43 of Kansas withholding compared with $108.74 for the single example, but its effective state rate is lower: 3.74% instead of 4.35%. That illustrates why income alone cannot tell you the percentage that will appear on a Kansas paycheck. Filing circumstances and the state withholding method both matter. Kansas’s 3.1%–5.7% bracket range describes the graduated system, but the paycheck result comes from the KW-100 calculation. Use the appropriate filing setup instead of carrying an effective percentage from one household situation into another."
+   },
+   {
+    "h3": "Why Kansas pay frequency matters for hourly workers",
+    "p": "Kansas withholding is applied through an annual percentage method, while payroll still begins with the wages associated with each check. If your hours fluctuate, use the hourly paycheck calculator to establish the earnings for the period before calculating the Kansas state line. The salary examples use 26 biweekly pay periods, producing fixed gross amounts such as $2,500.00 for the $65,000 example. A worker with variable hours may present a different wage amount to the withholding calculation each payday. The Kansas tax structure has not changed when that happens; the payroll input has. Recalculating each scenario is more reliable than dividing or multiplying one biweekly Kansas deduction to approximate another pay pattern."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What is Kansas Form K-4 used for?",
+    "a": "Form K-4 provides the state withholding elections used for Kansas payroll. Those elections feed into the Kansas calculation, which the calculator handles using the KW-100 annual percentage method and the state’s graduated income-tax structure."
+   },
+   {
+    "q": "Why does my Kansas withholding percentage change as income rises?",
+    "a": "Kansas uses graduated income-tax brackets from 3.1% to 5.7%. In the single examples, the effective state rate moves from 3.80% at $45,000 to 4.35% at $65,000, so the state deduction does not behave like one fixed percentage of every paycheck."
+   },
+   {
+    "q": "What Kansas tax is withheld at $90,000 married filing jointly?",
+    "a": "The $90,000 married filing jointly example has $3,461.54 of biweekly gross pay and $129.43 of Kansas state income tax. After the listed federal income tax, Social Security, Medicare, and Kansas withholding, net pay is $2,819.61."
+   },
+   {
+    "q": "What method calculates Kansas paycheck withholding in 2026?",
+    "a": "The calculator uses the Kansas KW-100 annual percentage method. It applies the Kansas withholding calculation to payroll information rather than simply multiplying the entire gross paycheck by the highest rate in the state’s 3.1%–5.7% bracket range."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "KY",
+  "intro": "Kentucky’s statewide tax is only part of the payroll picture because some cities and counties add occupational taxes. This Kentucky paycheck calculator combines the 2026 state formula with an optional local occupational planning rate.",
+  "taxSummary": "Kentucky uses a 4% flat state income tax administered by the Kentucky Department of Revenue. In addition to the state calculation, some cities and counties impose occupational or payroll taxes that can appear on employee paychecks. The calculator therefore uses \"Kentucky 2026 formula + entered local occupational planning rate.\" Its reference salary examples contain no local tax, so they show the state component before any applicable occupational amount is added. Your work location can consequently be important when estimating Kentucky payroll.",
+  "sections": [
+   {
+    "h3": "Why a Kentucky city or county can change take-home pay",
+    "p": "Kentucky’s 4% state income tax does not capture every income-related payroll deduction that may apply. Some cities and counties impose occupational or payroll taxes, creating a local layer on top of the statewide calculation. The calculator lets you represent that layer with an entered local occupational planning rate. Because the four salary examples contain no local tax, their net amounts should be read as results before an applicable local occupational deduction is added. This location-based feature is especially important when comparing jobs in different Kentucky jurisdictions. Two positions with the same salary can produce different local payroll deductions even when the Kentucky state income-tax calculation itself is unchanged."
+   },
+   {
+    "h3": "Kentucky’s $45,000 and $65,000 examples show the state formula",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Kentucky state income tax is $56.05. Federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10, leaving $1,418.47 per paycheck. At $65,000 single, gross pay becomes $2,500.00 and Kentucky withholding rises to $82.98. After $216.15 of federal income tax, $155.00 of Social Security, and $36.25 of Medicare, net pay is $2,009.62. Neither example includes local tax, so an applicable city or county occupational deduction would need to be added separately when estimating a location-specific Kentucky paycheck."
+   },
+   {
+    "h3": "How Kentucky’s local planning rate fits beside the 4% state tax",
+    "p": "The calculator deliberately separates Kentucky’s state formula from the entered local occupational planning rate. That prevents a city or county deduction from being mistaken for a higher statewide income-tax rate. For example, the $130,000 married filing jointly case shows $170.48 of Kentucky state income tax and an effective state rate of 3.41%, with no local tax entered. If an occupational tax applies to the employee, the additional local amount changes the final paycheck but does not change Kentucky’s 4% statewide tax structure. Keeping the two components separate also makes it easier to model a job change between Kentucky locations without rewriting the underlying state calculation."
+   },
+   {
+    "h3": "Working across Kentucky jurisdictions can alter the local layer",
+    "p": "Local occupational taxation makes work location relevant to Kentucky paycheck planning. Moving to a different employer or worksite can change the local deduction even when your annual salary and statewide tax setup stay the same. Before entering a local occupational planning rate, identify which city or county rule applies to the wages you are modeling. This is different from Kentucky’s statewide 4% income tax, which is handled through the state formula. The distinction becomes useful for commuters because the local payroll component can change independently of the state line. Treat the local rate as its own input instead of increasing the Kentucky state rate to approximate the combined deduction."
+   },
+   {
+    "h3": "Kentucky hourly pay can make occupational deductions vary by check",
+    "p": "For hourly work, begin with the wages earned during the pay period using the hourly paycheck calculator. The Kentucky state formula then applies to the payroll amount, while an entered occupational planning rate can add the relevant local layer. The salary examples use biweekly payroll across 26 periods, so their gross amounts are stable from one example to the next. Hourly wages can vary with schedules, which means both the state withholding amount and an applicable wage-based local deduction can change between checks. Recalculate the period rather than assuming a local deduction from one paycheck will remain identical when the number of paid hours changes."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is there a Kentucky occupational tax on my paycheck?",
+    "a": "Some Kentucky cities and counties impose occupational or payroll taxes in addition to the state income tax. Those local deductions are separate from Kentucky’s 4% statewide structure, which is why the calculator provides a local occupational planning-rate input."
+   },
+   {
+    "q": "Are Kentucky city and county taxes included in the salary examples?",
+    "a": "No local tax is entered in the four reference salary examples. They show the Kentucky state calculation without an occupational rate. If a city or county tax applies to your wages, add the applicable local planning rate to model that additional payroll deduction."
+   },
+   {
+    "q": "What does Kentucky withhold on a $130,000 married salary example?",
+    "a": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00 and Kentucky state income tax is $170.48. After $432.31 of federal income tax, $310.00 of Social Security, $72.50 of Medicare, and Kentucky withholding, net pay is $4,014.72."
+   },
+   {
+    "q": "Can changing work locations change my Kentucky payroll deductions?",
+    "a": "It can when different city or county occupational-tax rules apply to the wages. Kentucky’s calculator keeps that local planning rate separate from the statewide income-tax formula, allowing the local component to change without treating it as a change to the 4% state tax."
+   }
+  ],
+  "needsVerification": [
+   "Some Kentucky cities and counties impose occupational or payroll taxes that can affect employee paychecks.",
+   "Work location can affect which Kentucky local occupational tax applies."
+  ]
+ }
+]

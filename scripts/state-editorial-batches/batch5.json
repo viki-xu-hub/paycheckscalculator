@@ -1,0 +1,281 @@
+[
+ {
+  "code": "OR",
+  "intro": "Oregon paychecks can carry several state-related deductions because income tax sits alongside transit, Paid Leave, and WBF. This Oregon paycheck calculator separates those payroll components while applying the state's graduated 2026 formula.",
+  "taxSummary": "Oregon uses graduated income-tax brackets from 4.75% to 9.9%, administered by the Oregon Department of Revenue. The calculator applies the \"Oregon 2026 formula + transit, Paid Leave, and WBF.\" This means Oregon income-tax withholding is calculated separately from state payroll premiums that may also appear on the check. The examples show both categories, making it possible to distinguish the graduated income-tax amount from the additional Oregon payroll programs included in the calculation.",
+  "sections": [
+   {
+    "h3": "Why Oregon paychecks show deductions beyond state income tax",
+    "p": "Oregon's paycheck calculation contains more than the graduated income-tax line. The method used here also includes transit, Paid Leave, and WBF, with the additional amounts represented as state payroll premiums. At $45,000 single, Oregon state income tax is $128.64 while state payroll premiums are $12.11. At $65,000 single, those amounts become $177.75 and $17.50. Keeping them separate matters because the payroll premiums are not simply another Oregon income-tax bracket. When reviewing a paycheck, look at the state income-tax amount and the additional state payroll components independently rather than combining every Oregon-related deduction into a single tax percentage."
+   },
+   {
+    "h3": "Oregon's $90,000 married paycheck line by line",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54. Federal income tax removes $247.69, Social Security removes $214.62, and Medicare removes $50.19. Oregon state income tax is $237.09, while state payroll premiums add another $24.23. The resulting paycheck is $2,687.72 and annual net pay is $69,880.79. The effective state rate is 7.55%. At $130,000 married filing jointly, Oregon income tax rises to $363.93 and state payroll premiums become $35.00. Separating those two Oregon amounts shows which part comes from the graduated income-tax calculation and which part comes from the additional payroll programs."
+   },
+   {
+    "h3": "How Oregon's graduated brackets interact with filing circumstances",
+    "p": "Oregon's brackets range from 4.75% to 9.9%, but the effective state rates in the examples do not simply climb in salary order. The $45,000 single case shows an 8.13% effective state rate, while $65,000 single shows 7.81%. At $90,000 married filing jointly, it is 7.55%, before rising to 7.98% at $130,000 married filing jointly. Filing circumstances and the Oregon withholding formula therefore matter alongside income. A headline bracket rate is not enough to reconstruct the paycheck deduction. Use the appropriate payroll setup and let the graduated calculation determine the Oregon state line rather than assigning one effective percentage to every worker."
+   },
+   {
+    "h3": "What pre-tax benefits can change in an Oregon calculation",
+    "p": "The four Oregon salary examples contain no 401(k) contribution and no pre-tax benefits. If an employer-plan deduction changes the wages subject to Oregon income-tax withholding, the state income-tax result can differ from these examples. That effect should be kept conceptually separate from transit, Paid Leave, and WBF, which are included in the calculator method as additional state payroll components. Oregon's graduated structure makes taxable wages particularly relevant because a change in the amount entering the state formula does not necessarily produce a perfectly proportional change in withholding. Represent qualifying payroll deductions according to their treatment before comparing your Oregon income-tax line with a reference salary."
+   },
+   {
+    "h3": "Oregon hourly workers can see several state lines move together",
+    "p": "Hourly employees can first determine period earnings with the hourly paycheck calculator and then apply the Oregon payroll calculation. Variable hours change the gross wages entering the state formula, so the Oregon income-tax amount can move between checks. The additional payroll components represented by transit, Paid Leave, and WBF may also change with the payroll inputs. The salary examples avoid this variation by using 26 biweekly periods and fixed gross wages. For hourly work, calculate the actual period instead of dividing an annual Oregon estimate into equal checks. That approach keeps the graduated income-tax calculation and the additional state payroll deductions tied to the wages being modeled."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Oregon paycheck have deductions besides state income tax?",
+    "a": "The calculator method includes Oregon income-tax withholding plus transit, Paid Leave, and WBF. At $45,000 single, for example, Oregon state income tax is $128.64 and state payroll premiums are another $12.11, so the two categories appear separately."
+   },
+   {
+    "q": "What Oregon deductions appear at $90,000 married filing jointly?",
+    "a": "At $90,000 married filing jointly, the example shows $237.09 of Oregon state income tax and $24.23 of state payroll premiums. After the listed federal deductions, the $3,461.54 biweekly gross paycheck becomes $2,687.72."
+   },
+   {
+    "q": "Why isn't Oregon's effective state rate the same at every salary?",
+    "a": "Oregon uses graduated income-tax brackets from 4.75% to 9.9%, and filing circumstances affect the calculation. The examples show effective state rates ranging from 7.55% to 8.13% rather than one percentage applying to every salary and filing setup."
+   },
+   {
+    "q": "What Oregon payroll programs are included in this calculation?",
+    "a": "The calculator's method is \"Oregon 2026 formula + transit, Paid Leave, and WBF.\" Those additional payroll components are represented separately from the Oregon state income-tax amount so you can see the different parts of the paycheck calculation."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "PA",
+  "intro": "Pennsylvania's state withholding stays flat, while local earned-income taxes can make take-home pay vary by municipality or school district. This Pennsylvania paycheck calculator keeps the 3.07% state deduction separate from an entered local EIT rate.",
+  "taxSummary": "Pennsylvania uses a flat 3.07% state income tax administered by the Pennsylvania Department of Revenue. Municipalities and school districts may also impose local earned-income taxes, creating a location-dependent layer beyond state withholding. The calculator uses \"3.07% Pennsylvania withholding + entered local EIT rate.\" The four reference salaries contain no local tax, so their Pennsylvania income-tax amounts reflect only the statewide 3.07% deduction. An applicable local EIT input can therefore reduce take-home pay beyond the figures shown.",
+  "sections": [
+   {
+    "h3": "Why Pennsylvania's state line stays at 3.07%",
+    "p": "Pennsylvania's flat state income tax produces a consistent 3.07% effective state rate across all four examples. At $45,000 single, Pennsylvania withholding is $53.13 from $1,730.77 of biweekly gross pay. At $65,000 single, it becomes $76.75 from $2,500.00. The married examples continue the same pattern, with $106.27 at $90,000 and $153.50 at $130,000. Unlike a graduated state, Pennsylvania does not produce a rising effective state percentage across these salary levels. Any additional local earned-income tax should be treated separately rather than interpreted as a change to the statewide 3.07% income-tax rate."
+   },
+   {
+    "h3": "Pennsylvania local EIT can make identical salaries produce different checks",
+    "p": "Municipalities and school districts may impose local earned-income taxes in Pennsylvania, so location can matter even though the statewide income-tax rate is flat. The calculator provides an entered local EIT rate for this layer. None of the four salary examples includes local tax, which means their net amounts are statewide baselines rather than location-specific Pennsylvania results. Two employees earning the same salary can therefore have different final deposits if different local EIT rules apply. Keep the local rate separate from the 3.07% state deduction when modeling a move or job change so you can see whether a paycheck difference comes from Pennsylvania itself or from the local earned-income-tax component."
+   },
+   {
+    "h3": "Pennsylvania's $130,000 married example before local EIT",
+    "p": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Pennsylvania state income tax adds $153.50, leaving $4,031.69 per paycheck and $104,824.00/year. The effective state rate remains 3.07%. At $90,000 married filing jointly, Pennsylvania withholding is $106.27 and net pay is $2,842.77 from $3,461.54 gross. Both examples have no local tax entered. If an earned-income tax applies to your municipality or school district, that local amount needs to be added separately to produce a location-specific estimate."
+   },
+   {
+    "h3": "Living and working in different Pennsylvania locations can affect local tax",
+    "p": "Pennsylvania's local earned-income-tax system adds a location question that the statewide 3.07% rate cannot answer. If you live and work in different municipalities or school districts, identify the local EIT treatment relevant to your situation before entering a planning rate. Changing jobs or moving can alter this local layer without changing Pennsylvania's state income-tax calculation. This is useful when comparing offers in different locations: the state deduction can remain the same at identical taxable wages while the local portion changes. Treat the local EIT as its own payroll input rather than increasing or decreasing the Pennsylvania state rate to approximate the combined result."
+   },
+   {
+    "h3": "Pennsylvania hourly pay preserves the flat state relationship",
+    "p": "For hourly work, start with the period's wages using the hourly paycheck calculator. Pennsylvania state withholding then follows the same 3.07% flat structure represented in the salary examples. A changing work schedule can alter the dollar amount of state withholding because gross wages change, but it does not create a graduated Pennsylvania state rate. Local EIT can add another deduction when applicable, so the location input remains important even for hourly workers. The reference salaries use fixed biweekly gross amounts across 26 pay periods. With variable hours, calculate each period from its actual wages and add the relevant local EIT separately instead of copying the dollar deduction from a fixed-salary example."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is Pennsylvania withholding 3.07% in every salary example?",
+    "a": "Pennsylvania uses a flat 3.07% state income tax. The examples therefore maintain a 3.07% effective state rate at $45,000, $65,000, $90,000, and $130,000. Any applicable local earned-income tax is handled separately."
+   },
+   {
+    "q": "Is Pennsylvania local earned-income tax included in these examples?",
+    "a": "No local tax is entered in the four examples. At $65,000 single, for example, Pennsylvania state income tax is $76.75 and net pay is $2,015.85 before an applicable local EIT amount is added."
+   },
+   {
+    "q": "Can my municipality or school district change my Pennsylvania paycheck?",
+    "a": "Pennsylvania municipalities and school districts may impose local earned-income taxes. Those local amounts are separate from the statewide 3.07% income tax, so location can change the final paycheck even when salary and state withholding remain the same."
+   },
+   {
+    "q": "What Pennsylvania tax is withheld at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, Pennsylvania state income tax is $153.50 from $5,000.00 of biweekly gross pay. After the listed federal deductions and state withholding, net pay is $4,031.69 before any local EIT is entered."
+   }
+  ],
+  "needsVerification": [
+   "Pennsylvania municipalities and school districts may impose local earned-income taxes.",
+   "Living and working in different Pennsylvania municipalities or school districts can affect the applicable local earned-income-tax treatment."
+  ]
+ },
+ {
+  "code": "SC",
+  "intro": "South Carolina's graduated brackets are applied after allowances and standard deductions shape taxable wages. This South Carolina paycheck calculator uses the WH-1603F 2026 annualized formula rather than applying the 6.2% top rate to an entire check.",
+  "taxSummary": "South Carolina uses graduated income-tax brackets from 0% to 6.2%, administered by the South Carolina Department of Revenue. Allowances and standard deductions reduce taxable wages before the withholding calculation is completed. The calculator applies the \"SC WH-1603F 2026 annualized formula.\" Because the state calculation is graduated and begins from adjusted taxable wages, the effective state percentage can differ from the 6.2% top rate and change as earnings increase.",
+  "sections": [
+   {
+    "h3": "Why South Carolina withholding does not equal the 6.2% top rate",
+    "p": "South Carolina's 6.2% figure is the top of its graduated bracket range, not a percentage to multiply by every gross paycheck. The WH-1603F annualized formula incorporates the state's withholding mechanics after allowances and standard deductions reduce taxable wages. At $45,000 single, the effective state rate is 4.54%, while at $65,000 single it is 4.99%. Both are below the top bracket even though the state deduction rises with income. Using 6.2% of gross pay as a shortcut would therefore overstate the withholding shown in these examples. The annualized formula is what translates South Carolina's tax structure into the amount actually deducted during payroll."
+   },
+   {
+    "h3": "South Carolina's single examples show the graduated climb",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and South Carolina state income tax is $78.61. After federal income tax, Social Security, Medicare, and state withholding, net pay is $1,395.91 and the effective state rate is 4.54%. At $65,000 single, gross pay becomes $2,500.00 and South Carolina withholding rises to $124.77. Net pay is $1,967.83 and the effective state rate reaches 4.99%. The higher salary therefore produces both a larger dollar deduction and a higher effective state percentage. That progression reflects the graduated calculation rather than a flat percentage being applied to each additional dollar of gross wages."
+   },
+   {
+    "h3": "How South Carolina deductions affect taxable wages before withholding",
+    "p": "Allowances and standard deductions reduce the taxable wages used by South Carolina's withholding calculation. That is one reason the effective percentages in the examples do not match the state's 6.2% top rate. The WH-1603F method annualizes the payroll information and then applies the state formula to the resulting taxable amount. If your withholding setup changes, the South Carolina line can change even without a corresponding change in gross salary. Focus on the wages entering the state calculation rather than treating gross pay as the only relevant number. This distinction becomes more important as income rises because the state uses graduated brackets rather than one common withholding percentage."
+   },
+   {
+    "h3": "South Carolina's $130,000 married paycheck in detail",
+    "p": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. South Carolina state income tax is $274.77, bringing the paycheck to $3,910.43 and annual net pay to $101,671.10. The effective state rate is 5.50%. At $90,000 married filing jointly, South Carolina withholding is $182.46 and the effective state rate is 5.27%, leaving $2,766.58 from $3,461.54 gross. The comparison shows the graduated state deduction continuing to increase as the modeled married income rises."
+   },
+   {
+    "h3": "South Carolina hourly wages still use an annualized calculation",
+    "p": "Hourly employees can first calculate the current period's wages with the hourly paycheck calculator and then apply South Carolina's WH-1603F annualized formula. The four salary examples use 26 biweekly pay periods and therefore begin with stable gross amounts. Variable hours can produce different wages each payday, which changes the amount being annualized for state withholding. Because South Carolina uses graduated brackets, the effective state percentage does not have to remain identical from one variable paycheck to another. Calculate the actual payroll period rather than converting one salary example into an hourly state-tax percentage. This preserves the role of allowances, standard deductions, and the graduated formula."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why isn't South Carolina withholding 6.2% of my entire paycheck?",
+    "a": "South Carolina's 6.2% figure is the top of a graduated 0%–6.2% range. The WH-1603F annualized formula also accounts for allowances and standard deductions, so the effective withholding percentage can be lower than the top rate."
+   },
+   {
+    "q": "What South Carolina tax is withheld at $65,000 single?",
+    "a": "At $65,000 single, biweekly gross pay is $2,500.00 and South Carolina state income tax is $124.77. After the listed federal deductions and state withholding, the example produces $1,967.83 of net pay."
+   },
+   {
+    "q": "Why does South Carolina's effective state rate increase with salary?",
+    "a": "South Carolina uses graduated income-tax brackets. Across the examples, the effective state rate moves from 4.54% at $45,000 single to 5.50% at $130,000 married filing jointly as the withholding formula processes different taxable wage amounts."
+   },
+   {
+    "q": "What method calculates South Carolina withholding in 2026?",
+    "a": "The calculator uses the SC WH-1603F 2026 annualized formula. It applies South Carolina's withholding mechanics to taxable wages after the role of allowances and standard deductions rather than simply multiplying gross pay by the top tax rate."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "TN",
+  "intro": "Tennessee wages carry no individual state income-tax withholding, leaving federal deductions to explain most of the gap between gross and net in these examples. This Tennessee paycheck calculator keeps the state income-tax line at $0.00.",
+  "taxSummary": "Tennessee has no individual state income tax on wages, so each reference paycheck shows $0.00 of Tennessee state income tax and a 0.00% effective state rate. The Tennessee Department of Revenue is the state tax agency, but there is no individual wage-income withholding method to apply to these paychecks. Federal income tax, Social Security, and Medicare still reduce take-home pay, so receiving wages in Tennessee does not mean the full gross amount reaches your bank account.",
+  "sections": [
+   {
+    "h3": "What still comes out of a Tennessee paycheck without state income tax",
+    "p": "The absence of Tennessee individual state income tax removes the state wage-tax line, not the rest of payroll withholding. At $45,000 single, biweekly gross pay is $1,730.77 and Tennessee state income tax is $0.00. Federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10, leaving $1,474.52. The take-home share is 85.2% even though the effective state rate is 0.00%. This distinction is important when estimating Tennessee wages: no state income tax does not mean no taxes are deducted. The federal payroll lines still determine a substantial part of the difference between gross earnings and the final deposit."
+   },
+   {
+    "h3": "Tennessee's $130,000 married example keeps state tax at zero",
+    "p": "At $130,000 married filing jointly, the paycheck begins with $5,000.00 of biweekly gross pay. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Tennessee state income tax remains $0.00, leaving $4,185.19 per paycheck and $108,815.00/year. The take-home share is 83.7%, while the effective state rate stays at 0.00%. At $90,000 married filing jointly, Tennessee withholding is also $0.00 and net pay is $2,949.04. Increasing salary therefore changes the other payroll deductions shown here without introducing an individual Tennessee wage-income tax."
+   },
+   {
+    "h3": "Why Tennessee take-home percentages still change with income",
+    "p": "The Tennessee state line stays unchanged at $0.00 across all four examples, but the take-home percentage does not. It is 85.2% at $45,000 single, 83.7% at $65,000 single, 85.2% at $90,000 married filing jointly, and 83.7% at $130,000 married filing jointly. Those differences come from the federal payroll calculations and filing circumstances rather than Tennessee state income tax. This makes the state line particularly easy to isolate: when the take-home percentage moves in these scenarios, Tennessee withholding is not the cause. The effective state rate remains 0.00% regardless of which of the four salary and filing-status combinations is being modeled."
+   },
+   {
+    "h3": "Tennessee hourly workers also have no state wage-income withholding",
+    "p": "If you earn an hourly wage in Tennessee, begin with the earnings for the current period using the hourly paycheck calculator. Tennessee individual state income tax on wages remains $0.00, while federal income tax, Social Security, and Medicare continue to affect the final deposit. Hourly schedules can make gross pay change from one period to another, so those federal deductions can move even though the Tennessee state line does not. The salary examples use 26 biweekly pay periods and fixed annual compensation. Variable-hour workers should calculate each period from its actual earnings rather than assuming the net-to-gross relationship from one salary example will remain constant."
+   },
+   {
+    "h3": "Tennessee's $65,000 example isolates federal payroll deductions",
+    "p": "At $65,000 single, biweekly gross pay is $2,500.00. Federal income tax takes $216.15, Social Security takes $155.00, and Medicare takes $36.25. Tennessee state income tax contributes nothing to the deduction total at $0.00. The resulting paycheck is $2,092.60, with annual net pay of $54,407.50 and an 83.7% take-home share. This example provides a clear view of why a no-state-income-tax paycheck is still lower than gross wages. The same state treatment applies to the other salary examples: Tennessee withholding remains at zero while the federal payroll lines change with the scenario."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is my Tennessee paycheck lower than gross pay if state tax is $0.00?",
+    "a": "Federal payroll deductions still apply. At $65,000 single, for example, the paycheck includes $216.15 of federal income tax, $155.00 of Social Security, and $36.25 of Medicare even though Tennessee state income tax is $0.00."
+   },
+   {
+    "q": "What Tennessee state tax is withheld from a $90,000 married paycheck?",
+    "a": "The Tennessee state income-tax amount is $0.00. At $90,000 married filing jointly, the $3,461.54 biweekly gross paycheck becomes $2,949.04 after the listed federal income tax, Social Security, and Medicare deductions."
+   },
+   {
+    "q": "Does a higher salary create Tennessee wage-income tax?",
+    "a": "No individual state income tax on wages is applied in these Tennessee calculations. The state line remains $0.00 at every provided salary, including the $130,000 married filing jointly example."
+   },
+   {
+    "q": "Why does Tennessee show a 0.00% effective state rate?",
+    "a": "Tennessee has no individual state income tax on wages. As a result, each example has $0.00 of Tennessee state income-tax withholding and a 0.00% effective state rate, while federal payroll deductions continue to reduce take-home pay."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "UT",
+  "intro": "Utah's flat state rate does not make every paycheck calculation identical because withholding also reflects payroll elections and applicable credits. This Utah paycheck calculator follows Publication 14 effective June 1, 2026.",
+  "taxSummary": "Utah uses a 4.55% flat income-tax rate administered by the Utah State Tax Commission. State withholding depends on Form W-4 elections and applicable tax credits rather than simply applying 4.55% to every gross paycheck. The calculator uses \"Utah Publication 14 effective June 1, 2026.\" The effective state rates in the examples remain close to the flat rate but vary from 4.39% to 4.46%, illustrating how the withholding calculation can differ slightly from the headline percentage.",
+  "sections": [
+   {
+    "h3": "Why June 1, 2026 matters for Utah withholding",
+    "p": "The calculator follows Utah Publication 14 effective June 1, 2026. That effective date identifies the withholding method used for these examples, so a paycheck processed under a different Utah method should not automatically be expected to produce the same state amount. All four salary scenarios here use the post-June 1 setup. If you compare Utah paychecks from different portions of 2026, first determine whether the same withholding method applies before attributing a difference to salary or filing circumstances. The effective date is especially important because the state has a flat 4.55% income tax while the actual payroll calculation also reflects withholding elections and applicable credits."
+   },
+   {
+    "h3": "Utah's $45,000 and $65,000 examples stay near the flat rate",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Utah state income tax is $76.00. The effective state rate is 4.39%, and net pay is $1,398.52. At $65,000 single, gross pay becomes $2,500.00, Utah withholding rises to $111.00, and the effective state rate becomes 4.44%. Net pay is $1,981.60. Both effective percentages sit close to Utah's 4.55% flat income-tax rate without matching it exactly. The difference reflects the withholding calculation rather than a change in the state's underlying flat-tax structure. Use Publication 14 rather than multiplying gross wages directly by 4.55%."
+   },
+   {
+    "h3": "How Utah withholding elections and credits shape the paycheck",
+    "p": "Utah state withholding depends on Form W-4 elections and applicable tax credits, so the paycheck calculation involves more than the flat 4.55% rate. Those inputs help determine how the Utah tax is translated into an amount withheld during payroll. This is visible in the effective rates, which are 4.39%, 4.44%, 4.42%, and 4.46% across the four examples rather than exactly 4.55%. If your withholding elections change, calculate the Utah line again under the applicable Publication 14 method instead of preserving an earlier effective percentage. The flat rate describes the state's tax structure, while the payroll formula determines the specific dollar amount removed from each check."
+   },
+   {
+    "h3": "Utah's $130,000 married paycheck under the June method",
+    "p": "At $130,000 married filing jointly, the biweekly paycheck begins at $5,000.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Utah state income tax is $223.00, producing net pay of $3,962.19 and annual net pay of $103,017.00. The effective state rate is 4.46%. At $90,000 married filing jointly, Utah withholding is $153.00 and net pay is $2,796.04 from $3,461.54 gross. Both examples use Utah Publication 14 effective June 1, 2026, keeping the withholding method consistent while earnings change."
+   },
+   {
+    "h3": "Utah hourly pay uses the same post-June withholding framework",
+    "p": "Hourly workers can determine each period's earnings with the hourly paycheck calculator before applying the Utah withholding setup. The salary examples use 26 biweekly pay periods, creating fixed gross amounts such as $2,500.00 at $65,000. Hourly schedules can produce different wages from one check to the next, so the Utah dollar deduction can move even though the state maintains a flat 4.55% tax rate. Form W-4 elections and applicable credits remain part of the withholding process. Calculate the actual payroll period under Publication 14 effective June 1, 2026 rather than turning one example's effective state rate into a permanent percentage for every check."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does the Utah calculator use June 1, 2026?",
+    "a": "The withholding method used here is Utah Publication 14 effective June 1, 2026. The salary examples therefore reflect that method, making the effective date relevant when comparing these results with Utah paychecks calculated under another withholding setup."
+   },
+   {
+    "q": "Why isn't Utah withholding exactly 4.55% in the examples?",
+    "a": "Utah has a 4.55% flat income-tax rate, but payroll withholding also reflects Form W-4 elections and applicable tax credits. The examples therefore show effective state rates from 4.39% to 4.46% rather than exactly 4.55%."
+   },
+   {
+    "q": "What Utah tax is withheld at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00 and Utah state income tax is $223.00. After the listed federal deductions and Utah withholding, the resulting paycheck is $3,962.19."
+   },
+   {
+    "q": "What controls Utah state withholding besides salary?",
+    "a": "Utah withholding depends on Form W-4 elections and applicable tax credits in addition to wages. The calculator applies those mechanics through Utah Publication 14 effective June 1, 2026 rather than using gross salary as the only input."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "VA",
+  "intro": "Virginia's graduated withholding makes the state deduction rise at a different pace from gross earnings. This Virginia paycheck calculator applies the withholding formula effective July 2025 and later together with the elections used for Virginia payroll.",
+  "taxSummary": "Virginia uses graduated income-tax brackets from 2% to 5.75%, administered by the Virginia Department of Taxation. Form VA-4 elections and Virginia-specific withholding rules determine the amount removed from each paycheck. The calculator applies the \"Virginia withholding formula effective July 2025 and later.\" Because the tax structure is graduated, the effective state withholding percentage increases across these examples as modeled earnings rise, from 4.06% at the lowest salary to 5.16% at the highest.",
+  "sections": [
+   {
+    "h3": "How Virginia Form VA-4 affects state withholding",
+    "p": "Form VA-4 provides the Virginia-specific elections used by payroll to calculate state withholding. Those elections operate within Virginia's graduated 2%–5.75% income-tax structure, so the state amount cannot be reconstructed by applying one fixed percentage to gross wages. The calculator uses the Virginia withholding formula effective July 2025 and later. At $45,000 single with no allowances, the resulting effective state rate is 4.06%; at $65,000 single, it rises to 4.58%. If your VA-4 elections change, calculate the Virginia deduction again instead of carrying an earlier effective percentage into the new setup. The state form helps determine how Virginia's withholding rules apply to your paycheck."
+   },
+   {
+    "h3": "Virginia's single examples show the effective rate moving upward",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Virginia state income tax is $70.27. After the listed federal deductions and state withholding, net pay is $1,404.25 and the effective state rate is 4.06%. At $65,000 single, gross pay rises to $2,500.00 and Virginia withholding becomes $114.50. Net pay is $1,978.10 and the effective state rate reaches 4.58%. The increase reflects Virginia's graduated withholding structure. Rather than scaling the first state deduction in direct proportion to salary, the withholding formula processes the higher wage amount through Virginia's state rules and produces a different effective percentage."
+   },
+   {
+    "h3": "Virginia's $90,000 married paycheck from gross to net",
+    "p": "At $90,000 married filing jointly, the paycheck begins with $3,461.54 of biweekly gross pay. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. Virginia state income tax adds $169.77, leaving $2,779.27 per paycheck and $72,261.00/year. The effective state rate is 4.90%. Compare that with the $130,000 married filing jointly case, where Virginia withholding reaches $258.23 and net pay is $3,926.96 from $5,000.00 gross. The effective state rate rises to 5.16%, showing the graduated calculation continuing to change as the modeled income increases."
+   },
+   {
+    "h3": "What pre-tax benefits can do to Virginia taxable wages",
+    "p": "The four Virginia examples contain no 401(k) contribution and no pre-tax benefits. If an employer-plan deduction changes the wages subject to Virginia withholding, the amount entering the graduated state formula can change as well. That can alter the Virginia income-tax deduction rather than simply reducing the final deposit after taxes. Because the state uses brackets from 2% to 5.75%, changes to taxable wages do not have to produce a perfectly proportional change in withholding. Represent qualifying payroll deductions according to their treatment before comparing your state line with one of these salary examples. The Virginia formula then calculates withholding from the payroll information presented to it."
+   },
+   {
+    "h3": "Virginia hourly workers should recalculate changing pay periods",
+    "p": "For hourly work, first determine the wages earned during the current period with the hourly paycheck calculator. Virginia's withholding formula then applies to that payroll amount using the relevant state elections. The salary examples use fixed annual compensation paid across 26 biweekly periods, while an hourly worker's gross wages can vary as schedules change. Because Virginia uses graduated taxation, a larger check can produce both a larger state deduction and a different effective withholding percentage. Do not convert the 4.06%, 4.58%, 4.90%, or 5.16% example rates into a permanent hourly withholding percentage. Recalculate the period using the wages actually earned."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What is Virginia Form VA-4 used for?",
+    "a": "Form VA-4 provides Virginia-specific withholding elections used in the state payroll calculation. Those elections work with Virginia's graduated tax structure and the withholding formula effective July 2025 and later to determine the state amount deducted from a paycheck."
+   },
+   {
+    "q": "Why does Virginia's effective withholding rate rise with income?",
+    "a": "Virginia uses graduated income-tax brackets from 2% to 5.75%. In the examples, the effective state rate increases from 4.06% at $45,000 single to 5.16% at $130,000 married filing jointly as the withholding formula processes higher modeled earnings."
+   },
+   {
+    "q": "What Virginia tax is withheld at $90,000 married filing jointly?",
+    "a": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54 and Virginia state income tax is $169.77. After the listed federal income tax, Social Security, Medicare, and Virginia withholding, net pay is $2,779.27."
+   },
+   {
+    "q": "Which Virginia withholding formula does the calculator use?",
+    "a": "The calculator uses the Virginia withholding formula effective July 2025 and later. It applies Virginia's state-specific withholding rules and the relevant payroll elections within the state's graduated 2%–5.75% income-tax structure."
+   }
+  ],
+  "needsVerification": []
+ }
+]

@@ -1,0 +1,283 @@
+[
+ {
+  "code": "NC",
+  "intro": "North Carolina starts with a flat state tax, but deductions and allowances mean the paycheck line is not simply 4.09% of gross wages. This North Carolina paycheck calculator applies the NC-30 2026 annualized percentage method.",
+  "taxSummary": "North Carolina uses a 4.09% flat income-tax rate, including a 0.1% withholding adjustment, with withholding administered by the North Carolina Department of Revenue. Standard deductions and allowances reduce the wages used in the withholding calculation. The calculator applies the \"NC-30 2026 annualized percentage method,\" so the state amount withheld from an individual check can be below 4.09% of gross pay. As earnings rise, the effective state rate in the examples moves closer to the headline rate.",
+  "sections": [
+   {
+    "h3": "Why North Carolina withholding is below 4.09% in these examples",
+    "p": "North Carolina has a flat 4.09% income-tax rate, but payroll withholding is not calculated by multiplying every dollar of gross pay by 4.09%. Standard deductions and allowances reduce the wages used by the NC-30 annualized percentage method. At $45,000 single, for example, the calculator shows an effective state rate of 2.93%. At $65,000 single, it rises to 3.29%. The underlying state rate has not changed between those examples. Instead, the relationship between deductions, allowances, and earnings changes the percentage of gross pay that ultimately appears as North Carolina withholding. This is why applying 4.09% directly to a biweekly paycheck will not reproduce the calculator result."
+   },
+   {
+    "h3": "North Carolina's $65,000 example from gross wages to deposit",
+    "p": "At $65,000 single, the biweekly paycheck begins at $2,500.00. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. The NC-30 method produces $82.19 of North Carolina state income tax. After those deductions, the paycheck is $2,010.40, equivalent to $52,270.47/year, with an effective state rate of 3.29%. At $45,000 single, North Carolina withholding is $50.73 and net pay is $1,423.79 from $1,730.77 of gross pay. Comparing the two shows how the dollar amount and effective percentage can rise with income even though North Carolina's underlying state tax is flat."
+   },
+   {
+    "h3": "How North Carolina deductions change the taxable wage calculation",
+    "p": "Standard deductions and allowances are part of the reason North Carolina withholding does not equal 4.09% of each gross paycheck. The NC-30 annualized percentage method accounts for the taxable wage calculation before determining the amount to withhold. This becomes clearer at higher earnings. At $90,000 married filing jointly, the effective state rate is 3.51%; at $130,000 married filing jointly, it reaches 3.69%. Both remain below the 4.09% headline rate. When estimating a paycheck, focus on the withholding method rather than treating the published state rate as a payroll shortcut. The flat tax describes North Carolina's tax structure, while NC-30 determines how that structure is translated into paycheck withholding."
+   },
+   {
+    "h3": "North Carolina hourly pay still uses the annualized method",
+    "p": "If you are paid hourly, first determine the wages included in the current period with the hourly paycheck calculator. Those wages then enter North Carolina's annualized percentage method. The salary examples use 26 biweekly pay periods, so a $65,000 salary produces a predictable $2,500.00 gross check. An hourly employee can have different gross wages each period as hours change. North Carolina remains a flat-tax state, but the effective withholding percentage on individual checks can still move because deductions and allowances interact with the amount being annualized. Recalculate the period rather than assuming the state deduction should always equal 4.09% of that check's gross wages."
+   },
+   {
+    "h3": "What the married examples reveal about North Carolina withholding",
+    "p": "At $90,000 married filing jointly, North Carolina state income tax is $121.52 from $3,461.54 of biweekly gross pay, leaving $2,827.52 after the listed deductions. At $130,000 married filing jointly, gross pay reaches $5,000.00 and North Carolina withholding becomes $184.44, with $4,000.75 remaining. The effective state rate increases from 3.51% to 3.69%. This progression is useful because it separates a flat statutory rate from the effective percentage visible on a paycheck. North Carolina's 4.09% rate remains unchanged, while the NC-30 annualized percentage method produces different effective withholding percentages as the wages entering the calculation increase."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why isn't North Carolina withholding exactly 4.09% of my paycheck?",
+    "a": "North Carolina uses standard deductions and allowances when calculating withholding, so the NC-30 annualized percentage method does not simply multiply gross wages by 4.09%. At $65,000 single, for example, the calculator shows $82.19 of state withholding and a 3.29% effective state rate."
+   },
+   {
+    "q": "What is the North Carolina withholding adjustment in 2026?",
+    "a": "The state income-tax figure used here is 4.09%, which includes a 0.1% withholding adjustment. Payroll withholding is then determined through the NC-30 2026 annualized percentage method rather than applying that headline percentage directly to the entire gross paycheck."
+   },
+   {
+    "q": "How much North Carolina tax is withheld at $90,000 married filing jointly?",
+    "a": "The $90,000 married filing jointly example produces $121.52 of North Carolina state income tax from $3,461.54 of biweekly gross pay. After the listed federal income tax, Social Security, Medicare, and state withholding, the paycheck is $2,827.52."
+   },
+   {
+    "q": "What method calculates North Carolina paycheck withholding?",
+    "a": "The calculator uses the NC-30 2026 annualized percentage method. It accounts for North Carolina's withholding mechanics, including deductions and allowances, before determining the state amount deducted from the paycheck."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "NE",
+  "intro": "Nebraska's graduated brackets make filing choices and earnings relevant to the state amount removed from each check. This Nebraska paycheck calculator follows the 2026 Circular EN percentage method for state withholding.",
+  "taxSummary": "Nebraska uses graduated income-tax brackets from 2.46% to 5.84%, administered by the Nebraska Department of Revenue. State withholding tables and Form W-4N elections determine how those brackets translate into paycheck withholding. The calculator applies the \"Nebraska 2026 Circular EN percentage method.\" Because Nebraska uses a graduated system, the effective state percentage can change as earnings and filing circumstances change, rather than remaining fixed across every salary level.",
+  "sections": [
+   {
+    "h3": "How Nebraska's Form W-4N affects the state line",
+    "p": "Form W-4N provides the elections used for Nebraska state withholding. Those choices feed into Nebraska's own withholding calculation under Circular EN, so the amount deducted from a paycheck depends on more than gross wages alone. Nebraska's income-tax brackets range from 2.46% to 5.84%, but those endpoints are not payroll percentages to apply directly to every check. At $45,000 single with no allowances, the calculator produces a 3.47% effective state rate; at $65,000 single, it produces 3.78%. If your W-4N elections change, calculate the Nebraska line again rather than carrying the effective percentage from an earlier paycheck into a different withholding setup."
+   },
+   {
+    "h3": "Nebraska's single examples show how graduated withholding moves",
+    "p": "A $45,000 single salary produces $1,730.77 of biweekly gross pay and $60.07 of Nebraska state income tax. After the listed deductions, net pay is $1,414.45. At $65,000 single, gross pay rises to $2,500.00 and Nebraska withholding becomes $94.53, leaving $1,998.07. The effective state rate moves from 3.47% to 3.78%. That change illustrates the graduated nature of Nebraska withholding: increasing wages affects both the dollar deduction and the effective percentage. Multiplying the first example's state tax by the salary increase would not accurately reproduce the second result because Circular EN recalculates the withholding based on the new payroll amount."
+   },
+   {
+    "h3": "Nebraska filing status changes the relationship between salary and tax",
+    "p": "The married filing jointly examples demonstrate why income alone cannot identify the effective Nebraska withholding percentage. At $90,000, state income tax is $125.30 and the effective state rate is 3.62%. That percentage is lower than the 3.78% shown for the $65,000 single example despite the larger salary. At $130,000 married filing jointly, Nebraska withholding reaches $196.07 and the effective state rate rises to 3.92%. The combination of filing circumstances and Nebraska's graduated calculation produces these differences. When comparing household scenarios, use the correct filing setup rather than applying an effective rate taken from a single taxpayer's paycheck."
+   },
+   {
+    "h3": "What pre-tax payroll deductions can change for Nebraska workers",
+    "p": "The four Nebraska examples contain no 401(k) contribution and no pre-tax benefits. If a payroll deduction changes the wages subject to Nebraska withholding, the amount entering the graduated calculation can change as well. This is particularly relevant in a state with multiple brackets because a change in taxable wages does not necessarily translate into a perfectly proportional change in withholding. Model qualifying pre-tax payroll items according to their treatment before comparing your state line with one of the salary examples. Nebraska's Circular EN percentage method then determines withholding from the resulting payroll information rather than from the annual salary figure alone."
+   },
+   {
+    "h3": "Nebraska's $130,000 married example line by line",
+    "p": "At $130,000 married filing jointly, the calculator starts with $5,000.00 of biweekly gross pay. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Nebraska state income tax adds $196.07, leaving $3,989.12 per paycheck and $103,717.10/year. The effective state rate is 3.92%. Compare that with the $90,000 married case, where Nebraska withholding is $125.30 and net pay is $2,823.73 from $3,461.54 gross. The higher-income example shows the state deduction increasing within Nebraska's graduated structure while Circular EN continues to govern the withholding calculation."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What is Nebraska Form W-4N used for?",
+    "a": "Form W-4N provides elections used to calculate Nebraska state withholding. The calculator applies those state withholding mechanics through the Nebraska 2026 Circular EN percentage method rather than using one fixed percentage of gross wages."
+   },
+   {
+    "q": "Why is Nebraska's effective rate lower at $90,000 married than $65,000 single?",
+    "a": "Filing circumstances affect Nebraska's graduated withholding calculation. The $65,000 single example shows a 3.78% effective state rate, while the $90,000 married filing jointly example shows 3.62%, demonstrating why salary alone does not determine the paycheck percentage."
+   },
+   {
+    "q": "What Nebraska tax is withheld on a $130,000 married salary?",
+    "a": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00 and Nebraska state income tax is $196.07. After the listed federal income tax, Social Security, Medicare, and Nebraska withholding, net pay is $3,989.12."
+   },
+   {
+    "q": "Which Nebraska withholding method applies in 2026?",
+    "a": "The calculator uses the Nebraska 2026 Circular EN percentage method. Nebraska's graduated 2.46%–5.84% income-tax structure is translated into paycheck withholding through that state method and the applicable withholding elections."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "NV",
+  "intro": "Nevada does not withhold individual state income tax from wages, but federal payroll deductions still reduce each check. This Nevada paycheck calculator shows what remains when the state income-tax line stays at $0.00.",
+  "taxSummary": "Nevada has no individual state income tax on wages, so the Nevada state income-tax line is $0.00 in all four examples and the effective state rate is 0.00%. The Nevada Department of Taxation is the state tax agency, but there is no individual wage-income withholding calculation to apply here. Federal income tax, Social Security, and Medicare still come out of the paycheck, which is why take-home pay remains below gross wages even without Nevada state income tax.",
+  "sections": [
+   {
+    "h3": "Why Nevada take-home pay is not 100% even without state income tax",
+    "p": "Nevada's lack of individual state income tax removes one common paycheck deduction, but it does not eliminate federal payroll deductions. At $45,000 single, Nevada state income tax is $0.00, yet federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10. The resulting biweekly paycheck is $1,474.52 from $1,730.77 of gross pay, or an 85.2% take-home share. The same principle applies at every salary shown here. Nevada contributes no individual state income-tax withholding to these examples, while federal deductions continue to account for the difference between gross wages and the amount deposited."
+   },
+   {
+    "h3": "A $65,000 Nevada paycheck with no state income-tax line",
+    "p": "At $65,000 single, biweekly gross pay is $2,500.00. The calculator deducts $216.15 of federal income tax, $155.00 of Social Security, and $36.25 of Medicare. Nevada state income tax remains $0.00, producing a paycheck of $2,092.60 and annual net pay of $54,407.50. The take-home share is 83.7%, while the effective state rate is 0.00%. Compare that with $45,000 single, where net pay is $1,474.52 and the take-home share is 85.2%. The difference between those percentages comes from the other payroll deductions, not from any Nevada individual state income tax."
+   },
+   {
+    "h3": "Nevada salary increases do not create a state wage-tax bracket",
+    "p": "Moving from one salary level to another does not move your wages into a Nevada individual income-tax bracket because Nevada does not tax individual wage income. That is why the state line remains $0.00 at $45,000, $65,000, $90,000, and $130,000. At $130,000 married filing jointly, for example, gross biweekly pay is $5,000.00 and net pay is $4,185.19 after federal income tax, Social Security, and Medicare. The effective Nevada state rate remains 0.00%. Higher earnings can still change the federal deductions visible on the paycheck, but there is no Nevada individual wage-income withholding amount added as salary rises."
+   },
+   {
+    "h3": "Nevada hourly workers still have federal deductions",
+    "p": "An hourly job in Nevada receives the same state income-tax treatment as the salary examples: there is no individual Nevada income tax on wages. Start with the wages for the period using the hourly paycheck calculator, then account for the federal deductions applicable to that check. The four examples use fixed annual salaries and 26 biweekly pay periods, while hourly gross wages can change as schedules change. A larger or smaller paycheck can therefore produce a different deposit even though the Nevada state income-tax line remains $0.00. Do not interpret a changing take-home percentage as a new Nevada wage tax when the difference comes from other payroll calculations."
+   },
+   {
+    "h3": "Nevada's married examples isolate the effect of federal payroll deductions",
+    "p": "At $90,000 married filing jointly, the calculator starts with $3,461.54 of biweekly gross pay. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. With Nevada state income tax at $0.00, net pay is $2,949.04 and annual net pay is $76,675.00. At $130,000 married filing jointly, federal income tax rises to $432.31, Social Security is $310.00, and Medicare is $72.50, leaving $4,185.19. Nevada withholding remains unchanged at $0.00 in both cases, making the state particularly straightforward to isolate when reading these payroll examples."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why are taxes still taken from my paycheck in Nevada?",
+    "a": "Nevada has no individual state income tax on wages, but federal deductions still apply. At $45,000 single, for example, the paycheck includes $123.85 of federal income tax, $107.31 of Social Security, and $25.10 of Medicare even though Nevada state income tax is $0.00."
+   },
+   {
+    "q": "What is Nevada state withholding on a $65,000 salary?",
+    "a": "Nevada state income tax is $0.00 in the $65,000 single example. From $2,500.00 of biweekly gross pay, the listed federal deductions leave $2,092.60 per paycheck and $54,407.50/year."
+   },
+   {
+    "q": "Does earning more create Nevada state income-tax withholding?",
+    "a": "No individual state income tax on wages is applied in these Nevada calculations. The state line remains $0.00 at all four example salaries, including the $130,000 married filing jointly scenario."
+   },
+   {
+    "q": "Why does Nevada take-home percentage fall at higher example salaries?",
+    "a": "The changing take-home percentages come from the other payroll deductions, not Nevada state income tax. Nevada's effective state rate remains 0.00% throughout the examples, while federal income tax, Social Security, and Medicare determine the remaining difference between gross and net pay."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "NYC",
+  "intro": "New York City residents face an extra income-tax layer on top of New York State withholding, plus a payroll premium in these calculations. This New York City paycheck calculator applies the NYC resident table alongside the state method and 2026 maximum PFL.",
+  "taxSummary": "New York City residents pay New York State income tax plus New York City resident income tax, which ranges from 3.078% to 3.876%. The New York State Department of Taxation and Finance administers the system. The calculator uses \"NYS-50-T-NYS + NYC resident table + 2026 maximum PFL,\" so the paycheck reflects state and city resident taxation together with a separately displayed state payroll premium. As income rises across the examples, the combined effective state rate also increases.",
+  "sections": [
+   {
+    "h3": "Why New York City residents have an extra income-tax layer",
+    "p": "Living in New York City adds resident income tax to the New York State income-tax calculation. The NYC resident rates range from 3.078% to 3.876%, so a city resident's paycheck contains a tax layer that is not present solely because someone works elsewhere in New York State. The calculator handles this through the NYC resident table alongside NYS-50-T-NYS. In the examples, the displayed combined state and city income-tax amount reflects the calculation produced by that combined method. This resident-tax structure is why a New York City paycheck should not be modeled by taking a New York State result and assuming no additional city income-tax calculation is needed."
+   },
+   {
+    "h3": "New York City's $45,000 and $65,000 examples show the combined effect",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77. The combined state and city income-tax amount is $125.82 and state payroll premiums are $7.48, producing $1,341.22 of net pay and a 7.70% effective state rate. At $65,000 single, gross pay reaches $2,500.00, the combined income-tax amount becomes $199.30, and state payroll premiums rise to $10.80. Net pay is $1,882.50 and the effective state rate is 8.40%. The progression reflects the combined New York State and NYC resident-tax framework used by the calculator rather than one flat city percentage applied to every dollar of gross wages."
+   },
+   {
+    "h3": "Why New York City PFL appears separately from income tax",
+    "p": "The calculator's method includes 2026 maximum PFL in addition to NYS-50-T-NYS and the NYC resident table. PFL appears as a state payroll premium rather than being folded into the income-tax amount. At $90,000 married filing jointly, for example, the combined state and city income-tax amount is $290.38 while state payroll premiums are $14.95. At $130,000 married filing jointly, those figures become $455.78 and $15.84. Keeping PFL separate helps explain the paycheck without treating every state-related deduction as income tax. It also makes the payroll-program amount visible even when the state and city income-tax calculation is substantially larger."
+   },
+   {
+    "h3": "New York City residency matters differently from simply working in the city",
+    "p": "The city component used here is specifically the NYC resident income-tax table. That makes residency a central input when interpreting the calculation rather than treating the city tax as a generic workplace deduction. A paycheck for someone modeled as a New York City resident therefore needs both the New York State calculation and the NYC resident layer. This distinction is particularly important for commuters because living outside the city and working inside it is not the same tax situation as being a city resident. Use the New York City version of the calculator when the resident-tax framework applies rather than assuming every person with a New York City workplace should receive the same city income-tax treatment."
+   },
+   {
+    "h3": "How the effective New York City rate changes across these salaries",
+    "p": "The effective state rate rises across all four examples: 7.70% at $45,000 single, 8.40% at $65,000 single, 8.82% at $90,000 married filing jointly, and 9.43% at $130,000 married filing jointly. At the highest example, $5,000.00 of biweekly gross pay includes $455.78 of combined state and city income tax and $15.84 of state payroll premiums. After the listed federal deductions, the paycheck is $3,713.57. This upward pattern reflects the combined state and NYC resident-tax calculation plus the separately displayed payroll premium. It should not be reduced to the NYC resident rate alone because New York State income tax is also part of the calculation."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why do New York City residents pay both state and city income tax?",
+    "a": "New York City residents are subject to New York State income tax plus NYC resident income tax. The calculator applies NYS-50-T-NYS together with the NYC resident table, so both layers contribute to the income-tax amount shown for a city resident."
+   },
+   {
+    "q": "What does PFL mean on a New York City paycheck calculation?",
+    "a": "The calculator includes 2026 maximum PFL as a state payroll premium separate from income tax. At $90,000 married filing jointly, the example shows $290.38 of combined state and city income tax and $14.95 of state payroll premiums."
+   },
+   {
+    "q": "What is the net paycheck at $130,000 for a New York City resident?",
+    "a": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. The calculation includes $455.78 of combined state and city income tax and $15.84 of state payroll premiums, producing net pay of $3,713.57 after all listed deductions."
+   },
+   {
+    "q": "Is New York City resident income tax based on where I live?",
+    "a": "The method used here specifically applies the NYC resident table, so residency is central to the city income-tax calculation. A person who works in New York City but lives outside the city should not automatically be treated as having the same resident-tax situation."
+   }
+  ],
+  "needsVerification": [
+   "A person who works in New York City but lives outside the city is not automatically subject to the same NYC resident income-tax treatment as a New York City resident."
+  ]
+ },
+ {
+  "code": "OH",
+  "intro": "Ohio payroll changed during 2026, and local taxes can add further deductions beyond the state calculation. This Ohio paycheck calculator uses the state formula effective Aug. 1, 2026 and supports separate municipal and school planning rates.",
+  "taxSummary": "Ohio uses graduated state income taxation administered by the Ohio Department of Taxation, while many municipalities and school districts impose separate local income taxes. The calculator applies the \"Ohio state formula effective Aug. 1, 2026 + entered municipal/school planning rates.\" That effective date matters when evaluating a 2026 paycheck, and the local inputs are separate from the state formula. The four examples contain no local tax, so they show the post-Aug. 1 state calculation before applicable municipal or school-district amounts are added.",
+  "sections": [
+   {
+    "h3": "Why Aug. 1, 2026 matters for an Ohio paycheck",
+    "p": "The calculator's Ohio method is specifically the state formula effective Aug. 1, 2026. That date is part of the calculation rather than a minor label, because a paycheck calculated under the post-Aug. 1 method should not automatically be expected to match a paycheck processed under an earlier 2026 setup. The examples on this page all use the stated Aug. 1 method. If you are comparing checks from different parts of 2026, make sure the applicable Ohio withholding method is the same before interpreting a difference as a change in salary or filing circumstances. The municipal and school planning inputs remain separate from this state-method timing issue."
+   },
+   {
+    "h3": "Ohio municipalities and school districts can add separate taxes",
+    "p": "Ohio payroll can include local income taxes in addition to state withholding. Many municipalities and school districts impose their own taxes, which is why the calculator provides separate municipal and school planning-rate inputs. None of the four salary examples contains local tax, so their net-pay figures isolate the Ohio state calculation. If local taxes apply to your wages or residence, entering those planning rates will reduce the estimated paycheck beyond the example amount. Keeping the local components separate prevents a municipal or school-district deduction from being mistaken for a higher Ohio state rate. It also lets you adjust location-specific taxes without changing the underlying state formula."
+   },
+   {
+    "h3": "Ohio's $65,000 example before municipal and school taxes",
+    "p": "At $65,000 single, biweekly gross pay is $2,500.00. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Ohio state income tax under the formula effective Aug. 1, 2026 is $60.82. With no local tax entered, the resulting paycheck is $2,031.78 and annual net pay is $52,826.18. The effective state rate is 2.43%. At $45,000 single, Ohio state income tax is $37.82 and net pay is $1,436.70. A municipal or school-district tax, when applicable, would sit on top of these state-only examples rather than being included inside the displayed Ohio state amount."
+   },
+   {
+    "h3": "Moving within Ohio can change more than the state tax line",
+    "p": "Because Ohio has municipal and school-district income taxes, changing where you live or work can alter local payroll obligations without changing the statewide withholding formula. A move can therefore affect take-home pay even when salary stays the same. Before comparing two Ohio job or residence scenarios, identify the municipal and school-district planning inputs relevant to each one and keep them separate from the state calculation. This is especially useful when two paychecks have the same gross wages but different local deductions. The state formula effective Aug. 1, 2026 may be identical in both calculations while the location-specific portion produces a different final deposit."
+   },
+   {
+    "h3": "Ohio's married examples show the graduated state calculation",
+    "p": "At $90,000 married filing jointly, Ohio state income tax is $89.57 from $3,461.54 of biweekly gross pay, giving an effective state rate of 2.59%. At $130,000 married filing jointly, gross pay reaches $5,000.00 and Ohio withholding becomes $140.30, with the effective state rate rising to 2.81%. Net pay moves from $2,859.47 to $4,044.89. Both examples exclude local tax. The progression reflects Ohio's graduated state calculation under the post-Aug. 1 method, while municipal and school-district taxes remain separate location-based inputs. This separation helps distinguish an increase in state withholding from an additional local deduction."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does the Ohio calculator use Aug. 1, 2026?",
+    "a": "The withholding method supplied for the calculator is the \"Ohio state formula effective Aug. 1, 2026.\" The examples therefore represent that post-Aug. 1 method. A paycheck calculated under a different 2026 method should not automatically be expected to produce the same state withholding."
+   },
+   {
+    "q": "Can an Ohio school-district tax come out of my paycheck?",
+    "a": "Ohio has school-district income taxes in addition to state withholding, and the calculator provides a school planning-rate input for that local layer. The four salary examples have no local tax entered, so those amounts are not included in their net-pay figures."
+   },
+   {
+    "q": "Are Ohio municipal taxes included in the $65,000 example?",
+    "a": "No local tax is entered in the example. At $65,000 single, Ohio state income tax is $60.82 and net pay is $2,031.78. An applicable municipal or school planning rate would add another local deduction."
+   },
+   {
+    "q": "Why does Ohio state withholding rise between the married examples?",
+    "a": "Ohio uses graduated state income taxation. Under the formula effective Aug. 1, 2026, the married examples show state withholding increasing from $89.57 at $90,000 to $140.30 at $130,000, before any municipal or school-district planning rates are entered."
+   }
+  ],
+  "needsVerification": [
+   "Many Ohio municipalities and school districts impose separate local income taxes that can affect payroll.",
+   "Residence or work location can affect the local Ohio income-tax obligations applicable to a paycheck."
+  ]
+ },
+ {
+  "code": "OK",
+  "intro": "Oklahoma combines graduated state taxation with a paycheck calculation that rounds withholding to whole dollars. This Oklahoma paycheck calculator follows the 2026 percentage method, making the state's rounding convention visible in every example.",
+  "taxSummary": "Oklahoma uses graduated income-tax brackets from 0.25% to 4.5%, administered by the Oklahoma Tax Commission. Employees use Form OK-W-4 for state withholding elections, while payroll applies Oklahoma's state-specific withholding method. The calculator uses the \"Oklahoma 2026 percentage method (whole-dollar paycheck rounding).\" That rounding convention is why each example shows Oklahoma income tax as a whole-dollar amount. Because the tax system is graduated, the effective state percentage can also change with income and filing circumstances.",
+  "sections": [
+   {
+    "h3": "Why Oklahoma withholding is rounded to whole dollars",
+    "p": "Oklahoma's 2026 percentage method uses whole-dollar paycheck rounding, which is immediately visible in the state deductions. The four examples show $59.00, $93.00, $117.00, and $187.00 of Oklahoma income tax. Other deductions in the same paychecks still contain cents, so the rounding is a feature of the Oklahoma withholding method rather than a rule applied to every payroll line. If a hand calculation lands close to the calculator result but differs by cents, check whether the state amount has been processed using the whole-dollar convention. Preserving this mechanic is important when comparing Oklahoma payroll calculations because skipping the rounding step can create a small mismatch even when the underlying wages and elections agree."
+   },
+   {
+    "h3": "How Form OK-W-4 feeds Oklahoma's graduated calculation",
+    "p": "Form OK-W-4 supplies Oklahoma-specific withholding elections for the state payroll calculation. Oklahoma's brackets range from 0.25% to 4.5%, so those elections operate within a graduated system rather than one flat tax percentage. The calculator applies the 2026 percentage method and then reflects the state's whole-dollar paycheck rounding. At $45,000 single with no allowances, the effective state rate is 3.41%; at $65,000 single, it becomes 3.72%. If your OK-W-4 information changes, recalculate the Oklahoma deduction rather than reusing the effective percentage from an earlier paycheck. The form and the graduated method together determine the state amount shown during payroll."
+   },
+   {
+    "h3": "Oklahoma's $45,000 single paycheck from gross to net",
+    "p": "At $45,000 single, the biweekly paycheck starts at $1,730.77. Federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10. Oklahoma state income tax is $59.00 after application of the 2026 percentage method and whole-dollar rounding. The final paycheck is $1,415.52, equivalent to $36,803.50/year, with an effective state rate of 3.41%. At $65,000 single, Oklahoma withholding becomes $93.00 and net pay is $1,999.60 from $2,500.00 gross. The comparison shows both the graduated behavior of the state tax and the whole-dollar format produced by Oklahoma's withholding mechanics."
+   },
+   {
+    "h3": "Why Oklahoma's married effective rate can dip before rising",
+    "p": "The effective state percentages do not rise in a straight line across the four examples because filing circumstances change. The $65,000 single case has a 3.72% effective state rate, while the higher-income $90,000 married filing jointly example shows 3.38% and $117.00 of Oklahoma withholding. At $130,000 married filing jointly, the effective rate rises to 3.74% and withholding reaches $187.00. Oklahoma's graduated system therefore cannot be summarized by assigning one effective percentage to every salary. Filing status and the state percentage method affect the result, while whole-dollar rounding determines how the final paycheck withholding amount is displayed."
+   },
+   {
+    "h3": "Oklahoma hourly wages can produce different rounded deductions",
+    "p": "Hourly workers can begin with the wages for the current period using the hourly paycheck calculator and then apply the Oklahoma withholding setup. The four salary examples use biweekly payroll across 26 periods, giving them fixed gross amounts. Variable hours can instead change the wages entering Oklahoma's graduated percentage method from one payday to the next. Because the final state withholding uses whole-dollar paycheck rounding, a different gross amount can also produce a different rounded Oklahoma deduction. Avoid dividing one of the salary examples' state amounts into an hourly rate or assuming the same effective percentage applies to every check. Calculate each payroll scenario from the wages actually being modeled."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is Oklahoma state withholding shown in whole dollars?",
+    "a": "The calculator follows the Oklahoma 2026 percentage method with whole-dollar paycheck rounding. That is why the state amounts appear as $59.00, $93.00, $117.00, and $187.00 even though federal payroll deductions in the same examples include cents."
+   },
+   {
+    "q": "What does Oklahoma Form OK-W-4 control?",
+    "a": "Form OK-W-4 provides the state withholding elections used in Oklahoma's payroll calculation. Those elections feed into the state's graduated percentage method, which determines the Oklahoma income-tax amount withheld from each paycheck."
+   },
+   {
+    "q": "What Oklahoma withholding is shown at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00 and Oklahoma state income tax is $187.00. After the listed federal income tax, Social Security, Medicare, and Oklahoma withholding, net pay is $3,998.19."
+   },
+   {
+    "q": "Why is the Oklahoma effective rate lower at $90,000 married than $65,000 single?",
+    "a": "Oklahoma uses graduated taxation and the filing circumstances differ between those examples. The $65,000 single case shows a 3.72% effective state rate, while the $90,000 married filing jointly case shows 3.38%, so salary alone does not determine the effective withholding percentage."
+   }
+  ],
+  "needsVerification": []
+ }
+]

@@ -1,0 +1,284 @@
+[
+ {
+  "code": "LA",
+  "intro": "Louisiana’s graduated brackets make the state deduction change as taxable pay rises rather than staying at one fixed percentage. This Louisiana paycheck calculator follows the R-1210 2026 formula and reflects state withholding elections made through Form L-4.",
+  "taxSummary": "Louisiana uses graduated income-tax brackets from 1.85% to 4.25%, with withholding administered by the Louisiana Department of Revenue. Employees use Form L-4 for Louisiana withholding elections, while payroll applies the state’s withholding rules to each check. The calculator uses the \"Louisiana R-1210 2026 formula.\" Because the system is graduated, the effective Louisiana withholding percentage can change with earnings and filing circumstances instead of matching one statewide rate on every paycheck.",
+  "sections": [
+   {
+    "h3": "How Louisiana Form L-4 feeds the state withholding calculation",
+    "p": "Form L-4 supplies Louisiana-specific withholding elections for your employer’s payroll calculation. Those elections are applied through the state withholding method rather than by taking one percentage directly from gross wages. Louisiana’s graduated brackets run from 1.85% to 4.25%, so the resulting state deduction can change as the wages presented to the calculation change. The calculator uses the Louisiana R-1210 2026 formula for this process. If you update your L-4 information, calculate the Louisiana line again instead of carrying forward an effective percentage from an earlier paycheck. The state form affects Louisiana withholding specifically, while other payroll deductions continue to follow their own calculations."
+   },
+   {
+    "h3": "Louisiana’s single examples show the graduated pattern",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Louisiana state income tax is $38.18. The effective state rate is 2.21%, and the resulting paycheck is $1,436.34 after the listed deductions. Increase the salary to $65,000 and gross biweekly pay becomes $2,500.00. Louisiana withholding rises to $61.95, while the effective state rate increases to 2.48% and net pay becomes $2,030.65. The state deduction therefore grows by more than simply preserving the first example’s effective percentage. Louisiana’s graduated structure and R-1210 formula recalculate withholding as earnings change, which is why scaling a previous state deduction is not a reliable shortcut."
+   },
+   {
+    "h3": "What pre-tax deductions can change in a Louisiana calculation",
+    "p": "Louisiana withholding is based on wages processed through the state formula, so payroll items that alter the wages subject to state withholding can also alter the Louisiana line. The $45,000, $65,000, $90,000, and $130,000 examples contain no 401(k) contribution or pre-tax benefits, allowing the income levels to be compared without those additional variables. If your own paycheck contains qualifying pre-tax deductions, include their treatment when modeling Louisiana withholding instead of subtracting every benefit only after taxes have been calculated. This matters in a graduated system because changing taxable wages can change not just the dollar amount withheld but also the effective state withholding percentage produced by the calculation."
+   },
+   {
+    "h3": "Louisiana hourly wages still run through the R-1210 formula",
+    "p": "Hourly workers use the same Louisiana withholding framework, but the wages entering the calculation can move from one paycheck to the next. Start by determining the period’s earnings with the hourly paycheck calculator, then apply your Louisiana withholding information. The salary examples use biweekly payroll across 26 pay periods, creating fixed gross amounts such as $2,500.00 at $65,000. A changing work schedule can instead produce different taxable wages each payday. Because Louisiana uses graduated brackets, a larger or smaller paycheck does not have to preserve the same effective state withholding percentage. Recalculating the Louisiana line for the actual pay period is more useful than multiplying a previous deduction by the change in hours."
+   },
+   {
+    "h3": "Louisiana filing status changes the relationship between income and withholding",
+    "p": "The married filing jointly examples illustrate why annual salary alone does not determine Louisiana’s effective withholding rate. At $90,000, Louisiana state income tax is $76.36 per biweekly paycheck and the effective state rate is 2.21%. At $130,000, the state deduction rises to $123.90 and the effective rate becomes 2.48%. Those effective rates match the corresponding single examples at different income levels rather than increasing strictly with salary across all four cases. Filing circumstances therefore matter alongside earnings when the R-1210 formula is applied. When your household filing setup changes, calculate the Louisiana withholding under the appropriate configuration instead of assuming the state deduction should track salary by a fixed percentage."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What is Louisiana Form L-4 used for?",
+    "a": "Form L-4 provides Louisiana-specific withholding elections used in the state payroll calculation. The calculator applies those elections through the Louisiana R-1210 2026 formula rather than treating the state deduction as one fixed percentage of gross wages."
+   },
+   {
+    "q": "Why does my Louisiana withholding percentage change with income?",
+    "a": "Louisiana uses graduated income-tax brackets from 1.85% to 4.25%. At $45,000 single, the example shows $38.18 of Louisiana withholding and a 2.21% effective state rate; at $65,000 single, those figures become $61.95 and 2.48%."
+   },
+   {
+    "q": "What is the Louisiana paycheck result at $90,000 married filing jointly?",
+    "a": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54. Louisiana state income tax is $76.36, and after $247.69 of federal income tax, $214.62 of Social Security, and $50.19 of Medicare, the paycheck is $2,872.68."
+   },
+   {
+    "q": "Which Louisiana withholding method applies in the calculator?",
+    "a": "The calculator uses the Louisiana R-1210 2026 formula. That method applies Louisiana’s withholding rules to payroll wages and state elections, allowing the state deduction to respond to income and filing circumstances within the graduated tax structure."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "MD",
+  "intro": "Maryland payroll has a strong location component because county income tax sits alongside the graduated state tax. This Maryland paycheck calculator separates the 2026 state schedule from an entered county planning rate so you can model both layers.",
+  "taxSummary": "Maryland combines graduated state income tax with county-level income tax, and the Comptroller of Maryland administers the state system. Your county of residence can materially affect the total amount withheld from wages. The calculator uses the \"Maryland 2026 state schedule + entered county planning rate,\" keeping the county component distinct from the state schedule. The four salary examples contain no local tax, so their Maryland withholding figures provide a state-only starting point before an applicable county planning rate is entered.",
+  "sections": [
+   {
+    "h3": "Why your Maryland county belongs in the paycheck calculation",
+    "p": "County income tax is a central part of Maryland payroll rather than a minor detail that can be ignored when estimating take-home pay. The applicable county amount varies by county of residence, so two Maryland employees with identical salaries can have different total withholding when they live in different counties. The calculator handles this through an entered county planning rate alongside the Maryland state schedule. Its reference salary examples leave local tax empty, which isolates the statewide calculation. To model your own paycheck, treat the county component as a separate input instead of increasing the state rate or assuming the state deduction already contains every Maryland income-tax amount that may apply."
+   },
+   {
+    "h3": "A $65,000 Maryland paycheck before county tax is entered",
+    "p": "At $65,000 single, biweekly gross pay is $2,500.00. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Maryland state income tax is $112.54 under the state schedule, leaving $1,980.06 per paycheck and $51,481.50/year. The effective state rate shown is 4.50%. Because this example has no local tax entered, it does not yet reflect an applicable county planning rate. At $45,000 single, Maryland state income tax is $76.00 and net pay is $1,398.52. Adding the relevant county component would reduce the paycheck beyond these state-only examples."
+   },
+   {
+    "h3": "Maryland residency can matter when your job is across a county line",
+    "p": "Maryland’s county income-tax structure makes residence especially relevant for workers who commute between counties. Your employer’s worksite and your home county are not interchangeable details when the county tax is tied to residence. If you change where you live while keeping the same job and salary, the county portion of your payroll calculation can change even though the Maryland state schedule does not. That makes county information worth reviewing whenever you move within Maryland. The calculator’s separate county planning-rate input is designed for this local layer, allowing you to leave the state calculation intact while changing the location-sensitive component of the estimate."
+   },
+   {
+    "h3": "How Maryland’s state deduction changes across married examples",
+    "p": "At $90,000 married filing jointly, the calculator produces $158.21 of Maryland state income tax from $3,461.54 of biweekly gross pay. The effective state rate is 4.57%, and the paycheck is $2,790.83 before any local tax is entered. At $130,000 married filing jointly, gross pay rises to $5,000.00, Maryland state income tax becomes $231.29, and the effective state rate reaches 4.63%. Net pay is $3,953.90 under the same no-local-tax setup. The progression reflects Maryland’s graduated state schedule. County income tax is an additional layer, so these figures should not be interpreted as the complete Maryland income-tax burden for every resident."
+   },
+   {
+    "h3": "Maryland hourly workers need both wages and county information",
+    "p": "For hourly work, calculate the wages earned during the pay period with the hourly paycheck calculator before applying Maryland’s state schedule. Then include the county planning rate that corresponds to your residence when a county tax applies. This matters because variable hours can change the wages entering the graduated state calculation while a move between counties can change the local component independently. The salary examples use 26 biweekly pay periods, so they do not have that paycheck-to-paycheck wage variation. Maryland workers with changing schedules should therefore model the actual period rather than converting one example’s state deduction into an assumed fixed percentage."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Maryland county affect paycheck withholding?",
+    "a": "Maryland adds county-level income tax to its graduated state income tax, and the county component varies by county of residence. The calculator keeps that local amount separate through an entered county planning rate, so location can change total withholding even when salary stays the same."
+   },
+   {
+    "q": "Is Maryland county tax included in the $65,000 example?",
+    "a": "No local tax is entered in that example. At $65,000 single, the calculator shows $112.54 of Maryland state income tax and $1,980.06 of net biweekly pay. An applicable county planning rate would add another Maryland-related deduction."
+   },
+   {
+    "q": "Can moving to another Maryland county change my paycheck?",
+    "a": "Yes, because Maryland county income tax varies by county of residence. A move can therefore change the county portion of withholding even when your employer, salary, and the statewide Maryland tax calculation remain unchanged."
+   },
+   {
+    "q": "Why does Maryland withholding rise between the $90,000 and $130,000 examples?",
+    "a": "Maryland uses a graduated state income-tax schedule. The married filing jointly examples show state withholding increasing from $158.21 at $90,000 to $231.29 at $130,000. Those figures exclude an entered county tax, which is calculated as a separate local component."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "MA",
+  "intro": "Massachusetts payroll can contain a state income-tax line and a separate PFML employee contribution. This Massachusetts paycheck calculator keeps those deductions distinct while applying Circular M and the entered PFML employee share.",
+  "taxSummary": "Massachusetts generally uses a 5% flat income tax and also has a 4% surtax applying to income above $1 million. The Massachusetts Department of Revenue administers the state income tax. On a paycheck, state payroll premiums can appear separately from income-tax withholding. The calculator uses \"Massachusetts Circular M + entered PFML employee share.\" Separating the PFML contribution from the Massachusetts income-tax line makes it easier to see why the combined state-related deductions can exceed the amount shown as income tax alone.",
+  "sections": [
+   {
+    "h3": "Why Massachusetts PFML appears outside the income-tax line",
+    "p": "Massachusetts PFML is represented as a state payroll premium rather than being folded into the Massachusetts income-tax amount. That distinction is visible in every example. At $45,000 single, state income tax is $79.92 while state payroll premiums are $7.96. At $65,000 single, those amounts become $115.44 and $11.50. Reading the lines separately prevents the PFML contribution from being mistaken for a higher state income-tax rate. The calculator method explicitly combines Massachusetts Circular M with an entered PFML employee share, but the output preserves the two components. When reviewing your paycheck, look for both state-related deductions rather than expecting all Massachusetts amounts to appear under one income-tax label."
+   },
+   {
+    "h3": "Massachusetts keeps a consistent effective state rate in these examples",
+    "p": "All four examples display an effective state rate of 5.08% under the calculator setup. At $45,000 single, Massachusetts state income tax is $79.92 and state payroll premiums are $7.96. At $130,000 married filing jointly, the corresponding amounts are $230.88 and $23.00. The salaries and dollar deductions change substantially, but the effective state rate shown remains 5.08%. This pattern differs from the graduated-state examples where the effective percentage moves as income rises. Massachusetts generally uses a 5% flat income tax, while the separate payroll premium contributes to the state-related deductions shown in these paycheck calculations."
+   },
+   {
+    "h3": "Breaking down Massachusetts pay at $90,000 married filing jointly",
+    "p": "The $90,000 married filing jointly example begins with $3,461.54 of biweekly gross pay. Federal income tax removes $247.69, Social Security removes $214.62, and Medicare removes $50.19. Massachusetts state income tax is $159.84, with another $15.92 shown as state payroll premiums. The resulting paycheck is $2,773.28, equivalent to $72,105.25/year. The separation between $159.84 and $15.92 is important: the first amount is Massachusetts state income tax, while the second is the payroll-premium component represented by the calculator. Combining them mentally into one income-tax rate would obscure how the paycheck is actually being modeled."
+   },
+   {
+    "h3": "Where the Massachusetts high-earner surtax fits into the tax structure",
+    "p": "Massachusetts generally has a 5% income-tax rate, but the state structure also includes an additional 4% surtax applying to income above $1 million. None of the four salary examples reaches that income level: they cover $45,000, $65,000, $90,000, and $130,000. As a result, these examples are useful for understanding the ordinary wage-tax and payroll-premium pattern but do not illustrate the high-earner surtax in action. If your income reaches the surtax range, do not extrapolate from the effective state rates shown in these four examples. The additional Massachusetts tax mechanism becomes relevant beyond the income levels represented here."
+   },
+   {
+    "h3": "How employer-plan deductions can affect Massachusetts taxable wages",
+    "p": "The reference paychecks contain no 401(k) contribution and no pre-tax benefits. If your employer-plan deductions change wages used for Massachusetts income-tax withholding, the state income-tax line can differ from the salary examples even before considering the PFML component. Keep the two effects conceptually separate: one concerns the wages entering the income-tax calculation, while the other is the state payroll premium represented through the entered PFML employee share. This distinction is useful in Massachusetts because both can affect the final deposit while appearing for different reasons. Enter payroll benefits according to their treatment rather than subtracting every employer-plan deduction only after the state calculation."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Massachusetts paycheck show PFML separately?",
+    "a": "The calculator treats PFML as a state payroll premium rather than Massachusetts income tax. At $65,000 single, for example, the state income-tax line is $115.44 while state payroll premiums are $11.50, allowing you to see the two deductions separately."
+   },
+   {
+    "q": "What Massachusetts deductions appear at $90,000 married filing jointly?",
+    "a": "At $90,000 married filing jointly, Massachusetts state income tax is $159.84 and state payroll premiums are $15.92. With the listed federal deductions included, the $3,461.54 biweekly gross paycheck becomes $2,773.28."
+   },
+   {
+    "q": "When does the Massachusetts high-earner surtax matter?",
+    "a": "Massachusetts has an additional 4% surtax applying to income above $1 million. The four paycheck examples stop at $130,000, so they do not demonstrate that surtax. Their state deductions should not be extrapolated to income in the surtax range."
+   },
+   {
+    "q": "Why is the effective state rate 5.08% in all four Massachusetts examples?",
+    "a": "The calculator applies Massachusetts Circular M together with the entered PFML employee share. Under the four provided salary scenarios, the resulting effective state rate is 5.08% each time even though the dollar amounts of state income tax and payroll premiums rise with earnings."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "MI",
+  "intro": "Michigan’s flat state tax is straightforward until a city income tax enters the paycheck. This Michigan paycheck calculator applies the 2026 state formula and lets you add a city planning rate for locations where separate municipal income tax applies.",
+  "taxSummary": "Michigan uses a 4.25% flat state income tax administered by the Michigan Department of Treasury. The state examples produce a consistent 4.25% effective state rate, but certain Michigan cities, including Detroit, impose separate city income taxes. The calculator uses the \"Michigan 2026 state formula + entered city planning rate,\" allowing the local component to be modeled separately. The four salary examples contain no local tax, so their Michigan figures represent the statewide calculation before any applicable city income-tax amount is added.",
+  "sections": [
+   {
+    "h3": "Why Detroit can add another tax line to a Michigan paycheck",
+    "p": "Michigan’s statewide 4.25% income tax is not always the only income-tax deduction relevant to a worker. Certain cities, including Detroit, impose separate city income taxes that can affect payroll. The calculator handles that local layer through an entered city planning rate rather than blending it into the Michigan state rate. That distinction matters because the four salary examples have no local tax entered. If a city income tax applies to your wages, the final paycheck can therefore be lower than the corresponding example even though the statewide Michigan deduction is correct. Keeping city tax separate also lets you change locations without altering the underlying state formula."
+   },
+   {
+    "h3": "Michigan’s flat tax produces the same effective state rate here",
+    "p": "Michigan’s four examples all show a 4.25% effective state rate. At $45,000 single, state income tax is $73.56 from $1,730.77 of biweekly gross pay. At $65,000 single, it is $106.25 from $2,500.00. The married filing jointly examples continue the same relationship: $147.12 of Michigan withholding at $90,000 and $212.50 at $130,000. That consistency reflects the flat state income-tax structure represented by the 2026 state formula. A city planning rate, when applicable, is an additional local component and is not included in those effective state figures because no local tax is entered in the examples."
+   },
+   {
+    "h3": "A Michigan $130,000 paycheck before city income tax",
+    "p": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Michigan state income tax is $212.50, leaving $3,972.69 per paycheck and $103,290.00/year. This example contains no local tax, so it represents the Michigan state calculation before an applicable city planning rate is added. At $90,000 married filing jointly, Michigan withholding is $147.12 and net pay is $2,801.92 from $3,461.54 gross. Both examples maintain the same 4.25% effective state rate while the dollar amount increases with earnings."
+   },
+   {
+    "h3": "Changing Michigan work locations can change the local portion",
+    "p": "A job change within Michigan can affect more than commuting time if the new work arrangement places wages under a city income-tax system. Because certain cities impose their own income taxes, location can alter the local portion of payroll while leaving Michigan’s statewide 4.25% structure unchanged. Use the city planning-rate input for that local layer instead of modifying the state percentage. This is particularly useful when comparing otherwise similar jobs in different Michigan cities: the statewide deduction may look the same at the same taxable wage, while the local deduction can differ. The calculator’s separation of state and city inputs makes that distinction visible."
+   },
+   {
+    "h3": "Michigan’s flat state line makes local differences easier to spot",
+    "p": "Because the Michigan examples maintain a 4.25% effective state rate across all four salary levels, an additional city deduction stands out as a separate payroll factor rather than a change in the state rate. At $65,000 single, for instance, Michigan state income tax is $106.25 and net pay is $1,986.35 when no local tax is entered. If a city income tax applies, the local amount reduces the paycheck beyond that baseline without changing the $106.25 state calculation solely because a city tax exists. This separation is useful when estimating a move or job change: keep the Michigan state formula constant and adjust the city planning input as appropriate."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is there a Detroit tax on my Michigan paycheck?",
+    "a": "Certain Michigan cities, including Detroit, impose separate city income taxes. That local tax is distinct from Michigan’s 4.25% state income tax, so the calculator provides a city planning-rate input instead of combining the two into one statewide percentage."
+   },
+   {
+    "q": "Is city income tax included in the Michigan salary examples?",
+    "a": "No local tax is entered in the four examples. At $65,000 single, for example, Michigan state income tax is $106.25 and net pay is $1,986.35 before an applicable city income-tax amount is added."
+   },
+   {
+    "q": "Why is Michigan's effective state rate 4.25% at every example salary?",
+    "a": "Michigan uses a flat 4.25% state income tax, and the four provided calculations show that same 4.25% effective state rate at $45,000, $65,000, $90,000, and $130,000. City income taxes are handled separately."
+   },
+   {
+    "q": "Can moving to another Michigan city change payroll withholding?",
+    "a": "It can if the city income-tax situation changes. Certain Michigan cities impose their own income taxes, so the local payroll component can differ by location even while the statewide Michigan income-tax formula remains unchanged."
+   }
+  ],
+  "needsVerification": [
+   "Certain Michigan cities, including Detroit, impose separate city income taxes that can affect payroll.",
+   "A change in work location can affect the applicable Michigan city income-tax treatment."
+  ]
+ },
+ {
+  "code": "MN",
+  "intro": "Minnesota payroll combines graduated state withholding with a separate Paid Leave component in 2026. This Minnesota paycheck calculator keeps the employee Paid Leave share visible instead of treating every state-related deduction as income tax.",
+  "taxSummary": "Minnesota uses graduated income-tax brackets from 5.35% to 9.85%, administered by the Minnesota Department of Revenue. The calculator applies the \"Minnesota 2026 formula + entered employee Paid Leave share.\" That produces two distinct state-related components: Minnesota income-tax withholding and a state payroll premium. As taxable earnings and filing circumstances change, the income-tax portion can move through the graduated calculation, while the entered Paid Leave share appears separately. The examples show both amounts rather than combining them into one Minnesota tax figure.",
+  "sections": [
+   {
+    "h3": "Minnesota Paid Leave is separate from state income-tax withholding",
+    "p": "Minnesota’s 2026 Paid Leave component appears as a state payroll premium, not as part of the Minnesota income-tax line. At $45,000 single, the calculator shows $86.82 of Minnesota state income tax and $7.62 of state payroll premiums. At $65,000 single, those amounts rise to $139.13 and $11.00. Separating the two matters because Minnesota also uses graduated income-tax brackets from 5.35% to 9.85%. If you combine the premium with income tax, you lose sight of which part comes from the graduated tax calculation and which part represents the employee Paid Leave share. The calculator keeps both visible so the state-related deductions can be read independently."
+   },
+   {
+    "h3": "Minnesota’s single examples show a rising effective state rate",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77. Minnesota state income tax is $86.82, state payroll premiums are $7.62, and the effective state rate is 5.46%. At $65,000 single, gross pay rises to $2,500.00, Minnesota income tax becomes $139.13, state payroll premiums become $11.00, and the effective state rate reaches 6.01%. The paycheck moves from $1,380.08 to $1,942.46. This progression reflects Minnesota’s graduated withholding structure together with the Paid Leave component represented by the calculator. A higher salary therefore changes more than the dollar amount of one flat state deduction."
+   },
+   {
+    "h3": "Minnesota filing status changes the effective withholding pattern",
+    "p": "The $90,000 married filing jointly example produces $169.78 of Minnesota state income tax and $15.23 of state payroll premiums from $3,461.54 of biweekly gross pay. Its effective state rate is 5.34%, which is lower than the 6.01% shown at $65,000 single despite the higher salary. At $130,000 married filing jointly, Minnesota income tax rises to $274.39, payroll premiums reach $22.00, and the effective state rate becomes 5.93%. These comparisons show why salary by itself does not identify the effective Minnesota withholding percentage. Filing circumstances interact with the graduated state calculation, while Paid Leave remains a separate payroll component."
+   },
+   {
+    "h3": "How Minnesota pre-tax deductions can affect the graduated state line",
+    "p": "The reference salary cases contain no 401(k) contribution and no pre-tax benefits. If your payroll includes deductions that reduce wages subject to Minnesota income-tax withholding, the graduated state line can change because a different taxable amount enters the formula. That effect should be distinguished from the employee Paid Leave share, which the calculator represents separately as a state payroll premium. Minnesota’s graduated brackets make this separation useful: changing taxable wages can affect the income-tax calculation, while a state payroll program has its own place in the paycheck. Enter qualifying payroll deductions according to their treatment instead of assuming every deduction reduces Minnesota income tax in the same way."
+   },
+   {
+    "h3": "Reading Minnesota’s $130,000 paycheck as separate payroll layers",
+    "p": "At $130,000 married filing jointly, the paycheck starts with $5,000.00 of biweekly gross pay. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Minnesota state income tax contributes $274.39, while state payroll premiums add $22.00 as a separate deduction. The resulting paycheck is $3,888.80, equivalent to $101,108.75/year. Reading those lines independently makes the calculation clearer: the $274.39 amount comes from Minnesota’s state income-tax calculation, while the $22.00 amount represents the payroll-premium component. Together with the federal deductions, they explain the difference between the $5,000.00 gross amount and the final deposit."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Minnesota paycheck show a Paid Leave deduction?",
+    "a": "The 2026 Minnesota calculation can include an employee Paid Leave share as a state payroll premium. The calculator lists it separately from Minnesota income tax; at $45,000 single, for example, state income tax is $86.82 and state payroll premiums are $7.62."
+   },
+   {
+    "q": "Why is Minnesota's effective state rate higher at $65,000 single than $90,000 married?",
+    "a": "Minnesota uses graduated withholding, and filing circumstances matter alongside income. The $65,000 single example shows a 6.01% effective state rate, while the $90,000 married filing jointly example shows 5.34%, even though the married example has higher gross pay."
+   },
+   {
+    "q": "What Minnesota deductions appear on the $130,000 married example?",
+    "a": "At $130,000 married filing jointly, Minnesota state income tax is $274.39 and state payroll premiums are $22.00. With the listed federal income tax, Social Security, and Medicare deductions, the $5,000.00 biweekly gross paycheck becomes $3,888.80."
+   },
+   {
+    "q": "Is Minnesota Paid Leave included inside the state income-tax amount?",
+    "a": "No. The calculator displays the entered employee Paid Leave share as a separate state payroll premium. Minnesota income-tax withholding is calculated separately under the 2026 formula and graduated bracket structure."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "MO",
+  "intro": "Missouri’s state withholding is graduated, but workers in Kansas City or St. Louis can also face a separate city earnings tax. This Missouri paycheck calculator keeps that local planning amount apart from the 2026 state formula.",
+  "taxSummary": "Missouri uses graduated income-tax brackets from 2% to 4.95%, with state withholding administered by the Missouri Department of Revenue. Kansas City and St. Louis also impose earnings taxes that can affect workers in those cities. The calculator uses the \"Missouri 2026 formula + entered city earnings planning rate,\" allowing the local component to be added separately. The four salary examples contain no local tax, so their Missouri withholding figures show the graduated state calculation before a Kansas City or St. Louis earnings-tax input is included.",
+  "sections": [
+   {
+    "h3": "Kansas City and St. Louis add a local layer to Missouri payroll",
+    "p": "Missouri workers in Kansas City or St. Louis can encounter an earnings tax in addition to Missouri state income-tax withholding. The calculator represents that city-level deduction through an entered earnings planning rate rather than increasing the Missouri state rate. This distinction matters when reading the salary examples because none of them has local tax entered. A worker subject to a city earnings tax can therefore receive a lower paycheck than the corresponding example even when the Missouri state deduction matches exactly. Location is especially relevant when comparing jobs inside and outside those cities: the graduated state formula continues to apply, while the local earnings-tax component can appear or disappear with the applicable city circumstances."
+   },
+   {
+    "h3": "Missouri’s graduated tax becomes more visible as single income rises",
+    "p": "The $45,000 single example has $1,730.77 of biweekly gross pay and $45.00 of Missouri state income tax. Its effective state rate is 2.60%, and the resulting paycheck is $1,429.52. At $65,000 single, gross pay becomes $2,500.00, Missouri withholding increases to $81.00, and the effective state rate reaches 3.24%. Net pay is $2,011.60. That movement reflects Missouri’s graduated 2%–4.95% structure. The state deduction is not designed to remain at the same effective percentage as income rises, so applying the $45,000 example’s percentage directly to a larger salary would not reproduce the Missouri 2026 formula."
+   },
+   {
+    "h3": "Missouri’s $90,000 married paycheck before city earnings tax",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. Missouri state income tax is $127.00, leaving $2,822.04 per paycheck and $73,373.00/year. The effective state rate is 3.67%. Because no local tax is entered, this result does not include a Kansas City or St. Louis earnings-tax amount. At $130,000 married filing jointly, Missouri state income tax rises to $199.00 and net pay becomes $3,986.19 from $5,000.00 gross, again before an applicable city planning rate is added."
+   },
+   {
+    "h3": "Moving into or out of a Missouri earnings-tax city can change payroll",
+    "p": "A change in location can alter the city portion of a Missouri paycheck without changing the statewide graduated tax structure. Kansas City and St. Louis have earnings taxes, so a worker whose employment or other relevant city circumstances change may need to update the local planning input even if salary remains identical. Keep that city amount separate from Missouri state withholding when comparing scenarios. Doing so prevents a local deduction from being mistaken for movement into a higher state bracket. It also makes job comparisons clearer: first calculate Missouri withholding under the same income and filing setup, then add the city earnings-tax component when it applies to the situation being modeled."
+   },
+   {
+    "h3": "Missouri’s effective state rate climbs across the four examples",
+    "p": "The four reference cases show a steady progression in the effective Missouri state rate. It is 2.60% at $45,000 single, 3.24% at $65,000 single, 3.67% at $90,000 married filing jointly, and 3.98% at $130,000 married filing jointly. State withholding rises from $45.00 to $81.00, then $127.00 and $199.00. That progression is characteristic of the graduated state calculation represented here. City earnings taxes are not part of those example amounts because no local tax is entered. If Kansas City or St. Louis tax applies, add the local planning component rather than interpreting the higher total deduction as a different Missouri state effective rate."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Is there a city earnings tax in Kansas City, Missouri?",
+    "a": "Kansas City imposes an earnings tax that can affect workers in the city. The calculator keeps that local amount separate from Missouri’s graduated state income-tax calculation through an entered city earnings planning rate."
+   },
+   {
+    "q": "Does St. Louis earnings tax appear in the Missouri salary examples?",
+    "a": "No local tax is entered in the four examples. They show Missouri state withholding before an applicable St. Louis or Kansas City earnings-tax amount. Use the city earnings planning-rate input when you need to include that local layer."
+   },
+   {
+    "q": "What Missouri withholding is shown at $90,000 married filing jointly?",
+    "a": "The $90,000 married filing jointly example has $3,461.54 of biweekly gross pay and $127.00 of Missouri state income tax. After the listed federal deductions and Missouri withholding, net pay is $2,822.04 before any city earnings tax is entered."
+   },
+   {
+    "q": "Why does Missouri's effective withholding rate rise in these examples?",
+    "a": "Missouri uses graduated income-tax brackets from 2% to 4.95%. Across the four examples, the effective state rate rises from 2.60% to 3.98% as the modeled income changes. City earnings taxes, when applicable, are calculated as a separate local component."
+   }
+  ],
+  "needsVerification": [
+   "Kansas City and St. Louis impose earnings taxes that can affect workers in those cities.",
+   "Changes in work or other relevant city circumstances can affect whether a Kansas City or St. Louis earnings tax applies."
+  ]
+ }
+]

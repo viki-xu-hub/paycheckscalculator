@@ -8,6 +8,12 @@ import type { FrequencyData } from "../lib/seo/types";
 import frequenciesRaw from "../data/frequencies.json";
 import type { Metadata } from "next";
 import { frequencyMeta } from "../lib/seo/meta";
+import editorialRaw from "../data/state-editorial.json";
+
+// Per-state editorial copy (intro, tax summary, sections, FAQs) written for each state individually;
+// see scripts/merge-state-editorial.mjs. States without an entry fall back to the shared template text.
+type StateEditorialCopy={code:string;intro:string;taxSummary:string;sections:{h3:string;p:string}[];faqs:{q:string;a:string}[]};
+const editorialByCode:Record<string,StateEditorialCopy>=Object.fromEntries((editorialRaw as StateEditorialCopy[]).map(e=>[e.code,e]));
 
 const frequencies = frequenciesRaw as FrequencyData[];
 // biweekly already has its own static page — exclude it to avoid build conflict
@@ -67,7 +73,9 @@ export default async function LocationPage({params}:{params:Promise<{location:st
   const canonical=`https://www.paycheckscalculator.org/${p.slug}`;
   const noTax=p.noTax===true;
   const taxInfo=stateTaxInfo[p.short]||{type:"income tax",detail:`${p.name} imposes state income tax on wages.`,agency:`${p.name} Department of Revenue`};
-  const faqs=buildFaqs(p.name,p.short,noTax,taxInfo.agency);
+  const ed=editorialByCode[p.short];
+  const genericFaqs=buildFaqs(p.name,p.short,noTax,taxInfo.agency);
+  const faqs=ed?[genericFaqs[0],...ed.faqs]:genericFaqs;
 
   const softwareSchema={"@context":"https://schema.org","@type":"SoftwareApplication",name:`${p.name} Paycheck Calculator`,url:canonical,applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},description:`Free ${p.name} paycheck calculator for 2026. Estimate your take-home pay after federal taxes, FICA, and ${noTax?"payroll deductions":`${p.name} state income tax`}.`};
   const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(f=>({"@type":"Question",name:f.q,acceptedAnswer:{"@type":"Answer",text:f.a}}))};
@@ -86,11 +94,11 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <div className="eyebrow">2026 {p.short} PAYCHECK CALCULATOR</div>
       <h1>{p.name} Paycheck Calculator <em>2026</em></h1>
       <div className="hero-intro">
-        <p>Use our free {p.name} paycheck calculator to estimate your take-home pay after federal taxes, Social Security, Medicare, and {noTax?"other payroll deductions":`${p.name} state income tax`}.</p>
+        {ed?<p>{ed.intro}</p>:<p>Use our free {p.name} paycheck calculator to estimate your take-home pay after federal taxes, Social Security, Medicare, and {noTax?"other payroll deductions":`${p.name} state income tax`}.</p>}
       </div>
       <PaycheckCalculator defaultState={p.short as SupportedState} navigateOnStateChange/>
       <div className="hero-more">
-        {noTax?<p>{p.name} does not impose a state income tax on wages. However, your paycheck is still affected by federal tax withholding, FICA taxes, and any employee benefit deductions you select.</p>:<p>{p.name} imposes {taxInfo.type} on wages. Your actual take-home pay depends on your income level, filing status, allowances, and payroll deductions. Our calculator applies published 2026 withholding methods to provide a transparent estimate.</p>}
+        {!ed&&(noTax?<p>{p.name} does not impose a state income tax on wages. However, your paycheck is still affected by federal tax withholding, FICA taxes, and any employee benefit deductions you select.</p>:<p>{p.name} imposes {taxInfo.type} on wages. Your actual take-home pay depends on your income level, filing status, allowances, and payroll deductions. Our calculator applies published 2026 withholding methods to provide a transparent estimate.</p>)}
         <p>Enter your salary information above to estimate your {p.name} paycheck based on your pay frequency, deductions, and payroll factors.</p>
       </div>
       <div className="trust-row"><span>2026 IRS Method</span><span>Source-Backed Calculations</span><span>Free to Use</span></div>
@@ -101,7 +109,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <p className="kicker">{p.short} PAYCHECK BREAKDOWN</p>
       <h2>What This {p.name} Paycheck Calculator Includes</h2>
       <section>
-        <p>This {p.name} paycheck calculator estimates your net pay by considering the major payroll factors that affect your paycheck. The calculation includes:</p>
+        {!ed&&<p>This {p.name} paycheck calculator estimates your net pay by considering the major payroll factors that affect your paycheck. The calculation includes:</p>}
         <ul className="checklist">
           <li>Federal income tax</li>
           <li>Social Security tax (6.2%)</li>
@@ -112,7 +120,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
           <li>Employee benefits</li>
           <li>Pay frequency adjustments</li>
         </ul>
-        <p style={{marginTop:20,color:"#667a8a",lineHeight:1.7,fontSize:14}}>The calculator is designed to help {p.name} employees understand the difference between gross pay and actual take-home pay. Whether you are paid weekly, biweekly, semimonthly, or monthly, this tool annualizes your wages, applies the relevant tax and deduction rules, and divides the result into your selected paycheck frequency.</p>
+        {!ed&&<p style={{marginTop:20,color:"#667a8a",lineHeight:1.7,fontSize:14}}>The calculator is designed to help {p.name} employees understand the difference between gross pay and actual take-home pay. Whether you are paid weekly, biweekly, semimonthly, or monthly, this tool annualizes your wages, applies the relevant tax and deduction rules, and divides the result into your selected paycheck frequency.</p>}
       </section>
     </article>
 
@@ -121,7 +129,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <p className="kicker">{p.short} TAX INFORMATION</p>
       <h2>{noTax?`Does ${p.name} Have State Income Tax?`:`How Does ${p.name} State Income Tax Work?`}</h2>
       <section>
-        {noTax?<>
+        {ed?<p>{ed.taxSummary}</p>:noTax?<>
           <p><strong>{p.name} does not impose an individual state income tax on wages.</strong> This means employees working in {p.name} do not have state income tax deducted from their paycheck.</p>
           <p>However, {p.name} employees may still have other payroll deductions, including:</p>
           <ul className="checklist">
@@ -148,9 +156,10 @@ export default async function LocationPage({params}:{params:Promise<{location:st
     </article>
 
     {/* Original SourceBackedGuide + StateEditorial */}
-    <SourceBackedGuide place={p}/>
+    <SourceBackedGuide place={p} editorial={ed}/>
 
-    {/* Gross Pay vs Net Pay */}
+    {/* Gross Pay vs Net Pay + Why Results May Differ — covered by the per-state editorial when present */}
+    {!ed&&<>
     <article className="long-seo">
       <p className="kicker">GROSS VS NET</p>
       <h2>Understanding Your {p.name} Gross Pay and Take-Home Pay</h2>
@@ -161,7 +170,6 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       </section>
     </article>
 
-    {/* Why Results May Differ */}
     <article className="long-seo">
       <p className="kicker">IMPORTANT NOTE</p>
       <h2>Why Your Actual {p.name} Paycheck May Be Different</h2>
@@ -181,6 +189,8 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       </section>
     </article>
 
+    </>}
+
     {/* State FAQ */}
     <div className="faq">
       <p className="kicker" style={{textAlign:"center"}}>FREQUENTLY ASKED QUESTIONS</p>
@@ -193,7 +203,6 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <p className="kicker">EXPLORE OTHER STATES</p>
       <h2>Paycheck Calculators by State</h2>
       <section>
-        <p style={{color:"#667a8a",lineHeight:1.7,fontSize:14,marginBottom:20}}>Payroll taxes vary across the United States. Use our state-specific paycheck calculators to estimate your take-home pay based on your location.</p>
         <div className="tool-links">
           {RelatedStates.map(s=><a key={s.slug} href={`/${s.slug}`}><b>{s.name} Paycheck Calculator</b><span>Estimate your {s.name} take-home pay →</span></a>)}
         </div>
@@ -205,18 +214,11 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <p className="kicker">CALCULATION SOURCES</p>
       <h2>How We Calculate Your {p.name} Paycheck</h2>
       <section>
-        <p>Our {p.name} paycheck calculator uses a standard payroll estimation method based on current federal tax rules and common payroll practices. The calculation process includes:</p>
-        <p><strong>1.</strong> Annualizing your wages based on your selected pay frequency.</p>
-        <p><strong>2.</strong> Applying eligible pre-tax deductions that may reduce taxable income.</p>
-        <p><strong>3.</strong> Estimating federal income tax using applicable IRS withholding methods.</p>
-        <p><strong>4.</strong> {noTax?`${p.name} does not impose state income tax on wages, so no state withholding is applied.`:`Calculating ${p.name} state income tax using published 2026 withholding methods.`}</p>
-        <p><strong>5.</strong> Calculating Social Security (6.2%) and Medicare (1.45%) taxes.</p>
-        <p><strong>6.</strong> Converting the annual estimate into your selected pay frequency.</p>
+        <p>Wages are annualized for the selected pay frequency, reduced by eligible pre-tax deductions, then run through the 2026 IRS federal withholding method, FICA, and {noTax?`no ${p.name} state withholding`:`the published 2026 ${p.name} state withholding method`} before being converted back to one paycheck. The full step list and every source are on the <a className="text-link" href="/methodology">methodology page</a>.</p>
       </section>
       <section>
         <h3>{p.name} Tax Information Sources</h3>
-        <p>Our {p.name} paycheck calculations are based on publicly available payroll and tax information from authoritative sources including the Internal Revenue Service (IRS), Social Security Administration (SSA), and {taxInfo.agency}.</p>
-        <p style={{fontSize:13,color:"#8493a0",marginTop:14}}>For official tax guidance, consult these agencies directly or speak with a qualified tax professional.</p>
+        <p>IRS, Social Security Administration, and {taxInfo.agency}.</p>
       </section>
       <div className="reviewer">
         <p><span className="reviewer-label">Reviewed by:</span> Paycheck Calculator Editorial Team</p>
@@ -308,7 +310,7 @@ function getRelatedStates(currentShort:string):{slug:string;name:string}[]{
 }
 
 // ── Reusable components ──────────────────────────────────────
-function SourceBackedGuide({place:p}:{place:(typeof locations)[number]}){
+function SourceBackedGuide({place:p,editorial}:{place:(typeof locations)[number];editorial?:StateEditorialCopy}){
   return <article className="long-seo">
     <p className="kicker">{p.short} 2026 WITHHOLDING METHOD</p>
     <h2>How the {p.name} paycheck estimate works</h2>
@@ -316,14 +318,15 @@ function SourceBackedGuide({place:p}:{place:(typeof locations)[number]}){
       <h3>What the {p.name} paycheck calculator estimates</h3>
       <p>{stateNotes[p.short]||`${p.name} imposes state income tax rules that affect paycheck withholding.`} The calculator applies the published 2026 state method in addition to IRS federal withholding and FICA. State payroll premiums are displayed separately from state income tax where applicable.</p>
     </section>
-    <section>
+    {!editorial&&<section>
       <h3>Paycheck inputs to verify</h3>
       <p>Use taxable annual wages, pay frequency, federal filing status, the state-specific allowances or exemptions shown on your current certificate, retirement contributions, eligible pre-tax benefits, and additional federal withholding. Connecticut users should select the exact CT-W4 code or the no-form fallback. Arizona uses the elected A-4 percentage. Georgia, Utah, and Ohio require a 2026 paycheck or pay-period date because their methods change during the year. A recent pay stub provides the best starting values.</p>
-    </section>
+    </section>}
     <StateEditorial code={p.short}/>
+    {editorial?.sections.map(sec=><section key={sec.h3}><h3>{sec.h3}</h3><p>{sec.p}</p></section>)}
     <section>
       <h3>What the paycheck estimate excludes</h3>
-      <p>Address-specific local income taxes are included only when you enter a planning rate. New York City is a resident calculator, not a calculator for nonresident commuters. Reciprocity, nonresident rules, multiple-job adjustments, credits, employer-paid premium choices, special exemptions, garnishments, and year-to-date wage history may still change an actual paycheck. Review the <a className="text-link" href="/methodology">methodology and official source list</a> before relying on the estimate.</p>
+      {editorial?<p>Reciprocity, nonresident rules, multiple jobs, credits, garnishments, and year-to-date wage history are not modeled; the <a className="text-link" href="/methodology">methodology page</a> lists every exclusion.</p>:<p>Address-specific local income taxes are included only when you enter a planning rate. New York City is a resident calculator, not a calculator for nonresident commuters. Reciprocity, nonresident rules, multiple-job adjustments, credits, employer-paid premium choices, special exemptions, garnishments, and year-to-date wage history may still change an actual paycheck. Review the <a className="text-link" href="/methodology">methodology and official source list</a> before relying on the estimate.</p>}
     </section>
     <div className="tool-links">
       <a href="/hourly-paycheck-calculator"><b>Hourly paycheck calculator</b><span>Include regular and overtime hours →</span></a>

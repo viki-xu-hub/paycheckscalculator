@@ -1,0 +1,278 @@
+[
+ {
+  "code": "MS",
+  "intro": "Mississippi's 2026 withholding combines a 4.0% rate with a $10,000 zero bracket and payroll adjustments before tax is calculated. This Mississippi paycheck calculator models those mechanics through the state's annualized formula.",
+  "taxSummary": "Mississippi taxes taxable income over $10,000 at 4.0% in 2026. The withholding calculation also accounts for the standard deduction and the exemption amount claimed on Form 89-350, so 4.0% should not simply be multiplied by gross wages. The Mississippi Department of Revenue administers the tax. The calculator uses \"Mississippi 2026 annualized formula (Pub 89-700, 4.0% over $10,000).\" In the four examples, effective state rates range from 2.37% to 3.44%.",
+  "sections": [
+   {
+    "h3": "Mississippi's $10,000 zero bracket changes the effective paycheck rate",
+    "p": "Mississippi's 4.0% rate applies to taxable income over $10,000, which is why the effective state percentage in the examples is lower than 4.0%. At $45,000 single, Mississippi state income tax is $41.00 per biweekly paycheck and the effective state rate is 2.37%. At $65,000 single, withholding becomes $72.00 and the effective state rate rises to 2.88%. The state calculation also incorporates the standard deduction and the exemption amount claimed on Form 89-350. These mechanics mean multiplying the entire gross paycheck by 4.0% would not reproduce the withholding shown by the calculator."
+   },
+   {
+    "h3": "Mississippi Form 89-350 affects the wages used for withholding",
+    "p": "The exemption amount claimed on Mississippi Form 89-350 is part of the state's withholding framework. Together with the standard deduction and the $10,000 zero bracket, it helps determine how much income reaches the 4.0% taxable portion. The reference examples use no allowances, providing a consistent baseline for comparing salary levels. If the relevant Form 89-350 information changes, the state withholding result can change even if gross salary does not. For that reason, use the applicable Mississippi payroll elections in the annualized formula instead of carrying an effective state percentage from one paycheck into a different withholding setup."
+   },
+   {
+    "h3": "Mississippi's $90,000 married paycheck leaves $2,839.04",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. Mississippi state income tax is $110.00, leaving $2,839.04 per paycheck and $73,815.00/year. The effective state rate is 3.18%. At $130,000 married filing jointly, Mississippi withholding rises to $172.00 from $5,000.00 of gross pay, and net pay becomes $4,013.19. The effective state rate increases to 3.44%. Holding filing status constant makes these two examples useful for seeing how the annualized Mississippi calculation responds to higher earnings."
+   },
+   {
+    "h3": "Qualifying pre-tax deductions can change Mississippi withholding inputs",
+    "p": "The four Mississippi examples contain no 401(k) contribution and no pre-tax benefits. If a qualifying payroll deduction changes the wages used for Mississippi withholding, the state amount can differ from these reference results. Because the annualized formula incorporates a zero bracket, standard deduction, and Form 89-350 exemption amount before applying the 4.0% rate to taxable income over $10,000, the state deduction is not simply a fixed percentage of gross salary. Recalculate the state line from the applicable payroll inputs rather than reducing one of the example withholding amounts by an estimated percentage."
+   },
+   {
+    "h3": "Mississippi hourly pay should be annualized from the current period",
+    "p": "For variable wages, first determine the earnings for the pay period with the hourly paycheck calculator. The salary examples use 26 equal biweekly periods, while hourly gross pay can change as hours change. Mississippi's annualized method then processes the relevant wages using the $10,000 zero bracket and other state withholding inputs. Because the state calculation is based on taxable income rather than a flat 4.0% of every gross dollar, an effective rate from one paycheck should not automatically be reused for another. Recalculating the current period keeps the state withholding tied to the wages actually being modeled."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why isn't Mississippi withholding 4.0% of my entire paycheck?",
+    "a": "Mississippi applies 4.0% to taxable income over $10,000, and the calculation also accounts for the standard deduction and Form 89-350 exemption amount. The $45,000 single example therefore has a 2.37% effective state rate rather than 4.0%."
+   },
+   {
+    "q": "What is Form 89-350 used for in Mississippi payroll?",
+    "a": "Form 89-350 provides the exemption amount used in Mississippi withholding. That information feeds into the state's annualized calculation along with the $10,000 zero bracket and standard deduction before the 4.0% tax applies."
+   },
+   {
+    "q": "How much Mississippi tax is withheld at $65,000 single?",
+    "a": "At $65,000 single, Mississippi state income tax is $72.00 from $2,500.00 of biweekly gross pay. After the listed federal deductions and Mississippi withholding, net pay is $2,020.60."
+   },
+   {
+    "q": "What is Mississippi withholding at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, Mississippi state income tax is $172.00 from $5,000.00 of biweekly gross pay. The resulting net paycheck is $4,013.19, with a 3.44% effective state rate."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "MT",
+  "intro": "Montana's 2026 payroll calculation uses two income-tax brackets and keys withholding to the filing status selected on Form MW-4. This Montana paycheck calculator applies that state-specific withholding formula to each salary scenario.",
+  "taxSummary": "Montana uses two income-tax brackets in 2026: 4.7% and 5.65%. The 5.65% top rate reflects House Bill 337, while the withholding formula uses the filing status marked on Form MW-4. The Montana Department of Revenue administers the tax. The calculator applies \"Montana 2026 withholding formula (MW-4 filing status).\" Because filing status matters, effective state rates do not rise strictly with salary across examples using different statuses; the provided results range from 3.03% to 3.56%.",
+  "sections": [
+   {
+    "h3": "Montana MW-4 filing status is central to the 2026 formula",
+    "p": "Montana's withholding formula keys off the filing status marked on Form MW-4. That makes the state payroll setup important when comparing two workers with similar gross wages. The provided examples use single status at $45,000 and $65,000, then married filing jointly at $90,000 and $130,000. Because the filing status changes between those groups, the effective state percentage does not simply climb with salary. Montana uses two 2026 brackets, 4.7% and 5.65%, but those bracket rates are not direct percentages of the entire gross paycheck. The MW-4 filing status needs to be processed through the Montana withholding formula."
+   },
+   {
+    "h3": "Montana's two single examples show withholding rising with salary",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Montana state income tax is $53.00. Net pay is $1,421.52 and the effective state rate is 3.06%. At $65,000 single, gross pay increases to $2,500.00, Montana withholding becomes $89.00, and net pay is $2,003.60. The effective state rate rises to 3.56%. Since both examples use single filing status and no allowances, they provide a cleaner comparison than crossing between single and married scenarios. The state deduction increases in both dollar and effective-percentage terms as the modeled single salary rises."
+   },
+   {
+    "h3": "Why Montana's 5.65% top rate is not the paycheck percentage",
+    "p": "Montana's top income-tax rate is 5.65% in 2026, but applying 5.65% directly to an entire gross paycheck would not reproduce the provided withholding amounts. At $130,000 married filing jointly, for example, Montana state income tax is $178.00 from $5,000.00 of biweekly gross pay, producing a 3.56% effective state rate. The $90,000 married filing jointly example has a 3.03% effective state rate. Montana's two brackets operate through the withholding formula together with MW-4 filing status. The top bracket therefore describes part of the tax structure, not a universal percentage withheld from every dollar of gross wages."
+   },
+   {
+    "h3": "Montana's filing-status change explains the $65,000 to $90,000 pattern",
+    "p": "The $65,000 example shows $89.00 of Montana withholding and a 3.56% effective state rate, while the higher $90,000 example shows $105.00 and a lower 3.03% effective state rate. The key difference is filing status: $65,000 is modeled as single, while $90,000 is married filing jointly. That makes a direct salary-only comparison misleading. At $130,000 married filing jointly, withholding increases to $178.00 and the effective state rate returns to 3.56%. When comparing Montana paycheck scenarios, keep the MW-4 filing status constant whenever the goal is to isolate the effect of changing wages."
+   },
+   {
+    "h3": "Montana hourly workers should match wages with MW-4 status",
+    "p": "Hourly employees can determine the current period's earnings with the hourly paycheck calculator and then apply the Montana withholding setup that corresponds to their MW-4 filing status. The reference salaries assume 26 equal biweekly periods, whereas hourly earnings can vary from one paycheck to the next. Because Montana uses two brackets and a filing-status-based withholding formula, one paycheck's effective state percentage should not automatically be reused for a different wage amount. Recalculate the current period using the relevant gross wages and filing status so the Montana deduction reflects the actual payroll scenario rather than a percentage copied from a fixed annual salary."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What does Montana Form MW-4 change on my paycheck?",
+    "a": "Montana's 2026 withholding formula keys off the filing status marked on Form MW-4. That filing status helps determine the state withholding calculation, so different MW-4 circumstances can produce different state deductions."
+   },
+   {
+    "q": "Why isn't Montana withholding 5.65% of my entire paycheck?",
+    "a": "Montana uses two brackets, 4.7% and 5.65%, rather than applying the top rate to all gross wages. At $130,000 married filing jointly, the provided example has a 3.56% effective state rate."
+   },
+   {
+    "q": "How much Montana tax is withheld at $45,000 single?",
+    "a": "At $45,000 single, Montana state income tax is $53.00 from $1,730.77 of biweekly gross pay. After the listed federal deductions and state withholding, the resulting net paycheck is $1,421.52."
+   },
+   {
+    "q": "Why is the Montana effective rate lower at $90,000 than $65,000?",
+    "a": "The filing statuses differ. The $65,000 example is single and has a 3.56% effective state rate, while the $90,000 example is married filing jointly and has a 3.03% effective state rate."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "NH",
+  "intro": "New Hampshire wage earners do not have an individual state income-tax deduction reducing these 2026 paychecks. This New Hampshire paycheck calculator therefore focuses the take-home calculation on the federal deductions that remain.",
+  "taxSummary": "New Hampshire has no individual state income tax on wages. The calculator consequently uses the method \"No individual state income tax on wages,\" producing $0.00 of New Hampshire state income tax and a 0.00% effective state rate in every provided example. Federal income tax, Social Security, and Medicare still reduce take-home pay. The New Hampshire Department of Revenue Administration is the state tax agency, while the wage-income-tax line remains zero across all four modeled salaries.",
+  "sections": [
+   {
+    "h3": "New Hampshire's zero state wage-tax line simplifies payroll",
+    "p": "The New Hampshire portion of these paycheck calculations is straightforward: individual state income tax on wages is $0.00. At $45,000 single, biweekly gross pay is $1,730.77, while federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10. With no New Hampshire state income-tax deduction, net pay is $1,474.52 and annual net pay is $38,337.50. The effective state rate is 0.00%. This makes it easier to identify what is reducing the deposit because the difference between gross and net in this example comes from the federal payroll deductions shown rather than a New Hampshire wage-income-tax line."
+   },
+   {
+    "h3": "New Hampshire's $130,000 example still shows $0.00 state tax",
+    "p": "Increasing salary does not introduce individual New Hampshire state income-tax withholding on wages. At $130,000 married filing jointly, biweekly gross pay is $5,000.00 and New Hampshire state income tax remains $0.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50, leaving $4,185.19 per paycheck and $108,815.00/year. The effective state rate remains 0.00%. The lower 83.7% take-home share therefore does not indicate that a New Hampshire income-tax bracket has appeared. It reflects the other payroll deductions included in the modeled paycheck."
+   },
+   {
+    "h3": "New Hampshire filing status changes federal results, not the state line",
+    "p": "The examples switch from single status at $45,000 and $65,000 to married filing jointly at $90,000 and $130,000. New Hampshire state income tax remains $0.00 in every case, so the filing-status change does not create a state wage-income-tax deduction in these calculations. At $90,000 married filing jointly, net pay is $2,949.04 from $3,461.54 gross, while the $65,000 single example produces $2,092.60 from $2,500.00 gross. Differences in the overall take-home percentages should therefore be read in the context of the federal deductions and filing circumstances shown, with the New Hampshire effective state rate fixed at 0.00%."
+   },
+   {
+    "h3": "Pre-tax benefits can change a New Hampshire paycheck without creating state tax",
+    "p": "The reference examples contain no 401(k) contribution and no pre-tax benefits. Adding a qualifying pre-tax payroll deduction can change the amounts used for other payroll calculations and the resulting deposit, but the state treatment represented here remains \"No individual state income tax on wages.\" That distinction matters when comparing a real New Hampshire pay stub with one of the examples. A lower net paycheck does not by itself indicate that New Hampshire wage-income-tax withholding has appeared. Review the payroll components individually and keep the $0.00 New Hampshire state income-tax line separate from other deductions that may affect the employee's final take-home amount."
+   },
+   {
+    "h3": "New Hampshire hourly pay can vary while state income tax stays zero",
+    "p": "Hourly employees can calculate changing period earnings with the hourly paycheck calculator. The salary examples assume 26 biweekly periods, but hourly gross wages can rise or fall as hours change. Those wage changes can alter federal income tax, Social Security, Medicare, and the final deposit. New Hampshire individual state income tax on wages remains $0.00 in the calculation. This means a changing take-home percentage from one hourly paycheck to another should not automatically be attributed to state income tax. Recalculate the actual wages for each period and examine the federal deductions separately from the New Hampshire state line."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why are taxes withheld from my paycheck in New Hampshire?",
+    "a": "New Hampshire state income tax on wages is $0.00, but federal deductions still reduce the paycheck. At $45,000 single, the example includes $123.85 of federal income tax, $107.31 of Social Security, and $25.10 of Medicare."
+   },
+   {
+    "q": "What New Hampshire state tax is withheld at $90,000 married filing jointly?",
+    "a": "New Hampshire state income tax is $0.00 in the $90,000 married filing jointly example. From $3,461.54 of biweekly gross pay, the listed federal deductions leave a net paycheck of $2,949.04."
+   },
+   {
+    "q": "Does a higher salary create New Hampshire wage-income-tax withholding?",
+    "a": "No individual New Hampshire state income tax on wages is applied in the provided examples. Even at $130,000 married filing jointly, the state income-tax amount remains $0.00 and the effective state rate is 0.00%."
+   },
+   {
+    "q": "Why does the New Hampshire take-home percentage change across salaries?",
+    "a": "The state income-tax line remains $0.00, but the federal payroll amounts and filing circumstances differ across the examples. Those differences change the overall take-home percentage even though New Hampshire's effective state rate stays at 0.00%."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "NM",
+  "intro": "New Mexico's withholding moves through a broad graduated range and uses the filing status carried from the federal W-4. This New Mexico paycheck calculator applies the FYI-104 2026 percentage method.",
+  "taxSummary": "New Mexico uses graduated income-tax brackets from 1.5% to 5.9%. Withholding follows the FYI-104 percentage tables using the filing status on the federal Form W-4, and the New Mexico Taxation and Revenue Department administers the tax. The calculator applies the \"New Mexico FYI-104 2026 percentage method.\" The examples produce effective state rates from 2.95% to 3.67%. Because filing status changes between the single and married scenarios, salary alone does not explain every change in the effective percentage.",
+  "sections": [
+   {
+    "h3": "New Mexico uses federal W-4 filing status in state withholding",
+    "p": "New Mexico's FYI-104 percentage tables use the filing status on your federal Form W-4. That links an important federal payroll election to the state withholding calculation, even though New Mexico applies its own graduated income-tax structure. The examples use single status at $45,000 and $65,000, then married filing jointly at $90,000 and $130,000. Because the filing status changes, comparisons across all four salaries should account for more than income alone. The state's 1.5%–5.9% bracket range is processed through the FYI-104 method rather than applied as one fixed percentage to every gross paycheck."
+   },
+   {
+    "h3": "New Mexico's single examples move from 2.95% to 3.49%",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and New Mexico state income tax is $51.06. Net pay is $1,423.46 and the effective state rate is 2.95%. At $65,000 single, gross pay becomes $2,500.00, New Mexico withholding increases to $87.22, and net pay is $2,005.38. The effective state rate rises to 3.49%. Both scenarios use the same filing status and no allowances, making them useful for observing the effect of higher modeled wages within the FYI-104 percentage method. The state deduction increases in both dollars and as a percentage of gross salary."
+   },
+   {
+    "h3": "New Mexico's $130,000 married paycheck reaches $183.47 in state tax",
+    "p": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. New Mexico state income tax is $183.47, leaving $4,001.73 per paycheck and $104,044.90/year. The effective state rate is 3.67%. At $90,000 married filing jointly, New Mexico withholding is $110.09 from $3,461.54 gross and the effective state rate is 3.18%. With filing status held constant, these two examples show the state withholding amount and effective percentage increasing as the modeled married salary rises."
+   },
+   {
+    "h3": "Why New Mexico's 5.9% top rate is not your whole-paycheck rate",
+    "p": "New Mexico's graduated range reaches 5.9%, but that top rate should not be multiplied by the entire gross paycheck. The effective state rates shown by the four examples are 2.95%, 3.49%, 3.18%, and 3.67%. The FYI-104 percentage method processes wages under the graduated structure using the applicable filing status. At $130,000 married filing jointly, for example, the effective state rate is 3.67%, substantially different from simply applying 5.9% to all gross earnings. Use the state percentage method to estimate withholding rather than treating the highest bracket as the employee's overall payroll tax percentage."
+   },
+   {
+    "h3": "New Mexico pre-tax payroll changes can alter the state calculation",
+    "p": "The provided New Mexico examples assume no 401(k) contribution and no pre-tax benefits. If a qualifying deduction changes the wages used for New Mexico withholding, the amount processed through the FYI-104 percentage method can also change. Because the state uses graduated brackets from 1.5% to 5.9%, a change in taxable wages does not necessarily translate into an identical percentage change in withholding. Keep qualifying payroll deductions and filing-status information aligned with the paycheck being modeled. Recalculate the New Mexico state line from those inputs rather than adjusting a reference withholding amount with a flat percentage."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Does New Mexico use my federal W-4 filing status for state withholding?",
+    "a": "Yes. New Mexico's FYI-104 percentage tables use the filing status on the federal Form W-4, so the status you select there also helps determine the state withholding calculation."
+   },
+   {
+    "q": "Why isn't New Mexico withholding 5.9% of my gross paycheck?",
+    "a": "New Mexico uses graduated brackets from 1.5% to 5.9%, so the top rate is not applied to all gross wages. The four examples show effective state rates ranging from 2.95% to 3.67%."
+   },
+   {
+    "q": "What New Mexico tax is withheld at $65,000 single?",
+    "a": "At $65,000 single, New Mexico state income tax is $87.22 from $2,500.00 of biweekly gross pay. After the listed federal deductions and state withholding, net pay is $2,005.38."
+   },
+   {
+    "q": "How much New Mexico tax is withheld at $90,000 married filing jointly?",
+    "a": "At $90,000 married filing jointly, New Mexico state income tax is $110.09 from $3,461.54 of biweekly gross pay. The resulting net paycheck is $2,838.95, with a 3.18% effective state rate."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "ND",
+  "intro": "North Dakota's wide zero bracket can leave state withholding at zero or very low levels for some modeled paychecks. This North Dakota paycheck calculator applies the 2026 percentage method for Forms W-4 from 2020 and after.",
+  "taxSummary": "North Dakota uses graduated income-tax brackets from 0% to 2.5%, including a wide zero bracket followed by 1.95% and 2.5% rates. State withholding uses the filing status on the federal Form W-4. The North Dakota Office of State Tax Commissioner administers the tax. The calculator applies \"North Dakota 2026 percentage method (Forms W-4 2020 and after).\" In the examples, effective state rates range from 0.00% to 1.09%, with the $45,000 single scenario producing no state withholding.",
+  "sections": [
+   {
+    "h3": "North Dakota's zero bracket can produce a $0.00 state deduction",
+    "p": "North Dakota's graduated structure begins with a wide 0% bracket before the 1.95% and 2.5% rates apply. In the $45,000 single example, that structure produces $0.00 of North Dakota state income tax and a 0.00% effective state rate. Biweekly gross pay is $1,730.77, and after $123.85 of federal income tax, $107.31 of Social Security, and $25.10 of Medicare, net pay is $1,474.52. The zero state deduction in this example should not be generalized to every salary. At $65,000 single, North Dakota withholding becomes $5.53 as the modeled wages move beyond the result produced at the lower salary."
+   },
+   {
+    "h3": "North Dakota's $65,000 paycheck shows withholding beginning gradually",
+    "p": "At $65,000 single, biweekly gross pay is $2,500.00. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. North Dakota state income tax is only $5.53, leaving net pay of $2,087.06 and annual net pay of $54,263.69. The effective state rate is 0.22%. Compare that with the $45,000 single example, where North Dakota withholding is $0.00. Holding filing status constant makes the pair useful for seeing the effect of the state's wide zero bracket followed by the 1.95% and 2.5% graduated rates."
+   },
+   {
+    "h3": "North Dakota uses federal W-4 filing status in its percentage method",
+    "p": "The North Dakota calculation uses the filing status on the federal Form W-4, and the method label specifically covers Forms W-4 from 2020 and after. This means filing status is an input to the state percentage method rather than a detail that can be ignored when estimating withholding. The examples switch from single to married filing jointly as salary rises, so not every difference among all four results can be attributed to income alone. For comparisons focused specifically on wage changes, use examples with the same filing status. The state's 0%–2.5% graduated structure then operates through the 2026 percentage method for that payroll setup."
+   },
+   {
+    "h3": "North Dakota's married examples top out at a 1.09% effective rate",
+    "p": "At $90,000 married filing jointly, North Dakota state income tax is $24.38 from $3,461.54 of biweekly gross pay. Net pay is $2,924.66 and the effective state rate is 0.70%. At $130,000 married filing jointly, state withholding rises to $54.38 from $5,000.00 gross. Net pay becomes $4,130.82 and the effective state rate reaches 1.09%. Both effective percentages remain below the state's 2.5% top bracket because the highest bracket is not applied to the entire gross paycheck. The percentage method processes the graduated structure before arriving at the withholding amount."
+   },
+   {
+    "h3": "North Dakota hourly wages can cross from zero to positive withholding",
+    "p": "For hourly workers, use the hourly paycheck calculator to determine the gross wages for the current period before applying North Dakota's percentage method. Variable hours can produce different annualized wage levels from one paycheck to another. Because North Dakota has a wide zero bracket, changes in earnings can be especially noticeable when one scenario produces no state withholding and another produces a positive amount. The reference single examples illustrate that contrast with $0.00 at $45,000 and $5.53 at $65,000. Recalculate changing hourly earnings rather than assuming a zero or low state deduction from an earlier paycheck will always continue."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is North Dakota state withholding $0.00 in the $45,000 example?",
+    "a": "North Dakota has a wide 0% bracket before its 1.95% and 2.5% rates. Under the 2026 percentage method, the $45,000 single example produces $0.00 of state income tax and a 0.00% effective state rate."
+   },
+   {
+    "q": "How much North Dakota tax is withheld at $65,000 single?",
+    "a": "At $65,000 single, North Dakota state income tax is $5.53 from $2,500.00 of biweekly gross pay. After the listed federal deductions and state withholding, net pay is $2,087.06."
+   },
+   {
+    "q": "Does North Dakota use federal W-4 filing status for payroll withholding?",
+    "a": "Yes. North Dakota withholding uses the filing status on the federal Form W-4, and the calculator applies the 2026 percentage method for Forms W-4 from 2020 and after."
+   },
+   {
+    "q": "What North Dakota tax is withheld at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, North Dakota state income tax is $54.38 from $5,000.00 of biweekly gross pay. Net pay is $4,130.82 and the effective state rate is 1.09%."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "RI",
+  "intro": "Rhode Island's graduated withholding starts with a stable effective percentage in the two single examples before rising at higher modeled incomes. This Rhode Island paycheck calculator uses the 2026 percentage method with RI W-4 exemptions.",
+  "taxSummary": "Rhode Island uses graduated income-tax brackets from 3.75% to 5.99%. State withholding depends on income level and Form RI W-4 elections, with the Rhode Island Division of Taxation administering the tax. The calculator applies the \"Rhode Island 2026 percentage method (RI W-4 exemptions).\" The two single examples both show a 3.75% effective state rate, while the married filing jointly examples rise to 3.84% and 4.12%. The state's top 5.99% rate is not applied to the entire gross paycheck.",
+  "sections": [
+   {
+    "h3": "Rhode Island RI W-4 exemptions belong in the state withholding setup",
+    "p": "Rhode Island's percentage method incorporates RI W-4 exemptions when determining state withholding. That makes the employee's state withholding elections relevant alongside income level. The provided examples use no allowances, giving the four scenarios a consistent baseline for that input. Rhode Island's graduated bracket range is 3.75%–5.99%, but the state deduction should not be estimated by automatically multiplying all gross wages by one of those percentages. If RI W-4 exemption information changes, the withholding result can change as well. Use the applicable state elections in the 2026 percentage method instead of carrying a prior paycheck's effective rate into a different withholding setup."
+   },
+   {
+    "h3": "Rhode Island's single examples both produce a 3.75% effective rate",
+    "p": "At $45,000 single, Rhode Island state income tax is $64.90 from $1,730.77 of biweekly gross pay. Net pay is $1,409.62 and the effective state rate is 3.75%. At $65,000 single, gross pay rises to $2,500.00 and state withholding becomes $93.75, while the effective state rate remains 3.75%. Net pay is $1,998.85. The matching effective percentages make this pair distinctive among the provided examples: the state withholding amount increases with salary, but the state share of gross earnings remains unchanged. Higher modeled married salaries then produce effective rates above 3.75%."
+   },
+   {
+    "h3": "Rhode Island's $90,000 married paycheck moves above 3.75%",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. Rhode Island state income tax is $132.87, leaving net pay of $2,816.17 and annual net pay of $73,220.49. The effective state rate is 3.84%, slightly above the 3.75% shown by both single examples. At $130,000 married filing jointly, Rhode Island withholding rises further to $205.94 and the effective state rate becomes 4.12%. These results illustrate the graduated calculation moving beyond the effective percentage seen at the lower modeled incomes."
+   },
+   {
+    "h3": "Why Rhode Island's 5.99% rate does not describe the whole paycheck",
+    "p": "Rhode Island's graduated tax range reaches 5.99%, but the provided effective state rates never equal that top bracket. They are 3.75%, 3.75%, 3.84%, and 4.12% across the four examples. At $130,000 married filing jointly, $205.94 of Rhode Island tax is withheld from $5,000.00 of biweekly gross pay, producing the 4.12% effective rate. This demonstrates the difference between a graduated bracket rate and the percentage of total gross salary represented by withholding. The 2026 percentage method with RI W-4 exemptions should be used instead of applying the 5.99% top rate to every dollar of wages."
+   },
+   {
+    "h3": "Rhode Island pre-tax deductions can change the wages entering the formula",
+    "p": "The Rhode Island examples contain no 401(k) contribution and no pre-tax benefits. If a qualifying payroll deduction changes the wages used for state withholding, the amount processed through Rhode Island's percentage method can change. Since the state uses graduated brackets and RI W-4 exemptions, the resulting deduction should be recalculated rather than estimated by subtracting a fixed percentage from one of these reference results. Keep the state withholding elections and payroll deductions aligned with the paycheck being modeled. That approach preserves the distinction between gross earnings, wages used in the state calculation, and the final Rhode Island income-tax amount."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What does Rhode Island Form RI W-4 affect?",
+    "a": "RI W-4 exemptions are part of Rhode Island's state withholding calculation. The calculator uses the \"Rhode Island 2026 percentage method (RI W-4 exemptions),\" so changes in the applicable state elections can change the withholding result."
+   },
+   {
+    "q": "Why do the $45,000 and $65,000 Rhode Island examples both show 3.75%?",
+    "a": "Both single examples produce a 3.75% effective state rate under the provided calculation. Their dollar withholding differs: $64.90 at $45,000 and $93.75 at $65,000, because the gross wages are different."
+   },
+   {
+    "q": "How much Rhode Island tax is withheld at $90,000 married filing jointly?",
+    "a": "At $90,000 married filing jointly, Rhode Island state income tax is $132.87 from $3,461.54 of biweekly gross pay. After the listed deductions, net pay is $2,816.17."
+   },
+   {
+    "q": "What is Rhode Island withholding at $130,000 married filing jointly?",
+    "a": "The $130,000 married filing jointly example shows $205.94 of Rhode Island state income tax from $5,000.00 of biweekly gross pay. Net pay is $3,979.25 and the effective state rate is 4.12%."
+   }
+  ],
+  "needsVerification": []
+ }
+]

@@ -1,0 +1,186 @@
+[
+ {
+  "code": "VT",
+  "intro": "Vermont's graduated withholding depends on both earnings and the elections entered on Form W-4VT. This Vermont paycheck calculator applies the GB-1210 2026 percentage method rather than treating the state's top rate as a flat payroll percentage.",
+  "taxSummary": "Vermont uses graduated income-tax brackets from 3.35% to 8.75%, with withholding administered by the Vermont Department of Taxes. Form W-4VT allowances feed into the state payroll calculation. The calculator uses \"Vermont GB-1210 2026 percentage method (W-4VT allowances).\" The four examples produce effective state rates from 2.91% to 3.88%. Because the examples change from single to married filing jointly, the effective percentage does not increase in a straight line with salary.",
+  "sections": [
+   {
+    "h3": "Vermont W-4VT allowances shape the state withholding calculation",
+    "p": "Vermont withholding uses Form W-4VT allowances within the GB-1210 2026 percentage method. That means the state payroll calculation depends on more than gross salary alone. The reference examples use no allowances, providing a consistent baseline for comparing the listed salaries. If the applicable W-4VT elections change, the state withholding amount can also change without a change in gross wages. Vermont's 3.35%–8.75% graduated range therefore should not be converted into one assumed percentage of every paycheck. The relevant wages and W-4VT information need to be processed through the state percentage method to estimate the Vermont deduction."
+   },
+   {
+    "h3": "Vermont's $65,000 single paycheck carries $91.60 in state tax",
+    "p": "At $65,000 single, biweekly gross pay is $2,500.00. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Vermont state income tax is $91.60, leaving $2,001.00 per paycheck and $52,025.92/year. The effective state rate is 3.66%. At $45,000 single, Vermont withholding is $52.92 from $1,730.77 of gross pay, with net pay of $1,421.60 and a 3.06% effective state rate. Since filing status and allowance assumptions are the same, these two examples provide a direct comparison of Vermont withholding as the modeled single salary increases."
+   },
+   {
+    "h3": "Vermont filing status explains the lower rate at $90,000",
+    "p": "The $90,000 example has a higher salary than the $65,000 example but a lower effective Vermont state rate. At $90,000 married filing jointly, Vermont state income tax is $100.79 and the effective state rate is 2.91%. The $65,000 single example shows $91.60 of withholding and a 3.66% effective state rate. The filing status changes between the two scenarios, so the difference should not be interpreted as salary alone reducing Vermont withholding. When comparing how earnings affect the state line, use examples with the same filing status and W-4VT assumptions rather than comparing unlike payroll setups."
+   },
+   {
+    "h3": "Vermont's 8.75% top bracket is not the whole-paycheck rate",
+    "p": "Vermont's graduated income-tax range reaches 8.75%, but none of the provided examples has an effective state rate close to applying 8.75% to the entire gross salary. The effective rates are 3.06%, 3.66%, 2.91%, and 3.88%. At $130,000 married filing jointly, Vermont state income tax is $194.23 from $5,000.00 of biweekly gross pay, producing the 3.88% effective state rate. The GB-1210 percentage method and W-4VT allowances determine payroll withholding within the graduated structure. Using the highest bracket as a flat paycheck percentage would therefore produce a different result."
+   },
+   {
+    "h3": "Vermont hourly earnings should be paired with current W-4VT elections",
+    "p": "For variable wages, calculate the current period's earnings with the hourly paycheck calculator before applying Vermont's withholding method. The reference scenarios assume 26 equal biweekly periods, whereas an hourly worker can have changing gross wages as scheduled hours change. Vermont's graduated brackets and W-4VT allowance framework then determine the state withholding for the modeled payroll situation. An effective percentage from one fixed-salary example should not automatically be reused for a different hourly paycheck. Recalculating the period keeps the wage amount and state withholding elections aligned with the GB-1210 2026 percentage method."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What does Vermont Form W-4VT affect on my paycheck?",
+    "a": "Form W-4VT provides allowances used in Vermont's state withholding calculation. The calculator processes those allowances through the GB-1210 2026 percentage method, so different W-4VT elections can change the resulting state deduction."
+   },
+   {
+    "q": "Why is the Vermont effective rate lower at $90,000 than $65,000?",
+    "a": "The filing statuses differ. The $65,000 example is single with a 3.66% effective state rate, while the $90,000 example is married filing jointly with a 2.91% effective state rate."
+   },
+   {
+    "q": "How much Vermont tax is withheld at $45,000 single?",
+    "a": "At $45,000 single, Vermont state income tax is $52.92 from $1,730.77 of biweekly gross pay. After the listed federal deductions and Vermont withholding, net pay is $1,421.60."
+   },
+   {
+    "q": "What is Vermont withholding at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, Vermont state income tax is $194.23 from $5,000.00 of biweekly gross pay. Net pay is $3,990.96 and the effective state rate is 3.88%."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "WV",
+  "intro": "West Virginia's 2026 payroll structure combines five graduated brackets with withholding based on WV/IT-104 exemptions. This West Virginia paycheck calculator applies the IT-100.2A 2026 two-earner table to estimate the state deduction.",
+  "taxSummary": "West Virginia uses five graduated income-tax brackets ranging from 2.11% to 4.58% in 2026, reflecting the reduction under Senate Bill 392. Withholding is based on Form WV/IT-104 exemptions and administered by the West Virginia Tax Division. The calculator uses \"West Virginia IT-100.2A 2026 two-earner table.\" Across the four examples, the effective state rate increases from 3.25% to 4.12%, while the actual withholding amount rises from $56.26 to $206.00 per biweekly paycheck.",
+  "sections": [
+   {
+    "h3": "West Virginia WV/IT-104 exemptions feed into state withholding",
+    "p": "West Virginia bases withholding on exemptions associated with Form WV/IT-104, so the state payroll setup matters when estimating the deduction. The examples use no allowances, which provides a common baseline across the four salary scenarios. West Virginia also uses five graduated brackets rather than one flat income-tax percentage. For that reason, an effective rate observed on one paycheck should not automatically be reused for another worker or another withholding setup. The calculator applies the IT-100.2A 2026 two-earner table, allowing the relevant wages and state exemption information to determine the withholding amount instead of relying on a simple percentage of gross pay."
+   },
+   {
+    "h3": "West Virginia's 2026 bracket range reflects Senate Bill 392",
+    "p": "For 2026, West Virginia's five graduated brackets range from 2.11% to 4.58% after the reduction associated with Senate Bill 392. Those figures describe the state tax structure, but they do not mean every employee has one of those rates applied to the entire gross paycheck. The provided effective state rates are 3.25%, 3.66%, 3.92%, and 4.12%. The IT-100.2A 2026 two-earner table converts the applicable payroll information into withholding. As income changes, the state deduction can therefore increase in both dollars and effective percentage without simply applying the 4.58% top bracket to all wages."
+   },
+   {
+    "h3": "West Virginia's $90,000 married paycheck leaves $2,813.50",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. West Virginia state income tax is $135.53, leaving $2,813.50 per paycheck and $73,151.12/year. The effective state rate is 3.92%. At $130,000 married filing jointly, state withholding rises to $206.00 from $5,000.00 of gross pay. Net pay becomes $3,979.20 and the effective state rate reaches 4.12%. With filing status held constant, the pair shows how the modeled West Virginia state deduction changes as earnings rise."
+   },
+   {
+    "h3": "West Virginia's single examples move from 3.25% to 3.66%",
+    "p": "At $45,000 single, West Virginia state income tax is $56.26 from $1,730.77 of biweekly gross pay. The resulting net paycheck is $1,418.25 and the effective state rate is 3.25%. At $65,000 single, state withholding increases to $91.50 from $2,500.00 gross, leaving $2,001.10 of net pay. The effective state rate becomes 3.66%. Because both examples use single filing status and no allowances, they provide a useful comparison without introducing a filing-status change. Both the dollar withholding and its effective share of gross salary rise at the higher modeled income."
+   },
+   {
+    "h3": "West Virginia pre-tax deductions can change the withholding inputs",
+    "p": "The four West Virginia examples assume no 401(k) contribution and no pre-tax benefits. If a qualifying payroll deduction changes the wages used for state withholding, the amount processed through the West Virginia calculation can also change. The five-bracket structure and WV/IT-104 exemption framework mean the state line should be recalculated rather than adjusted with a flat percentage borrowed from a reference paycheck. Keep payroll deductions and state exemption information aligned with the wages being modeled. That approach allows the IT-100.2A 2026 two-earner table to determine the withholding amount from the applicable payroll inputs."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What does West Virginia Form WV/IT-104 affect?",
+    "a": "West Virginia withholding is based on WV/IT-104 exemptions. Those state exemption elections are part of the payroll setup used to determine the West Virginia income-tax amount withheld from a paycheck."
+   },
+   {
+    "q": "Why isn't West Virginia withholding simply 4.58% of gross pay?",
+    "a": "West Virginia uses five graduated brackets from 2.11% to 4.58%, so the top rate is not applied to the entire gross paycheck. The provided examples show effective state rates between 3.25% and 4.12%."
+   },
+   {
+    "q": "How much West Virginia tax is withheld at $65,000 single?",
+    "a": "At $65,000 single, West Virginia state income tax is $91.50 from $2,500.00 of biweekly gross pay. After the listed federal deductions and state withholding, net pay is $2,001.10."
+   },
+   {
+    "q": "What is West Virginia withholding at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, West Virginia state income tax is $206.00 from $5,000.00 of biweekly gross pay. Net pay is $3,979.20 and the effective state rate is 4.12%."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "SD",
+  "intro": "South Dakota does not add an individual state wage-income-tax line to the paychecks modeled here. This South Dakota paycheck calculator shows how federal income tax, Social Security, and Medicare still separate gross earnings from take-home pay.",
+  "taxSummary": "South Dakota has no individual state income tax on wages. The calculator therefore applies \"No individual state income tax on wages,\" and all four examples show $0.00 of South Dakota state income tax with a 0.00% effective state rate. Federal income tax, Social Security, and Medicare remain part of the paycheck calculation. The South Dakota Department of Revenue is the state tax agency, while the state wage-income-tax deduction remains zero at each salary shown.",
+  "sections": [
+   {
+    "h3": "South Dakota paychecks still contain federal payroll deductions",
+    "p": "A $0.00 South Dakota state income-tax line does not make gross pay equal to take-home pay. At $65,000 single, biweekly gross pay is $2,500.00. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. South Dakota state income tax is $0.00, leaving a net paycheck of $2,092.60 and annual net pay of $54,407.50. The take-home share is 83.7%, while the effective state rate remains 0.00%. Separating the federal deductions from the state line makes it clear why a South Dakota worker can still have a meaningful difference between gross and deposited pay."
+   },
+   {
+    "h3": "South Dakota's $90,000 married example keeps state tax at zero",
+    "p": "At $90,000 married filing jointly, gross pay is $3,461.54 every two weeks. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. South Dakota state income tax remains $0.00. The resulting paycheck is $2,949.04, equivalent to $76,675.00/year and an 85.2% take-home share. Moving from the lower single examples to this married scenario changes several federal payroll figures, but it does not introduce a South Dakota individual income tax on wages. The effective state rate therefore stays at 0.00% regardless of the higher modeled salary."
+   },
+   {
+    "h3": "South Dakota salary growth does not create a state income-tax bracket",
+    "p": "All four examples show the same South Dakota state income-tax result: $0.00. At $45,000 single, the effective state rate is 0.00%, and it remains 0.00% at $130,000 married filing jointly. Higher earnings change gross pay and the listed federal deductions, but they do not cause wages to enter a South Dakota individual state income-tax bracket in these calculations. At the highest modeled salary, $5,000.00 of biweekly gross pay becomes $4,185.19 after $432.31 of federal income tax, $310.00 of Social Security, and $72.50 of Medicare. South Dakota state income tax contributes nothing to that reduction."
+   },
+   {
+    "h3": "South Dakota pre-tax benefits can change take-home without adding state tax",
+    "p": "The four examples assume no 401(k) contribution and no pre-tax benefits. A qualifying payroll deduction can change the paycheck calculation and final deposit even though the South Dakota state income-tax line remains $0.00 under the treatment modeled here. This distinction is useful when a real pay stub produces less take-home pay than one of the reference examples. The difference may come from payroll inputs that are absent from these scenarios rather than from South Dakota individual state income tax on wages. Compare the paycheck components individually instead of interpreting every additional deduction as a state income-tax charge."
+   },
+   {
+    "h3": "South Dakota hourly workers should recalculate each changing pay period",
+    "p": "An hourly worker can use the hourly paycheck calculator to determine current gross earnings before estimating take-home pay. The provided salary scenarios assume 26 equal biweekly paychecks, while hourly earnings can change with the number of hours worked. Federal income tax, Social Security, and Medicare can therefore produce different dollar deductions from one period to another. South Dakota individual state income tax on wages remains $0.00 in the calculation. Recalculate each variable pay period rather than applying the take-home percentage from a fixed salary example, because the overall percentage can move even while the South Dakota effective state rate stays at 0.00%."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is my South Dakota net pay lower than gross pay?",
+    "a": "South Dakota state income tax on wages is $0.00, but federal deductions still apply. At $65,000 single, the example includes $216.15 of federal income tax, $155.00 of Social Security, and $36.25 of Medicare."
+   },
+   {
+    "q": "What South Dakota state tax is withheld at $45,000 single?",
+    "a": "The $45,000 single example shows $0.00 of South Dakota state income tax. From $1,730.77 of biweekly gross pay, the listed federal deductions leave a net paycheck of $1,474.52."
+   },
+   {
+    "q": "Does the South Dakota state withholding line change at $130,000?",
+    "a": "The $130,000 married filing jointly example still shows $0.00 of South Dakota state income tax and a 0.00% effective state rate. The listed federal deductions reduce the $5,000.00 gross paycheck to $4,185.19."
+   },
+   {
+    "q": "Why are South Dakota take-home percentages different across the examples?",
+    "a": "The state income-tax amount remains $0.00, but salary and filing status differ across the scenarios, changing the listed federal payroll deductions. Those differences affect the final take-home percentage while the South Dakota effective state rate remains 0.00%."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "WY",
+  "intro": "Wyoming wages avoid an individual state income-tax deduction, leaving the modeled paycheck primarily shaped by federal payroll items. This Wyoming paycheck calculator keeps the state tax line at zero while showing the remaining deductions separately.",
+  "taxSummary": "Wyoming has no individual state income tax on wages. The calculator uses \"No individual state income tax on wages,\" so each provided example contains $0.00 of Wyoming state income tax and a 0.00% effective state rate. Federal income tax, Social Security, and Medicare still reduce the final deposit. The Wyoming Department of Revenue is the state tax agency, while increasing the salary from the lowest to highest example does not create Wyoming individual wage-income-tax withholding.",
+  "sections": [
+   {
+    "h3": "Wyoming's $45,000 paycheck illustrates the federal-only tax pattern",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77. Federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10. Wyoming state income tax is $0.00, leaving $1,474.52 of net pay and $38,337.50/year. The take-home share is 85.2%, and the effective state rate is 0.00%. This example shows why a state with no individual income tax on wages can still produce a paycheck noticeably below gross earnings. The reduction shown here comes from the federal payroll items rather than a Wyoming wage-income-tax deduction."
+   },
+   {
+    "h3": "Wyoming's $65,000 single paycheck retains $2,092.60",
+    "p": "The $65,000 single example starts with $2,500.00 of biweekly gross pay. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Wyoming state income tax remains $0.00. After the listed deductions, net pay is $2,092.60 per paycheck and $54,407.50/year, representing an 83.7% take-home share. Compared with the $45,000 single scenario, the effective Wyoming state rate is unchanged at 0.00%, while the overall take-home percentage differs. That difference comes from the broader payroll calculation rather than any new Wyoming individual state income-tax charge."
+   },
+   {
+    "h3": "Wyoming married filing jointly examples preserve the zero state line",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54 and Wyoming state income tax is $0.00. The listed federal deductions leave $2,949.04 of net pay, or $76,675.00/year. At $130,000 married filing jointly, gross pay rises to $5,000.00 and Wyoming state income tax remains $0.00. Net pay becomes $4,185.19, equivalent to $108,815.00/year. The effective state rate is 0.00% in both cases. Holding filing status constant across this pair makes the point especially clear: higher modeled wages change the federal payroll amounts but do not create a Wyoming individual wage-income-tax deduction."
+   },
+   {
+    "h3": "Wyoming salary increases do not create graduated state withholding",
+    "p": "The four examples span $45,000 through $130,000 of annual salary, yet Wyoming state income tax is $0.00 in every scenario. There is therefore no state wage-income-tax bracket progression to estimate as earnings rise. The take-home shares vary between 83.7% and 85.2%, but those percentages should not be interpreted as evidence of changing Wyoming income-tax rates. The effective state rate remains 0.00% throughout. When estimating a Wyoming paycheck, calculate the federal payroll items for the relevant wages and filing circumstances while keeping the individual Wyoming state income-tax line separate at zero under the treatment shown here."
+   },
+   {
+    "h3": "Variable Wyoming hourly wages still require a fresh paycheck calculation",
+    "p": "For hourly earnings, determine the current period's gross wages with the hourly paycheck calculator. Wyoming individual state income tax on wages remains $0.00, but changing hours can alter the federal deductions and final deposit. The provided examples assume 26 biweekly pay periods with fixed annual salaries, so their take-home percentages should not be treated as universal percentages for hourly workers. A period with different gross earnings can produce a different overall take-home share even though Wyoming state income tax remains unchanged. Recalculate the actual pay period so the federal deductions reflect the wages being modeled while the state income-tax line stays distinct."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Wyoming paycheck still have tax deductions?",
+    "a": "Wyoming state income tax on wages is $0.00, but federal payroll deductions remain. At $45,000 single, the example includes $123.85 of federal income tax, $107.31 of Social Security, and $25.10 of Medicare."
+   },
+   {
+    "q": "What Wyoming state withholding appears on a $65,000 salary?",
+    "a": "At $65,000 single, the example shows $0.00 of Wyoming state income tax. After the listed federal deductions, $2,500.00 of biweekly gross pay becomes $2,092.60 of net pay."
+   },
+   {
+    "q": "Does Wyoming withholding increase when salary reaches $130,000?",
+    "a": "Wyoming state income tax remains $0.00 in the $130,000 married filing jointly example. The effective state rate is still 0.00%, while the listed federal deductions leave $4,185.19 of biweekly net pay."
+   },
+   {
+    "q": "What is the Wyoming state tax line at $90,000 married filing jointly?",
+    "a": "The $90,000 married filing jointly example shows $0.00 of Wyoming state income tax. From $3,461.54 of biweekly gross pay, the listed federal deductions leave $2,949.04 of net pay."
+   }
+  ],
+  "needsVerification": []
+ }
+]

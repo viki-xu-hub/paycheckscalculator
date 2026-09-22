@@ -1,0 +1,278 @@
+[
+ {
+  "code": "WA",
+  "intro": "Washington wages are not subject to individual state income tax, but state payroll programs can still reduce each deposit. This Washington paycheck calculator separates the zero income-tax line from Paid Leave and WA Cares contributions.",
+  "taxSummary": "Washington has no individual state income tax on wages, so every example shows $0.00 of Washington state income tax. State payroll deductions can still apply through Paid Family and Medical Leave and WA Cares. The calculator uses \"WA Paid Leave employee share + WA Cares\" and displays those amounts as state payroll premiums. The examples therefore show a 1.39% effective state rate even though the individual state income-tax line itself remains at 0.00%.",
+  "sections": [
+   {
+    "h3": "Washington paychecks can have state deductions without state income tax",
+    "p": "Washington's payroll structure makes it important to distinguish income tax from other state deductions. At $45,000 single, Washington state income tax is $0.00, but state payroll premiums are $24.01. The paycheck starts at $1,730.77 gross and ends at $1,450.51 after federal income tax, Social Security, Medicare, and the Washington premiums. The effective state rate shown is 1.39%. That percentage does not represent an individual state income tax on wages. It reflects the state payroll premiums included in the calculation. When reviewing a Washington pay stub, separating these categories explains why a state-related deduction can appear even though the wage-income-tax amount is zero."
+   },
+   {
+    "h3": "WA Paid Leave and WA Cares create a separate payroll layer",
+    "p": "The Washington calculation specifically includes the WA Paid Leave employee share and WA Cares. These programs sit outside the individual state income-tax line. At $65,000 single, state income tax remains $0.00 while state payroll premiums are $34.68. At $90,000 married filing jointly, the corresponding amounts are $0.00 and $48.02. The calculator keeps the categories separate so the source of the deduction is visible. This matters when estimating take-home pay because treating Washington as having no state-related payroll deductions would produce a different result from the method shown here. The relevant state programs still reduce the final deposit even though Washington does not tax wages through individual state income tax."
+   },
+   {
+    "h3": "Washington's $130,000 married paycheck from gross to deposit",
+    "p": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Washington state income tax is $0.00, while state payroll premiums are $69.36. Those deductions leave $4,115.83 per paycheck, equivalent to $107,011.69/year and an 82.3% take-home share. The effective state rate is 1.39%. Compare that with the $90,000 married example, where premiums are $48.02 and net pay is $2,901.02. In both cases, the Washington income-tax line stays at zero while the state payroll-premium amount changes with the modeled wages."
+   },
+   {
+    "h3": "Why Washington's effective state rate shows 1.39%",
+    "p": "All four Washington examples show an effective state rate of 1.39%, despite showing $0.00 of Washington state income tax. The reason is that the effective state figure includes the state payroll premiums represented by the WA Paid Leave employee share and WA Cares. At $45,000 single, those premiums are $24.01 per paycheck; at $130,000 married filing jointly, they are $69.36. The income-tax line remains zero in both cases. Keeping these concepts separate makes the output easier to interpret: 0.00% describes the individual state income-tax rate in these examples, while 1.39% captures the state payroll deductions included in the calculator's broader state-related calculation."
+   },
+   {
+    "h3": "Washington hourly workers should include state payroll premiums",
+    "p": "For variable hourly earnings, first determine the current period's gross wages with the hourly paycheck calculator. Washington individual state income tax on wages remains $0.00, but the Paid Leave employee share and WA Cares can still affect the paycheck. The reference examples use 26 biweekly periods and fixed salaries, while an hourly employee can have different gross wages from one check to another. That means the dollar amount of state payroll premiums can also differ across periods. Calculate each paycheck from the wages actually being modeled instead of assuming that a fixed premium amount from one salary example applies to every check."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why does my Washington paycheck have state deductions if income tax is zero?",
+    "a": "Washington does not impose individual state income tax on wages, but the calculation includes the WA Paid Leave employee share and WA Cares. At $45,000 single, Washington state income tax is $0.00 while state payroll premiums are $24.01."
+   },
+   {
+    "q": "What Washington payroll premiums appear at $65,000 single?",
+    "a": "The $65,000 single example shows $34.68 of state payroll premiums and $0.00 of Washington state income tax. After federal income tax, Social Security, Medicare, and those premiums, the biweekly net paycheck is $2,057.92."
+   },
+   {
+    "q": "What happens to Washington deductions at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, the example shows $69.36 of state payroll premiums while Washington state income tax remains $0.00. From $5,000.00 of biweekly gross pay, the listed deductions leave $4,115.83."
+   },
+   {
+    "q": "Which Washington state payroll programs are included in the calculation?",
+    "a": "The calculator uses the method labeled \"WA Paid Leave employee share + WA Cares.\" These state payroll deductions are represented separately from Washington individual state income tax, which is $0.00 in each provided example."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "WI",
+  "intro": "Wisconsin withholding combines graduated tax brackets with state-specific payroll elections rather than one fixed percentage of wages. This Wisconsin paycheck calculator uses the W-166 (1/26) annualized method plus entered WT-4 adjustments.",
+  "taxSummary": "Wisconsin uses graduated income-tax brackets from 3.5% to 7.65%, with withholding administered by the Wisconsin Department of Revenue. Form WT-4 elections can affect the state payroll calculation. The calculator applies the \"Wisconsin W-166 (1/26) annualized method + entered WT-4 adjustments.\" Because Wisconsin uses a graduated structure, the effective state rate can change as wages and filing circumstances change. In the four examples, it ranges from 4.21% to 5.06%.",
+  "sections": [
+   {
+    "h3": "Wisconsin WT-4 adjustments belong in the state calculation",
+    "p": "Wisconsin withholding is not determined by simply multiplying gross pay by one rate from the state's 3.5%–7.65% bracket range. The calculator uses the W-166 (1/26) annualized method together with entered WT-4 adjustments. That makes the employee's Wisconsin withholding setup relevant to the state deduction. In the provided examples, no allowances are entered, giving the salary comparisons a consistent starting point. If your WT-4 elections differ, the resulting state withholding can also differ even when salary is unchanged. Use the Wisconsin-specific payroll information in the calculation rather than treating an effective rate from another paycheck as a permanent percentage."
+   },
+   {
+    "h3": "Wisconsin's $65,000 single paycheck shows graduated withholding",
+    "p": "At $65,000 single, biweekly gross pay is $2,500.00. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Wisconsin state income tax is $118.56, producing net pay of $1,974.04 and annual net pay of $51,324.94. The effective state rate is 4.74%. At $45,000 single, Wisconsin withholding is $72.90 from $1,730.77 gross, with an effective state rate of 4.21%. The increase in both the dollar deduction and effective percentage illustrates why the state line should be calculated through Wisconsin's annualized method rather than scaled directly from a lower salary."
+   },
+   {
+    "h3": "Wisconsin's top 7.65% rate is not applied to the whole paycheck",
+    "p": "Wisconsin's graduated income-tax range reaches 7.65%, but that does not make 7.65% the withholding percentage for an entire gross paycheck. The provided effective state rates are 4.21%, 4.74%, 4.96%, and 5.06%. Even the $130,000 married filing jointly example therefore has an effective state percentage below the top of the bracket range. The W-166 annualized method translates the graduated structure into payroll withholding while incorporating the entered WT-4 adjustments. Using the highest bracket as a shortcut would not reproduce these results. The specific state method needs to process the payroll information for the scenario being calculated."
+   },
+   {
+    "h3": "Wisconsin's two married examples show withholding rising with wages",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54 and Wisconsin state income tax is $171.63. Net pay is $2,777.41, or $72,212.62/year, and the effective state rate is 4.96%. At $130,000 married filing jointly, gross pay reaches $5,000.00 and Wisconsin withholding becomes $253.17. The resulting paycheck is $3,932.02, with annual net pay of $102,232.58 and a 5.06% effective state rate. Because both scenarios use the same filing status, the comparison provides a useful illustration of how Wisconsin's annualized graduated calculation responds when the modeled earnings increase."
+   },
+   {
+    "h3": "Pre-tax payroll changes can alter the Wisconsin state line",
+    "p": "The four Wisconsin examples assume no 401(k) contribution and no pre-tax benefits. If a qualifying payroll deduction changes the wages used for Wisconsin withholding, the state amount can differ from these reference cases. Wisconsin's graduated structure means a change in taxable wages does not need to produce an identical percentage change in the state deduction. Keep payroll deductions and WT-4 adjustments distinct when setting up the calculation, since each can influence the information processed by the state method. Rather than subtracting an estimated amount from a reference paycheck, recalculate Wisconsin withholding using the wages and state elections that apply to the paycheck you are modeling."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why isn't Wisconsin withholding simply 7.65% of my paycheck?",
+    "a": "Wisconsin uses graduated brackets from 3.5% to 7.65%, so the top rate is not applied to the entire gross paycheck. The examples show effective state rates between 4.21% and 5.06% under the annualized withholding method."
+   },
+   {
+    "q": "What does Wisconsin Form WT-4 change on a paycheck?",
+    "a": "WT-4 provides Wisconsin-specific withholding elections used in the state calculation. The calculator's method combines entered WT-4 adjustments with the Wisconsin W-166 (1/26) annualized method rather than relying only on gross salary."
+   },
+   {
+    "q": "How much Wisconsin tax is withheld at $90,000 married filing jointly?",
+    "a": "At $90,000 married filing jointly, Wisconsin state income tax is $171.63 from $3,461.54 of biweekly gross pay. After the listed federal deductions and state withholding, net pay is $2,777.41."
+   },
+   {
+    "q": "What is the Wisconsin withholding at $130,000 married filing jointly?",
+    "a": "The $130,000 married filing jointly example shows $253.17 of Wisconsin state income tax from $5,000.00 of biweekly gross pay. The resulting net paycheck is $3,932.02, with a 5.06% effective state rate."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "AK",
+  "intro": "Alaska removes state wage-income tax from the paycheck equation, but federal payroll deductions still create a sizable gap between gross and net pay. This Alaska paycheck calculator keeps the state income-tax amount at $0.00.",
+  "taxSummary": "Alaska has no individual state income tax on wages, so the calculator applies \"No individual state income tax on wages.\" Each reference salary therefore shows $0.00 of Alaska state income tax and a 0.00% effective state rate. Federal income tax, Social Security, and Medicare still reduce the paycheck. The Alaska Department of Revenue is the state tax agency, but there is no individual Alaska wage-income-tax withholding amount in these 2026 examples.",
+  "sections": [
+   {
+    "h3": "What still comes out of an Alaska paycheck",
+    "p": "No Alaska individual state income tax on wages does not mean the gross paycheck becomes the final deposit. At $45,000 single, biweekly gross pay is $1,730.77 and Alaska state income tax is $0.00. Federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10. After those deductions, net pay is $1,474.52, equivalent to $38,337.50/year and an 85.2% take-home share. The effective state rate remains 0.00%. This example isolates the practical effect of Alaska's state treatment: the state wage-income-tax line disappears, while the federal payroll deductions continue to reduce take-home pay."
+   },
+   {
+    "h3": "Alaska's $65,000 single example has a zero state line",
+    "p": "At $65,000 single, the biweekly paycheck begins with $2,500.00 of gross pay. Federal income tax is $216.15, Social Security is $155.00, and Medicare is $36.25. Alaska state income tax contributes $0.00 to the deduction total. The resulting paycheck is $2,092.60, with annual net pay of $54,407.50 and an 83.7% take-home share. The effective state rate is 0.00%. Comparing this scenario with the $45,000 example shows that the take-home percentage can change as salary changes even though Alaska's state income-tax treatment remains exactly the same."
+   },
+   {
+    "h3": "Why higher Alaska wages do not create a state income-tax bracket",
+    "p": "The four examples cover salaries from $45,000 through $130,000, yet Alaska state income tax remains $0.00 in every case. There is no individual state income tax on wages for the higher salaries to enter. At $90,000 married filing jointly, the state line is $0.00; at $130,000 married filing jointly, it is also $0.00. The difference in take-home pay between those examples comes from gross earnings and the federal deductions shown, not from an Alaska income-tax bracket. This makes the state portion straightforward: increasing wages changes many payroll figures, but it does not introduce individual Alaska wage-income-tax withholding."
+   },
+   {
+    "h3": "Alaska married filing jointly examples isolate federal deductions",
+    "p": "At $90,000 married filing jointly, gross pay is $3,461.54 every two weeks. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. With Alaska state income tax at $0.00, net pay is $2,949.04 and annual net pay is $76,675.00. At $130,000 married filing jointly, $5,000.00 of gross pay becomes $4,185.19 after the listed federal deductions, again with $0.00 of Alaska income tax. The take-home shares are 85.2% and 83.7%, respectively. Those different percentages reflect the overall payroll calculation rather than any change in Alaska's state tax treatment."
+   },
+   {
+    "h3": "Alaska hourly workers should recalculate changing federal deductions",
+    "p": "Hourly employees can calculate each period's earnings with the hourly paycheck calculator before estimating the deductions. Alaska individual state income tax on wages remains $0.00, but federal income tax, Social Security, and Medicare still affect the deposit. The salary examples use fixed annual compensation across 26 biweekly periods. An hourly worker can instead have changing gross wages as hours vary, causing the federal deduction amounts and take-home percentage to move from one paycheck to another. Recalculate the actual period rather than assuming that the 85.2% or 83.7% take-home share from a salary example will automatically apply to variable hourly earnings."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "Why is money still withheld from my Alaska paycheck?",
+    "a": "Alaska state income tax on wages is $0.00, but federal deductions still apply. At $45,000 single, the example includes $123.85 of federal income tax, $107.31 of Social Security, and $25.10 of Medicare."
+   },
+   {
+    "q": "What Alaska state tax is withheld at $65,000 single?",
+    "a": "The Alaska state income-tax amount is $0.00. At $65,000 single, $2,500.00 of biweekly gross pay becomes $2,092.60 after the federal income tax, Social Security, and Medicare deductions shown in the example."
+   },
+   {
+    "q": "Does a $130,000 salary create Alaska state income-tax withholding?",
+    "a": "No individual state income tax on wages is applied in the provided Alaska calculation. At $130,000 married filing jointly, Alaska state income tax remains $0.00 and the effective state rate is 0.00%."
+   },
+   {
+    "q": "Why does Alaska take-home pay change if the state rate stays at 0.00%?",
+    "a": "The Alaska state line remains zero, but federal payroll deductions change across the salary and filing scenarios. Those federal amounts alter the final deposit and take-home percentage even though the effective Alaska state rate remains 0.00%."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "DE",
+  "intro": "Delaware combines graduated brackets with an exemption-credit mechanism inside its percentage withholding method. This Delaware paycheck calculator applies W-4 exemptions with the $110 credit instead of using one flat percentage of gross wages.",
+  "taxSummary": "Delaware uses graduated income-tax brackets from 2.2% to 6.6%, administered by the Delaware Division of Revenue. State withholding follows a percentage method that incorporates Form W-4 exemptions. The calculator uses \"Delaware percentage method (W-4 exemptions × $110 credit).\" Because the calculation combines graduated rates with the exemption-credit mechanism, the effective state rate differs from the headline bracket rates. Across the four examples, it increases from 4.29% to 5.49%.",
+  "sections": [
+   {
+    "h3": "Delaware's $110 exemption credit is part of the withholding method",
+    "p": "The Delaware calculation explicitly uses W-4 exemptions multiplied by a $110 credit. That feature distinguishes the payroll method from simply selecting a rate within the state's 2.2%–6.6% graduated range. The provided examples use no allowances, giving them a consistent setup for comparison. If the relevant W-4 exemption information changes, Delaware withholding can change even when gross salary stays the same. The exemption-credit mechanic should therefore be handled inside the state calculation rather than approximated by changing the effective tax percentage manually. Delaware's percentage method combines that information with its graduated structure to determine the state amount withheld from each paycheck."
+   },
+   {
+    "h3": "Delaware's single examples show the state percentage increasing",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Delaware state income tax is $74.25. Net pay is $1,400.26 and the effective state rate is 4.29%. At $65,000 single, gross pay increases to $2,500.00, Delaware withholding becomes $117.65, and net pay is $1,974.94. The effective state rate rises to 4.71%. Because both examples use single status and no allowances, they provide a useful comparison of how Delaware withholding changes as the modeled wages rise. The dollar amount and effective percentage both increase rather than preserving one flat withholding percentage across the two salaries."
+   },
+   {
+    "h3": "Why Delaware's 6.6% top rate is not your entire paycheck rate",
+    "p": "Delaware's graduated income-tax range reaches 6.6%, but the top rate should not be applied to the entire gross paycheck. The calculator's effective state rates are 4.29%, 4.71%, 4.99%, and 5.49% across the four examples. Even at $130,000 married filing jointly, the effective percentage remains below the 6.6% top rate. The percentage method also incorporates the W-4 exemption-credit calculation, adding another reason not to estimate Delaware withholding from the top bracket alone. To reproduce the payroll result, use the graduated percentage method with the applicable exemption information rather than multiplying all wages by 6.6%."
+   },
+   {
+    "h3": "Delaware's $130,000 married paycheck reaches $274.40 in state tax",
+    "p": "At $130,000 married filing jointly, biweekly gross pay is $5,000.00. Federal income tax is $432.31, Social Security is $310.00, and Medicare is $72.50. Delaware state income tax is $274.40, leaving $3,910.79 per paycheck and $101,680.50/year. The effective state rate is 5.49%. At $90,000 married filing jointly, Delaware withholding is $172.87 and net pay is $2,776.17 from $3,461.54 gross. The effective state rate there is 4.99%. With filing status held constant, these examples show the state deduction becoming a larger share of earnings as the modeled salary increases."
+   },
+   {
+    "h3": "Delaware hourly pay should be run through the percentage method",
+    "p": "For hourly work, calculate the current period's earnings with the hourly paycheck calculator before applying Delaware's state method. Hourly gross wages can change between pay periods, unlike the fixed salaries used in the four biweekly examples. Delaware's graduated brackets and W-4 exemption-credit mechanism then determine the state withholding for the payroll scenario being modeled. An effective percentage from one check should not automatically be reused for another check with different earnings. Recalculating the period keeps the wage amount and exemption setup aligned with Delaware's percentage method rather than turning one reference result into an assumed flat withholding rate."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "How does Delaware's $110 exemption credit affect paycheck withholding?",
+    "a": "The calculator uses the \"Delaware percentage method (W-4 exemptions × $110 credit).\" The $110 amount is therefore incorporated through the W-4 exemption mechanism within the state withholding calculation rather than applied as a separate tax rate."
+   },
+   {
+    "q": "Why isn't Delaware withholding equal to the 6.6% top rate?",
+    "a": "Delaware uses graduated brackets from 2.2% to 6.6%, so the top rate is not applied to all gross wages. The four examples show effective state rates ranging from 4.29% to 5.49%."
+   },
+   {
+    "q": "What Delaware tax is withheld at $45,000 single?",
+    "a": "At $45,000 single, Delaware state income tax is $74.25 from $1,730.77 of biweekly gross pay. After the listed federal deductions and state withholding, the resulting net paycheck is $1,400.26."
+   },
+   {
+    "q": "How much Delaware tax comes out at $130,000 married filing jointly?",
+    "a": "The $130,000 married filing jointly example shows $274.40 of Delaware state income tax from $5,000.00 of biweekly gross pay. After all listed deductions, net pay is $3,910.79."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "DC",
+  "intro": "Washington DC uses seven graduated brackets, making the District withholding percentage sensitive to earnings rather than fixed across salaries. This Washington DC paycheck calculator applies the FR-230 percentage method with D-4 allowances.",
+  "taxSummary": "The District of Columbia uses seven graduated income-tax brackets from 4% to 10.75%. The DC Office of Tax and Revenue administers the tax, and Form D-4 allowances are used in District withholding. The calculator applies the \"District of Columbia FR-230 percentage method (D-4 allowances).\" The effective state rate increases across the examples from 5.61% to 7.27%, demonstrating why neither the lowest nor highest bracket rate should be applied to an entire paycheck.",
+  "sections": [
+   {
+    "h3": "Washington DC D-4 allowances feed into a seven-bracket system",
+    "p": "Washington DC withholding uses Form D-4 allowances within the District's FR-230 percentage method. The tax structure contains seven graduated brackets ranging from 4% to 10.75%, so D-4 information is processed inside a calculation that can produce different effective percentages at different income levels. The examples use no allowances, creating a consistent baseline. At $45,000 single, the effective state rate is 5.61%; at $65,000 single, it is 6.04%. If your D-4 setup differs, the District withholding amount can also differ. Use the applicable D-4 information rather than assuming that another worker's effective percentage will apply to your wages."
+   },
+   {
+    "h3": "Washington DC's $90,000 married paycheck has $232.69 in District tax",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54. Federal income tax is $247.69, Social Security is $214.62, and Medicare is $50.19. Washington DC state income tax is $232.69, leaving $2,716.35 per paycheck and $70,625.00/year. The effective state rate is 6.72%. At $130,000 married filing jointly, District withholding increases to $363.46 from $5,000.00 gross and net pay becomes $3,821.73. The effective state rate rises to 7.27%. Because the filing status remains the same, the comparison clearly shows the graduated District withholding increasing as modeled earnings rise."
+   },
+   {
+    "h3": "Why Washington DC's 10.75% rate is not applied to all wages",
+    "p": "The District's highest bracket rate is 10.75%, but that does not mean a worker's entire gross paycheck is withheld at 10.75%. Under the FR-230 percentage method, the four examples produce effective state rates of 5.61%, 6.04%, 6.72%, and 7.27%. Even the $130,000 married filing jointly scenario remains well below the top bracket when measured as an effective percentage of gross salary. The District's seven-bracket structure must be processed through the withholding method rather than reduced to one headline rate. Applying 10.75% to the entire paycheck would not reproduce any of the provided examples."
+   },
+   {
+    "h3": "Washington DC's two single examples show the graduated climb",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Washington DC state income tax is $97.12. Net pay is $1,377.40 and the effective state rate is 5.61%. At $65,000 single, gross pay becomes $2,500.00, District withholding rises to $150.96, and net pay is $1,941.63. The effective state rate reaches 6.04%. These two examples hold filing status and allowance assumptions constant while changing salary, making them useful for seeing the graduated structure in action. Both the dollar deduction and the effective District percentage rise when the modeled earnings increase."
+   },
+   {
+    "h3": "Pre-tax payroll changes can affect Washington DC taxable wages",
+    "p": "The four Washington DC examples contain no 401(k) contribution and no pre-tax benefits. If a qualifying payroll deduction changes the wages used for District withholding, the amount entering the seven-bracket calculation can change. The resulting District tax does not have to move in exact proportion to gross salary because the FR-230 method is graduated and also uses D-4 allowances. When comparing a real paycheck with these examples, account for qualifying payroll deductions according to their treatment before evaluating the Washington DC tax line. Recalculate the state amount from the relevant payroll inputs instead of simply reducing a reference withholding figure by the size of a deduction."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "What does Washington DC Form D-4 do?",
+    "a": "Form D-4 supplies allowances used in Washington DC withholding. The calculator processes those allowances through the District of Columbia FR-230 percentage method, which applies the District's seven graduated income-tax brackets."
+   },
+   {
+    "q": "Why isn't Washington DC withholding 10.75% of my whole paycheck?",
+    "a": "The District uses seven graduated brackets from 4% to 10.75%, so the highest rate is not applied to all gross wages. The provided examples instead have effective state rates from 5.61% to 7.27%."
+   },
+   {
+    "q": "How much DC tax is withheld at $65,000 single?",
+    "a": "At $65,000 single, Washington DC state income tax is $150.96 from $2,500.00 of biweekly gross pay. After the listed federal deductions and District withholding, net pay is $1,941.63."
+   },
+   {
+    "q": "What is the DC withholding at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, Washington DC state income tax is $363.46 from $5,000.00 of biweekly gross pay. The example produces $3,821.73 of net pay and a 7.27% effective state rate."
+   }
+  ],
+  "needsVerification": []
+ },
+ {
+  "code": "ME",
+  "intro": "Maine's state withholding can move differently across filing situations because graduated brackets interact with W-4ME elections. This Maine paycheck calculator uses the 2026 percentage method and the specified W-4ME allowance calculation.",
+  "taxSummary": "Maine uses graduated income-tax brackets from 5.8% to 7.15%, administered by Maine Revenue Services. State withholding is based on Form W-4ME elections rather than a single percentage of gross wages. The calculator uses \"Maine 2026 percentage method (W-4ME allowances × $5,300).\" The four examples produce effective state rates from 4.10% to 5.04%. Because filing status changes between some examples, a higher salary does not necessarily correspond to a higher effective state rate.",
+  "sections": [
+   {
+    "h3": "Maine W-4ME allowances use a $5,300 amount in the calculation",
+    "p": "Maine's 2026 percentage method explicitly incorporates W-4ME allowances multiplied by $5,300. That allowance mechanic operates inside the state withholding calculation rather than serving as a separate payroll tax. The examples use no allowances, giving their salary and filing-status comparisons a consistent assumption. If W-4ME elections change, the Maine withholding result can change without a corresponding change in gross salary. This is why the state's 5.8%–7.15% bracket range should not be treated as a direct percentage of the whole paycheck. The applicable W-4ME information needs to be processed through Maine's percentage method to determine the state withholding amount."
+   },
+   {
+    "h3": "Why Maine's $90,000 effective rate is below the $65,000 example",
+    "p": "The $65,000 example uses single filing status and produces $126.00 of Maine withholding with a 5.04% effective state rate. The $90,000 example uses married filing jointly and produces $142.00 of state withholding with a 4.10% effective state rate. The higher salary therefore has a larger dollar deduction but a lower effective percentage. The filing situation has changed, so these examples should not be read as a simple salary progression. Maine's graduated withholding and W-4ME framework process the payroll setup as a whole. For a cleaner income comparison, compare scenarios with the same filing status rather than assuming salary alone determines the effective state percentage."
+   },
+   {
+    "h3": "Maine's $45,000 single paycheck breaks down to $1,400.52 net",
+    "p": "At $45,000 single, biweekly gross pay is $1,730.77. Federal income tax is $123.85, Social Security is $107.31, and Medicare is $25.10. Maine state income tax is $74.00, leaving $1,400.52 per paycheck and $36,413.50/year. The take-home share is 80.9%, while the effective state rate is 4.28%. At $65,000 single, Maine withholding increases to $126.00 and net pay becomes $1,966.60 from $2,500.00 gross. Because these two examples share filing status and allowance assumptions, they provide a more direct view of how Maine withholding changes as the modeled single salary rises."
+   },
+   {
+    "h3": "Maine's married examples show the effect of higher modeled wages",
+    "p": "At $90,000 married filing jointly, biweekly gross pay is $3,461.54 and Maine state income tax is $142.00. After the listed deductions, net pay is $2,807.04 and annual net pay is $72,983.00. At $130,000 married filing jointly, gross pay rises to $5,000.00 and Maine withholding becomes $245.00. The resulting paycheck is $3,940.19, with annual net pay of $102,445.00. The effective state rate moves from 4.10% to 4.90%. Holding filing status constant makes this pair useful for seeing how Maine's percentage method responds to higher wages without mixing the comparison with a different filing status."
+   },
+   {
+    "h3": "Maine hourly earnings should be recalculated when hours change",
+    "p": "Hourly workers can first determine the current period's earnings with the hourly paycheck calculator. Maine's percentage method then applies using the relevant W-4ME setup. The reference salaries assume 26 biweekly pay periods and stable gross wages, while an hourly schedule can produce different earnings from one check to the next. Because Maine uses graduated brackets and an allowance-based withholding method, the effective state percentage from one paycheck should not automatically be applied to another. Calculate each period using the wages actually earned and the applicable W-4ME elections so the state deduction reflects the payroll scenario being modeled rather than a percentage borrowed from a fixed salary example."
+   }
+  ],
+  "faqs": [
+   {
+    "q": "How are W-4ME allowances used in Maine withholding?",
+    "a": "The calculator uses the \"Maine 2026 percentage method (W-4ME allowances × $5,300).\" W-4ME allowances therefore enter the state percentage-method calculation and can affect the resulting Maine withholding amount."
+   },
+   {
+    "q": "Why is Maine's effective rate lower at $90,000 than at $65,000?",
+    "a": "The filing statuses differ. The $65,000 example is single and has a 5.04% effective state rate, while the $90,000 example is married filing jointly and has a 4.10% effective state rate."
+   },
+   {
+    "q": "What Maine tax is withheld at $45,000 single?",
+    "a": "At $45,000 single, Maine state income tax is $74.00 from $1,730.77 of biweekly gross pay. After federal income tax, Social Security, Medicare, and Maine withholding, the net paycheck is $1,400.52."
+   },
+   {
+    "q": "How much Maine tax comes out at $130,000 married filing jointly?",
+    "a": "At $130,000 married filing jointly, Maine state income tax is $245.00 from $5,000.00 of biweekly gross pay. After the listed deductions, net pay is $3,940.19 and annual net pay is $102,445.00."
+   }
+  ],
+  "needsVerification": []
+ }
+]

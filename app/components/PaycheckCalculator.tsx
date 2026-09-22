@@ -28,6 +28,7 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
   const [state,setState]=useState<SupportedState>(defaultState);
   const [stateQuery,setStateQuery]=useState(supportedStates.find(item=>item.code===defaultState)?.name??"");
   const [stateSearchOpen,setStateSearchOpen]=useState(false);
+  const [assumptionsOpen,setAssumptionsOpen]=useState(false);
   const stateListId=useId();
   const [frequency,setFrequency]=useState<PayFrequency>(defaultFrequency);
   const [salary,setSalary]=useState(defaultSalary);
@@ -166,7 +167,9 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
       <div className="net-amount"><span>NET PAY · {frequency.toUpperCase()}</span><strong>{money.format(per(result.netAnnual))}</strong><small>{wholeMoney.format(result.netAnnual)} per year</small></div>
       <div className="bar"><span style={{width:`${netShare}%`}}/><span style={{width:`${taxShare}%`}}/><span style={{width:`${deductionShare}%`}}/></div><div className="legend"><span><i className="net-dot"/>Take-home {netShare.toFixed(0)}%</span><span><i className="tax-dot"/>Taxes {taxShare.toFixed(0)}%</span><span><i className="deduction-dot"/>Deductions {deductionShare.toFixed(0)}%</span></div>
       <div className="breakdown"><div><span>Gross pay</span><b>{money.format(per(result.grossAnnual))}</b></div><div><span>Federal income tax</span><b>−{money.format(per(result.federal))}</b></div><div><span>Social Security</span><b>−{money.format(per(result.socialSecurity))}</b></div><div><span>Medicare</span><b>−{money.format(per(result.medicare))}</b></div><div><span>{stateName} income tax</span><b>−{money.format(per(result.stateIncomeTax))}</b></div>{result.statePayrollPremiums>0&&<div><span>State payroll programs</span><b>−{money.format(per(result.statePayrollPremiums))}</b></div>}<div><span>Pre-tax deductions</span><b>−{money.format(per(result.preTaxAnnual))}</b></div></div>
-      <div className="result-note"><span>ⓘ</span><p>{result.stateMethod}. Assumes a current federal W-4 with Step 2 unchecked and no credits. Address-specific local taxes are included only from the rate you enter; fixed local fees and employer-specific rules remain excluded.</p></div>
+      <div className="result-note"><span>ⓘ</span><p>{result.stateMethod}. <button type="button" className="note-toggle" aria-expanded={assumptionsOpen} onClick={()=>setAssumptionsOpen(open=>!open)}>{assumptionsOpen?"Hide assumptions":"Assumptions"}</button></p></div>
+      {/* Rendered only after the click so the shared assumption text is not part of every page's server HTML */}
+      {assumptionsOpen&&<div className="result-note assumptions" role="note"><p>Assumes a current federal W-4 with Step 2 unchecked and no credits. Address-specific local taxes are included only from the rate you enter; fixed local fees and employer-specific rules remain excluded. See the <a className="text-link" href="/methodology">methodology and source list</a>.</p></div>}
     </section>
   </div>;
 }
