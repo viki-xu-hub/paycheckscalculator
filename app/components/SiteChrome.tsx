@@ -1,3 +1,5 @@
+import statesData from "../data/states.json";
+
 export function SiteHeader() {
   return (
     <header className="site-header">
@@ -71,6 +73,7 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const states = statesData.filter((s) => !s.isCity);
   return (
     <footer>
       <a className="brand" href="/">
@@ -78,6 +81,14 @@ export function SiteFooter() {
         <span>Paycheck <b>Atlas</b></span>
       </a>
       <p>Independent, source-backed paycheck estimates.</p>
+      <div className="footer-states">
+        <p className="footer-states-title">State Paycheck Calculators</p>
+        <div className="footer-states-grid">
+          {states.map((s) => (
+            <a key={s.abbr} href={`/${s.slug}`}>{s.name}</a>
+          ))}
+        </div>
+      </div>
       <div className="partner-zone">
         <span className="partner-zone-label">Partner Zone</span>
         <a className="partner-badge" target="_blank" href="https://beamtools.com/tool/paycheckscalculator" rel="noopener noreferrer">
