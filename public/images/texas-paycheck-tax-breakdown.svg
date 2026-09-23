@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" role="img" aria-labelledby="t d">
+  <title id="t">Where a $2,307.69 biweekly Texas paycheck goes</title>
+  <desc id="d">Of $2,307.69 gross, $1,938.08 is take-home, $193.08 federal income tax, $143.08 Social Security and $33.46 Medicare.</desc>
+  <style>
+    .box{fill:#fff;stroke:#e4e7ec;stroke-width:1.5}
+    .accent{fill:#4a63e7}
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 22px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .v{font:700 14px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .w{font:700 15px Arial,Helvetica,sans-serif;fill:#fff}
+    .arrow{stroke:#9aa3b2;stroke-width:2;fill:none;marker-end:url(#m)}
+    .grid{stroke:#e4e7ec;stroke-width:1}
+  </style>
+  <defs><marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa3b2"/></marker></defs>
+  <rect width="880" height="300" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="40" text-anchor="middle" class="h">Taxes deducted from a biweekly Texas paycheck ($60,000 salary, single filer)</text>
+  <text x="440" y="66" text-anchor="middle" class="s">Gross $2,307.69 per check · 84.0% lands in the bank because Texas withholds no state income tax</text>
+  <rect x="60" y="110" width="632" height="46" fill="#4a63e7" rx="4"/>
+  <rect x="694.5" y="110" width="63" height="46" fill="#c9741a"/>
+  <rect x="759.9" y="110" width="46.7" height="46" fill="#149c86"/>
+  <rect x="809.1" y="110" width="10.9" height="46" fill="#8a4fd6" rx="4"/>
+  <text x="376" y="139" text-anchor="middle" class="w">84.0% take-home</text>
+  <rect x="60" y="196" width="12" height="12" rx="3" fill="#4a63e7"/>
+  <text x="78" y="207" class="m">Take-home pay</text>
+  <text x="78" y="228" class="v">$1,938.08 · 84.0%</text>
+  <rect x="260" y="196" width="12" height="12" rx="3" fill="#c9741a"/>
+  <text x="278" y="207" class="m">Federal income tax</text>
+  <text x="278" y="228" class="v">$193.08 · 8.4%</text>
+  <rect x="460" y="196" width="12" height="12" rx="3" fill="#149c86"/>
+  <text x="478" y="207" class="m">Social Security 6.2%</text>
+  <text x="478" y="228" class="v">$143.08 · 6.2%</text>
+  <rect x="660" y="196" width="12" height="12" rx="3" fill="#8a4fd6"/>
+  <text x="678" y="207" class="m">Medicare 1.45%</text>
+  <text x="678" y="228" class="v">$33.46 · 1.4%</text>
+  <text x="440" y="268" text-anchor="middle" class="s">Texas state income tax on this paycheck: $0.00. Only federal income tax, Social Security and Medicare are deducted.</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="320" viewBox="0 0 880 320" role="img" aria-labelledby="t d">
+  <title id="t">How much taxes are deducted from a paycheck in Texas</title>
+  <desc id="d">A $60,000 Texas salary loses $5,020 federal income tax, $3,720 Social Security and $870 Medicare, with $0 Texas state income tax, leaving $50,390 take-home.</desc>
+  <style>
+    .box{fill:#fff;stroke:#e4e7ec;stroke-width:1.5}
+    .accent{fill:#4a63e7}
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 22px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .v{font:700 14px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .w{font:700 15px Arial,Helvetica,sans-serif;fill:#fff}
+    .arrow{stroke:#9aa3b2;stroke-width:2;fill:none;marker-end:url(#m)}
+    .grid{stroke:#e4e7ec;stroke-width:1}
+  </style>
+  <defs><marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa3b2"/></marker></defs>
+  <rect width="880" height="320" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="40" text-anchor="middle" class="h">How much taxes deducted from paycheck Texas: $60,000 salary, single filer, 2026</text>
+  <rect x="30" y="76" width="200" height="150" rx="10" class="box"/>
+  <text x="130" y="108" text-anchor="middle" class="s">Step 1 · Gross pay</text>
+  <text x="130" y="146" text-anchor="middle" class="n">$60,000 / yr</text>
+  <text x="130" y="176" text-anchor="middle" class="s">26 biweekly checks</text>
+  <text x="130" y="200" text-anchor="middle" class="v">$2,307.69 per check</text>
+  <path d="M232 151 H278" class="arrow"/>
+  <rect x="282" y="76" width="336" height="150" rx="10" class="box"/>
+  <text x="450" y="108" text-anchor="middle" class="s">Step 2 · Taxes deducted from the paycheck</text>
+  <text x="304" y="140" class="s">Federal income tax (W-4, 2026 tables)</text>
+  <text x="596" y="140" text-anchor="end" class="v">$5,020</text>
+  <text x="304" y="164" class="s">Social Security 6.2%</text>
+  <text x="596" y="164" text-anchor="end" class="v">$3,720</text>
+  <text x="304" y="188" class="s">Medicare 1.45%</text>
+  <text x="596" y="188" text-anchor="end" class="v">$870</text>
+  <text x="304" y="212" class="s">Texas state income tax</text>
+  <text x="596" y="212" text-anchor="end" class="v">$0</text>
+  <path d="M620 151 H666" class="arrow"/>
+  <rect x="670" y="76" width="180" height="150" rx="10" class="accent"/>
+  <text x="760" y="108" text-anchor="middle" class="w" opacity=".85">Step 3 · Take-home</text>
+  <text x="760" y="148" text-anchor="middle" class="w" style="font-size:24px">$50,390</text>
+  <text x="760" y="176" text-anchor="middle" class="w" opacity=".85">per year</text>
+  <text x="760" y="202" text-anchor="middle" class="w">$1,938.08 per check</text>
+  <text x="440" y="264" text-anchor="middle" class="s">Total withheld: $9,610 a year, or 16.0% of gross pay. Texas has no state income tax, so no state line appears on the pay stub.</text>
+  <text x="440" y="290" text-anchor="middle" class="s">2026 IRS percentage-method tables, single filer, standard W-4 with no dependents and no pre-tax deductions.</text>
+</svg>

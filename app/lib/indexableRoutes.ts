@@ -19,6 +19,7 @@ const CORE_INDEXABLE_PATHS = [
   "/about",
   "/contact",
   "/paycheck-taxes",
+  "/blog",
 ] as const;
 
 // Legacy location slugs at root (e.g. /texas-paycheck-calculator)

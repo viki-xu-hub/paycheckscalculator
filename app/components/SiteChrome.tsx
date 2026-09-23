@@ -57,11 +57,15 @@ export function SiteHeader() {
           </div>
         </div>
 
-        {/* Resources dropdown */}
+        {/* Blog dropdown */}
         <div className="nav-item">
-          <span className="nav-trigger">Resources <span className="nav-caret">▾</span></span>
+          <span className="nav-trigger">Blog <span className="nav-caret">▾</span></span>
           <div className="nav-panel">
-            <a href="/paycheck-taxes">Paycheck Taxes</a>
+            <div className="nav-group-label">Paycheck Tax Guides</div>
+            <a href="/blog">All Blog Articles →</a>
+            <a href="/paycheck-taxes">Texas Paycheck Taxes</a>
+            <a href="/how-much-tax-is-taken-from-my-paycheck">Tax Taken From My Paycheck</a>
+            <div className="nav-panel-divider" />
             <a href="/methodology">How It Works</a>
             <a href="/about">About</a>
           </div>
@@ -87,6 +91,15 @@ export function SiteFooter() {
           {states.map((s) => (
             <a key={s.abbr} href={`/${s.slug}`}>{s.name}</a>
           ))}
+        </div>
+      </div>
+      <div className="footer-blog">
+        <p className="footer-blog-title">From the Blog</p>
+        <div className="footer-blog-grid">
+          <a href="/paycheck-taxes">How Much Taxes Deducted From Paycheck Texas</a>
+          <a href="/how-much-tax-is-taken-from-my-paycheck">How Much Tax Is Taken From My Paycheck</a>
+          <a href="/methodology">How We Calculate Paycheck Taxes</a>
+          <a href="/blog">All blog articles →</a>
         </div>
       </div>
       <div className="partner-zone">
@@ -152,7 +165,7 @@ export function SiteFooter() {
         </a>
       </div>
       <p className="disclaimer">
-        <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
+        <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
       </p>
     </footer>
   );
