@@ -10,7 +10,7 @@ import type { HourlyData } from "../../lib/seo/types";
 import hourlyRaw from "../../data/hourly-rates.json";
 import { calculatePaycheck } from "../../lib/payroll";
 import { locations } from "../../lib/locations";
-import { occupationsNearHourly, occupationsSummary, basisLabel, wageFor, hourlyPositionText, overtimeExample, hourlyBucketFaqs, formatEmployment, OES } from "../../lib/seo/uniqueContent";
+import { occupationsNearHourly, occupationsSummary, basisLabel, wageFor, hourlyPositionText, overtimeExample, hourlyBucketFaqs, formatEmployment, afterTaxHourly, OES } from "../../lib/seo/uniqueContent";
 
 const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }];
 const LAST_MODIFIED = "2026-08-07";
@@ -62,6 +62,7 @@ export default async function HourlyCalculatorPage(
   const relatedLinks = hourlyPageLinks(h);
   const breadcrumbSchema = hourlyBreadcrumb(h.label, h.slug);
 
+  const at = afterTaxHourly(h.rate);
   const weeklyGross = h.rate * 40;
   const biweeklyGross = h.rate * 80;
   const monthlyGross = Math.round(h.annualAt40h / 12);
@@ -200,6 +201,91 @@ export default async function HourlyCalculatorPage(
             table below shows {dollar} an hour after tax in every supported state.
             {lower && (<> Earning a little less? <a href={`/hourly/${lower.slug}`}>${lower.rate} an hour is how much a year</a> — {fmt.format((h.rate - lower.rate) * 2080)} less than {dollar}.</>)}
             {higher && (<> Expecting a raise? <a href={`/hourly/${higher.slug}`}>${higher.rate} an hour is how much a year</a> — {fmt.format((higher.rate - h.rate) * 2080)} more, or {fmt.format((higher.rate - h.rate) * 80)} per biweekly check.</>)}
+          </p>
+        </section>
+      </article>
+
+      {/* After-tax breakdown */}
+      <article className="long-seo">
+        <p className="kicker">AFTER-TAX PAY</p>
+        <h2>{dollar} an Hour Is How Much a Year After Taxes?</h2>
+        <section>
+          <p>
+            <strong>{dollar} an hour is about {fmt.format(at.typical.year)} a year after taxes.</strong>{" "}
+            On {fmt.format(at.gross)} of gross pay at 40 hours a week, a single filer with a standard W-4
+            keeps roughly <strong>{at.keepPct}%</strong> once federal income tax, Social Security (6.2%) and
+            Medicare (1.45%) come out, with state withholding on top. Here is the same pay on every
+            schedule, before and after tax:
+          </p>
+          <div style={{ overflowX: "auto", marginTop: 16 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
+              <thead>
+                <tr style={{ borderBottom: "2px solid #e0e7ef" }}>
+                  <th style={{ textAlign: "left", padding: "8px 10px", fontWeight: 600 }}>Pay period</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Gross</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>After taxes (typical state)</th>
+                  <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>After taxes (no income tax)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { label: "Year (2,080 hrs)", g: at.grossSplit.year, t: at.typical.year, n: at.noTax.year },
+                  { label: "Month", g: at.grossSplit.month, t: at.typical.month, n: at.noTax.month },
+                  { label: "Biweekly (80 hrs)", g: at.grossSplit.biweekly, t: at.typical.biweekly, n: at.noTax.biweekly },
+                  { label: "Week (40 hrs)", g: at.grossSplit.week, t: at.typical.week, n: at.noTax.week },
+                  { label: "Day (8 hrs)", g: at.grossSplit.day, t: at.typical.day, n: at.noTax.day },
+                ].map((row, i) => (
+                  <tr key={row.label} style={{ borderBottom: "1px solid #e0e7ef", background: i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)" }}>
+                    <td style={{ padding: "8px 10px", fontWeight: 500 }}>{row.label}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(row.g)}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>{fmt.format(row.t)}</td>
+                    <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(row.n)}</td>
+                  </tr>
+                ))}
+                <tr style={{ borderTop: "2px solid #e0e7ef" }}>
+                  <td style={{ padding: "8px 10px", fontWeight: 500 }}>Effective hourly</td>
+                  <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>${at.grossSplit.hour.toFixed(2)}</td>
+                  <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>${at.typical.hour.toFixed(2)}</td>
+                  <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>${at.noTax.hour.toFixed(2)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 13, marginTop: 12 }}>
+            &ldquo;Typical state&rdquo; is the median of the {at.stateCount} states on this page ({at.medianState});
+            the no-income-tax column uses {at.noTaxState}. Single filer, standard W-4, biweekly pay, no
+            pre-tax deductions.
+          </p>
+        </section>
+
+        <section>
+          <h3>{dollar} an hour is how much a month after taxes?</h3>
+          <p>
+            About <strong>{fmt.format(at.typical.month)} a month</strong> after taxes, against{" "}
+            {fmt.format(at.grossSplit.month)} a month gross. In a state with no income tax it is closer to{" "}
+            {fmt.format(at.noTax.month)}. A monthly figure is not the same as two biweekly paychecks: you get
+            26 checks a year, so two months carry three paychecks instead of two.
+          </p>
+        </section>
+
+        <section>
+          <h3>{dollar} an hour is how much a week after taxes?</h3>
+          <p>
+            At 40 hours a week your gross is {fmt.format(at.grossSplit.week)} and your take-home is about{" "}
+            <strong>{fmt.format(at.typical.week)}</strong> — an effective ${at.typical.hour.toFixed(2)} an
+            hour after tax, versus the {dollar} on your offer letter. Over a day that is{" "}
+            {fmt.format(at.typical.day)} net on {fmt.format(at.grossSplit.day)} gross.
+          </p>
+        </section>
+
+        <section>
+          <h3>What is {dollar} an hour biweekly after taxes?</h3>
+          <p>
+            Eighty hours at {dollar} an hour is {fmt.format(at.grossSplit.biweekly)} gross per biweekly
+            paycheck and about <strong>{fmt.format(at.typical.biweekly)} after taxes</strong> —{" "}
+            {fmt.format(at.noTax.biweekly)} if your state withholds no income tax. Across the year the best
+            and worst states on this page differ by {fmt.format(at.spread)}, or about{" "}
+            {fmt.format(Math.round(at.spread / 26))} per paycheck.
           </p>
         </section>
       </article>

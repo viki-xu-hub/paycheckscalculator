@@ -1,5 +1,6 @@
 import occupationsRaw from "../../data/occupations.json";
-import { calculatePaycheck } from "../payroll";
+import { calculatePaycheck, type SupportedState } from "../payroll";
+import { locations } from "../locations";
 
 /**
  * Per-page content for the programmatic /hourly/N and /salary/N pages.
@@ -193,6 +194,72 @@ function salaryPositionBase(amount: number): { heading: string; body: string } {
     body: `${label} a year is ${vsMedian.toFixed(1)}× the national median salary of ${money0.format(OES.medianAnnual)} and far above the 75th percentile of ${money0.format(OES.p75Annual)} (BLS ${OES.release}). Incomes like this are typical of physicians, attorneys, executives and senior technology roles. Two things change at this level: wages above $184,500 stop paying the 6.2% Social Security tax in 2026, and wages above $200,000 (single) pick up the 0.9% Additional Medicare Tax — both are reflected in the state table below.`,
   };
 }
+
+/**
+ * After-tax figures for an hourly rate, run through the real withholding engine
+ * for every supported state.
+ *
+ * The page's primary query is "$N an hour is how much a year after taxes", so we
+ * need one headline net number plus the month / biweekly / week splits. We use the
+ * median state as the headline (a defensible "typical" figure) and carry the
+ * no-tax high end and the worst state so the copy can show the spread.
+ */
+export function afterTaxHourly(rate: number) {
+  const gross = rate * 2080;
+  const rows = locations
+    .map(loc => ({
+      name: loc.name,
+      slug: loc.slug,
+      abbr: loc.short,
+      noTax: loc.noTax ?? false,
+      net: calculatePaycheck({ grossAnnual: gross, frequency: "biweekly", status: "single", state: loc.short as SupportedState }).netAnnual,
+    }))
+    .sort((a, b) => b.net - a.net);
+
+  const best = rows[0];
+  const worst = rows[rows.length - 1];
+  const median = rows[Math.floor(rows.length / 2)];
+  const texas = rows.find(r => r.abbr === "TX") ?? best;
+
+  const split = (net: number) => ({
+    year: Math.round(net),
+    month: Math.round(net / 12),
+    biweekly: Math.round(net / 26),
+    week: Math.round(net / 52),
+    day: Math.round(net / 260),
+    hour: Math.round((net / 2080) * 100) / 100,
+  });
+
+  const typical = split(median.net);
+  const noTax = split(texas.net);
+  const keepPct = Math.round((median.net / gross) * 1000) / 10;
+
+  return {
+    gross,
+    grossSplit: {
+      year: gross,
+      month: Math.round(gross / 12),
+      biweekly: rate * 80,
+      week: rate * 40,
+      day: rate * 8,
+      hour: rate,
+    },
+    typical,
+    noTax,
+    keepPct,
+    taxedAwayPct: Math.round((100 - keepPct) * 10) / 10,
+    medianState: median.name,
+    noTaxState: texas.name,
+    bestState: best.name,
+    bestNet: Math.round(best.net),
+    worstState: worst.name,
+    worstNet: Math.round(worst.net),
+    spread: Math.round(best.net - worst.net),
+    stateCount: rows.length,
+  };
+}
+
+export type AfterTaxHourly = ReturnType<typeof afterTaxHourly>;
 
 /** Overtime worked example for an hourly rate, run through the Texas (no state tax) engine so the tax effect is real. */
 export function overtimeExample(rate: number) {
