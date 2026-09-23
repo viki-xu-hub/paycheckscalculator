@@ -208,3 +208,24 @@ test("applies Virginia E2 exemptions and Wisconsin WT-4 adjustments", () => {
   const wisconsinAdjusted = stateWithholding2026("WI", 60000, "single", 1, { payPeriods: 26, additionalStatePerPaycheck: 10, reducedStatePerPaycheck: 3 });
   assert.equal(wisconsinAdjusted.incomeTax, wisconsinBase.incomeTax + 182);
 });
+
+test("withholds the Alaska employee unemployment contribution up to the 2026 wage base", () => {
+  // Alaska DOLWD Employment Security Tax: 0.50% of wages, $54,200 base for 2026,
+  // so the employee contribution tops out at $271.00 for the year.
+  const belowBase = stateWithholding2026("AK", 30000, "single", 0, { payPeriods: 26 });
+  assert.equal(belowBase.incomeTax, 0);
+  assert.equal(belowBase.payrollPremiums, 150);
+
+  const atBase = stateWithholding2026("AK", 54200, "single", 0, { payPeriods: 26 });
+  assert.equal(atBase.payrollPremiums, 271);
+
+  const aboveBase = stateWithholding2026("AK", 200000, "single", 0, { payPeriods: 26 });
+  assert.equal(aboveBase.payrollPremiums, 271);
+
+  // The other no-wage-tax states in the same branch keep a clean $0 state line.
+  for (const state of ["SD", "WY", "NH"] as const) {
+    const r = stateWithholding2026(state, 200000, "single", 0, { payPeriods: 26 });
+    assert.equal(r.incomeTax, 0);
+    assert.equal(r.payrollPremiums, 0);
+  }
+});

@@ -5,6 +5,7 @@ import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 import type { SupportedState } from "../../lib/payroll";
 import { calculatePaycheck } from "../../lib/payroll";
 import { locations, locationBySlug } from "../../lib/locations";
+import biweeklyEditorial from "../../data/biweekly-editorial.json";
 
 const SITE = "https://www.paycheckscalculator.org";
 const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }];
@@ -13,6 +14,17 @@ const LAST_MODIFIED = "2026-08-07";
 const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 const SALARY_BRACKETS = [30000, 40000, 50000, 60000, 75000, 100000, 125000, 150000, 200000];
+
+// Per-state copy in app/data/biweekly-editorial.json, keyed by location slug.
+// Each entry says something true of that state and of no other; without it the
+// eight no-wage-tax pages render byte-identical salary tables (federal + FICA
+// only) and read as one template with the name swapped. States with no entry
+// simply render nothing extra, so this fills in state by state.
+type EditorialSection = { h2: string; p: string[] };
+const editorialBySlug = biweeklyEditorial as Record<string, { sections: EditorialSection[] } | undefined>;
+function editorialFor(slug: string): EditorialSection[] {
+  return editorialBySlug[slug]?.sections ?? [];
+}
 
 export function generateStaticParams() {
   return locations.map(loc => ({ state: loc.slug }));
@@ -27,8 +39,8 @@ export async function generateMetadata(
   const canonical = `${SITE}/biweekly/${loc.slug}`;
   const taxPhrase = loc.noTax ? "no state income tax" : `${loc.name} state income tax`;
   return {
-    title: `${loc.name} Biweekly Paycheck Calculator 2026 — Take-Home Pay After Taxes`,
-    description: `Calculate your ${loc.name} biweekly paycheck for 2026. See exact take-home pay at 9 salary levels after federal income tax, FICA, and ${taxPhrase}.`,
+    title: `${loc.name} Biweekly Paycheck Calculator 2026 – Net Pay`,
+    description: `${loc.name} biweekly paycheck calculator for 2026: see take-home pay at 9 salary levels after federal income tax, FICA, and ${taxPhrase}.`,
     alternates: { canonical },
     robots: { index: true, follow: true },
     openGraph: {
@@ -52,6 +64,7 @@ export default async function BiweeklyStateCalculatorPage(
 
   const canonical = `${SITE}/biweekly/${loc.slug}`;
   const noTax = loc.noTax === true;
+  const stateSections = editorialFor(loc.slug);
 
   // Pre-calculate biweekly net pay at each salary bracket for this state
   const bracketResults = SALARY_BRACKETS.map(salary => {
@@ -72,6 +85,11 @@ export default async function BiweeklyStateCalculatorPage(
       effectiveRate: Math.round((1 - r.netAnnual / salary) * 1000) / 10,
     };
   });
+
+  // Show the state column whenever the state actually withholds something. Keying it
+  // off `noTax` hid WA's Paid Leave/WA Cares premiums (and now AK's employee UI), so
+  // gross minus the visible columns did not equal the net shown.
+  const hasStateDeduction = bracketResults.some(r => r.stateTax > 0);
 
   const faqs = buildFaqs(loc.name, loc.short, noTax, bracketResults);
 
@@ -130,15 +148,16 @@ export default async function BiweeklyStateCalculatorPage(
         <h1>{loc.name} Biweekly Paycheck Calculator 2026</h1>
         <div className="hero-intro">
           <p>
-            How much is your biweekly paycheck in {loc.name}? Use our free calculator to
-            estimate your 2026 take-home pay after federal income tax, Social Security,
-            Medicare, and {noTax ? "payroll deductions" : `${loc.name} state income tax`}.
+            How much is your biweekly paycheck in {loc.name}? This free {loc.name} biweekly
+            paycheck calculator estimates your 2026 take-home pay after federal income tax,
+            Social Security, Medicare, and {noTax ? "payroll deductions" : `${loc.name} state income tax`}.
           </p>
       </div>
         <PaycheckCalculator defaultState={loc.short as SupportedState} defaultFrequency="biweekly" navigateOnStateChange />
         <div className="hero-more">
           <p>
-            A biweekly pay schedule means 26 paychecks per year.{" "}
+            A biweekly pay schedule means 26 paychecks per year, and this {loc.name} biweekly
+            paycheck calculator splits your annual salary across all 26 of them.{" "}
             {noTax
               ? `${loc.name} has no state income tax on wages, so your biweekly deductions are limited to federal taxes and benefit elections.`
               : `${loc.name} withholds state income tax from each biweekly paycheck in addition to federal taxes.`}
@@ -168,7 +187,7 @@ export default async function BiweeklyStateCalculatorPage(
                   <th style={{ textAlign: "left", padding: "8px 10px", fontWeight: 600 }}>Annual Salary</th>
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Gross/Biweekly</th>
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Federal Tax</th>
-                  {!noTax && <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>State Tax</th>}
+                  {hasStateDeduction && <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>{noTax ? "State Payroll" : "State Tax"}</th>}
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>FICA</th>
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600, color: "#16a34a" }}>Net/Biweekly</th>
                   <th style={{ textAlign: "right", padding: "8px 10px", fontWeight: 600 }}>Eff. Rate</th>
@@ -180,7 +199,7 @@ export default async function BiweeklyStateCalculatorPage(
                     <td style={{ padding: "8px 10px", fontWeight: 500 }}>{fmt.format(row.salary)}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(row.grossBiweekly)}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", color: "#667a8a" }}>{fmt.format(Math.round(row.federal / 26))}</td>
-                    {!noTax && <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", color: "#667a8a" }}>{fmt.format(Math.round(row.stateTax / 26))}</td>}
+                    {hasStateDeduction && <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", color: "#667a8a" }}>{fmt.format(Math.round(row.stateTax / 26))}</td>}
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", color: "#667a8a" }}>{fmt.format(Math.round(row.fica / 26))}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", fontWeight: 700, color: "#16a34a" }}>{fmt.format(row.netBiweekly)}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{row.effectiveRate}%</td>
@@ -263,10 +282,23 @@ export default async function BiweeklyStateCalculatorPage(
         </section>
       </article>
 
+      {/* State-specific editorial — only rendered for states that have it */}
+      {stateSections.map((sec, i) => (
+        <article className="long-seo" key={sec.h2}>
+          {i === 0 && <p className="kicker">{loc.short} PAYCHECK CONTEXT</p>}
+          <h2>{sec.h2}</h2>
+          <section>
+            {sec.p.map((para, j) => (
+              <p key={j} style={j > 0 ? { marginTop: 16 } : undefined}>{para}</p>
+            ))}
+          </section>
+        </article>
+      ))}
+
       {/* Methodology */}
       <article className="long-seo methodology-section">
         <p className="kicker">CALCULATION METHOD</p>
-        <h2>How We Calculate Your {loc.name} Biweekly Paycheck</h2>
+        <h2>How This {loc.name} Biweekly Paycheck Calculator Works</h2>
         <section>
           <p><strong>1.</strong> Annualize wages: Gross biweekly pay × 26 pay periods.</p>
           <p><strong>2.</strong> Apply pre-tax deductions to reduce taxable income.</p>

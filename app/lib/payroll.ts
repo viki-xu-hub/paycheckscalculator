@@ -485,7 +485,15 @@ export function stateWithholding2026(state: SupportedState, wages: number, statu
     const njStatus = status === "married" ? "married" : "single";
     return { incomeTax: progressiveTax(Math.max(0, safeWages - 1000 * safeAllowances), newJerseyRows[njStatus]), payrollPremiums: 0, label: "NJ graduated rate schedule estimate" };
   }
-  if (state === "AK" || state === "SD" || state === "WY" || state === "NH") return { incomeTax: 0, payrollPremiums: 0, label: "No individual state income tax on wages" };
+  if (state === "AK") {
+    // Alaska is one of the few states where the employee funds part of unemployment
+    // insurance: 0.50% of wages up to the annual taxable wage base, $54,200 for 2026
+    // (employee total $271.00). Source: Alaska DOLWD Employment Security Tax FAQ,
+    // https://labor.alaska.gov/estax/faq/w1.htm — retrieved 2026-09-23.
+    const employeeUI = Math.min(payrollWages, 54200) * .005;
+    return { incomeTax: 0, payrollPremiums: employeeUI, label: "Alaska employee unemployment insurance (0.5% up to $54,200)" };
+  }
+  if (state === "SD" || state === "WY" || state === "NH") return { incomeTax: 0, payrollPremiums: 0, label: "No individual state income tax on wages" };
   if (state === "ME") {
     // Maine Revenue Services, Withholding Tables for Individual Income Tax 2026 (26_wh_tab_instr), Percentage Method steps 1-6
     const married = status === "married";

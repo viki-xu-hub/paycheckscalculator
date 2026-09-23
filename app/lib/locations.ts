@@ -41,7 +41,7 @@ export const locations: LocationInfo[] = [
   {slug:"wisconsin-paycheck-calculator",name:"Wisconsin",short:"WI",rate:5.3,aliases:["wisconsin paycheck calculator"]},
   {slug:"alaska-paycheck-calculator",name:"Alaska",short:"AK",rate:0,noTax:true,aliases:["alaska paycheck calculator"]},
   {slug:"delaware-paycheck-calculator",name:"Delaware",short:"DE",rate:5.55,aliases:["delaware paycheck calculator"]},
-  {slug:"washington-dc-paycheck-calculator",name:"Washington DC",seoName:"DC",short:"DC",rate:6.5,aliases:["dc paycheck calculator", "washington dc paycheck calculator"]},
+  {slug:"washington-dc-paycheck-calculator",name:"Washington DC",short:"DC",rate:6.5,aliases:["washington dc paycheck calculator", "dc paycheck calculator"]},
   {slug:"maine-paycheck-calculator",name:"Maine",short:"ME",rate:6.75,aliases:["maine paycheck calculator", "paycheck calculator maine"]},
   {slug:"mississippi-paycheck-calculator",name:"Mississippi",short:"MS",rate:4,aliases:["mississippi paycheck calculator", "ms paycheck calculator", "paycheck calculator mississippi"]},
   {slug:"montana-paycheck-calculator",name:"Montana",short:"MT",rate:4.7,aliases:["montana paycheck calculator"]},

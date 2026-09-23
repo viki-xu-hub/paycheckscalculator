@@ -1,0 +1,1302 @@
+{
+  "alaska-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Alaska is the rare no-income-tax state where employees still fund unemployment",
+        "p": [
+          "Every state funds unemployment insurance through a payroll tax, and in almost all of them the employer pays the whole bill. Alaska is one of the few exceptions: Alaska law splits the contribution, and the employee share is withheld from wages up to the state's annual taxable wage base. It is a small line, but it is a real state-level deduction on an Alaska stub — something a worker in Florida, Texas or Wyoming will never see.",
+          "The table above includes it. Alaska's employee rate is 0.50% of wages up to the annual taxable wage base — $54,200 for 2026, which caps the employee contribution at $271.00 for the year — so the State Payroll column shows roughly $10 per biweekly paycheck until you cross the base, and $0 after that. Source: Alaska Department of Labor and Workforce Development, Employment Security Tax. It is the reason an Alaska net deposit lands slightly below the otherwise identical figure for Texas, Florida or Wyoming."
+        ]
+      },
+      {
+        "h2": "The Permanent Fund Dividend is annual, so it never touches a biweekly paycheck",
+        "p": [
+          "Alaska pays eligible residents a Permanent Fund Dividend once a year out of the state's oil royalty fund. It is the reason Alaska can run without an individual income tax or a statewide sales tax, and it is also the single most misunderstood item in Alaska pay planning. The dividend is not payroll. It does not arrive through your employer, it is not spread across 26 pay periods, and no part of it is reflected in the biweekly figures above.",
+          "It does, however, count as federally taxable income in the year you receive it. A PFD can push your total federal income for the year past the point your W-4 assumed, which shows up as a smaller refund or a balance due rather than as a change to any individual paycheck. If you want the tax collected evenly instead of in one lump at filing, the fix is extra federal withholding on Line 4(c) of your W-4, not a change to a state line that does not exist."
+        ]
+      },
+      {
+        "h2": "No state line, but local sales tax still shapes what an Alaska paycheck buys",
+        "p": [
+          "Alaska has no statewide sales tax, but boroughs and municipalities levy their own, and the rates vary widely from one community to the next. None of this is withheld from pay, so it does not change any number in the table above. It does mean that two Alaskans earning identical gross salaries and taking home identical biweekly deposits can face meaningfully different living costs depending on where in the state they live.",
+          "Because Alaska has no land border with another state, the cross-border withholding problem that complicates paychecks in places like New Hampshire or Nevada essentially does not arise here. If you live and work in Alaska, the state column of your stub should be blank apart from the unemployment contribution."
+        ]
+      }
+    ]
+  },
+  "florida-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Florida's ban on an income tax is written into the state constitution",
+        "p": [
+          "Florida does not simply decline to tax wages — Article VII of the Florida Constitution prohibits a personal income tax outright. Changing that would require a constitutional amendment approved by voters, not an ordinary act of the legislature. For anyone reading a Florida pay stub, the practical meaning is that the empty state-tax line is structurally durable rather than a policy that might be revisited in the next budget cycle.",
+          "The state funds itself instead through sales tax and tourism-driven revenue, both collected at the point of purchase rather than at the point of payroll. That is why the biweekly figures above move only with federal income tax and FICA."
+        ]
+      },
+      {
+        "h2": "Florida's minimum wage rises on a schedule, which matters for hourly biweekly pay",
+        "p": [
+          "Florida voters approved a constitutional amendment in 2020 that raises the state minimum wage in annual steps toward $15 an hour, with inflation indexing after that. Florida is therefore unlike Texas, Wyoming or New Hampshire, where the floor simply tracks the federal rate and has not moved in years.",
+          "If you are paid hourly in Florida, a scheduled increase changes your gross biweekly pay on the effective date without any action from you or your employer. Run the numbers again after each step, because a higher gross also moves your federal withholding bracket and your FICA contribution — the net gain from a raise is never the full amount of the raise."
+        ]
+      },
+      {
+        "h2": "Reemployment tax is an employer cost, not a deduction from your pay",
+        "p": [
+          "Florida's unemployment system is called reemployment assistance, and the tax that funds it is paid entirely by employers. Nothing is withheld from employee wages for it. This trips people up when they compare a Florida stub with an Alaska one, where employees do contribute.",
+          "So on a Florida biweekly paycheck, the only mandatory deductions are federal income tax, Social Security and Medicare. Anything else on the stub — health premiums, retirement contributions, garnishments — comes from your own elections or a court order, not from Florida."
+        ]
+      }
+    ]
+  },
+  "nevada-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Nevada taxes gaming and spending instead of wages",
+        "p": [
+          "Nevada's constitution bars a personal income tax, and the state has built its revenue base around gaming taxes and sales tax instead. That structure is unusually dependent on visitor spending, which is why Nevada budget debates tend to be about tourism volumes rather than about payroll. None of it reaches your paycheck: the biweekly numbers above reflect federal income tax and FICA only.",
+          "Nevada does levy a Modified Business Tax, and it is assessed on payroll — but it is an employer-side tax on total wages paid, not a withholding from employee pay. It never appears as a deduction on your stub."
+        ]
+      },
+      {
+        "h2": "The California problem is the biggest issue on a Nevada paycheck",
+        "p": [
+          "Nevada borders California, and a large number of Nevada residents earn income sourced to California. California taxes non-residents on income earned from work physically performed in California, so a Nevada resident who commutes to a California worksite, or who spends scheduled days there, can owe California income tax on that portion of their wages even though Nevada takes nothing.",
+          "If that describes you, the calculator above understates your total tax burden, because it models a purely Nevada-sourced paycheck. Employers who know the arrangement will often withhold California tax on the California-sourced share, which means your actual biweekly deposit comes in below the figure shown here. This is the single most common reason a Nevada stub does not match a Nevada estimate."
+        ]
+      },
+      {
+        "h2": "Tipped income is common in Nevada and changes the biweekly math",
+        "p": [
+          "Nevada's employment base is weighted toward hospitality and gaming, where a large share of earnings arrives as tips rather than as base wage. Reported tips are subject to federal income tax and FICA just like regular wages, and your employer withholds on them — but tips are often paid out to you directly and in cash, while the tax on them is collected from your regular wages.",
+          "The result is a biweekly deposit that can look surprisingly small relative to your base salary. If you enter only base pay in the calculator above, the net figure will be too high for a tipped role. Nevada also requires employers to pay the full state minimum wage regardless of tips — there is no separate lower tipped minimum the way there is under federal law."
+        ]
+      }
+    ]
+  },
+  "nh-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "New Hampshire finished repealing its last income tax in 2025",
+        "p": [
+          "New Hampshire has never taxed wages, but until recently it was not a true no-income-tax state: it levied an Interest and Dividends tax on investment income. That tax was phased down over several years and repealed effective 2025. As of that point New Hampshire taxes neither earned income nor investment income at the state level.",
+          "For a paycheck this changes nothing — wages were always exempt — but it does mean older guidance describing New Hampshire as a partial income-tax state is now out of date. The biweekly figures above show federal income tax and FICA, and that is the complete picture for a New Hampshire resident working in New Hampshire."
+        ]
+      },
+      {
+        "h2": "Working in Massachusetts undoes the whole benefit",
+        "p": [
+          "New Hampshire's border with Massachusetts is the most consequential fact about New Hampshire paychecks. Massachusetts taxes income earned from work performed within Massachusetts regardless of where the worker lives, and a very large share of southern New Hampshire commutes south. If you work at a Massachusetts location, Massachusetts income tax is withheld from your pay and New Hampshire offers no credit, because New Hampshire has no income tax against which a credit could be applied.",
+          "That makes the calculator above wrong for a substantial number of New Hampshire residents. If your worksite is in Massachusetts, model your withholding with the Massachusetts calculator instead and treat the New Hampshire result as your ceiling rather than your estimate. Where you sit on scheduled days is what matters, not where your employer is headquartered."
+        ]
+      },
+      {
+        "h2": "No sales tax either, so the cost lands on property",
+        "p": [
+          "New Hampshire has no state sales tax and no wage tax, which leaves local property tax carrying an unusually large share of public funding. Property tax rates vary sharply between towns, and for homeowners the annual bill can easily exceed what an income tax would have cost at the same salary.",
+          "None of this is withheld from pay, so it does not change any number above. It does mean that comparing a New Hampshire biweekly net against, say, a Vermont one tells you very little about which leaves you better off — you have to put the property bill next to it."
+        ]
+      }
+    ]
+  },
+  "south-dakota-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "South Dakota taxes neither individuals nor corporations",
+        "p": [
+          "South Dakota is one of a small group of states with no individual income tax and no corporate income tax. The state funds itself primarily through sales and use tax. For payroll this is about as simple as American withholding gets: the state column of a South Dakota stub is blank, and the biweekly numbers above are driven entirely by federal income tax, Social Security and Medicare.",
+          "The absence of a corporate income tax is part of why South Dakota hosts a concentration of financial-services and credit-card operations relative to its population. If you work in that sector, your employer's state tax position may be unusual even though your own is straightforward."
+        ]
+      },
+      {
+        "h2": "South Dakota indexes its minimum wage, unlike most of its no-tax peers",
+        "p": [
+          "South Dakota voters put an inflation-indexed minimum wage into state law, so the floor rises automatically rather than waiting on legislative action. That puts South Dakota alongside Florida, Alaska and Nevada, and apart from Texas, Wyoming, Tennessee and New Hampshire, where the minimum has stayed at the federal rate.",
+          "For hourly workers, an indexed increase raises gross biweekly pay on its effective date. Re-run the estimate after each adjustment: a higher gross pushes more of your income through federal withholding, so the increase in net pay is always smaller than the increase in the hourly rate."
+        ]
+      },
+      {
+        "h2": "Three neighbours tax income, so where you physically work matters",
+        "p": [
+          "South Dakota borders Minnesota, Iowa and Nebraska, all of which levy individual income tax on income earned within their borders. A South Dakota resident who works across one of those lines — at a Sioux City or Worthington worksite, on a regular assignment, or on scheduled in-office days — can have that state's tax withheld from the relevant portion of wages.",
+          "South Dakota cannot give you a credit for it, because South Dakota has no income tax to credit against. If part of your work happens in a taxing state, the net figure above is too high for you, and the deciding factor is where you are physically working, not where your employer is based."
+        ]
+      }
+    ]
+  },
+  "tennessee-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "The Hall tax is gone, and it has been gone since 2021",
+        "p": [
+          "Tennessee never taxed wages, but for decades it taxed interest and dividend income through the Hall income tax. That tax was phased out over several years and fully repealed for tax years beginning on or after January 1, 2021. Tennessee now levies no individual income tax of any kind.",
+          "Older articles that describe Tennessee as taxing investment income are describing a repealed statute. For payroll purposes the distinction never mattered — the Hall tax was never withheld from wages — but it does mean the state column on a Tennessee stub is now blank for every kind of income, not just earned income."
+        ]
+      },
+      {
+        "h2": "Tennessee collects it back at the register instead",
+        "p": [
+          "Tennessee funds itself largely through sales tax, and its combined state and local rate sits among the highest in the country. Groceries are taxed, which is unusual and which falls hardest on lower earners as a share of income.",
+          "None of that is withheld, so it does not appear anywhere in the biweekly figures above. It does mean that comparing Tennessee take-home pay against a state with an income tax but a lower sales tax is not a like-for-like comparison — the tax is collected from the same paycheck, just later and at a different counter."
+        ]
+      },
+      {
+        "h2": "Tennessee borders eight states, most of which tax income",
+        "p": [
+          "Tennessee shares a border with eight states — Kentucky, Virginia, North Carolina, Georgia, Alabama, Mississippi, Arkansas and Missouri — and most of them levy an individual income tax. That gives Tennessee residents more opportunities than almost anyone else in the country to earn income sourced to a taxing state.",
+          "If you live in Tennessee but physically work in one of those states, that state generally taxes the wages earned there, and Tennessee has no income tax against which you could claim a credit. The calculator above models a purely Tennessee-sourced paycheck, so a multi-state work pattern will produce a smaller actual deposit than the net shown here. Tennessee also has no state minimum wage law of its own, so the federal floor applies."
+        ]
+      }
+    ]
+  },
+  "texas-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Texas voters locked the income tax ban into the constitution in 2019",
+        "p": [
+          "Texas had long gone without an individual income tax, but Proposition 4, approved by voters in 2019, amended the Texas Constitution to prohibit one. Reversing it now would take another constitutional amendment approved at the ballot box, not a legislative vote. The empty state line on a Texas stub is therefore about as structurally secure as any tax position in the country.",
+          "The biweekly figures above accordingly move only with federal income tax and FICA. Texas has no local income taxes either, so a Houston paycheck and an Amarillo paycheck at the same salary produce the same deposit."
+        ]
+      },
+      {
+        "h2": "Property tax is where Texas gets the money back",
+        "p": [
+          "Texas funds schools and local government largely through property tax, and effective rates are among the highest in the United States. For a homeowner, the annual bill can rival what a mid-rate state income tax would have taken at the same salary — the difference is that it is not withheld, so it never shows up on your stub and never reduces the net figure above.",
+          "This is the correct way to compare a Texas offer against one in a state with an income tax: put the property bill next to the withholding difference rather than treating the larger Texas deposit as pure gain. Renters see the same cost indirectly through rent."
+        ]
+      },
+      {
+        "h2": "Texas sets no minimum wage of its own and pays most workers semi-monthly by default",
+        "p": [
+          "Texas has not adopted a state minimum wage above the federal floor, and it has no state-level overtime rules beyond what federal law requires. For hourly workers that means the federal rate governs your gross biweekly pay.",
+          "Texas payday law also sets a minimum pay frequency rather than mandating biweekly pay, and the statutory default for employees not exempt from overtime is at least twice a month. Biweekly and semi-monthly are not the same schedule: biweekly gives you 26 paychecks a year, semi-monthly gives you 24. If your employer pays semi-monthly, the numbers above are the wrong shape for your stub — the annual total is the same, but each individual deposit is larger and two of your months each year will not include a third paycheck."
+        ]
+      }
+    ]
+  },
+  "wyoming-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Wyoming runs on mineral severance revenue, not payroll",
+        "p": [
+          "Wyoming has no individual income tax and no corporate income tax. It funds state government largely through severance taxes and royalties on coal, oil, natural gas and trona extracted within the state. That is an unusual revenue base, and it means Wyoming's fiscal position tracks commodity prices far more closely than it tracks employment.",
+          "For your paycheck the effect is simple: the state column is blank, and the biweekly figures above reflect federal income tax, Social Security and Medicare only. Wyoming has no local income taxes either."
+        ]
+      },
+      {
+        "h2": "Wyoming's workers' compensation system is state-run and monopolistic",
+        "p": [
+          "Wyoming is one of a handful of states that runs workers' compensation as a state monopoly — employers must buy coverage from the state fund rather than from a private carrier. The premium is an employer cost and is not deducted from employee wages, so it does not change any number above.",
+          "It is worth knowing about when you read a Wyoming offer, though, because it is a real cost of employment that shapes how employers in extraction and construction price roles, and because injury claims run through a state agency rather than an insurer."
+        ]
+      },
+      {
+        "h2": "Five of Wyoming's six neighbours tax income",
+        "p": [
+          "Wyoming borders Montana, South Dakota, Nebraska, Colorado, Utah and Idaho. Of those, Colorado, Utah, Idaho, Montana and Nebraska all levy an individual income tax on income earned within their borders; only South Dakota does not.",
+          "Wyoming residents working a rotation, a seasonal assignment or a regular commute across one of those lines can have that state's tax withheld on the wages earned there, with no Wyoming credit available to offset it. The calculator above assumes every dollar is Wyoming-sourced. If part of your work is physically performed elsewhere, your real biweekly deposit will be smaller than the net shown here, and the test is where you are standing when you do the work."
+        ]
+      }
+    ]
+  },
+  "alabama-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Alabama's occupational tax rides on every biweekly check, and the state never sees it",
+        "p": [
+          "Several Alabama cities levy an occupational tax on wages earned inside city limits — Birmingham, Gadsden, Auburn and others. It is withheld by your employer alongside state income tax, it comes out of all 26 biweekly paychecks, and it goes to the city rather than to the Alabama Department of Revenue. The calculator above treats it as a rate you enter, because there is no statewide figure that would be right for everyone.",
+          "The trap is that the tax follows the worksite, not your home address. If you live outside the city and commute in, you still pay it on the wages earned there; if you live in the city and work elsewhere, you may not. On a biweekly schedule this shows up as a small constant deduction that never stops and never trues up at filing, because an occupational tax has no annual return."
+        ]
+      },
+      {
+        "h2": "Alabama's federal income tax deduction makes each biweekly check move with your federal withholding",
+        "p": [
+          "Alabama is one of a small number of states that lets you deduct federal income tax paid when computing state taxable income. Because federal withholding is itself recalculated every pay period, the state figure on an Alabama stub is downstream of the federal figure in a way it is not in most states.",
+          "The practical effect on a biweekly schedule: anything that changes your federal withholding — a W-4 update, a bonus in one period, crossing a federal bracket late in the year — also nudges the Alabama line in the opposite direction. A larger federal deduction means a smaller Alabama base. Two Alabama workers with identical gross pay and different W-4 settings will not have identical state lines."
+        ]
+      },
+      {
+        "h2": "Three paychecks in one month does not mean three times the deductions in Alabama",
+        "p": [
+          "Twice a year a biweekly schedule produces three paychecks in one calendar month. Alabama withholding is computed per pay period from annualized wages, so the third check is taxed the same way as the other two — it is not a bonus and it is not withheld at a penalty rate.",
+          "What does change is the fixed-dollar items. Health premiums and flat-amount deductions are usually taken twice a month regardless of the schedule, so the third check often arrives with those lines absent and feels noticeably larger. Any occupational tax, by contrast, is a percentage and comes out of all three."
+        ]
+      }
+    ]
+  },
+  "arizona-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "You pick your own Arizona withholding percentage, so each biweekly deposit is a choice",
+        "p": [
+          "Arizona is the only state that lets the employee choose a flat withholding percentage from a menu on Form A-4 rather than deriving it from allowances or a table. Whatever rate you elect is applied to every biweekly paycheck for the rest of the year. The calculator above uses the elected rate you enter, which is why an Arizona estimate is only as good as the A-4 on file with your employer.",
+          "This is unusually consequential on a 26-period schedule, because a wrong election does not self-correct. A rate set too low quietly accumulates a balance due across all 26 checks; a rate set too high hands Arizona an interest-free loan for the year. Nothing in the payroll system flags either case — Arizona simply applies the percentage you asked for."
+        ]
+      },
+      {
+        "h2": "Changing your A-4 mid-year only affects the paychecks that are left",
+        "p": [
+          "Arizona withholding is not trued up retroactively when you file a new A-4. The new percentage applies from the next payroll run forward, so if you change it in July you have roughly 13 biweekly checks to absorb the correction rather than 26.",
+          "That means a mid-year fix has to overshoot to land in the right place. If you have been under-withholding at the old rate, picking the technically correct percentage for your income will not close the gap — the shortfall from the first half of the year is still there. The A-4 also has a line for an extra flat dollar amount per paycheck, which is usually the cleaner way to catch up."
+        ]
+      },
+      {
+        "h2": "Arizona has reciprocity with California, Indiana, Oregon and Virginia",
+        "p": [
+          "Arizona maintains reciprocal agreements with California, Indiana, Oregon and Virginia. A resident of one of those states working in Arizona can file Arizona Form WEC to stop Arizona withholding and pay only their home state; an Arizona resident working in one of those states can do the equivalent there.",
+          "Without the exemption form, both states withhold and you wait until filing to recover the excess — for a biweekly worker that is 26 undersized deposits before any of it comes back. Arizona has no agreement with Nevada, New Mexico, Utah or Colorado, so a cross-border commute in those directions is handled through credits at filing instead."
+        ]
+      }
+    ]
+  },
+  "arkansas-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Arkansas is a convenience-of-the-employer state, which matters if you work remotely",
+        "p": [
+          "Arkansas applies a convenience-of-the-employer rule: wages earned working remotely for an Arkansas employer can be treated as Arkansas-source income when the remote arrangement is for the employee's convenience rather than the employer's necessity. Most states source wages to where the work is physically done; Arkansas does not always.",
+          "For a remote worker paid biweekly by an Arkansas company from another state, the consequence is Arkansas withholding on all 26 checks even though you never set foot in Arkansas. If your home state also taxes the income, you are withheld twice and recover the difference through a credit at filing. This is worth confirming with payroll before you assume the calculator above does not apply to you."
+        ]
+      },
+      {
+        "h2": "The $50 midpoint means small Arkansas biweekly changes may not move the state line at all",
+        "p": [
+          "The Arkansas withholding method works from the midpoint of a $50 income bracket rather than from your exact wage. The calculator above follows that method. It means two biweekly paychecks that differ by a few dollars of gross can produce exactly the same Arkansas withholding.",
+          "On a biweekly schedule with small period-to-period variation — a few overtime hours, a shift differential — the state line can look oddly static while the federal line moves every period. That is the method working as designed, not a payroll error."
+        ]
+      },
+      {
+        "h2": "AR4EC credits are annual amounts spread across 26 checks",
+        "p": [
+          "Arkansas withholding uses tax credits claimed on Form AR4EC rather than allowances that reduce taxable income. Each credit is an annual dollar amount, and payroll divides it across your pay periods — on a biweekly schedule, by 26.",
+          "That division is why adding a credit reduces each biweekly check's state withholding by a smaller amount than people expect: an annual credit spread over 26 periods is a modest per-check number. It also means a credit added late in the year only reduces the checks that remain, so the annual effect is smaller than the credit's face value."
+        ]
+      }
+    ]
+  },
+  "california-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "California SDI has no wage ceiling, so it never stops mid-year",
+        "p": [
+          "State Disability Insurance is withheld from California wages at 1.3% in the calculator above, and unlike Social Security it applies to every dollar you earn. California removed the SDI taxable wage ceiling, so high earners no longer see the deduction disappear partway through the year.",
+          "On a biweekly schedule this is the cleanest line on the stub: 1.3% of gross, all 26 periods, no cap, no catch-up. It is also why a California paycheck at a high salary sheds proportionally more than a comparable paycheck in a state whose payroll programs stop at a wage base. Compare it with Washington or Massachusetts, where the equivalent premiums cut out once you cross the base."
+        ]
+      },
+      {
+        "h2": "California Method B recomputes from annualized wages every period",
+        "p": [
+          "California's Method B exact-calculation method annualizes your biweekly wage, applies the bracket table and the standard deduction, then divides back down by 26. It does not tax the individual paycheck in isolation.",
+          "The practical consequence is that one unusual biweekly period distorts the estimate. A period containing a large bonus annualizes to a salary you do not actually earn, so that check is over-withheld, and the excess comes back at filing rather than being corrected in the next period. Anyone with variable biweekly pay in California should read the calculator above as an estimate for a steady salary, not a prediction for any particular deposit."
+        ]
+      },
+      {
+        "h2": "California has no reciprocity with any state, including neighbours",
+        "p": [
+          "California maintains no reciprocal withholding agreements. A Nevada, Arizona or Oregon resident who physically works in California owes California tax on the income earned there, and California residents working elsewhere get relief through a credit at filing rather than through an exemption certificate.",
+          "For biweekly cross-border workers this means two states can withhold from the same 26 paychecks all year. California is also aggressive about sourcing: the test is where you were physically working, and scheduled in-office days in California are enough to create a California-source share. Arizona is the one partial exception, through its own Form WEC arrangement."
+        ]
+      }
+    ]
+  },
+  "colorado-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Colorado FAMLI stops once you cross $184,500, usually on an identifiable paycheck",
+        "p": [
+          "Colorado's Paid Family and Medical Leave Insurance premium is withheld at 0.44% of wages in the calculator above, up to a taxable wage base of $184,500. Because it is a flat percentage with a hard ceiling, a biweekly schedule makes the cut-off visible: if you earn enough to cross the base, one paycheck in the year is the last one with a FAMLI line, and every check after it is larger.",
+          "This is the opposite of Social Security only in scale — both stop at the same base, so for a high earner both lines disappear in the same period and that deposit is noticeably bigger. Plan around it rather than treating the jump as a raise."
+        ]
+      },
+      {
+        "h2": "Colorado's DR 1098 method is flat-rate but not flat-withholding",
+        "p": [
+          "Colorado applies a single income tax rate, which makes people assume withholding is a simple percentage of each biweekly check. The DR 1098 method first subtracts an annual standard deduction amount derived from your federal W-4, then applies the rate.",
+          "Because that deduction is annual and spread across 26 periods, the effective percentage taken from each biweekly check is lower than the headline rate, and it is lower for people who claimed more on the federal W-4. Two Colorado workers at the same salary with different W-4 entries will see different state lines even though the state rate is identical for both."
+        ]
+      },
+      {
+        "h2": "Colorado has no reciprocal agreements, which matters for Wyoming and Nebraska commuters",
+        "p": [
+          "Colorado has no reciprocity with any neighbouring state. A Wyoming resident working in Colorado has Colorado tax withheld from every biweekly check even though Wyoming takes nothing, and Wyoming offers no credit because it has no income tax to credit against.",
+          "Running the other direction, a Colorado resident working in Kansas, Nebraska, New Mexico or Utah has that state's tax withheld and claims a Colorado credit at filing. Either way the withholding happens 26 times before any reconciliation, so the biweekly deposit is the wrong number to plan on if your work crosses a state line."
+        ]
+      }
+    ]
+  },
+  "connecticut-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "If Connecticut has no CT-W4 on file, withholding jumps to 6.99% of everything",
+        "p": [
+          "Connecticut assigns every employee a withholding code from A to F on Form CT-W4, and the code drives the entire calculation. When no valid form is on file, Connecticut's default is not a middle-of-the-road table — it is Code F, which withholds at the state's top marginal rate of 6.99% on all wages with no exemptions.",
+          "On a biweekly schedule this is punishing and silent: 26 checks withheld at a rate meant for the highest earners, with the excess recoverable only at filing. It is the single most common reason a Connecticut deposit comes in far below an estimate. Check which code payroll has before you look anywhere else."
+        ]
+      },
+      {
+        "h2": "Connecticut Paid Leave is 0.5% up to $184,500, and it stops when Social Security does",
+        "p": [
+          "Connecticut withholds a Paid Leave contribution of 0.5% of wages up to the Social Security taxable wage base, $184,500 in the calculator above. Tying the ceiling to the federal base means the Connecticut premium and the Social Security deduction stop on the same paycheck.",
+          "For a biweekly earner above the base, one period late in the year drops both lines at once and the deposit jumps noticeably. It is not a payroll error and it does not repeat — the following January both lines return."
+        ]
+      },
+      {
+        "h2": "Connecticut has no reciprocity, and New York's convenience rule reaches into it",
+        "p": [
+          "Connecticut maintains no reciprocal agreements. A Connecticut resident working in New York has New York tax withheld from every biweekly check, and New York's convenience-of-the-employer rule can source remote days to New York as well, even when you are working from a Connecticut desk.",
+          "Connecticut grants a credit for tax paid to another state, but the credit arrives at filing while the withholding happens 26 times during the year. Connecticut has also adopted its own retaliatory convenience provision, which can apply the same logic in the other direction for residents of states that use the rule."
+        ]
+      }
+    ]
+  },
+  "delaware-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Delaware gives you a credit per exemption, not a deduction — and it is worth $110 a year",
+        "p": [
+          "Most states reduce taxable income by an allowance amount. Delaware instead subtracts a flat $110 tax credit per exemption from the tax itself, as the calculator above does. That is a fundamentally different lever: a deduction is worth more to a high earner, a credit is worth the same to everyone.",
+          "Spread across 26 biweekly periods, $110 a year is about $4.23 per paycheck per exemption. Claiming one more exemption on a Delaware W-4 therefore changes your biweekly deposit by roughly the price of a coffee — a useful sanity check when someone tells you an exemption change will transform their take-home pay."
+        ]
+      },
+      {
+        "h2": "Delaware is a convenience-of-the-employer state",
+        "p": [
+          "Delaware applies a convenience rule to remote work. Wages paid by a Delaware employer to an employee working remotely for their own convenience can be sourced to Delaware, which means Delaware withholding on all 26 biweekly checks regardless of where the laptop actually is.",
+          "This puts Delaware in a small group with New York, Pennsylvania, Nebraska and Arkansas. If you work remotely for a Delaware employer from a state that also taxes your wages, expect two states in your withholding and a credit claimed at filing to sort it out."
+        ]
+      },
+      {
+        "h2": "Wilmington's city wage tax is a separate line on a Delaware paycheck",
+        "p": [
+          "Wilmington levies its own wage tax on income earned within the city, withheld by employers on top of Delaware state tax. It follows the worksite rather than your residence, so a commuter into Wilmington pays it and a Wilmington resident working outside the city generally does not.",
+          "Like most local wage taxes it is a flat percentage with no annual reconciliation, so it comes out of all 26 biweekly checks at the same rate and never trues up. The state figures in the table above do not include it."
+        ]
+      }
+    ]
+  },
+  "washington-dc-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "DC taxes residents only — commuters into the District pay nothing to DC",
+        "p": [
+          "The District is unusual among taxing jurisdictions: federal law prevents DC from taxing the income of non-residents who work there. A Maryland or Virginia resident commuting into a DC office files Form D-4A and has zero DC withholding on every biweekly paycheck, paying their home state instead.",
+          "This is the reverse of the pattern in almost every other city with an income tax, where the worksite is what triggers withholding. In the District, your home address is the only thing that matters. The FR-230 figures in the table above apply to DC residents; if you live across a bridge, they do not apply to you at all."
+        ]
+      },
+      {
+        "h2": "D-4 allowances are worth $4,300 each, spread across 26 checks",
+        "p": [
+          "DC withholding subtracts $4,300 of annual taxable income for each allowance claimed on Form D-4 before applying the FR-230 bracket table. On a biweekly schedule that is roughly $165 of taxable wage removed from each of your 26 paychecks per allowance.",
+          "Because the District's brackets are graduated, what that removal is worth depends on where your income sits. The same allowance saves more tax for someone near the top of the seven-bracket structure than for someone near the bottom, which is why two DC workers with the same D-4 can see very different state lines."
+        ]
+      },
+      {
+        "h2": "Seven brackets means no single percentage describes a DC paycheck",
+        "p": [
+          "The District runs seven graduated brackets, and the FR-230 percentage method annualizes your biweekly wage before applying them. That makes the headline top rate a poor guide to what leaves any individual paycheck — the effective rate on a full year of wages sits well below the top bracket for almost everyone.",
+          "It also means a mid-year pay change has an outsized effect on the remaining checks. A raise in July is annualized as though you had earned the new rate all year, so the state line on the next biweekly paycheck rises by more than the raise alone would suggest, and it settles down at filing."
+        ]
+      }
+    ]
+  },
+  "georgia-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Georgia's withholding rate changes on May 11, 2026, mid-way through your biweekly year",
+        "p": [
+          "Georgia's withholding rate is scheduled to change effective May 11, 2026, and the calculator above applies whichever rate corresponds to the period you are modelling. On a biweekly schedule that date does not line up with a pay-period boundary, so the switch lands inside a payroll cycle rather than neatly between two of them.",
+          "The practical result is that your 2026 Georgia withholding is not one rate applied 26 times — it is the old rate for roughly the first nine or ten checks and the new one thereafter. Anyone projecting a full-year Georgia figure from a single biweekly paycheck taken in March will overstate the annual total."
+        ]
+      },
+      {
+        "h2": "Georgia allowances are worth $5,000 of taxable income each",
+        "p": [
+          "Georgia subtracts $5,000 of annual taxable income per allowance, plus a standard deduction, before applying the rate. Divided across 26 biweekly periods, each allowance removes roughly $192 of taxable wage from every paycheck.",
+          "Because Georgia's rate structure is close to flat, the value of an allowance is predictable: it is approximately the rate times $5,000 per year, spread over your 26 checks. That makes Georgia one of the easier states to estimate the effect of a form change without rerunning a full calculation."
+        ]
+      },
+      {
+        "h2": "Georgia has no reciprocity, so a cross-border commute means two withholdings",
+        "p": [
+          "Georgia maintains no reciprocal agreements with any of its five neighbours. A Georgia resident working in Alabama, Tennessee, North Carolina, South Carolina or Florida is taxed by the state where the work is physically performed, and Georgia relieves the double-taxation through a credit claimed at filing.",
+          "Tennessee and Florida take nothing, so those directions are simple. Alabama, North and South Carolina all tax the income, which means withholding from both states on the same 26 checks and a reconciliation the following spring."
+        ]
+      }
+    ]
+  },
+  "hawaii-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Hawaii employer plan deductions are entered per paycheck, not as a percentage",
+        "p": [
+          "Hawaii requires employers to provide temporary disability insurance and prepaid health care, and the employee share of those plans is deducted from pay. Unlike a percentage-based premium, these are plan-specific dollar amounts that vary by employer, which is why the calculator above takes them as an amount you enter per paycheck rather than computing them.",
+          "On a biweekly schedule they are 26 identical deductions. They do not scale with a raise and they do not stop at a wage base, so as a share of your paycheck they matter most at lower salaries and fade as income rises — the opposite of how the state income tax line behaves."
+        ]
+      },
+      {
+        "h2": "Hawaii rounds each biweekly period before annualizing",
+        "p": [
+          "The Booklet A method computes withholding for the pay period and the calculator above reflects that rounding rather than dividing a clean annual figure by 26. Small rounding differences at the period level are multiplied by 26 over the year.",
+          "The gap is small in dollar terms but it is the reason a Hawaii annual projection built by multiplying one paycheck by 26 will not exactly match a projection built by annualizing first. Neither is wrong; they are answering slightly different questions."
+        ]
+      },
+      {
+        "h2": "Hawaii has no land border, which removes the cross-border problem entirely",
+        "p": [
+          "Hawaii shares no border with another state, so the multi-state sourcing questions that complicate paychecks in the Northeast and around Washington DC simply do not arise for a Hawaii-based worker. If you live and work in Hawaii, Hawaii is the only state in your withholding.",
+          "The live question in Hawaii is the opposite one: mainland employers hiring Hawaii-resident remote workers sometimes fail to register for Hawaii withholding, which leaves the employee with no state tax withheld from any of their 26 checks and a full year's liability due at filing."
+        ]
+      }
+    ]
+  },
+  "idaho-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Idaho rounds each biweekly paycheck to whole dollars, and 26 roundings add up",
+        "p": [
+          "Idaho's percentage method computes the tax for the pay period and rounds it to a whole dollar. The calculator above reproduces that whole-dollar paycheck rounding. Because the rounding happens per period, your annual Idaho withholding is 26 rounded numbers rather than one exact figure divided into 26 parts.",
+          "It is a small effect — at most a few dollars over a year — but it is real, and it is why an Idaho annual projection computed two different ways will not match to the cent. It also means the same salary paid semi-monthly and biweekly produces slightly different annual Idaho withholding."
+        ]
+      },
+      {
+        "h2": "Idaho's flat rate applies after a large standard deduction, so low earners see nothing",
+        "p": [
+          "Idaho applies a single rate on taxable income above a standard deduction that tracks the federal amount. At lower salaries the deduction consumes most of the annualized biweekly wage, so the state line on the paycheck is small or zero even though the headline rate is not.",
+          "This makes Idaho's effective withholding rate rise steeply through the lower salary range and then flatten out. Reading the rate off the table above at one salary tells you very little about what it will be at another."
+        ]
+      },
+      {
+        "h2": "Idaho has no reciprocity, and four of six neighbours tax income",
+        "p": [
+          "Idaho maintains no reciprocal withholding agreements. Three of its six neighbours — Washington, Nevada and Wyoming — levy no individual income tax, so work performed there creates no second state income tax line. The other three — Oregon, Utah and Montana — all tax income earned within their borders, and they will withhold from an Idaho resident working there.",
+          "In that case the other state withholds from all 26 checks and Idaho relieves the overlap with a credit claimed at filing. Oregon is the direction that surprises people most: on top of income tax it applies statewide transit tax and a Paid Leave premium to work performed in Oregon, regardless of where the worker lives."
+        ]
+      }
+    ]
+  },
+  "illinois-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Illinois withholding is genuinely flat, so your biweekly state line barely moves",
+        "p": [
+          "Illinois applies a single 4.95% rate after subtracting $2,925 of annual exemption per IL-W-4 allowance, exactly as the calculator above does. There are no brackets to cross, so unlike almost every other taxing state, an Illinois worker's state withholding rises in a straight line with gross pay.",
+          "On a biweekly schedule this makes Illinois unusually predictable: the state line on paycheck 26 is the same percentage of gross as the line on paycheck 1, and a raise changes it proportionally rather than disproportionately. It is the federal line that does the bracket-crossing on an Illinois stub, not the state one."
+        ]
+      },
+      {
+        "h2": "Each IL-W-4 allowance is worth about $112 of exemption per biweekly check",
+        "p": [
+          "The $2,925 annual exemption per allowance, divided across 26 pay periods, removes roughly $112 of taxable wage from each biweekly paycheck. At 4.95% that is around $5.57 of withholding per allowance per check, or about $145 over the year.",
+          "Because the rate is flat, this arithmetic holds at every salary — an allowance is worth the same to an Illinois worker earning $40,000 as to one earning $200,000. That is not true in any bracketed state, and it makes the effect of an IL-W-4 change easy to verify against your own stub."
+        ]
+      },
+      {
+        "h2": "Illinois has reciprocity with Iowa, Kentucky, Michigan and Wisconsin",
+        "p": [
+          "Illinois maintains reciprocal agreements with Iowa, Kentucky, Michigan and Wisconsin. A resident of one of those states working in Illinois files Form IL-W-5-NR to stop Illinois withholding, and an Illinois resident working in one of them files the equivalent certificate there. Only your home state withholds.",
+          "Indiana and Missouri are not on that list, despite both bordering Illinois. A cross-border commute to St. Louis or into Indiana therefore means withholding from both states on all 26 checks, with an Illinois credit claimed at filing to unwind it."
+        ]
+      }
+    ]
+  },
+  "indiana-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Indiana's county tax is set by where you lived on January 1",
+        "p": [
+          "Every Indiana county levies its own income tax on top of the state rate, and it is withheld from each biweekly paycheck. The county that applies is determined by where you lived and worked as of January 1 — not by where you live now. Moving to a lower-rate county in March does not change your withholding until the following year.",
+          "The calculator above takes the county rate as a figure you enter, because there is no single statewide number. If your stub shows a county line that looks wrong for your address, the January 1 rule is usually the explanation rather than a payroll error."
+        ]
+      },
+      {
+        "h2": "Indiana exemptions are annual dollar amounts divided by 26",
+        "p": [
+          "Indiana withholding subtracts personal and dependent exemption amounts claimed on Form WH-4, then applies a flat rate. Those exemptions are annual figures, so payroll divides each one across your 26 biweekly periods before computing the tax.",
+          "The per-check effect is therefore small even when the annual exemption is not, which is the usual reason a WH-4 change feels like it did nothing. The dependent exemption is the one worth checking: Indiana's is larger than most people assume, and claiming it correctly is worth more per year than adjusting the state rate ever could be."
+        ]
+      },
+      {
+        "h2": "Indiana has reciprocity with five neighbouring states",
+        "p": [
+          "Indiana maintains reciprocal agreements with Kentucky, Michigan, Ohio, Pennsylvania and Wisconsin. Residents of those states working in Indiana file Form WH-47 and have no Indiana state tax withheld from their biweekly checks — but the county tax is a separate matter and can still apply to non-residents working in Indiana.",
+          "That split catches people out. A Kentucky resident commuting into Indiana can have zero Indiana state withholding and still see an Indiana county line on all 26 paychecks. Illinois, notably, is not a reciprocity partner despite the border."
+        ]
+      }
+    ]
+  },
+  "iowa-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Iowa's allowance is a single annual dollar amount you enter, not a count",
+        "p": [
+          "Iowa moved away from a counted-allowance system to one where the IA W-4 carries an annual allowance amount in dollars. The calculator above takes that dollar figure directly. Payroll divides it by 26 and subtracts the result from each biweekly paycheck's taxable wage.",
+          "This is a genuine difference from the states around it, where you still claim a number of allowances and the state supplies the dollar value. If you are used to entering '2' on a withholding form, entering 2 on an Iowa IA W-4 would remove almost nothing from your taxable wage — the field wants dollars."
+        ]
+      },
+      {
+        "h2": "Iowa's bracket compression means recent years are not comparable",
+        "p": [
+          "Iowa has moved through a multi-year reduction in the number and level of its income tax brackets. A biweekly paycheck from two or three years ago is not a useful baseline for what the state line should be today, even at an identical salary.",
+          "The calculator above uses the current-year method. If you are comparing your stub against an older estimate or an older pay period, expect the state figure to be lower now, and expect the gap to be proportionally larger at higher salaries where the old upper brackets used to bite."
+        ]
+      },
+      {
+        "h2": "Iowa has reciprocity with Illinois only",
+        "p": [
+          "Iowa maintains a reciprocal agreement with Illinois and with no other state. An Illinois resident working in Iowa files Form 44-016 and has no Iowa withholding; the arrangement works the same way in reverse.",
+          "Iowa's other five neighbours — Minnesota, Wisconsin, South Dakota, Nebraska and Missouri — have no agreement with Iowa. South Dakota takes nothing, but a commute into Minnesota, Wisconsin, Nebraska or Missouri means that state withholds from all 26 checks and Iowa gives you a credit at filing."
+        ]
+      }
+    ]
+  },
+  "kansas-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Kansas withholding is computed from annualized wages, then divided back by 26",
+        "p": [
+          "The KW-100 annual percentage method takes your biweekly gross, multiplies it out to a full year, applies the Kansas bracket table and standard deduction, then divides the result across 26 periods. It does not tax the paycheck in front of it.",
+          "That is why a single irregular biweekly period produces a state line that looks wrong. A check containing retro pay or a bonus annualizes to an income you do not earn, so Kansas over-withholds on that period and the excess is recovered at filing rather than corrected in the next paycheck."
+        ]
+      },
+      {
+        "h2": "Kansas allowances are set on the state K-4, not the federal W-4",
+        "p": [
+          "Kansas requires its own Form K-4 and does not accept the federal W-4 as a substitute for state withholding purposes. Employees who only ever filled in a federal form can end up withheld at the default single-with-zero treatment on all 26 biweekly checks.",
+          "This is a common source of over-withholding for married Kansas employees, because the federal form's married setting does not carry across. If your Kansas line looks high relative to the table above, the K-4 on file is the first thing to check."
+        ]
+      },
+      {
+        "h2": "Kansas has no reciprocity, and the Kansas City line runs through the middle of it",
+        "p": [
+          "Kansas has no reciprocal agreement with Missouri, which matters more here than almost anywhere else because the Kansas City metropolitan area straddles the state line. A Kansas resident working on the Missouri side has Missouri tax withheld from every biweekly check, plus the Kansas City earnings tax if the worksite is inside city limits.",
+          "Kansas relieves the state-level double taxation with a credit at filing, but the city earnings tax has no such offset — it is simply a cost of working at that address. None of it appears in the Kansas figures above."
+        ]
+      }
+    ]
+  },
+  "kentucky-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Kentucky's local occupational taxes are the biggest variable on the stub",
+        "p": [
+          "Kentucky counties, cities and school districts levy occupational licence taxes on wages, and in some places two or three of them stack on the same paycheck. They are withheld by the employer from all 26 biweekly checks, they follow the worksite rather than your home, and they are entirely separate from the state's flat rate.",
+          "The calculator above takes the combined local rate as a figure you enter, because a Louisville worksite and a rural county worksite produce very different answers at the same salary. In parts of Kentucky the local burden is a larger share of the paycheck than people expect relative to the state line."
+        ]
+      },
+      {
+        "h2": "Kentucky's flat rate sits on top of a standard deduction of $3,360",
+        "p": [
+          "Kentucky applies a single 3.5% rate after subtracting an annual standard deduction of $3,360, as the calculator above does. Spread across 26 periods, that deduction removes about $129 of taxable wage from each biweekly paycheck.",
+          "Because the rate is flat and the deduction is fixed, the Kentucky state line is close to a constant percentage of gross for anyone earning well above the deduction. The variability on a Kentucky stub comes almost entirely from the local lines, not the state one."
+        ]
+      },
+      {
+        "h2": "Kentucky has reciprocity with seven states",
+        "p": [
+          "Kentucky maintains reciprocal agreements with Illinois, Indiana, Michigan, Ohio, Virginia, West Virginia and Wisconsin — one of the widest networks in the country. Residents of those states working in Kentucky file Form 42A809 and have no Kentucky state income tax withheld.",
+          "The occupational taxes are not covered by any of it. A reciprocity exemption stops the state line and leaves the local line intact, so an Ohio resident working in Covington can have $0 of Kentucky state tax and still see a local occupational deduction on all 26 checks. Missouri and Tennessee, the other two neighbours, are not reciprocity partners."
+        ]
+      }
+    ]
+  },
+  "louisiana-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Louisiana moved to a flat rate, so old biweekly stubs are a poor comparison",
+        "p": [
+          "Louisiana replaced its graduated brackets with a single rate, applied in the calculator above at 3.09% after the standard deduction. A paycheck from before the change is not a useful baseline: the shape of the withholding curve is different, not just the level.",
+          "For a biweekly earner the practical effect is that the state line is now proportional to gross across the whole salary range. Crossing what used to be a bracket boundary no longer produces a step change in the state figure, though the federal line still behaves the way it always did."
+        ]
+      },
+      {
+        "h2": "Louisiana's exemptions come from Form L-4, and the federal W-4 does not substitute",
+        "p": [
+          "Louisiana requires its own Form L-4 for state withholding. The personal and dependency exemptions claimed there reduce annual taxable income, and payroll spreads the reduction across your 26 biweekly periods.",
+          "Employees who never filed an L-4 are withheld with no exemptions at all, which shows up as a state line consistently higher than an estimate built from household size. Because the reduction is annual and divided by 26, correcting the form mid-year only affects the checks that remain."
+        ]
+      },
+      {
+        "h2": "Louisiana has no reciprocity with Texas, Mississippi, Arkansas or Alabama",
+        "p": [
+          "Louisiana maintains no reciprocal withholding agreements. Texas takes nothing, so a commute in that direction is simple. Mississippi, Arkansas and Alabama all tax income earned within their borders, and they will withhold from a Louisiana resident working there on every one of the 26 checks.",
+          "Louisiana relieves the overlap with a credit at filing rather than at the payroll level. Offshore and rotational work makes this common in Louisiana, and the deciding question is where the work was physically performed, not who signs the cheque."
+        ]
+      }
+    ]
+  },
+  "maine-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Maine rounds each biweekly paycheck to a whole dollar",
+        "p": [
+          "Maine's percentage method computes withholding for the pay period and rounds it to whole dollars, which the calculator above reproduces. Twenty-six rounded periods do not sum to the same figure as one annual calculation divided by 26.",
+          "The difference is a few dollars over a year, but it is the reason the same Maine salary paid biweekly and semi-monthly produces slightly different annual withholding. It also means your stub will never show cents on the Maine state line."
+        ]
+      },
+      {
+        "h2": "Each W-4ME allowance removes $5,300 of annual taxable income",
+        "p": [
+          "Maine subtracts $5,300 per allowance claimed on Form W-4ME before applying its bracket table, as the calculator above does. Across 26 biweekly periods that is roughly $204 of taxable wage removed from every paycheck per allowance.",
+          "That is a comparatively large allowance value, which makes the W-4ME unusually powerful in Maine relative to states with smaller allowances or flat credits. It also makes a wrong allowance count expensive: each one you should not have claimed costs you roughly the bracket rate on $5,300 over the year."
+        ]
+      },
+      {
+        "h2": "Maine's only land neighbour is New Hampshire, which taxes nothing",
+        "p": [
+          "Maine borders exactly one other state. New Hampshire has no wage income tax, so a Maine resident working across that border has no second state income tax withheld, and a New Hampshire resident working in Maine has Maine tax withheld on all 26 checks with no home-state credit available to offset it.",
+          "That asymmetry runs strongly in one direction and is worth understanding before taking a job across the line. Maine and New Hampshire have no reciprocal agreement, so the outcome turns entirely on which side of the border the work is physically performed."
+        ]
+      }
+    ]
+  },
+  "maryland-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Every Maryland county adds its own rate to the same paycheck",
+        "p": [
+          "Maryland's county income tax is not a separate local filing — it is withheld alongside the state tax on every biweekly paycheck, and the rate depends on the county or Baltimore City where you live. The spread between the lowest and highest county rates is wide enough to be worth real money at the same salary.",
+          "The calculator above takes the county rate as an entry because there is no single Maryland answer. Unlike most local wage taxes, Maryland's follows your residence rather than your worksite, so moving within the state changes your withholding while changing jobs may not."
+        ]
+      },
+      {
+        "h2": "Maryland's state and county tax are reconciled together at filing",
+        "p": [
+          "Because the county tax is administered by the state, both lines are settled on one Maryland return rather than through a separate municipal filing. On a biweekly schedule that means the combined deduction you see 26 times is a genuine estimate of your total Maryland liability, not just part of it.",
+          "This is a meaningful contrast with Ohio, Pennsylvania or Kentucky, where the local tax runs through an entirely separate system and the state figure on a stub tells you nothing about the local one."
+        ]
+      },
+      {
+        "h2": "Maryland has reciprocity with DC, Pennsylvania, Virginia and West Virginia",
+        "p": [
+          "Maryland maintains reciprocal agreements with the District of Columbia, Pennsylvania, Virginia and West Virginia. Residents of those jurisdictions working in Maryland file Form MW507 and have no Maryland withholding; Maryland residents working there are taxed by Maryland instead.",
+          "This is what makes the Washington metropolitan area workable for biweekly commuters — a Maryland resident working in DC or Virginia has one state in their withholding rather than two. Delaware, the remaining neighbour, is not a reciprocity partner."
+        ]
+      }
+    ]
+  },
+  "massachusetts-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Massachusetts PFML stops once you cross $184,500",
+        "p": [
+          "The Paid Family and Medical Leave employee contribution is withheld on wages up to $184,500, the same base the calculator above uses for Social Security. For a biweekly earner above that level, both deductions end on the same paycheck late in the year and the deposit visibly jumps.",
+          "Below the base the PFML line is a flat percentage of every check, all 26 periods. The employee share is entered in the calculator because employers with approved private plans may withhold a different amount, and some employers cover part or all of the employee portion."
+        ]
+      },
+      {
+        "h2": "The 4% surtax on income above $1 million applies to withholding too",
+        "p": [
+          "Massachusetts levies an additional 4% surtax on annual income above $1 million on top of its flat rate. For a biweekly earner whose salary crosses that threshold, withholding can step up partway through the year rather than applying evenly across all 26 checks.",
+          "This makes Massachusetts one of the few states where the late-year paychecks are proportionally smaller than the early ones for high earners — the opposite of the pattern created by Social Security and PFML ceilings. The two effects work against each other, and which one dominates depends on where your income sits."
+        ]
+      },
+      {
+        "h2": "Massachusetts has no reciprocity, and its border with New Hampshire is the flashpoint",
+        "p": [
+          "Massachusetts maintains no reciprocal agreements. It taxes income earned from work physically performed in Massachusetts regardless of residence, which is why a large number of New Hampshire residents have Massachusetts tax withheld from all 26 biweekly checks despite living in a state with no income tax.",
+          "New Hampshire offers no credit, because it has no income tax against which one could be claimed. For a New Hampshire resident the entire Massachusetts deduction is a real cost, and the deciding factor is where you physically work on scheduled days."
+        ]
+      }
+    ]
+  },
+  "michigan-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Twenty-four Michigan cities levy their own income tax on your paycheck",
+        "p": [
+          "Michigan has a comparatively flat state rate, but two dozen cities — Detroit, Grand Rapids, Lansing, Flint and others — impose a municipal income tax withheld from each biweekly paycheck. Most charge residents roughly double what they charge non-residents working in the city.",
+          "The calculator above takes the city rate as an entry because the right number depends on both where you live and where you work. A Detroit resident, a suburban commuter into Detroit, and a worker with no Detroit connection at the same salary see three different biweekly deposits."
+        ]
+      },
+      {
+        "h2": "Michigan exemptions are claimed on the MI-W4, and the federal form does not carry over",
+        "p": [
+          "Michigan requires Form MI-W4 for state withholding. Each exemption claimed reduces annual taxable income, and the reduction is spread across your 26 biweekly periods before the flat rate is applied.",
+          "Employees who only completed a federal W-4 are often withheld with zero Michigan exemptions, which produces a state line consistently above the estimate for their household. The MI-W4 also has a separate section for the city tax in municipalities that require it."
+        ]
+      },
+      {
+        "h2": "Michigan has reciprocity with six states",
+        "p": [
+          "Michigan maintains reciprocal agreements with Illinois, Indiana, Kentucky, Minnesota, Ohio and Wisconsin. Residents of those states working in Michigan have no Michigan state income tax withheld once the exemption certificate is filed.",
+          "City income taxes are outside the agreements. An Ohio resident working in Detroit can have zero Michigan state withholding and a Detroit non-resident city tax on all 26 checks. Reciprocity covers the state line only, and this is the single most misunderstood point about Michigan payroll."
+        ]
+      }
+    ]
+  },
+  "minnesota-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Minnesota's Paid Leave premium is new, and it stops at $185,000",
+        "p": [
+          "Minnesota withholds an employee Paid Leave contribution on wages up to $185,000, slightly above the Social Security base. The calculator above takes the employee share as an entry, because the split between employer and employee varies and some employers absorb more than the minimum.",
+          "For a biweekly earner near or above the ceiling, the premium and the Social Security deduction stop on different paychecks — Social Security first at $184,500, then Paid Leave a fraction of a period later. It is a small, easily-missed detail that makes two consecutive late-year deposits different sizes."
+        ]
+      },
+      {
+        "h2": "Minnesota's brackets are steep, so annualizing a single biweekly check matters",
+        "p": [
+          "Minnesota runs graduated brackets with a relatively high top rate, and withholding is computed by annualizing the biweekly wage before applying them. A pay period containing a bonus or retroactive pay annualizes to a much larger salary and is over-withheld accordingly.",
+          "The excess comes back at filing, not in the next paycheck. For anyone with variable biweekly pay in Minnesota, the table above is a reasonable guide to a steady salary and a poor guide to any individual irregular deposit."
+        ]
+      },
+      {
+        "h2": "Minnesota has reciprocity with Michigan and North Dakota",
+        "p": [
+          "Minnesota maintains reciprocal agreements with Michigan and North Dakota. Residents of those states working in Minnesota file Form MWR and have no Minnesota withholding on their biweekly checks.",
+          "Wisconsin is not on that list. The long-standing Minnesota–Wisconsin agreement ended years ago, so a Wisconsin resident working in Minnesota has Minnesota tax withheld from all 26 checks and claims a Wisconsin credit at filing. That change caught a lot of Twin Cities commuters and still surprises people."
+        ]
+      }
+    ]
+  },
+  "mississippi-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Mississippi taxes nothing on the first $10,000, then a flat 4%",
+        "p": [
+          "Mississippi's method exempts the first $10,000 of annual taxable income entirely and applies 4% above it, as the calculator above does. Spread across 26 biweekly periods, that exemption shelters roughly $385 of every paycheck before any state tax is computed.",
+          "The result is an effective state rate that climbs steadily through the lower salary range and approaches 4% only at higher incomes. Reading the state percentage off one salary in the table above will mislead you at another — at $30,000 it is well under 4%, and it never quite reaches 4% at any salary."
+        ]
+      },
+      {
+        "h2": "Mississippi rounds each biweekly period to whole dollars",
+        "p": [
+          "The Pub 89-700 method computes the period tax and rounds it to a whole dollar, which the calculator above reproduces. Because the rounding happens 26 times rather than once, the annual total differs slightly from an exact annual computation.",
+          "It is a small effect, but it explains why your Mississippi state line never shows cents and why multiplying one paycheck by 26 will not exactly reproduce an annual figure."
+        ]
+      },
+      {
+        "h2": "Mississippi is phasing its income tax down, so the rate is a moving target",
+        "p": [
+          "Mississippi has legislated a multi-year reduction in its income tax rate with the stated goal of eliminating it. The calculator above uses the current year's rate. A biweekly stub from an earlier year is therefore not a valid comparison, and the gap widens every year the schedule advances.",
+          "Practically, this means a Mississippi salary is worth slightly more in take-home terms each January without any raise. It also means long-range planning off today's biweekly figure will understate future net pay."
+        ]
+      }
+    ]
+  },
+  "missouri-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Kansas City and St. Louis each levy a 1% earnings tax on every paycheck",
+        "p": [
+          "Both of Missouri's major cities impose a 1% earnings tax on wages earned within city limits, withheld from all 26 biweekly checks. It applies to residents wherever they work and to non-residents for the work performed in the city, and it is entirely separate from Missouri state withholding.",
+          "The calculator above takes the city rate as an entry. One per cent sounds small until you annualize it: on a $70,000 salary it is $700 a year, roughly $27 out of every biweekly deposit, with no exemptions and no graduated structure to soften it."
+        ]
+      },
+      {
+        "h2": "Missouri rounds each biweekly paycheck to whole dollars",
+        "p": [
+          "Missouri's method computes the tax for the pay period and rounds to whole dollars, which the calculator above follows. Twenty-six roundings across the year produce an annual total that differs slightly from an exact calculation.",
+          "The same salary paid semi-monthly rather than biweekly therefore produces a marginally different annual Missouri withholding. Neither is wrong — it is the rounding rule, applied a different number of times."
+        ]
+      },
+      {
+        "h2": "Missouri has no reciprocity, and it borders eight states",
+        "p": [
+          "Missouri maintains no reciprocal withholding agreements, and it shares a border with eight states — Iowa, Illinois, Kentucky, Tennessee, Arkansas, Oklahoma, Kansas and Nebraska. Every one of them except Tennessee taxes wage income.",
+          "For biweekly cross-border workers, especially around Kansas City and St. Louis, that means two states withholding from the same 26 checks and a credit claimed at filing to unwind it. The city earnings tax gets no credit at all — it is a flat cost of working at that address."
+        ]
+      }
+    ]
+  },
+  "montana-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Montana's MW-4 filing status drives the whole calculation",
+        "p": [
+          "Montana withholding is computed from the filing status declared on Form MW-4 rather than from a count of allowances, as the calculator above reflects. There is no allowance multiplier to tune — the status selects the table, and the table does the rest.",
+          "That makes Montana withholding blunt but predictable across 26 biweekly periods. It also means the only lever most employees have is the additional-amount line on the MW-4, which is the right tool if your situation does not fit the status you selected."
+        ]
+      },
+      {
+        "h2": "Montana has no sales tax, so the income tax carries more of the load",
+        "p": [
+          "Montana is one of a very small group of states with no general sales tax. State revenue leans correspondingly harder on income tax, which is part of why a Montana state line on a biweekly stub is larger than in a neighbouring state at the same salary.",
+          "The comparison worth making is with Wyoming, South Dakota and Idaho next door. Montana takes more from the paycheck and less at the register, so a straight take-home comparison across that border overstates the difference in what you actually keep."
+        ]
+      },
+      {
+        "h2": "Montana has reciprocity with North Dakota only",
+        "p": [
+          "Montana maintains a reciprocal agreement with North Dakota and with no other state. A North Dakota resident working in Montana files Form MT-R and has no Montana withholding; the arrangement runs both ways.",
+          "Montana's other neighbours — Idaho, Wyoming and South Dakota — have no agreement with it. Wyoming and South Dakota levy no income tax, so those directions cause no second withholding, but an Idaho worksite means Idaho withholds from all 26 checks and Montana credits it at filing."
+        ]
+      }
+    ]
+  },
+  "nebraska-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Nebraska is a convenience-of-the-employer state",
+        "p": [
+          "Nebraska applies a convenience rule: wages paid by a Nebraska employer to a remote employee working outside the state for their own convenience can be sourced to Nebraska. That means Nebraska withholding on all 26 biweekly checks even for someone who never works in Nebraska.",
+          "It places Nebraska alongside New York, Delaware, Pennsylvania and Arkansas. If your home state also taxes those wages you are withheld twice during the year and recover the overlap through a credit at filing, which is a full year of undersized deposits before any correction."
+        ]
+      },
+      {
+        "h2": "Nebraska requires its own W-4N, and the federal form will not do",
+        "p": [
+          "Nebraska's Circular EN method uses allowances claimed on Form W-4N. Since the federal W-4 stopped using allowances, Nebraska employees who never filed a W-4N are frequently defaulted to a treatment that over-withholds.",
+          "On a biweekly schedule that default applies 26 times before anything is reconciled. If your Nebraska line runs consistently above the figures in the table above, the missing W-4N is the most likely cause."
+        ]
+      },
+      {
+        "h2": "Nebraska has no reciprocity, and it borders six states",
+        "p": [
+          "Nebraska maintains no reciprocal agreements. Of its six neighbours, South Dakota and Wyoming levy no income tax, while Iowa, Missouri, Kansas and Colorado all do and will withhold from a Nebraska resident working there.",
+          "The Omaha–Council Bluffs metropolitan area straddles the Iowa line, which makes this a daily reality for a large number of biweekly commuters: Iowa withholds on the work performed there, and Nebraska relieves the overlap with a credit the following spring."
+        ]
+      }
+    ]
+  },
+  "new-jersey-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "New Jersey withholds several employee payroll contributions, not just income tax",
+        "p": [
+          "Beyond income tax, New Jersey withholds employee contributions for unemployment insurance, temporary disability and family leave insurance. Each has its own rate and its own annual taxable wage base, and each stops when that base is reached.",
+          "On a biweekly schedule this produces a staircase rather than a cliff: the contributions stop on different paychecks as each base is crossed, so several late-year deposits are each slightly larger than the one before. The table above models income tax; the contribution lines are additional."
+        ]
+      },
+      {
+        "h2": "New Jersey's graduated brackets are wide, so the state line moves in steps",
+        "p": [
+          "New Jersey runs a graduated rate schedule with several brackets, and withholding is computed by annualizing the biweekly wage before applying them. Crossing a bracket mid-year changes the state line on every remaining check, not just the one where the raise landed.",
+          "It also means a bonus period is annualized as though the bonus recurred 26 times, producing conspicuous over-withholding on that one check. The correction happens at filing rather than in the following pay period."
+        ]
+      },
+      {
+        "h2": "New Jersey has reciprocity with Pennsylvania only",
+        "p": [
+          "New Jersey maintains a reciprocal agreement with Pennsylvania, and with no other state. A Pennsylvania resident working in New Jersey files Form NJ-165 to stop New Jersey withholding, and the reverse works the same way.",
+          "New York is not a partner, which is the arrangement that matters for the largest number of New Jersey residents. A New Jersey resident working in New York has New York tax withheld from all 26 checks — and New York's convenience-of-the-employer rule can source remote days to New York as well — with a New Jersey credit claimed at filing."
+        ]
+      }
+    ]
+  },
+  "new-mexico-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "New Mexico's FYI-104 method annualizes your biweekly wage",
+        "p": [
+          "New Mexico withholding follows the FYI-104 percentage method, which annualizes the pay-period wage, applies the bracket table, then divides back across 26 periods. The calculator above does the same.",
+          "Because the calculation is annual in shape, an irregular biweekly period is treated as though it were typical. A check with extra hours or a bonus annualizes to a higher salary and is over-withheld; the money returns at filing, not in the next deposit."
+        ]
+      },
+      {
+        "h2": "New Mexico still relies on the federal W-4 for state withholding",
+        "p": [
+          "New Mexico does not require a separate state withholding certificate — the federal W-4 drives the state calculation. That is convenient, but it means a W-4 tuned to produce a particular federal result also silently sets your New Mexico withholding.",
+          "If you deliberately over- or under-withhold federally using the extra-withholding or multiple-jobs sections, the state line on all 26 biweekly checks moves with it. In states with their own certificate the two can be tuned independently; in New Mexico they cannot."
+        ]
+      },
+      {
+        "h2": "New Mexico has no reciprocity, and Texas next door takes nothing",
+        "p": [
+          "New Mexico maintains no reciprocal agreements. Texas, its longest border, has no income tax, so a New Mexico resident working in Texas has no second state withholding — but a Texas resident working in New Mexico has New Mexico tax withheld from all 26 checks with no home-state credit available.",
+          "Arizona, Colorado, Utah and Oklahoma all tax income earned within their borders, and none has an agreement with New Mexico. Energy-sector rotational work across the Texas line makes the sourcing question — where the work is physically performed — unusually common here."
+        ]
+      }
+    ]
+  },
+  "new-york-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "New York's PFL contribution is capped at $411.91 and stops mid-year",
+        "p": [
+          "New York withholds Paid Family Leave at 0.432% of wages up to an annual maximum contribution of $411.91, exactly as the calculator above applies it. Because the cap is a dollar amount rather than a wage base, higher earners reach it earlier in the year.",
+          "On a biweekly schedule the PFL line simply stops on whichever paycheck takes you past $411.91 for the year, and every subsequent deposit is larger by whatever the per-period amount was. Someone earning around $95,000 hits it around the end of the year; someone earning far more hits it in the spring."
+        ]
+      },
+      {
+        "h2": "New York's convenience-of-the-employer rule is the strictest in the country",
+        "p": [
+          "New York sources remote wages to New York when the employee works outside the state for their own convenience rather than the employer's necessity. For a remote worker on a New York payroll, that generally means New York withholding on all 26 biweekly checks regardless of where they actually sit.",
+          "The threshold for employer necessity is high and rarely met by ordinary work-from-home arrangements. If your home state also taxes the wages, both withhold during the year and the overlap is resolved by credit at filing — a full year of reduced deposits before anything comes back."
+        ]
+      },
+      {
+        "h2": "New York has no reciprocity with New Jersey, Connecticut or Pennsylvania",
+        "p": [
+          "New York maintains no reciprocal withholding agreements with any state. Its three most heavily travelled borders — New Jersey, Connecticut and Pennsylvania — are all handled through credits at filing rather than through exemption certificates.",
+          "Combined with the convenience rule, this is why tri-state commuters routinely see two states on the same stub for all 26 pay periods. If your worksite is New York City rather than elsewhere in the state, a resident city tax may apply as well; the calculator above covers the state figure."
+        ]
+      }
+    ]
+  },
+  "nyc-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "New York City tax follows residence, so the commute direction decides everything",
+        "p": [
+          "The New York City resident income tax is withheld on top of New York State tax, and it applies because you live in the city — not because you work there. A New Jersey or Westchester resident commuting into a Manhattan office pays New York State tax on all 26 biweekly checks and no city tax at all.",
+          "The reverse is what catches people: a city resident working remotely from home, or at a New Jersey worksite, still owes the city tax. The calculator above applies the resident table, so it is the right model only if your home address is inside the five boroughs."
+        ]
+      },
+      {
+        "h2": "City tax, state tax and the PFL cap all land on the same paycheck",
+        "p": [
+          "A New York City resident's biweekly stub carries three New York lines: state income tax, the resident city tax, and the Paid Family Leave contribution capped at $411.91 a year. Only the PFL line stops during the year; the other two run all 26 periods.",
+          "That stacking is why a New York City deposit is one of the smallest in the country relative to gross at the same salary. It is also why the PFL cut-off, when it comes, is barely noticeable against the two remaining lines."
+        ]
+      },
+      {
+        "h2": "Moving out of the five boroughs changes your withholding from that date forward",
+        "p": [
+          "The city tax is not prorated retroactively by payroll. If you move out of New York City mid-year, the city line stops on the next payroll run after you update your address, and the months you were a resident are settled on your return.",
+          "On a biweekly schedule that means the change is visible immediately in the next deposit rather than trickling in. Updating your address with payroll promptly is worth real money — every extra pay period at the resident rate is money you will have to reclaim at filing."
+        ]
+      }
+    ]
+  },
+  "north-carolina-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "North Carolina's flat rate is falling every year, so old stubs mislead",
+        "p": [
+          "North Carolina applies a single rate that has been stepping down on a legislated schedule. The NC-30 annualized method in the calculator above uses the current year's rate. A biweekly stub from two years ago reflects a materially higher rate at the same salary.",
+          "For planning, this means your North Carolina take-home pay improves slightly each January without a raise, and a long-range projection built from today's paycheck understates future net pay."
+        ]
+      },
+      {
+        "h2": "NC-4 allowances are the only lever, and the form is easy to get wrong",
+        "p": [
+          "North Carolina uses its own Form NC-4 with its own allowance worksheet. Because the rate is flat, each allowance is worth the same dollar amount to every employee — the rate applied to the allowance value, spread across 26 biweekly periods.",
+          "The common error is carrying a federal W-4 mindset across. The NC-4 worksheet is built around North Carolina's own standard deduction and credits, and an allowance count that looks right federally often over- or under-withholds at the state level for all 26 checks."
+        ]
+      },
+      {
+        "h2": "North Carolina has no reciprocity with any of its four neighbours",
+        "p": [
+          "North Carolina maintains no reciprocal agreements. Virginia, Tennessee, Georgia and South Carolina are all handled through credits at filing. Tennessee takes nothing, so that direction is simple.",
+          "Virginia, Georgia and South Carolina all tax income earned within their borders, so a North Carolina resident working across those lines has two states withholding from the same 26 checks. The Charlotte metropolitan area spills into South Carolina, which makes this a routine issue for a large number of biweekly commuters."
+        ]
+      }
+    ]
+  },
+  "north-dakota-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "North Dakota has the lowest top rate of any state that taxes income",
+        "p": [
+          "North Dakota's brackets top out at a rate low enough that the state line on a biweekly paycheck is a small fraction of what it would be almost anywhere else that taxes wages. The calculator above applies the current percentage method for Forms W-4 from 2020 and later.",
+          "In practical terms a North Dakota state deduction often looks more like a rounding item than a tax. That makes the federal line and FICA the overwhelming drivers of what a North Dakota biweekly deposit actually is."
+        ]
+      },
+      {
+        "h2": "North Dakota uses the post-2020 federal W-4 directly",
+        "p": [
+          "North Dakota does not require a separate state withholding certificate; the calculation runs off the redesigned federal W-4. The calculator above uses the method for Forms W-4 from 2020 and after.",
+          "This means adjustments you make for federal reasons — extra withholding, the multiple-jobs checkbox, dependent credits — flow through to the North Dakota line on all 26 biweekly checks. There is no way to tune the two separately, which is worth knowing before you use the federal form as a savings device."
+        ]
+      },
+      {
+        "h2": "North Dakota has reciprocity with Minnesota and Montana",
+        "p": [
+          "North Dakota maintains reciprocal agreements with Minnesota and Montana. Residents of those states working in North Dakota file the relevant exemption certificate and have no North Dakota withholding on their biweekly checks.",
+          "South Dakota, the fourth neighbour, has no income tax at all, so North Dakota residents working there have nothing withheld by South Dakota. Between the agreements and South Dakota's absence of a tax, North Dakota is one of the cleanest states in the country for cross-border payroll."
+        ]
+      }
+    ]
+  },
+  "ohio-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Ohio's state table changes on August 1, 2026, part-way through the biweekly year",
+        "p": [
+          "Ohio's withholding formula changes effective August 1, 2026, and the calculator above applies whichever version matches the period being modelled. On a biweekly schedule the switch falls inside a pay cycle rather than between two of them.",
+          "That means 2026 Ohio withholding is not one rate applied 26 times. Roughly the first fifteen checks use the old formula and the rest use the new one, so a full-year figure projected from a single spring paycheck will be wrong in a predictable direction."
+        ]
+      },
+      {
+        "h2": "Municipal tax and school district tax can both ride on the same Ohio paycheck",
+        "p": [
+          "Ohio has more local income taxing jurisdictions than any other state. A municipal income tax follows the worksite, a school district income tax follows your residence, and it is entirely possible to have both withheld from the same biweekly check alongside the state line.",
+          "The calculator above takes municipal and school district rates as separate entries because no statewide figure exists. For many Ohio workers the combined local deduction is larger than the state one, which is why estimating an Ohio paycheck from the state rate alone is close to useless."
+        ]
+      },
+      {
+        "h2": "Ohio has reciprocity with five states, but only for the state line",
+        "p": [
+          "Ohio maintains reciprocal agreements with Indiana, Kentucky, Michigan, Pennsylvania and West Virginia. Residents of those states working in Ohio file Form IT-4NR and have no Ohio state income tax withheld.",
+          "Municipal taxes are outside every one of those agreements. A Pennsylvania resident working in Cincinnati can have zero Ohio state withholding and a full Cincinnati municipal deduction on all 26 checks. Reciprocity stops the state line and nothing else."
+        ]
+      }
+    ]
+  },
+  "oklahoma-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Oklahoma rounds every biweekly paycheck to a whole dollar",
+        "p": [
+          "Oklahoma's percentage method computes the tax for the pay period and rounds it to whole dollars, which the calculator above reproduces. Across 26 periods those roundings accumulate into an annual figure slightly different from an exact calculation.",
+          "This is why the Oklahoma line on your stub never shows cents, and why the same salary paid semi-monthly produces a marginally different annual total. It is the method, not a payroll error."
+        ]
+      },
+      {
+        "h2": "Oklahoma's top bracket starts low, so most workers sit in it",
+        "p": [
+          "Oklahoma's graduated brackets compress quickly — the top rate begins at a taxable income level that most full-time workers exceed. In effect Oklahoma behaves like a flat-rate state for the majority of biweekly earners.",
+          "The practical consequence is that a raise rarely produces a bracket jump in the state line the way it can in Minnesota or New York. The Oklahoma state percentage on paycheck 26 is usually close to what it was on paycheck 1."
+        ]
+      },
+      {
+        "h2": "Oklahoma has no reciprocity, and it borders six states",
+        "p": [
+          "Oklahoma maintains no reciprocal agreements. Texas takes nothing, so that direction is straightforward. Kansas, Missouri, Arkansas, Colorado and New Mexico all tax income earned within their borders and will withhold from an Oklahoma resident working there.",
+          "Arkansas is the one to watch, because it applies a convenience-of-the-employer rule: remote work for an Arkansas employer can be sourced to Arkansas even when performed in Oklahoma, producing Arkansas withholding on all 26 checks."
+        ]
+      }
+    ]
+  },
+  "oregon-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Oregon's Workers' Benefit Fund is charged by the hour, so your schedule changes it",
+        "p": [
+          "Oregon's Workers' Benefit Fund assessment is a cents-per-hour charge on hours worked, not a percentage of wages. The calculator above takes the employee rate in cents and your annual hours. That makes it the one deduction on this page that depends on how many hours a pay period contains rather than how much it pays.",
+          "Two Oregon employees on identical salaries with different schedules — one full-time salaried, one working longer hours — pay different WBF amounts. It is also the reason an Oregon estimate needs an hours figure at all, which no other state on this site requires."
+        ]
+      },
+      {
+        "h2": "Oregon stacks transit tax and Paid Leave on top of income tax",
+        "p": [
+          "Oregon withholds a statewide transit tax of 0.1% of wages, an employee Paid Leave premium on wages up to $184,500, and the WBF hourly assessment, all alongside income tax. The transit tax is computed per pay period and truncated to the cent, so it is 26 small identical deductions.",
+          "The Paid Leave premium stops once you cross the wage base, the transit tax never stops, and the WBF depends on hours. Three different behaviours on the same stub is unusual, and it is why an Oregon paycheck is one of the harder ones to reproduce from a single rate."
+        ]
+      },
+      {
+        "h2": "With no Oregon withholding form on file, the fallback is 8% of everything",
+        "p": [
+          "Oregon's default for an employee with no state withholding certificate is a flat 8% of wages, which the calculator above applies when you indicate no form is on file. For most earners that is well above the correct rate.",
+          "Applied across 26 biweekly checks, the excess is substantial and does not come back until filing. Oregon also has no sales tax, which is the trade-off for a relatively heavy income tax — but the 8% fallback is not a trade-off, it is just a missing form."
+        ]
+      }
+    ]
+  },
+  "pennsylvania-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Pennsylvania's 3.07% applies from the first dollar with no standard deduction",
+        "p": [
+          "Pennsylvania levies a flat 3.07% on compensation with no standard deduction, no personal exemption and no allowances. The calculator above applies it directly to wages. That makes the state line the most predictable item on a Pennsylvania stub: 3.07% of gross, all 26 periods, at every salary.",
+          "It also means Pennsylvania takes more from low earners as a share of income than almost any bracketed state, and less from high earners. There is no form to tune and nothing to claim — the only Pennsylvania variable is the local rate."
+        ]
+      },
+      {
+        "h2": "The local EIT is a separate tax with its own rate and its own rules",
+        "p": [
+          "Pennsylvania municipalities and school districts levy an Earned Income Tax, withheld from each biweekly paycheck on top of the state's 3.07%. The combined local rate varies widely, and Philadelphia runs its own separate wage tax at a substantially higher rate than most of the commonwealth.",
+          "The calculator above takes the local rate as an entry. Pennsylvania's rule is generally that you pay the higher of your resident or worksite rate, with the revenue split between jurisdictions — so moving house can change your withholding even if your job does not."
+        ]
+      },
+      {
+        "h2": "Pennsylvania has reciprocity with six states and a convenience rule of its own",
+        "p": [
+          "Pennsylvania maintains reciprocal agreements with Indiana, Maryland, New Jersey, Ohio, Virginia and West Virginia. Residents of those states working in Pennsylvania file Form REV-419 and have no Pennsylvania state withholding.",
+          "New York is not a partner, and Pennsylvania applies its own convenience-of-the-employer rule to remote workers on Pennsylvania payrolls. The agreements also cover the state line only — the local EIT and the Philadelphia wage tax are outside them, so a New Jersey resident working in Philadelphia can have no Pennsylvania state tax and a full city wage tax on all 26 checks."
+        ]
+      }
+    ]
+  },
+  "rhode-island-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Rhode Island withholds Temporary Disability Insurance from the employee",
+        "p": [
+          "Rhode Island is one of the few states with an employee-funded Temporary Disability Insurance programme. The TDI contribution is withheld from wages up to an annual taxable wage base, so for higher earners it stops partway through the year and the remaining biweekly deposits are larger.",
+          "The table above models income tax. The TDI line is separate, and it is the main reason a Rhode Island stub carries a state deduction that a Connecticut or Massachusetts stub structures differently."
+        ]
+      },
+      {
+        "h2": "Rhode Island exemptions phase out at higher incomes",
+        "p": [
+          "Rhode Island's personal exemption, claimed on the state RI W-4, is reduced and eventually eliminated above an income threshold. The calculator above applies the exemption value you enter.",
+          "On a biweekly schedule the effect is that the same number of exemptions is worth progressively less as salary rises, and worth nothing at all above the phase-out. Someone comparing their state line against a lower-paid colleague's will find the difference larger than the salary gap alone explains."
+        ]
+      },
+      {
+        "h2": "Rhode Island has no reciprocity with Massachusetts or Connecticut",
+        "p": [
+          "Rhode Island maintains no reciprocal agreements. Both of its neighbours tax income earned within their borders, and Rhode Island is small enough that a large share of its workforce crosses a state line to work.",
+          "A Rhode Island resident working in Massachusetts has Massachusetts tax withheld from all 26 checks and claims a Rhode Island credit at filing. Connecticut's retaliatory convenience provision can also reach a Rhode Island resident working remotely for a Connecticut employer."
+        ]
+      }
+    ]
+  },
+  "south-carolina-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "South Carolina's brackets compress to a single effective rate quickly",
+        "p": [
+          "South Carolina has collapsed its bracket structure so that most of the range is taxed at the top rate, with a large zero-rate band at the bottom. The WH-1603F annualized formula in the calculator above reflects that shape.",
+          "For a biweekly earner the result is a state line that stays at zero or near-zero at low salaries and then rises quickly to a near-constant percentage. The steep part of that curve is narrow, so two colleagues a few thousand dollars apart in salary can have noticeably different effective state rates."
+        ]
+      },
+      {
+        "h2": "South Carolina's rate has been stepping down annually",
+        "p": [
+          "South Carolina has been reducing its top marginal rate on a legislated schedule, contingent on revenue targets being met. The calculator above uses the current year's rate.",
+          "That makes year-over-year stub comparison misleading: an identical salary yields a smaller state line each year the reduction proceeds. It also means a full-year projection built from a January paycheck can be slightly off if the schedule advances."
+        ]
+      },
+      {
+        "h2": "South Carolina has no reciprocity, and Charlotte straddles the border",
+        "p": [
+          "South Carolina maintains no reciprocal agreements with North Carolina or Georgia. Both tax income earned within their borders, so a South Carolina resident working across either line has two states withholding from the same 26 checks.",
+          "The Charlotte metropolitan area is the busiest version of this — a large number of South Carolina residents work at North Carolina worksites. North Carolina withholds on the work performed there and South Carolina gives a credit at filing, a year after the money left the paycheck."
+        ]
+      }
+    ]
+  },
+  "utah-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Utah's withholding tables change on June 1, 2026, splitting the biweekly year",
+        "p": [
+          "Utah's Publication 14 tables change effective June 1, 2026, and the calculator above applies whichever version matches the pay period. On a 26-period schedule that date falls inside a pay cycle rather than between two of them.",
+          "So 2026 Utah withholding is roughly the first eleven checks on one table and the rest on another. Projecting a full year from a single spring paycheck will be wrong, and the direction of the error depends on which way the tables moved."
+        ]
+      },
+      {
+        "h2": "Utah gives a credit that phases out, not an allowance",
+        "p": [
+          "Utah applies a single rate to all taxable income and then subtracts a taxpayer credit that phases out as income rises. The calculator above computes the period tax, subtracts the credit and rounds.",
+          "The practical effect is a state line that behaves progressively even though the rate is flat. At lower salaries the credit cancels much of the tax; at higher ones it is gone entirely. Reading Utah's flat rate as your effective rate will overstate withholding at the bottom of the range and match it at the top."
+        ]
+      },
+      {
+        "h2": "Utah has no reciprocity, and four neighbours tax income",
+        "p": [
+          "Utah maintains no reciprocal agreements. Nevada and Wyoming levy no income tax, so work performed there creates no second state line. Idaho, Colorado, Arizona and New Mexico all tax income earned within their borders and will withhold from a Utah resident working there.",
+          "Arizona is the partial exception in the other direction: Arizona's reciprocity list includes California, Indiana, Oregon and Virginia, not Utah, so a Utah resident working in Arizona is withheld by Arizona and credited by Utah at filing."
+        ]
+      }
+    ]
+  },
+  "vermont-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Vermont allowances come from Form W-4VT, not the federal W-4",
+        "p": [
+          "Vermont's GB-1210 method uses allowances claimed on Form W-4VT. Since the federal W-4 dropped allowances, Vermont employees who never completed the state form are commonly withheld at a default that does not match their situation.",
+          "That default applies to all 26 biweekly checks before anything reconciles. If the Vermont line on your stub runs above the figures in the table, the missing W-4VT is the first thing to check — it is the single most common cause."
+        ]
+      },
+      {
+        "h2": "Vermont's top bracket is high relative to the size of the state's brackets",
+        "p": [
+          "Vermont runs graduated brackets with a comparatively high top rate, and withholding is computed by annualizing the biweekly wage. Crossing a bracket therefore changes the state line on every remaining paycheck of the year, not just the one where the raise landed.",
+          "It also makes irregular periods conspicuous. A biweekly check containing a bonus is annualized as though the bonus repeated 26 times, so that period is over-withheld and the excess returns at filing."
+        ]
+      },
+      {
+        "h2": "Vermont has no reciprocity, and New Hampshire next door taxes nothing",
+        "p": [
+          "Vermont maintains no reciprocal agreements. New Hampshire has no wage income tax, so a Vermont resident working across that border has only Vermont in their withholding — but a New Hampshire resident working in Vermont has Vermont tax withheld from all 26 checks with no home-state credit to claim.",
+          "Massachusetts and New York, the other two neighbours, both tax income earned within their borders, and New York's convenience rule can reach a Vermont resident working remotely for a New York employer."
+        ]
+      }
+    ]
+  },
+  "virginia-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Virginia's withholding formula changed in July 2025 and has not changed since",
+        "p": [
+          "The calculator above uses Virginia's withholding formula effective July 2025 and later. If you are comparing against a stub from the first half of 2025, the method differs — that mid-year change split the biweekly year the way Georgia's, Ohio's and Utah's do in 2026.",
+          "For 2026 the formula is stable across all 26 periods, which makes Virginia easier to project than several of its neighbours. A January paycheck is a reliable guide to a December one at the same salary."
+        ]
+      },
+      {
+        "h2": "Virginia's brackets have not been indexed, so the top one starts very low",
+        "p": [
+          "Virginia's top bracket begins at a taxable income level set decades ago and never adjusted for inflation. Almost every full-time worker is in it, which means Virginia behaves like a flat-rate state in practice despite having four brackets on paper.",
+          "For a biweekly earner this makes the state line highly predictable: a near-constant percentage of gross across all 26 checks, with little bracket effect from a raise. The exemptions claimed on Form VA-4 are the main lever, and Virginia also provides additional exemptions for age and blindness."
+        ]
+      },
+      {
+        "h2": "Virginia has reciprocity with five jurisdictions",
+        "p": [
+          "Virginia maintains reciprocal agreements with the District of Columbia, Maryland, Pennsylvania, West Virginia and Kentucky. Residents of those places working in Virginia file Form VA-4 and have no Virginia withholding.",
+          "This is what makes the Washington metropolitan area workable: a Virginia resident working in DC or Maryland has one jurisdiction in their withholding rather than two. North Carolina and Tennessee are not partners — Tennessee takes nothing, but a North Carolina worksite means withholding from both states on all 26 checks."
+        ]
+      }
+    ]
+  },
+  "washington-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Washington has no income tax but two payroll programmes that hit every check",
+        "p": [
+          "Washington does not tax wages, yet a Washington stub is not blank in the state column. The employee share of Paid Family and Medical Leave applies to wages up to $184,500, and the WA Cares long-term care premium applies at 0.58% with no wage ceiling at all.",
+          "The table above now shows these under State Payroll. It is why a Washington biweekly deposit is smaller than an otherwise identical Texas or Florida deposit at the same salary, despite both states being described as having no income tax."
+        ]
+      },
+      {
+        "h2": "The two Washington programmes stop at different points, or not at all",
+        "p": [
+          "Paid Leave stops once your wages cross $184,500, on the same paycheck Social Security stops. WA Cares has no ceiling, so it continues on all 26 checks at every salary.",
+          "For a high earner that produces a distinctive late-year pattern: one paycheck where two deductions disappear together and one small deduction carries on. Below the base both run all year, and the combined effect is a little over 1% of gross."
+        ]
+      },
+      {
+        "h2": "Washington has no income tax to credit, so an Oregon commute is expensive",
+        "p": [
+          "A Washington resident working in Oregon has Oregon income tax withheld from all 26 biweekly checks, plus Oregon's transit tax and Paid Leave premium on the work performed there. Washington offers no credit, because it has no income tax against which one could be applied.",
+          "That asymmetry is the defining fact of the Portland–Vancouver labour market. Running the other way, an Oregon resident working in Washington pays Oregon on the income anyway, since Oregon taxes its residents on all income regardless of source."
+        ]
+      }
+    ]
+  },
+  "wisconsin-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "Wisconsin's W-166 method annualizes and rounds each biweekly period",
+        "p": [
+          "Wisconsin's W-166 annualized method computes the tax from annualized wages, then rounds at the pay-period level before dividing across 26 checks. The calculator above follows that sequence.",
+          "As with the other per-period rounding states, this means 26 rounded periods do not sum to an exact annual figure, and the same salary paid on a different frequency produces a slightly different annual total."
+        ]
+      },
+      {
+        "h2": "The WT-4 lets you add or subtract a fixed amount from every check",
+        "p": [
+          "Wisconsin's Form WT-4 carries both an additional-withholding line and a reduced-withholding line, and the calculator above accepts both. Few states allow employees to formally request less withholding than the tables produce.",
+          "On a biweekly schedule each entry is a flat per-check adjustment applied 26 times, so a $10 line is $260 over the year. The reduction option is genuinely useful for employees whose tables over-withhold, but it puts the burden of getting it right on you rather than on the formula."
+        ]
+      },
+      {
+        "h2": "Wisconsin has reciprocity with four states, but not Minnesota",
+        "p": [
+          "Wisconsin maintains reciprocal agreements with Illinois, Indiana, Kentucky and Michigan. Residents of those states working in Wisconsin file Form W-220 and have no Wisconsin withholding.",
+          "Minnesota is the conspicuous absence. The Wisconsin–Minnesota agreement ended years ago, so a Wisconsin resident working in Minneapolis has Minnesota tax withheld from all 26 checks and claims a Wisconsin credit at filing. For the Twin Cities and La Crosse commuter belts this is the single most consequential payroll fact in the state."
+        ]
+      }
+    ]
+  },
+  "wv-paycheck-calculator": {
+    "sections": [
+      {
+        "h2": "West Virginia runs two different tables depending on household earners",
+        "p": [
+          "West Virginia's IT-100.2A method uses a one-earner table and a two-earner table, and the calculator above applies whichever matches your situation. Most states handle this through a filing status; West Virginia handles it through an entirely separate rate schedule.",
+          "Selecting the wrong one on Form IT-104 misstates withholding on all 26 biweekly checks. The two-earner table withholds more at the same wage, because it assumes household income that the single wage alone does not reveal."
+        ]
+      },
+      {
+        "h2": "West Virginia's rate has been stepping down under a trigger mechanism",
+        "p": [
+          "West Virginia has legislated reductions in its income tax rates tied to revenue triggers, so the rate can fall in some years and hold in others. The calculator above uses the current schedule.",
+          "Because the reductions are conditional rather than fixed, a multi-year projection built from today's biweekly figure is less reliable in West Virginia than in states on a fixed step-down. Check the current rate each January rather than assuming last year's stub still applies."
+        ]
+      },
+      {
+        "h2": "West Virginia has reciprocity with five neighbours",
+        "p": [
+          "West Virginia maintains reciprocal agreements with Kentucky, Maryland, Ohio, Pennsylvania and Virginia — every state it borders. Residents of those states working in West Virginia file Form WV/IT-104R and have no West Virginia withholding, and West Virginia residents working there are taxed at home instead.",
+          "That full coverage is unusual and it makes West Virginia one of the simplest states in the country for cross-border payroll. The exception is local tax: Ohio municipal taxes and Pennsylvania's local EIT sit outside the agreements and can still be withheld from a West Virginia resident's paycheck."
+        ]
+      }
+    ]
+  }
+}
