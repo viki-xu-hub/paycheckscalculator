@@ -6,7 +6,7 @@ import { ohioRateSummary, ohioSalesTax, pct } from "../lib/salesTax";
 const YEAR = "2026";
 const CANONICAL = "https://www.paycheckscalculator.org/ohio-sales-tax-calculator";
 const TITLE = `Ohio Sales Tax Calculator ${YEAR} — All 88 County Rates`;
-const DESCRIPTION = `Free Ohio sales tax calculator for ${YEAR}. Pick any of the 88 counties to load its published rate, add or remove sales tax, and see the 5.75% state base plus the county piece.`;
+const DESCRIPTION = `Ohio sales tax calculator with all 88 county rates for ${YEAR}. Pick a county to load its rate, then add or remove sales tax on any amount.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -101,9 +101,9 @@ export default function OhioSalesTaxCalculatorPage() {
         <h1>Ohio Sales Tax Calculator <em>{YEAR}</em></h1>
         <div className="hero-intro">
           <p>
-            Ohio charges a {pct(ohioSalesTax.stateBase)} state sales and use tax, and every county adds a permissive tax
-            on top. Combined rates run from {pct(s.min)} to {pct(s.max)}. Pick your county below and the calculator fills
-            in the published rate.
+            This Ohio sales tax calculator covers all {s.countyCount} counties. Ohio charges a {pct(ohioSalesTax.stateBase)} state
+            sales and use tax and every county adds a permissive tax on top, so combined rates run from {pct(s.min)} to{" "}
+            {pct(s.max)}. Pick your county below and the rate fills in automatically.
           </p>
         </div>
         <SalesTaxCalculator
@@ -130,6 +130,19 @@ export default function OhioSalesTaxCalculatorPage() {
         <p className="kicker">OHIO RATE STRUCTURE</p>
         <h2>How Ohio Sales Tax Is Made Up</h2>
         <section>
+          <figure className="bracket-figure">
+            <img
+              src="/images/sales-tax/ohio.svg"
+              alt={`Ohio sales tax calculator chart: ${pct(ohioSalesTax.stateBase)} Ohio state rate plus a county permissive tax, with combined rates from ${pct(s.min)} to ${pct(s.max)} across all ${s.countyCount} counties`}
+              width={880}
+              height={360}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              Ohio sales tax rates by county: the state base, the county piece, and how many counties sit at each combined rate.
+            </figcaption>
+          </figure>
           <p>
             Unlike California or Texas, Ohio keeps it simple: one state rate, plus one county permissive rate. There are
             no separate city sales taxes, so the county a delivery lands in decides the rate.
@@ -157,7 +170,7 @@ export default function OhioSalesTaxCalculatorPage() {
 
       <article className="long-seo">
         <p className="kicker">ALL {s.countyCount} COUNTIES</p>
-        <h2>Ohio Sales Tax Rate by County</h2>
+        <h2>Ohio Sales Tax Calculator: Rate by County</h2>
         <section>
           <p>
             Every Ohio county with its combined state plus county rate, effective {ohioSalesTax.effective}, as published
@@ -236,7 +249,7 @@ export default function OhioSalesTaxCalculatorPage() {
 
       <article className="long-seo">
         <p className="kicker">MORE SALES TAX RATES</p>
-        <h2>Sales Tax Calculators for Other Places</h2>
+        <h3>Sales tax calculators for other places</h3>
         <section>
           <div className="tool-links">
             <a href="/sales-tax"><b>All Sales Tax Calculators</b><span>Browse every rate we publish →</span></a>

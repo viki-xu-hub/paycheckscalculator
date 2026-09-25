@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" role="img" aria-labelledby="t d">
+  <title id="t">Sales tax calculator — 2026 combined rates by city and county</title>
+  <desc id="d">Combined sales tax rates for San Jose, CA 10%, Los Angeles, CA 9.75%, Sacramento, CA 8.75%, San Francisco, CA 8.625%, Austin, TX 8.25%, Orange County, CA 7.75%, Anaheim, CA 7.75%, Costa Mesa, CA 7.75%.</desc>
+  <style>
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 14px Arial,Helvetica,sans-serif;fill:#fff}
+    .v{font:700 13px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .l{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .lg{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+  </style>
+  <rect width="880" height="360" fill="#f7f8fa" rx="12"/><text x="440" y="38" text-anchor="middle" class="h">Sales tax calculator — 2026 combined rates by city and county</text><text x="440" y="62" text-anchor="middle" class="s">Published agency rates, highest first</text><text x="60" y="103" class="l">San Jose, CA</text><rect x="240" y="92" width="520.0" height="14" fill="#9aa7b4" rx="3"/><text x="768.0" y="103" class="v">10%</text><text x="60" y="129" class="l">Los Angeles, CA</text><rect x="240" y="118" width="507.0" height="14" fill="#9aa7b4" rx="3"/><text x="755.0" y="129" class="v">9.75%</text><text x="60" y="155" class="l">Sacramento, CA</text><rect x="240" y="144" width="455.0" height="14" fill="#9aa7b4" rx="3"/><text x="703.0" y="155" class="v">8.75%</text><text x="60" y="181" class="l">San Francisco, CA</text><rect x="240" y="170" width="448.5" height="14" fill="#9aa7b4" rx="3"/><text x="696.5" y="181" class="v">8.625%</text><text x="60" y="207" class="l">Austin, TX</text><rect x="240" y="196" width="429.0" height="14" fill="#9aa7b4" rx="3"/><text x="677.0" y="207" class="v">8.25%</text><text x="60" y="233" class="l">Orange County, CA</text><rect x="240" y="222" width="403.0" height="14" fill="#9aa7b4" rx="3"/><text x="651.0" y="233" class="v">7.75%</text><text x="60" y="259" class="l">Anaheim, CA</text><rect x="240" y="248" width="403.0" height="14" fill="#9aa7b4" rx="3"/><text x="651.0" y="259" class="v">7.75%</text><text x="60" y="285" class="l">Costa Mesa, CA</text><rect x="240" y="274" width="403.0" height="14" fill="#9aa7b4" rx="3"/><text x="651.0" y="285" class="v">7.75%</text></svg>

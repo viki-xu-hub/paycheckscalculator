@@ -5,7 +5,7 @@ import { ohioRateSummary, ohioSalesTax, pct, salesTaxLocations } from "../lib/sa
 
 const YEAR = "2026";
 const TITLE = `Sales Tax Calculator ${YEAR} — City and County Rates`;
-const DESCRIPTION = `Free sales tax calculator with published ${YEAR} rates for Los Angeles, San Jose, Orange County, Sacramento, San Francisco, Anaheim, Costa Mesa, Austin and all 88 Ohio counties.`;
+const DESCRIPTION = `Free sales tax calculator with ${YEAR} rates for Los Angeles, San Jose, Orange County, Austin and all 88 Ohio counties. Add or remove tax.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -55,8 +55,8 @@ export default function SalesTaxHub() {
         <h1>Sales Tax <em>Calculator</em></h1>
         <div className="hero-intro">
           <p>
-            Work out the sales tax on any purchase, or pull the tax back out of a receipt total. Pick a city below to
-            load its published rate, or type a rate of your own.
+            This sales tax calculator works out the tax on any purchase, or pulls the tax back out of a receipt total.
+            Pick a city below to load its published rate, or type a rate of your own.
           </p>
         </div>
         <SalesTaxCalculator
@@ -77,6 +77,17 @@ export default function SalesTaxHub() {
         <p className="kicker">RATES WE PUBLISH</p>
         <h2>Sales Tax Rates by City and County</h2>
         <section>
+          <figure className="bracket-figure">
+            <img
+              src="/images/sales-tax/index.svg"
+              alt={`Sales tax calculator rate comparison for ${YEAR}: combined sales tax rates for ${sorted.map(l => `${l.name} ${pct(l.rate)}`).join(", ")}`}
+              width={880}
+              height={360}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Published combined sales tax rates for every city and county on this site, highest first.</figcaption>
+          </figure>
           <p>
             Each page below carries the rate from the taxing agency&apos;s own table, the breakdown between the state
             base and local district taxes, and a calculator pre-filled with that rate.

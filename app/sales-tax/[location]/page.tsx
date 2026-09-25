@@ -21,6 +21,7 @@ type Editorial = {
   nearbyIntro: string;
   exemptionsIntro: string;
   exemptions: string[];
+  metaDescription: string;
   sourceNote: string;
   disclaimer: string;
   rateHelp: string;
@@ -38,10 +39,9 @@ export async function generateMetadata({ params }: { params: Promise<{ location:
   const ed = editorial[location];
   if (!p) return {};
   const title = `${p.name} Sales Tax ${YEAR} — ${pct(p.rate)} Rate & Calculator`;
-  // First sentence of the hand-written intro, so each page's snippet differs.
-  const description = ed
-    ? `${ed.intro.split(". ")[0]}. Work out the tax on any purchase, or back it out of a total.`.slice(0, 300)
-    : `${p.name}, ${p.stateAbbr} sales tax is ${pct(p.rate)} as of ${p.effective}.`;
+  // Hand-written per location, kept in the 120-160 character range.
+  const description = ed?.metaDescription
+    ?? `${p.name}, ${p.stateAbbr} sales tax is ${pct(p.rate)} as of ${p.effective}.`;
   return {
     title,
     description,
@@ -124,6 +124,19 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
         <p className="kicker">RATE BREAKDOWN</p>
         <h2>{p.name} Sales Tax Rate, Broken Down</h2>
         <section>
+          <figure className="bracket-figure">
+            <img
+              src={`/images/sales-tax/${p.slug}.svg`}
+              alt={`${p.name} sales tax rate breakdown for ${YEAR}: ${pct(p.stateBase)} ${p.state} statewide base plus ${pct(p.district)} local tax, giving a combined ${pct(p.rate)}`}
+              width={880}
+              height={360}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              How the {pct(p.rate)} rate is built, and how it compares with the rates around it.
+            </figcaption>
+          </figure>
           <div className="table-wrap">
             <table>
               <thead>
@@ -163,7 +176,7 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
       {p.cities && p.cities.length > 0 && (
         <article className="long-seo">
           <p className="kicker">CITY BY CITY</p>
-          <h2>Every {p.name} City and Its Rate</h2>
+          <h2>{p.name} Sales Tax by City</h2>
           <section>
             <div className="table-wrap">
               <table>
@@ -185,7 +198,7 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
       {p.nearby.length > 0 && ed?.nearbyIntro && (
         <article className="long-seo">
           <p className="kicker">NEARBY RATES</p>
-          <h2>How {p.name} Compares With Its Neighbours</h2>
+          <h2>How {p.name} Compares Nearby</h2>
           <section>
             <p>{ed.nearbyIntro}</p>
             <div className="table-wrap">
@@ -217,7 +230,7 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
       {ed && (
         <article className="long-seo">
           <p className="kicker">TAXABLE OR NOT</p>
-          <h2>What Is Taxed in {p.name}</h2>
+          <h2>What {p.name} Sales Tax Applies To</h2>
           <section>
             <p>{ed.exemptionsIntro}</p>
             <ul className="checklist">
@@ -242,7 +255,7 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
 
       <article className="long-seo">
         <p className="kicker">RATE SOURCE</p>
-        <h2>Where the {p.name} Figure Comes From</h2>
+        <h2>Where These Rates Come From</h2>
         <section>
           <p>
             {ed?.sourceNote}{" "}
@@ -263,7 +276,7 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
 
       <article className="long-seo">
         <p className="kicker">OTHER RATES</p>
-        <h2>Sales Tax Elsewhere</h2>
+        <h3>Sales tax rates elsewhere</h3>
         <section>
           <div className="tool-links">
             {/* Rotate the subset per page so sibling pages do not share an identical link block. */}
