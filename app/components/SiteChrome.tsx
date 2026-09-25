@@ -163,6 +163,12 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://uno.directory" rel="noopener noreferrer">
           <img src="https://uno.directory/uno-directory.svg" alt="Listed on Uno Directory" width="120" height="30" loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://launchstag.com/p/paychecks-calculator" rel="noopener">
+          <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" loading="lazy" />
+        </a>
+        <a className="partner-badge" target="_blank" href="https://twelve.tools" rel="noopener noreferrer">
+          <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="148" height="40" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
