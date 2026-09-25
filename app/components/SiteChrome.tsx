@@ -213,6 +213,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://thekeytools.com/ai/paycheckscalculator" rel="noopener noreferrer">
           <img src="https://thekeytools.com/assets/images/badge.png" alt="The Key Tools" height={54} loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://startupbenchmarks.com/product/paycheckscalculator" rel="noopener noreferrer">
+          <img src="https://startupbenchmarks.com/assets/images/badge.png" alt="Startup Benchmarks" height={54} loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
