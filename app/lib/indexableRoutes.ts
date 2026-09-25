@@ -27,6 +27,7 @@ const CORE_INDEXABLE_PATHS = [
   "/tax-write-off",
   "/dependent-care-fsa",
   "/hsa-calculator",
+  "/can-i-claim-my-girlfriend-as-a-dependent",
 ] as const;
 
 // Legacy location slugs at root (e.g. /texas-paycheck-calculator)

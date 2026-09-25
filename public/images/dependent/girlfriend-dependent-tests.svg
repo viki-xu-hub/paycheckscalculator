@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="400" viewBox="0 0 880 400" role="img" aria-labelledby="t d">
+  <title id="t">The five IRS tests for claiming a girlfriend as a dependent in 2026</title>
+  <desc id="d">All five must pass: she lived with you the entire year, her gross income was under $5,300, you provided more than half her support, she was not another taxpayer's qualifying child, and she met the citizenship or residency rule.</desc>
+  <style>
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 13px Arial,Helvetica,sans-serif;fill:#fff}
+    .lbl{font:700 13px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .sub{font:11.5px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .ok{font:700 14px Arial,Helvetica,sans-serif;fill:#0f7a5a}
+    .no{font:700 13px Arial,Helvetica,sans-serif;fill:#b23b32}
+  </style>
+  <rect width="880" height="400" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="36" text-anchor="middle" class="h">Can I claim my girlfriend as a dependent? The five tests, 2026</text>
+  <text x="440" y="59" text-anchor="middle" class="s">Every one must pass — failing a single test ends the claim</text>
+
+  <g>
+    <rect x="44" y="86" width="792" height="46" rx="8" fill="#fff" stroke="#e4e7ec" stroke-width="1.5"/>
+    <circle cx="70" cy="109" r="13" fill="#4a63e7"/><text x="70" y="114" text-anchor="middle" class="n">1</text>
+    <text x="94" y="105" class="lbl">Household</text>
+    <text x="94" y="122" class="sub">She lived with you the entire year as a member of your household</text>
+    <text x="820" y="114" text-anchor="end" class="no">Moved in mid-year → fails</text>
+  </g>
+  <g>
+    <rect x="44" y="140" width="792" height="46" rx="8" fill="#fff" stroke="#e4e7ec" stroke-width="1.5"/>
+    <circle cx="70" cy="163" r="13" fill="#c9741a"/><text x="70" y="168" text-anchor="middle" class="n">2</text>
+    <text x="94" y="159" class="lbl">Gross income under $5,300</text>
+    <text x="94" y="176" class="sub">2026 limit under § 152(d)(1)(B); it was $5,200 for 2025</text>
+    <text x="820" y="168" text-anchor="end" class="no">A regular job → usually fails</text>
+  </g>
+  <g>
+    <rect x="44" y="194" width="792" height="46" rx="8" fill="#fff" stroke="#e4e7ec" stroke-width="1.5"/>
+    <circle cx="70" cy="217" r="13" fill="#149c86"/><text x="70" y="222" text-anchor="middle" class="n">3</text>
+    <text x="94" y="213" class="lbl">More than half her support</text>
+    <text x="94" y="230" class="sub">Your contribution ÷ her total support from all sources &gt; 50%</text>
+    <text x="820" y="222" text-anchor="end" class="no">Parents pay tuition → often fails</text>
+  </g>
+  <g>
+    <rect x="44" y="248" width="792" height="46" rx="8" fill="#fff" stroke="#e4e7ec" stroke-width="1.5"/>
+    <circle cx="70" cy="271" r="13" fill="#8a4fd6"/><text x="70" y="276" text-anchor="middle" class="n">4</text>
+    <text x="94" y="267" class="lbl">Not another taxpayer's qualifying child</text>
+    <text x="94" y="284" class="sub">Common blocker for students still claimable by their parents</text>
+    <text x="820" y="276" text-anchor="end" class="no">Claimed by parents → fails</text>
+  </g>
+  <g>
+    <rect x="44" y="302" width="792" height="46" rx="8" fill="#fff" stroke="#e4e7ec" stroke-width="1.5"/>
+    <circle cx="70" cy="325" r="13" fill="#5f6b7a"/><text x="70" y="330" text-anchor="middle" class="n">5</text>
+    <text x="94" y="321" class="lbl">Citizenship or residency, and local law</text>
+    <text x="94" y="338" class="sub">US citizen, national, resident alien, or resident of Canada or Mexico</text>
+    <text x="820" y="330" text-anchor="end" class="no">Nonresident status → check</text>
+  </g>
+
+  <rect x="44" y="358" width="792" height="28" rx="8" fill="#eaf4f8"/>
+  <text x="440" y="377" text-anchor="middle" class="ok">All five pass → she may qualify as your dependent (Credit for Other Dependents, not the Child Tax Credit)</text>
+</svg>

@@ -33,6 +33,13 @@ const POSTS = [
     meta: "FSA · Child Care · Pre-Tax Benefits",
   },
   {
+    href: "/can-i-claim-my-girlfriend-as-a-dependent",
+    title: "Can I Claim My Girlfriend as a Dependent? 2026 IRS Rules",
+    blurb:
+      "The five IRS qualifying-relative tests, the $5,300 gross income limit for 2026, the support calculation, and why Head of Household is a separate question.",
+    meta: "Dependents · IRS Pub 501 · 2026",
+  },
+  {
     href: "/tax-write-off",
     title: "What Is a Tax Write-Off? Meaning & How It Works (2026)",
     blurb:
