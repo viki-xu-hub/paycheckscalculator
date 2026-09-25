@@ -23,6 +23,29 @@ const frequencyBySlug = Object.fromEntries(DYNAMIC_FREQUENCIES.map(f => [f.slug,
 // State pages not yet indexed by Google — suppress until they gain authority
 const NOINDEX_STATE_SLUGS = new Set<string>([]);
 
+// States where the abbreviation outsells the full name: "pa paycheck calculator" runs
+// 9,900/mo against 2,900 for "pennsylvania paycheck calculator", and MA, SC, GA, CT and KY
+// follow the same pattern. Those titles lead with the abbreviation so the phrase searchers
+// actually type stays contiguous; the H1 and body copy keep the full state name either way.
+const ABBREVIATION_FIRST = new Set(["PA", "GA", "SC", "MA", "CT", "KY", "NH", "WV", "DC", "NYC"]);
+
+// "{Place} Paycheck Calculator" has to survive as one unbroken phrase — it is the head term
+// on every one of these pages — so the salary and abbreviation variants go after the dash.
+function stateTitle(short: string, fullName: string) {
+  const abbrevFirst = ABBREVIATION_FIRST.has(short);
+  const lead = abbrevFirst ? short : fullName;
+  const tail = abbrevFirst ? fullName : short;
+  return `${lead} Paycheck Calculator 2026 – ${tail} Salary & Net Pay`;
+}
+
+function stateDescription(fullName: string, short: string, noTax: boolean) {
+  // Kept inside 120-160 characters: the no-tax variant has to stay shorter because its
+  // extra clause would otherwise push the longer state names past the truncation point.
+  return noTax
+    ? `${fullName} paycheck calculator for 2026: estimate take-home pay after federal tax and FICA. No ${short} income tax — free ${short} salary estimator.`
+    : `${fullName} paycheck calculator for 2026: estimate take-home pay after federal tax, FICA and ${short} state income tax. Free ${short} salary and payroll estimator.`;
+}
+
 
 // Pages such as WV/NH target the abbreviation searchers actually use; `name` becomes the on-page label, `fullName` keeps the state name.
 function pageLocation(slug:string){
@@ -48,14 +71,13 @@ export async function generateMetadata({params}:{params:Promise<{location:string
   const p=pageLocation(location);
   if(!p)return{};
   const canonical=`/${p.slug}`;
-  const noTaxPhrase=p.noTax?"No state income tax on wages.":"Estimate state income tax withholding.";
   return{
-    title:p.fullName!==p.name?`${p.name} Paycheck & Salary Calculator 2026 – ${p.fullName} Take-Home Pay`:`${p.name} Paycheck & Salary Calculator 2026 – Net Pay After Tax`,
-    description:`Free ${p.name} salary and paycheck calculator: estimate 2026 take-home pay after federal tax, FICA, and payroll deductions. ${noTaxPhrase}`,
+    title:stateTitle(p.short,p.fullName),
+    description:stateDescription(p.fullName,p.short,p.noTax===true),
     alternates:{canonical},
     robots:{index:NOINDEX_STATE_SLUGS.has(location)?false:true,follow:true},
     openGraph:{
-      title:`${p.name} Paycheck & Salary Calculator 2026`,
+      title:`${p.fullName} Paycheck Calculator 2026 – ${p.short} Take-Home Pay`,
       description:`Estimate ${p.name} take-home pay after taxes with transparent 2026 withholding assumptions. Works as a salary, hourly, and payroll estimator.`,
       url:canonical,
       type:"website"

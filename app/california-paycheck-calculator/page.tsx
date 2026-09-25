@@ -3,12 +3,12 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "California Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+  title: "California Paycheck Calculator 2026 – CA Salary & Net Pay",
   description:
-    "Use our California salary and paycheck calculator to estimate your 2026 take-home pay after federal taxes, California state income tax, SDI, Social Security, Medicare, and payroll deductions.",
+    "California paycheck calculator for 2026: estimate take-home pay after federal tax, FICA, CA state income tax and SDI. Free CA salary estimator.",
   alternates: { canonical: "/california-paycheck-calculator" },
   openGraph: {
-    title: "California Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+    title: "California Paycheck Calculator 2026 – CA Salary & Net Pay",
     description:
       "Estimate your California take-home pay with federal taxes, California state income tax, SDI, Social Security, Medicare, and payroll deductions.",
     url: "https://www.paycheckscalculator.org/california-paycheck-calculator",

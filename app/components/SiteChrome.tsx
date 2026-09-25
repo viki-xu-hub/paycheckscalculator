@@ -231,7 +231,7 @@ export function SiteFooter() {
           <img src="https://saaspa.ge/api/embed/product/cmughefm20002ic041s5pxv9q/badge.png?theme=blue" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" />
         </a>
         <a className="partner-badge" target="_blank" href="https://shinylaunch.com/product/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://shinylaunch.com/assets/images/badge.png" alt="ShinyLaunch" height={54} loading="lazy" />
+          <img src="https://shinylaunch.com/assets/images/badge.png" alt="ShinyLaunch" width={198} height={54} loading="lazy" />
         </a>
         <a className="partner-badge" href="https://themicrosaasdir.com/product/paycheck-calculator?ref=badge" rel="dofollow">
           <img src="https://themicrosaasdir.com/badge/paycheck-calculator.svg" alt="Featured on TheMicroSaaSDir" width="160" height="44" loading="lazy" />
@@ -240,10 +240,10 @@ export function SiteFooter() {
           <img src="https://thesaasdir.com/badge/evertrend-llc.svg" alt="Featured on TheSaaSDir" width="160" height="44" loading="lazy" />
         </a>
         <a className="partner-badge" target="_blank" href="https://thekeytools.com/ai/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://thekeytools.com/assets/images/badge.png" alt="The Key Tools" height={54} loading="lazy" />
+          <img src="https://thekeytools.com/assets/images/badge.png" alt="The Key Tools" width={208} height={54} loading="lazy" />
         </a>
         <a className="partner-badge" target="_blank" href="https://startupbenchmarks.com/product/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://startupbenchmarks.com/assets/images/badge.png" alt="Startup Benchmarks" height={54} loading="lazy" />
+          <img src="https://startupbenchmarks.com/assets/images/badge.png" alt="Startup Benchmarks" width={265} height={54} loading="lazy" />
         </a>
         <a className="partner-badge" href="https://hunt0.com/products/paycheck-calculator-calculate-your-take-home-pay-after-taxes" target="_blank" rel="noopener nofollow">
           <img src="https://hunt0.com/badges/hunt0-find-us-on-light.svg" alt="Find us on HUNT0" width="170" height="53" loading="lazy" />
@@ -252,7 +252,7 @@ export function SiteFooter() {
           <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
         </a>
         <a className="partner-badge" href="https://www.startupinspire.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" height={54} loading="lazy" />
+          <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" width={187} height={54} loading="lazy" />
         </a>
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span

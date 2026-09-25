@@ -3,12 +3,12 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "New Jersey Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+  title: "New Jersey Paycheck Calculator 2026 – NJ Salary & Net Pay",
   description:
-    "Use our New Jersey salary and paycheck calculator to estimate your 2026 take-home pay after federal taxes, New Jersey state income tax, Social Security, Medicare, and payroll deductions including TDI and FLI.",
+    "New Jersey paycheck calculator for 2026: estimate take-home pay after federal tax, FICA, NJ income tax and TDI/FLI. Free NJ salary estimator.",
   alternates: { canonical: "/new-jersey-paycheck-calculator" },
   openGraph: {
-    title: "New Jersey Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+    title: "New Jersey Paycheck Calculator 2026 – NJ Salary & Net Pay",
     description:
       "Estimate your New Jersey take-home pay with federal taxes, New Jersey state income tax, Social Security, Medicare, TDI, FLI, and payroll deductions.",
     url: "https://www.paycheckscalculator.org/new-jersey-paycheck-calculator",

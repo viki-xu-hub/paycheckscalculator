@@ -3,12 +3,12 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "New York Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+  title: "New York Paycheck Calculator 2026 – NY Salary & Net Pay",
   description:
-    "Use our New York salary and paycheck calculator to estimate your 2026 take-home pay after federal taxes, New York state income tax, Social Security, Medicare, and payroll deductions. NYC resident option available.",
+    "New York paycheck calculator for 2026: estimate take-home pay after federal tax, FICA and NY state income tax, with an NYC resident option.",
   alternates: { canonical: "/new-york-paycheck-calculator" },
   openGraph: {
-    title: "New York Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+    title: "New York Paycheck Calculator 2026 – NY Salary & Net Pay",
     description:
       "Estimate your New York take-home pay with federal taxes, New York state income tax, Social Security, Medicare, and payroll deductions. NYC resident option available.",
     url: "https://www.paycheckscalculator.org/new-york-paycheck-calculator",

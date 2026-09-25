@@ -3,12 +3,12 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Illinois Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+  title: "Illinois Paycheck Calculator 2026 – IL Salary & Net Pay",
   description:
-    "Use our Illinois salary and paycheck calculator to estimate your 2026 take-home pay after federal taxes, Illinois state income tax (4.95% flat rate), Social Security, Medicare, and payroll deductions.",
+    "Illinois paycheck calculator for 2026: estimate take-home pay after federal tax, FICA and the 4.95% IL flat income tax. Free IL salary estimator.",
   alternates: { canonical: "/illinois-paycheck-calculator" },
   openGraph: {
-    title: "Illinois Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+    title: "Illinois Paycheck Calculator 2026 – IL Salary & Net Pay",
     description:
       "Estimate your Illinois take-home pay with federal taxes, Illinois 4.95% flat income tax, Social Security, Medicare, and payroll deductions.",
     url: "https://www.paycheckscalculator.org/illinois-paycheck-calculator",

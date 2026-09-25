@@ -3,12 +3,12 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Florida Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+  title: "Florida Paycheck Calculator 2026 – FL Salary & Net Pay",
   description:
-    "Use our Florida salary and paycheck calculator to estimate your 2026 take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Florida has no state income tax on wages.",
+    "Florida paycheck calculator for 2026: estimate take-home pay after federal tax and FICA. No FL state income tax — free FL salary estimator.",
   alternates: { canonical: "/florida-paycheck-calculator" },
   openGraph: {
-    title: "Florida Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+    title: "Florida Paycheck Calculator 2026 – FL Salary & Net Pay",
     description:
       "Estimate your Florida take-home pay with federal taxes, Social Security, Medicare, and payroll deductions. No Florida state income tax on wages.",
     url: "https://www.paycheckscalculator.org/florida-paycheck-calculator",

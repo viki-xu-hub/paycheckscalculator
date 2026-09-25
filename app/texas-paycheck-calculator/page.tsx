@@ -3,12 +3,12 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Texas Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+  title: "Texas Paycheck Calculator 2026 – TX Salary & Net Pay",
   description:
-    "Use our Texas salary and paycheck calculator to estimate your 2026 take-home pay after federal taxes, Social Security, Medicare, and payroll deductions. Texas has no state income tax on wages.",
+    "Texas paycheck calculator for 2026: estimate take-home pay after federal tax and FICA. No TX state income tax — free TX salary estimator.",
   alternates: { canonical: "/texas-paycheck-calculator" },
   openGraph: {
-    title: "Texas Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
+    title: "Texas Paycheck Calculator 2026 – TX Salary & Net Pay",
     description:
       "Estimate your Texas take-home pay with federal taxes, Social Security, Medicare, and payroll deductions. No Texas state income tax on wages.",
     url: "https://www.paycheckscalculator.org/texas-paycheck-calculator",

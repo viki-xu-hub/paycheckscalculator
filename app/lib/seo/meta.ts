@@ -4,12 +4,11 @@ const SITE = "https://www.paycheckscalculator.org";
 const YEAR = "2026";
 
 export function stateMeta(state: StateData): PageMeta {
-  const taxClause = state.hasStateTax
-    ? `Estimate state income tax withholding at ${state.taxRate}%.`
-    : `${state.name} has no state income tax.`;
   return {
-    title: `${state.name} Paycheck & Salary Calculator ${YEAR} — Take-Home Pay`,
-    description: `Free ${state.name} salary and paycheck calculator for ${YEAR}. Estimate take-home pay after federal taxes, Social Security, Medicare, and ${state.hasStateTax ? `${state.name} state income tax` : "payroll deductions"}. ${taxClause}`,
+    title: `${state.name} Paycheck Calculator ${YEAR} – ${state.abbr} Salary & Net Pay`,
+    description: state.hasStateTax
+      ? `${state.name} paycheck calculator for ${YEAR}: estimate take-home pay after federal tax, FICA and ${state.abbr} state income tax. Free ${state.abbr} salary and payroll estimator.`
+      : `${state.name} paycheck calculator for ${YEAR}: estimate take-home pay after federal tax and FICA. No ${state.abbr} income tax — free ${state.abbr} salary estimator.`,
     h1: `${state.name} Paycheck Calculator ${YEAR}`,
     canonical: `${SITE}/states/${state.slug}`,
   };
