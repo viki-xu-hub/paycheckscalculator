@@ -216,6 +216,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://startupbenchmarks.com/product/paycheckscalculator" rel="noopener noreferrer">
           <img src="https://startupbenchmarks.com/assets/images/badge.png" alt="Startup Benchmarks" height={54} loading="lazy" />
         </a>
+        <a className="partner-badge" href="https://hunt0.com/products/paycheck-calculator-calculate-your-take-home-pay-after-taxes" target="_blank" rel="noopener nofollow">
+          <img src="https://hunt0.com/badges/hunt0-find-us-on-light.svg" alt="Find us on HUNT0" width="170" height="53" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
