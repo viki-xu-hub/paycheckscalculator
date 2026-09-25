@@ -219,6 +219,9 @@ export function SiteFooter() {
         <a className="partner-badge" href="https://hunt0.com/products/paycheck-calculator-calculate-your-take-home-pay-after-taxes" target="_blank" rel="noopener nofollow">
           <img src="https://hunt0.com/badges/hunt0-find-us-on-light.svg" alt="Find us on HUNT0" width="170" height="53" loading="lazy" />
         </a>
+        <a className="partner-badge" href="https://awesomeindie.com/?ref=badge" target="_blank" rel="noopener">
+          <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
+        </a>
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span
           className="partner-badge"
