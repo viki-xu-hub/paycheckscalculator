@@ -26,6 +26,7 @@ export function SiteHeader() {
             <a href="/monthly-paycheck-calculator">Monthly Pay</a>
             <div className="nav-panel-divider" />
             <div className="nav-group-label">Tax & Benefits</div>
+            <a href="/illinois-income-tax-calculator">Illinois Income Tax</a>
             <a href="/hsa-calculator">HSA Calculator</a>
             <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends Worksheet</a>
           </div>
@@ -251,6 +252,9 @@ export function SiteFooter() {
         </a>
         <a className="partner-badge" href="https://peerpush.com/p/paycheck-atlas-weww" target="_blank" rel="noopener">
           <img src="https://peerpush.com/p/paycheck-atlas-weww/badge.png" alt="Paycheck Atlas on PeerPush" width="230" height="auto" loading="lazy" />
+        </a>
+        <a className="partner-badge" href="https://www.ontoplist.com/business-webdirectory/" target="_blank" rel="noopener">
+          <img src="https://www.ontoplist.com/images/ontoplist31.png?id=6ab68f688dfa5" alt="Top Business Services - OnToplist.com" width="180" height="auto" loading="lazy" />
         </a>
         <a className="partner-badge" href="https://awesomeindie.com/?ref=badge" target="_blank" rel="noopener">
           <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
