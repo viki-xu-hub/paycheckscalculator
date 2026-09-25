@@ -187,6 +187,14 @@ export function SiteFooter() {
             loading="lazy"
           />
         </a>
+        {/* Raw HTML so the "&" in the badge URLs is not escaped to "&amp;", which 21st Tools' badge check looks for verbatim. */}
+        <span
+          className="partner-badge"
+          dangerouslySetInnerHTML={{
+            __html:
+              '<a href="https://21st.tools?utm_source=badge&ref=paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://21st.tools/api/badge?theme=light&kind=listing&v=3" alt="Featured on 21st Tools" height="54" /></a>',
+          }}
+        />
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
