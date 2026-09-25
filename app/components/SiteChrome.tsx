@@ -259,6 +259,9 @@ export function SiteFooter() {
         <a className="partner-badge" href="https://findly.tools/paychecks-calculator?utm_source=paychecks-calculator" target="_blank" rel="noopener noreferrer">
           <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="175" height="55" loading="lazy" />
         </a>
+        <a className="partner-badge" href="https://saaslineup.com/product/paycheck-calculator?ref=badge" rel="dofollow">
+          <img src="https://saaslineup.com/badge/paycheck-calculator.svg" alt="Featured on SaaSLineup" width="160" height="44" loading="lazy" />
+        </a>
         <a className="partner-badge" href="https://awesomeindie.com/?ref=badge" target="_blank" rel="noopener">
           <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
         </a>
