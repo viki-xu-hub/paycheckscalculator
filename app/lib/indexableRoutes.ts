@@ -1,4 +1,5 @@
 import { locations } from "./locations";
+import { salesTaxLocations } from "./salesTax";
 import { allProgrammaticUrls, stateUrls, salaryUrls, hourlyUrls, frequencyUrls } from "./seo/sitemap-routes";
 
 export const SITE_ORIGIN = "https://www.paycheckscalculator.org";
@@ -20,14 +21,20 @@ const CORE_INDEXABLE_PATHS = [
   "/contact",
   "/paycheck-taxes",
   "/blog",
+  "/sales-tax",
+  "/ohio-sales-tax-calculator",
 ] as const;
 
 // Legacy location slugs at root (e.g. /texas-paycheck-calculator)
 const LEGACY_LOCATION_PATHS = locations.map(loc => `/${loc.slug}`);
 
+// Sales tax city/county pages (/sales-tax/{slug})
+const SALES_TAX_PATHS = salesTaxLocations.map(l => `/sales-tax/${l.slug}`);
+
 export const INDEXABLE_PATHS = [
   ...CORE_INDEXABLE_PATHS,
   ...LEGACY_LOCATION_PATHS,
+  ...SALES_TAX_PATHS,
 ];
 
 export const INDEXABLE_URLS = INDEXABLE_PATHS.map(path => `${SITE_ORIGIN}${path}`);

@@ -1,4 +1,5 @@
 import statesData from "../data/states.json";
+import { salesTaxLocations } from "../lib/salesTax";
 
 export function SiteHeader() {
   return (
@@ -57,6 +58,21 @@ export function SiteHeader() {
           </div>
         </div>
 
+        {/* Sales Tax dropdown */}
+        <div className="nav-item">
+          <span className="nav-trigger">Sales Tax <span className="nav-caret">▾</span></span>
+          <div className="nav-panel">
+            <div className="nav-group-label">Sales Tax Calculators</div>
+            <a href="/sales-tax">All Sales Tax Rates →</a>
+            <a href="/ohio-sales-tax-calculator">Ohio — All 88 Counties</a>
+            <div className="nav-panel-divider" />
+            <div className="nav-group-label">By City &amp; County</div>
+            {salesTaxLocations.map((l) => (
+              <a key={l.slug} href={`/sales-tax/${l.slug}`}>{l.name}, {l.stateAbbr}</a>
+            ))}
+          </div>
+        </div>
+
         {/* Blog dropdown */}
         <div className="nav-item">
           <span className="nav-trigger">Blog <span className="nav-caret">▾</span></span>
@@ -91,6 +107,16 @@ export function SiteFooter() {
           {states.map((s) => (
             <a key={s.abbr} href={`/${s.slug}`}>{s.name}</a>
           ))}
+        </div>
+      </div>
+      <div className="footer-blog">
+        <p className="footer-blog-title">Sales Tax Rates</p>
+        <div className="footer-blog-grid">
+          {salesTaxLocations.map((l) => (
+            <a key={l.slug} href={`/sales-tax/${l.slug}`}>{l.name} Sales Tax</a>
+          ))}
+          <a href="/ohio-sales-tax-calculator">Ohio Sales Tax Calculator</a>
+          <a href="/sales-tax">All sales tax calculators →</a>
         </div>
       </div>
       <div className="footer-blog">

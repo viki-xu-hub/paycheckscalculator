@@ -1,0 +1,636 @@
+{
+ "generated": "2026-09-25",
+ "locations": [
+  {
+   "slug": "los-angeles-ca",
+   "name": "Los Angeles",
+   "short": "Los Angeles",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 9.75,
+   "stateBase": 7.25,
+   "county": "Los Angeles County",
+   "countyRate": 9.75,
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "effective": "July 1, 2026",
+   "lead": "Los Angeles charges one of the highest combined sales tax rates of any large city in California.",
+   "notes": [
+    "Los Angeles County raised its countywide rate to 9.750% when Measure A replaced the earlier Measure H district tax.",
+    "The City of Los Angeles adds no separate city district tax on top of the county rate, so the city and countywide figures match.",
+    "Neighbouring cities in the same county can still be higher \u2014 several have passed their own district taxes."
+   ],
+   "nearby": [
+    {
+     "name": "Long Beach",
+     "rate": 10.5
+    },
+    {
+     "name": "Santa Monica",
+     "rate": 10.75
+    },
+    {
+     "name": "Pasadena",
+     "rate": 10.5
+    },
+    {
+     "name": "Glendale",
+     "rate": 10.5
+    },
+    {
+     "name": "Burbank",
+     "rate": 10.5
+    },
+    {
+     "name": "Inglewood",
+     "rate": 10.25
+    },
+    {
+     "name": "Torrance",
+     "rate": 10.25
+    },
+    {
+     "name": "Culver City",
+     "rate": 10.75
+    },
+    {
+     "name": "Beverly Hills",
+     "rate": 9.75
+    },
+    {
+     "name": "Compton",
+     "rate": 10.75
+    }
+   ],
+   "district": 2.5
+  },
+  {
+   "slug": "san-jose-ca",
+   "name": "San Jose",
+   "short": "San Jose",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 10.0,
+   "stateBase": 7.25,
+   "county": "Santa Clara County",
+   "countyRate": 9.75,
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "effective": "July 1, 2026",
+   "lead": "San Jose is one of the few California cities where the combined sales tax rate reaches a round 10%.",
+   "notes": [
+    "San Jose sits 0.250% above the Santa Clara County rate because the city levies its own district tax on top of the countywide districts.",
+    "The city of Santa Clara, immediately next door, is lower than San Jose despite being in the same county.",
+    "Several Santa Clara County cities share San Jose's rate; others stop at the county figure."
+   ],
+   "nearby": [
+    {
+     "name": "Santa Clara",
+     "rate": 9.75
+    },
+    {
+     "name": "Sunnyvale",
+     "rate": 9.75
+    },
+    {
+     "name": "Mountain View",
+     "rate": 9.75
+    },
+    {
+     "name": "Palo Alto",
+     "rate": 9.75
+    },
+    {
+     "name": "Cupertino",
+     "rate": 9.75
+    },
+    {
+     "name": "Milpitas",
+     "rate": 10.0
+    },
+    {
+     "name": "Campbell",
+     "rate": 10.5
+    },
+    {
+     "name": "Gilroy",
+     "rate": 9.75
+    },
+    {
+     "name": "Morgan Hill",
+     "rate": 9.75
+    },
+    {
+     "name": "Los Gatos",
+     "rate": 9.875
+    }
+   ],
+   "district": 2.75
+  },
+  {
+   "slug": "orange-county-ca",
+   "name": "Orange County",
+   "short": "Orange County",
+   "kind": "county",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 7.75,
+   "stateBase": 7.25,
+   "county": "Orange County",
+   "countyRate": 7.75,
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "effective": "July 1, 2026",
+   "lead": "Most of Orange County sits at the countywide 7.750% rate, but seven cities have added district taxes that push them higher.",
+   "notes": [
+    "7.750% is the rate in unincorporated Orange County and in the majority of its 34 cities.",
+    "Four cities \u2014 Los Alamitos, Santa Ana, Seal Beach and Westminster \u2014 reach 9.250%, a full 1.500% above the county baseline.",
+    "Because district taxes are set city by city, the correct rate depends on the delivery address, not on the county alone."
+   ],
+   "cities": [
+    {
+     "name": "Los Alamitos",
+     "rate": 9.25
+    },
+    {
+     "name": "Santa Ana",
+     "rate": 9.25
+    },
+    {
+     "name": "Seal Beach",
+     "rate": 9.25
+    },
+    {
+     "name": "Westminster",
+     "rate": 9.25
+    },
+    {
+     "name": "Buena Park",
+     "rate": 8.75
+    },
+    {
+     "name": "Fountain Valley",
+     "rate": 8.75
+    },
+    {
+     "name": "Garden Grove",
+     "rate": 8.75
+    },
+    {
+     "name": "La Habra",
+     "rate": 8.75
+    },
+    {
+     "name": "La Palma",
+     "rate": 8.75
+    },
+    {
+     "name": "Placentia",
+     "rate": 8.75
+    },
+    {
+     "name": "Stanton",
+     "rate": 8.75
+    },
+    {
+     "name": "Aliso Viejo",
+     "rate": 7.75
+    },
+    {
+     "name": "Anaheim",
+     "rate": 7.75
+    },
+    {
+     "name": "Brea",
+     "rate": 7.75
+    },
+    {
+     "name": "Costa Mesa",
+     "rate": 7.75
+    },
+    {
+     "name": "Cypress",
+     "rate": 7.75
+    },
+    {
+     "name": "Dana Point",
+     "rate": 7.75
+    },
+    {
+     "name": "Fullerton",
+     "rate": 7.75
+    },
+    {
+     "name": "Huntington Beach",
+     "rate": 7.75
+    },
+    {
+     "name": "Irvine",
+     "rate": 7.75
+    },
+    {
+     "name": "Laguna Beach",
+     "rate": 7.75
+    },
+    {
+     "name": "Laguna Hills",
+     "rate": 7.75
+    },
+    {
+     "name": "Laguna Niguel",
+     "rate": 7.75
+    },
+    {
+     "name": "Laguna Woods",
+     "rate": 7.75
+    },
+    {
+     "name": "Lake Forest",
+     "rate": 7.75
+    },
+    {
+     "name": "Mission Viejo",
+     "rate": 7.75
+    },
+    {
+     "name": "Newport Beach",
+     "rate": 7.75
+    },
+    {
+     "name": "Orange",
+     "rate": 7.75
+    },
+    {
+     "name": "Rancho Santa Margarita",
+     "rate": 7.75
+    },
+    {
+     "name": "San Clemente",
+     "rate": 7.75
+    },
+    {
+     "name": "San Juan Capistrano",
+     "rate": 7.75
+    },
+    {
+     "name": "Tustin",
+     "rate": 7.75
+    },
+    {
+     "name": "Villa Park",
+     "rate": 7.75
+    },
+    {
+     "name": "Yorba Linda",
+     "rate": 7.75
+    }
+   ],
+   "nearby": [],
+   "district": 0.5
+  },
+  {
+   "slug": "sacramento-ca",
+   "name": "Sacramento",
+   "short": "Sacramento",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 8.75,
+   "stateBase": 7.25,
+   "county": "Sacramento County",
+   "countyRate": 7.75,
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "effective": "July 1, 2026",
+   "lead": "The City of Sacramento sits a full point above the unincorporated Sacramento County rate.",
+   "notes": [
+    "Sacramento County's baseline rate is 7.750%; the City of Sacramento adds city district taxes to reach 8.750%.",
+    "Suburbs such as Elk Grove and Rancho Cordova set their own district taxes, so rates vary across the metro.",
+    "The state capital's rate applies to the city limits, not to every address with a Sacramento mailing address."
+   ],
+   "nearby": [
+    {
+     "name": "Elk Grove",
+     "rate": 8.75
+    },
+    {
+     "name": "Roseville",
+     "rate": 7.75
+    },
+    {
+     "name": "Folsom",
+     "rate": 7.75
+    },
+    {
+     "name": "Citrus Heights",
+     "rate": 7.75
+    },
+    {
+     "name": "Rancho Cordova",
+     "rate": 8.75
+    },
+    {
+     "name": "Davis",
+     "rate": 9.25
+    },
+    {
+     "name": "West Sacramento",
+     "rate": 9.25
+    },
+    {
+     "name": "Galt",
+     "rate": 9.25
+    }
+   ],
+   "district": 1.5
+  },
+  {
+   "slug": "anaheim-ca",
+   "name": "Anaheim",
+   "short": "Anaheim",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 7.75,
+   "stateBase": 7.25,
+   "county": "Orange County",
+   "countyRate": 7.75,
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "effective": "July 1, 2026",
+   "lead": "Anaheim charges the Orange County baseline rate with no additional city district tax.",
+   "notes": [
+    "Anaheim has not adopted a city district tax, so it matches the 7.750% Orange County baseline.",
+    "Anaheim is meaningfully cheaper than nearby Santa Ana and Westminster, both at 9.250%.",
+    "The Anaheim Resort district \u2014 Disneyland, the convention centre and surrounding hotels \u2014 is inside the city limits and uses the same 7.750% rate."
+   ],
+   "nearby": [
+    {
+     "name": "Santa Ana",
+     "rate": 9.25
+    },
+    {
+     "name": "Orange",
+     "rate": 7.75
+    },
+    {
+     "name": "Fullerton",
+     "rate": 7.75
+    },
+    {
+     "name": "Garden Grove",
+     "rate": 8.75
+    },
+    {
+     "name": "Buena Park",
+     "rate": 8.75
+    },
+    {
+     "name": "Placentia",
+     "rate": 8.75
+    },
+    {
+     "name": "Brea",
+     "rate": 7.75
+    },
+    {
+     "name": "Yorba Linda",
+     "rate": 7.75
+    },
+    {
+     "name": "Villa Park",
+     "rate": 7.75
+    },
+    {
+     "name": "Stanton",
+     "rate": 8.75
+    }
+   ],
+   "district": 0.5
+  },
+  {
+   "slug": "san-francisco-ca",
+   "name": "San Francisco",
+   "short": "San Francisco",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 8.625,
+   "stateBase": 7.25,
+   "county": "San Francisco County",
+   "countyRate": 8.625,
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "effective": "July 1, 2026",
+   "lead": "San Francisco is a combined city and county, so a single rate applies everywhere inside the city.",
+   "notes": [
+    "San Francisco is both a city and a county, so there is no separate unincorporated county rate.",
+    "The rate has moved several times in recent years as district taxes were added and expired \u2014 always check the effective date on any figure you find.",
+    "Neighbouring San Mateo and Alameda county cities are frequently higher than San Francisco itself."
+   ],
+   "nearby": [
+    {
+     "name": "Oakland",
+     "rate": 10.75
+    },
+    {
+     "name": "Daly City",
+     "rate": 9.875
+    },
+    {
+     "name": "South San Francisco",
+     "rate": 9.875
+    },
+    {
+     "name": "San Mateo",
+     "rate": 9.625
+    },
+    {
+     "name": "Berkeley",
+     "rate": 10.25
+    },
+    {
+     "name": "San Bruno",
+     "rate": 9.875
+    },
+    {
+     "name": "Pacifica",
+     "rate": 9.875
+    },
+    {
+     "name": "Millbrae",
+     "rate": 9.375
+    }
+   ],
+   "district": 1.375
+  },
+  {
+   "slug": "costa-mesa-ca",
+   "name": "Costa Mesa",
+   "short": "Costa Mesa",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 7.75,
+   "stateBase": 7.25,
+   "county": "Orange County",
+   "countyRate": 7.75,
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "effective": "July 1, 2026",
+   "lead": "Costa Mesa charges the Orange County baseline rate, with no city district tax added.",
+   "notes": [
+    "Costa Mesa has no city district tax, so it sits at the 7.750% Orange County baseline.",
+    "South Coast Plaza and the rest of Costa Mesa's retail corridor use this same 7.750% rate.",
+    "Adjacent Santa Ana is 1.500% higher, which is a real difference on a large purchase."
+   ],
+   "nearby": [
+    {
+     "name": "Newport Beach",
+     "rate": 7.75
+    },
+    {
+     "name": "Huntington Beach",
+     "rate": 7.75
+    },
+    {
+     "name": "Irvine",
+     "rate": 7.75
+    },
+    {
+     "name": "Santa Ana",
+     "rate": 9.25
+    },
+    {
+     "name": "Fountain Valley",
+     "rate": 8.75
+    },
+    {
+     "name": "Tustin",
+     "rate": 7.75
+    },
+    {
+     "name": "Fullerton",
+     "rate": 7.75
+    },
+    {
+     "name": "Westminster",
+     "rate": 9.25
+    }
+   ],
+   "district": 0.5
+  },
+  {
+   "slug": "austin-tx",
+   "name": "Austin",
+   "short": "Austin",
+   "kind": "city",
+   "state": "Texas",
+   "stateAbbr": "TX",
+   "rate": 8.25,
+   "stateBase": 6.25,
+   "county": "Travis County",
+   "countyRate": null,
+   "src": {
+    "agency": "Texas Comptroller of Public Accounts",
+    "agencyShort": "Texas Comptroller",
+    "agencyUrl": "https://comptroller.texas.gov/taxes/sales/docs/city-rates.pdf",
+    "table": "Texas Sales and Use Tax Rates \u2014 city rate table"
+   },
+   "effective": "2026 city rate table",
+   "lead": "Austin charges 8.25%, the maximum combined rate any Texas city is allowed to levy.",
+   "components": [
+    {
+     "label": "Texas state sales and use tax",
+     "rate": 6.25
+    },
+    {
+     "label": "City of Austin",
+     "rate": 1.0
+    },
+    {
+     "label": "Austin MTA (Capital Metro)",
+     "rate": 1.0
+    }
+   ],
+   "notes": [
+    "Texas caps total local sales tax at 2.000% on top of the 6.250% state rate, so 8.250% is the legal ceiling.",
+    "Austin reaches that ceiling with a 1.000% city tax plus a 1.000% Austin MTA transit tax.",
+    "Because the cap is binding, essentially every city in the Austin metro charges the same 8.250%."
+   ],
+   "nearby": [
+    {
+     "name": "Round Rock",
+     "rate": 8.25
+    },
+    {
+     "name": "Cedar Park",
+     "rate": 8.25
+    },
+    {
+     "name": "Georgetown",
+     "rate": 8.25
+    },
+    {
+     "name": "San Marcos",
+     "rate": 8.25
+    },
+    {
+     "name": "Pflugerville",
+     "rate": 8.25
+    },
+    {
+     "name": "Leander",
+     "rate": 8.25
+    },
+    {
+     "name": "Buda",
+     "rate": 8.25
+    },
+    {
+     "name": "Kyle",
+     "rate": 8.25
+    },
+    {
+     "name": "Lakeway",
+     "rate": 8.25
+    },
+    {
+     "name": "Bee Cave",
+     "rate": 8.25
+    }
+   ],
+   "district": 2.0
+  }
+ ]
+}

@@ -222,3 +222,8 @@ footer { background:#09233b; color:white; min-height:145px; padding:36px max(24p
 
 .footer-blog { grid-column:1/-1; border-top:1px solid rgba(255,255,255,.1); padding-top:16px; margin-top:6px; }.footer-blog-title{margin:0 0 10px;color:#9fb1bf;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.footer-blog-grid{display:flex;flex-wrap:wrap;gap:6px 20px}.footer-blog-grid a{color:#9fb1bf;font-size:11px;line-height:1.6;border:0;transition:color .15s ease}.footer-blog-grid a:hover{color:#4ba2d8}
 .table-caption { caption-side:top; text-align:left; font-size:12px; color:var(--muted); padding:0 0 9px; }
+/* sales-tax rate tables: highlighted total row + two-column county listing */
+.table-wrap tr.rate-total td { border-top:1px solid var(--line); background:var(--sky); }
+.table-wrap td a.text-link { text-decoration:underline; }
+.table-split { display:grid; grid-template-columns:1fr 1fr; gap:0 28px; align-items:start; }
+@media (max-width:760px){ .table-split { grid-template-columns:1fr; } }

@@ -1,0 +1,385 @@
+{
+ "state": "Ohio",
+ "stateBase": 5.75,
+ "effective": "October 1, 2026",
+ "agency": "Ohio Department of Taxation",
+ "agencyShort": "Ohio Department of Taxation",
+ "agencyUrl": "https://tax.ohio.gov/business/sales-and-use-tax/rate-tables/by-county-q4-2026",
+ "table": "Sales and Use Tax Rates by County, October 1 - December 31, 2026",
+ "counties": [
+  {
+   "name": "Adams",
+   "rate": 7.25
+  },
+  {
+   "name": "Allen",
+   "rate": 6.85
+  },
+  {
+   "name": "Ashland",
+   "rate": 7.0
+  },
+  {
+   "name": "Ashtabula",
+   "rate": 6.75
+  },
+  {
+   "name": "Athens",
+   "rate": 7.25
+  },
+  {
+   "name": "Auglaize",
+   "rate": 7.25
+  },
+  {
+   "name": "Belmont",
+   "rate": 7.25
+  },
+  {
+   "name": "Brown",
+   "rate": 7.0
+  },
+  {
+   "name": "Butler",
+   "rate": 6.5
+  },
+  {
+   "name": "Carroll",
+   "rate": 6.75
+  },
+  {
+   "name": "Champaign",
+   "rate": 7.25
+  },
+  {
+   "name": "Clark",
+   "rate": 7.25
+  },
+  {
+   "name": "Clermont",
+   "rate": 6.75
+  },
+  {
+   "name": "Clinton",
+   "rate": 7.25
+  },
+  {
+   "name": "Columbiana",
+   "rate": 7.25
+  },
+  {
+   "name": "Coshocton",
+   "rate": 7.75
+  },
+  {
+   "name": "Crawford",
+   "rate": 7.25
+  },
+  {
+   "name": "Cuyahoga",
+   "rate": 8.0
+  },
+  {
+   "name": "Darke",
+   "rate": 7.25
+  },
+  {
+   "name": "Defiance",
+   "rate": 6.75
+  },
+  {
+   "name": "Delaware",
+   "rate": 7.0
+  },
+  {
+   "name": "Erie",
+   "rate": 6.75
+  },
+  {
+   "name": "Fairfield",
+   "rate": 6.75
+  },
+  {
+   "name": "Fayette",
+   "rate": 7.25
+  },
+  {
+   "name": "Franklin",
+   "rate": 8.0
+  },
+  {
+   "name": "Fulton",
+   "rate": 7.25
+  },
+  {
+   "name": "Gallia",
+   "rate": 7.25
+  },
+  {
+   "name": "Geauga",
+   "rate": 6.75
+  },
+  {
+   "name": "Greene",
+   "rate": 6.75
+  },
+  {
+   "name": "Guernsey",
+   "rate": 7.25
+  },
+  {
+   "name": "Hamilton",
+   "rate": 7.8
+  },
+  {
+   "name": "Hancock",
+   "rate": 6.75
+  },
+  {
+   "name": "Hardin",
+   "rate": 7.25
+  },
+  {
+   "name": "Harrison",
+   "rate": 7.25
+  },
+  {
+   "name": "Henry",
+   "rate": 7.25
+  },
+  {
+   "name": "Highland",
+   "rate": 7.25
+  },
+  {
+   "name": "Hocking",
+   "rate": 7.25
+  },
+  {
+   "name": "Holmes",
+   "rate": 7.0
+  },
+  {
+   "name": "Huron",
+   "rate": 7.25
+  },
+  {
+   "name": "Jackson",
+   "rate": 7.25
+  },
+  {
+   "name": "Jefferson",
+   "rate": 7.25
+  },
+  {
+   "name": "Knox",
+   "rate": 7.25
+  },
+  {
+   "name": "Lake",
+   "rate": 7.25
+  },
+  {
+   "name": "Lawrence",
+   "rate": 7.25
+  },
+  {
+   "name": "Licking",
+   "rate": 7.25
+  },
+  {
+   "name": "Logan",
+   "rate": 7.25
+  },
+  {
+   "name": "Lorain",
+   "rate": 6.5
+  },
+  {
+   "name": "Lucas",
+   "rate": 7.75
+  },
+  {
+   "name": "Madison",
+   "rate": 7.0
+  },
+  {
+   "name": "Mahoning",
+   "rate": 7.5
+  },
+  {
+   "name": "Marion",
+   "rate": 7.25
+  },
+  {
+   "name": "Medina",
+   "rate": 6.75
+  },
+  {
+   "name": "Meigs",
+   "rate": 7.25
+  },
+  {
+   "name": "Mercer",
+   "rate": 7.25
+  },
+  {
+   "name": "Miami",
+   "rate": 7.0
+  },
+  {
+   "name": "Monroe",
+   "rate": 7.25
+  },
+  {
+   "name": "Montgomery",
+   "rate": 7.5
+  },
+  {
+   "name": "Morgan",
+   "rate": 7.25
+  },
+  {
+   "name": "Morrow",
+   "rate": 7.25
+  },
+  {
+   "name": "Muskingum",
+   "rate": 7.25
+  },
+  {
+   "name": "Noble",
+   "rate": 7.25
+  },
+  {
+   "name": "Ottawa",
+   "rate": 7.0
+  },
+  {
+   "name": "Paulding",
+   "rate": 7.25
+  },
+  {
+   "name": "Perry",
+   "rate": 7.25
+  },
+  {
+   "name": "Pickaway",
+   "rate": 7.25
+  },
+  {
+   "name": "Pike",
+   "rate": 7.25
+  },
+  {
+   "name": "Portage",
+   "rate": 7.0
+  },
+  {
+   "name": "Preble",
+   "rate": 7.25
+  },
+  {
+   "name": "Putnam",
+   "rate": 7.0
+  },
+  {
+   "name": "Richland",
+   "rate": 7.0
+  },
+  {
+   "name": "Ross",
+   "rate": 7.25
+  },
+  {
+   "name": "Sandusky",
+   "rate": 7.25
+  },
+  {
+   "name": "Scioto",
+   "rate": 7.25
+  },
+  {
+   "name": "Seneca",
+   "rate": 7.25
+  },
+  {
+   "name": "Shelby",
+   "rate": 7.25
+  },
+  {
+   "name": "Stark",
+   "rate": 6.5
+  },
+  {
+   "name": "Summit",
+   "rate": 6.75
+  },
+  {
+   "name": "Trumbull",
+   "rate": 6.75
+  },
+  {
+   "name": "Tuscarawas",
+   "rate": 6.75
+  },
+  {
+   "name": "Union",
+   "rate": 7.0
+  },
+  {
+   "name": "Van Wert",
+   "rate": 7.25
+  },
+  {
+   "name": "Vinton",
+   "rate": 7.25
+  },
+  {
+   "name": "Warren",
+   "rate": 7.25
+  },
+  {
+   "name": "Washington",
+   "rate": 7.25
+  },
+  {
+   "name": "Wayne",
+   "rate": 6.5
+  },
+  {
+   "name": "Williams",
+   "rate": 7.25
+  },
+  {
+   "name": "Wood",
+   "rate": 6.75
+  },
+  {
+   "name": "Wyandot",
+   "rate": 7.25
+  }
+ ],
+ "transitAreas": [
+  {
+   "name": "Delaware (COTA)",
+   "rate": 8.0
+  },
+  {
+   "name": "Fairfield (COTA)",
+   "rate": 7.75
+  },
+  {
+   "name": "Licking (COTA)",
+   "rate": 8.25
+  },
+  {
+   "name": "Union (COTA)",
+   "rate": 8.0
+  },
+  {
+   "name": "Wood (TARTA)",
+   "rate": 7.25
+  }
+ ]
+}
