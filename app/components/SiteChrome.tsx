@@ -222,6 +222,9 @@ export function SiteFooter() {
         <a className="partner-badge" href="https://awesomeindie.com/?ref=badge" target="_blank" rel="noopener">
           <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
         </a>
+        <a className="partner-badge" href="https://www.startupinspire.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" height={54} loading="lazy" />
+        </a>
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span
           className="partner-badge"
