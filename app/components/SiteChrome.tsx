@@ -201,6 +201,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://saaspa.ge/product/cmughefm20002ic041s5pxv9q" rel="nofollow">
           <img src="https://saaspa.ge/api/embed/product/cmughefm20002ic041s5pxv9q/badge.png?theme=blue" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://shinylaunch.com/product/paycheckscalculator" rel="noopener noreferrer">
+          <img src="https://shinylaunch.com/assets/images/badge.png" alt="ShinyLaunch" height={54} loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
