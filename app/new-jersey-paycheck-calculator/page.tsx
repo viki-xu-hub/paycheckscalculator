@@ -45,7 +45,7 @@ export default function NewJersey() {
       },
       {
         "@type": "Question",
-        name: "Can I use this as a New Jersey payroll calculator or pay calculator?",
+        name: "Can I use this as an NJ payroll calculator or an NJ pay calculator?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Yes. The calculator applies the same 2026 payroll rules an employer uses \u2014 federal withholding, Social Security, Medicare, state withholding, and pre-tax deductions \u2014 so it works as a New Jersey payroll calculator for checking a pay stub and as a New Jersey pay calculator for hourly wages. It is an estimate for planning, not a payroll system of record.",
@@ -53,7 +53,7 @@ export default function NewJersey() {
       },
       {
         "@type": "Question",
-        name: "Is this a New Jersey income calculator or a New Jersey income tax calculator?",
+        name: "Is this an NJ income calculator or an NJ income tax calculator?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "For paycheck withholding, yes: it shows the New Jersey state income tax and federal income tax taken out of each check separately. It is not a full annual return calculator, so it does not model itemized deductions, credits, or non-wage income. Use it to see what is withheld per pay period, and a return-focused tool for your final tax liability.",
@@ -61,7 +61,7 @@ export default function NewJersey() {
       },
       {
         "@type": "Question",
-        name: "How do I use this as a New Jersey paycheck estimator?",
+        name: "How do I use this as an NJ paycheck estimator?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Enter your gross pay, pick your pay frequency, set your filing status, and add any retirement or pre-tax benefit amounts. The New Jersey paycheck estimator returns gross pay, each tax and deduction line, and the net amount deposited. Change one input at a time to see how a raise, a new W-4, or a higher 401(k) percentage moves your take-home pay.",
@@ -408,19 +408,19 @@ export default function NewJersey() {
           </p>
         </details>
         <details>
-          <summary>Can I use this as a New Jersey payroll calculator or pay calculator?<span>+</span></summary>
+          <summary>Can I use this as an NJ payroll calculator or an NJ pay calculator?<span>+</span></summary>
           <p>
             Yes. The calculator applies the same 2026 payroll rules an employer uses — federal withholding, Social Security, Medicare, state withholding, and pre-tax deductions — so it works as a New Jersey payroll calculator for checking a pay stub and as a New Jersey pay calculator for hourly wages. It is an estimate for planning, not a payroll system of record.
           </p>
         </details>
         <details>
-          <summary>Is this a New Jersey income calculator or a New Jersey income tax calculator?<span>+</span></summary>
+          <summary>Is this an NJ income calculator or an NJ income tax calculator?<span>+</span></summary>
           <p>
             For paycheck withholding, yes: it shows the New Jersey state income tax and federal income tax taken out of each check separately. It is not a full annual return calculator, so it does not model itemized deductions, credits, or non-wage income. Use it to see what is withheld per pay period, and a return-focused tool for your final tax liability.
           </p>
         </details>
         <details>
-          <summary>How do I use this as a New Jersey paycheck estimator?<span>+</span></summary>
+          <summary>How do I use this as an NJ paycheck estimator?<span>+</span></summary>
           <p>
             Enter your gross pay, pick your pay frequency, set your filing status, and add any retirement or pre-tax benefit amounts. The New Jersey paycheck estimator returns gross pay, each tax and deduction line, and the net amount deposited. Change one input at a time to see how a raise, a new W-4, or a higher 401(k) percentage moves your take-home pay.
           </p>
