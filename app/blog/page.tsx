@@ -33,6 +33,13 @@ const POSTS = [
     meta: "FSA · Child Care · Pre-Tax Benefits",
   },
   {
+    href: "/qualified-dividends-and-capital-gain-tax-worksheet",
+    title: "Qualified Dividends and Capital Gain Tax Worksheet 2026",
+    blurb:
+      "Run all 25 lines of the Form 1040 worksheet. Enter taxable income, qualified dividends and net capital gain to see the 0%, 15% and 20% split.",
+    meta: "Form 1040 · Capital Gains · Interactive",
+  },
+  {
     href: "/can-i-claim-my-girlfriend-as-a-dependent",
     title: "Can I Claim My Girlfriend as a Dependent? 2026 IRS Rules",
     blurb:

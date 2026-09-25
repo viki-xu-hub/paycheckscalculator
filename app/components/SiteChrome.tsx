@@ -27,6 +27,7 @@ export function SiteHeader() {
             <div className="nav-panel-divider" />
             <div className="nav-group-label">Tax & Benefits</div>
             <a href="/hsa-calculator">HSA Calculator</a>
+            <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends Worksheet</a>
           </div>
         </div>
 
