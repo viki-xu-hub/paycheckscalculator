@@ -219,6 +219,14 @@ export function SiteFooter() {
         <a className="partner-badge" href="https://hunt0.com/products/paycheck-calculator-calculate-your-take-home-pay-after-taxes" target="_blank" rel="noopener nofollow">
           <img src="https://hunt0.com/badges/hunt0-find-us-on-light.svg" alt="Find us on HUNT0" width="170" height="53" loading="lazy" />
         </a>
+        {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
+        <span
+          className="partner-badge"
+          dangerouslySetInnerHTML={{
+            __html:
+              '<a href="https://www.foundrlist.com/product/paycheckcalculator-2?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator-2" alt="Featured on FoundrList" width="150" height="48" /></a>',
+          }}
+        />
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
