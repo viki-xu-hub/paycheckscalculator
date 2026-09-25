@@ -210,6 +210,9 @@ export function SiteFooter() {
         <a className="partner-badge" href="https://thesaasdir.com/product/evertrend-llc?ref=badge" rel="dofollow">
           <img src="https://thesaasdir.com/badge/evertrend-llc.svg" alt="Featured on TheSaaSDir" width="160" height="44" loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://thekeytools.com/ai/paycheckscalculator" rel="noopener noreferrer">
+          <img src="https://thekeytools.com/assets/images/badge.png" alt="The Key Tools" height={54} loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
