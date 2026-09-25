@@ -8,8 +8,8 @@ export function stateMeta(state: StateData): PageMeta {
     ? `Estimate state income tax withholding at ${state.taxRate}%.`
     : `${state.name} has no state income tax.`;
   return {
-    title: `${state.name} Paycheck Calculator ${YEAR} — Take-Home Pay After Taxes`,
-    description: `Free ${state.name} paycheck calculator for ${YEAR}. Estimate your take-home pay after federal taxes, Social Security, Medicare, and ${state.hasStateTax ? `${state.name} state income tax` : "payroll deductions"}. ${taxClause}`,
+    title: `${state.name} Paycheck & Salary Calculator ${YEAR} — Take-Home Pay`,
+    description: `Free ${state.name} salary and paycheck calculator for ${YEAR}. Estimate take-home pay after federal taxes, Social Security, Medicare, and ${state.hasStateTax ? `${state.name} state income tax` : "payroll deductions"}. ${taxClause}`,
     h1: `${state.name} Paycheck Calculator ${YEAR}`,
     canonical: `${SITE}/states/${state.slug}`,
   };

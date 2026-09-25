@@ -3,12 +3,12 @@ import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "New York Paycheck Calculator 2026 - Calculate Your Take-Home Pay After Taxes",
+  title: "New York Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
   description:
-    "Use our New York paycheck calculator to estimate your 2026 take-home pay after federal taxes, New York state income tax, Social Security, Medicare, and payroll deductions. NYC resident option available.",
+    "Use our New York salary and paycheck calculator to estimate your 2026 take-home pay after federal taxes, New York state income tax, Social Security, Medicare, and payroll deductions. NYC resident option available.",
   alternates: { canonical: "/new-york-paycheck-calculator" },
   openGraph: {
-    title: "New York Paycheck Calculator 2026 - Calculate Your Take-Home Pay After Taxes",
+    title: "New York Paycheck & Salary Calculator 2026 - Take-Home Pay After Taxes",
     description:
       "Estimate your New York take-home pay with federal taxes, New York state income tax, Social Security, Medicare, and payroll deductions. NYC resident option available.",
     url: "https://www.paycheckscalculator.org/new-york-paycheck-calculator",
@@ -35,6 +35,38 @@ export default function NewYork() {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is this the same as a New York salary calculator?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Enter your annual salary and the calculator works as a New York salary calculator, splitting the year into weekly, biweekly, semimonthly, or monthly paychecks and showing take-home pay for each one. A New York paycheck calculator and a New York salary calculator are the same tool viewed from either end \u2014 one starts from the yearly number, the other from the per-check number.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I use this as a New York payroll calculator or pay calculator?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. The calculator applies the same 2026 payroll rules an employer uses \u2014 federal withholding, Social Security, Medicare, state withholding, and pre-tax deductions \u2014 so it works as a New York payroll calculator for checking a pay stub and as a New York pay calculator for hourly wages. It is an estimate for planning, not a payroll system of record.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is this a New York income calculator or a New York income tax calculator?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "For paycheck withholding, yes: it shows the New York state income tax and federal income tax taken out of each check separately. It is not a full annual return calculator, so it does not model itemized deductions, credits, or non-wage income. Use it to see what is withheld per pay period, and a return-focused tool for your final tax liability.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I use this as a New York paycheck estimator?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Enter your gross pay, pick your pay frequency, set your filing status, and add any retirement or pre-tax benefit amounts. The New York paycheck estimator returns gross pay, each tax and deduction line, and the net amount deposited. Change one input at a time to see how a raise, a new W-4, or a higher 401(k) percentage moves your take-home pay.",
+        },
+      },
       {
         "@type": "Question",
         name: "Does New York have state income tax?",
@@ -349,9 +381,48 @@ export default function NewYork() {
       </section>
 
       {/* FAQ */}
+      {/* H2: salary / pay / payroll / income calculator synonyms */}
+      <section className="seo-section text-left">
+        <p className="kicker">NEW YORK SALARY &amp; PAY CALCULATOR</p>
+        <h2>New York Salary Calculator, Pay Calculator, and Payroll Estimator</h2>
+        <p>
+          People look for this tool under several names — a New York salary calculator, a New York pay calculator, a New York payroll calculator, a New York income calculator, or simply a New York paycheck estimator. All of them describe the same job: turning a gross wage into the amount that actually reaches your bank account.
+        </p>
+        <p>
+          One engine covers every case. Enter an annual figure and it behaves as a <strong>New York salary calculator</strong>, dividing the year into weekly, biweekly, semimonthly, or monthly paychecks. Enter an hourly rate and your usual hours and it behaves as a <strong>New York wage calculator</strong> instead. Either way the output is identical: gross pay, every tax line, every deduction, and net pay.
+        </p>
+        <p>
+          Used as a <strong>New York tax calculator</strong>, it separates the New York state income tax line from federal tax and FICA, so you can see exactly how much New York withholding costs you each pay period. Keep in mind that paycheck withholding follows the 2026 payroll method your employer applies, which can land slightly above or below the tax you finally owe on an annual return.
+        </p>
+      </section>
+
       <section className="faq">
         <p className="kicker">COMMON QUESTIONS</p>
         <h2>Frequently Asked Questions</h2>
+        <details>
+          <summary>Is this the same as a New York salary calculator?<span>+</span></summary>
+          <p>
+            Yes. Enter your annual salary and the calculator works as a New York salary calculator, splitting the year into weekly, biweekly, semimonthly, or monthly paychecks and showing take-home pay for each one. A New York paycheck calculator and a New York salary calculator are the same tool viewed from either end — one starts from the yearly number, the other from the per-check number.
+          </p>
+        </details>
+        <details>
+          <summary>Can I use this as a New York payroll calculator or pay calculator?<span>+</span></summary>
+          <p>
+            Yes. The calculator applies the same 2026 payroll rules an employer uses — federal withholding, Social Security, Medicare, state withholding, and pre-tax deductions — so it works as a New York payroll calculator for checking a pay stub and as a New York pay calculator for hourly wages. It is an estimate for planning, not a payroll system of record.
+          </p>
+        </details>
+        <details>
+          <summary>Is this a New York income calculator or a New York income tax calculator?<span>+</span></summary>
+          <p>
+            For paycheck withholding, yes: it shows the New York state income tax and federal income tax taken out of each check separately. It is not a full annual return calculator, so it does not model itemized deductions, credits, or non-wage income. Use it to see what is withheld per pay period, and a return-focused tool for your final tax liability.
+          </p>
+        </details>
+        <details>
+          <summary>How do I use this as a New York paycheck estimator?<span>+</span></summary>
+          <p>
+            Enter your gross pay, pick your pay frequency, set your filing status, and add any retirement or pre-tax benefit amounts. The New York paycheck estimator returns gross pay, each tax and deduction line, and the net amount deposited. Change one input at a time to see how a raise, a new W-4, or a higher 401(k) percentage moves your take-home pay.
+          </p>
+        </details>
         <details>
           <summary>Does New York have state income tax?<span>+</span></summary>
           <p>
