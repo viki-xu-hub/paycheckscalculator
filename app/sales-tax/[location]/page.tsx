@@ -21,7 +21,7 @@ type Editorial = {
   nearbyIntro: string;
   exemptionsIntro: string;
   exemptions: string[];
-  metaDescription: string;
+  metaDescription?: string;
   sourceNote: string;
   disclaimer: string;
   rateHelp: string;
