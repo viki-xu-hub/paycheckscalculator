@@ -44,7 +44,7 @@ export default function HSACalculatorWidget() {
   const biweeklySavings = annualSavings / 26;
   const effectiveSavingsPct = (annualSavings / contribution) * 100;
 
-  const maxContribution = coverage === "self" ? 4300 : 8550; // 2026 limits
+  const maxContribution = coverage === "self" ? 4400 : 8750; // 2026 limits, IRS Rev. Proc. 2025-19
   const catchUp = income > 0 && contribution > 0; // placeholder — shown in copy
 
   return (
@@ -119,8 +119,8 @@ export default function HSACalculatorWidget() {
               background: "white",
             }}
           >
-            <option value="self">Self-only ($4,300 max)</option>
-            <option value="family">Family ($8,550 max)</option>
+            <option value="self">Self-only ($4,400 max)</option>
+            <option value="family">Family ($8,750 max)</option>
           </select>
         </div>
         <div>

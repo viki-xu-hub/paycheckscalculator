@@ -25,7 +25,7 @@ const FAQS = [
   },
   {
     q: "What are the 2026 HSA contribution limits?",
-    a: "For 2026, the maximum HSA contribution is $4,300 for self-only HDHP coverage and $8,550 for family coverage. If you are age 55 or older, you can contribute an additional $1,000 as a catch-up contribution. These limits are set by the IRS and adjusted for inflation each year.",
+    a: "For 2026, the maximum HSA contribution is $4,400 for self-only HDHP coverage and $8,750 for family coverage. If you are age 55 or older, you can contribute an additional $1,000 as a catch-up contribution. These limits are set by the IRS and adjusted for inflation each year.",
   },
   {
     q: "Who is eligible for an HSA?",
@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     q: "What is a High Deductible Health Plan (HDHP)?",
-    a: "For 2026, an HDHP is a health plan with a minimum deductible of $1,600 for self-only coverage or $3,200 for family coverage, and a maximum out-of-pocket limit of $8,050 for self-only or $16,100 for family coverage. The plan can cover preventive care before the deductible is met.",
+    a: "For 2026, an HDHP is a health plan with a minimum deductible of $1,700 for self-only coverage or $3,400 for family coverage, and a maximum out-of-pocket limit of $8,500 for self-only or $17,000 for family coverage. The plan can cover preventive care before the deductible is met.",
   },
   {
     q: "What can I use HSA money for?",
@@ -128,7 +128,7 @@ export default function HSACalculatorPage() {
             Money you contribute to an HSA goes in <strong>before federal income tax, FICA (Social Security
             + Medicare), and usually state income tax</strong>. This immediately lowers your taxable income
             and reduces your paycheck withholding. For someone in the 22% federal bracket, contributing
-            the max $4,300 (self-only) saves roughly $946 in federal tax alone — plus another $329 in
+            the max $4,400 (self-only) saves roughly $968 in federal tax alone — plus another $337 in
             FICA tax. This is the savings our HSA calculator above estimates.
           </p>
           <h3 style={{ marginTop: 20 }}>2. Tax-free growth</h3>
@@ -167,8 +167,8 @@ export default function HSACalculatorPage() {
             <tbody>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
                 <td style={{ padding: "10px", fontWeight: 500 }}>Maximum contribution</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$4,300</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$8,550</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$4,400</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$8,750</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px", fontWeight: 500 }}>Catch-up (age 55+)</td>
@@ -177,13 +177,13 @@ export default function HSACalculatorPage() {
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
                 <td style={{ padding: "10px", fontWeight: 500 }}>Minimum HDHP deductible</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$1,600</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$3,200</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$1,700</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$3,400</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px", fontWeight: 500 }}>Max out-of-pocket</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$8,050</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$16,100</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$8,500</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$17,000</td>
               </tr>
             </tbody>
           </table>
@@ -297,8 +297,8 @@ export default function HSACalculatorPage() {
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
                 <td style={{ padding: "10px", fontWeight: 500 }}>2026 limit (self)</td>
-                <td style={{ padding: "10px" }}>$4,300 (+$1,000 catch-up at 55+)</td>
-                <td style={{ padding: "10px" }}>$3,200 (+$640 carryover option)</td>
+                <td style={{ padding: "10px" }}>$4,400 (+$1,000 catch-up at 55+)</td>
+                <td style={{ padding: "10px" }}>$3,400 (+$680 carryover option)</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px", fontWeight: 500 }}>Investment option</td>

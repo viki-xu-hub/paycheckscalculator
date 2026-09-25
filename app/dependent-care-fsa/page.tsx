@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Dependent Care FSA: Eligible Expenses & Limits (2026)",
     description:
-      "A complete guide to dependent care FSAs — eligible expenses, 2026 contribution limits ($5,000), who qualifies, and how the tax savings work.",
+      "A complete guide to dependent care FSAs — eligible expenses, 2026 contribution limits ($7,500), who qualifies, and how the tax savings work.",
     url: CANONICAL,
     type: "article",
   },
@@ -28,11 +28,11 @@ const FAQS = [
   },
   {
     q: "What is the 2026 dependent care FSA contribution limit?",
-    a: "For 2026, the dependent care FSA maximum contribution is $5,000 per household for single filers and married couples filing jointly. Married couples filing separately can contribute up to $2,500 each. These limits have not changed in many years and are not inflation-adjusted. Your employer may set a lower limit.",
+    a: "For 2026, the dependent care FSA maximum contribution is $7,500 per household for single filers and married couples filing jointly, up from $7,500. Married couples filing separately can contribute up to $3,750 each, up from $3,750. The One Big Beautiful Bill Act raised the limit for the 2026 tax year — the first increase since 1986. Employers are not required to adopt the higher ceiling, so check what your own plan allows.",
   },
   {
     q: "What happens to unused dependent care FSA money?",
-    a: "Dependent care FSAs generally have a 'use-it-or-lose-it' rule — any money left in your account at the end of the plan year is forfeited to your employer. Some plans offer a grace period (usually 2.5 months) to spend down the funds, or allow a small carryover amount (up to $640 for 2026, at the employer's option). Check your plan documents for specifics.",
+    a: "Dependent care FSAs have a 'use-it-or-lose-it' rule — any money left in your account at the end of the plan year is forfeited to your employer. Some plans offer a grace period of up to 2 months and 15 days to incur further expenses, at the employer's option. There is no carryover: IRS rules let a cafeteria plan adopt a carryover for a health FSA but not for a dependent care assistance program, so unused dependent care money cannot roll into the next year. Check your plan documents for specifics.",
   },
   {
     q: "Can I use dependent care FSA for kindergarten?",
@@ -40,11 +40,11 @@ const FAQS = [
   },
   {
     q: "Is dependent care FSA the same as the child and dependent care tax credit?",
-    a: "No, they are different benefits and you generally cannot claim the same expenses for both. The dependent care FSA uses pre-tax dollars from your paycheck, while the Child and Dependent Care Tax Credit (CDCC) is a credit on your tax return for 20–35% of qualifying expenses. The FSA is usually more valuable for higher earners; the credit may be better for lower earners. You can use both only for expenses above the $5,000 FSA limit.",
+    a: "No, they are different benefits and you generally cannot claim the same expenses for both. The dependent care FSA uses pre-tax dollars from your paycheck, while the Child and Dependent Care Tax Credit (CDCC) is a credit on your tax return for 20–35% of qualifying expenses. The FSA is usually more valuable for higher earners; the credit may be better for lower earners. You can use both only for expenses above the $7,500 FSA limit.",
   },
   {
     q: "Can both spouses contribute to a dependent care FSA?",
-    a: "No. The $5,000 limit is per household, not per person. If both spouses have access to a dependent care FSA through their employers, they can split the $5,000 between them, but the combined total cannot exceed $5,000. For married filing separately, each spouse can contribute up to $2,500.",
+    a: "No. The $7,500 limit is per household, not per person. If both spouses have access to a dependent care FSA through their employers, they can split the $7,500 between them, but the combined total cannot exceed $7,500. For married filing separately, each spouse can contribute up to $3,750.",
   },
 ];
 
@@ -127,13 +127,13 @@ export default function DependentCareFSA() {
           </p>
           <p>
             The result: your taxable income goes down, and you save on taxes. If you are in the 22%
-            federal bracket and contribute the $5,000 maximum, you save roughly $1,100 in federal income
-            tax plus about $383 in FICA taxes — <strong>nearly $1,500 per year</strong> in total savings.
+            federal bracket and contribute the $7,500 maximum, you save roughly $1,650 in federal income
+            tax plus about $574 in FICA taxes — <strong>over $2,200 per year</strong> in total savings.
           </p>
           <div style={{ background: "#ecfdf5", border: "1px solid #a7f3d0", borderRadius: 12, padding: "20px 24px", marginTop: 20 }}>
             <p style={{ margin: 0, fontWeight: 600, color: "#047857" }}>Quick facts</p>
             <ul style={{ margin: "10px 0 0", paddingLeft: 20, color: "#065f46", lineHeight: 1.7 }}>
-              <li>2026 limit: <strong>$5,000</strong> per household (single or MFJ)</li>
+              <li>2026 limit: <strong>$7,500</strong> per household (single or MFJ)</li>
               <li>Contributions are pre-tax — federal, FICA, and often state</li>
               <li>Available only through employer plans</li>
               <li>Generally "use-it-or-lose-it" per plan year</li>
@@ -182,8 +182,10 @@ export default function DependentCareFSA() {
         <h2>2026 Dependent Care FSA Contribution Limits</h2>
         <section>
           <p>
-            The dependent care FSA maximum is set by the IRS and has not changed in many years.
-            Unlike a health FSA or 401(k), it is not indexed for inflation.
+            The dependent care FSA maximum sat at $5,000 from 1986 until the end of 2025. The One Big
+            Beautiful Bill Act raised it to $7,500 for the 2026 tax year — the first increase in four
+            decades. It is still a statutory figure rather than an inflation-indexed one, so it will
+            not drift upward each year the way the health FSA and 401(k) limits do.
           </p>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 15, marginTop: 16 }}>
             <thead>
@@ -195,19 +197,19 @@ export default function DependentCareFSA() {
             <tbody>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
                 <td style={{ padding: "10px" }}>Single</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$5,000</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$7,500</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px" }}>Married Filing Jointly</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$5,000 total (per household)</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$7,500 total (per household)</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
                 <td style={{ padding: "10px" }}>Married Filing Separately</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$2,500 per spouse</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$3,750 per spouse</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px" }}>Head of Household</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$5,000</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$7,500</td>
               </tr>
             </tbody>
           </table>
@@ -228,7 +230,7 @@ export default function DependentCareFSA() {
             is typically 22–32% per dollar contributed.
           </p>
           <p>
-            Here is what contributing the full $5,000 saves at different income levels:
+            Here is what contributing the full $7,500 saves at different income levels:
           </p>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14, marginTop: 16 }}>
             <thead>
@@ -242,27 +244,27 @@ export default function DependentCareFSA() {
             <tbody>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
                 <td style={{ padding: "10px" }}>12% bracket</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$600</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$383</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>$983</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$900</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$574</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>$1,474</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px" }}>22% bracket</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$1,100</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$383</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600, color: "#16a34a" }}>$1,483</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$1,650</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$574</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600, color: "#16a34a" }}>$2,224</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
                 <td style={{ padding: "10px" }}>24% bracket</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$1,200</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$383</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>$1,583</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$1,800</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$574</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>$2,374</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px" }}>32% bracket</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$1,600</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$383</td>
-                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>$1,983</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$2,400</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums" }}>$574</td>
+                <td style={{ textAlign: "right", padding: "10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>$2,974</td>
               </tr>
             </tbody>
           </table>
@@ -282,15 +284,16 @@ export default function DependentCareFSA() {
             during open enrollment.
           </p>
           <p>
-            Some plans offer one of two relief options (at the employer's choice, not required):
+            One relief option exists, at the employer&apos;s choice and not required:
           </p>
           <ul className="checklist">
-            <li><strong>Grace period:</strong> Up to 2.5 extra months after the plan year ends to incur and submit expenses.</li>
-            <li><strong>Carryover:</strong> Up to $640 (for 2026) of unused funds can roll into the next plan year.</li>
+            <li><strong>Grace period:</strong> Up to 2 months and 15 days after the plan year ends to incur and submit expenses.</li>
+            <li><strong>Carryover:</strong> Not available. A cafeteria plan may not adopt a carryover for a dependent care assistance program — that option exists only for health FSAs, where the 2026 maximum is $680. The temporary carryover allowed for dependent care during the pandemic has expired.</li>
           </ul>
           <p>
-            Check your plan documents or ask your HR department to find out which option, if any,
-            your plan offers. Most dependent care FSAs have a grace period rather than a carryover.
+            This is the single most expensive misunderstanding about these accounts: people assume the
+            health FSA carryover applies here too, over-contribute, and forfeit the difference. Check
+            your plan documents or ask HR whether your plan has the grace period at all.
           </p>
         </section>
 
@@ -300,7 +303,7 @@ export default function DependentCareFSA() {
           <p>
             You cannot use the <strong>same expenses</strong> for both the dependent care FSA and the
             Child and Dependent Care Tax Credit (CDCC). But you may be able to use both if your expenses
-            exceed the $5,000 FSA limit. Here is how they compare:
+            exceed the $7,500 FSA limit. Here is how they compare:
           </p>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14, marginTop: 16 }}>
             <thead>
@@ -318,7 +321,7 @@ export default function DependentCareFSA() {
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef", background: "rgba(0,0,0,0.02)" }}>
                 <td style={{ padding: "10px", fontWeight: 500 }}>Max expense limit</td>
-                <td style={{ padding: "10px" }}>$5,000 per household</td>
+                <td style={{ padding: "10px" }}>$7,500 per household</td>
                 <td style={{ padding: "10px" }}>$3,000 one child / $6,000 two+ children</td>
               </tr>
               <tr style={{ borderBottom: "1px solid #e0e7ef" }}>
@@ -339,9 +342,11 @@ export default function DependentCareFSA() {
             </tbody>
           </table>
           <p style={{ marginTop: 16 }}>
-            If you have two or more children and expenses exceed $5,000, you can use the FSA for the
-            first $5,000 and claim the credit on up to $1,000 of additional expenses (since the CDCC
-            covers up to $6,000 for two+ children).
+            This interaction changed in 2026. The credit covers up to $6,000 of expenses for two or
+            more children, and the FSA limit is now $7,500 — above that cap. Funding the FSA to the
+            maximum therefore uses up the whole credit base, so there is no leftover expense to claim
+            the CDCC on. Under the old $7,500 limit you could stack $1,000 of expenses into the credit;
+            that gap has closed.
           </p>
         </section>
         <p className="kicker">HOW TO ENROLL</p>
@@ -374,7 +379,7 @@ export default function DependentCareFSA() {
             <li><strong>Over-contributing:</strong> The #1 mistake is electing more than you actually spend. Because of the use-it-or-lose-it rule, money left in the account at year-end is forfeited. Start with a conservative estimate and increase next year if you consistently use the full amount.</li>
             <li><strong>Missing the claims deadline:</strong> Most plans give you 90 days after the plan year ends to submit claims for expenses incurred during the plan year. Mark the deadline on your calendar so you do not leave money on the table.</li>
             <li><strong>Using it for non-qualified expenses:</strong> If you get reimbursed for an expense that does not qualify, you will have to pay the money back and may face penalties. Always check eligibility before submitting a claim.</li>
-            <li><strong>Both spouses contributing too much:</strong> The $5,000 limit is per household, not per person. If both you and your spouse contribute to separate dependent care FSAs, make sure your combined total does not exceed $5,000 (or $2,500 each if married filing separately).</li>
+            <li><strong>Both spouses contributing too much:</strong> The $7,500 limit is per household, not per person. If both you and your spouse contribute to separate dependent care FSAs, make sure your combined total does not exceed $7,500 (or $3,750 each if married filing separately).</li>
             <li><strong>Forgetting about summer camp:</strong> Summer day camps are eligible expenses that many people overlook. If your child attends day camp during summer break, factor that into your annual election.</li>
             <li><strong>Confusing health FSA and dependent care FSA:</strong> They are separate accounts with different rules, different limits, and different eligible expenses. Money from one cannot be used for the other.</li>
           </ul>
