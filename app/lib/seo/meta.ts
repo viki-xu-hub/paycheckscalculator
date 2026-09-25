@@ -18,10 +18,11 @@ export function stateMeta(state: StateData): PageMeta {
 export function salaryMeta(salary: SalaryData): PageMeta {
   const hourly = (salary.amount / 2080).toFixed(2);
   const k = `$${Math.round(salary.amount / 1000)}k`;
+  const biweeklyFmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(Math.round(salary.amount / 26));
   return {
-    title: `${salary.label} a Year Is How Much an Hour — ${YEAR} After-Tax Pay`,
-    description: `${salary.label} a year is how much an hour? $${hourly} an hour at 40 hours a week (${k} salary). See ${YEAR} take-home pay after federal, FICA and state tax in 52 states.`,
-    h1: `${salary.label} a Year Is How Much an Hour — ${YEAR} Paycheck Calculator`,
+    title: `${salary.label} a Year Is How Much an Hour & Biweekly? — ${YEAR} Pay`,
+    description: `${salary.label} a year is how much an hour? $${hourly} an hour at 40 hours a week (${k} salary). See biweekly (${biweeklyFmt}), monthly and weekly pay, plus ${YEAR} take-home pay after federal, FICA and state tax in 52 states.`,
+    h1: `${salary.label} a Year Is How Much an Hour & Biweekly? — ${YEAR} Calculator`,
     canonical: `${SITE}/salary/${salary.slug}`,
   };
 }

@@ -19,6 +19,34 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    href: "/hsa-calculator",
+    title: "HSA Calculator 2026 — Tax Savings & Contribution Limits",
+    blurb:
+      "Free HSA calculator with triple tax advantage breakdown. See federal, FICA, and state tax savings from Health Savings Account contributions.",
+    meta: "HSA · 2026 Limits · Interactive Calculator",
+  },
+  {
+    href: "/dependent-care-fsa",
+    title: "Dependent Care FSA: Eligible Expenses & Limits (2026)",
+    blurb:
+      "What is a dependent care FSA? Eligible child care and adult care expenses, 2026 contribution limits, tax savings, and how it compares to the child care tax credit.",
+    meta: "FSA · Child Care · Pre-Tax Benefits",
+  },
+  {
+    href: "/tax-write-off",
+    title: "What Is a Tax Write-Off? Meaning & How It Works (2026)",
+    blurb:
+      "A plain-English guide to tax write-offs (deductions) — what they are, how they lower your tax bill, and the most common write-offs for employees and self-employed workers.",
+    meta: "Tax Concepts · Deductions · 2026",
+  },
+  {
+    href: "/w4v-form",
+    title: "Form W-4V: What It Is and How to File It (2026)",
+    blurb:
+      "Everything you need to know about Form W-4V (Voluntary Withholding Request) for Social Security benefits — who needs it, filing options, and withholding percentages.",
+    meta: "Tax Forms · Social Security · 2026",
+  },
+  {
     href: "/paycheck-taxes",
     title: "How Much Taxes Deducted From Paycheck Texas: 2026 Breakdown",
     blurb:

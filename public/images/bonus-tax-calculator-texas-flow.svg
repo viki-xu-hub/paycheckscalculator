@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="320" viewBox="0 0 880 320" role="img" aria-labelledby="bt-t bt-d">
+  <title id="bt-t">Bonus tax calculator Texas: how a $5,000 bonus becomes $3,517.50 of take-home pay</title>
+  <desc id="bt-d">A $5,000 Texas bonus paid on a separate check loses $1,100 federal income tax at the 22% supplemental rate, $310 Social Security and $72.50 Medicare, with $0 Texas state income tax, leaving $3,517.50.</desc>
+  <style>
+    .box{fill:#fff;stroke:#e4e7ec;stroke-width:1.5}
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 22px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .v{font:700 14px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .w{font:700 15px Arial,Helvetica,sans-serif;fill:#fff}
+    .nw{font:700 24px Arial,Helvetica,sans-serif;fill:#fff}
+    .ws{font:12px Arial,Helvetica,sans-serif;fill:#dbe4f5}
+    .arrow{stroke:#9aa3b2;stroke-width:2;fill:none;marker-end:url(#bm)}
+  </style>
+  <defs><marker id="bm" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#9aa3b2"/></marker></defs>
+  <rect width="880" height="320" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="40" text-anchor="middle" class="h">Bonus tax calculator Texas: $5,000 bonus, $75,000 salary, single filer, 2026</text>
+
+  <rect x="30" y="76" width="196" height="150" rx="10" class="box"/>
+  <text x="128" y="108" text-anchor="middle" class="s">Step 1 · Bonus gross</text>
+  <text x="128" y="146" text-anchor="middle" class="n">$5,000</text>
+  <text x="128" y="176" text-anchor="middle" class="s">Separate bonus check</text>
+  <text x="128" y="200" text-anchor="middle" class="v">Flat 22% method</text>
+  <path d="M228 151 H272" class="arrow"/>
+
+  <rect x="276" y="76" width="330" height="150" rx="10" class="box"/>
+  <text x="441" y="104" text-anchor="middle" class="s">Step 2 · Bonus tax withheld</text>
+  <text x="298" y="134" class="m">Federal income tax · 22% supplemental</text>
+  <text x="584" y="134" text-anchor="end" class="v">−$1,100.00</text>
+  <text x="298" y="160" class="m">Social Security · 6.2%</text>
+  <text x="584" y="160" text-anchor="end" class="v">−$310.00</text>
+  <text x="298" y="186" class="m">Medicare · 1.45%</text>
+  <text x="584" y="186" text-anchor="end" class="v">−$72.50</text>
+  <text x="298" y="212" class="m">Texas state income tax</text>
+  <text x="584" y="212" text-anchor="end" class="v">$0.00</text>
+  <path d="M608 151 H652" class="arrow"/>
+
+  <rect x="656" y="76" width="194" height="150" rx="10" fill="#172b3a"/>
+  <text x="753" y="108" text-anchor="middle" class="ws">Step 3 · Bonus take-home</text>
+  <text x="753" y="150" text-anchor="middle" class="nw">$3,517.50</text>
+  <text x="753" y="180" text-anchor="middle" class="ws">70.35% of the bonus kept</text>
+  <text x="753" y="204" text-anchor="middle" class="w">29.65% withheld</text>
+
+  <text x="30" y="262" class="m">Texas has no individual income tax on wages, so the only bonus tax is federal income tax plus Social Security and Medicare.</text>
+  <text x="30" y="286" class="m">Withholding is not the final tax. Anything over-withheld on a bonus comes back as a refund when the return is filed.</text>
+</svg>

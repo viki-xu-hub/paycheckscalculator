@@ -24,6 +24,9 @@ export function SiteHeader() {
             <a href="/weekly-paycheck-calculator">Weekly Pay</a>
             <a href="/semimonthly-paycheck-calculator">Semimonthly Pay</a>
             <a href="/monthly-paycheck-calculator">Monthly Pay</a>
+            <div className="nav-panel-divider" />
+            <div className="nav-group-label">Tax & Benefits</div>
+            <a href="/hsa-calculator">HSA Calculator</a>
           </div>
         </div>
 

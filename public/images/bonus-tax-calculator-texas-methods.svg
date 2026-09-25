@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="340" viewBox="0 0 880 340" role="img" aria-labelledby="bm-t bm-d">
+  <title id="bm-t">Bonus tax calculator Texas: flat 22% method versus aggregate method withholding rates</title>
+  <desc id="bm-d">On a $75,000 Texas salary the flat method withholds 29.65% of any bonus, while the aggregate method withholds 29.65% on a $1,000 bonus, 30.93% on $5,000, 35.62% on $10,000 and 40.05% on $25,000.</desc>
+  <style>
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .v{font:700 13px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .grid{stroke:#e4e7ec;stroke-width:1}
+    .axis{stroke:#c9d1dc;stroke-width:1.5}
+    .flat{fill:#9fb2d8}
+    .agg{fill:#172b3a}
+  </style>
+  <rect width="880" height="340" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="34" text-anchor="middle" class="h">Bonus tax withheld in Texas by method: $75,000 salary, single filer, bi-weekly, 2026</text>
+
+  <g class="grid">
+    <line x1="80" y1="270" x2="840" y2="270"/>
+    <line x1="80" y1="230" x2="840" y2="230"/>
+    <line x1="80" y1="190" x2="840" y2="190"/>
+    <line x1="80" y1="150" x2="840" y2="150"/>
+    <line x1="80" y1="110" x2="840" y2="110"/>
+    <line x1="80" y1="70" x2="840" y2="70"/>
+  </g>
+  <line x1="80" y1="70" x2="80" y2="270" class="axis"/>
+  <text x="70" y="274" text-anchor="end" class="m">0%</text>
+  <text x="70" y="234" text-anchor="end" class="m">10%</text>
+  <text x="70" y="194" text-anchor="end" class="m">20%</text>
+  <text x="70" y="154" text-anchor="end" class="m">30%</text>
+  <text x="70" y="114" text-anchor="end" class="m">40%</text>
+  <text x="70" y="74" text-anchor="end" class="m">50%</text>
+
+  <rect x="111" y="151" width="60" height="119" rx="4" class="flat"/>
+  <rect x="179" y="151" width="60" height="119" rx="4" class="agg"/>
+  <text x="141" y="143" text-anchor="middle" class="v">29.7%</text>
+  <text x="209" y="143" text-anchor="middle" class="v">29.7%</text>
+  <text x="175" y="292" text-anchor="middle" class="s">$1,000 bonus</text>
+
+  <rect x="291" y="151" width="60" height="119" rx="4" class="flat"/>
+  <rect x="359" y="146" width="60" height="124" rx="4" class="agg"/>
+  <text x="321" y="143" text-anchor="middle" class="v">29.7%</text>
+  <text x="389" y="138" text-anchor="middle" class="v">30.9%</text>
+  <text x="355" y="292" text-anchor="middle" class="s">$5,000 bonus</text>
+
+  <rect x="471" y="151" width="60" height="119" rx="4" class="flat"/>
+  <rect x="539" y="128" width="60" height="142" rx="4" class="agg"/>
+  <text x="501" y="143" text-anchor="middle" class="v">29.7%</text>
+  <text x="569" y="120" text-anchor="middle" class="v">35.6%</text>
+  <text x="535" y="292" text-anchor="middle" class="s">$10,000 bonus</text>
+
+  <rect x="651" y="151" width="60" height="119" rx="4" class="flat"/>
+  <rect x="719" y="110" width="60" height="160" rx="4" class="agg"/>
+  <text x="681" y="143" text-anchor="middle" class="v">29.7%</text>
+  <text x="749" y="102" text-anchor="middle" class="v">40.1%</text>
+  <text x="715" y="292" text-anchor="middle" class="s">$25,000 bonus</text>
+
+  <rect x="300" y="308" width="14" height="14" rx="3" class="flat"/>
+  <text x="322" y="320" class="m">Flat 22% method (separate bonus check)</text>
+  <rect x="580" y="308" width="14" height="14" rx="3" class="agg"/>
+  <text x="602" y="320" class="m">Aggregate method (bonus added to a paycheck)</text>
+</svg>

@@ -23,6 +23,10 @@ const CORE_INDEXABLE_PATHS = [
   "/blog",
   "/sales-tax",
   "/ohio-sales-tax-calculator",
+  "/w4v-form",
+  "/tax-write-off",
+  "/dependent-care-fsa",
+  "/hsa-calculator",
 ] as const;
 
 // Legacy location slugs at root (e.g. /texas-paycheck-calculator)
