@@ -195,6 +195,9 @@ export function SiteFooter() {
               '<a href="https://21st.tools?utm_source=badge&ref=paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://21st.tools/api/badge?theme=light&kind=listing&v=3" alt="Featured on 21st Tools" height="54" /></a>',
           }}
         />
+        <a className="partner-badge" target="_blank" href="https://earlyhunt.com/project/paycheck-atlas" rel="noopener">
+          <img src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg" alt="Featured on EarlyHunt" width="265" height="58" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
