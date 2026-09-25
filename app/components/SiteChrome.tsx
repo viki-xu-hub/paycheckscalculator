@@ -198,6 +198,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://earlyhunt.com/project/paycheck-atlas" rel="noopener">
           <img src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg" alt="Featured on EarlyHunt" width="265" height="58" loading="lazy" />
         </a>
+        <a className="partner-badge" target="_blank" href="https://saaspa.ge/product/cmughefm20002ic041s5pxv9q" rel="nofollow">
+          <img src="https://saaspa.ge/api/embed/product/cmughefm20002ic041s5pxv9q/badge.png?theme=blue" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
