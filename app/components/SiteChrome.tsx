@@ -204,6 +204,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://shinylaunch.com/product/paycheckscalculator" rel="noopener noreferrer">
           <img src="https://shinylaunch.com/assets/images/badge.png" alt="ShinyLaunch" height={54} loading="lazy" />
         </a>
+        <a className="partner-badge" href="https://themicrosaasdir.com/product/paycheck-calculator?ref=badge" rel="dofollow">
+          <img src="https://themicrosaasdir.com/badge/paycheck-calculator.svg" alt="Featured on TheMicroSaaSDir" width="160" height="44" loading="lazy" />
+        </a>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
