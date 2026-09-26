@@ -284,6 +284,14 @@ export function SiteFooter() {
         <a className="partner-badge" href="https://saastool.site/item/paycheck-calculator" target="_blank" rel="noopener noreferrer">
           <img src="https://saastool.site/badges/saastool-light.svg" alt="Featured on SaaSTool.site" height={54} width="auto" loading="lazy" />
         </a>
+        {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which StartupBase's badge check looks for verbatim. */}
+        <span
+          className="partner-badge"
+          dangerouslySetInnerHTML={{
+            __html:
+              '<a href="https://startupbase.io/products/paycheck-calculator?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer"><img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" style="height:55px;width:auto;" /></a>',
+          }}
+        />
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span
           className="partner-badge"
