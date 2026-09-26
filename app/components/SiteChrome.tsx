@@ -281,6 +281,9 @@ export function SiteFooter() {
         <a className="partner-badge" target="_blank" href="https://productwing.com/product/paycheckscalculator" rel="noopener noreferrer">
           <img src="https://productwing.com/assets/images/badge.png" alt="Product Wing" height={54} loading="lazy" />
         </a>
+        <a className="partner-badge" href="https://saastool.site/item/paycheck-calculator" target="_blank" rel="noopener noreferrer">
+          <img src="https://saastool.site/badges/saastool-light.svg" alt="Featured on SaaSTool.site" height={54} width="auto" loading="lazy" />
+        </a>
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span
           className="partner-badge"
