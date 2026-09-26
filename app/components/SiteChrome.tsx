@@ -25,8 +25,12 @@ export function SiteHeader() {
             <a href="/semimonthly-paycheck-calculator">Semimonthly Pay</a>
             <a href="/monthly-paycheck-calculator">Monthly Pay</a>
             <div className="nav-panel-divider" />
+            <div className="nav-group-label">State Income Tax Calculators</div>
+            <a href="/illinois-income-tax-calculator">Illinois</a>
+            <a href="/pennsylvania-income-tax-calculator">Pennsylvania</a>
+            <a href="/georgia-income-tax-calculator">Georgia</a>
+            <a href="/new-jersey-income-tax-calculator">New Jersey</a>
             <div className="nav-group-label">Tax & Benefits</div>
-            <a href="/illinois-income-tax-calculator">Illinois Income Tax</a>
             <a href="/hsa-calculator">HSA Calculator</a>
             <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends Worksheet</a>
           </div>
@@ -269,7 +273,10 @@ export function SiteFooter() {
           <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
         </a>
         <a className="partner-badge" href="https://www.startupinspire.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" width={187} height={54} loading="lazy" />
+          <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" height={54} loading="lazy" />
+        </a>
+        <a className="partner-badge" href="https://pickapps.org" target="_blank" rel="noopener noreferrer">
+          <img src="https://pickapps.org/pickapps-badge.svg" alt="Listed on PickApps" width="160" loading="lazy" />
         </a>
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span
