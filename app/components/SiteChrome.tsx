@@ -30,6 +30,10 @@ export function SiteHeader() {
             <a href="/pennsylvania-income-tax-calculator">Pennsylvania</a>
             <a href="/georgia-income-tax-calculator">Georgia</a>
             <a href="/new-jersey-income-tax-calculator">New Jersey</a>
+            <a href="/connecticut-income-tax-calculator">Connecticut</a>
+            <a href="/utah-income-tax-calculator">Utah</a>
+            <a href="/tennessee-income-tax-calculator">Tennessee — No Income Tax</a>
+            <a href="/florida-state-tax-calculator">Florida — No Income Tax</a>
             <div className="nav-group-label">Tax & Benefits</div>
             <a href="/hsa-calculator">HSA Calculator</a>
             <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends Worksheet</a>
@@ -292,6 +296,9 @@ export function SiteFooter() {
               '<a href="https://startupbase.io/products/paycheck-calculator?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer"><img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" style="height:55px;width:auto;" /></a>',
           }}
         />
+        <a className="partner-badge" target="_blank" href="https://launchscroll.com/product/paycheckscalculator" rel="noopener noreferrer">
+          <img src="https://launchscroll.com/assets/images/badge.png" alt="Launch Scroll" height={54} loading="lazy" />
+        </a>
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span
           className="partner-badge"
