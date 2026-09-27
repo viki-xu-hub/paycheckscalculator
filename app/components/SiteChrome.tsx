@@ -309,6 +309,9 @@ export function SiteFooter() {
               '<a href="https://startupbase.io/products/paycheck-calculator?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer"><img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" style="height:55px;width:auto;" /></a>',
           }}
         />
+        <a className="partner-badge" href="https://smollaunch.com" target="_blank" rel="noopener noreferrer">
+          <img src="https://smollaunch.com/badges/featured.svg" alt="Paycheck Calculator — Featured on Smol Launch" width="250" height="60" loading="lazy" />
+        </a>
         {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
         <span
           className="partner-badge"
