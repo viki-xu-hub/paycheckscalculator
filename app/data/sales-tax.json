@@ -631,6 +631,476 @@
     }
    ],
    "district": 2.0
+  },
+  {
+   "slug": "san-diego-ca",
+   "name": "San Diego",
+   "short": "San Diego",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 7.75,
+   "stateBase": 7.25,
+   "district": 0.5,
+   "county": "San Diego County",
+   "countyRate": 7.75,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [
+    {
+     "name": "Chula Vista",
+     "rate": 8.75
+    },
+    {
+     "name": "Oceanside",
+     "rate": 8.25
+    },
+    {
+     "name": "Escondido",
+     "rate": 8.75
+    },
+    {
+     "name": "Carlsbad",
+     "rate": 7.75
+    },
+    {
+     "name": "El Cajon",
+     "rate": 8.25
+    },
+    {
+     "name": "La Mesa",
+     "rate": 8.5
+    },
+    {
+     "name": "National City",
+     "rate": 8.75
+    },
+    {
+     "name": "Vista",
+     "rate": 8.25
+    }
+   ]
+  },
+  {
+   "slug": "pasadena-ca",
+   "name": "Pasadena",
+   "short": "Pasadena",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 10.5,
+   "stateBase": 7.25,
+   "district": 3.25,
+   "county": "Los Angeles County",
+   "countyRate": 9.75,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [
+    {
+     "name": "Glendale",
+     "rate": 10.5
+    },
+    {
+     "name": "Burbank",
+     "rate": 10.5
+    },
+    {
+     "name": "Arcadia",
+     "rate": 10.5
+    },
+    {
+     "name": "Alhambra",
+     "rate": 10.5
+    },
+    {
+     "name": "Monrovia",
+     "rate": 10.5
+    },
+    {
+     "name": "South Pasadena",
+     "rate": 10.5
+    },
+    {
+     "name": "Sierra Madre",
+     "rate": 10.5
+    }
+   ]
+  },
+  {
+   "slug": "long-beach-ca",
+   "name": "Long Beach",
+   "short": "Long Beach",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 10.5,
+   "stateBase": 7.25,
+   "district": 3.25,
+   "county": "Los Angeles County",
+   "countyRate": 9.75,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [
+    {
+     "name": "Signal Hill",
+     "rate": 10.5
+    },
+    {
+     "name": "Lakewood",
+     "rate": 10.5
+    },
+    {
+     "name": "Bellflower",
+     "rate": 10.5
+    },
+    {
+     "name": "Cerritos",
+     "rate": 9.75
+    },
+    {
+     "name": "Seal Beach",
+     "rate": 9.25
+    },
+    {
+     "name": "Carson",
+     "rate": 10.5
+    },
+    {
+     "name": "Compton",
+     "rate": 10.75
+    }
+   ]
+  },
+  {
+   "slug": "torrance-ca",
+   "name": "Torrance",
+   "short": "Torrance",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 10.25,
+   "stateBase": 7.25,
+   "district": 3.0,
+   "county": "Los Angeles County",
+   "countyRate": 9.75,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [
+    {
+     "name": "Redondo Beach",
+     "rate": 9.75
+    },
+    {
+     "name": "Manhattan Beach",
+     "rate": 10.25
+    },
+    {
+     "name": "Hermosa Beach",
+     "rate": 9.75
+    },
+    {
+     "name": "Gardena",
+     "rate": 10.5
+    },
+    {
+     "name": "Carson",
+     "rate": 10.5
+    },
+    {
+     "name": "Lomita",
+     "rate": 10.5
+    },
+    {
+     "name": "Palos Verdes Estates",
+     "rate": 9.75
+    }
+   ]
+  },
+  {
+   "slug": "fresno-ca",
+   "name": "Fresno",
+   "short": "Fresno",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 8.35,
+   "stateBase": 7.25,
+   "district": 1.1,
+   "county": "Fresno County",
+   "countyRate": 7.975,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [
+    {
+     "name": "Clovis",
+     "rate": 8.975
+    },
+    {
+     "name": "Madera",
+     "rate": 8.25
+    },
+    {
+     "name": "Visalia",
+     "rate": 8.5
+    },
+    {
+     "name": "Selma",
+     "rate": 8.475
+    },
+    {
+     "name": "Sanger",
+     "rate": 8.725
+    },
+    {
+     "name": "Reedley",
+     "rate": 9.225
+    },
+    {
+     "name": "Kingsburg",
+     "rate": 8.975
+    }
+   ]
+  },
+  {
+   "slug": "riverside-ca",
+   "name": "Riverside",
+   "short": "Riverside",
+   "kind": "city",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 8.75,
+   "stateBase": 7.25,
+   "district": 1.5,
+   "county": "Riverside County",
+   "countyRate": 7.75,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [
+    {
+     "name": "Corona",
+     "rate": 8.75
+    },
+    {
+     "name": "Moreno Valley",
+     "rate": 8.75
+    },
+    {
+     "name": "Temecula",
+     "rate": 8.75
+    },
+    {
+     "name": "Murrieta",
+     "rate": 8.75
+    },
+    {
+     "name": "Hemet",
+     "rate": 8.75
+    },
+    {
+     "name": "Palm Springs",
+     "rate": 9.25
+    },
+    {
+     "name": "Perris",
+     "rate": 7.75
+    },
+    {
+     "name": "Norco",
+     "rate": 8.75
+    }
+   ]
+  },
+  {
+   "slug": "ventura-county-ca",
+   "name": "Ventura County",
+   "short": "Ventura County",
+   "kind": "county",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 7.25,
+   "stateBase": 7.25,
+   "district": 0.0,
+   "county": "Ventura County",
+   "countyRate": 7.25,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [],
+   "cities": [
+    {
+     "name": "Oxnard",
+     "rate": 9.25
+    },
+    {
+     "name": "Santa Paula",
+     "rate": 9.25
+    },
+    {
+     "name": "Port Hueneme",
+     "rate": 8.75
+    },
+    {
+     "name": "Ventura",
+     "rate": 7.75
+    },
+    {
+     "name": "Camarillo",
+     "rate": 7.25
+    },
+    {
+     "name": "Fillmore",
+     "rate": 7.25
+    },
+    {
+     "name": "Moorpark",
+     "rate": 7.25
+    },
+    {
+     "name": "Ojai",
+     "rate": 7.25
+    },
+    {
+     "name": "Simi Valley",
+     "rate": 7.25
+    },
+    {
+     "name": "Thousand Oaks",
+     "rate": 7.25
+    }
+   ]
+  },
+  {
+   "slug": "santa-clara-county-ca",
+   "name": "Santa Clara County",
+   "short": "Santa Clara County",
+   "kind": "county",
+   "state": "California",
+   "stateAbbr": "CA",
+   "rate": 9.75,
+   "stateBase": 7.25,
+   "district": 2.5,
+   "county": "Santa Clara County",
+   "countyRate": 9.75,
+   "effective": "July 1, 2026",
+   "src": {
+    "agency": "California Department of Tax and Fee Administration (CDTFA)",
+    "agencyShort": "CDTFA",
+    "agencyUrl": "https://cdtfa.ca.gov/taxes-and-fees/rates.aspx",
+    "table": "California City and County Sales and Use Tax Rates"
+   },
+   "lead": "",
+   "notes": [],
+   "nearby": [],
+   "cities": [
+    {
+     "name": "Campbell",
+     "rate": 10.5
+    },
+    {
+     "name": "Milpitas",
+     "rate": 10.0
+    },
+    {
+     "name": "San Jose",
+     "rate": 10.0
+    },
+    {
+     "name": "Los Gatos",
+     "rate": 9.875
+    },
+    {
+     "name": "Cupertino",
+     "rate": 9.75
+    },
+    {
+     "name": "Gilroy",
+     "rate": 9.75
+    },
+    {
+     "name": "Los Altos",
+     "rate": 9.75
+    },
+    {
+     "name": "Los Altos Hills",
+     "rate": 9.75
+    },
+    {
+     "name": "Monte Sereno",
+     "rate": 9.75
+    },
+    {
+     "name": "Morgan Hill",
+     "rate": 9.75
+    },
+    {
+     "name": "Mountain View",
+     "rate": 9.75
+    },
+    {
+     "name": "Palo Alto",
+     "rate": 9.75
+    },
+    {
+     "name": "Santa Clara",
+     "rate": 9.75
+    },
+    {
+     "name": "Saratoga",
+     "rate": 9.75
+    },
+    {
+     "name": "Sunnyvale",
+     "rate": 9.75
+    }
+   ]
   }
  ]
 }
