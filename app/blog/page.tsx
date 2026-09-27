@@ -26,6 +26,132 @@ const POSTS = [
     meta: "HSA · 2026 Limits · Interactive Calculator",
   },
   {
+    href: "/illinois-income-tax-calculator",
+    title: "Illinois Income Tax Calculator 2026 — Free Estimator",
+    blurb:
+      "Calculate your 2026 Illinois state income tax plus federal tax. Flat 4.95% rate with personal exemptions — see your total bill and effective rate.",
+    meta: "Illinois · Flat Tax · Annual Estimator",
+  },
+  {
+    href: "/pennsylvania-income-tax-calculator",
+    title: "Pennsylvania Income Tax Calculator 2026 — 3.07% Flat Rate",
+    blurb:
+      "Free PA income tax calculator for 2026. Pennsylvania's flat 3.07% rate — see your federal and state tax total and effective rate.",
+    meta: "Pennsylvania · Flat Tax · 3.07%",
+  },
+  {
+    href: "/georgia-income-tax-calculator",
+    title: "Georgia Income Tax Calculator 2026 — Flat 4.99% Rate",
+    blurb:
+      "Calculate your 2026 Georgia state income tax. GA flat 4.99% rate with standard deduction and dependent exemptions.",
+    meta: "Georgia · Flat Tax · 4.99%",
+  },
+  {
+    href: "/new-jersey-income-tax-calculator",
+    title: "New Jersey Income Tax Calculator 2026 — NJ Tax Brackets",
+    blurb:
+      "Free NJ income tax calculator with 2026 tax brackets (1.4% to 10.75%). Estimate your federal and New Jersey state income tax.",
+    meta: "New Jersey · Progressive · 7 Brackets",
+  },
+  {
+    href: "/connecticut-income-tax-calculator",
+    title: "Connecticut Income Tax Calculator 2026 — CT Tax Brackets",
+    blurb:
+      "Free CT income tax calculator with the 2026 seven-bracket schedule (2% to 6.99%) and the Table A personal exemption phase-out.",
+    meta: "Connecticut · Progressive · 7 Brackets",
+  },
+  {
+    href: "/utah-income-tax-calculator",
+    title: "Utah Income Tax Calculator 2026 — 4.45% Flat Rate",
+    blurb:
+      "Calculate your 2026 Utah state income tax. Flat 4.45% rate paired with the Form TC-40 taxpayer tax credit and its phase-out.",
+    meta: "Utah · Flat Tax · 4.45%",
+  },
+  {
+    href: "/tennessee-income-tax-calculator",
+    title: "Tennessee Income Tax Calculator 2026 — No State Income Tax",
+    blurb:
+      "Tennessee has no state income tax. See what you actually owe in 2026 — federal only — and how that compares with income-tax states.",
+    meta: "Tennessee · No Income Tax · Federal Only",
+  },
+  {
+    href: "/florida-state-tax-calculator",
+    title: "Florida State Tax Calculator 2026 — No Income Tax",
+    blurb:
+      "Florida levies no state income tax. Estimate your 2026 federal tax and see how much you keep compared with high-tax states.",
+    meta: "Florida · No Income Tax · Federal Only",
+  },
+  {
+    href: "/no-tax-on-overtime",
+    title: "No Tax on Overtime 2026 — Deduction Rules Explained",
+    blurb:
+      "The OBBBA overtime deduction covers up to $12,500 of overtime premium ($25,000 joint) for 2025–2028. What qualifies, the income phase-out, and what it is worth.",
+    meta: "OBBBA · Overtime · 2025–2028",
+  },
+  {
+    href: "/overtime-calculator",
+    title: "Overtime Calculator 2026 — Time and a Half Pay",
+    blurb:
+      "Work out time and a half, double time and your weekly gross from any hourly rate — plus how overtime is actually taxed.",
+    meta: "Overtime · Time and a Half · Calculator",
+  },
+  {
+    href: "/self-employment-tax-calculator",
+    title: "Self Employed Tax Calculator 2026 — 1099 vs W2",
+    blurb:
+      "Estimate self-employment tax, federal income tax and quarterly payments on 1099 income, and see what a 1099 rate has to cover versus a W-2 salary.",
+    meta: "1099 · Self-Employment · 15.3%",
+  },
+  {
+    href: "/tax-on-commission",
+    title: "Tax on Commission Payments 2026 — Is It Taxed More?",
+    blurb:
+      "Commission is taxed at ordinary rates but withheld at a flat 22%. Why the cheque looks overtaxed and what you actually owe at filing.",
+    meta: "Commission · Supplemental Wages",
+  },
+  {
+    href: "/severance-pay-tax-calculator",
+    title: "Severance Pay Tax Calculator 2026 — PTO Payout",
+    blurb:
+      "Estimate tax on a severance package and accrued PTO payout, including the 22% supplemental rate and whether you have passed the Social Security wage base.",
+    meta: "Severance · PTO Payout · Calculator",
+  },
+  {
+    href: "/gross-up-calculator",
+    title: "Gross Up Calculator 2026 — Net to Gross Pay",
+    blurb:
+      "Work backwards from a target net to the gross an employer must run. Grossing up is division, not addition — and adding the tax rate always lands short.",
+    meta: "Gross-Up · Bonus · Relocation",
+  },
+  {
+    href: "/ytd-calculator",
+    title: "YTD Calculator 2026 — Year to Date Income",
+    blurb:
+      "Turn the year-to-date figure on a pay stub into projected annual and monthly income, the way a mortgage underwriter does it.",
+    meta: "YTD · Pay Stub · Projection",
+  },
+  {
+    href: "/what-is-annual-income",
+    title: "What Is Annual Income? How to Find Yours (2026)",
+    blurb:
+      "Annual income means total earnings for a year. What counts, how to find it from an hourly wage or pay stub, and why gross and net differ so much.",
+    meta: "Annual Income · Gross vs Net",
+  },
+  {
+    href: "/post-tax-deductions",
+    title: "Post-Tax Deductions vs Pre-Tax — 2026 Guide",
+    blurb:
+      "Which payroll deductions come out before tax and which after, why a 401(k) cuts income tax but not FICA, and what a $200 deduction really costs.",
+    meta: "Payroll Deductions · Pre-Tax vs Post-Tax",
+  },
+  {
+    href: "/nanny-cost",
+    title: "How Much Do Nannies Cost? Average Nanny Pay Rates (2026)",
+    blurb:
+      "How much does a nanny cost? See 2026 nanny salary averages by location, experience, and number of kids. Plus the full cost of employing a nanny including taxes and benefits.",
+    meta: "Child Care · Nanny Pay · Household Employer",
+  },
+  {
     href: "/dependent-care-fsa",
     title: "Dependent Care FSA: Eligible Expenses & Limits (2026)",
     blurb:
@@ -59,6 +185,13 @@ const POSTS = [
     blurb:
       "Everything you need to know about Form W-4V (Voluntary Withholding Request) for Social Security benefits — who needs it, filing options, and withholding percentages.",
     meta: "Tax Forms · Social Security · 2026",
+  },
+  {
+    href: "/fit-tax-meaning",
+    title: "FIT Tax Meaning: What Is FIT on a Paycheck? (2026)",
+    blurb:
+      "What does FIT mean on your pay stub? FIT stands for Federal Income Tax — the largest withholding on most paychecks. Learn how it is calculated and how to adjust it.",
+    meta: "Paycheck Basics · Federal Tax · W-4",
   },
   {
     href: "/paycheck-taxes",

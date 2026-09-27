@@ -34,6 +34,13 @@ export function SiteHeader() {
             <a href="/utah-income-tax-calculator">Utah</a>
             <a href="/tennessee-income-tax-calculator">Tennessee — No Income Tax</a>
             <a href="/florida-state-tax-calculator">Florida — No Income Tax</a>
+            <div className="nav-group-label">Pay & Tax Tools</div>
+            <a href="/overtime-calculator">Overtime Calculator</a>
+            <a href="/no-tax-on-overtime">No Tax on Overtime</a>
+            <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
+            <a href="/gross-up-calculator">Gross-Up Calculator</a>
+            <a href="/ytd-calculator">YTD Calculator</a>
+            <a href="/severance-pay-tax-calculator">Severance & PTO Tax</a>
             <div className="nav-group-label">Tax & Benefits</div>
             <a href="/hsa-calculator">HSA Calculator</a>
             <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends Worksheet</a>

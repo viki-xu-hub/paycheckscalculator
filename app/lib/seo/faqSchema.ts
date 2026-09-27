@@ -67,6 +67,36 @@ export function salaryFaqs(salary: SalaryData): FaqItem[] {
       q: `Is ${label} a good salary?`,
       a: `Whether ${label} a year is a good salary depends on your location, household size and cost of living. Compare the after-tax figures for different states on this page.`,
     },
+    // Salary-to-hourly phrasing variants. The conversion is identical; these
+    // spell it out the way the question is usually typed.
+    {
+      q: `What is ${label} a year hourly?`,
+      a: `${label} a year hourly is $${hourly40} an hour on a standard 2,080-hour year (40 hours a week, 52 weeks). At 35 hours a week the same salary is $${hourly35} an hour, because the same money is spread over fewer hours.`,
+    },
+    {
+      q: `How do I convert a ${label} salary to hourly?`,
+      a: `Divide by the hours you actually work in a year. ${label} salary to hourly is ${label} ÷ 2,080 = $${hourly40} an hour at full time, or ${label} ÷ 1,820 = $${hourly35} an hour at 35 hours a week. Paid time off does not change the maths — salaried pay covers the year either way.`,
+    },
+    {
+      q: `How much per hour is ${label} a year?`,
+      a: `Per hour, ${label} a year is $${hourly40} before tax at 40 hours a week. After federal tax, Social Security and Medicare the effective hourly figure is lower — the state table on this page shows the after-tax amount where you live.`,
+    },
+    {
+      q: `What is the hourly rate for ${label} a year?`,
+      a: `The hourly rate for ${label} a year is $${hourly40} at full-time hours. Put the other way round, someone earning $${hourly40} an hour and working 2,080 hours reaches a ${label} annual salary.`,
+    },
+    {
+      q: `How much is ${k} a year hourly?`,
+      a: `${k} a year hourly is $${hourly40} an hour at 40 hours a week. Written out, ${Math.round(amount / 1000)} thousand a year is how much an hour? The same $${hourly40}, because ${k} and ${label} are the same salary.`,
+    },
+    {
+      q: `${label} salary hourly — what does it work out to?`,
+      a: `A ${label} salary hourly is $${hourly40} at full-time hours and $${hourly35} at 35 hours a week. ${label} is how much an hour once you divide by the 2,080 hours in a standard working year.`,
+    },
+    {
+      q: `${label} a year is how much a month after taxes?`,
+      a: `Before tax, ${label} a year is ${fmt(monthly)} a month. After taxes the monthly figure depends on your state and filing status — a single filer typically keeps somewhere between 78% and 85% of gross, so use the calculator above and set pay frequency to monthly for your exact number.`,
+    },
   ];
 }
 
@@ -99,6 +129,36 @@ export function hourlyFaqs(hourly: HourlyData): FaqItem[] {
     {
       q: `Is ${dollar} an hour a good wage?`,
       a: `${dollar} an hour is approximately ${fmtAnnual} a year at full-time hours. Whether that is a good wage depends on your location and cost of living — compare the take-home figures for different states on this page.`,
+    },
+    // Phrasing variants people actually search for. Same arithmetic, different
+    // wording — answered explicitly so the page matches the query as typed.
+    {
+      q: `${rate} dollars an hour is how much a year?`,
+      a: `${rate} dollars an hour is ${fmtAnnual} a year at 40 hours a week, or ${money.format(annualAt35h)} a year at 35 hours a week. Written either way — ${dollar} an hour or ${rate} dollars an hour — the calculation is the same: the hourly rate times 2,080 working hours in a year.`,
+    },
+    {
+      q: `How much is ${rate} dollars an hour annually?`,
+      a: `Annually, ${rate} dollars an hour comes to ${fmtAnnual} before tax on a standard 2,080-hour year. That is the gross figure; what lands in your account depends on federal withholding, Social Security, Medicare and your state.`,
+    },
+    {
+      q: `What is ${dollar} an hour annually?`,
+      a: `${dollar} an hour annually is ${fmtAnnual} gross. Part-time hours change it: at 35 hours a week it is ${money.format(annualAt35h)}, and at 30 hours a week about ${money.format(rate * 30 * 52)}.`,
+    },
+    {
+      q: `What is the ${dollar} an hour salary equivalent?`,
+      a: `The salary equivalent of ${dollar} an hour is ${fmtAnnual} a year — ${dollar} per hour annual salary at full-time hours. Converting ${dollar} hourly to salary means multiplying by 2,080; going the other way, an ${fmtAnnual} salary works out to ${dollar} an hour.`,
+    },
+    {
+      q: `How much is ${dollar} an hour annually?`,
+      a: `How much is ${dollar} an hour annually depends only on hours worked: ${fmtAnnual} at 40 hours a week, ${money.format(annualAt35h)} at 35. The ${dollar} an hour salary most people quote is the 40-hour figure, ${fmtAnnual}.`,
+    },
+    {
+      q: `What is the ${rate} hr salary — and how do I convert ${rate} hr to salary?`,
+      a: `The ${rate} hr salary is ${fmtAnnual} a year. To convert ${rate} hr to salary, multiply by the hours you work in a year: ${rate} × 2,080 = ${fmtAnnual} at full time. A ${rate} dollars an hour salary quoted as an annual number is that same ${fmtAnnual}.`,
+    },
+    {
+      q: `${rate} hr is how much a year?`,
+      a: `${rate}/hr is ${fmtAnnual} a year at full time. Whether it is written ${rate} hr, ${dollar} per hour or ${rate} dollars an hour, the annual figure is the same ${fmtAnnual} before deductions.`,
     },
   ];
 }

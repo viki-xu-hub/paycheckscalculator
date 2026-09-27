@@ -41,3 +41,7 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# local artifacts
+bank_statement_blogs.xlsx
+test-report.html
