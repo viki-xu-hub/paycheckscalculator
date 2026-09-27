@@ -14,36 +14,42 @@ export function SiteHeader() {
         {/* Calculators dropdown */}
         <div className="nav-item">
           <span className="nav-trigger">Calculators <span className="nav-caret">▾</span></span>
-          <div className="nav-panel">
-            <div className="nav-group-label">By Amount</div>
-            <a href="/salary">Salary After Tax</a>
-            <a href="/hourly-paycheck-calculator">Hourly Pay</a>
-            <div className="nav-panel-divider" />
-            <div className="nav-group-label">By Frequency</div>
-            <a href="/biweekly-paycheck-calculator">Biweekly Pay</a>
-            <a href="/weekly-paycheck-calculator">Weekly Pay</a>
-            <a href="/semimonthly-paycheck-calculator">Semimonthly Pay</a>
-            <a href="/monthly-paycheck-calculator">Monthly Pay</a>
-            <div className="nav-panel-divider" />
-            <div className="nav-group-label">State Income Tax Calculators</div>
-            <a href="/illinois-income-tax-calculator">Illinois</a>
-            <a href="/pennsylvania-income-tax-calculator">Pennsylvania</a>
-            <a href="/georgia-income-tax-calculator">Georgia</a>
-            <a href="/new-jersey-income-tax-calculator">New Jersey</a>
-            <a href="/connecticut-income-tax-calculator">Connecticut</a>
-            <a href="/utah-income-tax-calculator">Utah</a>
-            <a href="/tennessee-income-tax-calculator">Tennessee — No Income Tax</a>
-            <a href="/florida-state-tax-calculator">Florida — No Income Tax</a>
-            <div className="nav-group-label">Pay & Tax Tools</div>
-            <a href="/overtime-calculator">Overtime Calculator</a>
-            <a href="/no-tax-on-overtime">No Tax on Overtime</a>
-            <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
-            <a href="/gross-up-calculator">Gross-Up Calculator</a>
-            <a href="/ytd-calculator">YTD Calculator</a>
-            <a href="/severance-pay-tax-calculator">Severance & PTO Tax</a>
-            <div className="nav-group-label">Tax & Benefits</div>
-            <a href="/hsa-calculator">HSA Calculator</a>
-            <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends Worksheet</a>
+          <div className="nav-panel nav-panel-cols3">
+            <div>
+              <div className="nav-group-label">By Amount</div>
+              <a href="/salary">Salary After Tax</a>
+              <a href="/hourly-paycheck-calculator">Hourly Pay</a>
+              <div className="nav-panel-divider" />
+              <div className="nav-group-label">By Frequency</div>
+              <a href="/biweekly-paycheck-calculator">Biweekly Pay</a>
+              <a href="/weekly-paycheck-calculator">Weekly Pay</a>
+              <a href="/semimonthly-paycheck-calculator">Semimonthly Pay</a>
+              <a href="/monthly-paycheck-calculator">Monthly Pay</a>
+            </div>
+            <div>
+              <div className="nav-group-label">State Income Tax</div>
+              <a href="/illinois-income-tax-calculator">Illinois</a>
+              <a href="/pennsylvania-income-tax-calculator">Pennsylvania</a>
+              <a href="/georgia-income-tax-calculator">Georgia</a>
+              <a href="/new-jersey-income-tax-calculator">New Jersey</a>
+              <a href="/connecticut-income-tax-calculator">Connecticut</a>
+              <a href="/utah-income-tax-calculator">Utah</a>
+              <a href="/tennessee-income-tax-calculator">Tennessee — No Tax</a>
+              <a href="/florida-state-tax-calculator">Florida — No Tax</a>
+            </div>
+            <div>
+              <div className="nav-group-label">Pay & Tax Tools</div>
+              <a href="/overtime-calculator">Overtime Calculator</a>
+              <a href="/no-tax-on-overtime">No Tax on Overtime</a>
+              <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
+              <a href="/gross-up-calculator">Gross-Up Calculator</a>
+              <a href="/ytd-calculator">YTD Calculator</a>
+              <a href="/severance-pay-tax-calculator">Severance & PTO Tax</a>
+              <div className="nav-panel-divider" />
+              <div className="nav-group-label">Tax & Benefits</div>
+              <a href="/hsa-calculator">HSA Calculator</a>
+              <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends</a>
+            </div>
           </div>
         </div>
 
