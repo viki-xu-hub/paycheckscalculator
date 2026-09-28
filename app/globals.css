@@ -25,6 +25,11 @@ nav a:hover { color:var(--blue); }
 /* Three-column variant for the Calculators panel, which outgrew a single column. */
 .nav-panel-cols3 { min-width:560px; display:grid; grid-template-columns:repeat(3,1fr); gap:4px 14px; align-items:start; }
 .nav-panel-cols3 > div > .nav-group-label:first-child { margin-top:0; }
+/* Sales Tax panel: a full-width header row above three columns of cities. Centred on its trigger so the 560px panel stays on screen near the 800px breakpoint. */
+.nav-panel-span { grid-column:1/-1; }
+.nav-panel-row { display:flex; gap:4px; }
+.nav-panel-centered { left:50%; transform:translate(-50%,-4px); }
+.nav-item:hover .nav-panel-centered,.nav-item:focus-within .nav-panel-centered { transform:translate(-50%,0); }
 .nav-group-label { font-size:9px; font-weight:800; color:var(--red); letter-spacing:.1em; text-transform:uppercase; padding:8px 10px 4px; }
 .nav-panel a { display:block; padding:7px 10px; border-radius:6px; font-size:12px; color:#40566a; white-space:nowrap; border:none; }
 .nav-panel a:hover { background:#eef5fa; color:var(--blue); }

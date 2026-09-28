@@ -87,14 +87,24 @@ export function SiteHeader() {
         {/* Sales Tax dropdown */}
         <div className="nav-item">
           <span className="nav-trigger">Sales Tax <span className="nav-caret">▾</span></span>
-          <div className="nav-panel">
-            <div className="nav-group-label">Sales Tax Calculators</div>
-            <a href="/sales-tax">All Sales Tax Rates →</a>
-            <a href="/ohio-sales-tax-calculator">Ohio — All 88 Counties</a>
-            <div className="nav-panel-divider" />
-            <div className="nav-group-label">By City &amp; County</div>
-            {salesTaxLocations.map((l) => (
-              <a key={l.slug} href={`/sales-tax/${l.slug}`}>{l.name}, {l.stateAbbr}</a>
+          <div className="nav-panel nav-panel-cols3 nav-panel-centered">
+            <div className="nav-panel-span">
+              <div className="nav-group-label">Sales Tax Calculators</div>
+              <div className="nav-panel-row">
+                <a href="/sales-tax">All Sales Tax Rates →</a>
+                <a href="/ohio-sales-tax-calculator">Ohio — All 88 Counties</a>
+              </div>
+              <div className="nav-panel-divider" />
+              <div className="nav-group-label">By City &amp; County</div>
+            </div>
+            {[0, 1, 2].map((col) => (
+              <div key={col}>
+                {salesTaxLocations
+                  .slice(Math.ceil(salesTaxLocations.length / 3) * col, Math.ceil(salesTaxLocations.length / 3) * (col + 1))
+                  .map((l) => (
+                    <a key={l.slug} href={`/sales-tax/${l.slug}`}>{l.name}, {l.stateAbbr}</a>
+                  ))}
+              </div>
             ))}
           </div>
         </div>
