@@ -332,6 +332,12 @@ export function SiteFooter() {
               '<a href="https://www.foundrlist.com/product/paycheckcalculator-2?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator-2" alt="Featured on FoundrList" width="150" height="48" /></a>',
           }}
         />
+        {/* Wrapper carries the class so the <a>/<img> stay exactly as Stremit supplies them; the badge art is dark, so it sits on a light chip. */}
+        <span className="partner-badge partner-badge-stremit">
+          <a href="https://stremit.io" target="_blank" rel="noopener">
+            <img src="https://stremit.io/static/img/badges/featured-on-stremit.png" alt="Featured on Stremit" width="240" height="89" />
+          </a>
+        </span>
       </div>
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
