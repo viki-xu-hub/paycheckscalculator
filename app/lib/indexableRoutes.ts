@@ -49,6 +49,8 @@ const CORE_INDEXABLE_PATHS = [
   "/what-is-annual-income",
   "/tax-on-commission",
   "/post-tax-deductions",
+  "/pay-stub-calculator",
+  "/401k-paycheck-impact-calculator",
 ] as const;
 
 // Legacy location slugs at root (e.g. /texas-paycheck-calculator)
