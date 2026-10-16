@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { CalcShell, Grid, NumField, SelectField, Headline, Rows, Row, Note, fmt2 } from "./CalcKit";
 
@@ -17,7 +18,7 @@ const SS_WAGE_BASE = 184500;
  * income and subject to FICA, usually withheld at the 22% flat supplemental
  * rate. Withholding is not the final tax — the return settles up.
  */
-export default function SeveranceTaxCalculator() {
+function SeveranceTaxCalculator() {
   const [severance, setSeverance] = useState(20000);
   const [ptoPayout, setPtoPayout] = useState(4000);
   const [ytdWages, setYtdWages] = useState(70000);
@@ -100,3 +101,5 @@ export default function SeveranceTaxCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(SeveranceTaxCalculator);

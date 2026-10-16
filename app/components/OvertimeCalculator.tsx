@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { CalcShell, Grid, NumField, Headline, Rows, Row, Note, fmt2 } from "./CalcKit";
 
@@ -8,7 +9,7 @@ import { CalcShell, Grid, NumField, Headline, Rows, Row, Note, fmt2 } from "./Ca
  * are paid at 1.5× the regular rate. Double time is not federally required but
  * is common in union and California scheduling, so it is offered separately.
  */
-export default function OvertimeCalculator() {
+function OvertimeCalculator() {
   const [rate, setRate] = useState(25);
   const [regularHours, setRegularHours] = useState(40);
   const [otHours, setOtHours] = useState(5);
@@ -72,3 +73,5 @@ export default function OvertimeCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(OvertimeCalculator);

@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { CalcShell, Grid, NumField, SelectField, Headline, Rows, Row, Note, fmt2, fmt0 } from "./CalcKit";
 import { calculatePaycheck, type SupportedState, type FilingStatus, type PayFrequency } from "../lib/payroll";
@@ -41,7 +42,7 @@ const STATES: { value: SupportedState; label: string }[] = [
  * of the tool is the gap between the two numbers: a traditional contribution
  * comes out of pre-tax wages, so take-home falls by less than the amount saved.
  */
-export default function Retirement401kCalculator() {
+function Retirement401kCalculator() {
   const [salary, setSalary] = useState(75000);
   const [freq, setFreq] = useState<PayFrequency>("biweekly");
   const [status, setStatus] = useState<FilingStatus>("single");
@@ -175,3 +176,5 @@ export default function Retirement401kCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(Retirement401kCalculator);

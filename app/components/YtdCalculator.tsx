@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { CalcShell, Grid, NumField, SelectField, Headline, Rows, Row, Note, fmt2 } from "./CalcKit";
 
@@ -11,7 +12,7 @@ const PERIODS: Record<Freq, number> = { weekly: 52, biweekly: 26, semimonthly: 2
  * into the year it covers, and annualises it — the calculation a lender does
  * when they ask for your most recent stub.
  */
-export default function YtdCalculator() {
+function YtdCalculator() {
   const [ytd, setYtd] = useState(38000);
   const [freq, setFreq] = useState<Freq>("biweekly");
   const [periodsPaid, setPeriodsPaid] = useState(17);
@@ -82,3 +83,5 @@ export default function YtdCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(YtdCalculator);

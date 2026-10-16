@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { CalcShell, Grid, NumField, SelectField, Headline, Rows, Row, Note, fmt2 } from "./CalcKit";
 import { calculatePaycheck, type SupportedState, type FilingStatus, type PayFrequency } from "../lib/payroll";
@@ -38,7 +39,7 @@ const STATES: { value: SupportedState; label: string }[] = [
  * line, deductions and net. It checks arithmetic — it does not produce a
  * document, and a stub is only ever issued by an employer.
  */
-export default function PayStubCalculator() {
+function PayStubCalculator() {
   const [grossPerPeriod, setGrossPerPeriod] = useState(2500);
   const [freq, setFreq] = useState<PayFrequency>("biweekly");
   const [status, setStatus] = useState<FilingStatus>("single");
@@ -147,3 +148,5 @@ export default function PayStubCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(PayStubCalculator);

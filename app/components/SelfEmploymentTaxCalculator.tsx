@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { CalcShell, Grid, NumField, SelectField, Headline, Rows, Row, Note, fmt2 } from "./CalcKit";
 import { ordinaryTax, statusByKey } from "../lib/qualifiedDividends";
@@ -22,7 +23,7 @@ const ADDITIONAL_MEDICARE_THRESHOLD: Record<Status, number> = {
  * the wage base and the 2.9% Medicare half uncapped. Half of the SE tax is
  * deductible against income tax.
  */
-export default function SelfEmploymentTaxCalculator() {
+function SelfEmploymentTaxCalculator() {
   const [profit, setProfit] = useState(80000);
   const [w2Wages, setW2Wages] = useState(0);
   const [status, setStatus] = useState<Status>("single");
@@ -105,3 +106,5 @@ export default function SelfEmploymentTaxCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(SelfEmploymentTaxCalculator);

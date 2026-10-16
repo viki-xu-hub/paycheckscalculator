@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useId, useMemo, useState } from "react";
 
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
@@ -14,7 +15,7 @@ const PERIODS: Record<string, number> = {
 
 export type CoverageOption = { key: string; label: string; limit: number; hint?: string };
 
-export default function PreTaxBenefitCalculator({
+function PreTaxBenefitCalculator({
   coverageLabel,
   coverages,
   catchUp,
@@ -186,3 +187,5 @@ export default function PreTaxBenefitCalculator({
     </div>
   );
 }
+
+export default withEmbed(PreTaxBenefitCalculator);

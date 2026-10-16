@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useId, useMemo, useState } from "react";
 import {
   calculatePaycheck,
@@ -24,7 +25,7 @@ const initialLocalRate=(state:SupportedState)=>state==="MD"?3.2:0;
 const initialStateDate=(state:SupportedState)=>state==="GA"?"2026-05-11":state==="UT"?"2026-06-01":"2026-08-01";
 const initialPremiumRate=(state:SupportedState)=>state==="MA" ? .46 : state==="MN" ? .44 : state==="OR" ? .6 : 0;
 
-export default function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false,defaultHourlyRate=30,defaultOvertime=5,defaultSalary=75000,headingSuffix=""}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean;defaultHourlyRate?:number;defaultOvertime?:number;defaultSalary?:number;headingSuffix?:string}) {
+function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false,defaultHourlyRate=30,defaultOvertime=5,defaultSalary=75000,headingSuffix=""}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean;defaultHourlyRate?:number;defaultOvertime?:number;defaultSalary?:number;headingSuffix?:string}) {
   const [state,setState]=useState<SupportedState>(defaultState);
   const [stateQuery,setStateQuery]=useState(supportedStates.find(item=>item.code===defaultState)?.name??"");
   const [stateSearchOpen,setStateSearchOpen]=useState(false);
@@ -83,7 +84,7 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
     setStateSearchOpen(false);
     if(navigateOnStateChange){
       const slug=next==="NYC"?"nyc":supportedStates.find(item=>item.code===next)?.name.toLowerCase().replaceAll(" ","-");
-      window.location.href=`/${slug}-paycheck-calculator`;
+      window.location.href=`/${slug}-paycheck-calculator${document.documentElement.classList.contains("embed-mode")?"?embed=1":""}`;
       return;
     }
     setState(next);
@@ -176,3 +177,5 @@ export default function PaycheckCalculator({defaultState="TX",defaultFrequency="
 
 function NumberField({label,value,setValue,currency=true,step=1,help}:{label:string;value:number;setValue:(value:number)=>void;currency?:boolean;step?:number;help?:string}) {return <label className="field"><span>{label}</span><div className="money-input">{currency&&<span>$</span>}<input type="number" min="0" step={step} value={value} onChange={event=>setValue(Number(event.target.value))}/></div>{help&&<small>{help}</small>}</label>}
 function CheckboxField({label,checked,setChecked}:{label:string;checked:boolean;setChecked:(value:boolean)=>void}){return <label className="field checkbox-field"><span>{label}</span><input type="checkbox" checked={checked} onChange={event=>setChecked(event.target.checked)}/></label>}
+
+export default withEmbed(PaycheckCalculator);

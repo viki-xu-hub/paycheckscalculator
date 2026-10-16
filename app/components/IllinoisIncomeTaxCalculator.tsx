@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useId, useMemo, useState } from "react";
 import {
   capitalGains,
@@ -12,7 +13,7 @@ import {
 const IL_FLAT_RATE = 0.0495;
 const IL_PERSONAL_EXEMPTION = 2925;
 
-export default function IllinoisIncomeTaxCalculator() {
+function IllinoisIncomeTaxCalculator() {
   const [statusKey, setStatusKey] = useState<FilingStatusKey>("single");
   const [income, setIncome] = useState(75000);
   const [dependents, setDependents] = useState(0);
@@ -222,3 +223,5 @@ function NumberField({
     </label>
   );
 }
+
+export default withEmbed(IllinoisIncomeTaxCalculator);

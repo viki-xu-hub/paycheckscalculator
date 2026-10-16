@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import {
   CalcShell,
@@ -28,7 +29,7 @@ type Status = "single" | "married";
  * FLSA time-and-a-half only, so the input asks for that figure rather than
  * total overtime pay.
  */
-export default function NoTaxOvertimeCalculator() {
+function NoTaxOvertimeCalculator() {
   const [status, setStatus] = useState<Status>("single");
   const [magi, setMagi] = useState(85000);
   const [premium, setPremium] = useState(6000);
@@ -101,3 +102,5 @@ export default function NoTaxOvertimeCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(NoTaxOvertimeCalculator);

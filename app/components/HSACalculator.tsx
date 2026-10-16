@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useState, useMemo } from "react";
 
 const fmt0 = (n: number) =>
@@ -28,7 +29,7 @@ function marginalRate(income: number, filingStatus: string): number {
   return rate;
 }
 
-export default function HSACalculatorWidget() {
+function HSACalculatorWidget() {
   const [income, setIncome] = useState(75000);
   const [contribution, setContribution] = useState(4000);
   const [coverage, setCoverage] = useState<"self" | "family">("self");
@@ -213,3 +214,5 @@ export default function HSACalculatorWidget() {
     </div>
   );
 }
+
+export default withEmbed(HSACalculatorWidget);

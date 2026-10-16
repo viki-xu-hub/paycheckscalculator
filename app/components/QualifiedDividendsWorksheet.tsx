@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useId, useMemo, useState } from "react";
 import {
   capitalGains,
@@ -13,7 +14,7 @@ import {
 
 const pct = (n: number) => `${n}%`;
 
-export default function QualifiedDividendsWorksheet() {
+function QualifiedDividendsWorksheet() {
   const [statusKey, setStatusKey] = useState<FilingStatusKey>("single");
   const [taxableIncome, setTaxableIncome] = useState(150000);
   const [qualifiedDividends, setQualifiedDividends] = useState(20000);
@@ -219,3 +220,5 @@ function NumberField({ label, value, setValue }: { label: string; value: number;
 }
 
 export { pct };
+
+export default withEmbed(QualifiedDividendsWorksheet);

@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { CalcShell, Grid, NumField, SelectField, Headline, Rows, Row, Note, fmt2 } from "./CalcKit";
 
@@ -15,7 +16,7 @@ const MEDICARE_RATE = 1.45;
  * must run so the employee nets exactly that amount after withholding.
  * gross = net / (1 − total withholding rate).
  */
-export default function GrossUpCalculator() {
+function GrossUpCalculator() {
   const [net, setNet] = useState(1000);
   const [method, setMethod] = useState<Method>("supplemental");
   const [federalRate, setFederalRate] = useState(SUPPLEMENTAL_RATE);
@@ -107,3 +108,5 @@ export default function GrossUpCalculator() {
     </CalcShell>
   );
 }
+
+export default withEmbed(GrossUpCalculator);

@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useId, useMemo, useState } from "react";
 import { pct, preTaxFrom, taxOn, type RateComponent, type RateRow } from "../lib/salesTax";
 
@@ -7,7 +8,7 @@ const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD
 
 type Mode = "add" | "remove";
 
-export default function SalesTaxCalculator({
+function SalesTaxCalculator({
   defaultRate,
   placeLabel,
   options,
@@ -173,3 +174,5 @@ export default function SalesTaxCalculator({
     </div>
   );
 }
+
+export default withEmbed(SalesTaxCalculator);

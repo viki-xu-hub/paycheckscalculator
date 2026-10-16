@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useId, useMemo, useState } from "react";
 import {
   capitalGains,
@@ -22,7 +23,7 @@ type Props = {
  * stateTaxConfigs. Follows the same layout pattern as
  * IllinoisIncomeTaxCalculator.
  */
-export default function StateIncomeTaxCalculator({ stateAbbr }: Props) {
+function StateIncomeTaxCalculator({ stateAbbr }: Props) {
   const config = stateTaxConfigs[stateAbbr.toUpperCase()];
 
   if (!config) {
@@ -388,3 +389,5 @@ function NumberField({
     </label>
   );
 }
+
+export default withEmbed(StateIncomeTaxCalculator);

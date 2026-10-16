@@ -1,12 +1,13 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { calculatePaycheck, money, wholeMoney, PAY_PERIODS, type FilingStatus, type PayFrequency } from "../lib/payroll";
 import { bonusAggregateMethod, bonusFlatMethod, SUPPLEMENTAL_FLAT_RATE } from "../lib/paycheckExtras";
 
 type Method = "flat" | "aggregate";
 
-export default function TexasBonusCalculator() {
+function TexasBonusCalculator() {
   const [salary, setSalary] = useState(75000);
   const [bonus, setBonus] = useState(5000);
   const [frequency, setFrequency] = useState<PayFrequency>("biweekly");
@@ -182,3 +183,5 @@ function MoneyField({
     </label>
   );
 }
+
+export default withEmbed(TexasBonusCalculator);
