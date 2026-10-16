@@ -130,7 +130,9 @@ export function SiteHeader() {
   );
 }
 
-export function SiteFooter() {
+// Directory badges render on the homepage footer and the /partners page only,
+// so the reciprocal links don't repeat across every page of the site.
+export function SiteFooter({ showPartnerZone = false }: { showPartnerZone?: boolean } = {}) {
   const states = statesData.filter((s) => !s.isCity);
   return (
     <footer>
@@ -166,182 +168,192 @@ export function SiteFooter() {
           <a href="/blog">All blog articles →</a>
         </div>
       </div>
-      <div className="partner-zone">
-        <span className="partner-zone-label">Partner Zone</span>
-        <a className="partner-badge" target="_blank" href="https://beamtools.com/tool/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://beamtools.com/assets/images/badge.png" alt="Beam Tools" width="185" height="54" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://devhub.best/projects/paycheck-atlas?utm_source=badge" rel="noopener noreferrer">
-          <img src="https://r2.direasy-multi-tenant.focusapps.app/uploads/616d0b1a-3979-4b8c-94d1-b4f1fedd3ead/1783239702078/53yqmim54zv/featured-on-light.svg" alt="Featured on DevHub" width="150" height="44" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://fastlaunch.io" rel="noopener noreferrer">
-          <img src="https://fastlaunch.io/images/badges/featured-light.svg" alt="Featured on FastLaunch" width="221" height="60" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://firsto.co/projects/paychecks-calculator" title="Discover Paychecks Calculator on Firsto" rel="noopener noreferrer">
-          <img src="https://firsto.co/images/badges/find-us-on-firsto.svg" alt="Discover Paychecks Calculator on Firsto" width="111" height="43" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://indielineup.com/product/paycheck-calculator?ref=badge" rel="dofollow">
-          <img src="https://indielineup.com/badge/paycheck-calculator.svg" alt="Featured on IndieLineup" width="160" height="44" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://huzzler.so/products/LmCHuJ3iJ0/paychecks-calculator?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing" rel="noopener noreferrer">
-          <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Huzzler Embed Badge" width="159" height="55" loading="lazy" />
-        </a>
-        <a href="https://dailypings.com/p/paycheck-calculator-calculate-your-take" target="_blank" rel="noopener" title="Featured on DailyPings" className="partner-badge">
-          <img src="https://dailypings.com/badge.svg" alt="Featured on DailyPings" width="179" height="32" loading="lazy" />
-        </a>
-        <a href="https://buildvoyage.com/products/paychecks-calculator?ref=badge" target="_blank" rel="noopener" className="partner-badge partner-badge-buildvoyage">
-          <img src="https://buildvoyage.com/images/featured_badge.png" alt="Featured on BuildVoyage" width="250" height="167" loading="lazy" />
-        </a>
-        <a href="https://dododirectory.com" target="_blank" rel="dofollow" className="partner-badge">
-          <img src="https://dododirectory.com/badge-light.png" alt="Featured on DodoDirectory" width="200" height="54" loading="lazy" />
-        </a>
-        {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which Fazier's badge check looks for verbatim. */}
-        <span
-          className="partner-badge"
-          dangerouslySetInnerHTML={{
-            __html:
-              '<a href="https://fazier.com/launches/www.paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width=120 alt="Fazier badge" /></a>',
-          }}
-        />
-        {/* Raw HTML for the same reason as Fazier: FoundrList's verifier matches the snippet literally, including the unescaped "&". */}
-        <span
-          className="partner-badge"
-          dangerouslySetInnerHTML={{
-            __html:
-              '<a href="https://www.foundrlist.com/product/paycheckcalculator?utm_source=badge&utm_medium=embed" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator" alt="Featured on FoundrList" width="150" height="48" /></a>',
-          }}
-        />
-        <span className="partner-badge">
-          <a href="https://neeed.directory" target="_blank" rel="noopener">
-            <img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on neeed.directory" width="139" height="44" loading="lazy" />
-          </a>
-        </span>
-        {/* Raw HTML keeps NxGn's snippet verbatim (inline styles included); the CSS below overrides the inline 48px height. */}
-        <span
-          className="partner-badge partner-badge-nxgn"
-          dangerouslySetInnerHTML={{
-            __html:
-              '<a href="https://www.nxgntools.com/tools/paycheck-calculator?utm_source=paycheck-calculator" target="_blank" rel="noopener" style="display: inline-block; width: auto;"><img src="https://www.nxgntools.com/api/embed/paycheck-calculator?type=LAUNCHING_SOON_ON" alt="Launching soon on NxGn Tools" style="height: 48px; width: auto;" /></a>',
-          }}
-        />
-        <a className="partner-badge" target="_blank" href="https://uno.directory" rel="noopener noreferrer">
-          <img src="https://uno.directory/uno-directory.svg" alt="Listed on Uno Directory" width="120" height="30" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://launchstag.com/p/paychecks-calculator" rel="noopener">
-          <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://twelve.tools" rel="noopener noreferrer">
-          <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="148" height="40" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://tinylaunch.com" rel="noopener">
-          <img
-            src="https://tinylaunch.com/tinylaunch_badge_launching_soon.svg"
-            alt="TinyLaunch Badge"
-            width={202}
-            height="auto"
-            loading="lazy"
-          />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://prolaunch.net" title="Pro Launch Featured Badge" rel="noopener noreferrer">
-          <img
-            src="https://prolaunch.net/images/badges/featured-light.svg"
-            alt="Pro Launch Featured Badge"
-            width={240}
-            height="auto"
-            loading="lazy"
-          />
-        </a>
-        {/* Raw HTML so the "&" in the badge URLs is not escaped to "&amp;", which 21st Tools' badge check looks for verbatim. */}
-        <span
-          className="partner-badge"
-          dangerouslySetInnerHTML={{
-            __html:
-              '<a href="https://21st.tools?utm_source=badge&ref=paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://21st.tools/api/badge?theme=light&kind=listing&v=3" alt="Featured on 21st Tools" height="54" /></a>',
-          }}
-        />
-        <a className="partner-badge" target="_blank" href="https://earlyhunt.com/project/paycheck-atlas" rel="noopener">
-          <img src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg" alt="Featured on EarlyHunt" width="265" height="58" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://saaspa.ge/product/cmughefm20002ic041s5pxv9q" rel="nofollow">
-          <img src="https://saaspa.ge/api/embed/product/cmughefm20002ic041s5pxv9q/badge.png?theme=blue" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://shinylaunch.com/product/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://shinylaunch.com/assets/images/badge.png" alt="ShinyLaunch" width={198} height={54} loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://themicrosaasdir.com/product/paycheck-calculator?ref=badge" rel="dofollow">
-          <img src="https://themicrosaasdir.com/badge/paycheck-calculator.svg" alt="Featured on TheMicroSaaSDir" width="160" height="44" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://thesaasdir.com/product/evertrend-llc?ref=badge" rel="dofollow">
-          <img src="https://thesaasdir.com/badge/evertrend-llc.svg" alt="Featured on TheSaaSDir" width="160" height="44" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://thekeytools.com/ai/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://thekeytools.com/assets/images/badge.png" alt="The Key Tools" width={208} height={54} loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://startupbenchmarks.com/product/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://startupbenchmarks.com/assets/images/badge.png" alt="Startup Benchmarks" width={265} height={54} loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://hunt0.com/products/paycheck-calculator-calculate-your-take-home-pay-after-taxes" target="_blank" rel="noopener nofollow">
-          <img src="https://hunt0.com/badges/hunt0-find-us-on-light.svg" alt="Find us on HUNT0" width="170" height="53" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://peerpush.com/p/paycheck-atlas-weww" target="_blank" rel="noopener">
-          <img src="https://peerpush.com/p/paycheck-atlas-weww/badge.png" alt="Paycheck Atlas on PeerPush" width="230" height="auto" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://www.ontoplist.com/business-webdirectory/" target="_blank" rel="noopener">
-          <img src="https://www.ontoplist.com/images/ontoplist31.png?id=6ab68f688dfa5" alt="Top Business Services - OnToplist.com" width="180" height="auto" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://findly.tools/paychecks-calculator?utm_source=paychecks-calculator" target="_blank" rel="noopener noreferrer">
-          <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="175" height="55" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://saaslineup.com/product/paycheck-calculator?ref=badge" rel="dofollow">
-          <img src="https://saaslineup.com/badge/paycheck-calculator.svg" alt="Featured on SaaSLineup" width="160" height="44" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://stackdirectory.com/product/paycheckscalculator" rel="noopener">
-          <img src="https://stackdirectory.com/assets/images/badge.png" alt="Stack Directory" height="54" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://awesomeindie.com/?ref=badge" target="_blank" rel="noopener">
-          <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://www.startupinspire.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" height={54} loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://pickapps.org" target="_blank" rel="noopener noreferrer">
-          <img src="https://pickapps.org/pickapps-badge.svg" alt="Listed on PickApps" width="160" loading="lazy" />
-        </a>
-        <a className="partner-badge" target="_blank" href="https://productwing.com/product/paycheckscalculator" rel="noopener noreferrer">
-          <img src="https://productwing.com/assets/images/badge.png" alt="Product Wing" height={54} loading="lazy" />
-        </a>
-        <a className="partner-badge" href="https://saastool.site/item/paycheck-calculator" target="_blank" rel="noopener noreferrer">
-          <img src="https://saastool.site/badges/saastool-light.svg" alt="Featured on SaaSTool.site" height={54} width="auto" loading="lazy" />
-        </a>
-        {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which StartupBase's badge check looks for verbatim. */}
-        <span
-          className="partner-badge"
-          dangerouslySetInnerHTML={{
-            __html:
-              '<a href="https://startupbase.io/products/paycheck-calculator?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer"><img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" style="height:55px;width:auto;" /></a>',
-          }}
-        />
-        <a className="partner-badge" href="https://smollaunch.com" target="_blank" rel="noopener noreferrer">
-          <img src="https://smollaunch.com/badges/featured.svg" alt="Paycheck Calculator — Featured on Smol Launch" width="250" height="60" loading="lazy" />
-        </a>
-        {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
-        <span
-          className="partner-badge"
-          dangerouslySetInnerHTML={{
-            __html:
-              '<a href="https://www.foundrlist.com/product/paycheckcalculator-2?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator-2" alt="Featured on FoundrList" width="150" height="48" /></a>',
-          }}
-        />
-        {/* Wrapper carries the class so the <a>/<img> stay exactly as Stremit supplies them; the badge art is dark, so it sits on a light chip. */}
-        <span className="partner-badge partner-badge-stremit">
-          <a href="https://stremit.io" target="_blank" rel="noopener">
-            <img src="https://stremit.io/static/img/badges/featured-on-stremit.png" alt="Featured on Stremit" width="240" height="89" />
-          </a>
-        </span>
-      </div>
+      {showPartnerZone && (
+        <div className="partner-zone">
+          <span className="partner-zone-label">Partner Zone</span>
+          <PartnerBadges />
+        </div>
+      )}
       <p className="disclaimer">
         <a href="/blog">Blog</a> · <a href="/methodology">Methodology & sources</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/disclaimer">Disclaimer</a> · <a href="/privacy">Privacy Policy</a> · <a href="/partners">Partners</a>
       </p>
     </footer>
+  );
+}
+
+export function PartnerBadges() {
+  return (
+    <>
+      <a className="partner-badge" target="_blank" href="https://beamtools.com/tool/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://beamtools.com/assets/images/badge.png" alt="Beam Tools" width="185" height="54" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://devhub.best/projects/paycheck-atlas?utm_source=badge" rel="noopener noreferrer">
+        <img src="https://r2.direasy-multi-tenant.focusapps.app/uploads/616d0b1a-3979-4b8c-94d1-b4f1fedd3ead/1783239702078/53yqmim54zv/featured-on-light.svg" alt="Featured on DevHub" width="150" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://fastlaunch.io" rel="noopener noreferrer">
+        <img src="https://fastlaunch.io/images/badges/featured-light.svg" alt="Featured on FastLaunch" width="221" height="60" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://firsto.co/projects/paychecks-calculator" title="Discover Paychecks Calculator on Firsto" rel="noopener noreferrer">
+        <img src="https://firsto.co/images/badges/find-us-on-firsto.svg" alt="Discover Paychecks Calculator on Firsto" width="111" height="43" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://indielineup.com/product/paycheck-calculator?ref=badge" rel="dofollow">
+        <img src="https://indielineup.com/badge/paycheck-calculator.svg" alt="Featured on IndieLineup" width="160" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://huzzler.so/products/LmCHuJ3iJ0/paychecks-calculator?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing" rel="noopener noreferrer">
+        <img src="https://huzzler.so/assets/images/embeddable-badges/featured.png" alt="Huzzler Embed Badge" width="159" height="55" loading="lazy" />
+      </a>
+      <a href="https://dailypings.com/p/paycheck-calculator-calculate-your-take" target="_blank" rel="noopener" title="Featured on DailyPings" className="partner-badge">
+        <img src="https://dailypings.com/badge.svg" alt="Featured on DailyPings" width="179" height="32" loading="lazy" />
+      </a>
+      <a href="https://buildvoyage.com/products/paychecks-calculator?ref=badge" target="_blank" rel="noopener" className="partner-badge partner-badge-buildvoyage">
+        <img src="https://buildvoyage.com/images/featured_badge.png" alt="Featured on BuildVoyage" width="250" height="167" loading="lazy" />
+      </a>
+      <a href="https://dododirectory.com" target="_blank" rel="dofollow" className="partner-badge">
+        <img src="https://dododirectory.com/badge-light.png" alt="Featured on DodoDirectory" width="200" height="54" loading="lazy" />
+      </a>
+      {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which Fazier's badge check looks for verbatim. */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://fazier.com/launches/www.paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width=120 alt="Fazier badge" /></a>',
+        }}
+      />
+      {/* Raw HTML for the same reason as Fazier: FoundrList's verifier matches the snippet literally, including the unescaped "&". */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://www.foundrlist.com/product/paycheckcalculator?utm_source=badge&utm_medium=embed" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator" alt="Featured on FoundrList" width="150" height="48" /></a>',
+        }}
+      />
+      <span className="partner-badge">
+        <a href="https://neeed.directory" target="_blank" rel="noopener">
+          <img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on neeed.directory" width="139" height="44" loading="lazy" />
+        </a>
+      </span>
+      {/* Raw HTML keeps NxGn's snippet verbatim (inline styles included); the CSS below overrides the inline 48px height. */}
+      <span
+        className="partner-badge partner-badge-nxgn"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://www.nxgntools.com/tools/paycheck-calculator?utm_source=paycheck-calculator" target="_blank" rel="noopener" style="display: inline-block; width: auto;"><img src="https://www.nxgntools.com/api/embed/paycheck-calculator?type=LAUNCHING_SOON_ON" alt="Launching soon on NxGn Tools" style="height: 48px; width: auto;" /></a>',
+        }}
+      />
+      <a className="partner-badge" target="_blank" href="https://uno.directory" rel="noopener noreferrer">
+        <img src="https://uno.directory/uno-directory.svg" alt="Listed on Uno Directory" width="120" height="30" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://launchstag.com/p/paychecks-calculator" rel="noopener">
+        <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://twelve.tools" rel="noopener noreferrer">
+        <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="148" height="40" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://tinylaunch.com" rel="noopener">
+        <img
+          src="https://tinylaunch.com/tinylaunch_badge_launching_soon.svg"
+          alt="TinyLaunch Badge"
+          width={202}
+          height="auto"
+          loading="lazy"
+        />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://prolaunch.net" title="Pro Launch Featured Badge" rel="noopener noreferrer">
+        <img
+          src="https://prolaunch.net/images/badges/featured-light.svg"
+          alt="Pro Launch Featured Badge"
+          width={240}
+          height="auto"
+          loading="lazy"
+        />
+      </a>
+      {/* Raw HTML so the "&" in the badge URLs is not escaped to "&amp;", which 21st Tools' badge check looks for verbatim. */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://21st.tools?utm_source=badge&ref=paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://21st.tools/api/badge?theme=light&kind=listing&v=3" alt="Featured on 21st Tools" height="54" /></a>',
+        }}
+      />
+      <a className="partner-badge" target="_blank" href="https://earlyhunt.com/project/paycheck-atlas" rel="noopener">
+        <img src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg" alt="Featured on EarlyHunt" width="265" height="58" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://saaspa.ge/product/cmughefm20002ic041s5pxv9q" rel="nofollow">
+        <img src="https://saaspa.ge/api/embed/product/cmughefm20002ic041s5pxv9q/badge.png?theme=blue" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://shinylaunch.com/product/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://shinylaunch.com/assets/images/badge.png" alt="ShinyLaunch" width={198} height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://themicrosaasdir.com/product/paycheck-calculator?ref=badge" rel="dofollow">
+        <img src="https://themicrosaasdir.com/badge/paycheck-calculator.svg" alt="Featured on TheMicroSaaSDir" width="160" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://thesaasdir.com/product/evertrend-llc?ref=badge" rel="dofollow">
+        <img src="https://thesaasdir.com/badge/evertrend-llc.svg" alt="Featured on TheSaaSDir" width="160" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://thekeytools.com/ai/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://thekeytools.com/assets/images/badge.png" alt="The Key Tools" width={208} height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://startupbenchmarks.com/product/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://startupbenchmarks.com/assets/images/badge.png" alt="Startup Benchmarks" width={265} height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://hunt0.com/products/paycheck-calculator-calculate-your-take-home-pay-after-taxes" target="_blank" rel="noopener nofollow">
+        <img src="https://hunt0.com/badges/hunt0-find-us-on-light.svg" alt="Find us on HUNT0" width="170" height="53" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://peerpush.com/p/paycheck-atlas-weww" target="_blank" rel="noopener">
+        <img src="https://peerpush.com/p/paycheck-atlas-weww/badge.png" alt="Paycheck Atlas on PeerPush" width="230" height="auto" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://www.ontoplist.com/business-webdirectory/" target="_blank" rel="noopener">
+        <img src="https://www.ontoplist.com/images/ontoplist31.png?id=6ab68f688dfa5" alt="Top Business Services - OnToplist.com" width="180" height="auto" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://findly.tools/paychecks-calculator?utm_source=paychecks-calculator" target="_blank" rel="noopener noreferrer">
+        <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="175" height="55" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://saaslineup.com/product/paycheck-calculator?ref=badge" rel="dofollow">
+        <img src="https://saaslineup.com/badge/paycheck-calculator.svg" alt="Featured on SaaSLineup" width="160" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://stackdirectory.com/product/paycheckscalculator" rel="noopener">
+        <img src="https://stackdirectory.com/assets/images/badge.png" alt="Stack Directory" height="54" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://awesomeindie.com/?ref=badge" target="_blank" rel="noopener">
+        <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://www.startupinspire.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://pickapps.org" target="_blank" rel="noopener noreferrer">
+        <img src="https://pickapps.org/pickapps-badge.svg" alt="Listed on PickApps" width="160" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://productwing.com/product/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://productwing.com/assets/images/badge.png" alt="Product Wing" height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://saastool.site/item/paycheck-calculator" target="_blank" rel="noopener noreferrer">
+        <img src="https://saastool.site/badges/saastool-light.svg" alt="Featured on SaaSTool.site" height={54} width="auto" loading="lazy" />
+      </a>
+      {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which StartupBase's badge check looks for verbatim. */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://startupbase.io/products/paycheck-calculator?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer"><img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" style="height:55px;width:auto;" /></a>',
+        }}
+      />
+      <a className="partner-badge" href="https://smollaunch.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://smollaunch.com/badges/featured.svg" alt="Paycheck Calculator — Featured on Smol Launch" width="250" height="60" loading="lazy" />
+      </a>
+      {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://www.foundrlist.com/product/paycheckcalculator-2?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator-2" alt="Featured on FoundrList" width="150" height="48" /></a>',
+        }}
+      />
+      {/* Wrapper carries the class so the <a>/<img> stay exactly as Stremit supplies them; the badge art is dark, so it sits on a light chip. */}
+      <span className="partner-badge partner-badge-stremit">
+        <a href="https://stremit.io" target="_blank" rel="noopener">
+          <img src="https://stremit.io/static/img/badges/featured-on-stremit.png" alt="Featured on Stremit" width="240" height="89" />
+        </a>
+      </span>
+    </>
   );
 }
