@@ -270,7 +270,7 @@ export default function Home() {
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter showPartnerZone />
     </main>
   );
 }
