@@ -24,6 +24,7 @@
   { "amount": 64000,  "slug": "64000-after-tax-calculator",  "label": "$64,000",  "hourlyEquivalent": 31 },
   { "amount": 65000,  "slug": "65000-after-tax-calculator",  "label": "$65,000",  "hourlyEquivalent": 31 },
   { "amount": 66000,  "slug": "66000-after-tax-calculator",  "label": "$66,000",  "hourlyEquivalent": 32 },
+  { "amount": 68000,  "slug": "68000-after-tax-calculator",  "label": "$68,000",  "hourlyEquivalent": 33 },
   { "amount": 70000,  "slug": "70000-after-tax-calculator",  "label": "$70,000",  "hourlyEquivalent": 34 },
   { "amount": 75000,  "slug": "75000-after-tax-calculator",  "label": "$75,000",  "hourlyEquivalent": 36 },
   { "amount": 80000,  "slug": "80000-after-tax-calculator",  "label": "$80,000",  "hourlyEquivalent": 38 },

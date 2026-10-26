@@ -1,0 +1,27 @@
+{
+ "year": 2026,
+ "source": {
+  "label": "IRS Revenue Procedure 2025-32",
+  "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+  "sections": "§3.01 tax rate tables, §3.03 maximum capital gains rate, §3.14 standard deduction"
+ },
+ "worksheetSource": {
+  "label": "Form 1040 instructions — Qualified Dividends and Capital Gain Tax Worksheet",
+  "url": "https://www.irs.gov/forms-pubs/about-form-1040"
+ },
+ "filingStatuses": [
+  {"key": "single", "label": "Single", "standardDeduction": 16100, "zeroRateMax": 49450, "fifteenRateMax": 545500,
+   "brackets": [[0,0.10,0],[12400,0.12,1240],[50400,0.22,5800],[105700,0.24,17966],[201775,0.32,41024],[256225,0.35,58448],[640600,0.37,192979.25]],
+   "niitThreshold": 200000},
+  {"key": "married", "label": "Married filing jointly", "standardDeduction": 32200, "zeroRateMax": 98900, "fifteenRateMax": 613700,
+   "brackets": [[0,0.10,0],[24800,0.12,2480],[100800,0.22,11600],[211400,0.24,35932],[403550,0.32,82048],[512450,0.35,116896],[768700,0.37,206583.50]],
+   "niitThreshold": 250000},
+  {"key": "head", "label": "Head of household", "standardDeduction": 24150, "zeroRateMax": 66200, "fifteenRateMax": 579600,
+   "brackets": [[0,0.10,0],[17700,0.12,1770],[67450,0.22,7740],[105700,0.24,16155],[201750,0.32,39207],[256200,0.35,56631],[640600,0.37,191171]],
+   "niitThreshold": 200000},
+  {"key": "separate", "label": "Married filing separately", "standardDeduction": 16100, "zeroRateMax": 49450, "fifteenRateMax": 306850,
+   "brackets": [[0,0.10,0],[12400,0.12,1240],[50400,0.22,5800],[105700,0.24,17966],[201775,0.32,41024],[256225,0.35,58448],[384350,0.37,103291.75]],
+   "niitThreshold": 125000}
+ ],
+ "niitRate": 3.8
+}

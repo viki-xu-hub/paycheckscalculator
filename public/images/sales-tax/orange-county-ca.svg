@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" role="img" aria-labelledby="t d">
+  <title id="t">Orange County sales tax 2026 — how the 7.75% rate is built</title>
+  <desc id="d">Orange County sales tax is 7.75%: 7.25% California base plus 0.5% district tax. City rates across the county range from 7.75% to 9.25%.</desc>
+  <style>
+    .h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .n{font:700 14px Arial,Helvetica,sans-serif;fill:#fff}
+    .v{font:700 13px Arial,Helvetica,sans-serif;fill:#1c2333}
+    .l{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+    .lg{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}
+  </style>
+  <rect width="880" height="360" fill="#f7f8fa" rx="12"/><text x="440" y="38" text-anchor="middle" class="h">Orange County sales tax 2026 — how the 7.75% rate is built</text><text x="440" y="62" text-anchor="middle" class="s">Countywide baseline 7.75%; city rates range 7.75% to 9.25%</text><rect x="60.0" y="88" width="711.0" height="46" fill="#4a63e7" rx="4"/><text x="415.5" y="116" text-anchor="middle" class="n">7.25%</text><rect x="771.0" y="88" width="49.0" height="46" fill="#c9741a" rx="4"/><rect x="60" y="150" width="10" height="10" fill="#4a63e7" rx="2"/><text x="76" y="159" class="lg">California base 7.25%</text><rect x="218" y="150" width="10" height="10" fill="#c9741a" rx="2"/><text x="234" y="159" class="lg">District taxes 0.5%</text><text x="60" y="190" class="s">Rate tiers inside the county</text><text x="60" y="213" class="l">9.25% — 4 cities</text><rect x="240" y="202" width="520.0" height="14" fill="#9aa7b4" rx="3"/><text x="768.0" y="213" class="v">9.25%</text><text x="60" y="239" class="l">8.75% — 7 cities</text><rect x="240" y="228" width="491.9" height="14" fill="#9aa7b4" rx="3"/><text x="739.9" y="239" class="v">8.75%</text><text x="60" y="265" class="l">7.75% — 23 cities</text><rect x="240" y="254" width="435.7" height="14" fill="#9aa7b4" rx="3"/><text x="683.7" y="265" class="v">7.75%</text></svg>

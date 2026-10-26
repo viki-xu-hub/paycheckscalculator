@@ -1,0 +1,958 @@
+{
+ "note": "Per-location editorial copy. Written individually for each page so sibling pages do not share templated prose. Rates referenced here must stay in sync with sales-tax.json.",
+ "locations": {
+  "los-angeles-ca": {
+   "intro": "Los Angeles sales tax is 9.750% in 2026 — a quarter point higher than it was before April 2025, when Measure A took effect countywide. At that rate, tax is the single largest line on most non-grocery receipts in the city, and it is high enough that shoppers making a big purchase sometimes cross a city line to avoid it.",
+   "heroMore": "The rate below is pre-filled at 9.750%. Because Los Angeles County contains 88 separate cities, several of which stack their own district taxes on top of the county figure, the box stays editable — a purchase delivered to Santa Monica or Culver City is not taxed at the Los Angeles rate.",
+   "sections": [
+    {
+     "h2": "Why Los Angeles Sales Tax Went From 9.5% to 9.75%",
+     "paragraphs": [
+      "Until 31 March 2025, the combined rate across Los Angeles County was 9.500%. On 1 April 2025 it became 9.750%, and the reason was a swap rather than a straightforward increase: Measure A, passed by county voters in November 2024, levies a half-cent tax and repealed the quarter-cent Measure H tax it replaced. The net effect on a receipt was a quarter of a cent on the dollar.",
+      "Measure H had been due to expire in 2027. Measure A has no such sunset, so the 9.750% figure is not a temporary rate waiting to lapse — it is the baseline going forward unless voters change it again.",
+      "In practice this means any rate published for the city before April 2025 is now wrong by 0.250%. On a $2,000 purchase that is a $5 difference, which matters less for a coffee than for a sofa."
+     ]
+    },
+    {
+     "h2": "City of Los Angeles vs the Rest of LA County",
+     "paragraphs": [
+      "The City of Los Angeles does not levy a district tax of its own. It sits exactly at the 9.750% county figure, which is why the city and county rates on this page are identical.",
+      "That is not true of its neighbours. Several LA County cities have passed their own district taxes and charge more than the county baseline — the city you are delivering to, not the county, decides the rate. Because Los Angeles is shaped around other incorporated cities, a delivery address two miles from downtown can easily fall under a different jurisdiction."
+     ]
+    }
+   ],
+   "nearbyIntro": "Los Angeles County has 88 cities and the rate is not uniform across them. These are the published rates for cities close to Los Angeles — note how many sit above the county baseline.",
+   "exemptionsIntro": "Los Angeles is a restaurant city, and the line between taxable and exempt food is where most of the confusion sits. The rules are set by California, not by the city, so they apply identically in Santa Monica or Long Beach.",
+   "exemptions": [
+    "A bag of groceries taken home is exempt; the same ingredients served hot at a counter are taxable at the full 9.750%",
+    "Restaurant meals, hot prepared food and most food eaten on the premises are taxable",
+    "Prescription medicines are exempt; over-the-counter medicines generally are not",
+    "Services — a haircut, a repair labour charge — are not subject to California sales tax",
+    "A car bought in Los Angeles is taxed at the rate for the address where it is registered, not the dealer's"
+   ],
+   "sourceNote": "The 9.750% figure is the CDTFA's published rate for the City of Los Angeles. California district taxes are revised quarterly and Los Angeles County has changed twice in recent years, so check the effective date on any rate you find elsewhere before relying on it.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Los Angeles?",
+     "a": "The combined rate in the City of Los Angeles is 9.750%. That is California's 7.250% statewide base plus 2.500% of district taxes approved in Los Angeles County. The rate has applied since 1 April 2025."
+    },
+    {
+     "q": "Why did the rate go up in 2025?",
+     "a": "Los Angeles County voters approved Measure A in November 2024. It imposes a half-cent levy for homeless services and housing, and it repealed and replaced the quarter-cent Measure H tax that was due to expire in 2027. The swap raised the countywide rate from 9.500% to 9.750% on 1 April 2025."
+    },
+    {
+     "q": "How much is sales tax on $100 in Los Angeles?",
+     "a": "At 9.750%, sales tax on a $100 purchase is $9.75, bringing the total to $109.75. Before April 2025 the same purchase carried $9.50 of tax."
+    },
+    {
+     "q": "Is the rate the same everywhere in Los Angeles County?",
+     "a": "No. 9.750% is the county baseline and the City of Los Angeles charges exactly that, but several other cities in the county have added district taxes on top and charge more. The correct rate depends on the delivery address, not on the county."
+    },
+    {
+     "q": "Do I pay the Los Angeles rate on an online order?",
+     "a": "If the order ships to an address inside the City of Los Angeles, yes — 9.750% applies, regardless of where the seller is based. California sources the sale to where the buyer takes delivery. If a seller does not collect it, the buyer generally owes California use tax at the same rate."
+    },
+    {
+     "q": "Is food taxed in Los Angeles?",
+     "a": "Unprepared groceries are exempt. Hot prepared food, restaurant meals and food consumed on the premises are taxable at the full 9.750%. The distinction is drawn by California law and is the same in every city in the state."
+    }
+   ],
+   "disclaimer": "These figures are for planning. Los Angeles County has changed its rate once since 2025, so verify a street address with the CDTFA before filing a return or pricing a large order.",
+   "rateHelp": "Pre-filled with the City of Los Angeles rate. Neighbouring cities in the county charge more — change it for those.",
+   "metaDescription": "Los Angeles sales tax is 9.75% in 2026. See the state, county and district breakdown, and calculate the tax on any purchase amount."
+  },
+  "san-jose-ca": {
+   "intro": "San Jose sales tax is 10.000%, which makes it one of a small number of California cities where the combined rate reaches a round ten cents on the dollar. It is also a quarter point above Santa Clara County's own 9.750% figure, because the city stacks a district tax on top of the countywide ones.",
+   "heroMore": "The calculator is pre-filled at 10.000%. Santa Clara County is a patchwork — the city of Santa Clara, right next door, is lower than San Jose despite sharing a county — so edit the rate if your delivery address is outside the San Jose city limits.",
+   "sections": [
+    {
+     "h2": "Why San Jose Sales Tax Is Higher Than Santa Clara County",
+     "paragraphs": [
+      "Santa Clara County's published rate is 9.750%. San Jose is 10.000%. The 0.250% gap is a city district tax that applies only inside San Jose's boundaries, layered on top of the district taxes that already apply county-wide.",
+      "This is the ordinary way California rates are built: a 7.250% statewide base, then however many voter-approved district taxes cover that specific address. San Jose happens to be covered by 2.750% of them — more than the 2.000% ceiling that usually applies, because the legislature has authorised additional district capacity in some areas.",
+      "The practical consequence is that the county figure and the city figure are different numbers, and using the county figure for a San Jose address understates the tax by a quarter point."
+     ]
+    },
+    {
+     "h2": "Reaching 10% on Real Purchases",
+     "paragraphs": [
+      "A round 10% makes the arithmetic easy and the cost visible. Tax on $1,000 of electronics is exactly $100. On a $40,000 vehicle it would be $4,000 — though vehicles are taxed at the buyer's registration address, so a San Jose dealer selling to a Gilroy resident charges the Gilroy rate.",
+      "It also means San Jose sits at or near the top of Bay Area rates. For large, portable purchases the gap against a neighbouring city is real money, which is why the rate is worth checking rather than assuming."
+     ]
+    }
+   ],
+   "nearbyIntro": "Santa Clara County rates vary city by city, and several neighbours of San Jose are meaningfully lower. These are the published figures.",
+   "exemptionsIntro": "San Jose is an electronics and vehicle market as much as a grocery one, and those categories are fully taxable. California's exemptions are narrow and are set at state level.",
+   "exemptions": [
+    "Computers, phones and consumer electronics are fully taxable at 10.000%",
+    "Unprepared groceries bought to take home are exempt",
+    "Hot prepared food and restaurant meals are taxable",
+    "Prescription medicines are exempt; most over-the-counter medicines are taxable",
+    "Vehicles are taxed at the rate for the buyer's registration address, which may be lower than San Jose's"
+   ],
+   "sourceNote": "The 10.000% figure is the CDTFA's published rate for San Jose. District taxes are revised quarterly, and because San Jose carries both county and city district taxes, it can move independently of the rest of Santa Clara County.",
+   "faqs": [
+    {
+     "q": "What is the rate in San Jose?",
+     "a": "San Jose's combined sales and use tax rate is 10.000%. That breaks down as California's 7.250% statewide base plus 2.750% of district taxes covering the city."
+    },
+    {
+     "q": "Why is San Jose 10% when the county is 9.75%?",
+     "a": "San Jose levies a city district tax of 0.250% on top of the district taxes that apply across Santa Clara County. Only addresses inside the San Jose city limits pay it, which is why the city rate is a quarter point above the county figure."
+    },
+    {
+     "q": "How much is sales tax on $100 in San Jose?",
+     "a": "Exactly $10.00, for a total of $110.00. A 10% rate is one of the few in California where the tax is a round tenth of the price."
+    },
+    {
+     "q": "Is San Jose the highest in Santa Clara County?",
+     "a": "San Jose is at the top end at 10.000%, and several other cities in the county match it. Others, including the city of Santa Clara, stop at the 9.750% county figure. Always check the specific city rather than assuming the county rate applies."
+    },
+    {
+     "q": "Does the San Jose rate apply to a car bought there?",
+     "a": "Not necessarily. California taxes vehicle purchases at the rate for the address where the vehicle is registered, not where the dealership sits. A San Jose dealer selling to a buyer who registers the car elsewhere charges that other rate."
+    },
+    {
+     "q": "What rate applies to something shipped to San Jose?",
+     "a": "10.000%, because California sources the sale to the delivery address. The seller's location does not change it, and where a seller does not collect the tax the buyer generally owes use tax at the same rate."
+    }
+   ],
+   "disclaimer": "Use these numbers for planning, not filing. San Jose carries both county and city district taxes and can move independently of the rest of Santa Clara County, so confirm with the CDTFA before filing.",
+   "rateHelp": "Pre-filled with the San Jose city rate. Addresses elsewhere in Santa Clara County are often lower.",
+   "metaDescription": "San Jose sales tax is 10% in 2026. See how the 7.25% California base and 2.75% district taxes combine, and calculate tax on any amount."
+  },
+  "orange-county-ca": {
+   "intro": "Orange County sales tax is 7.750% across most of the county — the lowest combined rate of any large urban county in Southern California, and a full two points below neighbouring Los Angeles. But that headline figure only holds in 27 of the county's 34 cities. Seven have added district taxes of their own, and four of those reach 9.250%.",
+   "heroMore": "The calculator starts at the 7.750% county baseline. If your delivery address is in Santa Ana, Seal Beach, Westminster or Los Alamitos, change it to 9.250% — the gap is 1.500%, which is $15 on a $1,000 purchase.",
+   "sections": [
+    {
+     "h2": "The 1.5-Point Spread Inside One County",
+     "paragraphs": [
+      "Orange County is an unusually clear illustration of why a county-level sales tax figure can mislead. The county baseline — the rate in unincorporated areas and in most cities — is 7.750%, which is California's 7.250% statewide base plus a single 0.500% countywide district tax.",
+      "Four cities charge 9.250%: Los Alamitos, Santa Ana, Seal Beach and Westminster. Three more — Buena Park, Fountain Valley, Garden Grove, La Habra, La Palma, Placentia and Stanton — sit at 8.750%. Everything else is at the baseline.",
+      "Each of those higher rates is a district tax the city's own voters approved. None of them apply outside the city limits, so two shops a mile apart can legitimately charge rates that differ by a point and a half."
+     ]
+    },
+    {
+     "h2": "Which Orange County Sales Tax Rate Applies to You",
+     "paragraphs": [
+      "The rate follows the address where the buyer takes delivery. For an in-store purchase that is the store; for a delivery or an online order it is the shipping address.",
+      "ZIP codes are not a reliable guide, because California district taxes follow city and special-district boundaries that ZIP codes cross freely. An address with a Santa Ana mailing address is not necessarily inside the City of Santa Ana. Use the table below, and when a purchase is large enough for the difference to matter, confirm the address against the CDTFA's own lookup."
+     ]
+    }
+   ],
+   "nearbyIntro": "",
+   "exemptionsIntro": "What is taxed is set by California and does not vary between Orange County cities — only the rate does. The common exemptions:",
+   "exemptions": [
+    "Unprepared groceries are exempt anywhere in the county",
+    "Prescription medicines are exempt; over-the-counter medicines generally are not",
+    "Restaurant meals and hot prepared food are taxable at whichever city rate applies",
+    "Services are not subject to California sales tax",
+    "Vehicles follow the buyer's registration address — which, inside Orange County, may be a different city rate from the dealer's"
+   ],
+   "sourceNote": "Every rate in the table above is the CDTFA's published figure for that city. District taxes are revised quarterly and Orange County cities have added them one at a time over several election cycles, so a rate list from a previous year is likely to be missing at least one change.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Orange County?",
+     "a": "The Orange County baseline is 7.750%, which applies in unincorporated areas and in most of its 34 cities. Seven cities charge more: four are at 9.250% and the rest at 8.750%. The table above lists every city."
+    },
+    {
+     "q": "Which Orange County city has the highest sales tax?",
+     "a": "Four cities tie at 9.250% — Los Alamitos, Santa Ana, Seal Beach and Westminster. That is 1.500% above the county baseline, so a $1,000 purchase costs $15 more in tax there than in Irvine or Anaheim."
+    },
+    {
+     "q": "Why is Orange County lower than Los Angeles County?",
+     "a": "Both start from the same 7.250% California base. Orange County has added only a 0.500% countywide district tax, while Los Angeles County's district taxes total 2.500%. The difference is entirely down to which measures voters in each county have approved."
+    },
+    {
+     "q": "How much is sales tax on $100 in Orange County?",
+     "a": "$7.75 at the 7.750% baseline, for a total of $107.75. In a 9.250% city such as Santa Ana it is $9.25, and in an 8.750% city such as Garden Grove it is $8.75."
+    },
+    {
+     "q": "Can I use a ZIP code to find the right Orange County rate?",
+     "a": "Not reliably. District taxes follow city boundaries, and ZIP codes cross those boundaries — a Santa Ana mailing address is not proof of being inside the City of Santa Ana. Use the city, and for a large purchase confirm the street address with the CDTFA's rate lookup."
+    },
+    {
+     "q": "Does the Orange County rate apply to online orders?",
+     "a": "The rate for the delivery city applies. An order shipped to Westminster is taxed at 9.250% and one shipped to Irvine at 7.750%, whatever the seller's location."
+    }
+   ],
+   "disclaimer": "Treat the table above as a guide rather than a filing source. Seven Orange County cities charge above the baseline shown here, so check the delivery city against the CDTFA before filing a return.",
+   "rateHelp": "Pre-filled with the Orange County baseline. Switch to 8.75% or 9.25% for the cities listed below.",
+   "metaDescription": "Orange County sales tax is 7.75%, but seven cities charge more. See every city rate for 2026 and calculate the tax on any purchase."
+  },
+  "sacramento-ca": {
+   "intro": "Sacramento sales tax is 8.750% inside the city limits — a full point above the 7.750% rate that applies in unincorporated Sacramento County. California's capital is one of the clearer cases where the city figure and the county figure are genuinely different numbers, and using the wrong one is a 1.000% error.",
+   "heroMore": "The calculator is pre-filled with the 8.750% city rate. If the delivery address is outside the Sacramento city limits — much of the metro area is — the county baseline of 7.750% or a different suburb's rate may apply instead.",
+   "sections": [
+    {
+     "h2": "Sacramento Sales Tax: City Rate vs County Rate",
+     "paragraphs": [
+      "Sacramento County's published rate is 7.750%: the 7.250% California base plus 0.500% of countywide district tax. The City of Sacramento adds a further 1.000% of city district tax, reaching 8.750%.",
+      "That gap is wider than in most California metros, and it falls along the city limits rather than anything visible from the road. A 'Sacramento' mailing address is not the same thing as an address inside the City of Sacramento — large parts of the county, including sizeable unincorporated communities, sit at the lower rate.",
+      "Suburbs handle it differently again. Elk Grove, Rancho Cordova, Citrus Heights and Folsom each set their own district taxes, so the metro area carries several distinct rates rather than one."
+     ]
+    }
+   ],
+   "nearbyIntro": "Sacramento's suburbs each set their own district taxes, so rates across the metro vary more than the shared area code suggests. The published figures:",
+   "exemptionsIntro": "California, not the city, decides what is taxable. The exemptions that come up most often:",
+   "exemptions": [
+    "Groceries bought to prepare at home are exempt",
+    "Restaurant meals and hot prepared food are taxable at 8.750% inside the city",
+    "Prescription medicines are exempt; over-the-counter medicines are usually taxable",
+    "Labour and most services are not subject to sales tax",
+    "Vehicles are taxed where they are registered, so a city resident pays the city rate even on a suburban purchase"
+   ],
+   "sourceNote": "The 8.750% city figure and the 7.750% county figure are both CDTFA published rates. California district taxes change quarterly, and city measures in the Sacramento area have moved more than once, so confirm the effective date on any rate quoted elsewhere.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Sacramento?",
+     "a": "The City of Sacramento charges 8.750%. Unincorporated Sacramento County charges 7.750%. The difference is 1.000% of city district tax that applies only inside the city limits."
+    },
+    {
+     "q": "Why is Sacramento city higher than Sacramento County?",
+     "a": "Both share California's 7.250% base and the 0.500% countywide district tax, which produces the 7.750% county figure. The city has added a further 1.000% of its own voter-approved district tax on top, reaching 8.750%."
+    },
+    {
+     "q": "How much is sales tax on $100 in Sacramento?",
+     "a": "$8.75 inside the city, for a total of $108.75. At the 7.750% county rate the same purchase carries $7.75."
+    },
+    {
+     "q": "Does a Sacramento mailing address mean the city rate applies?",
+     "a": "No. Large parts of Sacramento County use a Sacramento mailing address while sitting outside the city limits, where the 7.750% county rate applies. Sales tax follows jurisdiction boundaries, not postal addresses."
+    },
+    {
+     "q": "Do Sacramento suburbs charge the same rate?",
+     "a": "No. Elk Grove, Roseville, Folsom, Citrus Heights and Rancho Cordova each set their own district taxes, so the metro area carries several different rates. The table above lists the published figure for each."
+    },
+    {
+     "q": "What rate applies to an order shipped to Sacramento?",
+     "a": "The rate for the delivery address — 8.750% inside the city limits. California sources sales to where the buyer takes delivery, so the seller's location does not change it."
+    }
+   ],
+   "disclaimer": "This is a planning estimate. The city and county rates differ by a full point here, so establish which side of the city limits an address falls on before filing.",
+   "rateHelp": "Pre-filled with the City of Sacramento rate. Use 7.75% for addresses outside the city limits.",
+   "metaDescription": "Sacramento sales tax is 8.75% inside the city, 7.75% in the county. See the 2026 breakdown and calculate tax on any purchase amount."
+  },
+  "anaheim-ca": {
+   "intro": "Anaheim sales tax is 7.750%, the Orange County baseline, with no city district tax of its own. Among Orange County's larger cities that puts it at the low end — neighbouring Santa Ana is 9.250%, a point and a half higher on the same purchase.",
+   "heroMore": "The calculator is pre-filled at 7.750%, which covers the whole city including the resort district. Anaheim borders several cities that charge more, so check the rate if the delivery address is not actually in Anaheim.",
+   "sections": [
+    {
+     "h2": "Anaheim Has No City District Tax",
+     "paragraphs": [
+      "Anaheim's 7.750% is California's 7.250% statewide base plus the single 0.500% district tax that applies across Orange County. The city has not added a district tax of its own, which is why its rate and the county baseline are the same number.",
+      "Several Orange County cities have gone the other way. Santa Ana, Westminster, Seal Beach and Los Alamitos are all at 9.250%; Garden Grove, Buena Park, Stanton, Placentia, La Palma, La Habra and Fountain Valley are at 8.750%. Anaheim shares a border with several of them.",
+      "For a visitor that is mostly invisible. For anyone making a large purchase it is worth knowing that driving from Anaheim into Santa Ana adds 1.500% to the same transaction."
+     ]
+    },
+    {
+     "h2": "The Anaheim Resort District Uses the Same Rate",
+     "paragraphs": [
+      "Anaheim's tourist core — the theme parks, the convention centre and the surrounding hotels — sits inside the Anaheim city limits and is taxed at the ordinary 7.750% city rate. There is no separate resort-area sales tax.",
+      "Hotel bills are a different matter. Transient occupancy tax is a separate levy on lodging and is not part of the sales tax rate on this page; a hotel folio can therefore show a percentage that looks nothing like 7.750%."
+     ]
+    }
+   ],
+   "nearbyIntro": "Anaheim borders several cities with district taxes of their own. These are the published rates nearby — the spread is wider than the short distances suggest.",
+   "exemptionsIntro": "California sets the exemptions, so they are identical in Anaheim and in the higher-rate cities next door. Only the rate differs.",
+   "exemptions": [
+    "Theme park admission is not a sale of goods and is not subject to sales tax",
+    "Food and drink bought inside a park or restaurant is prepared food and is taxable",
+    "Unprepared groceries taken home are exempt",
+    "Prescription medicines are exempt; most over-the-counter medicines are taxable",
+    "Hotel stays are subject to transient occupancy tax, which is separate from the 7.750% sales tax"
+   ],
+   "sourceNote": "Anaheim's 7.750% is the CDTFA's published city rate. Because Anaheim carries no city district tax, its rate only moves if the countywide district tax changes — but neighbouring cities can and do change on their own quarterly cycle.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Anaheim?",
+     "a": "Anaheim charges 7.750%: California's 7.250% statewide base plus the 0.500% Orange County district tax. Anaheim levies no city district tax of its own."
+    },
+    {
+     "q": "Is Anaheim cheaper than other Orange County cities?",
+     "a": "On sales tax, yes, relative to several neighbours. Anaheim is at the 7.750% county baseline while Santa Ana, Westminster, Seal Beach and Los Alamitos are at 9.250% and a further seven cities are at 8.750%."
+    },
+    {
+     "q": "How much is sales tax on $100 in Anaheim?",
+     "a": "$7.75, for a total of $107.75. The same purchase in Santa Ana would carry $9.25 of tax."
+    },
+    {
+     "q": "Is there a separate sales tax in the Anaheim resort area?",
+     "a": "No. The theme parks, convention centre and surrounding hotels are inside the Anaheim city limits and use the ordinary 7.750% rate. Hotel bills carry a separate transient occupancy tax, which is not a sales tax."
+    },
+    {
+     "q": "Is a theme park ticket subject to Anaheim sales tax?",
+     "a": "No. California sales tax applies to sales of tangible goods, and admission to an attraction is not one. Merchandise and prepared food bought inside a park are taxable at 7.750%."
+    },
+    {
+     "q": "What rate applies to something shipped to Anaheim?",
+     "a": "7.750%, because the rate follows the delivery address. An identical order shipped a few miles away to Garden Grove would be taxed at 8.750%."
+    }
+   ],
+   "disclaimer": "Estimates for planning purposes. Anaheim borders cities charging up to 9.25%, so confirm the delivery city with the CDTFA before relying on this for a return.",
+   "rateHelp": "Pre-filled with the Anaheim rate, which covers the whole city including the resort district.",
+   "metaDescription": "Anaheim sales tax is 7.75% in 2026, the Orange County baseline with no city district tax. Calculate the tax on any purchase amount."
+  },
+  "san-francisco-ca": {
+   "intro": "San Francisco sales tax is 8.625%, and because the city and the county are a single consolidated jurisdiction, there is only one rate to know — no unincorporated area, no separate county figure, no city-line problem of the kind that catches people out in Los Angeles or Sacramento.",
+   "heroMore": "The calculator is pre-filled at 8.625%. The rate holds across the whole of San Francisco, but several nearby cities across the county line in San Mateo and Alameda counties charge more, so edit it for deliveries outside the city.",
+   "sections": [
+    {
+     "h2": "One City, One County, One Rate",
+     "paragraphs": [
+      "San Francisco is the only consolidated city and county in California. In practice that removes an entire category of error: elsewhere in the state you have to establish whether an address is inside the city limits or in unincorporated county territory, because the two carry different rates. In San Francisco there is no unincorporated territory.",
+      "The 8.625% figure is California's 7.250% statewide base plus 1.375% of district taxes. That places San Francisco below Los Angeles and well below San Jose, which surprises people who assume the city is the most expensive in the state on every measure."
+     ]
+    },
+    {
+     "h2": "Checking the Year on a San Francisco Rate",
+     "paragraphs": [
+      "San Francisco's district taxes have been added and allowed to expire several times over the past decade, so rates quoted for 2021, 2023 or 2025 do not all agree — and a stale figure is the most common reason two sources disagree about San Francisco sales tax.",
+      "The rate on this page is the CDTFA's current published figure and carries its effective date. If you need the rate for a past period — to check an old invoice or amend a return — the CDTFA publishes an archive of historical rate tables by quarter, which is the only reliable source for a superseded rate."
+     ]
+    }
+   ],
+   "nearbyIntro": "Cities across the county line are frequently higher than San Francisco itself. The published rates nearby:",
+   "exemptionsIntro": "The exemptions are California's, not the city's. In a city with this many restaurants, the prepared-food line is the one that matters most:",
+   "exemptions": [
+    "Restaurant meals and hot prepared food are taxable at 8.625%",
+    "Unprepared groceries are exempt",
+    "Prescription medicines are exempt; over-the-counter medicines generally are not",
+    "Services are outside the scope of California sales tax",
+    "A separate local surcharge on a restaurant bill is set by the business, not by the city's rate"
+   ],
+   "sourceNote": "The 8.625% figure is the CDTFA's current published rate for San Francisco. Because the city's district taxes have changed several times, the CDTFA's historical rate archive is the right source for any past period rather than a rate quoted on a third-party page.",
+   "faqs": [
+    {
+     "q": "What is the rate in San Francisco?",
+     "a": "San Francisco's combined sales and use tax rate is 8.625% — California's 7.250% statewide base plus 1.375% of district taxes. The same rate applies across the entire city and county."
+    },
+    {
+     "q": "Is the city and county rate different?",
+     "a": "No. San Francisco is a consolidated city and county, the only one in California, so there is a single 8.625% rate. There is no unincorporated county area with a separate figure."
+    },
+    {
+     "q": "Has the rate changed recently?",
+     "a": "San Francisco's district taxes have been added and have expired several times over the past decade, so rates published for earlier years often differ from the current one. The figure on this page carries its effective date; for a superseded period, use the CDTFA's historical rate archive."
+    },
+    {
+     "q": "How much is sales tax on $100 in San Francisco?",
+     "a": "$8.63 at 8.625%, for a total of $108.63. The unrounded tax is $8.625, which a register will round to the cent."
+    },
+    {
+     "q": "Is San Francisco the highest in the Bay Area?",
+     "a": "No. At 8.625% it is lower than San Jose at 10.000% and lower than several cities in San Mateo and Alameda counties. The table above shows nearby rates."
+    },
+    {
+     "q": "What rate applies to an order shipped to San Francisco?",
+     "a": "8.625%, because California taxes at the delivery address. An order shipped instead to Daly City or Oakland is taxed at that city's rate, not San Francisco's."
+    }
+   ],
+   "disclaimer": "For planning only, not for a return. San Francisco's rate has changed several times; for any past period use the CDTFA's historical archive rather than this page.",
+   "rateHelp": "Pre-filled with the San Francisco rate, which applies city-wide. Neighbouring counties differ.",
+   "metaDescription": "San Francisco sales tax is 8.625% in 2026, one rate across the whole city and county. See the breakdown and calculate tax on any amount."
+  },
+  "costa-mesa-ca": {
+   "intro": "Costa Mesa sales tax is 7.750% — the Orange County baseline, with no city district tax added. For a city built around one of the largest retail centres in the United States, that matters: the same handbag costs 1.500% less in tax here than three miles away in Santa Ana.",
+   "heroMore": "The calculator is pre-filled at 7.750%, the rate across the whole city including its retail district. Costa Mesa borders cities at three different rates, so confirm the delivery city before relying on the figure.",
+   "sections": [
+    {
+     "h2": "A Retail City at the County Baseline",
+     "paragraphs": [
+      "Costa Mesa's 7.750% is California's 7.250% base plus the 0.500% Orange County district tax. The city has never added a district tax of its own, so it sits at the county floor.",
+      "South Coast Plaza and the surrounding retail corridor are inside the Costa Mesa city limits, which means they are taxed at 7.750% rather than at any of the higher Orange County rates. On a $3,000 purchase, the difference against Santa Ana's 9.250% is $45 — not decisive, but not nothing either."
+     ]
+    },
+    {
+     "h2": "Costa Mesa's Neighbours Span Three Rates",
+     "paragraphs": [
+      "Newport Beach, Huntington Beach, Irvine and Tustin all share Costa Mesa's 7.750%. Fountain Valley is at 8.750%. Santa Ana, immediately to the north-east, is at 9.250%.",
+      "Three different rates within a few miles is unusual even by California standards, and it is entirely a product of which cities' voters approved district taxes. Nothing about the goods or the seller changes — only the delivery address."
+     ]
+    }
+   ],
+   "nearbyIntro": "Costa Mesa's immediate neighbours span a 1.500% range. The published rates:",
+   "exemptionsIntro": "Clothing is fully taxable in California — there is no apparel exemption of the kind some other states have. The exemptions that do apply:",
+   "exemptions": [
+    "Clothing, shoes and accessories are fully taxable at 7.750%",
+    "Unprepared groceries are exempt",
+    "Restaurant meals and hot prepared food are taxable",
+    "Prescription medicines are exempt; most over-the-counter medicines are taxable",
+    "Alterations and repair labour billed separately are generally not taxable"
+   ],
+   "sourceNote": "Costa Mesa's 7.750% is the CDTFA's published city rate. Because Costa Mesa levies no district tax of its own, its rate only changes if the countywide district tax changes — but the neighbouring city rates in the table above move on their own schedule.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Costa Mesa?",
+     "a": "Costa Mesa charges 7.750%: California's 7.250% statewide base plus the 0.500% Orange County district tax. There is no Costa Mesa city district tax."
+    },
+    {
+     "q": "What is the sales tax at South Coast Plaza?",
+     "a": "South Coast Plaza is inside the Costa Mesa city limits, so purchases there are taxed at 7.750%. That is the Orange County baseline and lower than several nearby cities."
+    },
+    {
+     "q": "How much is sales tax on $100 in Costa Mesa?",
+     "a": "$7.75, for a total of $107.75. On a $1,000 purchase the tax is $77.50."
+    },
+    {
+     "q": "Is clothing taxed in Costa Mesa?",
+     "a": "Yes. California has no clothing exemption, so apparel, shoes and accessories are taxed at the full 7.750% rate. Some other states exempt clothing; California is not one of them."
+    },
+    {
+     "q": "Why is Santa Ana more expensive than Costa Mesa?",
+     "a": "Santa Ana's voters approved city district taxes that bring it to 9.250%; Costa Mesa has none and stays at the 7.750% county baseline. The 1.500% gap applies to identical goods bought a few miles apart."
+    },
+    {
+     "q": "What rate applies to an order shipped to Costa Mesa?",
+     "a": "7.750%, since California taxes at the delivery address. The seller's location does not affect it."
+    }
+   ],
+   "disclaimer": "A planning estimate, not a filing figure. Costa Mesa's neighbours span a 1.5-point range, so confirm the delivery city with the CDTFA before filing a return.",
+   "rateHelp": "Pre-filled with the Costa Mesa rate, covering the whole city including its retail district.",
+   "metaDescription": "Costa Mesa sales tax is 7.75% in 2026, including South Coast Plaza. See the rate breakdown and calculate the tax on any purchase."
+  },
+  "austin-tx": {
+   "intro": "Austin sales tax is 8.250% — and it cannot be higher. Texas caps combined local sales tax at 2.000% on top of the 6.250% state rate, and Austin has reached that ceiling with a 1.000% city tax plus a 1.000% transit tax. The ceiling is why almost every city in the metro charges exactly the same rate.",
+   "heroMore": "The calculator is pre-filled at 8.250%. Unlike California, where rates vary street by street, the Texas cap means you will find the same figure almost everywhere in the Austin area — the rate box is editable mainly for use elsewhere in the state.",
+   "sections": [
+    {
+     "h2": "The 2% Cap That Sets Austin Sales Tax",
+     "paragraphs": [
+      "Texas sets a state sales and use tax rate of 6.250% and allows local jurisdictions — cities, counties, transit authorities and special purpose districts — to add up to 2.000% in total. Not each: in total, for any given address.",
+      "Austin uses the full allowance. The City of Austin levies 1.000% and the Austin MTA, the transit authority behind Capital Metro, levies another 1.000%. Together that is the whole 2.000%, which is why Travis County levies no county sales tax within the city — there is no room left under the cap.",
+      "This is structurally different from California, where district taxes stack and cities can differ by a point and a half within one county. In Texas, once a metro hits the cap, the rate stops moving."
+     ]
+    },
+    {
+     "h2": "Why Every Austin Suburb Charges 8.25% Too",
+     "paragraphs": [
+      "Round Rock, Cedar Park, Georgetown, San Marcos, Pflugerville, Leander, Buda, Kyle, Lakeway and Bee Cave all charge 8.250%. They get there by different routes — some with a 2.000% city tax, some with a smaller city tax plus a county or special district tax — but the cap means they all land on the same total.",
+      "For a shopper this is the useful part: in the Austin metro, unlike in Southern California, there is no rate arbitrage. Crossing a city line does not change the tax on a purchase, because every jurisdiction nearby is already at the ceiling."
+     ]
+    }
+   ],
+   "nearbyIntro": "Every sizeable city in the Austin metro is at the 2% local cap, so the rates are identical even though the underlying city and district taxes differ:",
+   "exemptionsIntro": "Texas exempts more than California does — over-the-counter medicine in particular — and it runs an annual sales tax holiday, which California does not.",
+   "exemptions": [
+    "Groceries and most unprepared food are exempt from Texas sales tax",
+    "Both prescription and over-the-counter medicines are exempt",
+    "Restaurant meals, prepared food and soft drinks are taxable at 8.250%",
+    "Texas taxes a specific enumerated list of services; anything not on that list is untaxed",
+    "Texas runs an annual sales tax holiday on qualifying clothing, footwear and school supplies"
+   ],
+   "sourceNote": "Austin's 8.250% comes from the Texas Comptroller's city rate table, which lists the City of Austin at 1.000% and the Austin MTA at 1.000% over the 6.250% state rate. Because Austin is at the statutory cap, the rate cannot rise without a change in state law.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Austin?",
+     "a": "Austin charges 8.250%. That is the Texas state rate of 6.250%, plus 1.000% for the City of Austin and 1.000% for the Austin MTA transit authority."
+    },
+    {
+     "q": "Why is Austin sales tax exactly 8.25%?",
+     "a": "Texas caps total local sales tax at 2.000% on top of the 6.250% state rate, making 8.250% the legal maximum. Austin levies the full 2.000% through its city tax and its transit tax, so it sits at the ceiling."
+    },
+    {
+     "q": "Do Austin suburbs charge a different rate?",
+     "a": "No. Round Rock, Cedar Park, Georgetown, San Marcos, Pflugerville, Leander, Buda, Kyle, Lakeway and Bee Cave are all at 8.250%. They combine city, county and district taxes differently, but the 2.000% cap means every one of them reaches the same total."
+    },
+    {
+     "q": "How much is sales tax on $100 in Austin?",
+     "a": "$8.25, for a total of $108.25. Because the rate is capped, that figure is the same across effectively the entire Austin metro."
+    },
+    {
+     "q": "Is food taxed in Austin?",
+     "a": "Groceries and unprepared food are exempt from Texas sales tax. Restaurant meals, prepared food and soft drinks are taxable at the full 8.250%. Texas also exempts over-the-counter medicines, which California does not."
+    },
+    {
+     "q": "Does Travis County add its own sales tax in Austin?",
+     "a": "Not inside the city. The 2.000% local allowance is already used up by the City of Austin's 1.000% and the Austin MTA's 1.000%, leaving no room under the cap for a county tax at those addresses."
+    },
+    {
+     "q": "What rate applies to an order shipped to Austin?",
+     "a": "8.250%. Texas sources the sale to the delivery address, and since the whole metro is at the cap, the rate is the same wherever in the Austin area it is delivered."
+    }
+   ],
+   "disclaimer": "Planning use only. Austin sits at the Texas statutory cap, but special purpose districts elsewhere in the state vary — confirm with the Comptroller before filing.",
+   "rateHelp": "Pre-filled at the Texas 8.25% ceiling, which applies across the Austin metro.",
+   "metaDescription": "Austin sales tax is 8.25% in 2026 — the Texas maximum. See the state, city and transit breakdown and calculate tax on any purchase."
+  },
+  "san-diego-ca": {
+   "intro": "San Diego sales tax is 7.750% — the San Diego County baseline, and low enough that California's second-largest city is cheaper to shop in than almost every suburb around it. Chula Vista, National City and Escondido all charge a full point more.",
+   "heroMore": "The rate below is pre-filled at 7.750%, which covers the whole City of San Diego. Cross into Chula Vista or National City and it rises to 8.750%, so the delivery address matters more here than the county name does.",
+   "sections": [
+    {
+     "h2": "The Big City Is the Cheap One",
+     "paragraphs": [
+      "San Diego is an inversion of the usual pattern. In most California metros the central city has stacked on district taxes and the outlying towns sit at the county floor. Here it runs the other way: the City of San Diego has no city district tax and charges the 7.750% county baseline, while the ring of cities around it has voted in its own.",
+      "Chula Vista, National City and Escondido are at 8.750%. Oceanside, El Cajon and Vista are at 8.250%. La Mesa is at 8.500%. Carlsbad is the only nearby city that matches San Diego at 7.750%.",
+      "On a $2,000 purchase the gap between San Diego and Chula Vista is $20. Small, but it runs the opposite direction to what most shoppers assume."
+     ]
+    },
+    {
+     "h2": "What the 7.750% Is Made Of",
+     "paragraphs": [
+      "California's statewide base is 7.250%. San Diego County adds a single 0.500% countywide district tax on top, which produces the 7.750% figure that applies in the city and in unincorporated county territory alike.",
+      "Because the city levies nothing of its own, the San Diego rate only moves if the countywide tax changes. The surrounding cities can and do move independently."
+     ]
+    }
+   ],
+   "nearbyIntro": "Almost everything around San Diego is more expensive. The published rates:",
+   "exemptionsIntro": "California sets what is taxable, so the rules are the same in San Diego as in the pricier cities next door. Only the rate differs.",
+   "exemptions": [
+    "Unprepared groceries are exempt",
+    "Restaurant meals and hot prepared food are taxable at 7.750%",
+    "Prescription medicines are exempt; most over-the-counter medicines are not",
+    "Services are outside the scope of California sales tax",
+    "A vehicle is taxed at the buyer's registration address, so a San Diego dealer may have to charge a suburban rate"
+   ],
+   "metaDescription": "San Diego sales tax is 7.75% in 2026. See the state and county breakdown, nearby city comparisons, and calculate tax on any purchase.",
+   "sourceNote": "San Diego's 7.750% is the CDTFA's published city rate. Since the city carries no district tax of its own, watch the county figure rather than the city one — but the neighbouring cities in the table above each move on their own schedule.",
+   "disclaimer": "A planning estimate. Several San Diego County cities charge more than the city itself, so confirm the delivery address with the CDTFA before relying on this for a return.",
+   "rateHelp": "Pre-filled with the City of San Diego rate. Most surrounding cities are higher — change it for those.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in San Diego?",
+     "a": "The City of San Diego charges 7.750%: California's 7.250% statewide base plus a 0.500% San Diego County district tax. The city adds nothing of its own."
+    },
+    {
+     "q": "Is sales tax higher in San Diego or Chula Vista?",
+     "a": "Chula Vista, at 8.750%, is a full point higher than the City of San Diego's 7.750%. National City and Escondido match Chula Vista. Carlsbad is the main nearby city that shares San Diego's rate."
+    },
+    {
+     "q": "How much is sales tax on $100 in San Diego?",
+     "a": "$7.75, for a total of $107.75. The same purchase in Chula Vista carries $8.75."
+    },
+    {
+     "q": "Does the San Diego rate apply across the whole county?",
+     "a": "7.750% is the baseline for unincorporated San Diego County and for the City of San Diego, but many incorporated cities in the county have added district taxes and charge more. The rate follows the delivery city."
+    },
+    {
+     "q": "What rate applies to an order shipped to San Diego?",
+     "a": "7.750%, because California taxes at the delivery address rather than the seller's location. An order sent to a Chula Vista address is taxed at 8.750% instead."
+    },
+    {
+     "q": "Is food taxed in San Diego?",
+     "a": "Groceries bought to prepare at home are exempt. Restaurant meals, hot prepared food and most takeaway are taxable at the full 7.750%."
+    }
+   ]
+  },
+  "pasadena-ca": {
+   "intro": "Pasadena sales tax is 10.500%, which puts it in the highest band of any city in California. It is not an outlier locally, though — the entire San Gabriel Valley around it charges exactly the same, so there is nowhere cheap to drive to.",
+   "heroMore": "The calculator is pre-filled at 10.500%. Unlike most of California, the rate here does not change as you cross city lines: Glendale, Burbank, Arcadia, Alhambra, Monrovia, South Pasadena and Sierra Madre are all at 10.500% too.",
+   "sections": [
+    {
+     "h2": "Why Pasadena Reaches 10.5%",
+     "paragraphs": [
+      "California's statewide base is 7.250%. Los Angeles County adds district taxes taking it to 9.750% countywide. Pasadena then adds another 0.750% of city district tax, landing at 10.500%.",
+      "That is 3.250% of district tax stacked on the base — well past the 2.000% ceiling that normally caps district taxes, which is possible because the legislature has authorised additional district capacity for specific areas over the years.",
+      "In practical terms Pasadena is three-quarters of a point above the Los Angeles County figure and a full point above what a shopper in Torrance pays."
+     ]
+    },
+    {
+     "h2": "The San Gabriel Valley Moves as a Bloc",
+     "paragraphs": [
+      "What makes Pasadena unusual is not the rate itself but the uniformity around it. Seven neighbouring cities — Glendale, Burbank, Arcadia, Alhambra, Monrovia, South Pasadena and Sierra Madre — all charge 10.500% as well.",
+      "Elsewhere in California a shopper making a large purchase can often save a point by crossing a city line. Here that option does not exist within any reasonable distance, which is worth knowing before driving somewhere for a furniture or appliance purchase."
+     ]
+    }
+   ],
+   "nearbyIntro": "Unusually for California, every neighbouring city matches Pasadena exactly:",
+   "exemptionsIntro": "At 10.500% the exemptions matter more than usual, because the tax on anything that is not exempt is over a tenth of the price.",
+   "exemptions": [
+    "Unprepared groceries are exempt — a meaningful saving at this rate",
+    "Restaurant meals and hot prepared food are taxable at 10.500%",
+    "Prescription medicines are exempt; over-the-counter medicines generally are not",
+    "Labour and services are not subject to California sales tax",
+    "Vehicles follow the buyer's registration address, not the dealer's"
+   ],
+   "sourceNote": "Pasadena's 10.500% is the CDTFA's published city rate, combining the Los Angeles County figure with the city's own district tax. Both layers change on the quarterly cycle and either can move independently.",
+   "disclaimer": "Planning figures only. At 10.500% the tax on a large purchase is substantial, so confirm the rate for the exact address with the CDTFA before relying on it.",
+   "rateHelp": "Pre-filled with the Pasadena rate. The surrounding San Gabriel Valley cities share it, so it rarely needs changing locally.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Pasadena?",
+     "a": "Pasadena charges 10.500%: California's 7.250% statewide base, plus Los Angeles County district taxes bringing it to 9.750%, plus a further 0.750% of Pasadena city district tax."
+    },
+    {
+     "q": "Is Pasadena the highest sales tax in California?",
+     "a": "It is in the top band. At 10.500% Pasadena matches Long Beach and several other Los Angeles County cities; a handful, such as Compton at 10.750%, are higher still."
+    },
+    {
+     "q": "How much is sales tax on $100 in Pasadena?",
+     "a": "$10.50, for a total of $110.50. On a $3,000 purchase the tax is $315."
+    },
+    {
+     "q": "Is sales tax cheaper in Glendale or Burbank than Pasadena?",
+     "a": "No. Glendale, Burbank, Arcadia, Alhambra, Monrovia, South Pasadena and Sierra Madre all charge 10.500%, exactly the same as Pasadena. There is no nearby city with a lower rate."
+    },
+    {
+     "q": "Why is Pasadena higher than Los Angeles County's 9.75%?",
+     "a": "The 9.750% figure is the county baseline. Pasadena's voters approved an additional city district tax of 0.750% on top of it, which only applies inside the Pasadena city limits."
+    },
+    {
+     "q": "What rate applies to an order shipped to Pasadena?",
+     "a": "10.500%. California sources sales to the delivery address, so the seller's location makes no difference."
+    }
+   ],
+   "metaDescription": "Pasadena sales tax is 10.5% in 2026. See how the California base, Los Angeles County taxes and Pasadena city district tax combine, and calculate tax on any amount."
+  },
+  "long-beach-ca": {
+   "intro": "Long Beach sales tax is 10.500% — one of the highest rates in California. What makes it worth knowing is the border: Seal Beach, a few minutes away across the Orange County line, charges 9.250%, and the county line is the only thing separating them.",
+   "heroMore": "The calculator starts at 10.500%, which covers the whole City of Long Beach including the port and downtown. Cross into Orange County and the rate drops sharply, so check which side of the line a delivery address sits on.",
+   "sections": [
+    {
+     "h2": "The County Line Is Worth 1.25 Points",
+     "paragraphs": [
+      "Long Beach sits at the southern edge of Los Angeles County. Its 10.500% is the 7.250% California base, plus the Los Angeles County district taxes that bring the county to 9.750%, plus 0.750% of Long Beach city tax.",
+      "Seal Beach, immediately across the line in Orange County, charges 9.250% — and Orange County's baseline is only 7.750%, against Los Angeles County's 9.750%. The two counties have made very different choices about district taxes, and Long Beach happens to sit right on the seam.",
+      "On a $5,000 purchase that is $62.50. Not life-changing, but it is one of the sharpest rate cliffs in Southern California."
+     ]
+    },
+    {
+     "h2": "Inside Los Angeles County, Long Beach Is Typical",
+     "paragraphs": [
+      "Look north instead of south and Long Beach stops being remarkable. Signal Hill, Lakewood, Bellflower and Carson all charge 10.500% too. Compton is higher at 10.750%. Cerritos, at 9.750%, sits at the county baseline with no city tax of its own.",
+      "So the story is not that Long Beach is expensive for Los Angeles County — it is that Los Angeles County is expensive, and Long Beach is where that becomes visible against a cheaper neighbour."
+     ]
+    }
+   ],
+   "nearbyIntro": "Long Beach's neighbours split by county. The Los Angeles County ones match it; Seal Beach does not:",
+   "exemptionsIntro": "California decides what is taxable. The categories that come up most around the port and downtown:",
+   "exemptions": [
+    "Unprepared groceries are exempt",
+    "Restaurant meals and prepared food are taxable at 10.500%",
+    "Prescription medicines are exempt; over-the-counter medicines generally are not",
+    "Services, including repair labour billed separately, are not taxable",
+    "Boats and vehicles are taxed at the buyer's registration address"
+   ],
+   "sourceNote": "Long Beach's 10.500% is the CDTFA's published city rate. The Seal Beach comparison uses the same table — both counties revise their district taxes quarterly and can move independently of each other.",
+   "disclaimer": "A planning estimate. Long Beach sits on a county line where the rate changes sharply, so confirm which jurisdiction a delivery address falls in before relying on this figure.",
+   "rateHelp": "Pre-filled with the Long Beach rate. Addresses across the Orange County line are considerably lower.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Long Beach?",
+     "a": "Long Beach charges 10.500%: the 7.250% California base, Los Angeles County district taxes bringing it to 9.750%, and a 0.750% Long Beach city district tax."
+    },
+    {
+     "q": "Why is Seal Beach so much cheaper than Long Beach?",
+     "a": "Seal Beach is in Orange County, whose baseline is 7.750%, against Los Angeles County's 9.750%. Seal Beach's own district taxes bring it to 9.250% — still 1.250% below Long Beach despite being minutes away."
+    },
+    {
+     "q": "How much is sales tax on $100 in Long Beach?",
+     "a": "$10.50, for a total of $110.50. The same purchase in Seal Beach carries $9.25."
+    },
+    {
+     "q": "Is Long Beach the most expensive city nearby?",
+     "a": "Not quite. Compton, at 10.750%, is higher. Signal Hill, Lakewood, Bellflower and Carson match Long Beach at 10.500%, and Cerritos is lower at the 9.750% county baseline."
+    },
+    {
+     "q": "Does the Long Beach rate cover the port area?",
+     "a": "Yes. The port, downtown and the whole area inside the city limits use the same 10.500% rate. There is no separate port or harbour district rate on retail sales."
+    },
+    {
+     "q": "What rate applies to something shipped to Long Beach?",
+     "a": "10.500%, since California taxes at the delivery address. An order shipped to Seal Beach instead is taxed at 9.250%."
+    }
+   ]
+  },
+  "torrance-ca": {
+   "intro": "Torrance sales tax is 10.250%. The interesting part is the South Bay around it: within a few miles of coastline the rate runs 9.750%, 10.250% and 10.500%, which is about as fragmented as California gets.",
+   "heroMore": "The calculator is pre-filled at 10.250% for the City of Torrance. Neighbouring beach cities differ by up to three-quarters of a point in either direction, so edit the rate if the delivery address is not actually in Torrance.",
+   "sections": [
+    {
+     "h2": "Three Rates Within a Few Miles of Beach",
+     "paragraphs": [
+      "Torrance is at 10.250%: the 7.250% California base, plus Los Angeles County district taxes to 9.750%, plus 0.500% of city tax.",
+      "Redondo Beach, Hermosa Beach and Palos Verdes Estates are at 9.750% — the county baseline, with no city district tax. Manhattan Beach matches Torrance at 10.250%. Gardena, Carson and Lomita are at 10.500%.",
+      "Three distinct rates inside a single stretch of the South Bay, and the differences are entirely down to which cities' voters approved their own district taxes. Nothing about the goods or the sellers changes."
+     ]
+    },
+    {
+     "h2": "Where Torrance Sits in the Spread",
+     "paragraphs": [
+      "Torrance is in the middle. It is half a point above the beach cities to its west and a quarter point below the cities to its north and east.",
+      "For everyday purchases the difference is invisible. For a car — which is taxed at the buyer's registration address rather than the dealer's — or a large appliance, the quarter to half point is worth checking before assuming the nearest store is the cheapest option."
+     ]
+    }
+   ],
+   "nearbyIntro": "The South Bay spread, from the beach cities up through the inland ones:",
+   "exemptionsIntro": "What is taxable is set by California and does not vary between these cities — only the rate does.",
+   "exemptions": [
+    "Unprepared groceries are exempt everywhere in the South Bay",
+    "Restaurant meals and hot prepared food are taxable at 10.250% in Torrance",
+    "Prescription medicines are exempt; most over-the-counter medicines are taxable",
+    "Services and separately billed labour are not subject to sales tax",
+    "Vehicles are taxed where the buyer registers them, which may be a different South Bay rate"
+   ],
+   "sourceNote": "Torrance's 10.250% and every neighbouring figure above come from the same CDTFA table. Because each South Bay city sets its own district tax, the spread between them can widen or narrow at any quarterly revision.",
+   "disclaimer": "Planning figures only. The South Bay carries three different rates within a few miles, so confirm the delivery city against the CDTFA before relying on any of them.",
+   "rateHelp": "Pre-filled with the Torrance rate. Beach cities to the west are lower; cities to the north and east are higher.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Torrance?",
+     "a": "Torrance charges 10.250%: California's 7.250% base, Los Angeles County district taxes taking it to 9.750%, and a 0.500% Torrance city district tax."
+    },
+    {
+     "q": "Is sales tax lower in Redondo Beach than Torrance?",
+     "a": "Yes. Redondo Beach, Hermosa Beach and Palos Verdes Estates are at 9.750% — the Los Angeles County baseline, with no city district tax. That is half a point below Torrance."
+    },
+    {
+     "q": "How much is sales tax on $100 in Torrance?",
+     "a": "$10.25, for a total of $110.25. In Redondo Beach the same purchase carries $9.75, and in Gardena $10.50."
+    },
+    {
+     "q": "Which South Bay city has the highest sales tax?",
+     "a": "Gardena, Carson and Lomita are at 10.500%, the highest of the cities immediately around Torrance. The beach cities at 9.750% are the lowest."
+    },
+    {
+     "q": "Do I pay the Torrance rate on a car bought in Torrance?",
+     "a": "Only if you register the car at a Torrance address. California taxes vehicle purchases at the buyer's registration address, so a Redondo Beach resident buying from a Torrance dealer pays 9.750%."
+    },
+    {
+     "q": "What rate applies to an order shipped to Torrance?",
+     "a": "10.250%. The rate follows the delivery address, not the seller's location."
+    }
+   ]
+  },
+  "fresno-ca": {
+   "intro": "Fresno sales tax is 8.350%, which is above the 7.975% that applies across the rest of Fresno County. The Central Valley is also where California's rates get strangest — nearby towns charge 8.475%, 8.725% and 9.225%, fractions you rarely see on the coast.",
+   "heroMore": "The calculator is pre-filled at 8.350% for the City of Fresno. Valley rates are unusually granular, so if the delivery address is in Clovis, Selma or Reedley, change it — none of them match Fresno.",
+   "sections": [
+    {
+     "h2": "Why Central Valley Rates Have Such Odd Fractions",
+     "paragraphs": [
+      "Most California rates land on a quarter point: 7.750%, 8.250%, 9.750%. Around Fresno they do not. Selma is 8.475%, Sanger 8.725%, Clovis and Kingsburg 8.975%, Reedley 9.225%.",
+      "Those fractions come from district taxes approved at rates like 0.225% or 0.475% rather than the usual quarter or half point, then stacked on the county figure. Fresno County's own baseline of 7.975% is itself an odd number for the same reason.",
+      "It matters practically: a rate you half-remember as \"about 8 and a half\" will be wrong here in a way it would not be in Los Angeles."
+     ]
+    },
+    {
+     "h2": "Fresno City vs Fresno County",
+     "paragraphs": [
+      "The City of Fresno adds 0.375% of city district tax to the county's 7.975%, reaching 8.350%. Unincorporated Fresno County stays at 7.975%.",
+      "Clovis, which borders Fresno directly, is at 8.975% — over six-tenths of a point higher than the city it adjoins. For a metro where the two cities run into each other, that is a real difference on a large purchase."
+     ]
+    }
+   ],
+   "nearbyIntro": "Central Valley rates around Fresno, with the unusual fractions intact:",
+   "exemptionsIntro": "California's exemptions apply the same way in the Valley as anywhere else in the state.",
+   "exemptions": [
+    "Unprepared groceries are exempt",
+    "Restaurant meals and hot prepared food are taxable at 8.350%",
+    "Prescription medicines are exempt; most over-the-counter medicines are taxable",
+    "Farm equipment can qualify for a partial exemption under California's agricultural rules",
+    "Vehicles are taxed at the buyer's registration address"
+   ],
+   "metaDescription": "Fresno sales tax is 8.35% in 2026. See the state, county and city breakdown, Central Valley rate comparisons, and a free calculator.",
+   "sourceNote": "Fresno's 8.350% and the county's 7.975% are both CDTFA published figures. Because Valley district taxes are approved at unusual increments, round numbers quoted elsewhere for this area are often approximations rather than the real rate.",
+   "disclaimer": "A planning estimate. Fresno County rates carry unusual fractions and vary sharply between neighbouring towns, so confirm the delivery address with the CDTFA before relying on a figure.",
+   "rateHelp": "Pre-filled with the City of Fresno rate. Unincorporated county addresses are 7.975%, and Clovis is higher again.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Fresno?",
+     "a": "The City of Fresno charges 8.350%. That is California's 7.250% statewide base plus 1.100% of district taxes — the Fresno County piece plus the city's own 0.375%."
+    },
+    {
+     "q": "Is Clovis sales tax the same as Fresno?",
+     "a": "No. Clovis is 8.975%, over six-tenths of a point above Fresno's 8.350%, even though the two cities border each other directly."
+    },
+    {
+     "q": "Why are Fresno-area rates not round numbers?",
+     "a": "District taxes in the Central Valley have been approved at increments like 0.225% and 0.475% rather than the quarter and half points common elsewhere. Stacked on Fresno County's 7.975% baseline, they produce rates such as 8.475%, 8.725% and 9.225%."
+    },
+    {
+     "q": "How much is sales tax on $100 in Fresno?",
+     "a": "$8.35, for a total of $108.35. In Clovis the same purchase carries $8.98, and in Reedley $9.23."
+    },
+    {
+     "q": "What is the sales tax in unincorporated Fresno County?",
+     "a": "7.975%, which is the county baseline. The City of Fresno's 8.350% applies only inside the city limits."
+    },
+    {
+     "q": "What rate applies to an order shipped to Fresno?",
+     "a": "8.350% for a City of Fresno address. California taxes at the delivery point, so an order to Clovis is taxed at 8.975% instead."
+    }
+   ]
+  },
+  "riverside-ca": {
+   "intro": "Riverside sales tax is 8.750%, and unusually for California, nearly the whole metro around it charges exactly the same. Corona, Moreno Valley, Temecula, Murrieta, Hemet and Norco are all at 8.750% too.",
+   "heroMore": "The calculator is pre-filled at 8.750%. Because most of the Inland Empire matches that figure, this is one of the few parts of California where you rarely need to change it — Perris and Palm Springs are the exceptions.",
+   "sections": [
+    {
+     "h2": "An Unusually Uniform Metro",
+     "paragraphs": [
+      "Riverside County's baseline is 7.750% — the 7.250% California base plus a 0.500% countywide district tax. The City of Riverside adds a further 1.000%, reaching 8.750%.",
+      "What is striking is how many neighbours landed on the same number. Corona, Moreno Valley, Temecula, Murrieta, Hemet and Norco all charge 8.750%. They got there through separately approved city measures, but the result is a metro where the rate is effectively flat.",
+      "That is the opposite of the Los Angeles or Orange County pattern, where the rate changes every few miles."
+     ]
+    },
+    {
+     "h2": "The Two Exceptions Worth Knowing",
+     "paragraphs": [
+      "Perris sits at 7.750% — the county baseline, with no city district tax. It is a full point below its neighbours, which makes it the cheapest sizeable city in the immediate area.",
+      "Palm Springs runs the other way at 9.250%, half a point above Riverside. For a resort city that draws a lot of visitor spending, that half point adds up over a weekend."
+     ]
+    }
+   ],
+   "nearbyIntro": "Most of the Inland Empire sits on the same figure. The two that do not stand out clearly:",
+   "exemptionsIntro": "California sets the exemptions; they apply identically across every Riverside County city.",
+   "exemptions": [
+    "Unprepared groceries are exempt",
+    "Restaurant meals and hot prepared food are taxable at 8.750%",
+    "Prescription medicines are exempt; most over-the-counter medicines are taxable",
+    "Services are not subject to California sales tax",
+    "Vehicles are taxed at the buyer's registration address rather than the dealer's"
+   ],
+   "metaDescription": "Riverside sales tax is 8.75% in 2026. See the rate breakdown, Inland Empire city comparisons, and calculate tax on any purchase amount.",
+   "sourceNote": "Riverside's 8.750% and the county's 7.750% are both CDTFA published figures. The local uniformity is a coincidence of separate city measures rather than a countywide rate, so individual cities can still diverge at any quarterly revision.",
+   "disclaimer": "Planning figures only. Perris and Palm Springs differ from the surrounding rate, so confirm the delivery city with the CDTFA before relying on the figure for a return.",
+   "rateHelp": "Pre-filled with the City of Riverside rate, which most of the Inland Empire shares.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Riverside?",
+     "a": "The City of Riverside charges 8.750%: California's 7.250% base, a 0.500% Riverside County district tax, and a 1.000% city district tax."
+    },
+    {
+     "q": "Do Riverside's neighbours charge the same rate?",
+     "a": "Most do. Corona, Moreno Valley, Temecula, Murrieta, Hemet and Norco are all at 8.750%. Perris is lower at 7.750% and Palm Springs higher at 9.250%."
+    },
+    {
+     "q": "How much is sales tax on $100 in Riverside?",
+     "a": "$8.75, for a total of $108.75. In Perris the same purchase carries $7.75."
+    },
+    {
+     "q": "Which city near Riverside has the lowest sales tax?",
+     "a": "Perris, at 7.750%. It sits at the Riverside County baseline with no city district tax, making it a full point cheaper than most of the surrounding cities."
+    },
+    {
+     "q": "What is the sales tax in unincorporated Riverside County?",
+     "a": "7.750% — the county baseline. The City of Riverside's extra 1.000% applies only inside the city limits."
+    },
+    {
+     "q": "What rate applies to an order shipped to Riverside?",
+     "a": "8.750%, since California taxes at the delivery address. The seller's location does not change it."
+    }
+   ]
+  },
+  "ventura-county-ca": {
+   "intro": "Ventura County sales tax is 7.250% — California's statutory floor, with no county district tax at all. Only a handful of counties in the state are still at the bare base rate, and Ventura is the largest of them.",
+   "heroMore": "The calculator starts at 7.250%, the county baseline. Four cities inside the county have voted in their own district taxes and run as high as 9.250%, so check the delivery city in the table below before relying on the county figure.",
+   "sections": [
+    {
+     "h2": "A County Still at California's Floor",
+     "paragraphs": [
+      "Every sales tax rate in California starts from the same 7.250% statewide base. Almost every county then adds district taxes on top — Los Angeles County reaches 9.750%, Santa Clara 9.750%, Orange County 7.750%.",
+      "Ventura County adds nothing. Its 7.250% is the base rate and nothing else, which makes unincorporated Ventura County among the cheapest places to buy anything in the state.",
+      "Thousand Oaks, Simi Valley, Camarillo and Fillmore also sit at the bare 7.250%, having added no city tax either."
+     ]
+    },
+    {
+     "h2": "The Widest Relative Spread in the State",
+     "paragraphs": [
+      "Because the baseline is so low, the cities that did adopt district taxes stand out sharply. Oxnard and Santa Paula are at 9.250% — two full points above the county floor. Port Hueneme is at 8.750%, and the City of Ventura at 7.750%.",
+      "Two points is a wider gap, relative to the baseline, than you will find in most California counties. A $3,000 purchase costs $60 more in Oxnard than in Camarillo, twenty minutes away.",
+      "This is why the county figure is particularly misleading here. Ventura County's 7.250% is real, but it describes the unincorporated area and four cities — not Oxnard, where a large share of the county's retail actually happens."
+     ]
+    }
+   ],
+   "nearbyIntro": "",
+   "exemptionsIntro": "What is taxable is set by California, so it is identical in the 7.250% cities and the 9.250% ones. Only the rate moves.",
+   "exemptions": [
+    "Unprepared groceries are exempt anywhere in the county",
+    "Restaurant meals and hot prepared food are taxable at whichever city rate applies",
+    "Prescription medicines are exempt; over-the-counter medicines generally are not",
+    "Agricultural equipment may qualify for a partial exemption",
+    "Vehicles follow the buyer's registration address, which inside this county can mean a two-point difference"
+   ],
+   "metaDescription": "Ventura County sales tax is 7.25% (the state floor) in 2026. See city-by-city rates from 7.25% to 9.25% and use the free calculator.",
+   "sourceNote": "Every rate in the table above is the CDTFA's published figure for that city. Ventura County has no countywide district tax to change, so the baseline only moves if the state rate does — but the individual cities revise on the usual quarterly cycle.",
+   "disclaimer": "A planning estimate. The spread between the county baseline and Oxnard is two full points, so establish the delivery city before relying on any figure here.",
+   "rateHelp": "Pre-filled with the 7.250% county baseline. Use 9.250% for Oxnard or Santa Paula.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Ventura County?",
+     "a": "The Ventura County baseline is 7.250%, which is California's statewide base rate with no county district tax added. It applies in unincorporated areas and in Thousand Oaks, Simi Valley, Camarillo and Fillmore."
+    },
+    {
+     "q": "Why is Ventura County lower than Los Angeles County?",
+     "a": "Both start from the same 7.250% California base. Los Angeles County has added 2.500% of district taxes; Ventura County has added none at all. The difference is entirely which measures each county's voters approved."
+    },
+    {
+     "q": "Which Ventura County city has the highest sales tax?",
+     "a": "Oxnard and Santa Paula, both at 9.250% — two full points above the county baseline. Port Hueneme is next at 8.750%."
+    },
+    {
+     "q": "How much is sales tax on $100 in Ventura County?",
+     "a": "$7.25 at the county baseline, for a total of $107.25. In Oxnard the same purchase carries $9.25."
+    },
+    {
+     "q": "Is the City of Ventura the same rate as Ventura County?",
+     "a": "No. The City of Ventura charges 7.750%, half a point above the 7.250% county baseline. The county name and the city name are not interchangeable here."
+    },
+    {
+     "q": "Does the Ventura County rate apply to online orders?",
+     "a": "The rate for the delivery city applies. An order shipped to Camarillo is taxed at 7.250% and one shipped to Oxnard at 9.250%, whatever the seller's location."
+    }
+   ]
+  },
+  "santa-clara-county-ca": {
+   "intro": "Santa Clara County sales tax is 9.750%, and most cities in the county charge exactly that. The two that do not are San Jose and Milpitas, both at 10.000% — which is why the county figure and the San Jose figure are different numbers.",
+   "heroMore": "The calculator is pre-filled at the 9.750% county rate. If the delivery address is in San Jose or Milpitas, change it to 10.000%; everywhere else in the county the county figure is the right one.",
+   "sections": [
+    {
+     "h2": "One County, Two Rates",
+     "paragraphs": [
+      "Santa Clara County's 9.750% is California's 7.250% base plus 2.500% of countywide district taxes. It applies in unincorporated areas and in the large majority of the county's cities — Santa Clara, Sunnyvale, Palo Alto, Mountain View, Cupertino and Gilroy all sit on it.",
+      "San Jose and Milpitas each add a further 0.250% of city district tax, reaching a round 10.000%. That quarter point is the only variation in the whole county.",
+      "It is a simpler picture than Los Angeles County, where rates scatter across a full point, but the exception matters: San Jose is where most of the county's retail happens."
+     ]
+    },
+    {
+     "h2": "Santa Clara the City vs Santa Clara the County",
+     "paragraphs": [
+      "The City of Santa Clara charges 9.750% — the same as the county that shares its name. This trips people up constantly, because in most California counties the central city is higher than the county baseline.",
+      "Here it is San Jose, not Santa Clara, that carries the premium. A rate quoted for \"Santa Clara\" is ambiguous unless you know whether the city or the county is meant — and in this one case it does not matter, because both are 9.750%."
+     ]
+    }
+   ],
+   "nearbyIntro": "",
+   "exemptionsIntro": "California sets the exemptions, so they are identical across the county. In a county built on electronics retail, one category is worth stating plainly:",
+   "exemptions": [
+    "Computers, phones and consumer electronics are fully taxable — there is no technology exemption",
+    "Unprepared groceries are exempt",
+    "Restaurant meals and hot prepared food are taxable",
+    "Prescription medicines are exempt; most over-the-counter medicines are taxable",
+    "Vehicles are taxed at the buyer's registration address, which may be the 9.750% rate even when bought in San Jose"
+   ],
+   "sourceNote": "Every figure in the table above is the CDTFA's published rate for that city. The county piece and the San Jose and Milpitas city pieces revise independently on the quarterly cycle, so the quarter-point gap is not guaranteed to persist.",
+   "disclaimer": "A planning estimate. San Jose and Milpitas sit above the county rate shown here, so confirm the delivery city with the CDTFA before relying on the figure.",
+   "rateHelp": "Pre-filled with the Santa Clara County rate. San Jose and Milpitas are 10.000%.",
+   "faqs": [
+    {
+     "q": "What is the sales tax rate in Santa Clara County?",
+     "a": "The Santa Clara County rate is 9.750%: California's 7.250% statewide base plus 2.500% of countywide district taxes. It applies in unincorporated areas and in most of the county's cities."
+    },
+    {
+     "q": "Is Santa Clara County the same rate as San Jose?",
+     "a": "No. San Jose adds a 0.250% city district tax and charges 10.000%. Milpitas does the same. Every other sizeable city in the county sits at the 9.750% county rate."
+    },
+    {
+     "q": "Is the City of Santa Clara different from Santa Clara County?",
+     "a": "Not on rate — both are 9.750%. The City of Santa Clara has no district tax of its own, so it matches the county exactly, which is unusual for a central California city."
+    },
+    {
+     "q": "How much is sales tax on $100 in Santa Clara County?",
+     "a": "$9.75, for a total of $109.75. In San Jose the same purchase carries $10.00."
+    },
+    {
+     "q": "Are electronics taxed differently in Silicon Valley?",
+     "a": "No. California has no exemption for computers, phones or other consumer electronics — they are taxed at the full combined rate like any other tangible goods."
+    },
+    {
+     "q": "What rate applies to an order shipped into Santa Clara County?",
+     "a": "The rate for the delivery city: 10.000% for San Jose and Milpitas addresses, 9.750% for the rest of the county. California taxes at the delivery point."
+    }
+   ]
+  }
+ }
+}

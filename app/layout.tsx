@@ -28,5 +28,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#172b3a" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${GeistSans.variable} ${GeistMono.variable}`}>{children}<ConsentBanner/></body></html>;
+  // `?embed=1` turns a calculator page into an iframe widget (see components/EmbedFrame.tsx); set before paint so the rest of the page never flashes.
+  const embedFlag='try{if(new URLSearchParams(location.search).has("embed")){document.documentElement.classList.add("embed-mode");var b=document.createElement("base");b.target="_blank";document.head.appendChild(b)}}catch(e){}';
+  return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{__html:embedFlag}}/></head><body className={`${GeistSans.variable} ${GeistMono.variable}`}>{children}<ConsentBanner/></body></html>;
 }

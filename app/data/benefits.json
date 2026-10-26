@@ -1,0 +1,47 @@
+{
+ "year": 2026,
+ "sources": {
+  "hsa": {
+   "label": "IRS Revenue Procedure 2025-19",
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-19.pdf",
+   "note": "2026 inflation-adjusted HSA and HDHP amounts under section 223."
+  },
+  "fsa": {
+   "label": "IRS Revenue Procedure 2025-32",
+   "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+   "note": "2026 health FSA salary reduction limit and cafeteria plan carryover."
+  },
+  "dcfsa": {
+   "label": "IRS Publication 15-B (2026)",
+   "url": "https://www.irs.gov/pub/irs-pdf/p15b.pdf",
+   "note": "Employer's Tax Guide to Fringe Benefits — dependent care assistance exclusion for 2026."
+  },
+  "pub503": {
+   "label": "IRS Publication 503",
+   "url": "https://www.irs.gov/publications/p503",
+   "note": "Child and Dependent Care Expenses — what counts as a qualifying expense."
+  },
+  "pub969": {
+   "label": "IRS Publication 969",
+   "url": "https://www.irs.gov/publications/p969",
+   "note": "Health Savings Accounts and Other Tax-Favored Health Plans."
+  }
+ },
+ "hsa": {
+  "contribution": { "selfOnly": 4400, "family": 8750 },
+  "catchUp": 1000,
+  "catchUpAge": 55,
+  "hdhpMinDeductible": { "selfOnly": 1700, "family": 3400 },
+  "hdhpMaxOutOfPocket": { "selfOnly": 8500, "family": 17000 }
+ },
+ "healthFsa": { "limit": 3400, "carryover": 680 },
+ "dependentCareFsa": {
+  "limit": 7500,
+  "limitMarriedFilingSeparately": 3750,
+  "priorLimit": 5000,
+  "priorLimitMarriedFilingSeparately": 2500,
+  "changedBy": "the One Big Beautiful Bill Act",
+  "effective": "the 2026 tax year"
+ },
+ "fica": { "socialSecurity": 6.2, "medicare": 1.45, "combined": 7.65 }
+}

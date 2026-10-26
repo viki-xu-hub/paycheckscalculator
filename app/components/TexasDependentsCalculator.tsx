@@ -1,5 +1,6 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { calculatePaycheck, money, wholeMoney, PAY_PERIODS, type FilingStatus, type PayFrequency } from "../lib/payroll";
 import {
@@ -9,7 +10,7 @@ import {
   QUALIFYING_CHILD_CREDIT,
 } from "../lib/paycheckExtras";
 
-export default function TexasDependentsCalculator() {
+function TexasDependentsCalculator() {
   const [salary, setSalary] = useState(75000);
   const [frequency, setFrequency] = useState<PayFrequency>("biweekly");
   const [status, setStatus] = useState<FilingStatus>("married");
@@ -163,3 +164,5 @@ function MoneyField({
     </label>
   );
 }
+
+export default withEmbed(TexasDependentsCalculator);

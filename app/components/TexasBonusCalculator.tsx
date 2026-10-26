@@ -1,12 +1,13 @@
 "use client";
 
+import { withEmbed } from "./EmbedFrame";
 import { useMemo, useState } from "react";
 import { calculatePaycheck, money, wholeMoney, PAY_PERIODS, type FilingStatus, type PayFrequency } from "../lib/payroll";
 import { bonusAggregateMethod, bonusFlatMethod, SUPPLEMENTAL_FLAT_RATE } from "../lib/paycheckExtras";
 
 type Method = "flat" | "aggregate";
 
-export default function TexasBonusCalculator() {
+function TexasBonusCalculator() {
   const [salary, setSalary] = useState(75000);
   const [bonus, setBonus] = useState(5000);
   const [frequency, setFrequency] = useState<PayFrequency>("biweekly");
@@ -51,7 +52,7 @@ export default function TexasBonusCalculator() {
         <div className="section-heading">
           <span className="step">1</span>
           <div>
-            <h2>Your pay and bonus</h2>
+            <h2>Your Texas pay and bonus</h2>
             <p>Keep the bonus separate from your regular salary.</p>
           </div>
         </div>
@@ -106,7 +107,7 @@ export default function TexasBonusCalculator() {
         <div className="section-heading light">
           <span className="step">2</span>
           <div>
-            <h2>Bonus take-home pay</h2>
+            <h2>Bonus tax and take-home in Texas</h2>
             <p>{method === "flat" ? "Withheld at the 22% supplemental rate." : "Withheld by annualizing the combined paycheck."}</p>
           </div>
         </div>
@@ -182,3 +183,5 @@ function MoneyField({
     </label>
   );
 }
+
+export default withEmbed(TexasBonusCalculator);

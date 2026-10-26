@@ -302,7 +302,7 @@ export default function TexasPaycheckCalculatorWithDependents() {
             <span>The full Texas take-home pay tool →</span>
           </a>
           <a href="/texas-paycheck-calculator-with-bonus">
-            <b>Texas Paycheck Calculator With Bonus</b>
+            <b>Bonus Tax Calculator Texas</b>
             <span>Flat 22% vs aggregate withholding →</span>
           </a>
           <a href="/texas-paycheck-calculator-with-child-support">

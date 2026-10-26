@@ -18,6 +18,8 @@ const LAST_MODIFIED = "2026-08-07";
 const hourlyRates = hourlyRaw as HourlyData[];
 const rateBySlug = Object.fromEntries(hourlyRates.map(h => [h.slug, h]));
 
+const POPULAR_RATES = [15, 18, 20, 21, 22, 25, 30, 35, 40, 50];
+
 const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 export function generateStaticParams() {
@@ -70,6 +72,11 @@ export default async function HourlyCalculatorPage(
   const idx = hourlyRates.findIndex(x => x.slug === h.slug);
   const lower = idx > 0 ? hourlyRates[idx - 1] : null;
   const higher = idx < hourlyRates.length - 1 ? hourlyRates[idx + 1] : null;
+  // Cross-link the most-searched rates so every rate page sits one click from the others, not just its neighbors.
+  const popularRates = POPULAR_RATES
+    .filter(r => r !== h.rate && r !== lower?.rate && r !== higher?.rate)
+    .map(r => hourlyRates.find(x => x.rate === r))
+    .filter((x): x is HourlyData => !!x);
   const jobs = occupationsNearHourly(h.rate, [lower?.rate, higher?.rate].filter((x): x is number => typeof x === "number"));
   const jobsSummary = occupationsSummary(jobs, "hour");
   const jobBasis = jobs.basis;
@@ -433,6 +440,17 @@ export default async function HourlyCalculatorPage(
               <a key={link.href} href={link.href}>
                 <b>{link.title}</b>
                 <span>{link.description}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+        <section>
+          <h3>Popular Hourly Rates: How Much a Year?</h3>
+          <div className="tool-links">
+            {popularRates.map(p => (
+              <a key={p.slug} href={`/hourly/${p.slug}`}>
+                <b>${p.rate} an Hour Is How Much a Year?</b>
+                <span>{fmt.format(p.annualAt40h)} a year gross at 40 hrs/wk →</span>
               </a>
             ))}
           </div>

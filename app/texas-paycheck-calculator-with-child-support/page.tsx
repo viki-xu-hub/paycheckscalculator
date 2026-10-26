@@ -344,7 +344,7 @@ export default function TexasPaycheckCalculatorWithChildSupport() {
             <span>W-4 Step 3 credits and take-home pay →</span>
           </a>
           <a href="/texas-paycheck-calculator-with-bonus">
-            <b>Texas Paycheck Calculator With Bonus</b>
+            <b>Bonus Tax Calculator Texas</b>
             <span>Flat 22% vs aggregate withholding →</span>
           </a>
           <a href="/hourly-paycheck-calculator">

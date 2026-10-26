@@ -1,4 +1,5 @@
 import statesData from "../data/states.json";
+import { salesTaxLocations } from "../lib/salesTax";
 
 export function SiteHeader() {
   return (
@@ -13,16 +14,44 @@ export function SiteHeader() {
         {/* Calculators dropdown */}
         <div className="nav-item">
           <span className="nav-trigger">Calculators <span className="nav-caret">▾</span></span>
-          <div className="nav-panel">
-            <div className="nav-group-label">By Amount</div>
-            <a href="/salary">Salary After Tax</a>
-            <a href="/hourly-paycheck-calculator">Hourly Pay</a>
-            <div className="nav-panel-divider" />
-            <div className="nav-group-label">By Frequency</div>
-            <a href="/biweekly-paycheck-calculator">Biweekly Pay</a>
-            <a href="/weekly-paycheck-calculator">Weekly Pay</a>
-            <a href="/semimonthly-paycheck-calculator">Semimonthly Pay</a>
-            <a href="/monthly-paycheck-calculator">Monthly Pay</a>
+          <div className="nav-panel nav-panel-cols3">
+            <div>
+              <div className="nav-group-label">By Amount</div>
+              <a href="/salary">Salary After Tax</a>
+              <a href="/hourly-paycheck-calculator">Hourly Pay</a>
+              <div className="nav-panel-divider" />
+              <div className="nav-group-label">By Frequency</div>
+              <a href="/biweekly-paycheck-calculator">Biweekly Pay</a>
+              <a href="/weekly-paycheck-calculator">Weekly Pay</a>
+              <a href="/semimonthly-paycheck-calculator">Semimonthly Pay</a>
+              <a href="/monthly-paycheck-calculator">Monthly Pay</a>
+            </div>
+            <div>
+              <div className="nav-group-label">State Income Tax</div>
+              <a href="/illinois-income-tax-calculator">Illinois</a>
+              <a href="/pennsylvania-income-tax-calculator">Pennsylvania</a>
+              <a href="/georgia-income-tax-calculator">Georgia</a>
+              <a href="/new-jersey-income-tax-calculator">New Jersey</a>
+              <a href="/connecticut-income-tax-calculator">Connecticut</a>
+              <a href="/utah-income-tax-calculator">Utah</a>
+              <a href="/tennessee-income-tax-calculator">Tennessee — No Tax</a>
+              <a href="/florida-state-tax-calculator">Florida — No Tax</a>
+            </div>
+            <div>
+              <div className="nav-group-label">Pay & Tax Tools</div>
+              <a href="/overtime-calculator">Overtime Calculator</a>
+              <a href="/no-tax-on-overtime">No Tax on Overtime</a>
+              <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
+              <a href="/gross-up-calculator">Gross-Up Calculator</a>
+              <a href="/ytd-calculator">YTD Calculator</a>
+              <a href="/pay-stub-calculator">Pay Stub Calculator</a>
+              <a href="/severance-pay-tax-calculator">Severance & PTO Tax</a>
+              <div className="nav-panel-divider" />
+              <div className="nav-group-label">Tax & Benefits</div>
+              <a href="/hsa-calculator">HSA Calculator</a>
+              <a href="/401k-paycheck-impact-calculator">401(k) Paycheck Impact</a>
+              <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends</a>
+            </div>
           </div>
         </div>
 
@@ -54,6 +83,31 @@ export function SiteHeader() {
               <a href="/biweekly/new-jersey-paycheck-calculator">New Jersey Biweekly</a>
               <a href="/biweekly/georgia-paycheck-calculator">Georgia Biweekly</a>
             </div>
+          </div>
+        </div>
+
+        {/* Sales Tax dropdown */}
+        <div className="nav-item">
+          <span className="nav-trigger">Sales Tax <span className="nav-caret">▾</span></span>
+          <div className="nav-panel nav-panel-cols3 nav-panel-centered">
+            <div className="nav-panel-span">
+              <div className="nav-group-label">Sales Tax Calculators</div>
+              <div className="nav-panel-row">
+                <a href="/sales-tax">All Sales Tax Rates →</a>
+                <a href="/ohio-sales-tax-calculator">Ohio — All 88 Counties</a>
+              </div>
+              <div className="nav-panel-divider" />
+              <div className="nav-group-label">By City &amp; County</div>
+            </div>
+            {[0, 1, 2].map((col) => (
+              <div key={col}>
+                {salesTaxLocations
+                  .slice(Math.ceil(salesTaxLocations.length / 3) * col, Math.ceil(salesTaxLocations.length / 3) * (col + 1))
+                  .map((l) => (
+                    <a key={l.slug} href={`/sales-tax/${l.slug}`}>{l.name}, {l.stateAbbr}</a>
+                  ))}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -93,6 +147,16 @@ export function SiteFooter({ showPartnerZone = false }: { showPartnerZone?: bool
           {states.map((s) => (
             <a key={s.abbr} href={`/${s.slug}`}>{s.name}</a>
           ))}
+        </div>
+      </div>
+      <div className="footer-blog">
+        <p className="footer-blog-title">Sales Tax Rates</p>
+        <div className="footer-blog-grid">
+          {salesTaxLocations.map((l) => (
+            <a key={l.slug} href={`/sales-tax/${l.slug}`}>{l.name} Sales Tax</a>
+          ))}
+          <a href="/ohio-sales-tax-calculator">Ohio Sales Tax Calculator</a>
+          <a href="/sales-tax">All sales tax calculators →</a>
         </div>
       </div>
       <div className="footer-blog">
@@ -179,6 +243,117 @@ export function PartnerBadges() {
       <a className="partner-badge" target="_blank" href="https://uno.directory" rel="noopener noreferrer">
         <img src="https://uno.directory/uno-directory.svg" alt="Listed on Uno Directory" width="120" height="30" loading="lazy" />
       </a>
+      <a className="partner-badge" target="_blank" href="https://launchstag.com/p/paychecks-calculator" rel="noopener">
+        <img src="https://launchstag.com/badge-light.svg" alt="Featured on Launchstag" width="198" height="62" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://twelve.tools" rel="noopener noreferrer">
+        <img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="148" height="40" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://tinylaunch.com" rel="noopener">
+        <img
+          src="https://tinylaunch.com/tinylaunch_badge_launching_soon.svg"
+          alt="TinyLaunch Badge"
+          width={202}
+          height="auto"
+          loading="lazy"
+        />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://prolaunch.net" title="Pro Launch Featured Badge" rel="noopener noreferrer">
+        <img
+          src="https://prolaunch.net/images/badges/featured-light.svg"
+          alt="Pro Launch Featured Badge"
+          width={240}
+          height="auto"
+          loading="lazy"
+        />
+      </a>
+      {/* Raw HTML so the "&" in the badge URLs is not escaped to "&amp;", which 21st Tools' badge check looks for verbatim. */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://21st.tools?utm_source=badge&ref=paycheckscalculator.org" target="_blank" rel="noopener"><img src="https://21st.tools/api/badge?theme=light&kind=listing&v=3" alt="Featured on 21st Tools" height="54" /></a>',
+        }}
+      />
+      <a className="partner-badge" target="_blank" href="https://earlyhunt.com/project/paycheck-atlas" rel="noopener">
+        <img src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg" alt="Featured on EarlyHunt" width="265" height="58" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://saaspa.ge/product/cmughefm20002ic041s5pxv9q" rel="nofollow">
+        <img src="https://saaspa.ge/api/embed/product/cmughefm20002ic041s5pxv9q/badge.png?theme=blue" alt="Featured on Saaspa.ge" width="200" height="60" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://shinylaunch.com/product/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://shinylaunch.com/assets/images/badge.png" alt="ShinyLaunch" width={198} height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://themicrosaasdir.com/product/paycheck-calculator?ref=badge" rel="dofollow">
+        <img src="https://themicrosaasdir.com/badge/paycheck-calculator.svg" alt="Featured on TheMicroSaaSDir" width="160" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://thesaasdir.com/product/evertrend-llc?ref=badge" rel="dofollow">
+        <img src="https://thesaasdir.com/badge/evertrend-llc.svg" alt="Featured on TheSaaSDir" width="160" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://thekeytools.com/ai/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://thekeytools.com/assets/images/badge.png" alt="The Key Tools" width={208} height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://startupbenchmarks.com/product/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://startupbenchmarks.com/assets/images/badge.png" alt="Startup Benchmarks" width={265} height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://hunt0.com/products/paycheck-calculator-calculate-your-take-home-pay-after-taxes" target="_blank" rel="noopener nofollow">
+        <img src="https://hunt0.com/badges/hunt0-find-us-on-light.svg" alt="Find us on HUNT0" width="170" height="53" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://peerpush.com/p/paycheck-atlas-weww" target="_blank" rel="noopener">
+        <img src="https://peerpush.com/p/paycheck-atlas-weww/badge.png" alt="Paycheck Atlas on PeerPush" width="230" height="auto" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://www.ontoplist.com/business-webdirectory/" target="_blank" rel="noopener">
+        <img src="https://www.ontoplist.com/images/ontoplist31.png?id=6ab68f688dfa5" alt="Top Business Services - OnToplist.com" width="180" height="auto" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://findly.tools/paychecks-calculator?utm_source=paychecks-calculator" target="_blank" rel="noopener noreferrer">
+        <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on Findly.tools" width="175" height="55" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://saaslineup.com/product/paycheck-calculator?ref=badge" rel="dofollow">
+        <img src="https://saaslineup.com/badge/paycheck-calculator.svg" alt="Featured on SaaSLineup" width="160" height="44" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://stackdirectory.com/product/paycheckscalculator" rel="noopener">
+        <img src="https://stackdirectory.com/assets/images/badge.png" alt="Stack Directory" height="54" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://awesomeindie.com/?ref=badge" target="_blank" rel="noopener">
+        <img src="https://awesomeindie.com/images/badges/awesome-indie-launching-soon-light.svg" alt="Paycheck Atlas — Launching soon on Awesome Indie" width="184" height="54" loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://www.startupinspire.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://www.startupinspire.com/images/badge_1.svg" alt="Featured on Startup Inspire" height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://pickapps.org" target="_blank" rel="noopener noreferrer">
+        <img src="https://pickapps.org/pickapps-badge.svg" alt="Listed on PickApps" width="160" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://productwing.com/product/paycheckscalculator" rel="noopener noreferrer">
+        <img src="https://productwing.com/assets/images/badge.png" alt="Product Wing" height={54} loading="lazy" />
+      </a>
+      <a className="partner-badge" href="https://saastool.site/item/paycheck-calculator" target="_blank" rel="noopener noreferrer">
+        <img src="https://saastool.site/badges/saastool-light.svg" alt="Featured on SaaSTool.site" height={54} width="auto" loading="lazy" />
+      </a>
+      {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which StartupBase's badge check looks for verbatim. */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://startupbase.io/products/paycheck-calculator?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer"><img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" style="height:55px;width:auto;" /></a>',
+        }}
+      />
+      <a className="partner-badge" href="https://smollaunch.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://smollaunch.com/badges/featured.svg" alt="Paycheck Calculator — Featured on Smol Launch" width="250" height="60" loading="lazy" />
+      </a>
+      {/* Raw HTML for the same reason as the first FoundrList badge: verifier matches the snippet literally, including the unescaped "&". */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://www.foundrlist.com/product/paycheckcalculator-2?utm_source=badge&utm_medium=embed" target="_blank" rel="noopener"><img src="https://www.foundrlist.com/api/badge/paycheckcalculator-2" alt="Featured on FoundrList" width="150" height="48" /></a>',
+        }}
+      />
+      {/* Wrapper carries the class so the <a>/<img> stay exactly as Stremit supplies them; the badge art is dark, so it sits on a light chip. */}
+      <span className="partner-badge partner-badge-stremit">
+        <a href="https://stremit.io" target="_blank" rel="noopener">
+          <img src="https://stremit.io/static/img/badges/featured-on-stremit.png" alt="Featured on Stremit" width="240" height="89" />
+        </a>
+      </span>
     </>
   );
 }

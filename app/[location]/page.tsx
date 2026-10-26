@@ -23,6 +23,37 @@ const frequencyBySlug = Object.fromEntries(DYNAMIC_FREQUENCIES.map(f => [f.slug,
 // State pages not yet indexed by Google — suppress until they gain authority
 const NOINDEX_STATE_SLUGS = new Set<string>([]);
 
+// States where the abbreviation outsells the full name: "pa paycheck calculator" runs
+// 9,900/mo against 2,900 for "pennsylvania paycheck calculator", and MA, SC, GA, CT and KY
+// follow the same pattern. Those titles lead with the abbreviation so the phrase searchers
+// actually type stays contiguous; the H1 and body copy keep the full state name either way.
+const ABBREVIATION_FIRST = new Set(["PA", "GA", "SC", "MA", "CT", "KY", "NH", "WV", "DC", "NYC"]);
+
+// Two states get searched under a form that is neither the spelled-out name nor the postal
+// code: Washington almost always carries the word "state" (to separate it from Washington DC,
+// worth ~6,100/mo across three variants), and Massachusetts is shortened to "Mass" (2,900/mo).
+const ALT_PHRASING: Record<string, string> = {
+  WA: "Washington searchers nearly always add the word state, to keep it apart from Washington DC. This is equally a Washington state paycheck calculator or a WA state paycheck calculator — same tool, same numbers.",
+  MA: "Massachusetts gets shortened to Mass far more often than to its postal code. A Mass paycheck calculator, a Mass salary calculator and the MA version on this page are the same tool — the state writes its name out in full, but almost nobody searching for one does.",
+};
+
+// "{Place} Paycheck Calculator" has to survive as one unbroken phrase — it is the head term
+// on every one of these pages — so the salary and abbreviation variants go after the dash.
+function stateTitle(short: string, fullName: string) {
+  const abbrevFirst = ABBREVIATION_FIRST.has(short);
+  const lead = abbrevFirst ? short : fullName;
+  const tail = abbrevFirst ? fullName : short;
+  return `${lead} Paycheck Calculator 2026 – ${tail} Salary & Net Pay`;
+}
+
+function stateDescription(fullName: string, short: string, noTax: boolean) {
+  // Kept inside 120-160 characters: the no-tax variant has to stay shorter because its
+  // extra clause would otherwise push the longer state names past the truncation point.
+  return noTax
+    ? `${fullName} paycheck calculator for 2026: estimate take-home pay after federal tax and FICA. No ${short} income tax — free ${short} salary estimator.`
+    : `${fullName} paycheck calculator for 2026: estimate take-home pay after federal tax, FICA and ${short} state income tax. Free ${short} salary and payroll estimator.`;
+}
+
 
 // Pages such as WV/NH target the abbreviation searchers actually use; `name` becomes the on-page label, `fullName` keeps the state name.
 function pageLocation(slug:string){
@@ -48,15 +79,14 @@ export async function generateMetadata({params}:{params:Promise<{location:string
   const p=pageLocation(location);
   if(!p)return{};
   const canonical=`/${p.slug}`;
-  const noTaxPhrase=p.noTax?"No state income tax on wages.":"Estimate state income tax withholding.";
   return{
-    title:p.fullName!==p.name?`${p.name} Paycheck Calculator 2026 – ${p.fullName} Take-Home Pay`:`${p.name} Paycheck Calculator 2026 – Net Pay After Tax`,
-    description:`Free ${p.name} paycheck calculator: estimate 2026 take-home pay after federal tax, FICA, and payroll deductions. ${noTaxPhrase}`,
+    title:stateTitle(p.short,p.fullName),
+    description:stateDescription(p.fullName,p.short,p.noTax===true),
     alternates:{canonical},
     robots:{index:NOINDEX_STATE_SLUGS.has(location)?false:true,follow:true},
     openGraph:{
-      title:`${p.name} Paycheck Calculator 2026`,
-      description:`Estimate ${p.name} take-home pay after taxes with transparent 2026 withholding assumptions.`,
+      title:`${p.fullName} Paycheck Calculator 2026 – ${p.short} Take-Home Pay`,
+      description:`Estimate ${p.name} take-home pay after taxes with transparent 2026 withholding assumptions. Works as a salary, hourly, and payroll estimator.`,
       url:canonical,
       type:"website"
     }
@@ -75,7 +105,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
   const taxInfo=stateTaxInfo[p.short]||{type:"income tax",detail:`${p.name} imposes state income tax on wages.`,agency:`${p.name} Department of Revenue`};
   const ed=editorialByCode[p.short];
   const genericFaqs=buildFaqs(p.name,p.short,noTax,taxInfo.agency);
-  const faqs=ed?[genericFaqs[0],...ed.faqs]:genericFaqs;
+  const faqs=[...(ed?[genericFaqs[0],...ed.faqs]:genericFaqs),...buildSynonymFaqs(p.fullName,p.short)];
 
   const softwareSchema={"@context":"https://schema.org","@type":"SoftwareApplication",name:`${p.name} Paycheck Calculator`,url:canonical,applicationCategory:"FinanceApplication",operatingSystem:"Any",offers:{"@type":"Offer",price:"0",priceCurrency:"USD"},description:`Free ${p.name} paycheck calculator for 2026. Estimate your take-home pay after federal taxes, FICA, and ${noTax?"payroll deductions":`${p.name} state income tax`}.`};
   const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqs.map(f=>({"@type":"Question",name:f.q,acceptedAnswer:{"@type":"Answer",text:f.a}}))};
@@ -99,7 +129,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <PaycheckCalculator defaultState={p.short as SupportedState} navigateOnStateChange/>
       <div className="hero-more">
         {!ed&&(noTax?<p>{p.name} does not impose a state income tax on wages. However, your paycheck is still affected by federal tax withholding, FICA taxes, and any employee benefit deductions you select.</p>:<p>{p.name} imposes {taxInfo.type} on wages. Your actual take-home pay depends on your income level, filing status, allowances, and payroll deductions. Our calculator applies published 2026 withholding methods to provide a transparent estimate.</p>)}
-        <p>Enter your salary information above to estimate your {p.name} paycheck based on your pay frequency, deductions, and payroll factors.</p>
+        <p>Enter your salary information above to estimate your {p.name} paycheck based on your pay frequency, deductions, and payroll factors. The same tool doubles as a {p.name} salary calculator for annual pay, a {p.name} pay calculator for hourly wages, and a {p.name} payroll estimator for any pay schedule.</p>
       </div>
       <div className="trust-row"><span>2026 IRS Method</span><span>Source-Backed Calculations</span><span>Free to Use</span></div>
     </section>
@@ -121,6 +151,22 @@ export default async function LocationPage({params}:{params:Promise<{location:st
           <li>Pay frequency adjustments</li>
         </ul>
         {!ed&&<p style={{marginTop:20,color:"#667a8a",lineHeight:1.7,fontSize:14}}>The calculator is designed to help {p.name} employees understand the difference between gross pay and actual take-home pay. Whether you are paid weekly, biweekly, semimonthly, or monthly, this tool annualizes your wages, applies the relevant tax and deduction rules, and divides the result into your selected paycheck frequency.</p>}
+      </section>
+    </article>
+
+    {/* Salary / pay / payroll / income calculator synonyms */}
+    <article className="long-seo">
+      <p className="kicker">{p.short} SALARY &amp; PAY CALCULATOR</p>
+      <h2>{p.fullName} Salary Calculator, Pay Calculator, and Payroll Estimator</h2>
+      <section>
+        {ALT_PHRASING[p.short]&&<p>{ALT_PHRASING[p.short]}</p>}
+        <p>People look for this tool under several names — a {p.fullName} paycheck calculator, a {p.fullName} salary calculator, a {p.fullName} pay calculator, a {p.fullName} payroll calculator, a {p.fullName} income calculator, or simply a {p.fullName} paycheck estimator. All of them describe the same job: turning a gross wage into the amount that actually reaches your bank account.</p>
+        <p>One engine covers every case. Enter an annual figure and it behaves as a <strong>{p.name} salary calculator</strong>, dividing the year into weekly, biweekly, semimonthly, or monthly paychecks. Enter an hourly rate and your usual hours and it behaves as a <strong>{p.short} wage calculator</strong> — a {p.fullName} wage calculator — instead. Either way the output is identical: gross pay, every tax line, every deduction, and net pay.</p>
+        <p>The same page answers a search for an income calculator {p.fullName}, a {p.fullName} income tax calculator, a {p.fullName} salary calculator, or a {p.fullName} paycheck tax calculator — all of them describe withholding on {p.fullName} wages, which is what the tool above computes.</p>
+        <p>Leading the state name or its abbreviation reads the same to us: a {p.short} salary calculator, a {p.short} paycheck tax calculator, a {p.short} payroll tax calculator, a {p.short} take home pay calculator, and the question people type most often — how much taxes deducted from paycheck {p.short} — are all answered by the figures above.</p>
+        <p>The abbreviated forms work the same way: a salary calculator {p.short}, a payroll calculator {p.short}, a pay stub calculator {p.short}, a take home salary calculator {p.fullName}, a payroll check calculator {p.fullName}, or a {p.fullName} salary tax calculator all describe this page.</p>
+        <p>Word order does not change the tool either. A search for a wage calculator {p.short}, a payroll calculator {p.fullName}, a salary calculator {p.fullName}, an income calculator {p.short}, or a paycheck estimator {p.fullName} lands on this same page and the same 2026 figures — the name people reach for usually depends on whether they are thinking in hourly wages, annual salary, or what an employer&apos;s payroll system reports.</p>
+        <p>Used as a <strong>{p.short} tax calculator</strong> — or a {p.fullName} tax calculator, the same thing — it separates the {noTax?`federal tax and FICA lines so you can see exactly what leaves a ${p.name} paycheck even without a state income tax`:`${p.name} state income tax line from federal tax and FICA, so you can see exactly how much ${p.name} withholding costs you each pay period`}. Keep in mind that paycheck withholding follows the 2026 payroll method your employer applies, which can land slightly above or below the tax you finally owe on an annual return.</p>
       </section>
     </article>
 
@@ -204,7 +250,7 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <h2>Paycheck Calculators by State</h2>
       <section>
         <div className="tool-links">
-          {RelatedStates.map(s=><a key={s.slug} href={`/${s.slug}`}><b>{s.name} Paycheck Calculator</b><span>Estimate your {s.name} take-home pay →</span></a>)}
+          {RelatedStates.map((s,i)=><a key={s.slug} href={`/${s.slug}`}><b>{s.name} {i%3===1?"Salary Calculator":i%3===2?"Pay Calculator":"Paycheck Calculator"}</b><span>Estimate your {s.name} take-home pay →</span></a>)}
         </div>
       </section>
     </article>
@@ -300,6 +346,38 @@ function buildFaqs(name:string,code:string,noTax:boolean,agency:string):{q:strin
   faqs.push({q:`What deductions are taken from a ${name} paycheck?`,a:noTax?`A ${name} paycheck typically includes deductions for federal income tax, Social Security tax (6.2%), Medicare tax (1.45%), and any employee benefit deductions such as health insurance, retirement contributions, and flexible spending accounts. ${name} does not deduct state income tax from wages.`:`A ${name} paycheck typically includes deductions for federal income tax, ${name} state income tax, Social Security tax (6.2%), Medicare tax (1.45%), and any employee benefit deductions such as health insurance, retirement contributions, and flexible spending accounts.`});
   return faqs;
 }
+
+// ── Synonym FAQs ─────────────────────────────────────────────
+// Searchers reach these pages through several head terms — "salary calculator",
+// "pay calculator", "payroll calculator", "income calculator", "paycheck estimator".
+// These entries answer each phrasing on-page instead of spawning near-duplicate URLs.
+// Questions alternate between the spelled-out name and the postal code on purpose: searchers
+// use both, and the abbreviated forms ("pa tax calculator", "nj income tax calculator",
+// "paycheck estimator ma") were not on the page in any form before.
+function buildSynonymFaqs(name:string,short:string):{q:string;a:string}[]{
+  return [
+    {q:`Is this the same as a ${name} salary calculator?`,a:`Yes. Enter your annual salary and the calculator works as a ${name} salary calculator, splitting the year into weekly, biweekly, semimonthly, or monthly paychecks and showing take-home pay for each one. A ${name} paycheck calculator and a ${name} salary calculator are the same tool viewed from either end — one starts from the yearly number, the other from the per-check number.`},
+    {q:`Can I use this as a ${short} payroll calculator or a ${short} pay calculator?`,a:`Yes. The calculator applies the same 2026 payroll rules an employer uses — federal withholding, Social Security, Medicare, state withholding where it applies, and pre-tax deductions — so it works as a ${short} payroll calculator for checking a pay stub and as a ${short} pay calculator for hourly wages. It is an estimate for planning, not a payroll system of record.`},
+    {q:`Is this a ${short} income calculator or a ${short} income tax calculator?`,a:`For paycheck withholding, yes: it shows the ${name} state income tax and federal income tax taken out of each check separately. It is not a full annual return calculator, so it does not model itemized deductions, credits, or non-wage income. Use it to see what is withheld per pay period, and a return-focused tool for your final tax liability.`},
+    {q:`How do I use this as a ${short} paycheck estimator?`,a:`Enter your gross pay, pick your pay frequency, set your filing status, and add any retirement or pre-tax benefit amounts. The ${short} paycheck estimator returns gross pay, each tax and deduction line, and the net amount deposited. Change one input at a time to see how a raise, a new W-4, or a higher 401(k) percentage moves your take-home pay.`},
+    // Phrasings searched with the state name trailing, plus the "take home pay"
+    // and "paycheck tax" wordings the sections above do not state outright.
+    {q:`Is there a take home pay calculator for ${name}?`,a:`This is it. Used as a take home pay calculator ${name} workers can rely on, it starts from gross pay and subtracts every line an employer withholds — federal income tax, Social Security, Medicare${noTaxNote(name)} — to leave the take-home figure. A ${name} take home pay calculator and a ${name} paycheck calculator answer the same question; take-home pay is simply the net amount after all withholding.`},
+    {q:`Can I use it as a ${name} paycheck tax calculator or payroll tax calculator?`,a:`Yes. As a ${name} paycheck tax calculator it itemises the tax withheld from a single check rather than an annual return, and as a ${name} payroll tax calculator it shows the employee-side payroll taxes — Social Security at 6.2% and Medicare at 1.45% — separately from income tax. That separation is what makes a pay stub add up.`},
+    {q:`How much taxes deducted from paycheck ${short} — what should I expect?`,a:`However you phrase it — how much taxes deducted from paycheck ${name}, or the same question with the abbreviation — it depends on your gross pay and filing status. Every ${name} paycheck has federal income tax, Social Security (6.2%) and Medicare (1.45%) deducted${noTaxNote(name)}. Enter your figures above and the calculator shows each deduction as a dollar amount and as a share of gross pay, so you can see exactly where the money goes.`},
+    {q:`Is this a pay stub calculator ${name} employees can check a stub with?`,a:`Yes — as a pay stub calculator ${name} workers can use, it reproduces the deduction lines you would find on a ${name} pay stub, so you can check a stub against an independent estimate. If the two disagree, the usual causes are a mid-year W-4 change, a pre-tax benefit the calculator does not know about, or a bonus taxed at the supplemental rate.`},
+    {q:`Does no tax on overtime apply in ${name}?`,a:`The federal deduction for qualified overtime compensation applies to ${name} workers the same as anywhere else — it is a federal rule, not a state one, worth up to $12,500 ($25,000 filing jointly) on the premium half of FLSA overtime for tax years 2025 through 2028. It does not change ${name} state withholding, and it does not reduce Social Security or Medicare. See the full rules on our no tax on overtime page.`},
+    {q:`How much tax is deducted from a paycheck in ${name} on an average salary?`,a:`On a typical full-time salary, expect federal income tax, 6.2% Social Security and 1.45% Medicare${noTaxNote(name)}. Most ${name} workers take home somewhere between 70% and 80% of gross, with the exact share depending on filing status, pre-tax benefits and how much you contribute to retirement. The calculator above gives the figure for your own numbers rather than a range.`},
+    {q:`Is there an hourly version of the ${name} paycheck calculator?`,a:`The same tool covers it. Enter an hourly rate and your usual weekly hours instead of an annual salary and it works as a ${name} paycheck calculator hourly workers can use — including overtime hours at time and a half, which are taxed as ordinary wages.`},
+  ];
+}
+
+/** Trailing clause for states with no wage income tax, so the FAQ copy stays accurate. */
+function noTaxNote(name:string){
+  return NO_INCOME_TAX_STATES.has(name)?"":` and ${name} state income tax`;
+}
+
+const NO_INCOME_TAX_STATES=new Set(["Alaska","Florida","Nevada","New Hampshire","South Dakota","Tennessee","Texas","Washington","Wyoming"]);
 
 // ── Related States ───────────────────────────────────────────
 function getRelatedStates(currentShort:string):{slug:string;name:string}[]{

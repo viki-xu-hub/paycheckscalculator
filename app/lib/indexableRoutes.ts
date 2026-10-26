@@ -1,4 +1,5 @@
 import { locations } from "./locations";
+import { salesTaxLocations } from "./salesTax";
 import { allProgrammaticUrls, stateUrls, salaryUrls, hourlyUrls, frequencyUrls } from "./seo/sitemap-routes";
 
 export const SITE_ORIGIN = "https://www.paycheckscalculator.org";
@@ -20,14 +21,48 @@ const CORE_INDEXABLE_PATHS = [
   "/contact",
   "/paycheck-taxes",
   "/blog",
+  "/sales-tax",
+  "/ohio-sales-tax-calculator",
+  "/w4v-form",
+  "/tax-write-off",
+  "/fit-tax-meaning",
+  "/dependent-care-fsa",
+  "/nanny-cost",
+  "/hsa-calculator",
+  "/can-i-claim-my-girlfriend-as-a-dependent",
+  "/qualified-dividends-and-capital-gain-tax-worksheet",
+  "/illinois-income-tax-calculator",
+  "/pennsylvania-income-tax-calculator",
+  "/georgia-income-tax-calculator",
+  "/new-jersey-income-tax-calculator",
+  "/utah-income-tax-calculator",
+  "/connecticut-income-tax-calculator",
+  "/florida-state-tax-calculator",
+  "/tennessee-income-tax-calculator",
+  // Tier-2 pay & tax tools and guides
+  "/overtime-calculator",
+  "/no-tax-on-overtime",
+  "/self-employment-tax-calculator",
+  "/gross-up-calculator",
+  "/ytd-calculator",
+  "/severance-pay-tax-calculator",
+  "/what-is-annual-income",
+  "/tax-on-commission",
+  "/post-tax-deductions",
+  "/pay-stub-calculator",
+  "/401k-paycheck-impact-calculator",
 ] as const;
 
 // Legacy location slugs at root (e.g. /texas-paycheck-calculator)
 const LEGACY_LOCATION_PATHS = locations.map(loc => `/${loc.slug}`);
 
+// Sales tax city/county pages (/sales-tax/{slug})
+const SALES_TAX_PATHS = salesTaxLocations.map(l => `/sales-tax/${l.slug}`);
+
 export const INDEXABLE_PATHS = [
   ...CORE_INDEXABLE_PATHS,
   ...LEGACY_LOCATION_PATHS,
+  ...SALES_TAX_PATHS,
 ];
 
 export const INDEXABLE_URLS = INDEXABLE_PATHS.map(path => `${SITE_ORIGIN}${path}`);
