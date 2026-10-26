@@ -449,6 +449,10 @@ export default function TaxWriteOffGuide() {
               <b>How Much Tax Is Taken Out of My Paycheck?</b>
               <span>Interactive guide to federal withholding, FICA, and pre-tax deductions →</span>
             </a>
+            <a href="/qualified-dividends-and-capital-gain-tax-worksheet">
+              <b>Qualified Dividends and Capital Gain Tax Worksheet</b>
+              <span>0%, 15% and 20% rates on investment income →</span>
+            </a>
             <a href="/methodology">
               <b>Calculation Methodology</b>
               <span>Sources and methods behind every calculator on this site →</span>

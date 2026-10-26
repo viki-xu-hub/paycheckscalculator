@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import QualifiedDividendsWorksheet from "../components/QualifiedDividendsWorksheet";
+import PrintWorksheetButton from "../components/PrintWorksheetButton";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
-import { capitalGains, money2, statusByKey } from "../lib/qualifiedDividends";
+import { capitalGains, money, money2, runWorksheet, statusByKey } from "../lib/qualifiedDividends";
 
 const YEAR = String(capitalGains.year);
 const CANONICAL = "https://www.paycheckscalculator.org/qualified-dividends-and-capital-gain-tax-worksheet";
 const TITLE = `Qualified Dividends and Capital Gain Tax Worksheet ${YEAR}`;
-const DESCRIPTION = `Work the Qualified Dividends and Capital Gain Tax Worksheet for ${YEAR} line by line. Enter three figures from Form 1040 and see the 0%, 15% and 20% split.`;
+const DESCRIPTION = `Work the Qualified Dividends and Capital Gain Tax Worksheet for ${YEAR} line by line, or print the blank ${YEAR} worksheet as a PDF. See a filled-in example and the 0%, 15% and 20% split.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -17,6 +18,74 @@ export const metadata: Metadata = {
 };
 
 const single = statusByKey.single;
+const married = statusByKey.married;
+const head = statusByKey.head;
+const separate = statusByKey.separate;
+
+// Line wording follows the 2025 Form 1040 instructions (IRS, public domain) with the
+// line 6 and line 13 thresholds swapped for the 2026 figures from Rev. Proc. 2025-32.
+const WORKSHEET_LINES: [number, string][] = [
+  [1, "Enter the amount from Form 1040 or 1040-SR, line 15 (taxable income). If you are filing Form 2555, enter the amount from line 3 of the Foreign Earned Income Tax Worksheet."],
+  [2, "Enter the amount from Form 1040 or 1040-SR, line 3a (qualified dividends)."],
+  [3, "Are you filing Schedule D? Yes: enter the smaller of Schedule D line 15 or line 16; if either is blank or a loss, enter -0-. No: enter the amount from Form 1040 or 1040-SR, line 7a."],
+  [4, "Add lines 2 and 3."],
+  [5, "Subtract line 4 from line 1. If zero or less, enter -0-."],
+  [6, `Enter ${money(single.zeroRateMax)} if single or married filing separately, ${money(married.zeroRateMax)} if married filing jointly or qualifying surviving spouse, ${money(head.zeroRateMax)} if head of household.`],
+  [7, "Enter the smaller of line 1 or line 6."],
+  [8, "Enter the smaller of line 5 or line 7."],
+  [9, "Subtract line 8 from line 7. This amount is taxed at 0%."],
+  [10, "Enter the smaller of line 1 or line 4."],
+  [11, "Enter the amount from line 9."],
+  [12, "Subtract line 11 from line 10."],
+  [13, `Enter ${money(single.fifteenRateMax)} if single, ${money(separate.fifteenRateMax)} if married filing separately, ${money(married.fifteenRateMax)} if married filing jointly or qualifying surviving spouse, ${money(head.fifteenRateMax)} if head of household.`],
+  [14, "Enter the smaller of line 1 or line 13."],
+  [15, "Add lines 5 and 9."],
+  [16, "Subtract line 15 from line 14. If zero or less, enter -0-."],
+  [17, "Enter the smaller of line 12 or line 16."],
+  [18, "Multiply line 17 by 15% (0.15)."],
+  [19, "Add lines 9 and 17."],
+  [20, "Subtract line 19 from line 10."],
+  [21, "Multiply line 20 by 20% (0.20)."],
+  [22, "Figure the tax on the amount on line 5. Use the Tax Table if line 5 is less than $100,000, or the Tax Computation Worksheet if it is $100,000 or more."],
+  [23, "Add lines 18, 21, and 22."],
+  [24, "Figure the tax on the amount on line 1. Use the Tax Table if line 1 is less than $100,000, or the Tax Computation Worksheet if it is $100,000 or more."],
+  [25, "Tax on all taxable income. Enter the smaller of line 23 or line 24, and include it on Form 1040 or 1040-SR, line 16."],
+];
+
+// Worked example: a married couple with $110,000 of wages, $15,000 of qualified
+// dividends and $25,000 of long-term gain, taking the standard deduction.
+const EX = { wages: 110000, qualified: 15000, gain: 25000 };
+const exAgi = EX.wages + EX.qualified + EX.gain;
+const exTaxable = exAgi - married.standardDeduction;
+const ex = runWorksheet(exTaxable, EX.qualified, EX.gain, married);
+const exSaving = ex.l24 - ex.l25;
+const exampleRows: [number, string, number][] = [
+  [1, "Taxable income", ex.l1],
+  [2, "Qualified dividends", ex.l2],
+  [3, "Net long-term capital gain", ex.l3],
+  [4, "Preferential income (2 + 3)", ex.l4],
+  [5, "Ordinary income (1 − 4)", ex.l5],
+  [6, "0% ceiling, married filing jointly", ex.l6],
+  [7, "Smaller of line 1 or 6", ex.l7],
+  [8, "Smaller of line 5 or 7", ex.l8],
+  [9, "Taxed at 0%", ex.l9],
+  [10, "Smaller of line 1 or 4", ex.l10],
+  [11, "Line 9", ex.l11],
+  [12, "Line 10 − line 11", ex.l12],
+  [13, "15% ceiling, married filing jointly", ex.l13],
+  [14, "Smaller of line 1 or 13", ex.l14],
+  [15, "Line 5 + line 9", ex.l15],
+  [16, "Line 14 − line 15", ex.l16],
+  [17, "Taxed at 15%", ex.l17],
+  [18, "Line 17 × 15%", ex.l18],
+  [19, "Line 9 + line 17", ex.l19],
+  [20, "Taxed at 20%", ex.l20],
+  [21, "Line 20 × 20%", ex.l21],
+  [22, "Ordinary tax on line 5", ex.l22],
+  [23, "Lines 18 + 21 + 22", ex.l23],
+  [24, "Ordinary tax on line 1", ex.l24],
+  [25, "Tax: smaller of line 23 or 24", ex.l25],
+];
 
 const faqs = [
   {
@@ -51,6 +120,10 @@ const faqs = [
     q: "What makes a dividend qualified?",
     a: `Broadly, it has to be paid by a US corporation or a qualified foreign corporation, and you have to have held the stock for more than 60 days during the 121-day window that starts 60 days before the ex-dividend date. Dividends from REITs, money market funds and employee stock options generally do not qualify. Your 1099-DIV does the classification for you.`,
   },
+  {
+    q: `Where can I get a printable ${YEAR} Qualified Dividends and Capital Gain Tax Worksheet PDF?`,
+    a: `The IRS prints the worksheet inside the Form 1040 instructions rather than as a separate form, and the ${YEAR} instructions are released around the end of the year. The blank ${YEAR} version on this page uses the same 25 lines with the ${YEAR} thresholds already filled in on lines 6 and 13; use Print or save as PDF to get a one-page copy.`,
+  },
 ];
 
 export default function QualifiedDividendsPage() {
@@ -63,7 +136,7 @@ export default function QualifiedDividendsPage() {
     mainEntityOfPage: { "@type": "WebPage", "@id": CANONICAL },
     author: { "@type": "Organization", name: "Paycheck Calculator Editorial Team" },
     publisher: { "@type": "Organization", name: "Paycheck Atlas" },
-    dateModified: "2026-09-25",
+    dateModified: "2026-10-27",
   };
   const appSchema = {
     "@context": "https://schema.org",
@@ -189,6 +262,74 @@ export default function QualifiedDividendsPage() {
             modified AGI for single filers and {money2(statusByKey.married.niitThreshold)} for joint filers. That
             surtax is figured separately on Form 8960 and is not part of this worksheet.
           </p>
+        </section>
+      </article>
+
+      <article className="long-seo">
+        <p className="kicker">WORKED EXAMPLE</p>
+        <h2>{YEAR} Qualified Dividends and Capital Gain Tax Worksheet Example, Filled In</h2>
+        <section>
+          <p>
+            A married couple filing jointly earns {money(EX.wages)} in wages, receives {money(EX.qualified)} of qualified
+            dividends and sells stock held for several years at a {money(EX.gain)} long-term gain. Their AGI is{" "}
+            {money(exAgi)}; after the {money(married.standardDeduction)} {YEAR} standard deduction, taxable income on line 15
+            of Form 1040 is {money(exTaxable)}.
+          </p>
+          <div className="table-wrap">
+            <table>
+              <thead><tr><th>Line</th><th>What it is</th><th>Amount</th></tr></thead>
+              <tbody>
+                {exampleRows.map(([line, label, value]) => (
+                  <tr key={line} className={line === 25 ? "rate-total" : undefined}>
+                    <td><strong>{line}</strong></td>
+                    <td>{label}</td>
+                    <td>{money(value)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Their wages fill the first {money(ex.l5)} of the {money(ex.l6)} 0% band, which leaves {money(ex.l9)} of room:
+            that much of the dividends and gain is taxed at nothing. The remaining {money(ex.l17)} falls in the 15% band
+            for {money(ex.l18)}, and nothing reaches 20%. Line 25 comes to {money(ex.l25)}, which is {money(exSaving)} less
+            than the {money(ex.l24)} the same taxable income would cost on the ordinary rate schedule.
+          </p>
+          <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14 }}>
+            Lines 22 and 24 here use the exact {YEAR} rate schedule. The paper worksheet sends amounts under $100,000 to
+            the Tax Table, which works in $50 steps, so a hand-filled copy can differ by a few dollars.
+          </p>
+        </section>
+      </article>
+
+      <article className="long-seo" id="printable-worksheet">
+        <p className="kicker">PRINTABLE {YEAR} WORKSHEET</p>
+        <h2>Printable {YEAR} Qualified Dividends and Capital Gain Tax Worksheet (PDF)</h2>
+        <section>
+          <p>
+            A blank copy of all 25 lines with the {YEAR} thresholds already entered on lines 6 and 13. Use the button
+            to print it or choose Save as PDF in the print dialog. Complete Form 1040 through line 15 before you start.
+          </p>
+          <PrintWorksheetButton />
+          <div className="worksheet-print">
+            <p className="worksheet-print-title">
+              <strong>Qualified Dividends and Capital Gain Tax Worksheet — Form 1040, Line 16 ({YEAR})</strong>
+            </p>
+            <ol className="worksheet-lines">
+              {WORKSHEET_LINES.map(([line, text]) => (
+                <li key={line}>
+                  <span className="worksheet-line-num">{line}.</span>
+                  <span className="worksheet-line-text">{text}</span>
+                  <span className="worksheet-line-box">{line}. ________</span>
+                </li>
+              ))}
+            </ol>
+            <p className="worksheet-print-note">
+              Line wording from the IRS Form 1040 instructions; {YEAR} thresholds from {capitalGains.source.label}. If
+              Schedule D shows 28% rate gain or unrecaptured section 1250 gain, use the Schedule D Tax Worksheet instead.
+              Source: paycheckscalculator.org/qualified-dividends-and-capital-gain-tax-worksheet
+            </p>
+          </div>
         </section>
       </article>
 

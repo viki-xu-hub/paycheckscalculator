@@ -204,6 +204,7 @@ export default function SelfEmploymentTaxPage() {
           <ul className="checklist">
             <li><a href="/">Paycheck Calculator — W-2 take-home pay</a></li>
             <li><a href="/tax-write-off">Tax Write-Offs Explained</a></li>
+            <li><a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends and Capital Gain Tax Worksheet</a></li>
             <li><a href="/tax-on-commission">Tax on Commission and Bonus Payments</a></li>
             <li><a href="/ytd-calculator">YTD Calculator</a></li>
           </ul>
