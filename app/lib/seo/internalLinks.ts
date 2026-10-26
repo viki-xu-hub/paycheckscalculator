@@ -62,6 +62,8 @@ export function salaryPageLinks(current: SalaryData): InternalLink[] {
   // Hub + interactive calculator
   links.push({ href: "/salary", title: "All Salaries: $25,000 to $300,000 a Year", description: "Browse every salary-to-hourly page →" });
   links.push({ href: "/hourly-paycheck-calculator", title: "Hourly Paycheck Calculator", description: "Enter any rate, hours and overtime →" });
+  // Higher earners are the ones most likely to have dividends or gains on top of salary.
+  if (current.amount >= 75000) links.push({ href: "/qualified-dividends-and-capital-gain-tax-worksheet", title: "Qualified Dividends and Capital Gain Tax Worksheet", description: `How dividends and gains on top of ${current.label} are taxed →` });
 
   // Top state pages (canonical root URLs)
   ["TX", "CA", "FL", "NY", "WA"].forEach(abbr => {

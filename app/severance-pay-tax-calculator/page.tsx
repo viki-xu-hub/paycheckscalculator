@@ -178,6 +178,7 @@ export default function SeverancePayTaxPage() {
             <li><a href="/gross-up-calculator">Gross-Up Calculator</a></li>
             <li><a href="/tax-on-commission">Tax on Commission and Bonus Payments</a></li>
             <li><a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a></li>
+            <li><a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends and Capital Gain Tax Worksheet</a></li>
           </ul>
         </section>
       </article>
