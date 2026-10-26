@@ -358,7 +358,35 @@ export default function HourlyPaycheck() {
           </a>
           <a href="/new-jersey-paycheck-calculator">
             <b>New Jersey Paycheck Calculator</b>
-            <span>State withholding estimate →</span>
+            <span>Income tax plus UI, TDI and FLI →</span>
+          </a>
+          <a href="/ohio-paycheck-calculator">
+            <b>Ohio Paycheck Calculator</b>
+            <span>Hourly pay with city and school tax →</span>
+          </a>
+          <a href="/michigan-paycheck-calculator">
+            <b>Michigan Paycheck Calculator</b>
+            <span>Hourly pay with Detroit city tax →</span>
+          </a>
+          <a href="/oklahoma-paycheck-calculator">
+            <b>Oklahoma Paycheck Calculator</b>
+            <span>OK-W-4 withholding estimate →</span>
+          </a>
+          <a href="/montana-paycheck-calculator">
+            <b>Montana Paycheck Calculator</b>
+            <span>2026 MW-4 withholding →</span>
+          </a>
+          <a href="/utah-paycheck-calculator">
+            <b>Utah Paycheck Calculator</b>
+            <span>Flat 4.45% withholding →</span>
+          </a>
+          <a href="/vermont-paycheck-calculator">
+            <b>Vermont Paycheck Calculator</b>
+            <span>W-4VT withholding estimate →</span>
+          </a>
+          <a href="/south-dakota-paycheck-calculator">
+            <b>South Dakota Paycheck Calculator</b>
+            <span>$11.85 minimum wage, no state tax →</span>
           </a>
         </div>
       </section>

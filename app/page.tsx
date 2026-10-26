@@ -156,6 +156,13 @@ export default function Home() {
           <a href="/illinois-paycheck-calculator"><b>Illinois Paycheck Calculator</b><span>Flat tax with exemptions →</span></a>
           <a href="/pennsylvania-paycheck-calculator"><b>Pennsylvania Paycheck Calculator</b><span>Flat rate with local tax options →</span></a>
           <a href="/georgia-paycheck-calculator"><b>Georgia Paycheck Calculator</b><span>Flat rate with allowances →</span></a>
+          <a href="/ohio-paycheck-calculator"><b>Ohio Paycheck Calculator</b><span>State, city and school district tax →</span></a>
+          <a href="/michigan-paycheck-calculator"><b>Michigan Paycheck Calculator</b><span>4.25% plus Detroit and city tax →</span></a>
+          <a href="/oklahoma-paycheck-calculator"><b>Oklahoma Paycheck Calculator</b><span>New 4.5% top rate for 2026 →</span></a>
+          <a href="/montana-paycheck-calculator"><b>Montana Paycheck Calculator</b><span>HB 337 brackets, 4.7% and 5.65% →</span></a>
+          <a href="/utah-paycheck-calculator"><b>Utah Paycheck Calculator</b><span>Flat 4.45% after the 2026 cut →</span></a>
+          <a href="/vermont-paycheck-calculator"><b>Vermont Paycheck Calculator</b><span>W-4VT and Child Care Contribution →</span></a>
+          <a href="/south-dakota-paycheck-calculator"><b>South Dakota Paycheck Calculator</b><span>No state or local income tax →</span></a>
           <a href="/state-paycheck-calculators"><b>All State Calculators</b><span>Browse all 52 location engines →</span></a>
         </div>
       </section>

@@ -483,7 +483,13 @@ export function stateWithholding2026(state: SupportedState, wages: number, statu
   }
   if(state==="NJ"){
     const njStatus = status === "married" ? "married" : "single";
-    return { incomeTax: progressiveTax(Math.max(0, safeWages - 1000 * safeAllowances), newJerseyRows[njStatus]), payrollPremiums: 0, label: "NJ graduated rate schedule estimate" };
+    // 2026 worker contributions: UI 0.3825% + WF/SWF 0.0425% up to $44,800, TDI 0.19% +
+    // FLI 0.23% up to $171,100 (worker maximum $909.02). Source: NJDOL "Rate information,
+    // contributions, and due dates", https://www.nj.gov/labor/ea/employer-services/rate-info
+    // — retrieved 2026-10-26.
+    const uiWf = Math.min(payrollWages, 44800) * (.003825 + .000425);
+    const tdiFli = Math.min(payrollWages, 171100) * (.0019 + .0023);
+    return { incomeTax: progressiveTax(Math.max(0, safeWages - 1000 * safeAllowances), newJerseyRows[njStatus]), payrollPremiums: uiWf + tdiFli, label: "NJ graduated rate schedule + 2026 UI/WF, TDI and FLI" };
   }
   if (state === "AK") {
     // Alaska is one of the few states where the employee funds part of unemployment

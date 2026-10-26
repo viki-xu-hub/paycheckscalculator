@@ -500,8 +500,8 @@
     "slug": "utah-paycheck-calculator",
     "abbr": "UT",
     "hasStateTax": true,
-    "taxRate": 4.55,
-    "taxType": "flat income tax (4.55%)",
+    "taxRate": 4.45,
+    "taxType": "flat income tax (4.45%)",
     "taxNotes": "Utah uses a flat individual income-tax structure. Withholding is affected by current state forms and tax credits.",
     "taxAgency": "Utah State Tax Commission",
     "region": "west"
