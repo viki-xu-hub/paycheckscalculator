@@ -30,6 +30,7 @@
 | 11/3 | 批次 A：CA / NY / IL / GA with dependents，4 个页面。事实块已经备好，可以直接生成文案、写页面。 |
 | 11/10 | 批次 B：FL / IL / GA weekly，3 个页面。先从引擎生成事实块。 |
 | 11/17 | 批次 C：Texas 1099、California 1099、San Jose，3 个页面。1099 要先确认 `SelfEmploymentTaxCalculator` 的计算能否抽成可以按州复用的函数。 |
+| 11/24 | 批次 D：MO / AR / TN / TX / OH 汽车销售税计算器，5 个页面，合计约 14,050 次/月，KD 13–30。事实块见 `scripts/scenario-facts-batch-d.md`；上线前要先确认 TX 的 80% SPV 规则。 |
 
 每个页面上线的同一天都要做到这几件事：
 
