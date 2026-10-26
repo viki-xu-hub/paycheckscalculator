@@ -9,6 +9,7 @@ import frequenciesRaw from "../data/frequencies.json";
 import type { Metadata } from "next";
 import { frequencyMeta } from "../lib/seo/meta";
 import editorialRaw from "../data/state-editorial.json";
+import { pct, salesTaxLocations } from "../lib/salesTax";
 
 // Per-state editorial copy (intro, tax summary, sections, FAQs) written for each state individually;
 // see scripts/merge-state-editorial.mjs. States without an entry fall back to the shared template text.
@@ -112,6 +113,8 @@ export default async function LocationPage({params}:{params:Promise<{location:st
   const webPageSchema={"@context":"https://schema.org","@type":"WebPage",name:`${p.name} Paycheck Calculator 2026`,url:canonical,about:`Payroll tax calculation and take-home pay estimation for ${p.name} employees.`};
 
   const RelatedStates=getRelatedStates(p.short);
+  const stateSalesTax=salesTaxLocations.filter(l=>l.stateAbbr===p.short);
+  const hasOhioSalesTax=p.short==="OH";
 
   return <main>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(softwareSchema)}}/>
@@ -243,6 +246,18 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       <h2>{p.name} Paycheck Calculator FAQ</h2>
       {faqs.map((f,i)=><details key={i}><summary>{f.q}<span>+</span></summary><p>{f.a}</p></details>)}
     </div>
+
+    {/* Sales tax pages for this state */}
+    {(stateSalesTax.length>0||hasOhioSalesTax)&&<article className="long-seo">
+      <p className="kicker">{p.short} SALES TAX</p>
+      <h2>{p.fullName} Sales Tax Rates</h2>
+      <section>
+        <div className="tool-links">
+          {hasOhioSalesTax&&<a href="/ohio-sales-tax-calculator"><b>Ohio sales tax calculator</b><span>Rates for all 88 counties →</span></a>}
+          {stateSalesTax.map(l=><a key={l.slug} href={`/sales-tax/${l.slug}`}><b>{l.name} sales tax</b><span>{pct(l.rate)} →</span></a>)}
+        </div>
+      </section>
+    </article>}
 
     {/* Related States */}
     <article className="long-seo">

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { pct, salesTaxLocations } from "../lib/salesTax";
+
+const californiaSalesTax = salesTaxLocations.filter(l => l.stateAbbr === "CA");
 
 export const metadata: Metadata = {
   title: "California Paycheck Calculator 2026 – CA Salary & Net Pay",
@@ -352,6 +355,26 @@ export default function California() {
             <b>Paycheck Calculator</b>
             <span>National paycheck calculator →</span>
           </a>
+        </div>
+      </section>
+
+      {/* California sales tax pages */}
+      <section className="seo-section">
+        <p className="kicker">CA SALES TAX</p>
+        <h2>California Sales Tax by City and County</h2>
+        <p>
+          Your paycheck covers what you spend, and sales tax across California runs from the{" "}
+          {pct(californiaSalesTax[0].stateBase)} statewide base up to{" "}
+          {pct(Math.max(...californiaSalesTax.map(l => l.rate)))} once district taxes are added. Look up the rate
+          where you shop:
+        </p>
+        <div className="tool-links">
+          {californiaSalesTax.map(l => (
+            <a key={l.slug} href={`/sales-tax/${l.slug}`}>
+              <b>{l.name} sales tax</b>
+              <span>{pct(l.rate)} →</span>
+            </a>
+          ))}
         </div>
       </section>
 
