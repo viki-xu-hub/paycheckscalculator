@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { pct, salesTaxBySlug } from "../lib/salesTax";
 
 export const metadata: Metadata = {
   title: "Texas Paycheck Calculator 2026 – TX Salary & Net Pay",
@@ -421,6 +422,10 @@ export default function Texas() {
           <a href="/how-much-tax-is-taken-from-my-paycheck">
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>
+          </a>
+          <a href="/sales-tax/austin-tx">
+            <b>Austin Sales Tax Rate</b>
+            <span>{pct(salesTaxBySlug["austin-tx"].rate)} Austin, TX sales tax calculator →</span>
           </a>
         </div>
       </section>

@@ -3,10 +3,14 @@ import type { Metadata } from "next";
 import SalesTaxCalculator from "../../components/SalesTaxCalculator";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
 import {
+  countyPageFor,
   pct,
+  relatedSalesTaxLocations,
   salesTaxBySlug,
   salesTaxLocations,
+  salesTaxPageFor,
   salesTaxUrl,
+  statePaycheckPage,
 } from "../../lib/salesTax";
 import editorialRaw from "../../data/sales-tax-editorial.json";
 
@@ -59,6 +63,13 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
 
   const canonical = salesTaxUrl(p.slug);
   const faqs = ed?.faqs ?? [];
+  const parent = countyPageFor(p);
+  const paycheck = statePaycheckPage[p.stateAbbr];
+  // Name cell in the city and nearby tables: linked when we publish a page for that city.
+  const placeCell = (name: string) => {
+    const page = salesTaxPageFor(name, p.stateAbbr);
+    return page ? <a className="text-link" href={`/sales-tax/${page.slug}`}>{name}</a> : name;
+  };
 
   const appSchema = {
     "@context": "https://schema.org",
@@ -85,7 +96,10 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.paycheckscalculator.org" },
       { "@type": "ListItem", position: 2, name: "Sales Tax", item: "https://www.paycheckscalculator.org/sales-tax" },
-      { "@type": "ListItem", position: 3, name: `${p.name} Sales Tax`, item: canonical },
+      ...(parent
+        ? [{ "@type": "ListItem", position: 3, name: `${parent.name} Sales Tax`, item: salesTaxUrl(parent.slug) }]
+        : []),
+      { "@type": "ListItem", position: parent ? 4 : 3, name: `${p.name} Sales Tax`, item: canonical },
     ],
   };
 
@@ -112,6 +126,13 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
         />
         <div className="hero-more">
           <p>{ed?.heroMore}</p>
+          {parent && (
+            <p>
+              {p.name} is in {parent.name}. See the{" "}
+              <a className="text-link" href={`/sales-tax/${parent.slug}`}>{parent.name} sales tax rate</a>{" "}
+              ({pct(parent.rate)}) and how it varies city by city.
+            </p>
+          )}
         </div>
         <div className="trust-row">
           <span>{p.src.agencyShort} rates</span>
@@ -184,7 +205,7 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
                 <tbody>
                   {p.cities.map(c => (
                     <tr key={c.name}>
-                      <td>{c.name}</td>
+                      <td>{placeCell(c.name)}</td>
                       <td>{pct(c.rate)}</td>
                     </tr>
                   ))}
@@ -214,7 +235,7 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
                     const diff = Math.round((c.rate - p.rate) * 1000) / 1000;
                     return (
                       <tr key={c.name}>
-                        <td>{c.name}</td>
+                        <td>{placeCell(c.name)}</td>
                         <td>{pct(c.rate)}</td>
                         <td>{diff === 0 ? "same" : diff > 0 ? `+${pct(diff)}` : `−${pct(Math.abs(diff))}`}</td>
                       </tr>
@@ -276,21 +297,22 @@ export default async function SalesTaxLocationPage({ params }: { params: Promise
 
       <article className="long-seo">
         <p className="kicker">OTHER RATES</p>
-        <h3>Sales tax rates elsewhere</h3>
+        <h3>Sales tax rates near {p.name}</h3>
         <section>
           <div className="tool-links">
-            {/* Rotate the subset per page so sibling pages do not share an identical link block. */}
-            {(() => {
-              const others = salesTaxLocations.filter(other => other.slug !== p.slug);
-              const start = salesTaxLocations.findIndex(l => l.slug === p.slug);
-              return [...others.slice(start), ...others.slice(0, start)].slice(0, 5);
-            })()
-              .map(other => (
-                <a key={other.slug} href={`/sales-tax/${other.slug}`}>
-                  <b>{other.name}</b>
-                  <span>{pct(other.rate)} →</span>
-                </a>
-              ))}
+            {/* Nearest pages first (same county, then same state), so each page links its real neighbours. */}
+            {relatedSalesTaxLocations(p).map(other => (
+              <a key={other.slug} href={`/sales-tax/${other.slug}`}>
+                <b>{other.name} sales tax</b>
+                <span>{pct(other.rate)} →</span>
+              </a>
+            ))}
+            {paycheck && (
+              <a href={paycheck.href}>
+                <b>{paycheck.name} paycheck calculator</b>
+                <span>Take-home pay in {p.name} after tax →</span>
+              </a>
+            )}
             <a href="/ohio-sales-tax-calculator"><b>Ohio</b><span>All 88 county rates →</span></a>
             <a href="/sales-tax"><b>All rates</b><span>Every city we publish →</span></a>
           </div>
