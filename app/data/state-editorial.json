@@ -1757,19 +1757,19 @@
   {
     "code": "UT",
     "intro": "Utah's flat state rate does not make every paycheck calculation identical because withholding also reflects payroll elections and applicable credits. This Utah paycheck calculator follows Publication 14 effective June 1, 2026.",
-    "taxSummary": "Utah uses a 4.55% flat income-tax rate administered by the Utah State Tax Commission. State withholding depends on Form W-4 elections and applicable tax credits rather than simply applying 4.55% to every gross paycheck. The calculator uses \"Utah Publication 14 effective June 1, 2026.\" The effective state rates in the examples remain close to the flat rate but vary from 4.39% to 4.46%, illustrating how the withholding calculation can differ slightly from the headline percentage.",
+    "taxSummary": "Utah uses a 4.45% flat income-tax rate administered by the Utah State Tax Commission. State withholding depends on Form W-4 elections and applicable tax credits rather than simply applying 4.45% to every gross paycheck. The calculator uses \"Utah Publication 14 effective June 1, 2026.\" The effective state rates in the examples remain close to the flat rate but vary from 4.39% to 4.46%, illustrating how the withholding calculation can differ slightly from the headline percentage.",
     "sections": [
       {
         "h3": "Why June 1, 2026 matters for Utah withholding",
-        "p": "The calculator follows Utah Publication 14 effective June 1, 2026. That effective date identifies the withholding method used for these examples, so a paycheck processed under a different Utah method should not automatically be expected to produce the same state amount. All four salary scenarios here use the post-June 1 setup. If you compare Utah paychecks from different portions of 2026, first determine whether the same withholding method applies before attributing a difference to salary or filing circumstances. The effective date is especially important because the state has a flat 4.55% income tax while the actual payroll calculation also reflects withholding elections and applicable credits."
+        "p": "The calculator follows Utah Publication 14 effective June 1, 2026. That effective date identifies the withholding method used for these examples, so a paycheck processed under a different Utah method should not automatically be expected to produce the same state amount. All four salary scenarios here use the post-June 1 setup. If you compare Utah paychecks from different portions of 2026, first determine whether the same withholding method applies before attributing a difference to salary or filing circumstances. The effective date is especially important because the state has a flat 4.45% income tax while the actual payroll calculation also reflects withholding elections and applicable credits."
       },
       {
         "h3": "Utah's $45,000 and $65,000 examples stay near the flat rate",
-        "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Utah state income tax is $76.00. The effective state rate is 4.39%, and net pay is $1,398.52. At $65,000 single, gross pay becomes $2,500.00, Utah withholding rises to $111.00, and the effective state rate becomes 4.44%. Net pay is $1,981.60. Both effective percentages sit close to Utah's 4.55% flat income-tax rate without matching it exactly. The difference reflects the withholding calculation rather than a change in the state's underlying flat-tax structure. Use Publication 14 rather than multiplying gross wages directly by 4.55%."
+        "p": "At $45,000 single, biweekly gross pay is $1,730.77 and Utah state income tax is $76.00. The effective state rate is 4.39%, and net pay is $1,398.52. At $65,000 single, gross pay becomes $2,500.00, Utah withholding rises to $111.00, and the effective state rate becomes 4.44%. Net pay is $1,981.60. Both effective percentages sit close to Utah's 4.45% flat income-tax rate without matching it exactly. The difference reflects the withholding calculation rather than a change in the state's underlying flat-tax structure. Use Publication 14 rather than multiplying gross wages directly by 4.45%."
       },
       {
         "h3": "How Utah withholding elections and credits shape the paycheck",
-        "p": "Utah state withholding depends on Form W-4 elections and applicable tax credits, so the paycheck calculation involves more than the flat 4.55% rate. Those inputs help determine how the Utah tax is translated into an amount withheld during payroll. This is visible in the effective rates, which are 4.39%, 4.44%, 4.42%, and 4.46% across the four examples rather than exactly 4.55%. If your withholding elections change, calculate the Utah line again under the applicable Publication 14 method instead of preserving an earlier effective percentage. The flat rate describes the state's tax structure, while the payroll formula determines the specific dollar amount removed from each check."
+        "p": "Utah state withholding depends on Form W-4 elections and applicable tax credits, so the paycheck calculation involves more than the flat 4.45% rate. Those inputs help determine how the Utah tax is translated into an amount withheld during payroll. This is visible in the effective rates, which are 4.39%, 4.44%, 4.42%, and 4.46% across the four examples rather than exactly 4.45%. If your withholding elections change, calculate the Utah line again under the applicable Publication 14 method instead of preserving an earlier effective percentage. The flat rate describes the state's tax structure, while the payroll formula determines the specific dollar amount removed from each check."
       },
       {
         "h3": "Utah's $130,000 married paycheck under the June method",
@@ -1777,7 +1777,7 @@
       },
       {
         "h3": "Utah hourly pay uses the same post-June withholding framework",
-        "p": "Hourly workers can determine each period's earnings with the hourly paycheck calculator before applying the Utah withholding setup. The salary examples use 26 biweekly pay periods, creating fixed gross amounts such as $2,500.00 at $65,000. Hourly schedules can produce different wages from one check to the next, so the Utah dollar deduction can move even though the state maintains a flat 4.55% tax rate. Form W-4 elections and applicable credits remain part of the withholding process. Calculate the actual payroll period under Publication 14 effective June 1, 2026 rather than turning one example's effective state rate into a permanent percentage for every check."
+        "p": "Hourly workers can determine each period's earnings with the hourly paycheck calculator before applying the Utah withholding setup. The salary examples use 26 biweekly pay periods, creating fixed gross amounts such as $2,500.00 at $65,000. Hourly schedules can produce different wages from one check to the next, so the Utah dollar deduction can move even though the state maintains a flat 4.45% tax rate. Form W-4 elections and applicable credits remain part of the withholding process. Calculate the actual payroll period under Publication 14 effective June 1, 2026 rather than turning one example's effective state rate into a permanent percentage for every check."
       }
     ],
     "faqs": [
@@ -1786,8 +1786,8 @@
         "a": "The withholding method used here is Utah Publication 14 effective June 1, 2026. The salary examples therefore reflect that method, making the effective date relevant when comparing these results with Utah paychecks calculated under another withholding setup."
       },
       {
-        "q": "Why isn't Utah withholding exactly 4.55% in the examples?",
-        "a": "Utah has a 4.55% flat income-tax rate, but payroll withholding also reflects Form W-4 elections and applicable tax credits. The examples therefore show effective state rates from 4.39% to 4.46% rather than exactly 4.55%."
+        "q": "Why isn't Utah withholding exactly 4.45% in the examples?",
+        "a": "Utah has a 4.45% flat income-tax rate, but payroll withholding also reflects Form W-4 elections and applicable tax credits. The examples therefore show effective state rates from 4.39% to 4.46% rather than exactly 4.45%."
       },
       {
         "q": "What Utah tax is withheld at $130,000 married filing jointly?",

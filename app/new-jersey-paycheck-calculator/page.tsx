@@ -88,7 +88,7 @@ export default function NewJersey() {
         name: "What are New Jersey TDI and FLI payroll deductions?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "TDI (Temporary Disability Insurance) and FLI (Family Leave Insurance) are employee payroll contributions in New Jersey that fund state disability and family leave benefits. They are deducted separately from New Jersey state income tax.",
+          text: "TDI (Temporary Disability Insurance) and FLI (Family Leave Insurance) are employee payroll contributions in New Jersey that fund state disability and family leave benefits. For 2026 the worker rates are 0.19% for TDI and 0.23% for FLI on wages up to $171,100, for a maximum of $325.09 and $393.53. They are deducted separately from New Jersey state income tax.",
         },
       },
       {
@@ -104,7 +104,15 @@ export default function NewJersey() {
         name: "Does New Jersey paycheck calculator include benefit contributions?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. New Jersey paycheck calculations include estimated state income tax and may account for employee benefit contributions such as TDI and FLI where applicable.",
+          text: "Yes. The calculator withholds all four 2026 New Jersey worker contributions as one State payroll programs line: UI at 0.3825% and WF/SWF at 0.0425% on the first $44,800 of wages, plus TDI at 0.19% and FLI at 0.23% on the first $171,100. The most any worker pays across the four in 2026 is $909.02.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why did the UI deduction disappear from my New Jersey paycheck?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "UI and WF/SWF stop once your 2026 wages pass $44,800, so a $75,000 earner paid biweekly stops paying them partway through the year. TDI and FLI continue until wages reach $171,100. The calculator averages each contribution across the year, so a single check early in the year will show slightly more and a late-year check slightly less.",
         },
       },
     ],
@@ -203,6 +211,48 @@ export default function NewJersey() {
         </ul>
         <p style={{ marginTop: 16, color: "#667a8a", lineHeight: 1.7, fontSize: 14 }}>
           New Jersey's graduated income tax plus mandatory benefit program contributions mean employees may see more deducted from their paycheck compared with states that have no income tax or fewer benefit programs.
+        </p>
+      </section>
+
+      {/* H2: 2026 NJ worker contributions (UI, WF/SWF, TDI, FLI) */}
+      <section className="seo-section text-left">
+        <p className="kicker">NJ SDI, FLI &amp; UI 2026</p>
+        <h2>New Jersey SDI, FLI and UI Deductions in 2026</h2>
+        <p className="seo-section-intro">
+          New Jersey is one of the few states where workers pay into unemployment insurance as well as disability and family leave. Pay stubs label these lines differently — SDI or TDI, FLI or FLA, UI, WF or SWF — but they are the same four contributions, and none of them is New Jersey income tax.
+        </p>
+        <div className="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Contribution</th><th>2026 worker rate</th><th>Wage base</th><th>2026 maximum</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Unemployment Insurance (UI)</td><td>0.3825%</td><td>$44,800</td><td>$171.36</td></tr>
+            <tr><td>Workforce Development (WF/SWF)</td><td>0.0425%</td><td>$44,800</td><td>$19.04</td></tr>
+            <tr><td>Temporary Disability (TDI / SDI)</td><td>0.19%</td><td>$171,100</td><td>$325.09</td></tr>
+            <tr><td>Family Leave Insurance (FLI)</td><td>0.23%</td><td>$171,100</td><td>$393.53</td></tr>
+            <tr><td><strong>Total</strong></td><td>0.845% until $44,800, then 0.42%</td><td></td><td><strong>$909.02</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14, marginTop: 16 }}>
+          Source: New Jersey Department of Labor and Workforce Development, 2026 rate information. Both wage bases rose for 2026, from $43,300 and $165,400, while the TDI rate fell from 0.23% to 0.19% and FLI from 0.33% to 0.23%. A worker at or above $171,100 therefore pays less in total than in 2025 despite the higher base.
+        </p>
+        <h3>What the four lines cost on a biweekly New Jersey paycheck</h3>
+        <p>
+          On a $50,000 salary paid biweekly, the four contributions total $400.40 for the year, or $15.40 per check averaged across 26 paychecks. At $75,000 the year&apos;s total is $505.40 ($19.44 per check), and at $100,000 it is $610.40 ($23.48 per check). In each case New Jersey income tax is a separate, larger line: about $48.85, $101.97 and $163.22 per check for a single filer with no NJ-W4 allowances.
+        </p>
+        <h3>Why the UI line stops partway through the year</h3>
+        <p>
+          UI and WF/SWF apply only to the first $44,800 of 2026 wages. A $75,000 employee paid biweekly crosses that line on roughly the sixteenth paycheck, after which only TDI and FLI remain, so late-year checks are a few dollars larger. TDI and FLI keep coming out until $171,100. The calculator shows the annual total divided evenly across every check, which is the right figure for budgeting a year but will not match any single stub to the cent.
+        </p>
+        <h3>Changing jobs mid-year resets the wage bases</h3>
+        <p>
+          Each employer applies the wage bases separately, so two jobs in one year can mean paying more than $909.02. New Jersey lets workers claim a refund of excess UI, WF, TDI and FLI contributions on the NJ-1040 resident return. The calculator models one employer for a full year.
+        </p>
+        <h3>Private plans and the employer side</h3>
+        <p>
+          Some employers run an approved private disability or family leave plan instead of the state plan. The employee cost under a private plan cannot exceed what the state plan would charge, but the line may carry the insurer&apos;s name instead of TDI or FLI. Employers also pay their own UI and TDI contributions, which never appear on your stub.
         </p>
       </section>
 
@@ -306,21 +356,21 @@ export default function NewJersey() {
         <h2>New Jersey Salary After Tax Examples</h2>
         <p>See estimated take-home pay at common salary levels for New Jersey employees.</p>
         <div className="tool-links">
-          <a href="/new-jersey-salary-after-tax?salary=50000">
+          <a href="/salary/50000-after-tax-calculator">
             <b>$50,000 Salary After Tax in New Jersey</b>
             <span>Estimate take-home pay at $50K →</span>
           </a>
-          <a href="/new-jersey-salary-after-tax?salary=75000">
+          <a href="/salary/75000-after-tax-calculator">
             <b>$75,000 Salary After Tax in New Jersey</b>
             <span>Calculate net pay at $75K →</span>
           </a>
-          <a href="/new-jersey-salary-after-tax?salary=100000">
+          <a href="/salary/100000-after-tax-calculator">
             <b>$100,000 Salary After Tax in New Jersey</b>
             <span>See deductions at six figures →</span>
           </a>
-          <a href="/new-jersey-salary-after-tax">
-            <b>New Jersey Salary After Tax Calculator</b>
-            <span>Full salary comparison tool →</span>
+          <a href="/biweekly/new-jersey-paycheck-calculator">
+            <b>New Jersey Biweekly Paycheck Calculator</b>
+            <span>One of 26 NJ paychecks →</span>
           </a>
         </div>
       </section>
@@ -351,7 +401,7 @@ export default function NewJersey() {
             <b>Illinois Paycheck Calculator</b>
             <span>Flat tax with exemptions →</span>
           </a>
-          <a href="/paycheck-calculator">
+          <a href="/">
             <b>Paycheck Calculator</b>
             <span>National paycheck calculator →</span>
           </a>
@@ -375,9 +425,9 @@ export default function NewJersey() {
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>
           </a>
-          <a href="/new-jersey-salary-after-tax">
-            <b>New Jersey Salary After Tax</b>
-            <span>Full New Jersey salary comparison →</span>
+          <a href="/new-jersey-income-tax-calculator">
+            <b>New Jersey Income Tax Calculator</b>
+            <span>Annual NJ-1040 tax estimate →</span>
           </a>
         </div>
       </section>
@@ -440,13 +490,19 @@ export default function NewJersey() {
         <details>
           <summary>What are New Jersey TDI and FLI payroll deductions?<span>+</span></summary>
           <p>
-            TDI (Temporary Disability Insurance) and FLI (Family Leave Insurance) are employee payroll contributions in New Jersey that fund state disability and family leave benefits. They are deducted separately from New Jersey state income tax.
+            TDI (Temporary Disability Insurance) and FLI (Family Leave Insurance) are employee payroll contributions in New Jersey that fund state disability and family leave benefits. For 2026 the worker rates are 0.19% for TDI and 0.23% for FLI on wages up to $171,100, for a maximum of $325.09 and $393.53. They are deducted separately from New Jersey state income tax.
           </p>
         </details>
         <details>
           <summary>Does New Jersey paycheck calculator include benefit contributions?<span>+</span></summary>
           <p>
-            Yes. New Jersey paycheck calculations include estimated state income tax and may account for employee benefit contributions such as TDI and FLI where applicable.
+            Yes. The calculator withholds all four 2026 New Jersey worker contributions as one State payroll programs line: UI at 0.3825% and WF/SWF at 0.0425% on the first $44,800 of wages, plus TDI at 0.19% and FLI at 0.23% on the first $171,100. The most any worker pays across the four in 2026 is $909.02.
+          </p>
+        </details>
+        <details>
+          <summary>Why did the UI deduction disappear from my New Jersey paycheck?<span>+</span></summary>
+          <p>
+            UI and WF/SWF stop once your 2026 wages pass $44,800, so a $75,000 earner paid biweekly stops paying them partway through the year. TDI and FLI continue until wages reach $171,100. The calculator averages each contribution across the year, so a single check early in the year will show slightly more and a late-year check slightly less.
           </p>
         </details>
         <details>
@@ -473,7 +529,7 @@ export default function NewJersey() {
         </ul>
         <div className="reviewer">
           <p><small>Reviewed by: Paycheck Calculator Editorial Team</small></p>
-          <p><small>Last Updated: August 2026</small></p>
+          <p><small>Last Updated: October 2026</small></p>
         </div>
       </section>
 

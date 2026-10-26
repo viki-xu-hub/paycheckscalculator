@@ -229,3 +229,10 @@ test("withholds the Alaska employee unemployment contribution up to the 2026 wag
     assert.equal(r.payrollPremiums, 0);
   }
 });
+
+test("withholds New Jersey 2026 UI/WF, TDI and FLI up to their wage bases", () => {
+  const belowBases = stateWithholding2026("NJ", 40000, "single", 0);
+  assert.ok(Math.abs(belowBases.payrollPremiums - 40000 * .00845) < .001);
+  const aboveBases = stateWithholding2026("NJ", 250000, "single", 0);
+  assert.ok(Math.abs(aboveBases.payrollPremiums - 909.02) < .01);
+});
