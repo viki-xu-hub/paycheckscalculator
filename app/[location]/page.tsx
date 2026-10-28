@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { locations,locationBySlug } from "../lib/locations";
 import PaycheckCalculator from "../components/PaycheckCalculator";
+import SamplePayStub from "../components/SamplePayStub";
 import {SiteFooter,SiteHeader} from "../components/SiteChrome";
 import type {SupportedState} from "../lib/payroll";
 import FrequencyPageTemplate from "../components/FrequencyPageTemplate";
@@ -204,6 +205,9 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       </section>
     </article>
 
+    {/* Sample pay stub computed from the calculator engine */}
+    <SamplePayStub state={p.short as SupportedState} name={p.fullName} noTax={noTax} city={p.city===true} biweeklyHref={`/biweekly/${p.slug}`}/>
+
     {/* Original SourceBackedGuide + StateEditorial */}
     <SourceBackedGuide place={p} editorial={ed}/>
 
@@ -395,11 +399,35 @@ function noTaxNote(name:string){
 const NO_INCOME_TAX_STATES=new Set(["Alaska","Florida","Nevada","New Hampshire","South Dakota","Tennessee","Texas","Washington","Wyoming"]);
 
 // ── Related States ───────────────────────────────────────────
+// Bordering states (NYC pairs with its commuter states). Each page links its neighbours first, so
+// long-tail states such as Montana or Oklahoma pick up links from the pages searchers compare them
+// with, then pads to eight with the states that have the most core-keyword search volume.
+const NEIGHBORS:Record<string,string[]>={
+  AL:["FL","GA","TN","MS"],AK:["WA","OR","HI"],AZ:["CA","NV","UT","NM","CO"],AR:["MO","TN","MS","LA","TX","OK"],
+  CA:["OR","NV","AZ"],CO:["WY","NE","KS","OK","NM","UT"],CT:["NY","MA","RI"],DE:["MD","PA","NJ"],DC:["MD","VA"],
+  FL:["GA","AL"],GA:["FL","AL","TN","NC","SC"],HI:["CA","AK","WA"],ID:["WA","OR","NV","UT","WY","MT"],
+  IL:["WI","IN","KY","MO","IA"],IN:["IL","MI","OH","KY"],IA:["MN","WI","IL","MO","NE","SD"],KS:["NE","MO","OK","CO"],
+  KY:["IN","OH","WV","VA","TN","MO"],LA:["TX","AR","MS"],ME:["NH","MA"],MD:["PA","DE","VA","WV","DC"],
+  MA:["NH","VT","NY","CT","RI"],MI:["OH","IN","WI"],MN:["ND","SD","IA","WI"],MS:["LA","AR","TN","AL"],
+  MO:["IA","IL","KY","TN","AR","OK"],MT:["ID","WY","ND","SD"],NE:["SD","IA","MO","KS","CO","WY"],
+  NV:["CA","OR","ID","UT","AZ"],NH:["ME","VT","MA"],NJ:["NY","PA","DE"],NM:["AZ","CO","OK","TX","UT"],
+  NY:["NJ","PA","CT","MA","VT","NYC"],NYC:["NY","NJ","CT"],NC:["VA","TN","GA","SC"],ND:["MN","SD","MT"],
+  OH:["PA","WV","KY","IN","MI"],OK:["TX","KS","AR","MO","CO","NM"],OR:["WA","ID","NV","CA"],
+  PA:["NY","NJ","DE","MD","WV","OH"],RI:["CT","MA"],SC:["NC","GA"],SD:["ND","MN","IA","NE","WY","MT"],
+  TN:["KY","VA","NC","GA","AL","MS"],TX:["NM","OK","AR","LA"],UT:["ID","WY","CO","NM","AZ","NV"],
+  VT:["NH","MA","NY"],VA:["MD","DC","WV","KY","TN","NC"],WA:["OR","ID"],WV:["OH","PA","MD","VA","KY"],
+  WI:["MI","MN","IA","IL"],WY:["MT","SD","NE","CO","UT","ID"],
+};
+// Ordered by monthly volume of "{state} paycheck calculator" and its word-order variants (keyword
+// planner, Oct 2026; Ohio from GSC at 18,100/mo). CA/TX/FL/NJ are left out: their standalone pages
+// already carry the most internal weight on the site.
+const HEAD_STATES=["WA","OH","PA","MD","IN","MI","WI","SC","VA","NY"];
+const locationByShort=Object.fromEntries(locations.map(l=>[l.short,l]));
+
 function getRelatedStates(currentShort:string):{slug:string;name:string}[]{
-  const priority=["CA","TX","FL","NY","NJ","IL","PA","GA","OH","NC","VA","WA","MA","MI","AZ","CO","MN","WI","MO","IN","TN","MD","OR","SC","AL","CT","LA","KY","OK","IA","KS","AR","NV","UT","NM","NE","HI","ID","RI","NH","ME","MT","ND","VT","DE","MS","AK","SD","WV","WY","DC"];
-  const nameMap:Record<string,string>={CA:"California",TX:"Texas",FL:"Florida",NY:"New York",NJ:"New Jersey",IL:"Illinois",PA:"Pennsylvania",GA:"Georgia",OH:"Ohio",NC:"North Carolina",VA:"Virginia",WA:"Washington",MA:"Massachusetts",MI:"Michigan",AZ:"Arizona",CO:"Colorado",MN:"Minnesota",WI:"Wisconsin",MO:"Missouri",IN:"Indiana",TN:"Tennessee",MD:"Maryland",OR:"Oregon",SC:"South Carolina",AL:"Alabama",CT:"Connecticut",LA:"Louisiana",KY:"Kentucky",OK:"Oklahoma",IA:"Iowa",KS:"Kansas",AR:"Arkansas",NV:"Nevada",UT:"Utah",NM:"New Mexico",NE:"Nebraska",HI:"Hawaii",ID:"Idaho",RI:"Rhode Island",NH:"New Hampshire",ME:"Maine",MT:"Montana",ND:"North Dakota",VT:"Vermont",DE:"Delaware",MS:"Mississippi",AK:"Alaska",SD:"South Dakota",WV:"West Virginia",WY:"Wyoming",DC:"District of Columbia"};
-  const slugMap:Record<string,string>={CA:"california-paycheck-calculator",TX:"texas-paycheck-calculator",FL:"florida-paycheck-calculator",NY:"new-york-paycheck-calculator",NJ:"new-jersey-paycheck-calculator",IL:"illinois-paycheck-calculator",PA:"pennsylvania-paycheck-calculator",GA:"georgia-paycheck-calculator",OH:"ohio-paycheck-calculator",NC:"north-carolina-paycheck-calculator",VA:"virginia-paycheck-calculator",WA:"washington-paycheck-calculator",MA:"massachusetts-paycheck-calculator",MI:"michigan-paycheck-calculator",AZ:"arizona-paycheck-calculator",CO:"colorado-paycheck-calculator",MN:"minnesota-paycheck-calculator",WI:"wisconsin-paycheck-calculator",MO:"missouri-paycheck-calculator",IN:"indiana-paycheck-calculator",TN:"tennessee-paycheck-calculator",MD:"maryland-paycheck-calculator",OR:"oregon-paycheck-calculator",SC:"south-carolina-paycheck-calculator",AL:"alabama-paycheck-calculator",CT:"connecticut-paycheck-calculator",LA:"louisiana-paycheck-calculator",KY:"kentucky-paycheck-calculator",OK:"oklahoma-paycheck-calculator",IA:"iowa-paycheck-calculator",KS:"kansas-paycheck-calculator",AR:"arkansas-paycheck-calculator",NV:"nevada-paycheck-calculator",UT:"utah-paycheck-calculator",NM:"new-mexico-paycheck-calculator",NE:"nebraska-paycheck-calculator",HI:"hawaii-paycheck-calculator",ID:"idaho-paycheck-calculator",RI:"rhode-island-paycheck-calculator"};
-  return priority.filter(c=>c!==currentShort).slice(0,8).map(c=>({slug:slugMap[c]||`${nameMap[c]?.toLowerCase().replace(/\s/g,"-")}-paycheck-calculator`,name:nameMap[c]||c}));
+  const picks=(NEIGHBORS[currentShort]??[]).slice(0,6);
+  for(const c of HEAD_STATES){if(picks.length>=8)break;if(c!==currentShort&&!picks.includes(c))picks.push(c);}
+  return picks.map(c=>locationByShort[c]).filter(Boolean).map(l=>({slug:l.slug,name:l.name}));
 }
 
 // ── Reusable components ──────────────────────────────────────

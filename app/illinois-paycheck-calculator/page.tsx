@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
+import SamplePayStub from "../components/SamplePayStub";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
@@ -294,6 +295,9 @@ export default function Illinois() {
           For Illinois employees, the difference between gross pay and net pay is affected by federal taxes, Illinois's 4.95% flat income tax, FICA taxes, and personal deductions. The flat tax rate makes Illinois withholding relatively predictable compared with progressive-rate states.
         </p>
       </section>
+
+      {/* Sample Illinois pay stub computed from the calculator engine */}
+      <SamplePayStub state="IL" name="Illinois" biweeklyHref="/biweekly/illinois-paycheck-calculator" layout="seo-section" />
 
       {/* Illinois Salary After Tax Examples */}
       <section className="seo-section">

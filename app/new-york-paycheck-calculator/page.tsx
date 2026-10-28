@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
+import SamplePayStub from "../components/SamplePayStub";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
@@ -297,6 +298,9 @@ export default function NewYork() {
           For New York employees, the difference between gross pay and net pay is affected by federal taxes, New York's progressive state income tax, FICA taxes, personal deductions, and NYC resident tax when applicable.
         </p>
       </section>
+
+      {/* Sample New York pay stub computed from the calculator engine */}
+      <SamplePayStub state="NY" name="New York" biweeklyHref="/biweekly/new-york-paycheck-calculator" layout="seo-section" />
 
       {/* New York Salary After Tax Examples */}
       <section className="seo-section">

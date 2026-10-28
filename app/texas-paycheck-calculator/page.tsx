@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
+import SamplePayStub from "../components/SamplePayStub";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { pct, salesTaxBySlug } from "../lib/salesTax";
 
@@ -347,6 +348,9 @@ export default function Texas() {
           For Texas employees, the difference between gross pay and net pay is mainly affected by federal taxes, FICA taxes, and personal deductions because Texas does not collect state income tax on wages.
         </p>
       </section>
+
+      {/* Sample Texas pay stub computed from the calculator engine */}
+      <SamplePayStub state="TX" name="Texas" noTax biweeklyHref="/biweekly/texas-paycheck-calculator" layout="seo-section" />
 
       {/* Texas Salary After Tax Examples */}
       <section className="seo-section">
