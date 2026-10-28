@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
+import SamplePayStub from "../components/SamplePayStub";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
@@ -349,6 +350,9 @@ export default function NewJersey() {
           For New Jersey employees, the difference between gross pay and net pay is affected by federal taxes, New Jersey's progressive state income tax, FICA taxes, TDI and FLI contributions, and personal deductions.
         </p>
       </section>
+
+      {/* Sample New Jersey pay stub computed from the calculator engine */}
+      <SamplePayStub state="NJ" name="New Jersey" biweeklyHref="/biweekly/new-jersey-paycheck-calculator" layout="seo-section" />
 
       {/* New Jersey Salary After Tax Examples */}
       <section className="seo-section">

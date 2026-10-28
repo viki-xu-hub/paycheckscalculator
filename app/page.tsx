@@ -152,17 +152,18 @@ export default function Home() {
           <a href="/texas-paycheck-calculator"><b>Texas Paycheck Calculator</b><span>No state income tax →</span></a>
           <a href="/florida-paycheck-calculator"><b>Florida Paycheck Calculator</b><span>Zero state income tax →</span></a>
           <a href="/new-york-paycheck-calculator"><b>New York Paycheck Calculator</b><span>State tax plus NYC resident option →</span></a>
-          <a href="/new-jersey-paycheck-calculator"><b>New Jersey Paycheck Calculator</b><span>Graduated rates and benefit contributions →</span></a>
-          <a href="/illinois-paycheck-calculator"><b>Illinois Paycheck Calculator</b><span>Flat tax with exemptions →</span></a>
+          <a href="/washington-paycheck-calculator"><b>Washington Paycheck Calculator</b><span>No income tax, but PFML and WA Cares →</span></a>
           <a href="/pennsylvania-paycheck-calculator"><b>Pennsylvania Paycheck Calculator</b><span>Flat rate with local tax options →</span></a>
-          <a href="/georgia-paycheck-calculator"><b>Georgia Paycheck Calculator</b><span>Flat rate with allowances →</span></a>
           <a href="/ohio-paycheck-calculator"><b>Ohio Paycheck Calculator</b><span>State, city and school district tax →</span></a>
+          <a href="/maryland-paycheck-calculator"><b>Maryland Paycheck Calculator</b><span>State brackets plus county income tax →</span></a>
+          <a href="/indiana-paycheck-calculator"><b>Indiana Paycheck Calculator</b><span>3.05% flat plus county tax →</span></a>
           <a href="/michigan-paycheck-calculator"><b>Michigan Paycheck Calculator</b><span>4.25% plus Detroit and city tax →</span></a>
+          <a href="/wisconsin-paycheck-calculator"><b>Wisconsin Paycheck Calculator</b><span>WT-4 brackets from 3.5% to 7.65% →</span></a>
+          <a href="/south-carolina-paycheck-calculator"><b>South Carolina Paycheck Calculator</b><span>Brackets from 0% to 6.2% →</span></a>
+          <a href="/virginia-paycheck-calculator"><b>Virginia Paycheck Calculator</b><span>VA-4 brackets from 2% to 5.75% →</span></a>
+          <a href="/illinois-paycheck-calculator"><b>Illinois Paycheck Calculator</b><span>Flat tax with exemptions →</span></a>
           <a href="/oklahoma-paycheck-calculator"><b>Oklahoma Paycheck Calculator</b><span>New 4.5% top rate for 2026 →</span></a>
           <a href="/montana-paycheck-calculator"><b>Montana Paycheck Calculator</b><span>HB 337 brackets, 4.7% and 5.65% →</span></a>
-          <a href="/utah-paycheck-calculator"><b>Utah Paycheck Calculator</b><span>Flat 4.45% after the 2026 cut →</span></a>
-          <a href="/vermont-paycheck-calculator"><b>Vermont Paycheck Calculator</b><span>W-4VT and Child Care Contribution →</span></a>
-          <a href="/south-dakota-paycheck-calculator"><b>South Dakota Paycheck Calculator</b><span>No state or local income tax →</span></a>
           <a href="/state-paycheck-calculators"><b>All State Calculators</b><span>Browse all 52 location engines →</span></a>
         </div>
       </section>

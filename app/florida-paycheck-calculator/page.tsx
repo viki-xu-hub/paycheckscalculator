@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
+import SamplePayStub from "../components/SamplePayStub";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 
 export const metadata: Metadata = {
@@ -291,6 +292,9 @@ export default function Florida() {
           For Florida employees, the difference between gross pay and net pay is mainly affected by federal taxes, FICA taxes, and personal deductions because Florida does not collect state income tax on wages.
         </p>
       </section>
+
+      {/* Sample Florida pay stub computed from the calculator engine */}
+      <SamplePayStub state="FL" name="Florida" noTax biweeklyHref="/biweekly/florida-paycheck-calculator" layout="seo-section" />
 
       {/* Florida Salary After Tax Examples */}
       <section className="seo-section">
