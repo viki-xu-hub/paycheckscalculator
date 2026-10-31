@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="t d">
+<title id="t">401(k) contribution vs drop in take-home pay</title>
+<desc id="d">3%: $75.00 saved, take-home falls $66.00; 6%: $150.00 saved, take-home falls $132.00; 10%: $250.00 saved, take-home falls $220.00; 15%: $375.00 saved, take-home falls $330.00. $65,000 salary, single, biweekly, Texas.</desc>
+<rect width="960" height="460" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Saving $150 Only Costs You About $132</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$65,000 salary · single · biweekly · Texas · traditional (pre-tax) 401(k)</text>
+<rect x="110" y="286.0" width="72" height="44.0" rx="6" fill="#1769aa"/>
+<rect x="190" y="291.3" width="72" height="38.7" rx="6" fill="#e07a5f"/>
+<text x="146" y="278" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$75.00</text>
+<text x="226" y="283.28" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$66.00</text>
+<text x="186" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">3% contribution</text>
+<text x="186" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">tax break $9.00</text>
+<rect x="315" y="242.0" width="72" height="88.0" rx="6" fill="#1769aa"/>
+<rect x="395" y="252.6" width="72" height="77.4" rx="6" fill="#e07a5f"/>
+<text x="351" y="234" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$150.00</text>
+<text x="431" y="244.56" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$132.00</text>
+<text x="391" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">6% contribution</text>
+<text x="391" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">tax break $18.00</text>
+<rect x="520" y="183.3" width="72" height="146.7" rx="6" fill="#1769aa"/>
+<rect x="600" y="200.9" width="72" height="129.1" rx="6" fill="#e07a5f"/>
+<text x="556" y="175.33333333333334" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$250.00</text>
+<text x="636" y="192.93333333333334" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$220.00</text>
+<text x="596" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">10% contribution</text>
+<text x="596" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">tax break $30.00</text>
+<rect x="725" y="110.0" width="72" height="220.0" rx="6" fill="#1769aa"/>
+<rect x="805" y="136.4" width="72" height="193.6" rx="6" fill="#e07a5f"/>
+<text x="761" y="102" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$375.00</text>
+<text x="841" y="128.4" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$330.00</text>
+<text x="801" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">15% contribution</text>
+<text x="801" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">tax break $45.00</text>
+<rect x="32" y="408" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="420" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Into your 401(k) per check</text>
+<rect x="242" y="408" width="14" height="14" rx="3" fill="#e07a5f"/><text x="264" y="420" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Drop in take-home pay</text>
+<text x="32" y="446" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

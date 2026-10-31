@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" role="img" aria-labelledby="t d">
+<title id="t">Traditional vs Roth 401(k) effect on one paycheck</title>
+<desc id="d">$65,000 salary, 6% contribution ($150.00 per check): no 401(k) $2,092.60, traditional $1,960.60, Roth $1,942.60 take-home.</desc>
+<rect width="960" height="400" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Traditional vs Roth: Same Savings, Different Paycheck</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$65,000 salary · 6% contribution = $150.00 per biweekly check · Texas, single</text>
+<text x="206" y="134" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">No 401(k)</text>
+<rect x="220" y="104" width="600.0" height="48" rx="6" fill="#8fb8de"/>
+<text x="232" y="134" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$2,092.60 take-home</text>
+<text x="830" y="134" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#5f7485">baseline</text>
+<text x="206" y="214" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">Traditional 6%</text>
+<rect x="220" y="184" width="562.2" height="48" rx="6" fill="#1769aa"/>
+<text x="232" y="214" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#fff">$1,960.60 take-home</text>
+<text x="792.1523463633757" y="214" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#5f7485">−$132.00</text>
+<text x="206" y="294" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">Roth 6%</text>
+<rect x="220" y="264" width="557.0" height="48" rx="6" fill="#81b29a"/>
+<text x="232" y="294" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#fff">$1,942.60 take-home</text>
+<text x="786.9913026856542" y="294" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#5f7485">−$150.00</text>
+<text x="32" y="386" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="t d">
+<title id="t">Texas vs California biweekly take-home pay</title>
+<desc id="d">$40,000: Texas $1,320.00, California $1,268.87; $60,000: Texas $1,938.08, California $1,832.24; $75,000: Texas $2,368.94, California $2,207.58; $100,000: Texas $3,045.38, California $2,775.05 per biweekly paycheck, single filer.</desc>
+<rect width="960" height="460" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Same Salary, Bigger Check: Texas vs California</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">Biweekly take-home pay, single filer · difference is California income tax and SDI</text>
+<rect x="110" y="234.6" width="72" height="95.4" rx="6" fill="#1769aa"/>
+<rect x="190" y="238.3" width="72" height="91.7" rx="6" fill="#81b29a"/>
+<text x="146" y="226.64244199410254" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$1,320</text>
+<text x="226" y="230.33610255534614" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$1,269</text>
+<text x="186" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">$40,000 salary</text>
+<text x="186" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">TX keeps +$51.13/check</text>
+<rect x="315" y="190.0" width="72" height="140.0" rx="6" fill="#1769aa"/>
+<rect x="395" y="197.6" width="72" height="132.4" rx="6" fill="#81b29a"/>
+<text x="351" y="181.99198786358355" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$1,938</text>
+<text x="431" y="189.63793024187459" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$1,832</text>
+<text x="391" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">$60,000 salary</text>
+<text x="391" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">TX keeps +$105.84/check</text>
+<rect x="520" y="158.9" width="72" height="171.1" rx="6" fill="#1769aa"/>
+<rect x="600" y="170.5" width="72" height="159.5" rx="6" fill="#81b29a"/>
+<text x="556" y="150.86641404356763" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$2,369</text>
+<text x="636" y="162.52315310404614" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$2,208</text>
+<text x="596" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">$75,000 salary</text>
+<text x="596" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">TX keeps +$161.36/check</text>
+<rect x="725" y="110.0" width="72" height="220.0" rx="6" fill="#1769aa"/>
+<rect x="805" y="129.5" width="72" height="200.5" rx="6" fill="#81b29a"/>
+<text x="761" y="102.00000000000003" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$3,045</text>
+<text x="841" y="121.52879443616231" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#122a3d">$2,775</text>
+<text x="801" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">$100,000 salary</text>
+<text x="801" y="372" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">TX keeps +$270.33/check</text>
+<rect x="32" y="408" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="420" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Texas take-home</text>
+<rect x="242" y="408" width="14" height="14" rx="3" fill="#81b29a"/><text x="264" y="420" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">California take-home</text>
+<text x="32" y="446" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

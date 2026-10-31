@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">2026 biweekly paydays per month</title>
+<desc id="d">Two biweekly Friday schedules in 2026. Paid from January 2: January and July have three paychecks. Paid from January 9: May and October have three. Every other month has two, for 26 paychecks a year.</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">26 Paychecks, 12 Months: Two Months Get a Third Check</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">2026 Friday paydays · first payday Jan 2 (dark) or Jan 9 (light)</text>
+<rect x="70" y="132" width="26" height="198" rx="4" fill="#1769aa"/>
+<text x="83" y="124" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">3</text>
+<rect x="100" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="98" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Jan</text>
+<rect x="142" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="172" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="170" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Feb</text>
+<rect x="214" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="244" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="242" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Mar</text>
+<rect x="286" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="316" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="314" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Apr</text>
+<rect x="358" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="388" y="132" width="26" height="198" rx="4" fill="#8fb8de"/>
+<text x="401" y="124" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">3</text>
+<text x="386" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">May</text>
+<rect x="430" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="460" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="458" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Jun</text>
+<rect x="502" y="132" width="26" height="198" rx="4" fill="#1769aa"/>
+<text x="515" y="124" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">3</text>
+<rect x="532" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="530" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Jul</text>
+<rect x="574" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="604" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="602" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Aug</text>
+<rect x="646" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="676" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="674" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Sep</text>
+<rect x="718" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="748" y="132" width="26" height="198" rx="4" fill="#8fb8de"/>
+<text x="761" y="124" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">3</text>
+<text x="746" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Oct</text>
+<rect x="790" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="820" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="818" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Nov</text>
+<rect x="862" y="198" width="26" height="132" rx="4" fill="#1769aa"/>
+<rect x="892" y="198" width="26" height="132" rx="4" fill="#8fb8de"/>
+<text x="890" y="352" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Dec</text>
+<line x1="58" x2="930" y1="264" y2="264" stroke="#dfe7ee" stroke-dasharray="4 4"/>
+<text x="50" y="269" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">1</text>
+<line x1="58" x2="930" y1="198" y2="198" stroke="#dfe7ee" stroke-dasharray="4 4"/>
+<text x="50" y="203" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">2</text>
+<line x1="58" x2="930" y1="132" y2="132" stroke="#dfe7ee" stroke-dasharray="4 4"/>
+<text x="50" y="137" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">3</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Paid from Jan 2 (3 in Jan, Jul)</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#8fb8de"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Paid from Jan 9 (3 in May, Oct)</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

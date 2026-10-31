@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Texas biweekly paycheck tax breakdown at four salaries</title>
+<desc id="d">$40,000 salary: $1,538.46 gross, $100.77 federal, $95.38 Social Security, $22.31 Medicare, $1,320.00 take-home. $60,000 salary: $2,307.69 gross, $193.08 federal, $143.08 Social Security, $33.46 Medicare, $1,938.08 take-home. $75,000 salary: $2,884.62 gross, $295.00 federal, $178.85 Social Security, $41.83 Medicare, $2,368.94 take-home. $100,000 salary: $3,846.15 gross, $506.54 federal, $238.46 Social Security, $55.77 Medicare, $3,045.38 take-home. Single filer, no Texas income tax.</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Where a Texas Biweekly Paycheck Goes</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">Single filer, standard 2026 W-4, no pre-tax deductions · no Texas state income tax</text>
+<text x="146" y="116" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$40,000/yr</text>
+<text x="146" y="134" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">$1,538.46 gross</text>
+<rect x="160.0" y="96" width="212.8" height="44" fill="#1769aa"/>
+<rect x="372.8" y="96" width="16.2" height="44" fill="#e07a5f"/>
+<rect x="389.0" y="96" width="15.4" height="44" fill="#f2cc8f"/>
+<rect x="404.4" y="96" width="3.6" height="44" fill="#c9a66b"/>
+<text x="170" y="124" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#fff">$1,320.00 take-home</text>
+<text x="415.99999999999994" y="124" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">14% withheld</text>
+<text x="146" y="186" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$60,000/yr</text>
+<text x="146" y="204" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">$2,307.69 gross</text>
+<rect x="160.0" y="166" width="312.4" height="44" fill="#1769aa"/>
+<rect x="472.4" y="166" width="31.1" height="44" fill="#e07a5f"/>
+<rect x="503.5" y="166" width="23.1" height="44" fill="#f2cc8f"/>
+<rect x="526.6" y="166" width="5.4" height="44" fill="#c9a66b"/>
+<text x="170" y="194" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#fff">$1,938.08 take-home</text>
+<text x="540.001612001612" y="194" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">16% withheld</text>
+<text x="146" y="256" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$75,000/yr</text>
+<text x="146" y="274" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">$2,884.62 gross</text>
+<rect x="160.0" y="236" width="381.9" height="44" fill="#1769aa"/>
+<rect x="541.9" y="236" width="47.6" height="44" fill="#e07a5f"/>
+<rect x="589.4" y="236" width="28.8" height="44" fill="#f2cc8f"/>
+<rect x="618.3" y="236" width="6.7" height="44" fill="#c9a66b"/>
+<text x="170" y="264" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#fff">$2,368.94 take-home</text>
+<text x="633.001209001209" y="264" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">18% withheld</text>
+<text x="146" y="326" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$100,000/yr</text>
+<text x="146" y="344" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">$3,846.15 gross</text>
+<rect x="160.0" y="306" width="490.9" height="44" fill="#1769aa"/>
+<rect x="650.9" y="306" width="81.7" height="44" fill="#e07a5f"/>
+<rect x="732.6" y="306" width="38.4" height="44" fill="#f2cc8f"/>
+<rect x="771.0" y="306" width="9.0" height="44" fill="#c9a66b"/>
+<text x="170" y="334" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#fff">$3,045.38 take-home</text>
+<text x="788.0000000000001" y="334" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">21% withheld</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Take-home pay</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#e07a5f"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Federal income tax</text>
+<rect x="452" y="388" width="14" height="14" rx="3" fill="#f2cc8f"/><text x="474" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Social Security 6.2%</text>
+<rect x="662" y="388" width="14" height="14" rx="3" fill="#c9a66b"/><text x="684" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Medicare 1.45%</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

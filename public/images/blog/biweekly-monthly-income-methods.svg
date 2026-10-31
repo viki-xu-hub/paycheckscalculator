@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Monthly income from a $2,000 biweekly paycheck by method</title>
+<desc id="d">For a $2,000 gross biweekly paycheck, doubling gives $4,000 a month, the correct 26-over-12 average gives $4,333.33, and a three-paycheck month actually pays $6,000.</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Doubling a Biweekly Check Understates Monthly Income</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$2,000 gross biweekly paycheck · gross monthly income by method</text>
+<text x="276" y="127" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Double one check (×2)</text>
+<rect x="290" y="100" width="373.3" height="40" rx="6" fill="#e07a5f"/>
+<text x="673.3333333333333" y="127" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$4,000.00</text>
+<text x="276" y="193" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Two-check month (cash)</text>
+<rect x="290" y="166" width="373.3" height="40" rx="6" fill="#8fb8de"/>
+<text x="673.3333333333333" y="193" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$4,000.00</text>
+<text x="276" y="259" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Correct average (×26 ÷ 12)</text>
+<rect x="290" y="232" width="404.4" height="40" rx="6" fill="#1769aa"/>
+<text x="704.4444444444443" y="259" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$4,333.33</text>
+<text x="276" y="325" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Three-check month (cash)</text>
+<rect x="290" y="298" width="560.0" height="40" rx="6" fill="#8fb8de"/>
+<text x="860" y="325" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$6,000.00</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Use this for budgets &amp; applications</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#e07a5f"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Common mistake</text>
+<rect x="452" y="388" width="14" height="14" rx="3" fill="#8fb8de"/><text x="474" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Actual cash in a given month</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

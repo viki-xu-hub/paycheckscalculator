@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { BLOG_POSTS } from "../lib/blogPosts";
 
 const CANONICAL = "https://www.paycheckscalculator.org/blog";
 
@@ -224,12 +225,22 @@ export default function Blog() {
     url: CANONICAL,
     description:
       "Guides to the taxes deducted from your paycheck in 2026, including Texas withholding, federal income tax, Social Security and Medicare.",
-    blogPost: POSTS.map((p) => ({
+    blogPost: [
+      ...BLOG_POSTS.map(post => ({
+        "@type": "BlogPosting",
+        headline: post.title,
+        url: `https://www.paycheckscalculator.org/blog/${post.slug}`,
+        description: post.description,
+        datePublished: post.published,
+        dateModified: post.updated,
+      })),
+      ...POSTS.map((p) => ({
       "@type": "BlogPosting",
       headline: p.title,
       url: `https://www.paycheckscalculator.org${p.href}`,
       description: p.blurb,
     })),
+    ],
   };
 
   const breadcrumbSchema = {
@@ -261,6 +272,23 @@ export default function Blog() {
           Long-form guides to the taxes deducted from a paycheck, written against the same 2026
           withholding engine that powers every calculator on this site.
         </p>
+      </section>
+
+      <section className="seo-section text-left">
+        <p className="kicker">HOW-TO GUIDES</p>
+        <h2>Step-by-Step Paycheck Guides</h2>
+        <div className="blog-index" style={{ padding: 0, margin: "18px 0 0", maxWidth: "none" }}>
+          {BLOG_POSTS.map(post => (
+            <a key={post.slug} className="blog-card" href={`/blog/${post.slug}`}>
+              <img src={post.hero} alt={post.heroAlt} width={960} height={440} loading="lazy" decoding="async" />
+              <div>
+                <p className="kicker">{post.readMinutes} MIN READ</p>
+                <h3 style={{ font: "700 22px/1.25 Georgia,serif", margin: "6px 0 8px" }}>{post.title}</h3>
+                <p>{post.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="seo-section text-left">

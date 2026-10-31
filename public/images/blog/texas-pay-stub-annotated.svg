@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Annotated Texas biweekly pay stub for a $60,000 salary</title>
+<desc id="d">A $60,000 single filer in Texas: $2,307.69 gross, $193.08 federal income tax, $143.08 Social Security, $33.46 Medicare, $0 Texas income tax, $1,938.08 net pay.</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Reading a Texas Pay Stub, Line by Line</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$60,000 salary · single · biweekly · 2026 W-4 with no adjustments</text>
+<rect x="40" y="92" width="470" height="300" rx="10" fill="#fff" stroke="#c9d6e2"/>
+<text x="60" y="122" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#5f7485">EARNINGS STATEMENT · Biweekly</text>
+<text x="490" y="122" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">Pay date 11/06/2026</text>
+<line x1="60" x2="490" y1="134" y2="134" stroke="#dfe7ee"/>
+<rect x="60" y="152" width="6" height="18" rx="2" fill="#1769aa"/>
+<text x="76" y="166" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Gross pay (regular)</text>
+<text x="490" y="166" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$2,307.69</text>
+<line x1="510" x2="548" y1="161" y2="161" stroke="#b7c6d3" stroke-dasharray="3 3"/>
+<text x="556" y="166" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">① $60,000 ÷ 26 pay periods</text>
+<rect x="60" y="190" width="6" height="18" rx="2" fill="#e07a5f"/>
+<text x="76" y="204" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">Federal income tax</text>
+<text x="490" y="204" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">−$193.08</text>
+<line x1="510" x2="548" y1="199" y2="199" stroke="#b7c6d3" stroke-dasharray="3 3"/>
+<text x="556" y="204" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">② IRS Pub 15-T percentage method</text>
+<rect x="60" y="228" width="6" height="18" rx="2" fill="#f2cc8f"/>
+<text x="76" y="242" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">Social Security (OASDI)</text>
+<text x="490" y="242" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">−$143.08</text>
+<line x1="510" x2="548" y1="237" y2="237" stroke="#b7c6d3" stroke-dasharray="3 3"/>
+<text x="556" y="242" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">③ 6.2% of gross</text>
+<rect x="60" y="266" width="6" height="18" rx="2" fill="#c9a66b"/>
+<text x="76" y="280" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">Medicare</text>
+<text x="490" y="280" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">−$33.46</text>
+<line x1="510" x2="548" y1="275" y2="275" stroke="#b7c6d3" stroke-dasharray="3 3"/>
+<text x="556" y="280" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">④ 1.45% of gross</text>
+<rect x="60" y="304" width="6" height="18" rx="2" fill="#81b29a"/>
+<text x="76" y="318" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">Texas state income tax</text>
+<text x="490" y="318" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#122a3d">$0.00</text>
+<line x1="510" x2="548" y1="313" y2="313" stroke="#b7c6d3" stroke-dasharray="3 3"/>
+<text x="556" y="318" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">⑤ Texas has no wage income tax</text>
+<line x1="60" x2="490" y1="334" y2="334" stroke="#122a3d"/>
+<rect x="60" y="342" width="6" height="18" rx="2" fill="#1769aa"/>
+<text x="76" y="356" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Net pay</text>
+<text x="490" y="356" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$1,938.08</text>
+<line x1="510" x2="548" y1="351" y2="351" stroke="#b7c6d3" stroke-dasharray="3 3"/>
+<text x="556" y="356" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">⑥ Gross minus ②③④</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>
