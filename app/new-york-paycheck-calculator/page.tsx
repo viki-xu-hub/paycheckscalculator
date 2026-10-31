@@ -304,19 +304,19 @@ export default function NewYork() {
         <h2>New York Salary After Tax Examples</h2>
         <p>See estimated take-home pay at common salary levels for New York employees.</p>
         <div className="tool-links">
-          <a href="/new-york-salary-after-tax?salary=50000">
+          <a href="/salary/50000-after-tax-calculator">
             <b>$50,000 Salary After Tax in New York</b>
             <span>Estimate take-home pay at $50K →</span>
           </a>
-          <a href="/new-york-salary-after-tax?salary=75000">
+          <a href="/salary/75000-after-tax-calculator">
             <b>$75,000 Salary After Tax in New York</b>
             <span>Calculate net pay at $75K →</span>
           </a>
-          <a href="/new-york-salary-after-tax?salary=100000">
+          <a href="/salary/100000-after-tax-calculator">
             <b>$100,000 Salary After Tax in New York</b>
             <span>See deductions at six figures →</span>
           </a>
-          <a href="/new-york-salary-after-tax">
+          <a href="/salary">
             <b>New York Salary After Tax Calculator</b>
             <span>Full salary comparison tool →</span>
           </a>
@@ -349,7 +349,7 @@ export default function NewYork() {
             <b>Illinois Paycheck Calculator</b>
             <span>Flat tax with exemptions →</span>
           </a>
-          <a href="/paycheck-calculator">
+          <a href="/">
             <b>Paycheck Calculator</b>
             <span>National paycheck calculator →</span>
           </a>

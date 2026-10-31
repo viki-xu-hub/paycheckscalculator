@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="t d">
+<title id="t">Illinois bonus take-home pay: separate check vs aggregate method</title>
+<desc id="d">Illinois paycheck calculator with bonus example: a $5,000 bonus on a $75,000 salary takes home $3,270 on a separate check and $3,206 when added to a paycheck, after $248 of Illinois income tax on the separate check.</desc>
+<rect width="960" height="420" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Where a $5,000 Illinois bonus goes</text>
+<text x="32" y="70" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#5f7485">$75,000 salary · single · bi-weekly · 2026 withholding</text>
+<text x="216" y="134" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Separate check</text>
+<text x="216" y="154" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#5f7485">take home $3,270</text>
+<rect x="230.0" y="110" width="418.6" height="54" fill="#1769aa"/>
+<rect x="648.6" y="110" width="140.8" height="54" fill="#e07a5f"/>
+<rect x="789.4" y="110" width="49.0" height="54" fill="#f2cc8f"/>
+<rect x="838.3" y="110" width="31.7" height="54" fill="#81b29a"/>
+<text x="240" y="143" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#ffffff">$3,270</text>
+<text x="216" y="234" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Added to paycheck</text>
+<text x="216" y="254" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#5f7485">take home $3,206</text>
+<rect x="230.0" y="210" width="410.4" height="54" fill="#1769aa"/>
+<rect x="640.4" y="210" width="149.0" height="54" fill="#e07a5f"/>
+<rect x="789.4" y="210" width="49.0" height="54" fill="#f2cc8f"/>
+<rect x="838.3" y="210" width="31.7" height="54" fill="#81b29a"/>
+<text x="240" y="243" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#ffffff">$3,206</text>
+<rect x="32" y="368" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="380" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#3d5466">Take-home</text>
+<rect x="232" y="368" width="14" height="14" rx="3" fill="#e07a5f"/><text x="254" y="380" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#3d5466">Federal withholding</text>
+<rect x="432" y="368" width="14" height="14" rx="3" fill="#f2cc8f"/><text x="454" y="380" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#3d5466">Social Security + Medicare</text>
+<rect x="632" y="368" width="14" height="14" rx="3" fill="#81b29a"/><text x="654" y="380" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#3d5466">Illinois income tax</text>
+<text x="32" y="406" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#8595a5">paycheckscalculator.org · 2026 federal and state withholding estimates</text>
+</svg>

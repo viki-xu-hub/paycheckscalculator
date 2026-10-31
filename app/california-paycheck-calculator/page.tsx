@@ -306,19 +306,19 @@ export default function California() {
         <h2>California Salary After Tax Examples</h2>
         <p>See estimated take-home pay at common salary levels for California employees.</p>
         <div className="tool-links">
-          <a href="/california-salary-after-tax?salary=50000">
+          <a href="/salary/50000-after-tax-calculator">
             <b>$50,000 Salary After Tax in California</b>
             <span>Estimate take-home pay at $50K →</span>
           </a>
-          <a href="/california-salary-after-tax?salary=75000">
+          <a href="/salary/75000-after-tax-calculator">
             <b>$75,000 Salary After Tax in California</b>
             <span>Calculate net pay at $75K →</span>
           </a>
-          <a href="/california-salary-after-tax?salary=100000">
+          <a href="/salary/100000-after-tax-calculator">
             <b>$100,000 Salary After Tax in California</b>
             <span>See deductions at six figures →</span>
           </a>
-          <a href="/california-salary-after-tax">
+          <a href="/salary">
             <b>California Salary After Tax Calculator</b>
             <span>Full salary comparison tool →</span>
           </a>
@@ -351,7 +351,7 @@ export default function California() {
             <b>Illinois Paycheck Calculator</b>
             <span>Flat tax with exemptions →</span>
           </a>
-          <a href="/paycheck-calculator">
+          <a href="/">
             <b>Paycheck Calculator</b>
             <span>National paycheck calculator →</span>
           </a>
@@ -395,7 +395,7 @@ export default function California() {
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>
           </a>
-          <a href="/california-salary-after-tax">
+          <a href="/salary">
             <b>California Salary After Tax</b>
             <span>Full California salary comparison →</span>
           </a>

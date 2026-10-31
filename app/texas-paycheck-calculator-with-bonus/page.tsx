@@ -339,6 +339,18 @@ export default function TexasPaycheckCalculatorWithBonus() {
             <b>How Much Tax Is Taken From My Paycheck</b>
             <span>Every deduction explained →</span>
           </a>
+          <a href="/illinois-paycheck-calculator-with-bonus">
+            <b>Illinois Paycheck Calculator With Bonus</b>
+            <span>Same situation, Illinois rules →</span>
+          </a>
+          <a href="/ohio-paycheck-calculator-with-bonus">
+            <b>Ohio Paycheck Calculator With Bonus</b>
+            <span>Same situation, Ohio rules →</span>
+          </a>
+          <a href="/florida-paycheck-calculator-with-bonus">
+            <b>Florida Paycheck Calculator With Bonus</b>
+            <span>Same situation, Florida rules →</span>
+          </a>
         </div>
       </section>
 

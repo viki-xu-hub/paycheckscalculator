@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import PaycheckCalculator from "../../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../../components/SiteChrome";
+import { BiweeklySituationLinks } from "../../components/StateSituationPages";
+import { SITUATION_HUB_STATES } from "../../lib/stateSituations";
 import type { SupportedState } from "../../lib/payroll";
 import { calculatePaycheck } from "../../lib/payroll";
 import { locations, locationBySlug } from "../../lib/locations";
@@ -65,6 +67,8 @@ export default async function BiweeklyStateCalculatorPage(
   const canonical = `${SITE}/biweekly/${loc.slug}`;
   const noTax = loc.noTax === true;
   const stateSections = editorialFor(loc.slug);
+  const stateSlug = loc.slug.replace(/-paycheck-calculator$/, "");
+  const situationSlug = SITUATION_HUB_STATES.some(item => item.slug === stateSlug) ? stateSlug : null;
 
   // Pre-calculate biweekly net pay at each salary bracket for this state
   const bracketResults = SALARY_BRACKETS.map(salary => {
@@ -271,7 +275,7 @@ export default async function BiweeklyStateCalculatorPage(
           </div>
           <p style={{ marginTop: 16 }}>
             Two months per year you will receive three biweekly paychecks instead of two.
-            This is sometimes called a "three-paycheck month." Because benefit deductions
+            This is sometimes called a &ldquo;three-paycheck month.&rdquo; Because benefit deductions
             are often fixed per paycheck, the extra check can feel larger than usual.
           </p>
           <p>
@@ -279,6 +283,17 @@ export default async function BiweeklyStateCalculatorPage(
             filing status, {noTax ? "" : `${loc.name} state withholding elections, `}retirement
             contributions, health insurance deductions, and any additional withholding.
           </p>
+          {situationSlug && (
+            <p>
+              Three events change a {loc.name} biweekly check more than anything else. A bonus is withheld under
+              supplemental-wage rules — see the{" "}
+              <a className="text-link" href={`/${situationSlug}-paycheck-calculator-with-bonus`}>{loc.name} paycheck calculator with bonus</a>.
+              Children claimed on your W-4 add a credit to every check — see the{" "}
+              <a className="text-link" href={`/${situationSlug}-paycheck-calculator-with-dependents`}>{loc.name} paycheck calculator with dependents</a>.
+              And a support order is deducted after taxes, within federal limits — see the{" "}
+              <a className="text-link" href={`/${situationSlug}-paycheck-calculator-with-child-support`}>{loc.name} paycheck calculator with child support</a>.
+            </p>
+          )}
         </section>
       </article>
 
@@ -343,6 +358,7 @@ export default async function BiweeklyStateCalculatorPage(
               <b>Biweekly Paycheck Calculator</b>
               <span>26 paychecks per year →</span>
             </a>
+            <BiweeklySituationLinks slug={stateSlug} name={loc.name} />
             <a href="/hourly-paycheck-calculator">
               <b>Hourly Paycheck Calculator</b>
               <span>Calculate from hourly rate →</span>

@@ -321,6 +321,18 @@ export default function TexasPaycheckCalculatorWithDependents() {
             <b>Paycheck Taxes Explained</b>
             <span>Federal, FICA, and state basics →</span>
           </a>
+          <a href="/illinois-paycheck-calculator-with-dependents">
+            <b>Illinois Paycheck Calculator With Dependents</b>
+            <span>Same situation, Illinois rules →</span>
+          </a>
+          <a href="/ohio-paycheck-calculator-with-dependents">
+            <b>Ohio Paycheck Calculator With Dependents</b>
+            <span>Same situation, Ohio rules →</span>
+          </a>
+          <a href="/florida-paycheck-calculator-with-dependents">
+            <b>Florida Paycheck Calculator With Dependents</b>
+            <span>Same situation, Florida rules →</span>
+          </a>
         </div>
       </section>
 

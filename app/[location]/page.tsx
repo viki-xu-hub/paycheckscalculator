@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { locations,locationBySlug } from "../lib/locations";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import {SiteFooter,SiteHeader} from "../components/SiteChrome";
+import { StateSituationLinks } from "../components/StateSituationPages";
 import type {SupportedState} from "../lib/payroll";
 import FrequencyPageTemplate from "../components/FrequencyPageTemplate";
 import type { FrequencyData } from "../lib/seo/types";
@@ -136,6 +137,8 @@ export default async function LocationPage({params}:{params:Promise<{location:st
       </div>
       <div className="trust-row"><span>2026 IRS Method</span><span>Source-Backed Calculations</span><span>Free to Use</span></div>
     </section>
+
+    <StateSituationLinks code={p.short}/>
 
     {/* What's Included */}
     <article className="long-seo">

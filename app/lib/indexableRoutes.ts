@@ -1,5 +1,6 @@
 import { locations } from "./locations";
 import { salesTaxLocations } from "./salesTax";
+import { SITUATION_PATHS } from "./stateSituations";
 import { allProgrammaticUrls, stateUrls, salaryUrls, hourlyUrls, frequencyUrls } from "./seo/sitemap-routes";
 
 export const SITE_ORIGIN = "https://www.paycheckscalculator.org";
@@ -61,6 +62,7 @@ const SALES_TAX_PATHS = salesTaxLocations.map(l => `/sales-tax/${l.slug}`);
 
 export const INDEXABLE_PATHS = [
   ...CORE_INDEXABLE_PATHS,
+  ...SITUATION_PATHS,
   ...LEGACY_LOCATION_PATHS,
   ...SALES_TAX_PATHS,
 ];

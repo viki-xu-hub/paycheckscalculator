@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { StateSituationLinks } from "../components/StateSituationPages";
 
 export const metadata: Metadata = {
   title: "Illinois Paycheck Calculator 2026 – IL Salary & Net Pay",
@@ -158,6 +159,8 @@ export default function Illinois() {
         </div>
       </section>
 
+      <StateSituationLinks code="IL" />
+
       {/* H2: What This Illinois Paycheck Calculator Includes */}
       <section className="seo-section text-left">
         <p className="kicker">CALCULATOR FEATURES</p>
@@ -301,19 +304,19 @@ export default function Illinois() {
         <h2>Illinois Salary After Tax Examples</h2>
         <p>See estimated take-home pay at common salary levels for Illinois employees.</p>
         <div className="tool-links">
-          <a href="/illinois-salary-after-tax?salary=50000">
+          <a href="/salary/50000-after-tax-calculator">
             <b>$50,000 Salary After Tax in Illinois</b>
             <span>Estimate take-home pay at $50K →</span>
           </a>
-          <a href="/illinois-salary-after-tax?salary=75000">
+          <a href="/salary/75000-after-tax-calculator">
             <b>$75,000 Salary After Tax in Illinois</b>
             <span>Calculate net pay at $75K →</span>
           </a>
-          <a href="/illinois-salary-after-tax?salary=100000">
+          <a href="/salary/100000-after-tax-calculator">
             <b>$100,000 Salary After Tax in Illinois</b>
             <span>See deductions at six figures →</span>
           </a>
-          <a href="/illinois-salary-after-tax">
+          <a href="/salary">
             <b>Illinois Salary After Tax Calculator</b>
             <span>Full salary comparison tool →</span>
           </a>
@@ -346,7 +349,7 @@ export default function Illinois() {
             <b>New Jersey Paycheck Calculator</b>
             <span>Graduated rates and benefit contributions →</span>
           </a>
-          <a href="/paycheck-calculator">
+          <a href="/">
             <b>Paycheck Calculator</b>
             <span>National paycheck calculator →</span>
           </a>
@@ -370,7 +373,7 @@ export default function Illinois() {
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>
           </a>
-          <a href="/illinois-salary-after-tax">
+          <a href="/salary">
             <b>Illinois Salary After Tax</b>
             <span>Full Illinois salary comparison →</span>
           </a>

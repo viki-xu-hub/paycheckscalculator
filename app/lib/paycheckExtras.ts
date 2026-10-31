@@ -1,8 +1,8 @@
-// Calculation helpers for the Texas situation pages: bonuses (supplemental wages),
-// W-4 Step 3 dependent credits, and Texas child support income withholding.
+// Calculation helpers for the state situation pages: bonuses (supplemental wages),
+// W-4 Step 3 dependent credits, and child support income withholding.
 // Sources are cited on each page; see /methodology for the shared payroll method.
 
-import { PAY_PERIODS, federalWithholding2026, type FilingStatus, type PayFrequency } from "./payroll";
+import { PAY_PERIODS, federalWithholding2026, stateWithholding2026, type FilingStatus, type PayFrequency, type SupportedState } from "./payroll";
 
 /* ---------------------------------------------------------------- FICA */
 
@@ -190,4 +190,62 @@ export function texasChildSupport(input: {
     appliedPerPaycheck,
     limitedByFiftyPercentRule: appliedPerPaycheck < supportPerPaycheck - 0.005,
   };
+}
+
+/* ------------------------------------------------ State bonus withholding */
+
+// Adds state income tax withholding on a bonus to a federal BonusBreakdown.
+// Separate-check bonuses use the state's flat supplemental rate when it has one;
+// bonuses added to a paycheck use the difference in annualized state withholding.
+export function stateBonusWithholding(input: {
+  state: SupportedState;
+  method: "flat" | "aggregate";
+  supplementalRate: number | null;
+  bonus: number;
+  regularAnnualWages: number;
+  annualPreTax?: number;
+  frequency: PayFrequency;
+  status: FilingStatus;
+  stateAllowances?: number;
+}) {
+  const bonus = Math.max(0, input.bonus);
+  if (input.method === "flat") return bonus * (input.supplementalRate ?? 0);
+  const periods = PAY_PERIODS[input.frequency];
+  const taxableAnnual = Math.max(0, input.regularAnnualWages - Math.max(0, input.annualPreTax ?? 0));
+  const options = { payPeriods: periods };
+  const regular = stateWithholding2026(input.state, taxableAnnual, input.status, input.stateAllowances ?? 0, options).incomeTax;
+  const combined = stateWithholding2026(input.state, taxableAnnual + bonus * periods, input.status, input.stateAllowances ?? 0, options).incomeTax;
+  return Math.max(0, (combined - regular) / periods);
+}
+
+export function withStateBonusTax(breakdown: BonusBreakdown, stateIncomeTax: number): BonusBreakdown {
+  const net = Math.max(0, breakdown.net - stateIncomeTax);
+  return {
+    ...breakdown,
+    stateIncomeTax,
+    net,
+    effectiveRate: breakdown.bonus > 0 ? (breakdown.bonus - net) / breakdown.bonus * 100 : 0,
+  };
+}
+
+/* ------------------------------------- Federal CCPA limit on support withholding */
+
+// 15 U.S.C. 1673(b): up to 50% of disposable earnings when the obligor supports
+// another spouse or child, 60% when not, plus 5 points when support is more than
+// 12 weeks in arrears. Illinois, Ohio and Florida all adopt this federal ceiling.
+export function ccpaSupportLimitShare(supportsOtherFamily: boolean, arrearsOverTwelveWeeks: boolean) {
+  return (supportsOtherFamily ? 0.5 : 0.6) + (arrearsOverTwelveWeeks ? 0.05 : 0);
+}
+
+export function supportWithholding(input: {
+  disposablePerPaycheck: number;
+  orderedPerPaycheck: number;
+  supportsOtherFamily: boolean;
+  arrearsOverTwelveWeeks: boolean;
+}) {
+  const share = ccpaSupportLimitShare(input.supportsOtherFamily, input.arrearsOverTwelveWeeks);
+  const ceiling = Math.max(0, input.disposablePerPaycheck) * share;
+  const ordered = Math.max(0, input.orderedPerPaycheck);
+  const applied = Math.min(ordered, ceiling);
+  return { share, ceiling, ordered, applied, limited: applied < ordered - 0.005 };
 }

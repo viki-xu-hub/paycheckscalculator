@@ -73,6 +73,10 @@ export function SiteHeader() {
               <a href="/texas-paycheck-calculator-with-bonus">Texas With Bonus</a>
               <a href="/texas-paycheck-calculator-with-dependents">Texas With Dependents</a>
               <a href="/texas-paycheck-calculator-with-child-support">Texas With Child Support</a>
+              <div className="nav-group-label">Bonus by State</div>
+              <a href="/illinois-paycheck-calculator-with-bonus">Illinois With Bonus</a>
+              <a href="/ohio-paycheck-calculator-with-bonus">Ohio With Bonus</a>
+              <a href="/florida-paycheck-calculator-with-bonus">Florida With Bonus</a>
             </div>
             <div>
               <div className="nav-group-label">Biweekly by State</div>

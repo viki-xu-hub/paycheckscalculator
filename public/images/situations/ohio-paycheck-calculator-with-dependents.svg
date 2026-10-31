@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="t d">
+<title id="t">Ohio bi-weekly take-home pay by number of children</title>
+<desc id="d">Ohio paycheck calculator with dependents example: on a $75,000 salary, bi-weekly take-home pay rises from $2,415 with no children to $2,500 with one child and $2,585 with two.</desc>
+<rect width="960" height="420" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Ohio take-home pay by number of children</text>
+<text x="32" y="70" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#5f7485">$75,000 salary · married filing jointly · bi-weekly · 2026 W-4 and IT 4</text>
+<rect x="90" y="177.2" width="110" height="132.8" rx="8" fill="#8fb8de"/>
+<text x="145" y="167.2" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">$2,415</text>
+<text x="145" y="332" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#3d5466">0 children</text>
+<rect x="258" y="140.9" width="110" height="169.1" rx="8" fill="#1769aa"/>
+<text x="313" y="130.9" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">$2,500</text>
+<text x="313" y="332" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#3d5466">1 child</text>
+<rect x="426" y="104.6" width="110" height="205.4" rx="8" fill="#1769aa"/>
+<text x="481" y="94.6" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">$2,585</text>
+<text x="481" y="332" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#3d5466">2 children</text>
+<rect x="594" y="100.3" width="110" height="209.7" rx="8" fill="#1769aa"/>
+<text x="649" y="90.3" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">$2,595</text>
+<text x="649" y="332" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#3d5466">3 children</text>
+<rect x="762" y="100.0" width="110" height="210.0" rx="8" fill="#1769aa"/>
+<text x="817" y="90.0" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">$2,596</text>
+<text x="817" y="332" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#3d5466">4 children</text>
+<rect x="32" y="368" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="380" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#3d5466">Bi-weekly take-home with dependents</text>
+<text x="32" y="406" font-family="Arial,Helvetica,sans-serif" font-size="12" fill="#8595a5">paycheckscalculator.org · 2026 federal and state withholding estimates</text>
+</svg>

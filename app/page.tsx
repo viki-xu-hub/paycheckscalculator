@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "./components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
+import { SituationHub } from "./components/StateSituationPages";
 
 export const metadata: Metadata = {
   title: "Paycheck Calculator - Calculate Your Take-Home Pay After Taxes",
@@ -166,6 +167,12 @@ export default function Home() {
           <a href="/state-paycheck-calculators"><b>All State Calculators</b><span>Browse all 52 location engines →</span></a>
         </div>
       </section>
+
+      <SituationHub
+        kicker="PAYCHECK SITUATIONS"
+        heading="Paycheck Calculators for Bonuses, Dependents, and Child Support"
+        intro="A bonus, a new child, or a support order changes your paycheck in ways a standard calculator does not show. These state calculators apply each state's own withholding rules to the situation."
+      />
 
       {/* Salary → hourly */}
       <section className="seo-section">

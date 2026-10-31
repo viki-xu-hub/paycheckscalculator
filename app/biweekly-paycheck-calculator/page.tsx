@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { SituationHub } from "../components/StateSituationPages";
 
 export const metadata: Metadata = {
   title: "Biweekly Paycheck Calculator - Calculate Your Pay Every Two Weeks",
@@ -352,6 +353,12 @@ export default function BiweeklyPaycheck() {
           </a>
         </div>
       </section>
+
+      <SituationHub
+        kicker="BIWEEKLY PAY SITUATIONS"
+        heading="Biweekly Paychecks With a Bonus, Dependents, or Child Support"
+        intro="A biweekly check changes when a bonus is paid, when you claim children on your W-4, or when a support order is withheld. These state calculators show the effect on each of your 26 paychecks."
+      />
 
       {/* Methodology */}
       <section className="seo-section methodology-section">

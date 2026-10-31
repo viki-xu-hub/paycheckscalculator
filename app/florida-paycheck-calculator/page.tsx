@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import { StateSituationLinks } from "../components/StateSituationPages";
 
 export const metadata: Metadata = {
   title: "Florida Paycheck Calculator 2026 – FL Salary & Net Pay",
@@ -158,6 +159,8 @@ export default function Florida() {
         </div>
       </section>
 
+      <StateSituationLinks code="FL" />
+
       {/* H2: What This Florida Paycheck Calculator Includes */}
       <section className="seo-section text-left">
         <p className="kicker">CALCULATOR FEATURES</p>
@@ -298,19 +301,19 @@ export default function Florida() {
         <h2>Florida Salary After Tax Examples</h2>
         <p>See estimated take-home pay at common salary levels for Florida employees.</p>
         <div className="tool-links">
-          <a href="/florida-salary-after-tax?salary=50000">
+          <a href="/salary/50000-after-tax-calculator">
             <b>$50,000 Salary After Tax in Florida</b>
             <span>Estimate take-home pay at $50K →</span>
           </a>
-          <a href="/florida-salary-after-tax?salary=75000">
+          <a href="/salary/75000-after-tax-calculator">
             <b>$75,000 Salary After Tax in Florida</b>
             <span>Calculate net pay at $75K →</span>
           </a>
-          <a href="/florida-salary-after-tax?salary=100000">
+          <a href="/salary/100000-after-tax-calculator">
             <b>$100,000 Salary After Tax in Florida</b>
             <span>See deductions at six figures →</span>
           </a>
-          <a href="/florida-salary-after-tax">
+          <a href="/salary">
             <b>Florida Salary After Tax Calculator</b>
             <span>Full salary comparison tool →</span>
           </a>
@@ -343,7 +346,7 @@ export default function Florida() {
             <b>Illinois Paycheck Calculator</b>
             <span>Flat tax with exemptions →</span>
           </a>
-          <a href="/paycheck-calculator">
+          <a href="/">
             <b>Paycheck Calculator</b>
             <span>National paycheck calculator →</span>
           </a>
@@ -367,7 +370,7 @@ export default function Florida() {
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>
           </a>
-          <a href="/florida-salary-after-tax">
+          <a href="/salary">
             <b>Florida Salary After Tax</b>
             <span>Full Florida salary comparison →</span>
           </a>
