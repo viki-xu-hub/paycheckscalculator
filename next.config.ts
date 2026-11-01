@@ -25,6 +25,34 @@ const nextConfig: NextConfig = {
         // 308 is treated the same as 301 for consolidation.
         permanent: true,
       },
+      // Old footer slugs from states.json; the live pages use the locations.ts slugs.
+      {
+        source: "/district-of-columbia-paycheck-calculator",
+        destination: "/washington-dc-paycheck-calculator",
+        permanent: true,
+      },
+      {
+        source: "/new-hampshire-paycheck-calculator",
+        destination: "/nh-paycheck-calculator",
+        permanent: true,
+      },
+      {
+        source: "/west-virginia-paycheck-calculator",
+        destination: "/wv-paycheck-calculator",
+        permanent: true,
+      },
+      // Legacy .html URL still known to Google (404 in GSC).
+      {
+        source: "/hourly-paycheck-calculator.html",
+        destination: "/hourly-paycheck-calculator",
+        permanent: true,
+      },
+      // Old /states/ duplicates of the root state pages (noindexed, no internal links left).
+      {
+        source: "/states/:slug",
+        destination: "/:slug",
+        permanent: true,
+      },
     ];
   },
 };

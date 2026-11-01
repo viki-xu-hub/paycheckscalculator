@@ -200,6 +200,7 @@ export default function TaxOnCommissionPage() {
             <li><a href="/">Paycheck Calculator — take-home pay by state</a></li>
             <li><a href="/gross-up-calculator">Gross-Up Calculator — net to gross on a bonus</a></li>
             <li><a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a></li>
+            <li><a href="/tax-write-off">Tax Write-Offs — expenses that lower 1099 commission income</a></li>
             <li><a href="/no-tax-on-overtime">No Tax on Overtime</a></li>
           </ul>
         </section>

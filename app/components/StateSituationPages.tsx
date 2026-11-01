@@ -572,6 +572,12 @@ export function StateDependentsPage({ code }: { code: string }) {
           <li>After a divorce or custody change — only the parent claiming the child should list them.</li>
           <li>Your income rises above $200,000 ($400,000 married filing jointly) — Step 3 no longer applies.</li>
         </ul>
+        <p style={{ marginTop: 14 }}>
+          A partner or relative you support can count as an other dependent if they pass the IRS qualifying-relative
+          tests — see <a className="text-link" href="/can-i-claim-my-girlfriend-as-a-dependent">can I claim my girlfriend as a dependent</a>.
+          Paying for child care as well? A <a className="text-link" href="/dependent-care-fsa">dependent care FSA</a> covers
+          it with pre-tax pay.
+        </p>
       </Prose>
 
       <section className="seo-section text-left">

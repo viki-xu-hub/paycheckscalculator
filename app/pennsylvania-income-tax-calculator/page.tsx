@@ -550,8 +550,8 @@ export default function PennsylvaniaIncomeTaxPage() {
               <b>Illinois Income Tax Calculator</b>
               <span>IL flat rate estimator →</span>
             </a>
-            <a href="/federal-income-tax-calculator">
-              <b>Federal Income Tax Calculator</b>
+            <a href="/fit-tax-meaning">
+              <b>FIT Tax Meaning</b>
               <span>FIT tax meaning and rates →</span>
             </a>
             <a href="/sales-tax">
