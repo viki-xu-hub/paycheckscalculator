@@ -13,6 +13,7 @@ const CORE_INDEXABLE_PATHS = [
   "/semimonthly-paycheck-calculator",
   "/monthly-paycheck-calculator",
   "/hourly-paycheck-calculator",
+  "/salary",
   "/how-much-tax-is-taken-from-my-paycheck",
   "/methodology",
   "/texas-paycheck-calculator-with-bonus",

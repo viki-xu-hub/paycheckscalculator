@@ -211,6 +211,15 @@ export default function TexasPaycheckCalculatorWithDependents() {
           gross pay, 401(k) contributions, and benefit deductions are also unaffected. In Texas there is no state
           income tax line to reduce.
         </p>
+
+        <h3>Who counts as an other dependent</h3>
+        <p>
+          A partner or relative you support can qualify for the {fmt.format(OTHER_DEPENDENT_CREDIT)} credit if they
+          pass the IRS qualifying-relative tests — see{" "}
+          <a className="text-link" href="/can-i-claim-my-girlfriend-as-a-dependent">can I claim my girlfriend as a dependent</a>.
+          If you also pay for child care, a{" "}
+          <a className="text-link" href="/dependent-care-fsa">dependent care FSA</a> covers it with pre-tax pay.
+        </p>
       </section>
 
       <section className="seo-section text-left">

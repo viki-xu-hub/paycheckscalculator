@@ -1,0 +1,12 @@
+{
+  "name": "Paycheck Atlas",
+  "short_name": "Paycheck",
+  "description": "Free 2026 paycheck calculators for salary, hourly, federal withholding, FICA and state taxes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#172b3a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

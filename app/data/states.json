@@ -89,7 +89,7 @@
   },
   {
     "name": "District of Columbia",
-    "slug": "district-of-columbia-paycheck-calculator",
+    "slug": "washington-dc-paycheck-calculator",
     "abbr": "DC",
     "hasStateTax": true,
     "taxRate": 10.75,
@@ -320,7 +320,7 @@
   },
   {
     "name": "New Hampshire",
-    "slug": "new-hampshire-paycheck-calculator",
+    "slug": "nh-paycheck-calculator",
     "abbr": "NH",
     "hasStateTax": false,
     "taxRate": 0,
@@ -541,7 +541,7 @@
   },
   {
     "name": "West Virginia",
-    "slug": "west-virginia-paycheck-calculator",
+    "slug": "wv-paycheck-calculator",
     "abbr": "WV",
     "hasStateTax": true,
     "taxRate": 5.12,
