@@ -361,11 +361,14 @@ export function PartnerBadges() {
           <img src="https://stremit.io/static/img/badges/featured-on-stremit.png" alt="Featured on Stremit" width="240" height="89" />
         </a>
       </span>
-      <span className="partner-badge">
-        <a href="https://smartees.tech/t/paycheck-calculator" target="_blank" rel="noopener">
-          <img src="https://smartees.tech/badge/smartees-listed-light.svg" alt="Featured on Smartees" width="184" height="44" loading="lazy" />
-        </a>
-      </span>
+      {/* Raw HTML keeps Smartees' snippet byte-for-byte (line breaks and " />" included), which React would otherwise reformat. */}
+      <span
+        className="partner-badge"
+        dangerouslySetInnerHTML={{
+          __html:
+            '<a href="https://smartees.tech/t/paycheck-calculator" target="_blank" rel="noopener">\n  <img src="https://smartees.tech/badge/smartees-listed-light.svg" alt="Featured on Smartees" width="184" height="44" loading="lazy" />\n</a>',
+        }}
+      />
     </>
   );
 }
