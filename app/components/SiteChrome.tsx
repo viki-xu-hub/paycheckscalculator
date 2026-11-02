@@ -361,6 +361,11 @@ export function PartnerBadges() {
           <img src="https://stremit.io/static/img/badges/featured-on-stremit.png" alt="Featured on Stremit" width="240" height="89" />
         </a>
       </span>
+      <span className="partner-badge">
+        <a href="https://smartees.tech/t/paycheck-calculator" target="_blank" rel="noopener">
+          <img src="https://smartees.tech/badge/smartees-listed-light.svg" alt="Featured on Smartees" width="184" height="44" loading="lazy" />
+        </a>
+      </span>
     </>
   );
 }
