@@ -254,6 +254,12 @@ export function federalWithholding2026(taxableAnnualWages: number, status: Filin
   return tableTax(Math.max(0, taxableAnnualWages - adjustment), federalRows[status]);
 }
 
+/** The Worksheet 1A adjustment and table behind federalWithholding2026, for pages that show the steps. */
+export function federalWithholdingSchedule2026(status: FilingStatus) {
+  const adjustment = status === "married" ? 12900 : 8600;
+  return { adjustment, rows: federalRows[status].map(([from, to, base, rate]) => ({ from, to, base, rate })) };
+}
+
 export function stateWithholding2026(state: SupportedState, wages: number, status: FilingStatus, allowances = 0, options: StateWithholdingOptions = {}) {
   const safeWages = Math.max(0, wages);
   const payrollWages = Math.max(0, options.payrollWagesAnnual ?? safeWages);

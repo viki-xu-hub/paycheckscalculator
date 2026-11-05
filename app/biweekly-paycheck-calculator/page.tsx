@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { SituationHub } from "../components/StateSituationPages";
+import { BIWEEKLY_PAGES } from "../lib/biweeklyPay";
+import { locations } from "../lib/locations";
 
 export const metadata: Metadata = {
   title: "Biweekly Paycheck Calculator - Calculate Your Pay Every Two Weeks",
@@ -303,6 +305,17 @@ export default function BiweeklyPaycheck() {
           </p>
           <p>Overtime, taxes, and deductions will affect the final paycheck amount.</p>
         </div>
+        <p className="section-intro">
+          For regular and overtime hours on any pay schedule, use the{" "}
+          <a href="/hourly-paycheck-calculator" style={{ color: "var(--blue)" }}>hourly paycheck calculator</a>. Common rates:{" "}
+          {[20, 22, 25, 30, 35].map((rate, i, list) => (
+            <span key={rate}>
+              {i > 0 && (i === list.length - 1 ? " and " : ", ")}
+              <a href={`/hourly/${rate}-paycheck-calculator`} style={{ color: "var(--blue)" }}>${rate} an hour</a>
+            </span>
+          ))}
+          .
+        </p>
       </section>
 
       {/* Factors */}
@@ -352,6 +365,25 @@ export default function BiweeklyPaycheck() {
             <span>State withholding with TDI and FLI →</span>
           </a>
         </div>
+        <p className="section-intro" style={{ marginTop: 20 }}>Biweekly paycheck calculators for every state:</p>
+        <ul className="bw-links bw-links-compact">
+          {locations.map(loc => (
+            <li key={loc.slug}><a href={`/biweekly/${loc.slug}`}>{loc.name}</a></li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="seo-section">
+        <h2>Biweekly Paychecks by Salary and Hourly Wage</h2>
+        <p className="section-intro">
+          See one check worked out by state and filing status, or the{" "}
+          <a href="/biweekly-pay" style={{ color: "var(--blue)" }}>biweekly pay chart and 2026–27 pay dates</a>:
+        </p>
+        <ul className="bw-links bw-links-compact">
+          {BIWEEKLY_PAGES.map(page => (
+            <li key={page.slug}><a href={`/biweekly-pay/${page.slug}`}>{page.lower} biweekly</a></li>
+          ))}
+        </ul>
       </section>
 
       <SituationHub

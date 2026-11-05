@@ -2,6 +2,8 @@ import type { StateData, SalaryData, HourlyData, InternalLink } from "./types";
 import statesRaw from "../../data/states.json";
 import salaryRaw from "../../data/salary.json";
 import hourlyRaw from "../../data/hourly-rates.json";
+import { biweeklyPageForRate, biweeklyPageForSalary } from "../biweeklyPay";
+import { locations } from "../locations";
 
 const states = statesRaw as StateData[];
 const salaries = salaryRaw as SalaryData[];
@@ -9,6 +11,20 @@ const hourlyRates = hourlyRaw as HourlyData[];
 
 // Priority states for cross-linking (high search volume)
 const PRIORITY_ABBRS = ["TX", "CA", "FL", "NY", "IL", "PA", "OH", "GA", "NC", "NJ", "WA", "VA", "MA", "AZ", "CO"];
+
+/**
+ * The next states in the same region, wrapping round, so every /biweekly/ state page gets the same number of
+ * links from its neighbours. Taking the first few in each region would leave the rest with none.
+ */
+export function biweeklySiblingStates(short: string, count = 4) {
+  const current = states.find(s => s.abbr === short);
+  const region = states.filter(s => s.region === current?.region && !s.isCity);
+  const start = Math.max(0, region.findIndex(s => s.abbr === short));
+  return Array.from({ length: region.length }, (_, i) => region[(start + i) % region.length])
+    .filter(s => s.abbr !== short)
+    .slice(0, count)
+    .flatMap(s => locations.filter(loc => loc.short === s.abbr));
+}
 
 export function statePageLinks(current: StateData): InternalLink[] {
   const links: InternalLink[] = [];
@@ -59,6 +75,9 @@ export function salaryPageLinks(current: SalaryData): InternalLink[] {
   const h = hourlyRates.find(x => x.rate === current.hourlyEquivalent) ?? hourlyRates.reduce((prev, curr) => Math.abs(curr.rate - current.hourlyEquivalent) < Math.abs(prev.rate - current.hourlyEquivalent) ? curr : prev);
   links.push({ href: `/hourly/${h.slug}`, title: `$${h.rate} an Hour Is How Much a Year?`, description: `${current.label} a year ≈ $${hourly} an hour — see the hourly view →` });
 
+  const biweeklyPage = biweeklyPageForSalary(current.amount);
+  if (biweeklyPage) links.push({ href: `/biweekly-pay/${biweeklyPage.slug}`, title: `${current.label} a Year Is How Much Biweekly After Taxes?`, description: "Each check by state and filing status →" });
+
   // Hub + interactive calculator
   links.push({ href: "/salary", title: "All Salaries: $25,000 to $300,000 a Year", description: "Browse every salary-to-hourly page →" });
   links.push({ href: "/hourly-paycheck-calculator", title: "Hourly Paycheck Calculator", description: "Enter any rate, hours and overtime →" });
@@ -73,6 +92,7 @@ export function salaryPageLinks(current: SalaryData): InternalLink[] {
 
   // Frequency pages
   links.push({ href: "/biweekly-paycheck-calculator", title: "Biweekly Paycheck Calculator", description: `Your biweekly paycheck on ${current.label} a year →` });
+  links.push({ href: "/biweekly-pay", title: "Biweekly Pay Chart and 2026–27 Pay Dates", description: "Every pay date, and take-home by salary →" });
   links.push({ href: "/monthly-paycheck-calculator", title: "Monthly Paycheck Calculator", description: `Your monthly paycheck on ${current.label} a year →` });
 
   return links;
@@ -98,6 +118,9 @@ export function hourlyPageLinks(current: HourlyData): InternalLink[] {
   const nearestSalary = salaries.reduce((prev, curr) => Math.abs(curr.amount - targetAnnual) < Math.abs(prev.amount - targetAnnual) ? curr : prev);
   links.push({ href: `/salary/${nearestSalary.slug}`, title: `${nearestSalary.label} a Year Is How Much an Hour?`, description: `${dollar(current)} an hour ≈ ${nearestSalary.label} a year — see the salary view →` });
 
+  const biweeklyPage = biweeklyPageForRate(current.rate);
+  if (biweeklyPage) links.push({ href: `/biweekly-pay/${biweeklyPage.slug}`, title: `${dollar(current)} an Hour Is How Much Biweekly After Taxes?`, description: "Each check by state, hours and overtime →" });
+
   // Hub + interactive hourly calculator
   links.push({ href: "/hourly-paycheck-calculator", title: "All Hourly Rates: $10 to $150 an Hour", description: "Browse every hourly wage to yearly salary page →" });
   links.push({ href: "/hourly-paycheck-calculator", title: "Hourly Paycheck Calculator", description: "Enter any rate, hours and overtime →" });
@@ -110,6 +133,9 @@ export function hourlyPageLinks(current: HourlyData): InternalLink[] {
 
   // Frequency pages
   links.push({ href: "/biweekly-paycheck-calculator", title: "Biweekly Paycheck Calculator", description: `Your biweekly paycheck at ${dollar(current)} an hour →` });
+  links.push({ href: "/biweekly-pay", title: "Biweekly Pay Chart and 2026–27 Pay Dates", description: "Every pay date, and take-home by hourly wage →" });
+  links.push({ href: "/biweekly/texas-paycheck-calculator", title: "Texas Biweekly Paycheck Calculator", description: "Take-home every two weeks in Texas →" });
+  links.push({ href: "/biweekly/california-paycheck-calculator", title: "California Biweekly Paycheck Calculator", description: "Take-home every two weeks in California →" });
   links.push({ href: "/weekly-paycheck-calculator", title: "Weekly Paycheck Calculator", description: `Your weekly paycheck at ${dollar(current)} an hour →` });
 
   return links;

@@ -3,6 +3,7 @@ import salaryRaw from "../../data/salary.json";
 import hourlyRaw from "../../data/hourly-rates.json";
 import frequenciesRaw from "../../data/frequencies.json";
 import type { StateData, SalaryData, HourlyData, FrequencyData } from "./types";
+import { BIWEEKLY_PAGES, BIWEEKLY_STATE_PAGES } from "../biweeklyPay";
 
 const SITE = "https://www.paycheckscalculator.org";
 
@@ -22,11 +23,19 @@ export function frequencyUrls(): string[] {
   return (frequenciesRaw as FrequencyData[]).map(f => `${SITE}/${f.slug}`);
 }
 
+export function biweeklyPayUrls(): string[] {
+  return [
+    ...BIWEEKLY_PAGES.map(p => `${SITE}/biweekly-pay/${p.slug}`),
+    ...BIWEEKLY_STATE_PAGES.map(sp => `${SITE}/biweekly-pay/${sp.key}`),
+  ];
+}
+
 export function allProgrammaticUrls(): string[] {
   return [
     ...stateUrls(),
     ...salaryUrls(),
     ...hourlyUrls(),
     ...frequencyUrls(),
+    ...biweeklyPayUrls(),
   ];
 }

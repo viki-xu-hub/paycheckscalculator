@@ -25,7 +25,7 @@ const initialLocalRate=(state:SupportedState)=>state==="MD"?3.2:0;
 const initialStateDate=(state:SupportedState)=>state==="GA"?"2026-05-11":state==="UT"?"2026-06-01":"2026-08-01";
 const initialPremiumRate=(state:SupportedState)=>state==="MA" ? .46 : state==="MN" ? .44 : state==="OR" ? .6 : 0;
 
-function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false,defaultHourlyRate=30,defaultOvertime=5,defaultSalary=75000,headingSuffix=""}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean;defaultHourlyRate?:number;defaultOvertime?:number;defaultSalary?:number;headingSuffix?:string}) {
+function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourly=false,navigateOnStateChange=false,defaultHourlyRate=30,defaultOvertime=5,defaultSalary=75000,headingSuffix="",defaultRetirement=5,defaultPreTax=150}:{defaultState?:SupportedState;defaultFrequency?:PayFrequency;hourly?:boolean;navigateOnStateChange?:boolean;defaultHourlyRate?:number;defaultOvertime?:number;defaultSalary?:number;headingSuffix?:string;defaultRetirement?:number;defaultPreTax?:number}) {
   const [state,setState]=useState<SupportedState>(defaultState);
   const [stateQuery,setStateQuery]=useState(supportedStates.find(item=>item.code===defaultState)?.name??"");
   const [stateSearchOpen,setStateSearchOpen]=useState(false);
@@ -38,8 +38,8 @@ function PaycheckCalculator({defaultState="TX",defaultFrequency="biweekly",hourl
   const [overtime,setOvertime]=useState(defaultOvertime);
   const [weeks,setWeeks]=useState(52);
   const [status,setStatus]=useState<FilingStatus>("single");
-  const [retirement,setRetirement]=useState(5);
-  const [preTax,setPreTax]=useState(150);
+  const [retirement,setRetirement]=useState(defaultRetirement);
+  const [preTax,setPreTax]=useState(defaultPreTax);
   const [additional,setAdditional]=useState(0);
   const [allowances,setAllowances]=useState(0);
   const [electedStateRate,setElectedStateRate]=useState(2);

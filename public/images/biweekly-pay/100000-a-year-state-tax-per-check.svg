@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" role="img" aria-labelledby="t d">
+<title id="t">State and local tax per biweekly check on $100,000 a year</title>
+<desc id="d">New York City $347, Oregon $312, Connecticut $288, California $270, Washington DC $265, compared with $0 in Texas.</desc>
+<rect width="960" height="400" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">What state tax takes from a $3,846 check</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$100,000 a Year, state and local tax per biweekly check</text>
+<line x1="190" y1="86" x2="190" y2="350" stroke="#dfe7ee" stroke-width="1"/>
+<text x="178" y="110" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">New York City</text>
+<path d="M190.0 92H736.0Q740.0 92 740.0 96V112Q740.0 116 736.0 116H190.0Z" fill="#8f62c9"/>
+<text x="750" y="110" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$347 tax</text>
+<text x="820" y="110" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">keeps $2,698</text>
+<text x="178" y="148" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">Oregon</text>
+<path d="M190.0 130H680.5Q684.5 130 684.5 134V150Q684.5 154 680.5 154H190.0Z" fill="#8f62c9"/>
+<text x="694.5244956772335" y="148" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$312 tax</text>
+<text x="764.5244956772335" y="148" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">keeps $2,733</text>
+<text x="178" y="186" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">Connecticut</text>
+<path d="M190.0 168H642.5Q646.5 168 646.5 172V188Q646.5 192 642.5 192H190.0Z" fill="#8f62c9"/>
+<text x="656.4841498559078" y="186" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$288 tax</text>
+<text x="726.4841498559078" y="186" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">keeps $2,757</text>
+<text x="178" y="224" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">California</text>
+<path d="M190.0 206H614.0Q618.0 206 618.0 210V226Q618.0 230 614.0 230H190.0Z" fill="#8f62c9"/>
+<text x="627.9538904899135" y="224" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$270 tax</text>
+<text x="697.9538904899135" y="224" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">keeps $2,775</text>
+<text x="178" y="262" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">Washington DC</text>
+<path d="M190.0 244H606.0Q610.0 244 610.0 248V264Q610.0 268 606.0 268H190.0Z" fill="#8f62c9"/>
+<text x="620.0288184438041" y="262" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$265 tax</text>
+<text x="690.0288184438041" y="262" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">keeps $2,780</text>
+<text x="178" y="300" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">Alabama (middle)</text>
+<path d="M190.0 282H434.8Q438.8 282 438.8 286V302Q438.8 306 434.8 306H190.0Z" fill="#8f62c9"/>
+<text x="448.8472622478386" y="300" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$157 tax</text>
+<text x="518.8472622478387" y="300" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">keeps $2,888</text>
+<text x="178" y="338" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">Texas and others</text>
+<text x="200" y="338" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$0 tax</text>
+<text x="270" y="338" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">keeps $3,045</text>
+<text x="32" y="384" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · Single filer, standard W-4, no pre-tax deductions, 2026 withholding tables</text>
+</svg>

@@ -427,6 +427,7 @@ function SourceBackedGuide({place:p,editorial}:{place:(typeof locations)[number]
     <div className="tool-links">
       <a href="/hourly-paycheck-calculator"><b>Hourly paycheck calculator</b><span>Include regular and overtime hours →</span></a>
       <a href="/biweekly-paycheck-calculator"><b>Biweekly paycheck calculator</b><span>Estimate one of 26 yearly checks →</span></a>
+      <a href={`/biweekly/${p.slug}`}><b>{p.name} biweekly paycheck calculator</b><span>Take-home at nine salary levels →</span></a>
       <a href="/how-much-tax-is-taken-from-my-paycheck"><b>Paycheck tax guide</b><span>Understand every deduction →</span></a>
       <a href="/methodology"><b>Calculation methodology</b><span>Review assumptions and official sources →</span></a>
     </div>

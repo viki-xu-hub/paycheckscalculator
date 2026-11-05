@@ -1,0 +1,102 @@
+{
+  "75000-a-year/nyc": {
+    "hook": "See what the city's own tax costs and who avoids it.",
+    "sections": [
+      {
+        "h2": "What New York City's Own Tax Costs on {{annual}}",
+        "p": [
+          "Federal income tax and Social Security and Medicare are the same here as anywhere else, {{federal}} and {{fica}} a check. The difference is local. New York State and the city together withhold {{incomeTax:NYC}} every two weeks, and New York's Paid Family Leave takes another {{premiums:NYC}}. Elsewhere in the state the check is {{net:NY}}, so the city's resident tax accounts for about {{nycLocal}} a check, or {{nycLocalYear}} a year.",
+          "That tax follows where you live, not where you work. City residents owe it even on wages earned outside the five boroughs, while people who live outside the city and commute in generally do not. City government employees are the main exception, because most of them pay an equivalent amount wherever they live. If you are choosing between an apartment in Queens and one in Westchester, that is {{nycLocal}} a check to weigh before you compare rents."
+        ]
+      },
+      {
+        "h2": "{{annual}} a Year Is How Much a Month After Taxes in NYC?",
+        "p": [
+          "On average the check works out to {{month:NYC}} a month, but only two months a year come close to that feeling generous. Ten months deposit {{two:NYC}}, and the other two deposit {{threeIn:NYC}}. Rent gets paid every month, so the two-check number is the one to plan around.",
+          "Thirty percent of gross pay is {{rent}} a month, and it takes {{rentShareIn:NYC}} of a two-check deposit here against {{rentShare}} in Texas. Landlords often set their own income test, so check the rule before you apply."
+        ]
+      },
+      {
+        "h2": "A 401(k) Saves More in New York City Than in Texas",
+        "p": [
+          "A traditional 401(k) lowers federal, state and city withholding here, not just federal. Putting 5% of pay, {{k5Saved}} a check, into a plan lowers your take-home by {{k5DropIn:NYC}} in the city, against {{k5Drop}} in Texas. Social Security, Medicare and Paid Family Leave still apply to the full {{gross}}.",
+          "On a joint W-4 with one earner the check rises to {{marriedIn:NYC}}, and head of household brings it to {{headIn:NYC}}. New York State and the city also ask for their own form, IT-2104, so a change to your federal W-4 alone may not move those two lines."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is {{short}} a month after taxes in NYC?",
+        "a": "About {{month:NYC}} on average for a single filer with a standard W-4 and no pre-tax deductions. A normal two-check month deposits {{two:NYC}}, and two months a year deposit {{threeIn:NYC}}."
+      },
+      {
+        "q": "Do I pay New York City income tax if I commute into the city?",
+        "a": "Generally no. New York City's income tax applies to city residents, so someone living in Westchester, New Jersey or Connecticut does not owe it on wages earned in the city, though most city government employees pay an equivalent amount. New York State income tax can still apply to wages earned there."
+      },
+      {
+        "q": "How much is {{short}} biweekly in NYC if I'm married?",
+        "a": "About {{marriedIn:NYC}} on a joint W-4 with one earner and Step 2 unchecked. If you both work, checking Step 2 on each W-4 raises withholding and brings the check closer to the single figure of {{net:NYC}}."
+      }
+    ],
+    "links": [
+      { "href": "/new-york-paycheck-calculator", "label": "New York paycheck calculator" },
+      { "href": "/401k-paycheck-impact-calculator", "label": "401(k) paycheck impact calculator" }
+    ],
+    "notes": {
+      "perCheck": "All taxes and programs together take {{effective:NYC}} of the gross check, against {{effective:TX}} in Texas. City and state income tax is the largest local line, and Paid Family Leave is withheld at 0.432% of pay, below its $411.91 annual cap at this salary.",
+      "compare": "New York City ranks last of our 52 locations at this salary. Across the Hudson, New Jersey leaves {{net:NJ}}, and Connecticut leaves {{net:CT}}. Commuters can face different rules from what this table shows, because it assumes you live and work in the same place.",
+      "incomeLabel": "New York State and City income tax",
+      "programLabel": "NY Paid Family Leave (0.432%)"
+    }
+  },
+  "22-an-hour/california": {
+    "hook": "See why disability insurance takes so much of the state's share.",
+    "sections": [
+      {
+        "h2": "Why State Disability Insurance Takes So Much at $22 an Hour",
+        "p": [
+          "California takes {{tax:CA}} from each check, in two parts. Income tax is {{incomeTax:CA}} and State Disability Insurance is {{premiums:CA}}. SDI is a flat 1.3% of pay with no wage cap in 2026, so at this wage it comes to more than half of the income tax line. It funds disability and paid family leave benefits, and it shows on your stub as CASDI or SDI.",
+          "The two parts behave differently. Income tax here starts low and rises with pay, so filing status and a traditional 401(k) can shrink it. SDI does not care about either. A 5% 401(k) lowers your check by {{k5DropIn:CA}} rather than the full {{k5Saved}}, and all of that tax saving comes from federal and state income tax."
+        ]
+      },
+      {
+        "h2": "Daily Overtime Can Lift a California Check Sooner",
+        "p": [
+          "Federal law counts overtime by the workweek. California usually also pays time and a half for hours over eight in a workday, and double time past 12. So a schedule of four 10-hour days can earn overtime here even though the week totals 40, unless the workplace has adopted an alternative workweek. Some jobs follow different rules, so check your wage order.",
+          "Eight overtime hours in a pay period, paid at {{otRate}}, lift the gross check to {{otGross}} and the take-home to about {{hoursIn:CA:92}}. One short shift, by contrast, leaves {{hoursIn:CA:72}}. If your hours move around, build your fixed bills on the short check."
+        ]
+      },
+      {
+        "h2": "A $1 Raise Moves You Into a Higher California Rate",
+        "p": [
+          "California's withholding rate on your top dollar is 4.4% at $22 an hour. The next rate, 6.6%, begins at about $47,160 of annual wages, which is just under $23 an hour. A raise to $23 adds {{stateDiff:CA:47840}} a check here. Only the part above the line moves to the higher rate, so the raise still leaves you ahead.",
+          "Next door, Nevada has no income tax and no SDI, so the same $22 an hour leaves {{net:NV}}, or {{yearGap:CA}} a year more than California. Arizona leaves {{net:AZ}}, Washington {{net:WA}} after its required payroll programs, and Oregon {{net:OR}}. A move is rarely decided on this alone, because rents and wages also change."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is $22 an hour biweekly in California?",
+        "a": "About {{net:CA}} after taxes for a single filer on a full 80-hour pay period, from {{gross}} gross. That is {{tax:CA}} less than the same check in Texas, because California income tax and State Disability Insurance come out."
+      },
+      {
+        "q": "How much is $22 an hour a month after taxes in California?",
+        "a": "About {{month:CA}} on average. Most months pay two checks, which deposits {{two:CA}}, and two months a year pay three, which deposits {{threeIn:CA}}."
+      },
+      {
+        "q": "How much is $22 an hour biweekly in California if I'm married?",
+        "a": "About {{marriedIn:CA}} on a joint W-4 with one earner and Step 2 unchecked, and {{headIn:CA}} as head of household. State Disability Insurance stays at {{premiums:CA}} either way."
+      }
+    ],
+    "links": [
+      { "href": "/california-paycheck-calculator", "label": "California paycheck calculator" },
+      { "href": "/overtime-calculator", "label": "Overtime calculator" }
+    ],
+    "notes": {
+      "perCheck": "All taxes and programs together take {{effective:CA}} of the gross check, against {{effective:TX}} in Texas. Federal income tax and Social Security and Medicare are the same in both states, so the whole difference is the two California lines in this table.",
+      "compare": "California ranks {{rank:CA}} of our 52 locations at this wage. Oregon, to the north, leaves less, because its income tax rate climbs faster at this pay and transit and paid leave charges come out too. Nevada, Arizona and Washington all leave more.",
+      "incomeLabel": "California income tax",
+      "programLabel": "State Disability Insurance (1.3%)"
+    }
+  }
+}
