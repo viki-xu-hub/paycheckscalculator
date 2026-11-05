@@ -6,13 +6,10 @@ import {
 import { salaryUrls, hourlyUrls, frequencyUrls, biweeklyPayUrls } from "./lib/seo/sitemap-routes";
 import { locations } from "./lib/locations";
 
-const NOW = new Date();
-
 export default function sitemap(): MetadataRoute.Sitemap {
   // Homepage — highest priority
   const home: MetadataRoute.Sitemap = [{
     url: SITE_ORIGIN,
-    lastModified: NOW,
     changeFrequency: "weekly",
     priority: 1.0,
   }];
@@ -22,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter(url => url !== SITE_ORIGIN)
     .map(url => ({
       url,
-      lastModified: NOW,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     }));
@@ -30,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Frequency pages — medium priority
   const freqPages: MetadataRoute.Sitemap = frequencyUrls().map(url => ({
     url,
-    lastModified: NOW,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -38,7 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Salary pages — medium priority
   const salaryPages: MetadataRoute.Sitemap = salaryUrls().map(url => ({
     url,
-    lastModified: NOW,
     changeFrequency: "monthly" as const,
     priority: 0.65,
   }));
@@ -46,7 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Hourly pages — medium priority
   const hourlyPages: MetadataRoute.Sitemap = hourlyUrls().map(url => ({
     url,
-    lastModified: NOW,
     changeFrequency: "monthly" as const,
     priority: 0.65,
   }));
@@ -54,7 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Biweekly × state pages
   const biweeklyStatePages: MetadataRoute.Sitemap = locations.map(loc => ({
     url: `${SITE_ORIGIN}/biweekly/${loc.slug}`,
-    lastModified: NOW,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -62,7 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // "$X a year is how much biweekly" pages
   const biweeklyPayPages: MetadataRoute.Sitemap = biweeklyPayUrls().map(url => ({
     url,
-    lastModified: NOW,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
