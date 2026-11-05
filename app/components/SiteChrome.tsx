@@ -219,6 +219,19 @@ export function PartnerBadges() {
       <a href="https://dododirectory.com" target="_blank" rel="dofollow" className="partner-badge">
         <img src="https://dododirectory.com/badge-light.png" alt="Featured on DodoDirectory" width="200" height="54" loading="lazy" />
       </a>
+      <a className="partner-badge" target="_blank" href="https://dang.ai" rel="dofollow noopener">
+        <img src="https://assets.dang.ai/badges/dang-verified-dark.png" alt="Verified on DANG!" width="260" height="94" loading="lazy" />
+      </a>
+      <a className="partner-badge" target="_blank" href="https://best-ai.org" rel="dofollow noopener">
+        <img
+          src="https://best-ai.org/images/badge-best-ai-org.png"
+          srcSet="https://best-ai.org/images/badge-best-ai-org.png 1x, https://best-ai.org/images/badge-best-ai-org@2x.png 2x"
+          alt="Listed on Best-AI.org"
+          width="200"
+          height="48"
+          loading="lazy"
+        />
+      </a>
       {/* Raw HTML so the "&" in the badge URL is not escaped to "&amp;", which Fazier's badge check looks for verbatim. */}
       <span
         className="partner-badge"
