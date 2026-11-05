@@ -419,6 +419,10 @@ export default function Texas() {
             <b>Biweekly Paycheck Calculator</b>
             <span>Estimate one of 26 yearly checks →</span>
           </a>
+          <a href="/biweekly/texas-paycheck-calculator">
+            <b>Texas Biweekly Paycheck Calculator</b>
+            <span>Take-home at nine salary levels →</span>
+          </a>
           <a href="/how-much-tax-is-taken-from-my-paycheck">
             <b>Tax Calculator</b>
             <span>Understand every paycheck deduction →</span>

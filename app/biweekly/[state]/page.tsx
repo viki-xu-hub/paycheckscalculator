@@ -8,6 +8,8 @@ import type { SupportedState } from "../../lib/payroll";
 import { calculatePaycheck } from "../../lib/payroll";
 import { locations, locationBySlug } from "../../lib/locations";
 import biweeklyEditorial from "../../data/biweekly-editorial.json";
+import { biweeklyPageLookup, payHref, statePagesForLocation } from "../../lib/biweeklyPay";
+import { biweeklySiblingStates } from "../../lib/seo/internalLinks";
 
 const SITE = "https://www.paycheckscalculator.org";
 const OG_IMAGE = [{ url: "/og.png", width: 1200, height: 630, alt: "Paycheck Calculator 2026" }];
@@ -138,6 +140,13 @@ export default async function BiweeklyStateCalculatorPage(
     ],
   };
 
+  const statePages = statePagesForLocation(loc.short);
+  const salaryHref = (amount: number) => {
+    const page = biweeklyPageLookup("salary", amount);
+    const statePage = statePages.find(sp => sp.page.slug === page.slug);
+    return statePage ? `/biweekly-pay/${statePage.key}` : payHref(page);
+  };
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
@@ -145,6 +154,14 @@ export default async function BiweeklyStateCalculatorPage(
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <SiteHeader />
+
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="/biweekly-paycheck-calculator">Biweekly Paycheck Calculator</a>
+        <span aria-hidden="true">›</span>
+        <span>{loc.name}</span>
+      </nav>
 
       {/* Hero */}
       <section className="hero">
@@ -200,7 +217,9 @@ export default async function BiweeklyStateCalculatorPage(
               <tbody>
                 {bracketResults.map((row, i) => (
                   <tr key={row.salary} style={{ borderBottom: "1px solid #e0e7ef", background: i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)" }}>
-                    <td style={{ padding: "8px 10px", fontWeight: 500 }}>{fmt.format(row.salary)}</td>
+                    <td style={{ padding: "8px 10px", fontWeight: 500 }}>
+                      <a href={salaryHref(row.salary)} style={{ color: "var(--blue)" }}>{fmt.format(row.salary)}</a>
+                    </td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(row.grossBiweekly)}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", color: "#667a8a" }}>{fmt.format(Math.round(row.federal / 26))}</td>
                     {hasStateDeduction && <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", color: "#667a8a" }}>{fmt.format(Math.round(row.stateTax / 26))}</td>}
@@ -367,6 +386,26 @@ export default async function BiweeklyStateCalculatorPage(
               <b>Paycheck Tax Guide</b>
               <span>Understand every deduction →</span>
             </a>
+            <a href="/biweekly-pay">
+              <b>Biweekly Pay Chart</b>
+              <span>2026–27 pay dates and take-home by salary →</span>
+            </a>
+            <a href="/biweekly-pay/25-an-hour">
+              <b>$25 an Hour Biweekly</b>
+              <span>One hourly check worked out by state →</span>
+            </a>
+            {statePages.map(sp => (
+              <a key={sp.key} href={`/biweekly-pay/${sp.key}`}>
+                <b>{sp.page.label} in {loc.name}</b>
+                <span>That check after {loc.name} taxes →</span>
+              </a>
+            ))}
+            {biweeklySiblingStates(loc.short).map(sibling => (
+              <a key={sibling.slug} href={`/biweekly/${sibling.slug}`}>
+                <b>{sibling.name} Biweekly Paycheck Calculator</b>
+                <span>Compare a nearby state →</span>
+              </a>
+            ))}
           </div>
         </section>
       </article>

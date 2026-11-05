@@ -3,6 +3,7 @@ import statesRaw from "../../data/states.json";
 import salaryRaw from "../../data/salary.json";
 import hourlyRaw from "../../data/hourly-rates.json";
 import { biweeklyPageForRate, biweeklyPageForSalary } from "../biweeklyPay";
+import { locations } from "../locations";
 
 const states = statesRaw as StateData[];
 const salaries = salaryRaw as SalaryData[];
@@ -10,6 +11,20 @@ const hourlyRates = hourlyRaw as HourlyData[];
 
 // Priority states for cross-linking (high search volume)
 const PRIORITY_ABBRS = ["TX", "CA", "FL", "NY", "IL", "PA", "OH", "GA", "NC", "NJ", "WA", "VA", "MA", "AZ", "CO"];
+
+/**
+ * The next states in the same region, wrapping round, so every /biweekly/ state page gets the same number of
+ * links from its neighbours. Taking the first few in each region would leave the rest with none.
+ */
+export function biweeklySiblingStates(short: string, count = 4) {
+  const current = states.find(s => s.abbr === short);
+  const region = states.filter(s => s.region === current?.region && !s.isCity);
+  const start = Math.max(0, region.findIndex(s => s.abbr === short));
+  return Array.from({ length: region.length }, (_, i) => region[(start + i) % region.length])
+    .filter(s => s.abbr !== short)
+    .slice(0, count)
+    .flatMap(s => locations.filter(loc => loc.short === s.abbr));
+}
 
 export function statePageLinks(current: StateData): InternalLink[] {
   const links: InternalLink[] = [];
@@ -77,6 +92,7 @@ export function salaryPageLinks(current: SalaryData): InternalLink[] {
 
   // Frequency pages
   links.push({ href: "/biweekly-paycheck-calculator", title: "Biweekly Paycheck Calculator", description: `Your biweekly paycheck on ${current.label} a year →` });
+  links.push({ href: "/biweekly-pay", title: "Biweekly Pay Chart and 2026–27 Pay Dates", description: "Every pay date, and take-home by salary →" });
   links.push({ href: "/monthly-paycheck-calculator", title: "Monthly Paycheck Calculator", description: `Your monthly paycheck on ${current.label} a year →` });
 
   return links;
@@ -117,6 +133,9 @@ export function hourlyPageLinks(current: HourlyData): InternalLink[] {
 
   // Frequency pages
   links.push({ href: "/biweekly-paycheck-calculator", title: "Biweekly Paycheck Calculator", description: `Your biweekly paycheck at ${dollar(current)} an hour →` });
+  links.push({ href: "/biweekly-pay", title: "Biweekly Pay Chart and 2026–27 Pay Dates", description: "Every pay date, and take-home by hourly wage →" });
+  links.push({ href: "/biweekly/texas-paycheck-calculator", title: "Texas Biweekly Paycheck Calculator", description: "Take-home every two weeks in Texas →" });
+  links.push({ href: "/biweekly/california-paycheck-calculator", title: "California Biweekly Paycheck Calculator", description: "Take-home every two weeks in California →" });
   links.push({ href: "/weekly-paycheck-calculator", title: "Weekly Paycheck Calculator", description: `Your weekly paycheck at ${dollar(current)} an hour →` });
 
   return links;

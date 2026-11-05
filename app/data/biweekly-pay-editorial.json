@@ -494,5 +494,113 @@
       "state": "Virginia leaves {{net:VA}}, Maryland {{net:MD}}, Colorado {{net:CO}} and Washington {{net:WA}}, where required payroll programs take the place of an income tax.",
       "hours": "The full check sits past the 22% line and the short ones do not, so this table moves less evenly than it does at lower wages."
     }
+  },
+  "60000-a-year": {
+    "hook": "Plus what New York City's own tax costs you on each check.",
+    "sections": [
+      {
+        "h2": "{{under}} of Room Before the 22% Line",
+        "p": [
+          "A single filer's withholding stays at 12% until {{nextLine}} of annual wages, so {{annual}} has {{under}} of room. Federal income tax takes {{federal}} a check and Social Security and Medicare {{fica}}, and this is about where the federal line moves ahead of payroll tax for good.",
+          "That room matters when a raise or a bonus shows up. A raise to $65,000 adds {{txDiff:65000}} a check, and you keep {{keepFrom:65000}} of the extra gross. Cross the line and only the wages above it move to 22%. A $10,000 raise to $70,000 still adds {{txDiff:70000}} a check, {{keepFrom:70000}} of the extra gross, so crossing the line never lowers your take-home."
+        ]
+      },
+      {
+        "h2": "Twenty-Six Checks or Twenty-Four on {{annual}}",
+        "p": [
+          "Two jobs paying {{annual}} can feel quite different if one pays every two weeks and the other twice a month. Biweekly gives you {{noTax}} a check after taxes in Texas, and twice a month gives you {{semiNet}}. In an ordinary month the twice-a-month job deposits {{semiTwo}} against {{twoCheck}} for the biweekly one.",
+          "The biweekly job catches up with two {{threeCheck}} months, and the year comes out the same. When you compare offers, compare the annual figure first. Then build the budget on the monthly deposit you will actually see, because a {{twoCheck}} month is what has to cover rent."
+        ]
+      },
+      {
+        "h2": "What New York City Alone Costs on {{annual}}",
+        "p": [
+          "New York State outside the city leaves {{net:NY}}. Live in one of the five boroughs and the check falls to {{net:NYC}}, because the city's resident income tax costs another {{nycLocal}} every two weeks. That makes the city the smallest check of our 52 locations at this salary, just ahead of Oregon at {{net:OR}} and Connecticut at {{net:CT}}.",
+          "City tax follows where you live rather than where you work, so people who commute in from outside the city generally do not pay it. New Jersey leaves {{net:NJ}} and Pennsylvania {{net:PA}} before any local earned income tax, though someone crossing a state line for work should check how both states treat those wages."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is {{short}} biweekly in New York City?",
+        "a": "About {{net:NYC}} after taxes for a single filer with a standard W-4 and no pre-tax deductions. State and city income tax plus Paid Family Leave take {{tax:NYC}} a check, the most of any location we calculate at this salary."
+      },
+      {
+        "q": "How much is {{short}} a month after taxes?",
+        "a": "{{avgMonth}} on average in Texas for a single filer. Most months pay two checks, so {{twoCheck}} is the amount you can count on, and two months a year pay {{threeCheck}}."
+      }
+    ],
+    "links": [
+      {
+        "href": "/new-york-paycheck-calculator",
+        "label": "New York paycheck calculator"
+      },
+      {
+        "href": "/how-much-tax-is-taken-from-my-paycheck",
+        "label": "How much tax is taken from a paycheck"
+      }
+    ],
+    "notes": {
+      "perCheck": "A single filer keeps {{keepPct}} of the gross check in Texas, and {{lowName}} takes another {{gap}}. One earner on a joint W-4 gets {{marriedPlus}} more, because the married table shelters more of the pay before withholding starts. Head of household falls in between at {{headPlus}} more.",
+      "bracket": "With {{under}} to the line, every dollar in a traditional 401(k) saves 12 cents of federal tax. Putting in {{k5Saved}} a check, or 5%, lowers your take-home by {{k5Drop}}. You would need a raise past {{nextLine}} before the first dollars of a contribution save 22 cents.",
+      "month": [
+        "A year on this salary deposits {{twoCheck}} ten times and {{threeCheck}} twice. Together the two extra checks come to {{twoCheck}}, the same as an ordinary month, so treating them as one planned month of savings or debt payments is an easy rule to keep."
+      ],
+      "state": "Georgia and New Jersey land near the middle at {{net:GA}} and {{net:NJ}}. Arizona leaves {{net:AZ}}, and North Dakota withholds just {{tax:ND}} a check, because its table does not start until $57,625 of wages for a single filer."
+    }
+  },
+  "80000-a-year": {
+    "hook": "Also the last salary here with a full IRA deduction available.",
+    "sections": [
+      {
+        "h2": "{{annual}} Is Just Under the IRA Deduction Limit",
+        "p": [
+          "If you have a retirement plan at work, a single filer's traditional IRA deduction starts to phase out at $81,000 of modified adjusted gross income in 2026 and disappears at $91,000. At {{annual}} you are $1,000 below the start, so a full $7,500 contribution can still be deductible. That gives you a second place to save without losing the write-off.",
+          "A raise changes this quickly, but a traditional 401(k) moves the other way, because each dollar you contribute lowers that income figure by a dollar. A 5% contribution, {{k5Saved}} a check or $4,000 a year, gives you room for a raise of up to $5,000 before the deduction starts to shrink. A Roth IRA is not affected at this income, because that phase-out begins at $153,000."
+        ]
+      },
+      {
+        "h2": "{{over}} in the 22% Range: How Far a 401(k) Reaches",
+        "p": [
+          "Wages are {{over}} past the {{line}} line, so the first {{over}} of traditional 401(k) contributions save 22 cents of federal tax on the dollar. That is {{toLinePct}} of pay, or {{toLineCheck}} a check, and it lowers your take-home by {{toLineDrop}}. Past that point each dollar saves 12 cents.",
+          "An employer match usually matters more than this math, so take that first. After the match, this is the range where cutting your taxable pay is cheapest. Someone contributing the full {{k401Limit}} would put {{maxKCheck}} a check into the plan, leaving {{maxKNet}} of take-home in Texas."
+        ]
+      },
+      {
+        "h2": "California Falls Behind New York State by {{annual}}",
+        "p": [
+          "At lower salaries California usually leaves more than New York State. By {{annual}} the order has flipped: California leaves {{net:CA}} and New York State {{net:NY}}, because California's withholding rate on the top dollar has reached 10.23%. Massachusetts, with a flat rate, is about level with New York at {{net:MA}}.",
+          "New York City is still the smallest check at {{net:NYC}}, and Oregon is next at {{net:OR}}. The gap between the city and Texas is {{gap}} a check, or {{gapYear}} a year, which is worth pricing in if a job offer asks you to move."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is {{short}} biweekly in New York City?",
+        "a": "About {{net:NYC}} after taxes for a single filer with a standard W-4 and no pre-tax deductions. That is {{tax:NYC}} a check less than Texas, the largest gap of any location we calculate at this salary."
+      },
+      {
+        "q": "How much is {{short}} biweekly after a 5% 401(k)?",
+        "a": "About {{k5Net}} in Texas. You put {{k5Saved}} a check into the plan, and your take-home falls by {{k5Drop}}, because all of that contribution comes out of wages withheld at 22%."
+      }
+    ],
+    "links": [
+      {
+        "href": "/401k-paycheck-impact-calculator",
+        "label": "401(k) paycheck impact calculator"
+      },
+      {
+        "href": "/new-york-paycheck-calculator",
+        "label": "New York paycheck calculator"
+      }
+    ],
+    "notes": {
+      "perCheck": "Federal income tax is {{federal}}, well past the {{fica}} for Social Security and Medicare. A joint W-4 brings it down far enough to add {{marriedPlus}} a check, because the married table stays at 12% until {{marriedLine}} of wages.",
+      "bracket": "A 10% contribution, {{k10Saved}} a check, still sits inside the 22% slice, so the tax saved keeps a steady pace: {{k3Tax}} at 3%, {{k5Tax}} at 5% and {{k10Tax}} at 10%.",
+      "month": [
+        "A two-check month deposits {{twoCheck}}, {{monthGap}} below the {{avgMonth}} average, while the same month's pay on paper is {{grossMonth}} before tax. If you pay rent or a mortgage from one check and everything else from the other, each three-check month leaves a clean {{noTax}} to put toward savings or debt."
+      ],
+      "state": "Pennsylvania leaves {{net:PA}} before any local earned income tax, Ohio {{net:OH}}, Colorado {{net:CO}} and Minnesota {{net:MN}}."
+    }
   }
 }

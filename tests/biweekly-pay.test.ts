@@ -3,27 +3,41 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import editorialRaw from "../app/data/biweekly-pay-editorial.json";
+import stateEditorialRaw from "../app/data/biweekly-pay-state-editorial.json";
 import hourlyRaw from "../app/data/hourly-rates.json";
 import salaryRaw from "../app/data/salary.json";
 import {
   BANK_HOLIDAY_FRIDAYS,
   BIWEEKLY_DATES_IMAGE,
   BIWEEKLY_PAGES,
+  BIWEEKLY_STATE_PAGES,
   HUB_RATES,
   HUB_SALARIES,
   biweeklyDescription,
   biweeklyFacts,
   biweeklyImages,
   biweeklyPageBySlug,
+  biweeklyStateDescription,
+  biweeklyStateFacts,
+  biweeklyStateImages,
+  biweeklyStateTitle,
   biweeklyTitle,
+  KFF_FAMILY_PREMIUM,
+  KFF_SINGLE_PREMIUM,
+  TDK_VARIANT,
   dollars,
   fillTokens,
   fridaySchedule,
   hubChartRows,
   nearbyPay,
+  payBenchmarks,
   payPeriodRows,
   rankedStates,
+  realCheckRows,
+  rentRows,
 } from "../app/lib/biweeklyPay";
+import { locations } from "../app/lib/locations";
+import { biweeklySiblingStates } from "../app/lib/seo/internalLinks";
 import { calculatePaycheck, federalWithholding2026 } from "../app/lib/payroll";
 
 type Editorial = {
@@ -72,7 +86,8 @@ for (const page of BIWEEKLY_PAGES) {
     const description = biweeklyDescription(page, f, copy.hook);
     assert.ok(title.length <= 61, `title is ${title.length}`);
     assert.ok(description.length >= 120 && description.length <= 160, `description is ${description.length}`);
-    assert.ok(title.startsWith(`${page.label} Is How Much Biweekly?`));
+    assert.ok(title.startsWith(`${page.label} Is How Much Biweekly?`), title);
+    assert.ok(title.includes(dollars(f.noTaxNet)), title);
   });
 
   test(`${page.slug}: charts carry the current figures (rerun the chart script if this fails)`, () => {
@@ -96,7 +111,7 @@ for (const page of BIWEEKLY_PAGES) {
   const f = biweeklyFacts(page);
 
   test(`${page.slug}: pay periods agree with the headline figures`, () => {
-    const rows = payPeriodRows(page, f);
+    const rows = payPeriodRows(page, f.single.netAnnual);
     const net = (perYear: number) => rows.find(r => r.perYear === perYear)?.net ?? 0;
     assert.equal(Math.round(net(26)), f.noTaxNet);
     assert.equal(Math.round(net(12)), f.avgMonth);
@@ -125,7 +140,7 @@ for (const page of BIWEEKLY_PAGES) {
   });
 
   test(`${page.slug}: nearby pay shows two amounts each side and every link resolves`, () => {
-    const rows = nearbyPay(page, f);
+    const rows = nearbyPay(page);
     assert.equal(rows.length, 5);
     assert.equal(rows[2].current, true);
     assert.equal(rows[2].diff, 0);
@@ -136,6 +151,166 @@ for (const page of BIWEEKLY_PAGES) {
     });
   });
 }
+
+for (const page of BIWEEKLY_PAGES) {
+  const f = biweeklyFacts(page);
+
+  test(`${page.slug}: benchmarks place the pay in the right band and name jobs`, () => {
+    const b = payBenchmarks(page);
+    assert.deepEqual(b.rows.map(r => r.annual), [37590, 50980, 64064, 80520]);
+    const expected = page.annual < 50980 ? "below-median" : page.annual < 64064 ? "between-medians" : page.annual < 80520 ? "above-medians" : "top-quarter";
+    assert.equal(b.band, expected);
+    assert.ok(b.jobs.length >= 2, "should name at least two jobs");
+    b.rows.forEach(r => assert.equal(r.diff, page.annual - r.annual));
+  });
+
+  test(`${page.slug}: rent and real-check rows follow the engine`, () => {
+    const rents = rentRows(f);
+    assert.equal(rents[0].monthly, f.rent);
+    assert.equal(rents[1].monthly, Math.round(f.twoCheck * 0.3));
+    assert.ok(rents[2].monthly <= rents[1].monthly);
+    const real = realCheckRows(page, f);
+    assert.equal(Math.round(real[0].net), f.noTaxNet);
+    assert.equal(Math.round(real[real.length - 1].net), Math.round(f.realWorld.net));
+    assert.equal(Math.round(real[1].out), Math.round(KFF_SINGLE_PREMIUM / 26));
+    assert.ok(Math.round(real[3].out) > Math.round(KFF_FAMILY_PREMIUM / 26));
+    for (let i = 1; i < real.length - 1; i += 1) {
+      assert.ok(real[i].net < real[i - 1].net, real[i].label);
+      assert.ok(real[i - 1].net - real[i].net < real[i].out - real[i - 1].out, `${real[i].label} should cost less than what comes out`);
+    }
+  });
+}
+
+test("every page is in the title test, with no group more than one page bigger", () => {
+  assert.deepEqual(Object.keys(TDK_VARIANT).sort(), BIWEEKLY_PAGES.map(p => p.slug).sort());
+  const count = (v: string) => Object.values(TDK_VARIANT).filter(x => x === v).length;
+  const sizes = ["A", "B", "C"].map(count);
+  assert.ok(Math.max(...sizes) - Math.min(...sizes) <= 1, `${sizes}`);
+  for (const v of ["A", "B", "C"]) {
+    const kinds = Object.entries(TDK_VARIANT).filter(([, x]) => x === v).map(([slug]) => slug.includes("hour"));
+    assert.ok(kinds.includes(true) && kinds.includes(false), `group ${v} should hold salary and hourly pages`);
+  }
+});
+
+type StateEditorial = { hook: string; sections: { h2: string; p: string[] }[]; faqs: { q: string; a: string }[]; notes: { perCheck: string; compare: string; incomeLabel: string; programLabel: string } };
+const stateEditorial = stateEditorialRaw as Record<string, StateEditorial>;
+
+test("the state pilot stays small and has copy for every page", () => {
+  assert.equal(BIWEEKLY_STATE_PAGES.length, 2);
+  assert.deepEqual(Object.keys(stateEditorial).sort(), BIWEEKLY_STATE_PAGES.map(sp => sp.key).sort());
+});
+
+for (const sp of BIWEEKLY_STATE_PAGES) {
+  const facts = biweeklyStateFacts(sp);
+  const copy = stateEditorial[sp.key];
+
+  test(`${sp.key}: figures add up and match the calculator`, () => {
+    const r = calculatePaycheck({ grossAnnual: sp.page.annual, frequency: "biweekly", status: "single", state: sp.loc.short as "TX", retirementPercent: 0, preTaxPerPaycheck: 0 });
+    assert.equal(facts.net, Math.round(r.netAnnual / r.periods));
+    assert.equal(facts.vsTexas, facts.f.noTaxNet - facts.net);
+    const lines = facts.single.federal + facts.single.socialSecurity + facts.single.medicare + facts.single.stateIncome + facts.single.premiums;
+    assert.ok(Math.abs(facts.single.gross - lines - facts.single.net) < 0.01);
+    assert.equal(facts.places.filter(p => p.current).length, 1);
+    assert.ok(facts.places.some(p => p.name === "Texas"));
+    assert.equal(facts.nearby.find(n => n.current)?.net, facts.net);
+  });
+
+  test(`${sp.key}: copy resolves, has depth, and the search snippet fits`, () => {
+    const fill = (t: string) => fillTokens(t, sp.page, facts.f);
+    const prose = [...copy.sections.flatMap(s => [s.h2, ...s.p]), copy.notes.perCheck, copy.notes.compare].map(fill);
+    copy.faqs.forEach(item => { fill(item.q); fill(item.a); });
+    assert.ok(prose.join(" ").split(/\s+/).length >= 250, "under 250 hand-written words");
+    const title = biweeklyStateTitle(sp, facts.net);
+    const description = biweeklyStateDescription(sp, copy.hook);
+    assert.ok(title.length <= 61, `title is ${title.length}`);
+    assert.ok(description.length >= 120 && description.length <= 160, `description is ${description.length}`);
+  });
+
+  test(`${sp.key}: images carry the current figures`, () => {
+    const images = biweeklyStateImages(sp);
+    const read = (path: string) => readFileSync(new URL(`../public${path}`, import.meta.url), "utf8");
+    assert.ok(read(images.split).includes(dollars(facts.net)));
+    assert.ok(readFileSync(new URL(`../public${images.cover}`, import.meta.url)).length > 1000);
+  });
+}
+
+test("claims in the state pages still hold", () => {
+  const nycPage = BIWEEKLY_STATE_PAGES.find(sp => sp.key === "75000-a-year/nyc");
+  const caPage = BIWEEKLY_STATE_PAGES.find(sp => sp.key === "22-an-hour/california");
+  assert.ok(nycPage && caPage);
+  const nyc = biweeklyStateFacts(nycPage);
+  const ca = biweeklyStateFacts(caPage);
+  assert.equal(nyc.rank, 52);
+  assert.ok(nyc.single.premiums * 26 < 411.91, "75k should be under the NY PFL cap");
+  assert.ok(Math.abs(nyc.single.premiums - (75000 * 0.00432) / 26) < 0.01);
+  const drop = (annual: number, state: "NYC" | "TX" | "CA") => {
+    const run = (retirementPercent: number) => calculatePaycheck({ grossAnnual: annual, frequency: "biweekly", status: "single", state, retirementPercent }).netAnnual / 26;
+    return run(0) - run(5);
+  };
+  assert.ok(drop(75000, "NYC") < drop(75000, "TX"), "a 401(k) should cost less take-home in the city");
+  assert.ok(ca.single.premiums > ca.single.stateIncome / 2, "SDI should be over half of income tax");
+  assert.ok(Math.abs(ca.single.premiums - (45760 * 0.013) / 26) < 0.01);
+  const netIn = (code: string) => ca.f.states.find(s => s.short === code)?.net ?? 0;
+  for (const code of ["NV", "AZ", "WA"]) assert.ok(netIn(code) > ca.net, code);
+  assert.ok(netIn("OR") < ca.net);
+  // California's 6.6% rate starts at $41,452 of taxable wages, after the $5,706 standard deduction.
+  assert.ok(45760 - 5706 < 41452 && 45760 - 5706 > 26264, "$22 should be in the 4.4% row");
+  assert.ok(47840 - 5706 > 41452, "$23 should reach the 6.6% row");
+  assert.equal(41452 + 5706, 47158);
+});
+
+test("claims in the $60,000 and $80,000 copy still hold", () => {
+  const sixty = facts("60000-a-year").f;
+  const eighty = facts("80000-a-year").f;
+  const net = (x: typeof sixty, code: string) => x.states.find(s => s.short === code)?.net ?? 0;
+  assert.equal(sixty.position.under, 6500);
+  assert.equal(sixty.position.current.rate, 0.12);
+  assert.ok(sixty.single.federal > sixty.single.socialSecurity + sixty.single.medicare);
+  assert.equal(sixty.lowest.short, "NYC");
+  assert.ok(sixty.lowestFive[1].short === "OR" && sixty.lowestFive[2].short === "CT");
+  assert.ok(sixty.head.net - sixty.single.net < sixty.married.net - sixty.single.net);
+  assert.equal(federalWithholding2026(70000, "single") - federalWithholding2026(66500, "single"), 770);
+  assert.equal(eighty.position.over, 13500);
+  assert.equal(eighty.position.current.rate, 0.22);
+  assert.ok(80000 * 0.1 < eighty.position.over, "10% should stay inside the 22% slice");
+  assert.ok(net(eighty, "CA") < net(eighty, "NY"), "California should have fallen behind New York State");
+  assert.ok(Math.abs(net(eighty, "MA") - net(eighty, "NY")) <= 5, "Massachusetts should be about level with New York");
+  assert.equal(eighty.lowest.short, "NYC");
+  assert.ok(80000 < 81000);
+  assert.ok(80000 - 4000 + 5000 === 81000, "the raise room in the copy");
+});
+
+test("the biweekly cluster links to itself in both directions", () => {
+  const source = (path: string) => readFileSync(new URL(path, import.meta.url), "utf8");
+  const calculator = source("../app/biweekly-paycheck-calculator/page.tsx");
+  assert.ok(calculator.includes("href={`/biweekly/${loc.slug}`}"), "calculator should list every state page");
+  assert.ok(calculator.includes('href="/hourly-paycheck-calculator"'), "calculator should link to hourly");
+  assert.ok(calculator.includes('href="/biweekly-pay"'), "calculator should link to the chart");
+  const hourly = source("../app/hourly-paycheck-calculator/page.tsx");
+  assert.ok(hourly.includes('href="/biweekly-paycheck-calculator"'), "hourly should link to the calculator");
+  const statePage = source("../app/biweekly/[state]/page.tsx");
+  assert.ok(statePage.includes('href="/biweekly-paycheck-calculator"') && statePage.includes('href="/biweekly-pay"'));
+  assert.ok(source("../app/[location]/page.tsx").includes("/biweekly/${p.slug}"), "state calculators should link to their biweekly page");
+  const slugs = new Set(locations.map(l => l.slug));
+  const received = new Map<string, number>();
+  for (const loc of locations) {
+    const siblings = biweeklySiblingStates(loc.short);
+    assert.ok(siblings.length >= 3, loc.short);
+    for (const s of siblings) {
+      assert.ok(slugs.has(s.slug), s.slug);
+      assert.notEqual(s.short, loc.short);
+      received.set(s.slug, (received.get(s.slug) ?? 0) + 1);
+    }
+  }
+  const states = locations.filter(l => !l.city);
+  assert.ok(states.every(l => (received.get(l.slug) ?? 0) >= 3), "no state should be left out of its neighbours' links");
+});
+
+test("no page says employers usually pay early without the caveat", () => {
+  const hub = readFileSync(new URL("../app/biweekly-pay/page.tsx", import.meta.url), "utf8");
+  assert.ok(!hub.includes("employers usually pay"));
+  assert.ok(hub.includes("no federal law requires it"));
+});
 
 test("every hub chart row links to a page that exists", () => {
   for (const row of [...hubChartRows("salary"), ...hubChartRows("hourly")]) assert.ok(validHrefs.has(row.href), row.href);

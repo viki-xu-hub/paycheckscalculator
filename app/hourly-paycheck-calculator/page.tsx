@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BIWEEKLY_PAGES } from "../lib/biweeklyPay";
 import PaycheckCalculator from "../components/PaycheckCalculator";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import type { HourlyData } from "../lib/seo/types";
@@ -397,7 +398,23 @@ export default function HourlyPaycheck() {
         <p className="section-intro">
           Your paycheck frequency affects how often you receive income, but your total annual
           earnings remain based on your hourly wage and hours worked. For a two-week schedule, the{" "}
-          <a href="/biweekly-pay" style={{ color: "var(--blue)" }}>biweekly pay chart</a> shows each check before and after taxes.
+          <a href="/biweekly-pay" style={{ color: "var(--blue)" }}>biweekly pay chart</a> shows each check before and after taxes, the{" "}
+          <a href="/biweekly-paycheck-calculator" style={{ color: "var(--blue)" }}>biweekly paycheck calculator</a> works one out for your pay, and
+          these pages walk through a full check:{" "}
+          {BIWEEKLY_PAGES.filter(page => page.rate).map((page, i, list) => (
+            <span key={page.slug}>
+              {i > 0 && (i === list.length - 1 ? " and " : ", ")}
+              <a href={`/biweekly-pay/${page.slug}`} style={{ color: "var(--blue)" }}>{page.lower} biweekly</a>
+            </span>
+          ))}
+          . By state:{" "}
+          {[["texas", "Texas"], ["california", "California"], ["new-york", "New York"], ["florida", "Florida"], ["new-jersey", "New Jersey"], ["georgia", "Georgia"]].map(([slug, name], i, list) => (
+            <span key={slug}>
+              {i > 0 && (i === list.length - 1 ? " and " : ", ")}
+              <a href={`/biweekly/${slug}-paycheck-calculator`} style={{ color: "var(--blue)" }}>{name} biweekly</a>
+            </span>
+          ))}
+          .
         </p>
         <p className="section-intro">Common pay schedules include:</p>
 

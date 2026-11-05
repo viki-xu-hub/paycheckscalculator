@@ -6,6 +6,8 @@ import {
   BIWEEKLY_DATES_IMAGE,
   BIWEEKLY_HUB_IMAGE,
   BIWEEKLY_PAGES,
+  BIWEEKLY_UPDATED,
+  BIWEEKLY_UPDATED_LABEL,
   cents,
   dollars,
   fridaySchedule,
@@ -27,6 +29,9 @@ const DESCRIPTION =
 const COVER_ALT =
   "Biweekly pay chart for 2026 showing pay before taxes and take-home per check in Texas for salaries from $45,000 to $100,000 and wages from $22 to $35 an hour";
 const FED_HOLIDAYS = "https://www.federalreserve.gov/aboutthefed/k8.htm";
+const QUICKBOOKS_HOLIDAYS = "https://quickbooks.intuit.com/learn-support/en-us/help-articles/how-do-holidays-impact-payroll-direct-deposit/00/262047";
+const PATRIOT_HOLIDAYS = "https://www.patriotsoftware.com/payroll/training/blog/what-happens-if-payroll-falls-on-bank-holiday-delay/";
+const REVERSE_CHECKS = [1000, 1500, 2000, 2500, 3000, 3500, 4000, 5000, 6000];
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -75,7 +80,7 @@ export default function BiweeklyPayHub() {
     },
     {
       q: "What happens when a biweekly payday falls on a holiday?",
-      a: "Federal Reserve Banks close on June 19 and December 25, 2026 and January 1, 2027, all Fridays on one of these cycles, so direct deposit cannot settle on those days. Employers usually pay the business day before, and your payroll team can confirm the date.",
+      a: "Federal Reserve Banks close on June 19 and December 25, 2026 and January 1, 2027, all Fridays on one of these cycles, so direct deposit cannot settle on those days. Payroll providers generally advise paying a business day early, but no federal law requires it and state rules vary, so ask your payroll team for the date.",
     },
     {
       q: "How do I know which biweekly cycle I am on?",
@@ -99,7 +104,7 @@ export default function BiweeklyPayHub() {
       url: CANONICAL,
       description: DESCRIPTION,
       datePublished: PUBLISHED,
-      dateModified: PUBLISHED,
+      dateModified: BIWEEKLY_UPDATED,
       primaryImageOfPage: { "@type": "ImageObject", url: `${SITE}${BIWEEKLY_HUB_IMAGE}`, width: 1200, height: 630, caption: COVER_ALT },
     },
     {
@@ -210,6 +215,7 @@ export default function BiweeklyPayHub() {
           January 9. The first pays three checks in {list(first.y26.threeCheckMonths)} 2026, the second in {list(second.y26.threeCheckMonths)}.
           New to this schedule? See <a href="/biweekly-paycheck-calculator">what biweekly pay means and how to calculate it</a>.
         </p>
+        <p className="bw-updated">Updated {BIWEEKLY_UPDATED_LABEL} · 2026 IRS and state withholding tables</p>
         <figure className="bw-cover">
           <img src={BIWEEKLY_HUB_IMAGE} alt={COVER_ALT} width={1200} height={630} fetchPriority="high" decoding="async" />
         </figure>
@@ -221,8 +227,8 @@ export default function BiweeklyPayHub() {
         <section>
           <p>
             Find your cycle first. Take any recent payday and count back in two-week steps until you land on a date below. Bold dates sit in a
-            three-paycheck month. A dagger marks a Friday when Federal Reserve Banks are closed, so direct deposit cannot settle that day and
-            employers usually pay the business day before. Paid on another weekday? Shift each date by the same number of days, and check your
+            three-paycheck month. A dagger marks a Friday when Federal Reserve Banks are closed, so direct deposit cannot settle that day. Payroll
+            providers generally advise paying a business day early, though no federal law requires it and state rules vary. Paid on another weekday? Shift each date by the same number of days, and check your
             three-paycheck months again, because they can move.
           </p>
           <figure className="bracket-figure">
@@ -240,8 +246,9 @@ export default function BiweeklyPayHub() {
             {payDates(2027, first.y27, second.y27)}
           </div>
           <p className="bw-note">
-            † Holiday dates from the <a href={FED_HOLIDAYS} rel="noopener">Federal Reserve holiday schedule</a>. Your employer sets the actual
-            pay dates, so check them against your pay stub.
+            † Holiday dates from the <a href={FED_HOLIDAYS} rel="noopener">Federal Reserve holiday schedule</a>. Holiday payroll guidance from{" "}
+            <a href={QUICKBOOKS_HOLIDAYS} rel="noopener">QuickBooks</a> and <a href={PATRIOT_HOLIDAYS} rel="noopener">Patriot Software</a>. Your
+            employer sets the actual pay dates, so check them against your pay stub.
           </p>
         </section>
       </article>
@@ -315,6 +322,40 @@ export default function BiweeklyPayHub() {
             <a href="/blog/how-to-calculate-gross-monthly-income-from-biweekly-paycheck">gross monthly income from a biweekly paycheck</a> and{" "}
             <a href="/methodology">how we calculate paycheck taxes</a>.
           </p>
+        </section>
+      </article>
+
+      <article className="long-seo">
+        <p className="kicker">BIWEEKLY TO ANNUAL</p>
+        <h2>Biweekly to Annual: What a Check Adds Up To</h2>
+        <section>
+          <p>
+            Working from a pay stub? Multiply the gross check by 26 for annual pay, divide that by 12 for the monthly average, and divide the check
+            by 80 for the hourly rate on a 40-hour week.
+          </p>
+          <div className="bw-table-wrap">
+            <table className="bw-table">
+              <thead>
+                <tr>
+                  <th>Biweekly gross</th>
+                  <th>Per year</th>
+                  <th>Monthly average</th>
+                  <th>Per hour (80 hours)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {REVERSE_CHECKS.map(check => (
+                  <tr key={check}>
+                    <td>{dollars(check)}</td>
+                    <td>{dollars(check * 26)}</td>
+                    <td>{dollars((check * 26) / 12)}</td>
+                    <td>{cents(check / 80)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="bw-note">Before taxes, 26 pay periods. A two-check month pays less than the monthly average.</p>
         </section>
       </article>
 

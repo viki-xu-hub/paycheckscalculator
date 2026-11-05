@@ -8,7 +8,7 @@ import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { BANK_HOLIDAY_FRIDAYS, BIWEEKLY_DATES_IMAGE, BIWEEKLY_HUB_IMAGE, BIWEEKLY_PAGES, biweeklyFacts, biweeklyImages, dollars, fridaySchedule, type BiweeklyFacts, type BiweeklyPage } from "../app/lib/biweeklyPay";
+import { BANK_HOLIDAY_FRIDAYS, BIWEEKLY_DATES_IMAGE, BIWEEKLY_HUB_IMAGE, BIWEEKLY_PAGES, BIWEEKLY_STATE_PAGES, biweeklyFacts, biweeklyImages, biweeklyStateFacts, biweeklyStateImages, dollars, fridaySchedule, type BiweeklyFacts, type BiweeklyPage } from "../app/lib/biweeklyPay";
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const OUT = join(ROOT, "public/images/biweekly-pay");
@@ -63,14 +63,14 @@ function frame(file: string, w: number, h: number, title: string, desc: string, 
 }
 
 /* Where each check goes: one stacked bar per location, split by tax. */
-function splitChart(page: BiweeklyPage, f: BiweeklyFacts, file: string) {
+function splitChart(page: BiweeklyPage, f: BiweeklyFacts, file: string, override?: { rows: { name: string; net: number; state: number }[]; sub: string; desc: string }) {
   const W = 960;
   const H = 350;
   const left = 170;
   const barW = W - left - 40;
   const gross = f.single.gross;
   const fica = f.single.socialSecurity + f.single.medicare;
-  const rows = [
+  const rows = override?.rows ?? [
     { name: "Texas", net: f.noTaxNet, state: 0 },
     { name: f.lowest.name, net: f.lowest.net, state: f.lowest.tax },
   ];
@@ -102,9 +102,9 @@ function splitChart(page: BiweeklyPage, f: BiweeklyFacts, file: string) {
   frame(
     file, W, H,
     `Where a ${dollars(gross)} biweekly check goes on ${page.lower}`,
-    `On ${page.lower}, a ${dollars(gross)} biweekly check leaves ${dollars(f.noTaxNet)} after taxes in Texas and ${dollars(f.lowest.net)} in ${f.lowest.name}.`,
+    override?.desc ?? `On ${page.lower}, a ${dollars(gross)} biweekly check leaves ${dollars(f.noTaxNet)} after taxes in Texas and ${dollars(f.lowest.net)} in ${f.lowest.name}.`,
     `Where a ${dollars(gross)} biweekly check goes`,
-    `${page.label}, per check`,
+    override?.sub ?? `${page.label}, per check`,
     body,
   );
 }
@@ -179,14 +179,17 @@ function calendarChart(page: BiweeklyPage, f: BiweeklyFacts, file: string) {
 }
 
 /* The cover: the answer as a pay-stub card. Also the page's OG image. */
-function coverSvg(page: BiweeklyPage, f: BiweeklyFacts) {
+function coverSvg(page: BiweeklyPage, f: BiweeklyFacts, place?: { name: string; net: number; rivalName: string; rivalNet: number }) {
   const W = 1200;
   const H = 630;
   const NAVY = "#0d2945";
   const LIGHT = "#b9cbdc";
   const ACCENT = "#ffd166";
   const gross = f.single.gross;
-  const lowName = f.lowest.name;
+  const lanes = place
+    ? [{ label: place.name, net: place.net }, { label: place.rivalName, net: place.rivalNet }]
+    : [{ label: "Texas", net: f.noTaxNet }, { label: f.lowest.name, net: f.lowest.net }];
+  const gap = Math.abs(lanes[0].net - lanes[1].net);
   const scale = 1040;
   const lane = (y: number, label: string, net: number, big: string) => {
     const w = (net / gross) * scale;
@@ -201,26 +204,27 @@ function coverSvg(page: BiweeklyPage, f: BiweeklyFacts) {
     `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`,
     `<rect width="${W}" height="${H}" fill="${NAVY}"/>`,
     text(80, 86, "BIWEEKLY PAY AFTER TAXES · 2026", { size: 22, weight: 700, fill: ACCENT }),
-    text(80, 160, `${page.label} Is How Much Biweekly?`, { size: 52, weight: 700, fill: "#ffffff", serif: true }),
+    text(80, 160, place ? `${page.label} Biweekly in ${place.name}` : `${page.label} Is How Much Biweekly?`, { size: place && place.name.length > 10 ? 46 : 52, weight: 700, fill: "#ffffff", serif: true }),
     text(80, 236, "Before taxes", { size: 26, fill: LIGHT }),
     text(1120, 240, dollars(gross), { size: 44, weight: 700, anchor: "end", fill: "#ffffff" }),
     `<rect x="80" y="256" width="${scale}" height="18" rx="4" fill="#5b7894"/>`,
-    lane(340, "Texas", f.noTaxNet, dollars(f.noTaxNet)),
-    lane(444, lowName, f.lowest.net, dollars(f.lowest.net)),
-    text(80, 566, `Yellow is what reaches you. Same pay, ${dollars(f.gapToLowest)} a check apart.`, { size: 26, fill: "#ffffff" }),
+    lane(340, lanes[0].label, lanes[0].net, dollars(lanes[0].net)),
+    lane(444, lanes[1].label, lanes[1].net, dollars(lanes[1].net)),
+    text(80, 566, `Yellow is what reaches you. Same pay, ${dollars(gap)} a check apart.`, { size: 26, fill: "#ffffff" }),
     text(80, 600, "Single filer, standard W-4, no pre-tax deductions · paycheckscalculator.org", { size: 18, fill: LIGHT }),
     "</svg>",
   ].join("\n");
 }
 
-/* The hub cover: all nine pages as one chart, each bar scaled to the largest check. */
+/* The hub cover: nine pages as one chart, each bar scaled to the largest check. More rows would not fit. */
+const HUB_COVER_SLUGS = ["45000-a-year", "57000-a-year", "70000-a-year", "75000-a-year", "100000-a-year", "22-an-hour", "23-an-hour", "25-an-hour", "35-an-hour"];
 function hubCoverSvg() {
   const W = 1200;
   const H = 630;
   const NAVY = "#0d2945";
   const LIGHT = "#b9cbdc";
   const ACCENT = "#ffd166";
-  const rows = BIWEEKLY_PAGES.map(page => ({ page, f: biweeklyFacts(page) })).sort((a, b) => a.page.annual - b.page.annual);
+  const rows = BIWEEKLY_PAGES.filter(page => HUB_COVER_SLUGS.includes(page.slug)).map(page => ({ page, f: biweeklyFacts(page) })).sort((a, b) => a.page.annual - b.page.annual);
   const max = Math.max(...rows.map(r => r.f.single.gross));
   const left = 300;
   const scale = 640;
@@ -306,6 +310,23 @@ for (const page of BIWEEKLY_PAGES) {
   stateChart(page, f, file(images.states));
   calendarChart(page, f, file(images.calendar));
   renderPng(coverSvg(page, f), join(OUT, file(images.cover)));
+}
+for (const sp of BIWEEKLY_STATE_PAGES) {
+  const facts = biweeklyStateFacts(sp);
+  const images = biweeklyStateImages(sp);
+  const file = (path: string) => path.replace("/images/biweekly-pay/", "");
+  const rival = facts.f.states.find(s => s.short === facts.rival);
+  if (!rival) throw new Error(`Unknown location ${facts.rival}`);
+  const rows = [
+    { name: sp.loc.name, net: facts.net, state: facts.f.noTaxNet - facts.net },
+    { name: rival.name, net: rival.net, state: facts.f.noTaxNet - rival.net },
+  ];
+  splitChart(sp.page, facts.f, file(images.split), {
+    rows,
+    sub: `${sp.page.label} in ${sp.loc.name}, per check`,
+    desc: `On ${sp.page.lower}, a ${dollars(facts.f.single.gross)} biweekly check leaves ${dollars(facts.net)} after taxes in ${sp.loc.name} and ${dollars(rival.net)} in ${rival.name}.`,
+  });
+  renderPng(coverSvg(sp.page, facts.f, { name: sp.loc.name, net: facts.net, rivalName: rival.name, rivalNet: rival.net }), join(OUT, file(images.cover)));
 }
 renderPng(hubCoverSvg(), join(ROOT, "public", BIWEEKLY_HUB_IMAGE));
 renderPng(datesSvg(), join(ROOT, "public", BIWEEKLY_DATES_IMAGE));
