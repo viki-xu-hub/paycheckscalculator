@@ -3,7 +3,7 @@ import {
   SITE_ORIGIN,
   INDEXABLE_URLS,
 } from "./lib/indexableRoutes";
-import { salaryUrls, hourlyUrls, frequencyUrls } from "./lib/seo/sitemap-routes";
+import { salaryUrls, hourlyUrls, frequencyUrls, biweeklyPayUrls } from "./lib/seo/sitemap-routes";
 import { locations } from "./lib/locations";
 
 const NOW = new Date();
@@ -59,6 +59,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // "$X a year is how much biweekly" pages
+  const biweeklyPayPages: MetadataRoute.Sitemap = biweeklyPayUrls().map(url => ({
+    url,
+    lastModified: NOW,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   // Frequency hubs are also in INDEXABLE_URLS; keep the first entry for each URL.
   const seen = new Set<string>();
   return [
@@ -66,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...core,
     ...freqPages,
     ...biweeklyStatePages,
+    ...biweeklyPayPages,
     ...salaryPages,
     ...hourlyPages,
   ].filter(entry => !seen.has(entry.url) && seen.add(entry.url));

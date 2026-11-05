@@ -1,0 +1,498 @@
+{
+  "70000-a-year": {
+    "hook": "Plus the {{k5Saved}}-per-check move that gets you out of the {{rate}} bracket.",
+    "sections": [
+      {
+        "h2": "Why the First 5% in a 401(k) Goes Furthest at {{annual}}",
+        "p": [
+          "A {{annual}} salary sits just past the point where single-filer withholding jumps from 12% to {{rate}}. That position makes the first slice of a traditional 401(k) worth more than the next one.",
+          "The first {{over}} you contribute comes out of wages that would otherwise be withheld at {{rate}}, so every dollar you save costs 78 cents of take-home. Contributing 5%, or {{k5Saved}} a check, lowers your check by only {{k5Drop}}. Past that point you are back in the 12% range and each dollar costs 88 cents. Going from 5% to 10% saves just {{k10ExtraTax}} more in federal tax per check, against {{k5Tax}} for the first 5%.",
+          "None of this is a reason to stop at 5%. An employer match usually beats either tax rate, and the money can keep growing after the withholding math is done. It only means that when cash is tight, the first {{k5Saved}} a check buys the most federal tax relief. A Roth 401(k) works differently: contributions come out after tax, so your check falls by the full amount."
+        ]
+      },
+      {
+        "h2": "Married on {{annual}}: The 22% Line Is {{marriedRoom}} Away",
+        "p": [
+          "The same salary looks different on a joint W-4. The married table does not reach 22% until {{marriedLine}} of annual wages, so one earner at {{annual}} has {{marriedRoom}} of room and is withheld at 12% on the top dollar. That is most of why the check is {{married}} rather than {{noTax}}.",
+          "The picture changes when both spouses work. Checking Step 2 on each W-4 tells payroll to withhold at higher rates, closer to the single column. Two earners at {{annual}} who leave the box unchecked get the bigger {{married}} check through the year and can owe the difference when they file."
+        ]
+      },
+      {
+        "h2": "New York City, Not Oregon, Is the Low Point at {{annual}}",
+        "p": [
+          "Of the 52 locations on this site, {{lowName}} leaves the smallest check at {{low}}. New York State outside the city is {{net:NY}}, so the city's own resident income tax accounts for about {{nycLocal}} every two weeks. Oregon follows at {{net:OR}}. California is {{net:CA}}, {{caVsLow}} above the city.",
+          "North Dakota has an income tax, but it takes just {{tax:ND}} a check at this salary. Washington has no income tax, yet its paid leave and long-term care programs take {{tax:WA}}. When you compare job offers across states, no income tax and no deductions are not the same thing."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What tax bracket is {{annual}} in for 2026?",
+        "a": "On a standard single W-4, the top dollar of a {{annual}} salary is withheld at {{rate}}, because wages are {{over}} past the {{line}} line. Everything below that line is withheld at 12% or less, so your overall federal rate is far lower than {{rate}}."
+      },
+      {
+        "q": "How much is {{short}} biweekly after a 5% 401(k)?",
+        "a": "About {{k5Net}} in Texas. You put {{k5Saved}} a check into the plan, and your take-home falls by {{k5Drop}} because the contribution is not subject to federal income tax. Social Security and Medicare still apply to the full {{gross}}."
+      }
+    ],
+    "links": [
+      {
+        "href": "/401k-paycheck-impact-calculator",
+        "label": "401(k) paycheck impact calculator"
+      },
+      {
+        "href": "/new-york-paycheck-calculator",
+        "label": "New York paycheck calculator"
+      }
+    ],
+    "notes": {
+      "perCheck": "Federal income tax is now the larger deduction in Texas, {{federal}} against {{fica}} for Social Security and Medicare. {{lowName}} takes another {{gap}} on top. The married column assumes one earner with Step 2 of the W-4 unchecked, and it shows {{marriedPlus}} more per check than the single column.",
+      "bracket": "Run the same math at three contribution levels and watch the last column. Federal tax saved goes from {{k3Tax}} a check at 3% to {{k5Tax}} at 5%, then reaches only {{k10Tax}} at 10%, because the part past {{toLinePct}} of pay comes out of wages withheld at 12%.",
+      "month": [
+        "Most months pay {{twoCheck}}, {{monthGap}} under the {{avgMonth}} average, and two months pay {{threeCheck}}. Next year adds a wrinkle. Fridays that started January 2, 2026 reach both January 1 and December 31 in 2027, which makes 27 paydays unless the January 1 check moves to December 31 for the holiday. If your employer divides salaries by 27 in a year like that, each gross check falls from {{gross}} to {{check27}}."
+      ],
+      "state": "Mid-table states sit well above that low point. Georgia leaves {{net:GA}}, North Carolina {{net:NC}}, Arizona {{net:AZ}} and Colorado {{net:CO}}."
+    }
+  },
+  "45000-a-year": {
+    "hook": "Budget on {{twoCheck}} a month, not {{avgMonth}}: the gap biweekly math hides.",
+    "sections": [
+      {
+        "h2": "At {{annual}}, Oregon Takes More Than New York City",
+        "p": [
+          "This is the pay level where the ranking of high-tax places flips. Oregon leaves {{net:OR}} a check and New York City leaves {{net:NYC}}, a gap of {{orVsNyc}} in the city's favor. Above roughly $50,000 a year the order reverses, and New York City becomes the lowest on the list.",
+          "The reason is the shape of Oregon's tax. It reaches its 8.75% rate on taxable income well below {{annual}}, and its transit tax, paid leave and workers' benefit charges come on top. New York's combined state and city rates start lower, so they only catch up at higher pay.",
+          "North Dakota is the other surprise at this salary. It has an income tax, but its first bracket is taxed at 0%, and {{annual}} stays inside it on a single W-4. State withholding is $0, the same as Texas. In Washington, which has no income tax, you actually keep less at {{net:WA}}, because paid leave and long-term care programs take {{tax:WA}} a check."
+        ]
+      },
+      {
+        "h2": "How {{saversGap}} in a 401(k) Can Unlock the Saver's Credit at {{annual}}",
+        "p": [
+          "For 2026 a single filer qualifies for the Saver's Credit with adjusted gross income up to {{saversLimit}}. A {{annual}} salary misses by {{saversGap}}, but traditional 401(k) contributions lower your adjusted gross income dollar for dollar.",
+          "Contributing {{saversGap}} over the year is {{saversGapCheck}} a check, or {{saversGapPct}} of pay. Because that money escapes federal withholding, your check falls by about {{saversDrop}}, not {{saversGapCheck}}. At this income the credit is 10% of up to $2,000 in contributions, so it can take as much as $200 off your tax bill when you file Form 8880.",
+          "You must be at least 18 and cannot be a full-time student or claimed as someone's dependent, and income from other sources counts toward the limit. Pre-tax health premiums lower your wages too, so you may need to contribute less than this."
+        ]
+      },
+      {
+        "h2": "Why {{annual}} Feels Smaller Than {{grossMonth}} a Month",
+        "p": [
+          "Divide {{annual}} by 12 and you get {{grossMonth}}, but no month pays that. A normal two-check month brings in {{twoCheck}} after taxes in Texas, which is {{salaryVsTwo}} less.",
+          "One workable setup is to set fixed bills against the {{twoCheck}} figure and treat the two extra checks as a separate pot. Together they add another {{twoCheck}} a year, close to a full month of income, and they suit costs that do not arrive monthly, such as car repairs or insurance premiums paid twice a year."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is {{short}} biweekly in Oregon?",
+        "a": "About {{net:OR}} after taxes for a single filer, the lowest of any location on this site at this salary. Oregon withholds income tax plus transit, paid leave and workers' benefit charges, which together take {{tax:OR}} a check."
+      },
+      {
+        "q": "Is {{annual}} a year above the typical U.S. wage?",
+        "a": "No. The Bureau of Labor Statistics puts the national median annual wage at $50,980 (May 2025), so {{annual}} is about $5,980 below the midpoint."
+      }
+    ],
+    "links": [
+      {
+        "href": "/401k-paycheck-impact-calculator",
+        "label": "401(k) paycheck impact calculator"
+      },
+      {
+        "href": "/oregon-paycheck-calculator",
+        "label": "Oregon paycheck calculator"
+      }
+    ],
+    "notes": {
+      "perCheck": "At this salary federal income tax is the smaller deduction: {{federal}} a check against {{fica}} for Social Security and Medicare. {{lowName}} adds {{gap}} in state charges, which is why its check lands at {{low}}. Filing jointly adds {{marriedPlus}} and head of household adds {{headPlus}}.",
+      "bracket": "{{annual}} has {{under}} of room before single-filer withholding reaches {{nextRate}} at {{nextLine}}, so a $1,000 raise adds a steady {{raise1k}} a year after federal and payroll taxes. For the same reason, every 401(k) dollar here saves 12 cents of federal tax whether you contribute 3% or 10%.",
+      "month": [
+        "On {{noTax}} a check, ten months a year deposit {{twoCheck}} and two months deposit {{threeCheck}}. The yearly average of {{avgMonth}} never actually lands in your account, and rent is where that shows up first. The old guideline of 30% of gross income suggests {{rent}} a month, which is {{rentShare}} of a two-check month. In 2026 the three-check months were {{threeA}} for Fridays that started January 2, and {{threeB}} for those that started January 9."
+      ],
+      "state": "{{noTaxCount}} places withhold no state tax at this pay: {{noTaxList}}. Alaska has no income tax either, but its unemployment insurance costs {{tax:AK}} a check."
+    }
+  },
+  "22-an-hour": {
+    "hook": "Two checks cover {{twoCheck}} a month, not {{avgMonth}}. See your state.",
+    "sections": [
+      {
+        "h2": "One Missed Shift at $22 an Hour Costs {{shiftNet}}, Not {{shiftGross}}",
+        "p": [
+          "An unpaid 8-hour shift removes {{shiftGross}} of gross pay, but your check only falls by {{shiftNet}}, because federal tax, Social Security and Medicare all shrink with it. Payroll treats each check as if you earned that amount all year, so a short check also lands in a lighter withholding calculation.",
+          "Where this bites is the monthly budget. If both checks in a month come up one shift short, the month brings in {{twoShortMonth}} rather than {{twoCheck}}. With hours that move around, it is safer to build fixed bills on your low-hours check than on the 80-hour figure. Paid time off is different: those hours count as regular pay, so the check stays at {{gross}} gross."
+        ]
+      },
+      {
+        "h2": "Overtime at $22 an Hour Looks Over-Taxed, but It Isn't",
+        "p": [
+          "Eight overtime hours at {{otRate}} add {{otRaw}} to your gross, and your check rises by {{otPlus}}, so you keep about {{otKeep}} of it. That is the same {{rate}} federal rate plus Social Security and Medicare that applies to your last regular dollar, not a special overtime tax.",
+          "You would need more than {{otHoursToLine}} overtime hours in one pay period before any of that check is withheld at {{nextRate}}. Even then, the extra amount is withholding rather than your final bill. What you owe is settled on your tax return.",
+          "The federal overtime deduction helps later, not on the check. It covers the premium half of FLSA overtime, which is {{otPremium}} an hour at this wage, up to $12,500 a year for a single filer through 2028. It is claimed on your return, so your employer's withholding does not change unless you adjust your W-4."
+        ]
+      },
+      {
+        "h2": "What a $1 Raise Is Worth at $22 an Hour",
+        "p": [
+          "A $1 raise adds $80 of gross pay to an 80-hour check. In Texas, {{plusOneNet}} of that reaches you, or about {{plusOneYear}} a year. In Oregon you keep {{plusOneOregon}} because the state's rate applies as well.",
+          "Full-time pay of {{annual}} also has {{under}} of room before the {{nextRate}} withholding line, so raises stay in the same tax range for a long time. A salaried job at {{annual}} pays the same {{gross}} gross check, but it does not move with your schedule, which is worth weighing if your hours change from week to week."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is $22 an hour biweekly with overtime?",
+        "a": "With 8 overtime hours in the pay period, gross pay is {{otGross}} and take-home is about {{otNet}} in Texas for a single filer. That compares with {{noTax}} on a regular 80-hour check."
+      },
+      {
+        "q": "Is $22 an hour above the U.S. median wage?",
+        "a": "No. The Bureau of Labor Statistics puts the national median hourly wage at $24.51 (May 2025), about $2.51 above $22. Full time, $22 an hour comes to {{annual}} a year."
+      }
+    ],
+    "links": [
+      {
+        "href": "/overtime-calculator",
+        "label": "Overtime calculator"
+      },
+      {
+        "href": "/no-tax-on-overtime",
+        "label": "How the federal overtime deduction works"
+      }
+    ],
+    "notes": {
+      "perCheck": "On a full 80 hours, Social Security and Medicare take {{fica}}, slightly more than the {{federal}} of federal income tax. Both shrink when hours fall. A joint W-4 adds {{marriedPlus}} and head of household adds {{headPlus}}.",
+      "bracket": "Full-time pay of {{annual}} has {{under}} of room before the {{nextRate}} line, so a 401(k) here saves 12 cents on the dollar. A percentage contribution also moves with your hours: 5% is {{k5Saved}} on a full check and less on a short one.",
+      "month": [
+        "Monthly totals depend on your hours as well as the calendar. At a full 80 hours, ten months deposit {{twoCheck}} and two deposit {{threeCheck}}, against an average of {{avgMonth}}. Thirty percent of gross pay for rent would be {{rent}}, or {{rentShare}} of a two-check month, and {{rentShareShort}} if both checks come up a shift short."
+      ],
+      "state": "Midwestern states land in the middle: Ohio {{net:OH}}, Michigan {{net:MI}}, Indiana {{net:IN}} and Kentucky {{net:KY}}, all before any local income tax.",
+      "hours": "Each row below is one pay period, withheld as if every check that year looked the same. That is why the short rows lose less than their gross and the long row keeps less of its extra pay."
+    }
+  },
+  "57000-a-year": {
+    "hook": "Your next {{under}} in raises keeps more than the dollars after it.",
+    "sections": [
+      {
+        "h2": "Your Next {{under}} at {{annual}} Is Worth More Than the Dollars After It",
+        "p": [
+          "Single-filer withholding stays at {{rate}} until wages reach {{nextLine}}, and {{annual}} has {{under}} of room left. Every raise inside that gap keeps about 80 cents on the dollar in a no-income-tax state. Past the line, the same dollar keeps about 70 cents.",
+          "In check terms, a raise all the way to {{nextLine}} lifts your take-home from {{noTax}} to {{tx:66500}}, or {{raiseToLineCheck}} more every two weeks. It also changes how you read job offers: {{annual}} and $62,000 differ by {{txDiff:62000}} a check, not the $192 the gross figures suggest.",
+          "The same position shapes a 401(k) decision. A traditional 5% contribution of {{k5Saved}} a check lowers your take-home by {{k5Drop}}, while a Roth contribution lowers it by the full {{k5Saved}}. At this income, picking traditional saves {{k5Tax}} a check today, a smaller gap than someone already past the 22% line would see."
+        ]
+      },
+      {
+        "h2": "A Side Job on Top of {{annual}}: Why Neither Check Shows the Tax",
+        "p": [
+          "Each employer withholds as if its paycheck were your only income. Add a $12,000 side job to {{annual}} and the second employer withholds no federal income tax at all, because $12,000 on its own is below the $16,100 where single-filer withholding starts.",
+          "Together the two jobs come to $69,000, which is over the {{nextLine}} line. That extra $12,000 carries about $1,690 of federal income tax, and neither check has paid it. Checking Step 2 on your W-4 forms, or asking one employer to withhold about $65 more a check in Step 4(c), closes the gap before April."
+        ]
+      },
+      {
+        "h2": "North Dakota Still Withholds $0 at {{annual}}, but Only Just",
+        "p": [
+          "North Dakota has an income tax, yet its withholding table charges a single filer nothing on the first $57,625 of wages. {{annual}} sits $625 below that point. At $70,000 the state takes about {{taxAt:ND:70000}} a check, still one of the smallest amounts on the list.",
+          "The middle of the 52 locations at this pay is {{typicalName}} at {{typical}}. Pennsylvania's flat tax leaves {{net:PA}} before any local earned income tax, and Illinois leaves {{net:IL}}. California still beats New York State here, {{net:CA}} against {{net:NY}}, but that order flips by $70,000. {{lowName}} is at the bottom with {{low}}, {{gap}} below Texas."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is {{short}} biweekly in California?",
+        "a": "About {{net:CA}} after taxes for a single filer with a standard W-4 and no pre-tax deductions. That is {{tax:CA}} less than the same check in Texas, because California income tax and state disability insurance come out."
+      },
+      {
+        "q": "Is {{annual}} close to the 22% tax bracket?",
+        "a": "Yes. For a single filer, withholding moves to 22% at {{nextLine}} of annual wages, {{under}} above this salary. Only the part of your pay above that line would be withheld at 22%, so a raise past it does not change the tax on what you already earn."
+      }
+    ],
+    "links": [
+      {
+        "href": "/401k-paycheck-impact-calculator",
+        "label": "401(k) paycheck impact calculator"
+      },
+      {
+        "href": "/how-much-tax-is-taken-from-my-paycheck",
+        "label": "How much tax is taken from a paycheck"
+      }
+    ],
+    "notes": {
+      "perCheck": "Federal income tax and payroll taxes are nearly level here, {{federal}} and {{fica}} in Texas, so you keep {{keepPct}} of each check. By $70,000 federal tax is clearly the bigger bite. A joint W-4 adds {{marriedPlus}} a check, and head of household adds {{headPlus}}.",
+      "bracket": "Because the top of this salary is withheld at {{rate}}, each traditional 401(k) dollar saves 12 cents of federal tax at any of the percentages below. The rate only changes for wages above {{nextLine}}, where the slice over that line would save 22 cents.",
+      "month": [
+        "If your employer offers semimonthly pay, the same {{annual}} becomes {{semiGross}} gross and {{semiNet}} net per check, 24 times a year. Every month then pays {{semiTwo}}, the same as the biweekly average. On a biweekly schedule most months pay {{twoCheck}}, {{monthGap}} below that average, and two months pay {{threeCheck}}."
+      ],
+      "state": "To match a Texas check in {{lowName}}, this salary would need a raise of about {{matchRaise}}. The range from top to bottom is {{gap}} a check, and the middle of the list loses {{tax:NJ}}."
+    }
+  },
+  "75000-a-year": {
+    "hook": "Monthly, that is {{avgMonth}} on average but {{twoCheck}} most months.",
+    "sections": [
+      {
+        "h2": "$75k a Year Is How Much a Month After Taxes?",
+        "p": [
+          "About {{avgMonth}} a month on average for a single filer in Texas. A biweekly job does not pay an average, though. Ten months of the year you receive two checks, {{twoCheck}}, and the other two months you receive three, {{threeCheck}}.",
+          "Your state moves the monthly answer by hundreds of dollars. New York City averages {{month:NYC}} a month, or {{two:NYC}} in a two-check month. California averages {{month:CA}}, New York State outside the city {{month:NY}}, and Pennsylvania {{month:PA}} before any local earned income tax."
+        ]
+      },
+      {
+        "h2": "What It Takes to Get Back Under the 22% Line at {{annual}}",
+        "p": [
+          "{{annual}} is {{over}} past the point where single-filer withholding moves from 12% to {{rate}}. Clearing that with a traditional 401(k) takes {{toLinePct}} of pay, or {{toLineCheck}} a check, and your take-home falls by {{toLineDrop}}. At $70,000 the same move takes only 5%.",
+          "A 401(k) is not the only pre-tax route. HSA contributions and health premiums taken through a payroll cafeteria plan also skip Social Security and Medicare, which a 401(k) does not. Putting $100 a check into an HSA this way lowers your take-home by about {{pretax100Drop}}, against {{k100Drop}} for the same $100 in a 401(k). The 2026 HSA limit is $4,400 for self-only coverage, and you need an eligible high-deductible health plan to contribute."
+        ]
+      },
+      {
+        "h2": "What a Raise From $70,000 to {{annual}} Actually Adds",
+        "p": [
+          "A $5,000 raise adds $192 to each gross check. In Texas {{txDiff:70000}} of that reaches you, about {{keepFrom:70000}}, because the whole raise sits above the 22% line and also pays 7.65% for Social Security and Medicare.",
+          "State tax takes its share as well. The same raise adds {{stateDiff:NYC:70000}} a check in New York City and {{stateDiff:OR:70000}} in Oregon. This matters when a new job offers a raise and a move at once: going from $70,000 in Texas to {{annual}} in New York City leaves your check {{txMinusLow:70000}} smaller, not larger."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "{{short}} is how much a month after taxes?",
+        "a": "About {{avgMonth}} on average in a no-income-tax state, based on annual take-home divided by 12. On a biweekly schedule most months actually pay {{twoCheck}}, with two months a year paying {{threeCheck}}."
+      },
+      {
+        "q": "How much is {{annual}} a year biweekly in California?",
+        "a": "About {{net:CA}} per check after taxes for a single filer, {{tax:CA}} less than Texas. That leaves {{two:CA}} in a normal two-check month."
+      }
+    ],
+    "links": [
+      {
+        "href": "/hsa-calculator",
+        "label": "HSA tax savings calculator"
+      },
+      {
+        "href": "/monthly-paycheck-calculator",
+        "label": "Monthly paycheck calculator"
+      }
+    ],
+    "notes": {
+      "perCheck": "Of each {{gross}} check in Texas, {{federal}} goes to federal income tax and {{fica}} to payroll taxes, leaving {{keepPct}}. Head of household at {{head}} sits closer to the married figure of {{married}} than to the single filer's {{noTax}}.",
+      "bracket": "All three contribution levels below stay inside the {{over}} slice that is withheld at {{rate}}, even 10%, which is {{k10Saved}} a check. So the federal saving holds at 22 cents on the dollar all the way down the table.",
+      "month": [
+        "The 30% rent guideline works out to {{rent}} a month at this salary. That is {{rentShare}} of a two-check month, and a much easier share of a three-check month. Which months those were in 2026 depends on your cycle: {{threeA}}, or {{threeB}}."
+      ],
+      "state": "Higher-cost states land between those figures: Massachusetts {{net:MA}}, New Jersey {{net:NJ}}, Virginia {{net:VA}} and Maryland {{net:MD}}."
+    }
+  },
+  "100000-a-year": {
+    "hook": "Over a year that gap is {{gapYear}}. See your state and filing status.",
+    "sections": [
+      {
+        "h2": "How Much Is $100k a Year Monthly After Taxes?",
+        "p": [
+          "About {{avgMonth}} a month on average for a single filer in Texas, and {{twoCheck}} in the ten months that pay two checks. In New York City the average is {{month:NYC}} and a two-check month is {{two:NYC}}.",
+          "A six-figure salary keeps about {{keepPct}} of each check in a no-income-tax state. Federal income tax takes {{federal}} and Social Security and Medicare take {{fica}}. Crossing $100,000 does not change the tax by itself: withholding has been at {{rate}} since {{line}} and stays there until {{nextLine}}."
+        ]
+      },
+      {
+        "h2": "California Joins the Bottom Five at {{annual}}",
+        "p": [
+          "Up to $75,000 the five smallest checks on this site are New York City, Oregon, Connecticut, Washington DC and Minnesota. At {{annual}} California replaces Minnesota, at {{net:CA}} a check, because its withholding table has climbed from 8.8% to 10.23% on the top dollar.",
+          "The gap between Texas and {{lowName}} is also the largest of any salary here: {{gap}} a check, or {{gapYear}} a year. That is worth pricing into a relocation or a remote-work move, although housing and other living costs can easily outweigh it. Washington has no income tax, yet its paid leave and long-term care programs still take {{tax:WA}} a check."
+        ]
+      },
+      {
+        "h2": "What Maxing a 401(k) Does to a {{annual}} Check",
+        "p": [
+          "The 2026 employee limit of {{k401Limit}} works out to {{maxKCheck}} a check, or {{maxKPct}} of pay. All of it comes out of wages withheld at {{rate}}, so your check falls by {{maxKDrop}}, to {{maxKNet}}.",
+          "Your 401(k) also affects your IRA options. With a workplace plan, a single filer's traditional IRA deduction phases out between $81,000 and $91,000 of modified adjusted gross income in 2026, so at {{annual}} with no 401(k) contributions there is no deduction. Contributions of $9,000 or more bring that income to $91,000 or less, and part of the deduction can come back. Roth IRA contributions remain fully available at this income, because that phase-out starts at $153,000."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is {{short}} biweekly in California?",
+        "a": "About {{net:CA}} per check after taxes for a single filer, {{tax:CA}} less than Texas. California income tax and state disability insurance account for the difference."
+      },
+      {
+        "q": "Is {{annual}} a year taxed at 24%?",
+        "a": "No. On a standard single W-4 the top dollar is withheld at {{rate}}, and the 24% rate starts at {{nextLine}} of annual wages. Federal withholding of {{federal}} a check works out to about 13% of gross pay overall."
+      }
+    ],
+    "links": [
+      {
+        "href": "/401k-paycheck-impact-calculator",
+        "label": "401(k) paycheck impact calculator"
+      },
+      {
+        "href": "/california-paycheck-calculator",
+        "label": "California paycheck calculator"
+      }
+    ],
+    "notes": {
+      "perCheck": "Federal income tax is far larger than payroll tax at this level, {{federal}} against {{fica}}. Filing jointly with one earner adds {{marriedPlus}} a check, a bigger gain than at any lower salary on this site, because the joint table keeps wages in the 12% range up to {{marriedLine}}.",
+      "bracket": "Every row below stays in the {{rate}} range, so the federal saving is proportional: 22 cents on each dollar. You have {{under}} of room before withholding reaches {{nextRate}} at {{nextLine}}, and a {{raise1k}} after-tax gain on each $1,000 raise until then.",
+      "month": [
+        "Two months a year pay {{threeCheck}} instead of {{twoCheck}}. Together those extra checks add {{twoCheck}} over the year, not far from the $7,500 IRA limit for 2026. Paying fixed bills from the two-check figure and treating the third checks as savings is one way to use the schedule."
+      ],
+      "state": "Flat-tax states hold up better at six figures than progressive ones: Illinois leaves {{net:IL}}, Pennsylvania {{net:PA}} before local tax, Colorado {{net:CO}} and Massachusetts {{net:MA}}."
+    }
+  },
+  "23-an-hour": {
+    "hook": "A 35-hour week or a child on your W-4 changes it again.",
+    "sections": [
+      {
+        "h2": "A 35-Hour Week at $23 an Hour: What the Check Becomes",
+        "p": [
+          "Not every full-time job schedules 40 hours. At 35 hours a week a biweekly check covers 70 hours: {{hoursGross:70}} gross and {{hours:70}} after taxes in Texas, or {{hoursAnnual:70}} a year before tax. Those 10 missing hours cost $230 of gross pay, but your check only falls by {{hoursDrop:70}}.",
+          "A 32-hour week drops the check to {{hoursGross:64}} gross and {{hours:64}} take-home. Hours can affect more than pay. Under the Affordable Care Act, large employers treat 30 hours a week as full time, so a schedule below that line can change whether you are offered health coverage. At 30 hours a week your check would be {{hours:60}}."
+        ]
+      },
+      {
+        "h2": "Head of Household With One Child at $23 an Hour",
+        "p": [
+          "A single parent filing as head of household starts at {{head}} a check, {{headPlus}} above a single filer. Claiming one child under 17 in Step 3 of the W-4 takes $2,200 a year off withholding, about {{childCheck}} a check.",
+          "At this wage that nearly wipes out federal withholding. {{hohFederal}} becomes {{hohFedLeft}}, and take-home rises to {{hohChildNet}}. Social Security and Medicare stay at {{fica}}, because the credit only reduces income tax. With two children withholding reaches zero, and any credit left over waits for your tax return instead of arriving in your check."
+        ]
+      },
+      {
+        "h2": "Oregon Is Still the Low Point at $23 an Hour, by Just {{orVsNyc}}",
+        "p": [
+          "Oregon leaves {{net:OR}} a check and New York City leaves {{net:NYC}}. That thin margin does not last: by $25 an hour the two have swapped places. Connecticut is close behind at {{net:CT}}, and the middle of the list is {{typicalName}} at {{typical}}.",
+          "The national median wage is $24.51 an hour, according to the Bureau of Labor Statistics. Reaching it from $23 would add {{medianPlusGross}} of gross pay and about {{medianPlusNet}} of take-home to each check in Texas."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is $23 an hour biweekly in California?",
+        "a": "About {{net:CA}} per check after taxes for a single filer working 80 hours, {{tax:CA}} less than Texas."
+      },
+      {
+        "q": "How much is $23 an hour biweekly at 30 hours a week?",
+        "a": "A 60-hour pay period is {{hoursGross:60}} gross and about {{hours:60}} after taxes in Texas for a single filer with a standard W-4."
+      }
+    ],
+    "links": [
+      {
+        "href": "/texas-paycheck-calculator-with-dependents",
+        "label": "Paycheck calculator with dependents"
+      },
+      {
+        "href": "/hourly-paycheck-calculator",
+        "label": "Hourly paycheck calculator"
+      }
+    ],
+    "notes": {
+      "perCheck": "Federal income tax of {{federal}} and payroll taxes of {{fica}} are within a few dollars of each other at this wage. On a joint W-4 federal withholding falls to {{marriedFederal}}, which is most of the {{marriedPlus}} gain in the married column.",
+      "bracket": "A single filer would need to contribute {{saversGap}} a year, {{saversGapPct}} of pay, to reach the {{saversLimit}} Saver's Credit limit. Head of household filers have a higher limit of $60,375, so a single parent at this wage can already qualify for the 10% credit on up to $2,000 of contributions.",
+      "month": [
+        "A full schedule deposits {{twoCheck}} in most months and {{threeCheck}} in two of them, averaging {{avgMonth}}. On the 35-hour schedule those figures become {{twoHours:70}} and {{threeHours:70}}, so a job with fewer hours needs its budget set well below the full-time number."
+      ],
+      "state": "Lower-tax Southern and Western states stay close to Texas: Arizona leaves {{net:AZ}}, North Carolina {{net:NC}} and Alabama {{net:AL}}.",
+      "hours": "Two shifts short costs {{hoursDrop:64}} of take-home at this wage. Eight overtime hours add {{otPlus}} and stay well under the {{nextRate}} line."
+    }
+  },
+  "25-an-hour": {
+    "hook": "And $25 an hour is only $52,000 if every hour is paid.",
+    "sections": [
+      {
+        "h2": "$25 an Hour Is $52,000 Only if Every Hour Is Paid",
+        "p": [
+          "The $52,000 figure assumes 2,080 paid hours a year. If holidays and vacation are unpaid and you work 2,000 hours, the year comes to $50,000. A salaried job at $50,000 pays {{tx:50000}} every check after taxes in Texas, whatever the calendar does.",
+          "That makes the number of paid hours the real question when you compare the two. With a full 2,080 paid hours the hourly job is ahead by {{txDiff:50000}} a check on average. With only 2,000 paid hours they tie over the year, and the hourly job has smaller checks in the weeks you miss. Ask how many holidays and vacation days are paid before treating $25 an hour as the better offer."
+        ]
+      },
+      {
+        "h2": "New York City Drops Below Oregon at $25 an Hour",
+        "p": [
+          "Up to about $50,000 a year, Oregon leaves the smallest check on this site. {{annual}} is just past that crossover: New York City leaves {{net:NYC}} and Oregon {{net:OR}}. Connecticut is only a few dollars higher at {{net:CT}}.",
+          "New York State outside the city leaves {{net:NY}}, so the city's own income tax accounts for about {{nycLocal}} a check. At the other end, North Dakota still withholds nothing at this pay, the same as Texas. The middle of the list is {{typicalName}} at {{typical}}.",
+          "$25 an hour is also {{medianGap}} above the national median wage of $24.51 reported by the Bureau of Labor Statistics, which makes it the first rate on this site where you earn more than the typical U.S. worker."
+        ]
+      },
+      {
+        "h2": "Heavy Overtime Reaches the 22% Line at $25 an Hour",
+        "p": [
+          "Payroll treats each check as if you earned that amount all year. The {{nextRate}} line at {{nextLine}} works out to about $2,558 a check, so more than {{otHoursToLine}} overtime hours in one pay period push the top of that check past it.",
+          "Sixteen overtime hours, or 8 a week, make a {{hoursGross:104}} gross check and {{hours:104}} of take-home. If the rest of your year is regular hours, you have probably been over-withheld on that check, and the difference usually comes back when you file. The federal overtime deduction helps at filing too: it covers the premium half of FLSA overtime, {{otPremium}} an hour at this wage."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is $25 an hour biweekly in California?",
+        "a": "About {{net:CA}} per check after taxes for a single filer working 80 hours, {{tax:CA}} less than Texas."
+      },
+      {
+        "q": "How much is $25 an hour biweekly with 10 hours of overtime?",
+        "a": "Ten overtime hours at {{otRate}} bring the check to {{hoursGross:95}} gross and about {{hours:95}} after taxes in Texas for a single filer. A regular 80-hour check is {{noTax}}."
+      }
+    ],
+    "links": [
+      {
+        "href": "/overtime-calculator",
+        "label": "Overtime calculator"
+      },
+      {
+        "href": "/salary/50000-after-tax-calculator",
+        "label": "$50,000 a year after tax in every state"
+      }
+    ],
+    "notes": {
+      "perCheck": "This is the first hourly rate on this site where federal income tax, {{federal}}, passes Social Security and Medicare, {{fica}}. The gross check is an easy number too: 80 hours at $25 is exactly {{gross}}.",
+      "bracket": "A 5% contribution on {{gross}} is a clean {{k5Saved}} a check, and your take-home falls by {{k5Drop}} because this pay is withheld at {{rate}}. You have {{under}} of annual room before the {{nextRate}} line at {{nextLine}}.",
+      "month": [
+        "The round numbers make the budget easy to see. Before taxes a two-check month is $4,000 and a three-check month is $6,000. After taxes in Texas they become {{twoCheck}} and {{threeCheck}}, with {{avgMonth}} as the yearly average."
+      ],
+      "state": "Florida matches Texas at {{net:FL}}. California leaves {{net:CA}}, and Washington, with no income tax but required payroll programs, leaves {{net:WA}}.",
+      "hours": "At this wage even the 88-hour row stays under the 22% line, because it annualizes to {{hoursAnnual:92}}."
+    }
+  },
+  "35-an-hour": {
+    "hook": "Overtime keeps about {{otKeep}} of each dollar, and a 1099 changes the math.",
+    "sections": [
+      {
+        "h2": "Overtime at $35 an Hour Keeps About 70 Cents on the Dollar",
+        "p": [
+          "At this wage you are already past the 22% line, so every overtime dollar is withheld at {{rate}} plus 7.65% for Social Security and Medicare. Eight overtime hours at {{otRate}} add {{otRaw}} of gross pay and {{otPlus}} to your check, about {{otKeep}}. At $22 an hour the same eight hours keep about 80%.",
+          "The federal overtime deduction does more at this rate, because the premium half of FLSA overtime is {{otPremium}} an hour. The $12,500 cap for a single filer takes about {{otCapHours}} overtime hours a year to reach, or roughly 14 a week. It is claimed on your return, so it does not raise this check unless you adjust your W-4."
+        ]
+      },
+      {
+        "h2": "$35 an Hour on a 1099 Is Not the Same Check",
+        "p": [
+          "A W-2 employee pays 7.65% for Social Security and Medicare, {{fica}} a check here, and the employer pays a matching amount. A 1099 contractor pays both halves as self-employment tax: 15.3% on 92.35% of net earnings, about {{seCheck}} every two weeks on the same {{annual}}.",
+          "Nobody withholds that for you, so you set it aside yourself and pay quarterly estimated taxes. Half of the self-employment tax is deductible, the qualified business income deduction may apply, and business expenses lower the bill. You also give up paid leave, any employer 401(k) match and employer health coverage, so the same $35 buys less on a contract."
+        ]
+      },
+      {
+        "h2": "One Missed Shift Drops a $35-an-Hour Check Under the 22% Line",
+        "p": [
+          "A full 80-hour check annualizes to {{annual}}, which is {{over}} past the 22% line. Miss one 8-hour shift and the 72-hour check annualizes to {{hoursAnnual:72}}, just under it. Gross falls by $280 to {{hoursGross:72}}, and take-home falls by {{hoursDrop:72}} to {{hours:72}}.",
+          "Salaries on either side show the same position. $70,000 pays {{tx:70000}} a check and $75,000 pays {{tx:75000}}, with $35 an hour in between at {{noTax}}, as long as all 2,080 hours are paid."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How much is $35 an hour biweekly in California?",
+        "a": "About {{net:CA}} per check after taxes for a single filer working 80 hours, {{tax:CA}} less than Texas."
+      },
+      {
+        "q": "Is $35 an hour taxed at 22%?",
+        "a": "Only the top slice. Full-time pay of {{annual}} is {{over}} past the line where single-filer withholding reaches 22%, and everything below it is withheld at 12% or less. Federal withholding of {{federal}} a check is about 10% of gross pay overall."
+      }
+    ],
+    "links": [
+      {
+        "href": "/self-employment-tax-calculator",
+        "label": "Self-employment tax calculator"
+      },
+      {
+        "href": "/overtime-calculator",
+        "label": "Overtime calculator"
+      }
+    ],
+    "notes": {
+      "perCheck": "A {{gross}} check gives up {{federal}} of federal income tax and {{fica}} of payroll taxes. On a joint W-4 federal withholding falls to {{marriedFederal}}, because the married table keeps this pay at 12%. Head of household takes home {{head}}.",
+      "bracket": "{{annual}} is {{over}} past the {{rate}} line. Contributing {{toLinePct}}, about {{toLineCheck}} a check, takes taxable wages back to it and lowers take-home by {{toLineDrop}}. Check whether your plan counts overtime as eligible pay, because a percentage contribution may rise with it.",
+      "month": [
+        "Regular hours deposit {{twoCheck}} in most months and {{threeCheck}} in two of them. With 8 overtime hours in every pay period, a two-check month rises to {{twoOt}}, although every one of those overtime dollars is withheld at {{rate}}."
+      ],
+      "state": "Virginia leaves {{net:VA}}, Maryland {{net:MD}}, Colorado {{net:CO}} and Washington {{net:WA}}, where required payroll programs take the place of an income tax.",
+      "hours": "The full check sits past the 22% line and the short ones do not, so this table moves less evenly than it does at lower wages."
+    }
+  }
+}

@@ -59,6 +59,9 @@ export default function SalaryHubPage() {
             Use the interactive calculator on each page to adjust for your actual filing status,
             state, 401(k) contributions, and deductions.
           </p>
+          <p style={{ color: "#5f7485", fontSize: 14, lineHeight: 1.75, marginTop: 10 }}>
+            Paid every two weeks? The <a href="/biweekly-pay" style={{ color: "var(--blue)" }}>biweekly pay chart</a> shows what each check looks like before and after taxes.
+          </p>
         </div>
       </div>
       <SiteFooter />

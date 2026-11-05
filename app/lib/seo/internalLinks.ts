@@ -2,6 +2,7 @@ import type { StateData, SalaryData, HourlyData, InternalLink } from "./types";
 import statesRaw from "../../data/states.json";
 import salaryRaw from "../../data/salary.json";
 import hourlyRaw from "../../data/hourly-rates.json";
+import { biweeklyPageForRate, biweeklyPageForSalary } from "../biweeklyPay";
 
 const states = statesRaw as StateData[];
 const salaries = salaryRaw as SalaryData[];
@@ -59,6 +60,9 @@ export function salaryPageLinks(current: SalaryData): InternalLink[] {
   const h = hourlyRates.find(x => x.rate === current.hourlyEquivalent) ?? hourlyRates.reduce((prev, curr) => Math.abs(curr.rate - current.hourlyEquivalent) < Math.abs(prev.rate - current.hourlyEquivalent) ? curr : prev);
   links.push({ href: `/hourly/${h.slug}`, title: `$${h.rate} an Hour Is How Much a Year?`, description: `${current.label} a year ≈ $${hourly} an hour — see the hourly view →` });
 
+  const biweeklyPage = biweeklyPageForSalary(current.amount);
+  if (biweeklyPage) links.push({ href: `/biweekly-pay/${biweeklyPage.slug}`, title: `${current.label} a Year Is How Much Biweekly After Taxes?`, description: "Each check by state and filing status →" });
+
   // Hub + interactive calculator
   links.push({ href: "/salary", title: "All Salaries: $25,000 to $300,000 a Year", description: "Browse every salary-to-hourly page →" });
   links.push({ href: "/hourly-paycheck-calculator", title: "Hourly Paycheck Calculator", description: "Enter any rate, hours and overtime →" });
@@ -97,6 +101,9 @@ export function hourlyPageLinks(current: HourlyData): InternalLink[] {
   const targetAnnual = current.annualAt40h;
   const nearestSalary = salaries.reduce((prev, curr) => Math.abs(curr.amount - targetAnnual) < Math.abs(prev.amount - targetAnnual) ? curr : prev);
   links.push({ href: `/salary/${nearestSalary.slug}`, title: `${nearestSalary.label} a Year Is How Much an Hour?`, description: `${dollar(current)} an hour ≈ ${nearestSalary.label} a year — see the salary view →` });
+
+  const biweeklyPage = biweeklyPageForRate(current.rate);
+  if (biweeklyPage) links.push({ href: `/biweekly-pay/${biweeklyPage.slug}`, title: `${dollar(current)} an Hour Is How Much Biweekly After Taxes?`, description: "Each check by state, hours and overtime →" });
 
   // Hub + interactive hourly calculator
   links.push({ href: "/hourly-paycheck-calculator", title: "All Hourly Rates: $10 to $150 an Hour", description: "Browse every hourly wage to yearly salary page →" });

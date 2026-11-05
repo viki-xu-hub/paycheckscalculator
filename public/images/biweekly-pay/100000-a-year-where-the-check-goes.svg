@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="350" viewBox="0 0 960 350" role="img" aria-labelledby="t d">
+<title id="t">Where a $3,846 biweekly check goes on $100,000 a year</title>
+<desc id="d">On $100,000 a year, a $3,846 biweekly check leaves $3,045 after taxes in Texas and $2,698 in New York City.</desc>
+<rect width="960" height="350" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Where a $3,846 biweekly check goes</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$100,000 a Year, per check</text>
+<rect x="32" y="92" width="12" height="12" rx="2" fill="#1769aa"/>
+<text x="50" y="103" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Take-home</text>
+<rect x="125" y="92" width="12" height="12" rx="2" fill="#c9502b"/>
+<text x="143" y="103" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Federal income tax</text>
+<rect x="281" y="92" width="12" height="12" rx="2" fill="#0e9384"/>
+<text x="299" y="103" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Social Security and Medicare</text>
+<rect x="507" y="92" width="12" height="12" rx="2" fill="#8f62c9"/>
+<text x="525" y="103" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">State and local tax</text>
+<rect x="170.0" y="136" width="591.8" height="24" fill="#1769aa"/>
+<rect x="763.8" y="136" width="96.8" height="24" fill="#c9502b"/>
+<path d="M862.5 136H915.9Q919.9 136 919.9 140V156Q919.9 160 915.9 160H862.5Z" fill="#0e9384"/>
+<text x="156" y="153" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" fill="#122a3d">Texas</text>
+<text x="170" y="186" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$3,045 take-home</text>
+<text x="320" y="186" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">$507 federal · $294 Social Security and Medicare</text>
+<rect x="170.0" y="240" width="524.1" height="24" fill="#1769aa"/>
+<rect x="696.1" y="240" width="96.8" height="24" fill="#c9502b"/>
+<rect x="794.9" y="240" width="55.4" height="24" fill="#0e9384"/>
+<path d="M852.3 240H915.9Q919.9 240 919.9 244V260Q919.9 264 915.9 264H852.3Z" fill="#8f62c9"/>
+<text x="156" y="257" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" fill="#122a3d">New York City</text>
+<text x="170" y="290" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$2,698 take-home</text>
+<text x="320" y="290" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#5f7485">$507 federal · $294 Social Security and Medicare · $347 state and local</text>
+<text x="32" y="334" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · Single filer, standard W-4, no pre-tax deductions, 2026 withholding tables</text>
+</svg>

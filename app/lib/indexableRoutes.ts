@@ -9,6 +9,7 @@ export const SITE_ORIGIN = "https://www.paycheckscalculator.org";
 const CORE_INDEXABLE_PATHS = [
   "",
   "/biweekly-paycheck-calculator",
+  "/biweekly-pay",
   "/weekly-paycheck-calculator",
   "/semimonthly-paycheck-calculator",
   "/monthly-paycheck-calculator",

@@ -396,7 +396,8 @@ export default function HourlyPaycheck() {
         <h2>Hourly Paycheck Calculator for Weekly, Biweekly, and Monthly Pay</h2>
         <p className="section-intro">
           Your paycheck frequency affects how often you receive income, but your total annual
-          earnings remain based on your hourly wage and hours worked.
+          earnings remain based on your hourly wage and hours worked. For a two-week schedule, the{" "}
+          <a href="/biweekly-pay" style={{ color: "var(--blue)" }}>biweekly pay chart</a> shows each check before and after taxes.
         </p>
         <p className="section-intro">Common pay schedules include:</p>
 

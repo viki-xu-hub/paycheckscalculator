@@ -166,6 +166,7 @@ export function SiteFooter({ showPartnerZone = false }: { showPartnerZone?: bool
       <div className="footer-blog">
         <p className="footer-blog-title">From the Blog</p>
         <div className="footer-blog-grid">
+          <a href="/biweekly-pay">Biweekly Pay Chart &amp; 2026–27 Pay Dates</a>
           <a href="/blog/how-to-calculate-gross-monthly-income-from-biweekly-paycheck">Gross Monthly Income From Biweekly Pay</a>
           <a href="/blog/how-to-calculate-taxes-on-paycheck-in-texas">How to Calculate Taxes on a Texas Paycheck</a>
           <a href="/blog/how-to-calculate-401k-from-paycheck">How to Calculate 401k From Paycheck</a>
