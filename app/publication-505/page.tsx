@@ -9,7 +9,7 @@ const PRIOR = String(capitalGains.year - 1);
 const PATH = "/publication-505";
 const CANONICAL = `https://www.paycheckscalculator.org${PATH}`;
 const TITLE = `IRS Publication 505 (${YEAR}): Withholding and Estimated Tax`;
-const DESCRIPTION = `What IRS Publication 505 for ${YEAR} covers, which of its worksheets you need, and the ${YEAR} estimated tax rules: the $1,000 test, 90%/100%/110% safe harbors and due dates.`;
+const DESCRIPTION = `What IRS Publication 505 (${YEAR}) covers, which of its worksheets you need, and the ${YEAR} estimated tax rules: the $1,000 test, safe harbors and due dates.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -147,6 +147,17 @@ export default function Publication505Page() {
         <p className="kicker">WORKSHEETS</p>
         <h2>Publication 505 Worksheets: Which Ones You Need</h2>
         <section>
+          <figure className="bracket-figure">
+            <img
+              src="/images/tax-worksheets/publication-505-worksheets.svg"
+              alt={`How Publication 505 Worksheets 2-2 through 2-8 feed lines 1, 2a, 4 and 9 of the ${YEAR} Estimated Tax Worksheet`}
+              width={880}
+              height={380}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Each supporting worksheet is named for the Estimated Tax Worksheet line it feeds.</figcaption>
+          </figure>
           <p>
             The main {YEAR} Estimated Tax Worksheet is short because the hard parts are pushed into supporting
             worksheets. Each one is named for the line it feeds. You only need the ones that match your situation.

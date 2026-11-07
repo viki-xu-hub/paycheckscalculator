@@ -7,7 +7,7 @@ const YEAR = String(capitalGains.year);
 const PATH = "/form-1040-line-16";
 const CANONICAL = `https://www.paycheckscalculator.org${PATH}`;
 const TITLE = `Form 1040 Line 16: How to Figure Your Tax (${YEAR})`;
-const DESCRIPTION = `What goes on Form 1040 line 16, which method to use (Tax Table, Tax Computation Worksheet or a capital gain worksheet), what the three checkboxes mean, and a ${YEAR} example.`;
+const DESCRIPTION = `What goes on Form 1040 line 16: which method to use (Tax Table, Tax Computation Worksheet or a capital gain worksheet), its checkboxes, and a ${YEAR} example.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -115,6 +115,17 @@ export default function Form1040Line16Page() {
         <p className="kicker">WHICH METHOD</p>
         <h2>Which Method to Use for Line 16</h2>
         <section>
+          <figure className="bracket-figure">
+            <img
+              src="/images/tax-worksheets/form-1040-line-16-methods.svg"
+              alt={`Decision chart for Form 1040 line 16: Schedule D Tax Worksheet, Qualified Dividends and Capital Gain Tax Worksheet, Tax Computation Worksheet or Tax Table`}
+              width={880}
+              height={380}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Two questions decide which method figures line 16.</figcaption>
+          </figure>
           <p>
             Work down this list and use the first method that fits. Most returns use one of the first three.
           </p>

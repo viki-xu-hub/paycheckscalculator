@@ -8,7 +8,7 @@ import { capitalGains, money, money2, runWorksheet, statusByKey } from "../lib/q
 const YEAR = String(capitalGains.year);
 const CANONICAL = "https://www.paycheckscalculator.org/qualified-dividends-and-capital-gain-tax-worksheet";
 const TITLE = `Qualified Dividends and Capital Gain Tax Worksheet ${YEAR}`;
-const DESCRIPTION = `Fill out the ${YEAR} Qualified Dividends and Capital Gain Tax Worksheet line by line: what each line takes, its Form 1040 line, common mistakes, a filled-in example and a printable PDF.`;
+const DESCRIPTION = `The ${YEAR} Qualified Dividends and Capital Gain Tax Worksheet line by line: what each line takes, common mistakes, a worked example and a printable PDF.`;
 
 export const metadata: Metadata = {
   title: TITLE,

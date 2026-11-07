@@ -7,7 +7,7 @@ const YEAR = String(capitalGains.year);
 const PATH = "/tax-computation-worksheet";
 const CANONICAL = `https://www.paycheckscalculator.org${PATH}`;
 const TITLE = `${YEAR} Tax Computation Worksheet (Form 1040)`;
-const DESCRIPTION = `The ${YEAR} Tax Computation Worksheet for taxable income of $100,000 or more: the multiplication and subtraction amounts for every filing status, with a worked example.`;
+const DESCRIPTION = `The ${YEAR} Tax Computation Worksheet for taxable income of $100,000 or more: multiplication and subtraction amounts for all filing statuses, with an example.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -124,6 +124,17 @@ export default function TaxComputationWorksheetPage() {
         <p className="kicker">HOW IT WORKS</p>
         <h2>How the Tax Computation Worksheet Works</h2>
         <section>
+          <figure className="bracket-figure">
+            <img
+              src="/images/tax-worksheets/tax-computation-worksheet.svg"
+              alt={`${YEAR} Tax Computation Worksheet example: $150,000 × 24% = $36,000, minus the $7,402 subtraction amount, gives $28,598 of tax`}
+              width={880}
+              height={380}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Column (d) removes the over-charge from taxing every dollar at the top bracket rate.</figcaption>
+          </figure>
           <p>
             Each row has five columns. Column (a) is your taxable income. Column (b) is the rate for the bracket that
             income falls in. Column (c) multiplies the two. Column (d) is a fixed subtraction amount, and your tax is (c)

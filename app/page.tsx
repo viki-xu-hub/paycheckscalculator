@@ -272,6 +272,19 @@ export default function Home() {
         <p>For specific tax advice, consult a qualified tax professional.</p>
       </section>
 
+      {/* Tax return worksheets */}
+      <section className="seo-section">
+        <p className="kicker">TAX RETURN WORKSHEETS</p>
+        <h2>2026 Form 1040 Tax Worksheets</h2>
+        <div className="tool-links">
+          <a href="/qualified-dividends-and-capital-gain-tax-worksheet"><b>Qualified Dividends and Capital Gain Tax Worksheet</b><span>All 25 lines, calculator and printable PDF →</span></a>
+          <a href="/tax-computation-worksheet"><b>2026 Tax Computation Worksheet</b><span>Tax on $100,000 or more →</span></a>
+          <a href="/estimated-tax-worksheet"><b>2026 Estimated Tax Worksheet</b><span>Form 1040-ES quarterly payments →</span></a>
+          <a href="/form-1040-line-16"><b>Form 1040 Line 16</b><span>Which method figures your tax →</span></a>
+          <a href="/publication-505"><b>IRS Publication 505 (2026)</b><span>Withholding and estimated tax worksheets →</span></a>
+        </div>
+      </section>
+
       {/* Related Tools */}
       <section className="seo-section">
         <p className="kicker">MORE PAYCHECK TOOLS</p>

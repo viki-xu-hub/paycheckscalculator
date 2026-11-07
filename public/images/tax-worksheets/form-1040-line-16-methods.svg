@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="380" viewBox="0 0 880 380" role="img" aria-labelledby="t d">
+  <title id="t">Which method figures Form 1040 line 16</title>
+  <desc id="d">With qualified dividends or capital gain, use the Schedule D Tax Worksheet if Schedule D line 18 or 19 has an amount, otherwise the Qualified Dividends and Capital Gain Tax Worksheet. Without them, use the Tax Computation Worksheet at $100,000 or more of taxable income, otherwise the Tax Table.</desc>
+  <style>.h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}.s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}.cap{font:700 13px Arial,Helvetica,sans-serif;fill:#1c2333}.m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}.w{font:700 13px Arial,Helvetica,sans-serif;fill:#fff}.b{fill:#fff;stroke:#c9d3dd}</style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa7b4"/></marker></defs>
+  <rect width="880" height="380" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="36" text-anchor="middle" class="h">Choosing the method for Form 1040 line 16</text>
+  <rect x="270" y="62" width="340" height="44" class="b" rx="7"/><text x="440" y="89" text-anchor="middle" class="cap">Qualified dividends or capital gain?</text>
+  <line x1="360" y1="106" x2="230" y2="148" stroke="#9aa7b4" stroke-width="2" marker-end="url(#a)"/> <text x="270" y="132" class="m">Yes</text>
+  <line x1="520" y1="106" x2="650" y2="148" stroke="#9aa7b4" stroke-width="2" marker-end="url(#a)"/> <text x="598" y="132" class="m">No</text>
+  <rect x="60" y="150" width="340" height="44" class="b" rx="7"/><text x="230" y="177" text-anchor="middle" class="cap">Schedule D line 18 or 19 has an amount?</text>
+  <rect x="480" y="150" width="340" height="44" class="b" rx="7"/><text x="650" y="177" text-anchor="middle" class="cap">Taxable income $100,000 or more?</text>
+  <line x1="170" y1="194" x2="130" y2="236" stroke="#9aa7b4" stroke-width="2" marker-end="url(#a)"/> <text x="122" y="220" class="m">Yes</text>
+  <line x1="290" y1="194" x2="330" y2="236" stroke="#9aa7b4" stroke-width="2" marker-end="url(#a)"/> <text x="320" y="220" class="m">No</text>
+  <line x1="590" y1="194" x2="550" y2="236" stroke="#9aa7b4" stroke-width="2" marker-end="url(#a)"/> <text x="542" y="220" class="m">Yes</text>
+  <line x1="710" y1="194" x2="750" y2="236" stroke="#9aa7b4" stroke-width="2" marker-end="url(#a)"/> <text x="740" y="220" class="m">No</text>
+  <rect x="30" y="238" width="190" height="56" fill="#9aa7b4" rx="7"/><text x="125" y="262" text-anchor="middle" class="w">Schedule D</text><text x="125" y="281" text-anchor="middle" class="w">Tax Worksheet</text>
+  <rect x="240" y="238" width="190" height="56" fill="#3d5af1" rx="7"/><text x="335" y="262" text-anchor="middle" class="w">Qualified Dividends</text><text x="335" y="281" text-anchor="middle" class="w">and Capital Gain</text>
+  <rect x="450" y="238" width="190" height="56" fill="#c9741a" rx="7"/><text x="545" y="262" text-anchor="middle" class="w">Tax Computation</text><text x="545" y="281" text-anchor="middle" class="w">Worksheet</text>
+  <rect x="660" y="238" width="190" height="56" fill="#149c86" rx="7"/><text x="755" y="270" text-anchor="middle" class="w">Tax Table</text>
+  <text x="440" y="340" text-anchor="middle" class="m">Every path ends on Form 1040 line 16. The capital gain worksheets use the Tax Table or Tax Computation Worksheet internally.</text>
+</svg>

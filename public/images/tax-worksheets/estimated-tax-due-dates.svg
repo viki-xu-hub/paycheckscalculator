@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="380" viewBox="0 0 880 380" role="img" aria-labelledby="t d">
+  <title id="t">2026 estimated tax payment due dates</title>
+  <desc id="d">Four payments: April 15, 2026 for January to March income, June 15, 2026 for April and May, September 15, 2026 for June to August, and January 15, 2027 for September to December.</desc>
+  <style>.h{font:700 17px Arial,Helvetica,sans-serif;fill:#1c2333}.s{font:13px Arial,Helvetica,sans-serif;fill:#5f6b7a}.cap{font:700 13px Arial,Helvetica,sans-serif;fill:#1c2333}.m{font:12px Arial,Helvetica,sans-serif;fill:#5f6b7a}.w{font:700 13px Arial,Helvetica,sans-serif;fill:#fff}.b{fill:#fff;stroke:#c9d3dd}</style>
+  <rect width="880" height="380" fill="#f7f8fa" rx="12"/>
+  <text x="440" y="36" text-anchor="middle" class="h">2026 estimated tax: four payments, uneven periods</text>
+  <text x="440" y="59" text-anchor="middle" class="s">Each payment is one quarter of line 14a of the Estimated Tax Worksheet</text>
+  <rect x="60" y="150" width="760" height="8" fill="#c9d3dd" rx="4"/>
+  <g>
+    <circle cx="120" cy="154" r="16" fill="#3d5af1"/><text x="120" y="159" text-anchor="middle" class="w">1</text>
+    <text x="120" y="120" text-anchor="middle" class="cap">April 15, 2026</text>
+    <text x="120" y="200" text-anchor="middle" class="m">Covers Jan 1 – Mar 31</text>
+    <text x="120" y="218" text-anchor="middle" class="m">3 months</text>
+  </g>
+  <g>
+    <circle cx="330" cy="154" r="16" fill="#3d5af1"/><text x="330" y="159" text-anchor="middle" class="w">2</text>
+    <text x="330" y="120" text-anchor="middle" class="cap">June 15, 2026</text>
+    <text x="330" y="200" text-anchor="middle" class="m">Covers Apr 1 – May 31</text>
+    <text x="330" y="218" text-anchor="middle" class="m">2 months</text>
+  </g>
+  <g>
+    <circle cx="540" cy="154" r="16" fill="#3d5af1"/><text x="540" y="159" text-anchor="middle" class="w">3</text>
+    <text x="540" y="120" text-anchor="middle" class="cap">September 15, 2026</text>
+    <text x="540" y="200" text-anchor="middle" class="m">Covers Jun 1 – Aug 31</text>
+    <text x="540" y="218" text-anchor="middle" class="m">3 months</text>
+  </g>
+  <g>
+    <circle cx="760" cy="154" r="16" fill="#c9741a"/><text x="760" y="159" text-anchor="middle" class="w">4</text>
+    <text x="760" y="120" text-anchor="middle" class="cap">January 15, 2027</text>
+    <text x="760" y="200" text-anchor="middle" class="m">Covers Sep 1 – Dec 31</text>
+    <text x="760" y="218" text-anchor="middle" class="m">4 months</text>
+  </g>
+  <rect x="150" y="262" width="580" height="64" class="b" rx="8"/>
+  <text x="440" y="289" text-anchor="middle" class="cap">Skip payment 4 by filing your 2026 return by February 1, 2027</text>
+  <text x="440" y="309" text-anchor="middle" class="m">and paying the full balance with it</text>
+</svg>

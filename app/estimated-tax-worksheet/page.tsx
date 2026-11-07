@@ -9,7 +9,7 @@ const PRIOR = String(capitalGains.year - 1);
 const PATH = "/estimated-tax-worksheet";
 const CANONICAL = `https://www.paycheckscalculator.org${PATH}`;
 const TITLE = `${YEAR} Estimated Tax Worksheet (Form 1040-ES), Line by Line`;
-const DESCRIPTION = `Fill out the ${YEAR} Estimated Tax Worksheet from Form 1040-ES line by line: the 90%/100%/110% safe harbor, the $1,000 test, ${YEAR} due dates and a filled-in freelancer example.`;
+const DESCRIPTION = `The ${YEAR} Estimated Tax Worksheet (Form 1040-ES) line by line: the 90%/100%/110% safe harbor, the $1,000 test, ${YEAR} due dates and a freelancer example.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -263,6 +263,17 @@ export default function EstimatedTaxWorksheetPage() {
         <p className="kicker">DUE DATES</p>
         <h2>{YEAR} Estimated Tax Due Dates</h2>
         <section>
+          <figure className="bracket-figure">
+            <img
+              src="/images/tax-worksheets/estimated-tax-due-dates.svg"
+              alt={`${YEAR} estimated tax due dates: April 15, June 15 and September 15, ${YEAR}, and January 15, ${NEXT}`}
+              width={880}
+              height={380}
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>The four payment periods are uneven: three, two, three and four months.</figcaption>
+          </figure>
           <div className="table-wrap">
             <table>
               <thead><tr><th>Payment</th><th>Due</th><th>Covers income earned</th></tr></thead>
