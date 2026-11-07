@@ -75,7 +75,7 @@ const exL15 = exL12c / 4;
 const faqs = [
   {
     q: `Do I have to make ${YEAR} estimated tax payments?`,
-    a: `Generally yes, if you expect to owe at least $1,000 for ${YEAR} after withholding and refundable credits, and your withholding and credits will cover less than the smaller of 90% of your ${YEAR} tax or 100% of your ${PRIOR} tax. You are exempt if you had no tax liability for a full 12-month ${PRIOR}.`,
+    a: `Run lines 14a and 14b and the worksheet answers it. If line 14a is zero or less, or line 14b is under $1,000, you don't need to pay. Otherwise you do, unless you owed no tax at all for a full 12-month ${PRIOR}.`,
   },
   {
     q: `What are the ${YEAR} estimated tax due dates?`,
@@ -91,7 +91,7 @@ const faqs = [
   },
   {
     q: "How do I figure line 4 if I have qualified dividends or capital gains?",
-    a: `Line 4 tells you to see Publication 505. Its Worksheet 2-7 is the estimated-tax version of the Qualified Dividends and Capital Gain Tax Worksheet, so your dividends and long-term gains get the 0%, 15% and 20% rates instead of ordinary rates.`,
+    a: `Don't use the rate schedules directly. Run your projected taxable income, qualified dividends and long-term gain through Publication 505 Worksheet 2-7, which follows the same 25 steps as the Form 1040 worksheet, and enter its result on line 4.`,
   },
   {
     q: "Can I raise my withholding instead of paying estimated tax?",
