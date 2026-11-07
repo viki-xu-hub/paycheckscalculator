@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import QualifiedDividendsWorksheet from "../components/QualifiedDividendsWorksheet";
 import PrintWorksheetButton from "../components/PrintWorksheetButton";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
+import WorksheetCluster from "../components/WorksheetCluster";
 import { capitalGains, money, money2, runWorksheet, statusByKey } from "../lib/qualifiedDividends";
 
 const YEAR = String(capitalGains.year);
 const CANONICAL = "https://www.paycheckscalculator.org/qualified-dividends-and-capital-gain-tax-worksheet";
 const TITLE = `Qualified Dividends and Capital Gain Tax Worksheet ${YEAR}`;
-const DESCRIPTION = `Work the Qualified Dividends and Capital Gain Tax Worksheet for ${YEAR} line by line, or print the blank ${YEAR} worksheet as a PDF. See a filled-in example and the 0%, 15% and 20% split.`;
+const DESCRIPTION = `Fill out the ${YEAR} Qualified Dividends and Capital Gain Tax Worksheet line by line: what each line takes, its Form 1040 line, common mistakes, a filled-in example and a printable PDF.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -50,6 +51,67 @@ const WORKSHEET_LINES: [number, string][] = [
   [23, "Add lines 18, 21, and 22."],
   [24, "Figure the tax on the amount on line 1. Use the Tax Table if line 1 is less than $100,000, or the Tax Computation Worksheet if it is $100,000 or more."],
   [25, "Tax on all taxable income. Enter the smaller of line 23 or line 24, and include it on Form 1040 or 1040-SR, line 16."],
+];
+
+// Line-by-line guide: [line, what to enter, where the figure comes from, the usual mistake].
+// Form 1040 line numbers follow the 2025 form, the latest final version.
+type GuideRow = [number, string, string, string];
+const LINE_GROUPS: { title: string; intro: string; rows: GuideRow[] }[] = [
+  {
+    title: "Lines 1–5: split taxable income into two piles",
+    intro: "The first five lines take your taxable income apart: the preferential pile (qualified dividends plus net long-term gain) and the ordinary pile (everything else).",
+    rows: [
+      [1, "Your taxable income", "Form 1040 line 15", "Entering adjusted gross income from line 11. Line 1 is after the standard or itemized deduction."],
+      [2, "Qualified dividends", "Form 1040 line 3a (1099-DIV box 1b)", "Entering total ordinary dividends from line 3b. Only the qualified subset goes here."],
+      [3, "Net capital gain", "Smaller of Schedule D line 15 or 16; or Form 1040 line 7a if no Schedule D is required", "Entering a loss, or the larger of the two Schedule D lines. A loss or a blank becomes 0."],
+      [4, "Total preferential income", "Line 2 + line 3", "None common. Line 4 can exceed line 1; line 10 corrects for that."],
+      [5, "Ordinary income", "Line 1 − line 4, never below 0", "Forgetting to floor at zero when dividends and gains exceed taxable income."],
+    ],
+  },
+  {
+    title: "Lines 6–9: how much is taxed at 0%",
+    intro: "Ordinary income fills the 0% band first. Whatever room is left under the line 6 ceiling is the amount taxed at 0%.",
+    rows: [
+      [6, "The 0% ceiling for your filing status", `${money(single.zeroRateMax)} single or MFS; ${money(married.zeroRateMax)} MFJ or qualifying surviving spouse; ${money(head.zeroRateMax)} head of household`, "Copying last year's figure from an old worksheet or software printout."],
+      [7, "Smaller of line 1 or line 6", "Worksheet", "None common."],
+      [8, "Smaller of line 5 or line 7", "Worksheet", "Using line 4 instead of line 5. Line 8 is how much of the 0% band ordinary income has already used."],
+      [9, "Amount taxed at 0%", "Line 7 − line 8", "Assuming everything under the ceiling is 0%. Only the room above your ordinary income is."],
+    ],
+  },
+  {
+    title: "Lines 10–17: how much is taxed at 15%",
+    intro: "These lines measure the 15% band the same way: start from the 15% ceiling, take off what ordinary income and the 0% slice already filled, and cap the result at the preferential income left.",
+    rows: [
+      [10, "Smaller of line 1 or line 4", "Worksheet", "Skipping it. When preferential income exceeds taxable income, this is what caps it."],
+      [11, "Line 9 again", "Worksheet", "None common."],
+      [12, "Preferential income still to be taxed", "Line 10 − line 11", "None common."],
+      [13, "The 15% ceiling for your filing status", `${money(single.fifteenRateMax)} single; ${money(separate.fifteenRateMax)} MFS; ${money(married.fifteenRateMax)} MFJ or QSS; ${money(head.fifteenRateMax)} head of household`, "Using the single figure for married filing separately. The MFS ceiling is far lower."],
+      [14, "Smaller of line 1 or line 13", "Worksheet", "None common."],
+      [15, "Income already placed below the 15% band", "Line 5 + line 9", "Adding line 4 instead of line 5."],
+      [16, "Room left in the 15% band", "Line 14 − line 15, never below 0", "Carrying a negative number forward. If line 15 is larger, line 16 is 0."],
+      [17, "Amount taxed at 15%", "Smaller of line 12 or line 16", "Taking line 12 alone, which taxes income at 15% that belongs in the 20% band."],
+    ],
+  },
+  {
+    title: "Lines 18–21: apply the 15% and 20% rates",
+    intro: "Now the slices get their rates. Anything not taxed at 0% or 15% is taxed at 20%.",
+    rows: [
+      [18, "Tax on the 15% slice", "Line 17 × 0.15", "None common."],
+      [19, "Preferential income taxed at 0% or 15%", "Line 9 + line 17", "None common."],
+      [20, "Amount taxed at 20%", "Line 10 − line 19", "None common. For most filers this is 0."],
+      [21, "Tax on the 20% slice", "Line 20 × 0.20", "None common."],
+    ],
+  },
+  {
+    title: "Lines 22–25: add the ordinary tax and compare",
+    intro: "The ordinary pile is taxed on the regular schedule, then the whole result is checked against what you would owe with no preferential rates at all.",
+    rows: [
+      [22, "Ordinary tax on line 5", "Tax Table if under $100,000; Tax Computation Worksheet if $100,000 or more", "Multiplying line 5 by your top bracket rate. The rate schedule is progressive."],
+      [23, "Total under preferential rates", "Line 18 + line 21 + line 22", "None common."],
+      [24, "Ordinary tax on all of line 1", "Tax Table or Tax Computation Worksheet, same rule as line 22", "Skipping line 24 because line 23 looks right."],
+      [25, "Your tax", "Smaller of line 23 or line 24, carried to Form 1040 line 16", "Carrying line 23 when line 24 is smaller, which happens at low incomes."],
+    ],
+  },
 ];
 
 // Worked example: a married couple with $110,000 of wages, $15,000 of qualified
@@ -105,6 +167,14 @@ const faqs = [
     a: `Line 23 is the preferential-rate computation and line 24 is the tax you would owe if everything were taxed at ordinary rates. Line 25 takes the smaller of the two. That safety valve means the worksheet can never produce a larger bill than the plain rate schedule, which matters at low incomes where the ordinary brackets are already below 15%.`,
   },
   {
+    q: "What is line 16 on the Qualified Dividends and Capital Gain Tax Worksheet?",
+    a: `Line 16 is the room left in the 15% band: line 14 (the 15% ceiling or your taxable income, whichever is smaller) minus line 15 (ordinary income plus the amount already taxed at 0%). If the result is negative you enter 0, which means every remaining dollar of dividends and gain is taxed at 20%.`,
+  },
+  {
+    q: "Which Form 1040 lines does the worksheet use?",
+    a: `It reads taxable income from line 15, qualified dividends from line 3a and capital gain from line 7a (or Schedule D lines 15 and 16), and its answer on line 25 goes to Form 1040 line 16.`,
+  },
+  {
     q: "Do ordinary dividends count on this worksheet?",
     a: `Only the qualified portion. Form 1040 line 3b is total ordinary dividends and line 3a is the qualified subset of it. The worksheet uses line 3a. The non-qualified remainder stays in ordinary income and is taxed at your normal bracket.`,
   },
@@ -136,7 +206,7 @@ export default function QualifiedDividendsPage() {
     mainEntityOfPage: { "@type": "WebPage", "@id": CANONICAL },
     author: { "@type": "Organization", name: "Paycheck Calculator Editorial Team" },
     publisher: { "@type": "Organization", name: "Paycheck Atlas" },
-    dateModified: "2026-10-27",
+    dateModified: "2026-11-07",
   };
   const appSchema = {
     "@context": "https://schema.org",
@@ -265,6 +335,56 @@ export default function QualifiedDividendsPage() {
         </section>
       </article>
 
+      <article className="long-seo" id="line-by-line">
+        <p className="kicker">LINE BY LINE</p>
+        <h2>How to Fill Out the {YEAR} Worksheet, Line by Line</h2>
+        <section>
+          <p>
+            Finish Form 1040 through line 15 before you start: the worksheet reads three numbers from the return and
+            hands one back. Each line below shows what to enter, where the figure comes from, and the mistake people
+            most often make on it. Form 1040 line numbers refer to the 2025 form, the latest final version.
+          </p>
+          <div className="table-wrap">
+            <table>
+              <thead><tr><th>Worksheet line</th><th>Form 1040 line</th><th>Direction</th></tr></thead>
+              <tbody>
+                <tr><td><strong>1</strong></td><td>Line 15, taxable income</td><td>Into the worksheet</td></tr>
+                <tr><td><strong>2</strong></td><td>Line 3a, qualified dividends</td><td>Into the worksheet</td></tr>
+                <tr><td><strong>3</strong></td><td>Line 7a, or Schedule D lines 15 and 16</td><td>Into the worksheet</td></tr>
+                <tr className="rate-total"><td><strong>25</strong></td><td>Line 16, tax</td><td>Out of the worksheet</td></tr>
+              </tbody>
+            </table>
+          </div>
+          {LINE_GROUPS.map(group => (
+            <div key={group.title}>
+              <h3>{group.title}</h3>
+              <p>{group.intro}</p>
+              <div className="table-wrap wrap stack">
+                <table>
+                  <thead><tr><th>Line</th><th>Enter</th><th>Where it comes from</th><th>Common mistake</th></tr></thead>
+                  <tbody>
+                    {group.rows.map(([line, enter, from, mistake]) => (
+                      <tr key={line} id={`line-${line}`}>
+                        <td><strong>{line}</strong></td>
+                        <td data-label="Enter">{enter}</td>
+                        <td data-label="Where it comes from">{from}</td>
+                        <td data-label="Common mistake">{mistake}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+          <p>
+            Lines 22 and 24 send you to a second table. Under $100,000 it is the Tax Table in the 1040 instructions; at
+            $100,000 or more it is the{" "}
+            <a className="text-link" href="/tax-computation-worksheet">{YEAR} Tax Computation Worksheet</a>, which
+            turns the bracket schedule into one multiplication and one subtraction.
+          </p>
+        </section>
+      </article>
+
       <article className="long-seo">
         <p className="kicker">WORKED EXAMPLE</p>
         <h2>{YEAR} Qualified Dividends and Capital Gain Tax Worksheet Example, Filled In</h2>
@@ -302,6 +422,55 @@ export default function QualifiedDividendsPage() {
         </section>
       </article>
 
+      <article className="long-seo" id="worksheet-line-16">
+        <p className="kicker">LINE 16</p>
+        <h2>Qualified Dividends and Capital Gain Tax Worksheet Line 16, Explained</h2>
+        <section>
+          <p>
+            Line 16 is the step people search for most, because it is where the worksheet stops looking like
+            arithmetic. It answers one question: how much room is left in the 15% band after ordinary income and the 0%
+            slice have taken their share?
+          </p>
+          <ul className="checklist">
+            <li>Line 14: the 15% ceiling, or your taxable income if that is smaller</li>
+            <li>Line 15: ordinary income (line 5) plus the 0% slice (line 9)</li>
+            <li>Line 16: line 14 minus line 15, and 0 if that is negative</li>
+            <li>Line 17: the smaller of line 16 and the preferential income still untaxed (line 12)</li>
+          </ul>
+          <p>
+            In the example above, line 14 is {money(ex.l14)} and line 15 is {money(ex.l15)}, so line 16 is{" "}
+            {money(ex.l16)}. That is far more than the {money(ex.l12)} on line 12, so all {money(ex.l17)} lands at 15%
+            and nothing reaches 20%. Line 16 only limits the answer for high earners: once line 15 passes the line 13
+            ceiling, line 16 is 0 and every remaining dollar of dividends and gain falls through to the 20% rate on line
+            20.
+          </p>
+          <p>
+            Don&apos;t confuse it with <a className="text-link" href="/form-1040-line-16">Form 1040 line 16</a>. That is
+            where the worksheet&apos;s final answer, line 25, ends up.
+          </p>
+        </section>
+      </article>
+
+      <article className="long-seo">
+        <p className="kicker">COMMON MISTAKES</p>
+        <h2>Six Mistakes That Change the Answer</h2>
+        <section>
+          <ol>
+            <li><strong>Starting from AGI.</strong> Line 1 is taxable income from Form 1040 line 15, after the deduction. Using line 11 overstates every band calculation.</li>
+            <li><strong>Using total dividends.</strong> Line 2 is Form 1040 line 3a. Line 3b includes non-qualified dividends, which belong in ordinary income.</li>
+            <li><strong>Carrying a capital loss onto line 3.</strong> A net loss enters as 0. The loss has already reduced taxable income through Schedule D.</li>
+            <li><strong>Using the wrong year&apos;s thresholds.</strong> Lines 6 and 13 change every year. For {YEAR} the single 0% ceiling is {money(single.zeroRateMax)}.</li>
+            <li><strong>Skipping line 24.</strong> At low incomes the ordinary schedule can beat the preferential computation, and line 25 must take the smaller.</li>
+            <li><strong>Using this worksheet when Schedule D says not to.</strong> An amount on Schedule D line 18 (28% rate gain) or line 19 (unrecaptured section 1250 gain) means the Schedule D Tax Worksheet replaces this one.</li>
+          </ol>
+          <p>
+            If you are estimating {YEAR} tax during the year rather than filing, the same worksheet appears in{" "}
+            <a className="text-link" href="/publication-505">Publication 505</a> as Worksheet 2-7, feeding line 4 of the{" "}
+            <a className="text-link" href="/estimated-tax-worksheet">{YEAR} Estimated Tax Worksheet</a>.
+          </p>
+        </section>
+      </article>
+
       <article className="long-seo" id="printable-worksheet">
         <p className="kicker">PRINTABLE {YEAR} WORKSHEET</p>
         <h2>Printable {YEAR} Qualified Dividends and Capital Gain Tax Worksheet (PDF)</h2>
@@ -330,34 +499,6 @@ export default function QualifiedDividendsPage() {
               Source: paycheckscalculator.org/qualified-dividends-and-capital-gain-tax-worksheet
             </p>
           </div>
-        </section>
-      </article>
-
-      <article className="long-seo">
-        <p className="kicker">LINE BY LINE</p>
-        <h2>The Lines That Decide the Answer</h2>
-        <section>
-          <p>
-            All 25 lines are in the calculator above, but five of them do the real work.
-          </p>
-          <div className="table-wrap">
-            <table>
-              <thead><tr><th>Line</th><th>What happens</th></tr></thead>
-              <tbody>
-                <tr><td><strong>5</strong></td><td>Taxable income minus qualified dividends and net capital gain — this is the ordinary pile</td></tr>
-                <tr><td><strong>9</strong></td><td>The amount taxed at <strong>0%</strong>, which is the 0% band minus whatever the ordinary pile already used</td></tr>
-                <tr><td><strong>17</strong></td><td>The amount taxed at <strong>15%</strong></td></tr>
-                <tr><td><strong>20</strong></td><td>The amount taxed at <strong>20%</strong> — anything left above the 15% ceiling</td></tr>
-                <tr className="rate-total"><td><strong>25</strong></td><td><strong>Your tax: the smaller of line 23 and line 24</strong></td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>
-            Line 25 is worth understanding. Line 23 adds up the preferential computation; line 24 is what you would
-            owe if the whole taxable income went through the ordinary rate schedule. Taking the smaller of the two
-            means the worksheet can never charge you more than not using it would — which matters at low incomes,
-            where the 10% and 12% ordinary brackets are already below the 15% preferential rate.
-          </p>
         </section>
       </article>
 
@@ -439,6 +580,8 @@ export default function QualifiedDividendsPage() {
           <p><small>Rates current for tax year {YEAR}</small></p>
         </div>
       </article>
+
+      <WorksheetCluster current="/qualified-dividends-and-capital-gain-tax-worksheet" />
 
       <article className="long-seo">
         <p className="kicker">RELATED TOOLS</p>

@@ -95,3 +95,29 @@ export const money = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 export const money2 = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD" });
+
+export type TaxComputationRow = {
+  /** Lower bound of the row; the first row starts at $100,000. */
+  from: number;
+  /** Upper bound, or null for the top bracket. */
+  to: number | null;
+  rate: number;
+  /** Section (d): rate × bracket floor − tax at the floor. */
+  subtraction: number;
+};
+
+/**
+ * The Tax Computation Worksheet rows for one filing status: the rate schedule
+ * restated as "taxable income × rate − subtraction amount", from $100,000 up.
+ */
+export function taxComputationRows(status: CapitalGainsStatus): TaxComputationRow[] {
+  const b = status.brackets;
+  return b
+    .map(([lower, rate, base], i) => ({
+      from: Math.max(lower, 100000),
+      to: i + 1 < b.length ? b[i + 1][0] : null,
+      rate,
+      subtraction: Math.round((lower * rate - base) * 100) / 100,
+    }))
+    .filter(r => r.to === null || r.to > 100000);
+}

@@ -51,6 +51,8 @@ export function SiteHeader() {
               <a href="/hsa-calculator">HSA Calculator</a>
               <a href="/401k-paycheck-impact-calculator">401(k) Paycheck Impact</a>
               <a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends</a>
+              <a href="/tax-computation-worksheet">Tax Computation Worksheet</a>
+              <a href="/estimated-tax-worksheet">Estimated Tax Worksheet</a>
             </div>
           </div>
         </div>

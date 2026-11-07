@@ -167,6 +167,34 @@ const POSTS = [
     meta: "Form 1040 · Capital Gains · Interactive",
   },
   {
+    href: "/tax-computation-worksheet",
+    title: "2026 Tax Computation Worksheet (Form 1040)",
+    blurb:
+      "Tax on $100,000 or more: the multiplication and subtraction amounts for every filing status, Sections A through D, with a worked example.",
+    meta: "Form 1040 · Tax Brackets · 2026",
+  },
+  {
+    href: "/form-1040-line-16",
+    title: "Form 1040 Line 16: How to Figure Your Tax (2026)",
+    blurb:
+      "Tax Table, Tax Computation Worksheet or a capital gain worksheet: which method sets line 16, what the three checkboxes mean, and why it matters.",
+    meta: "Form 1040 · Line 16 · Tax Methods",
+  },
+  {
+    href: "/estimated-tax-worksheet",
+    title: "2026 Estimated Tax Worksheet (Form 1040-ES), Line by Line",
+    blurb:
+      "Every line of the 2026 Form 1040-ES worksheet, the 90%/100%/110% safe harbors, 2026 due dates and a filled-in freelancer example.",
+    meta: "Form 1040-ES · Quarterly Tax · 2026",
+  },
+  {
+    href: "/publication-505",
+    title: "IRS Publication 505 (2026): Withholding and Estimated Tax",
+    blurb:
+      "What each chapter of Publication 505 covers, which of its worksheets you need (including Worksheet 2-7), and the 2026 estimated tax rules.",
+    meta: "IRS Pub 505 · Estimated Tax · 2026",
+  },
+  {
     href: "/can-i-claim-my-girlfriend-as-a-dependent",
     title: "Can I Claim My Girlfriend as a Dependent? 2026 IRS Rules",
     blurb:

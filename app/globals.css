@@ -234,6 +234,9 @@ footer { background:#09233b; color:white; min-height:145px; padding:36px max(24p
 /* sales-tax rate tables: highlighted total row + two-column county listing */
 .table-wrap tr.rate-total td { border-top:1px solid var(--line); background:var(--sky); }
 .table-wrap td a.text-link { text-decoration:underline; }
+.table-wrap.wrap th,.table-wrap.wrap td { white-space:normal; vertical-align:top; line-height:1.5; }
+.table-wrap.wrap td:first-child { white-space:nowrap; }
+@media (max-width:600px){ .table-wrap.stack thead { display:none; } .table-wrap.stack tr { display:block; padding:10px 0; border-bottom:1px solid var(--line); } .table-wrap.stack td { display:block; border:0; padding:3px 0; } .table-wrap.stack td[data-label]::before { content:attr(data-label); display:block; font-size:11px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; } }
 .table-split { display:grid; grid-template-columns:1fr 1fr; gap:0 28px; align-items:start; }
 @media (max-width:760px){ .table-split { grid-template-columns:1fr; } }
 
