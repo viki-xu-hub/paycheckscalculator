@@ -399,7 +399,7 @@ export default async function HourlyCalculatorPage(
                 {stateComparison.map((st, i) => (
                   <tr key={st.abbr} style={{ borderBottom: "1px solid #e0e7ef", background: i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)" }}>
                     <td style={{ padding: "8px 10px", fontWeight: 500 }}>
-                      <a href={`/${st.slug}`} style={{ color: "inherit" }}>{st.name}</a>
+                      <a href={`/${st.slug}`} style={{ color: "inherit" }}>{st.name}<span style={{ color: "#667a8a", fontWeight: 400, fontSize: 12 }}> paycheck calculator</span></a>
                     </td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums" }}>{fmt.format(Math.round(st.netAnnual))}</td>
                     <td style={{ textAlign: "right", padding: "8px 10px", fontVariantNumeric: "tabular-nums", fontWeight: 600 }}>{fmt.format(st.netBiweekly)}</td>

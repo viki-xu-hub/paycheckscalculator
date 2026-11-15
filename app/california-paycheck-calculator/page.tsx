@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PaycheckCalculator from "../components/PaycheckCalculator";
+import SamplePayStub from "../components/SamplePayStub";
 import { SiteFooter, SiteHeader } from "../components/SiteChrome";
 import { pct, salesTaxLocations } from "../lib/salesTax";
 
@@ -299,6 +300,9 @@ export default function California() {
           For California employees, the difference between gross pay and net pay is affected by federal taxes, California's progressive state income tax, SDI contributions, FICA taxes, and personal deductions.
         </p>
       </section>
+
+      {/* Sample California pay stub computed from the calculator engine */}
+      <SamplePayStub state="CA" name="California" biweeklyHref="/biweekly/california-paycheck-calculator" layout="seo-section" />
 
       {/* California Salary After Tax Examples */}
       <section className="seo-section">
