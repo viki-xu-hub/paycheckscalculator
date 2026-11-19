@@ -62,6 +62,9 @@ export default function SalaryHubPage() {
           <p style={{ color: "#5f7485", fontSize: 14, lineHeight: 1.75, marginTop: 10 }}>
             Paid every two weeks? The <a href="/biweekly-pay" style={{ color: "var(--blue)" }}>biweekly pay chart</a> shows what each check looks like before and after taxes.
           </p>
+          <p style={{ color: "#5f7485", fontSize: 14, lineHeight: 1.75, marginTop: 10 }}>
+            Need a figure for a loan or rental application? <a href="/blog/how-to-calculate-annual-income" style={{ color: "var(--blue)" }}>How to calculate annual income</a> covers part-time hours, overtime, partial years and several jobs.
+          </p>
         </div>
       </div>
       <SiteFooter />

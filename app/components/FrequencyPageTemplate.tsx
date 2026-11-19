@@ -300,6 +300,14 @@ export default function FrequencyPageTemplate({ freq }: { freq: FrequencyData })
       <section className="seo-section">
         <h2>Other Paycheck Calculators</h2>
         <div className="tool-links">
+          <a href="/blog/how-many-pay-periods-in-a-year">
+            <b>How Many Pay Periods in a Year?</b>
+            <span>52, 26, 24 or 12 checks explained →</span>
+          </a>
+          <a href="/blog/semimonthly-vs-biweekly">
+            <b>Semimonthly vs Biweekly Pay</b>
+            <span>24 vs 26 checks, same annual pay →</span>
+          </a>
           <a href="/biweekly-paycheck-calculator">
             <b>Biweekly Paycheck Calculator</b>
             <span>26 paychecks per year →</span>

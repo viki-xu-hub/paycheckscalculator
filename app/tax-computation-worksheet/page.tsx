@@ -230,7 +230,9 @@ export default function TaxComputationWorksheetPage() {
           <p>
             The result ends up on <a className="text-link" href="/form-1040-line-16">Form 1040 line 16</a>, either
             directly or through one of the capital gain worksheets. The same rate schedules drive line 4 of the{" "}
-            <a className="text-link" href="/estimated-tax-worksheet">{YEAR} Estimated Tax Worksheet</a>.
+            <a className="text-link" href="/estimated-tax-worksheet">{YEAR} Estimated Tax Worksheet</a>. Not sure which
+            number to start from? <a className="text-link" href="/blog/what-is-taxable-income">What taxable income is</a>{" "}
+            walks from salary to line 15.
           </p>
           <p style={{ color: "#667a8a", lineHeight: 1.7, fontSize: 14 }}>
             The {YEAR} brackets start at {money(single.brackets[1][0])} (12%) for single filers and{" "}

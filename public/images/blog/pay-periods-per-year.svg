@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">How many pay periods in a year by pay schedule</title>
+<desc id="d">Weekly: 52 pay periods, $1,153.85 gross per check on $60,000. Biweekly: 26 pay periods, $2,307.69 gross per check on $60,000. Semimonthly: 24 pay periods, $2,500.00 gross per check on $60,000. Monthly: 12 pay periods, $5,000.00 gross per check on $60,000</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">How Many Pay Periods in a Year?</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">Pay periods per year and gross per check on a $60,000 salary</text>
+<text x="156" y="125" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Weekly</text>
+<rect x="170.0" y="100" width="420.0" height="40" fill="#1769aa"/>
+<text x="600" y="125" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">52 checks · $1,153.85 each</text>
+<text x="156" y="191" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Biweekly</text>
+<rect x="170.0" y="166" width="210.0" height="40" fill="#1769aa"/>
+<text x="390" y="191" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">26 checks · $2,307.69 each</text>
+<text x="156" y="257" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Semimonthly</text>
+<rect x="170.0" y="232" width="193.8" height="40" fill="#1769aa"/>
+<text x="373.8461538461538" y="257" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">24 checks · $2,500.00 each</text>
+<text x="156" y="323" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Monthly</text>
+<rect x="170.0" y="298" width="96.9" height="40" fill="#1769aa"/>
+<text x="276.9230769230769" y="323" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">12 checks · $5,000.00 each</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

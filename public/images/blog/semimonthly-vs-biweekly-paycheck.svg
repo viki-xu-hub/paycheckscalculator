@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Semimonthly vs biweekly paycheck on a $60,000 salary</title>
+<desc id="d">Semimonthly: $2,500.00 gross, $2,099.58 take-home per check, 24 checks. Biweekly: $2,307.69 gross, $1,938.08 take-home, 26 checks. Same annual pay.</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Semimonthly vs Biweekly: Bigger Checks, Same Year</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$60,000 salary · single filer · Texas · per-check gross split into take-home and taxes</text>
+<text x="236" y="138" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Semimonthly</text>
+<text x="236" y="155" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">24 checks a year</text>
+<rect x="250.0" y="120" width="436.7" height="56" fill="#1769aa"/>
+<rect x="686.7" y="120" width="83.3" height="56" fill="#e07a5f"/>
+<text x="780" y="153" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$2,500.00 gross</text>
+<text x="236" y="238" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Biweekly</text>
+<text x="236" y="255" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">26 checks a year</text>
+<rect x="250.0" y="220" width="403.1" height="56" fill="#1769aa"/>
+<rect x="653.1" y="220" width="76.9" height="56" fill="#e07a5f"/>
+<text x="739.99952" y="253" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$2,307.69 gross</text>
+<text x="32" y="350" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#122a3d">Both schedules: $60,000 gross and $50,390 take-home a year</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Take-home pay</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#e07a5f"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Federal tax + FICA</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

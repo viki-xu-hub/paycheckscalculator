@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Weekly overtime pay at $20 an hour</title>
+<desc id="d">40 hours: $800.00 at base rate plus $0.00 overtime premium = $800.00; 45 hours: $900.00 at base rate plus $50.00 overtime premium = $950.00; 50 hours: $1,000.00 at base rate plus $100.00 overtime premium = $1,100.00; 55 hours: $1,100.00 at base rate plus $150.00 overtime premium = $1,250.00</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">How Overtime Pay Adds Up in a Week</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$20/hour · every hour at base rate plus a half-time premium for hours over 40</text>
+<text x="186" y="114" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">40 hours</text>
+<text x="186" y="131" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">no overtime</text>
+<rect x="200.0" y="96" width="332.8" height="44" fill="#1769aa"/>
+<rect x="532.8" y="96" width="0.0" height="44" fill="#e07a5f"/>
+<text x="542.8" y="123" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$800.00</text>
+<text x="186" y="178" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">45 hours</text>
+<text x="186" y="195" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">5 overtime hours</text>
+<rect x="200.0" y="160" width="374.4" height="44" fill="#1769aa"/>
+<rect x="574.4" y="160" width="20.8" height="44" fill="#e07a5f"/>
+<text x="605.1999999999999" y="187" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$950.00</text>
+<text x="186" y="242" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">50 hours</text>
+<text x="186" y="259" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">10 overtime hours</text>
+<rect x="200.0" y="224" width="416.0" height="44" fill="#1769aa"/>
+<rect x="616.0" y="224" width="41.6" height="44" fill="#e07a5f"/>
+<text x="667.6" y="251" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$1,100.00</text>
+<text x="186" y="306" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">55 hours</text>
+<text x="186" y="323" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">15 overtime hours</text>
+<rect x="200.0" y="288" width="457.6" height="44" fill="#1769aa"/>
+<rect x="657.6" y="288" width="62.4" height="44" fill="#e07a5f"/>
+<text x="730" y="315" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$1,250.00</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">All hours at base rate</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#e07a5f"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Overtime premium (0.5×)</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · FLSA overtime, 29 CFR 778</text>
+</svg>

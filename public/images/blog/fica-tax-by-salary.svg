@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">FICA tax by salary in 2026</title>
+<desc id="d">$40,000 wages: Social Security $2,480.00, Medicare $580.00, Additional Medicare $0.00; $75,000 wages: Social Security $4,650.00, Medicare $1,087.50, Additional Medicare $0.00; $150,000 wages: Social Security $9,300.00, Medicare $2,175.00, Additional Medicare $0.00; $200,000 wages: Social Security $11,439.00, Medicare $2,900.00, Additional Medicare $0.00; $300,000 wages: Social Security $11,439.00, Medicare $4,350.00, Additional Medicare $900.00</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">What Is FICA Tax at Each Salary?</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">2026 employee FICA · Social Security stops at $184,500 · 0.9% extra Medicare over $200,000</text>
+<text x="136" y="115" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$40,000</text>
+<rect x="150.0" y="92" width="71.3" height="36" fill="#f2cc8f"/>
+<rect x="221.3" y="92" width="16.7" height="36" fill="#c9a66b"/>
+<rect x="238.0" y="92" width="0.0" height="36" fill="#e07a5f"/>
+<text x="248.0100665108754" y="115" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$3,060.00 · 7.65%</text>
+<text x="136" y="169" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$75,000</text>
+<rect x="150.0" y="146" width="133.7" height="36" fill="#f2cc8f"/>
+<rect x="283.7" y="146" width="31.3" height="36" fill="#c9a66b"/>
+<rect x="315.0" y="146" width="0.0" height="36" fill="#e07a5f"/>
+<text x="325.0188747078914" y="169" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$5,737.50 · 7.65%</text>
+<text x="136" y="223" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$150,000</text>
+<rect x="150.0" y="200" width="267.5" height="36" fill="#f2cc8f"/>
+<rect x="417.5" y="200" width="62.6" height="36" fill="#c9a66b"/>
+<rect x="480.0" y="200" width="0.0" height="36" fill="#e07a5f"/>
+<text x="490.03774941578286" y="223" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$11,475.00 · 7.65%</text>
+<text x="136" y="277" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$200,000</text>
+<rect x="150.0" y="254" width="329.0" height="36" fill="#f2cc8f"/>
+<rect x="479.0" y="254" width="83.4" height="36" fill="#c9a66b"/>
+<rect x="562.4" y="254" width="0.0" height="36" fill="#e07a5f"/>
+<text x="572.4105698364192" y="277" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$14,339.00 · 7.17%</text>
+<text x="136" y="331" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$300,000</text>
+<rect x="150.0" y="308" width="329.0" height="36" fill="#f2cc8f"/>
+<rect x="479.0" y="308" width="125.1" height="36" fill="#c9a66b"/>
+<rect x="604.1" y="308" width="25.9" height="36" fill="#e07a5f"/>
+<text x="640" y="331" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$16,689.00 · 5.56%</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#f2cc8f"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Social Security 6.2%</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#c9a66b"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Medicare 1.45%</text>
+<rect x="452" y="388" width="14" height="14" rx="3" fill="#e07a5f"/><text x="474" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Additional Medicare 0.9%</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 SSA wage base, IRS Topic 751</text>
+</svg>

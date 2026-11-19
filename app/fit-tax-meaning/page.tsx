@@ -587,6 +587,14 @@ export default function FitTaxMeaningGuide() {
         <h2>More Paycheck Tax Guides &amp; Calculators</h2>
         <section>
           <div className="tool-links">
+            <a href="/blog/what-is-fica-tax">
+              <b>What Is FICA Tax?</b>
+              <span>The Social Security and Medicare lines next to FIT →</span>
+            </a>
+            <a href="/blog/gross-pay-vs-net-pay">
+              <b>Gross Pay vs Net Pay</b>
+              <span>How FIT and other deductions turn gross into take-home →</span>
+            </a>
             <a href="/">
               <b>Paycheck Calculator</b>
               <span>Calculate your take-home pay with FIT, FICA, and state tax →</span>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Exempt employee salary thresholds 2026</title>
+<desc id="d">Federal (FLSA standard salary level): $35,568 a year; New York outside NYC, Long Island, Westchester: $62,353 a year; New York City, Long Island, Westchester: $66,300 a year; California (2 × state minimum wage × 2,080): $70,304 a year</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Exempt vs Non-Exempt: 2026 Salary Floors</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">Minimum salary to be exempt from overtime (executive and administrative)</text>
+<text x="316" y="125" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Federal</text>
+<rect x="330.0" y="100" width="237.8" height="40" fill="#1769aa"/>
+<text x="577.7810650887574" y="125" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$35,568</text>
+<text x="316" y="189" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">New York (rest of state)</text>
+<rect x="330.0" y="164" width="416.8" height="40" fill="#1769aa"/>
+<text x="756.8468934911243" y="189" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$62,353</text>
+<text x="316" y="253" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">NYC, Long Island, Westchester</text>
+<rect x="330.0" y="228" width="443.2" height="40" fill="#1769aa"/>
+<text x="783.2322485207101" y="253" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$66,300</text>
+<text x="316" y="317" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">California</text>
+<rect x="330.0" y="292" width="470.0" height="40" fill="#1769aa"/>
+<text x="810" y="317" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$70,304</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · DOL 29 CFR 541; NY DOL; California Labor Code §515</text>
+</svg>

@@ -485,6 +485,15 @@ export default function PaycheckTaxesTexas() {
             <b>Texas Paycheck Calculator</b>
             <span>Take-home pay with no state income tax →</span>
           </a>
+          <a href="/blog/what-is-fica-tax">
+            <b>What Is FICA Tax?</b>
+            <span>Social Security and Medicare explained →</span>
+          </a>
+          <a href="/blog/gross-pay-vs-net-pay">
+            <b>Gross Pay vs Net Pay</b>
+            <span>What sits between the two →</span>
+          </a>
+
           <a href="/biweekly/texas-paycheck-calculator">
             <b>Texas Biweekly Paycheck Calculator</b>
             <span>26 pay periods, per-check withholding →</span>

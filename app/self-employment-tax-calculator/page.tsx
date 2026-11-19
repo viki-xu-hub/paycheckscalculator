@@ -202,6 +202,7 @@ export default function SelfEmploymentTaxPage() {
         <h2>More Pay and Tax Calculators</h2>
         <section>
           <ul className="checklist">
+            <li><a href="/blog/what-is-a-1099-form">What Is a 1099 Form? Types and the 2026 $2,000 threshold</a></li>
             <li><a href="/">Paycheck Calculator — W-2 take-home pay</a></li>
             <li><a href="/tax-write-off">Tax Write-Offs Explained</a></li>
             <li><a href="/qualified-dividends-and-capital-gain-tax-worksheet">Qualified Dividends and Capital Gain Tax Worksheet</a></li>
