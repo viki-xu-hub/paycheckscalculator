@@ -16,6 +16,8 @@ export type BlogPost = {
   readMinutes: number;
   hero: string;
   heroAlt: string;
+  /** Live but kept out of search: robots noindex, left out of the sitemap and IndexNow. */
+  noindex?: boolean;
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -125,6 +127,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "what-is-fica-tax",
+    noindex: true,
     title: "What Is FICA Tax? Social Security and Medicare Tax on Your Paycheck",
     metaTitle: "What Is FICA Tax? 7.65% Rate, Medicare Tax and 2026 Limits",
     description:
@@ -138,6 +141,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "how-to-calculate-overtime-pay",
+    noindex: true,
     title: "How to Calculate Overtime Pay: Time and a Half, Regular Rate and Daily Overtime",
     metaTitle: "How to Calculate Overtime Pay: Formula, Bonus Rule and Examples",
     description:
@@ -151,6 +155,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "how-to-read-a-pay-stub",
+    noindex: true,
     title: "How to Read a Pay Stub: Every Line, Abbreviation and YTD Figure",
     metaTitle: "How to Read a Pay Stub: Lines, Abbreviations and a 2026 Example",
     description:
@@ -164,6 +169,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "gross-pay-vs-net-pay",
+    noindex: true,
     title: "Gross Pay vs Net Pay: What Each Means and How to Get From One to the Other",
     metaTitle: "Gross Pay vs Net Pay: Definitions, Formula and 2026 Examples",
     description:
@@ -177,6 +183,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "exempt-vs-non-exempt-employee",
+    noindex: true,
     title: "Exempt vs Non-Exempt Employee: Salary Tests, Overtime and 2026 Thresholds",
     metaTitle: "Exempt vs Non-Exempt Employee: 2026 Salary Tests and Overtime",
     description:

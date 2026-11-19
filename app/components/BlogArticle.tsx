@@ -19,6 +19,7 @@ export function blogMetadata(slug: string): Metadata {
     title: post.metaTitle,
     description: post.description,
     alternates: { canonical },
+    ...(post.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: post.metaTitle,
       description: post.description,
