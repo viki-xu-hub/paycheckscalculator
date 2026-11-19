@@ -19,6 +19,7 @@ export function blogMetadata(slug: string): Metadata {
     title: post.metaTitle,
     description: post.description,
     alternates: { canonical },
+    ...(post.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: post.metaTitle,
       description: post.description,
@@ -98,7 +99,8 @@ export function BlogArticle({
 }) {
   const post = blogPostBySlug[slug];
   const canonical = `${SITE}/blog/${post.slug}`;
-  const otherPosts = BLOG_POSTS.filter(item => item.slug !== slug);
+  // Newest-first, capped so the related block stays useful as the blog grows.
+  const otherPosts = [...BLOG_POSTS].reverse().filter(item => item.slug !== slug).slice(0, 6);
 
   const schemas: Record<string, unknown>[] = [
     {

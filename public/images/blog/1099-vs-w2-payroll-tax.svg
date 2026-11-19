@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Self-employment tax on 1099 income vs employee FICA on W-2 wages</title>
+<desc id="d">$20,000: self-employment tax $2,825.91, employee FICA $1,530.00; $50,000: self-employment tax $7,064.78, employee FICA $3,825.00; $100,000: self-employment tax $14,129.55, employee FICA $7,650.00</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">1099 Income Carries Both Halves of FICA</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">2026 self-employment tax (15.3% × 92.35%) vs employee share on the same pay</text>
+<text x="246" y="110" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$20,000 profit</text>
+<text x="246" y="127" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">1099: self-employment tax</text>
+<rect x="260.0" y="92" width="96.0" height="32" fill="#e07a5f"/>
+<text x="366" y="113" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$2,825.91</text>
+<text x="246" y="156" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d"></text>
+<text x="246" y="173" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">W-2: employee FICA</text>
+<rect x="260.0" y="138" width="52.0" height="32" fill="#1769aa"/>
+<text x="321.97617758527343" y="159" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$1,530.00</text>
+<text x="246" y="202" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$50,000 profit</text>
+<text x="246" y="219" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">1099: self-employment tax</text>
+<rect x="260.0" y="184" width="240.0" height="32" fill="#e07a5f"/>
+<text x="510.0001698567895" y="205" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$7,064.78</text>
+<text x="246" y="248" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d"></text>
+<text x="246" y="265" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">W-2: employee FICA</text>
+<rect x="260.0" y="230" width="129.9" height="32" fill="#1769aa"/>
+<text x="399.94044396318355" y="251" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$3,825.00</text>
+<text x="246" y="294" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">$100,000 profit</text>
+<text x="246" y="311" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">1099: self-employment tax</text>
+<rect x="260.0" y="276" width="480.0" height="32" fill="#e07a5f"/>
+<text x="750" y="297" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$14,129.55</text>
+<text x="246" y="340" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d"></text>
+<text x="246" y="357" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">W-2: employee FICA</text>
+<rect x="260.0" y="322" width="259.9" height="32" fill="#1769aa"/>
+<text x="529.8808879263671" y="343" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#122a3d">$7,650.00</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#e07a5f"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">1099 self-employment tax</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">W-2 employee FICA</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · Schedule SE 2026, $184,500 Social Security wage base</text>
+</svg>

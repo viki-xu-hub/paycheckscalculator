@@ -70,7 +70,7 @@ const SALES_TAX_PATHS = salesTaxLocations.map(l => `/sales-tax/${l.slug}`);
 export const INDEXABLE_PATHS = [
   ...CORE_INDEXABLE_PATHS,
   ...SITUATION_PATHS,
-  ...BLOG_POSTS.map(post => `/blog/${post.slug}`),
+  ...BLOG_POSTS.filter(post => !post.noindex).map(post => `/blog/${post.slug}`),
   ...LEGACY_LOCATION_PATHS,
   ...SALES_TAX_PATHS,
 ];

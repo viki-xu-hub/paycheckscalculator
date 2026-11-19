@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Annual income by hourly rate and weekly hours</title>
+<desc id="d">$20/hour: 20 h $20,800, 30 h $31,200, 40 h $41,600, 45 h $49,400. $25/hour: 20 h $26,000, 30 h $39,000, 40 h $52,000, 45 h $61,750. $30/hour: 20 h $31,200, 30 h $46,800, 40 h $62,400, 45 h $74,100</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">How to Calculate Annual Income From an Hourly Wage</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">Rate × hours × 52 weeks · hours over 40 at 1.5×</text>
+<rect x="90" y="261.1" width="44" height="58.9" rx="4" fill="#8fb8de"/>
+<text x="112" y="255.0526315789474" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">21k</text>
+<rect x="142" y="246.3" width="44" height="73.7" rx="4" fill="#81b29a"/>
+<text x="164" y="240.31578947368422" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">26k</text>
+<rect x="194" y="231.6" width="44" height="88.4" rx="4" fill="#1769aa"/>
+<text x="216" y="225.57894736842104" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">31k</text>
+<text x="164" y="342" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">20 h/week</text>
+<rect x="300" y="231.6" width="44" height="88.4" rx="4" fill="#8fb8de"/>
+<text x="322" y="225.57894736842104" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">31k</text>
+<rect x="352" y="209.5" width="44" height="110.5" rx="4" fill="#81b29a"/>
+<text x="374" y="203.4736842105263" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">39k</text>
+<rect x="404" y="187.4" width="44" height="132.6" rx="4" fill="#1769aa"/>
+<text x="426" y="181.3684210526316" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">47k</text>
+<text x="374" y="342" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">30 h/week</text>
+<rect x="510" y="202.1" width="44" height="117.9" rx="4" fill="#8fb8de"/>
+<text x="532" y="196.10526315789474" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">42k</text>
+<rect x="562" y="172.6" width="44" height="147.4" rx="4" fill="#81b29a"/>
+<text x="584" y="166.6315789473684" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">52k</text>
+<rect x="614" y="143.2" width="44" height="176.8" rx="4" fill="#1769aa"/>
+<text x="636" y="137.1578947368421" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">62k</text>
+<text x="584" y="342" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">40 h/week</text>
+<rect x="720" y="180.0" width="44" height="140.0" rx="4" fill="#8fb8de"/>
+<text x="742" y="174" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">49k</text>
+<rect x="772" y="145.0" width="44" height="175.0" rx="4" fill="#81b29a"/>
+<text x="794" y="139" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">62k</text>
+<rect x="824" y="110.0" width="44" height="210.0" rx="4" fill="#1769aa"/>
+<text x="846" y="104" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#122a3d">74k</text>
+<text x="794" y="342" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#3d5466">45 h/week</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#8fb8de"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">$20 an hour</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#81b29a"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">$25 an hour</text>
+<rect x="452" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="474" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">$30 an hour</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · gross annual income, 52 paid weeks, FLSA overtime over 40 hours</text>
+</svg>

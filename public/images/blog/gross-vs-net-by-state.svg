@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="t d">
+<title id="t">Gross pay vs net pay by state</title>
+<desc id="d">Texas: $2,884.62 gross, $2,368.94 net (82.12%); California: $2,884.62 gross, $2,207.58 net (76.53%); New York: $2,884.62 gross, $2,222.41 net (77.04%) per biweekly check on $75,000.</desc>
+<rect width="960" height="440" rx="16" fill="#f6f9fc"/>
+<text x="32" y="44" text-anchor="start" font-family="Georgia,serif" font-size="25" font-weight="700" fill="#122a3d">Gross Pay vs Net Pay: Same Salary, Three States</text>
+<text x="32" y="70" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="400" fill="#5f7485">$75,000 salary · biweekly check · single filer · no benefit deductions</text>
+<text x="166" y="118" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">Texas</text>
+<text x="166" y="135" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">82.12% kept</text>
+<rect x="180.0" y="100" width="492.7" height="50" fill="#1769aa"/>
+<rect x="672.7" y="100" width="61.4" height="50" fill="#e07a5f"/>
+<rect x="734.1" y="100" width="45.9" height="50" fill="#f2cc8f"/>
+<rect x="780.0" y="100" width="0.0" height="50" fill="#81b29a"/>
+<text x="166" y="194" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">California</text>
+<text x="166" y="211" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">76.53% kept</text>
+<rect x="180.0" y="176" width="459.2" height="50" fill="#1769aa"/>
+<rect x="639.2" y="176" width="61.4" height="50" fill="#e07a5f"/>
+<rect x="700.5" y="176" width="45.9" height="50" fill="#f2cc8f"/>
+<rect x="746.4" y="176" width="33.6" height="50" fill="#81b29a"/>
+<text x="166" y="270" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#122a3d">New York</text>
+<text x="166" y="287" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#5f7485">77.04% kept</text>
+<rect x="180.0" y="252" width="462.3" height="50" fill="#1769aa"/>
+<rect x="642.3" y="252" width="61.4" height="50" fill="#e07a5f"/>
+<rect x="703.6" y="252" width="45.9" height="50" fill="#f2cc8f"/>
+<rect x="749.5" y="252" width="30.5" height="50" fill="#81b29a"/>
+<text x="190" y="130" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#fff">$2,368.94 net of $2,884.62</text>
+<text x="190" y="206" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#fff">$2,207.58 net of $2,884.62</text>
+<text x="190" y="282" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#fff">$2,222.41 net of $2,884.62</text>
+<rect x="32" y="388" width="14" height="14" rx="3" fill="#1769aa"/><text x="54" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Net pay</text>
+<rect x="242" y="388" width="14" height="14" rx="3" fill="#e07a5f"/><text x="264" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">Federal tax</text>
+<rect x="452" y="388" width="14" height="14" rx="3" fill="#f2cc8f"/><text x="474" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">FICA</text>
+<rect x="662" y="388" width="14" height="14" rx="3" fill="#81b29a"/><text x="684" y="400" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#3d5466">State tax / SDI</text>
+<text x="32" y="426" text-anchor="start" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" fill="#8595a5">paycheckscalculator.org · 2026 IRS Pub 15-T withholding, 6.2% Social Security, 1.45% Medicare</text>
+</svg>

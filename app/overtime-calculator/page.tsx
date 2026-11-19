@@ -209,6 +209,8 @@ export default function OvertimeCalculatorPage() {
         <h2>More Pay and Tax Calculators</h2>
         <section>
           <ul className="checklist">
+            <li><a href="/blog/how-to-calculate-overtime-pay">How to Calculate Overtime Pay — regular rate, bonuses and daily overtime</a></li>
+            <li><a href="/blog/exempt-vs-non-exempt-employee">Exempt vs Non-Exempt — who is owed overtime</a></li>
             <li><a href="/no-tax-on-overtime">No Tax on Overtime — the 2025–2028 deduction explained</a></li>
             <li><a href="/">Paycheck Calculator — full take-home pay after all deductions</a></li>
             <li><a href="/hourly-paycheck-calculator">Hourly Paycheck Calculator</a></li>

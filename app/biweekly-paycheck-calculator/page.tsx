@@ -344,6 +344,14 @@ export default function BiweeklyPaycheck() {
         </p>
 
         <div className="tool-links">
+          <a href="/blog/semimonthly-vs-biweekly">
+            <b>Semimonthly vs Biweekly Pay</b>
+            <span>What changes between 24 and 26 checks →</span>
+          </a>
+          <a href="/blog/how-many-pay-periods-in-a-year">
+            <b>How Many Pay Periods in a Year?</b>
+            <span>Including 27-paycheck years →</span>
+          </a>
           <a href="/california-paycheck-calculator">
             <b>California Paycheck Calculator</b>
             <span>State withholding and SDI estimate →</span>

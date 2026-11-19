@@ -44,6 +44,9 @@ export default function HourlyHubPage() {
             net pay, weekly net pay, effective hourly take-home after all taxes, and state-by-state
             comparison — all based on 2026 IRS and state withholding tables.
           </p>
+          <p style={{ color: "#5f7485", fontSize: 14, lineHeight: 1.75, marginTop: 10 }}>
+            Need a figure for a loan or rental application? <a href="/blog/how-to-calculate-annual-income" style={{ color: "var(--blue)" }}>How to calculate annual income</a> covers part-time hours, overtime, partial years and several jobs.
+          </p>
           <div style={{ marginTop: 16 }}>
             <a href="/hourly-paycheck-calculator" style={{ display: "inline-block", background: "#1769aa", color: "white", padding: "10px 20px", borderRadius: 7, fontSize: 13, fontWeight: 700 }}>
               Use the Interactive Hourly Calculator →
